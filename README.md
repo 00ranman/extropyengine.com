@@ -78,5 +78,5 @@ After that, edit `src/content/site.ts` or `src/content/essays.ts`, push to `main
 - `/universaltimes` — live hydrogen-anchored dual clock
 - `/docs` — spec and paper index
 
-Built by Randall Gossett. Co-conspirator: Perplexity Computer.
+Built by Randall Gossett. Original conspirator: Perplexity Computer. This remake: Grok Build.
 They want fire. I bring fungus.

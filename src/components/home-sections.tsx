@@ -164,7 +164,8 @@ export function Manifesto() {
         standing on. The book is the field guide. The music is the soundtrack.
       </p>
       <p className="mt-6 text-xs tracking-[0.15em] text-[#666]">
-        Built by Randall Gossett. Co-conspirator: Perplexity Computer.
+        Built by Randall Gossett. Original conspirator: Perplexity Computer. This remake: Grok
+        Build.
       </p>
     </section>
   );
