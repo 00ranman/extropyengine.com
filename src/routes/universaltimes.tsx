@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import { SiteShell } from "@/components/site-shell";
+import { UtClock } from "@/components/ut-clock";
 import {
   CAL,
   HOLIDAYS,
@@ -51,6 +52,8 @@ function UniversalTimes() {
           <p className="mt-2 text-xs tracking-[0.22em] text-accent uppercase">
             Hydrogen-Anchored Duration Scale
           </p>
+
+          <UtClock />
 
           <div className="mt-10 flex flex-wrap items-end justify-center gap-x-4 gap-y-6">
             {groups.map((group, gi) => (
