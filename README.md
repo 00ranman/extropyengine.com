@@ -61,9 +61,10 @@ npm run build:hostinger  # static files for Hostinger
 The site is built as static HTML and published to the `hostinger` branch on every push to `main`. Hostinger then serves that branch.
 
 1. In hPanel open **extropyengine.com**.
-2. **Advanced → Git**. Connect GitHub, pick `00ranman/extropyengine.com`, branch **`hostinger`**, deploy into `public_html`.
-3. Turn on **auto-deploy** so each GitHub push goes live.
-4. Confirm SSL is on (Hostinger → SSL).
+2. **Advanced → Git**. Connect GitHub, pick `00ranman/extropyengine.com`, branch **`hostinger`**.
+3. Deployment directory: leave it **blank** or `/` — not `public_html`. The site root is already `public_html`; putting that in again nests the files and Hostinger returns 403.
+4. Auto-deploy: **on**.
+5. Confirm SSL is on, then hard-refresh.
 
 After that, edit `src/content/site.ts` or `src/content/essays.ts`, push to `main`, and the domain updates itself. You do not merge into `hostinger` by hand.
 
