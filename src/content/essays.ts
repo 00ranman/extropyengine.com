@@ -546,7 +546,7 @@ export const proofLayers = [
       "Extropy Engine prototype (live web application)",
       "Three published studio albums and 14 singles on major streaming platforms",
       "Published book Unf*ck the World for a Dollar (PDF, EPUB, audiobook)",
-      "Technical specification Extropy Codex v2.0 (Comprehensive Edition)",
+      "Technical specification Extropy Codex v2.1 (Comprehensive Edition)",
       "Academic papers on Academia.edu",
       "DAG Architecture Breakdown (published)",
       "GitHub source repositories",

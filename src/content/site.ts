@@ -354,8 +354,7 @@ export const earlierEditions: Paper[] = [
   {
     tag: "Codex · V2.0",
     title: "Extropy Codex, Version 2.0, Comprehensive Edition",
-    href: "/docs/Extropy_Codex_v2.0_Comprehensive.pdf",
-    academia: "https://www.academia.edu/169680038/Extropy_Codex_Version_2_0_Comprehensive_Edition",
+    href: "https://www.academia.edu/169680038/Extropy_Codex_Version_2_0_Comprehensive_Edition",
   },
   {
     tag: "Codex",
@@ -554,7 +553,7 @@ export const docsIndex = [
 export const earlierDocs = [
   {
     title: "Extropy Codex v2.0",
-    href: "/docs/Extropy_Codex_v2.0_Comprehensive.pdf",
+    href: "https://www.academia.edu/169680038/Extropy_Codex_Version_2_0_Comprehensive_Edition",
     note: "Superseded Comprehensive Edition (July 2026)",
   },
   {
