@@ -83,7 +83,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               to={item.href}
               className="px-2 py-1.5 whitespace-nowrap text-fg/70 transition-colors hover:text-primary max-[600px]:px-1 max-[600px]:py-1 max-[600px]:text-[10px]"
             >
-            >
               {item.label}
             </Link>
           ))}
