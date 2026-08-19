@@ -19,7 +19,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     <div className="relative min-h-dvh bg-bg text-fg">
       <div className="bg-veil pointer-events-none fixed inset-0 z-0" />
       <header className="sticky top-0 z-50 border-b border-primary/12 bg-bg/92 backdrop-blur-md">
-        <div className="relative flex items-center justify-center px-16 py-5 max-md:px-14 max-md:py-4">
+        <div className="relative flex flex-col items-center justify-center px-16 py-5 max-md:px-14 max-md:py-4">
           <Link
             to="/"
             className="brand-lockup text-[clamp(22px,4.4vw,42px)] max-md:text-[clamp(20px,7vw,28px)]"
@@ -28,6 +28,9 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <span className="extropy">{site.wordmarkLeft}</span>
             <span className="engine">{site.wordmarkRight}</span>
           </Link>
+          <p className="mt-2 text-center text-[11px] tracking-[0.22em] text-accent uppercase [text-shadow:0_0_14px_rgb(34_211_238_/_0.35)] max-md:text-[9px] max-md:tracking-[0.14em]">
+            {site.tagline}
+          </p>
           <button
             type="button"
             className="absolute top-1/2 right-3 z-10 flex size-11 -translate-y-1/2 items-center justify-center text-[26px] leading-none text-fg md:hidden"
