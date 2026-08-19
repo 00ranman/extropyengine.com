@@ -7,7 +7,7 @@ export const Route = createFileRoute("/docs/")({ component: Docs });
 function Docs() {
   return (
     <EssayLayout backTo="/" backLabel="Lladnaros" title="Docs">
-      <p>Tech spec 3.1.2 and companion papers. Source of truth for the Extropy Engine.</p>
+      <p>Codex v2.0 is the current specification. Companion papers and prior editions sit underneath.</p>
       <div className="space-y-3">
         {docsIndex.map((doc) => (
           <a

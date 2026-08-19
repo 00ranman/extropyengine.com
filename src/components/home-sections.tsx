@@ -340,7 +340,7 @@ export function DocsBanner() {
   if (hidden) return null;
   return (
     <div className="fixed right-0 bottom-0 left-0 z-40 border-t border-primary bg-ink px-3 py-2 text-center text-[13px] font-semibold text-fg">
-      TECH SPEC 3.1.2
+      CODEX 2.0
       <a href="/docs" className="ml-1.5 text-primary hover:underline">
         Read the docs →
       </a>

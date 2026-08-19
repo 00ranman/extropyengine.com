@@ -300,6 +300,11 @@ export type Paper = {
 
 export const papers: Paper[] = [
   {
+    tag: "New · Codex · V2.0",
+    title: "Extropy Codex, Version 2.0, Comprehensive Edition",
+    href: "https://www.academia.edu/169680038/Extropy_Codex_Version_2_0_Comprehensive_Edition",
+  },
+  {
     tag: "New · Music / Criticism",
     title: "Signal, Loop, and Story",
     href: "https://www.academia.edu/170725878/Signal_Loop_and_Story",
@@ -310,7 +315,7 @@ export const papers: Paper[] = [
     href: "https://www.academia.edu/170494720/Universal_Times_v4_2",
   },
   {
-    tag: "Codex",
+    tag: "Codex · Prior",
     title: "Extropy Codex: Comprehensive Technical Specification",
     href: "/docs/Extropy_Codex_Technical_Specification_Final.pdf",
   },
@@ -498,6 +503,11 @@ export const socials = [
 
 export const docsIndex = [
   {
+    title: "Extropy Codex v2.0",
+    href: "https://www.academia.edu/169680038/Extropy_Codex_Version_2_0_Comprehensive_Edition",
+    note: "Comprehensive Edition — canonical protocol spec (July 2026)",
+  },
+  {
     title: "Signal, Loop, and Story",
     href: "https://www.academia.edu/170725878/Signal_Loop_and_Story",
     note: "Lyric analysis — music as systems argument (2026)",
@@ -510,12 +520,12 @@ export const docsIndex = [
   {
     title: "Tech Spec 3.1.2",
     href: "/docs/extropy-engine-technical-docs-v3.1.2.pdf",
-    note: "Full technical specification",
+    note: "Earlier engine technical specification",
   },
   {
-    title: "Extropy Codex",
+    title: "Extropy Codex (prior edition)",
     href: "/docs/Extropy_Codex_Technical_Specification_Final.pdf",
-    note: "Comprehensive technical specification",
+    note: "Earlier comprehensive technical specification",
   },
   {
     title: "When the Signal Eats the Source",
