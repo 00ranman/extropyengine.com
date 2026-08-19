@@ -63,9 +63,23 @@ export type Album = {
   blurb: string;
   art: string;
   links: MusicLinks;
+  kind?: "album" | "ep";
 };
 
 export const albums: Album[] = [
+  {
+    year: 2026,
+    title: "The Lladnaros EP",
+    tracks: 7,
+    kind: "ep",
+    blurb: "Systems theory smuggled in as sound. If the machine can copy you, you were compressible.",
+    art: spotifyArt("4de872d92d4f2385a55828c1"),
+    links: {
+      spotify: "https://open.spotify.com/album/6N5LplkywFAyXAXlX8J4kb",
+      apple: "https://music.apple.com/us/album/the-lladnaros-ep/6786489841",
+      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_mEnJiMmWzeucRciwgbi7eYOd6Nj7-KReY",
+    },
+  },
   {
     year: 2026,
     title: "Unf*ck the World for a Dollar",
@@ -286,12 +300,22 @@ export type Paper = {
 
 export const papers: Paper[] = [
   {
-    tag: "New · Codex",
+    tag: "New · Music / Criticism",
+    title: "Signal, Loop, and Story",
+    href: "https://www.academia.edu/170725878/Signal_Loop_and_Story",
+  },
+  {
+    tag: "New · Time · V4.2",
+    title: "Universal Times v4.2",
+    href: "https://www.academia.edu/170494720/Universal_Times_v4_2",
+  },
+  {
+    tag: "Codex",
     title: "Extropy Codex: Comprehensive Technical Specification",
     href: "/docs/Extropy_Codex_Technical_Specification_Final.pdf",
   },
   {
-    tag: "New · Epistemology",
+    tag: "Epistemology",
     title: "When the Signal Eats the Source",
     href: "/docs/When_the_Signal_Eats_the_Source.pdf",
   },
@@ -473,6 +497,16 @@ export const socials = [
 ] as const;
 
 export const docsIndex = [
+  {
+    title: "Signal, Loop, and Story",
+    href: "https://www.academia.edu/170725878/Signal_Loop_and_Story",
+    note: "Lyric analysis — music as systems argument (2026)",
+  },
+  {
+    title: "Universal Times v4.2",
+    href: "https://www.academia.edu/170494720/Universal_Times_v4_2",
+    note: "Hydrogen-anchored dual-system timekeeping, July 2026",
+  },
   {
     title: "Tech Spec 3.1.2",
     href: "/docs/extropy-engine-technical-docs-v3.1.2.pdf",

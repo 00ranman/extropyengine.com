@@ -61,9 +61,9 @@ export function MusicSection() {
       <SectionTitle className="mb-3">The Music</SectionTitle>
       <p className="mb-12 max-w-xl text-[15px] text-muted">
         Systems theory disguised as sound. Each track is a recursive loop about reality and entropy
-        reduction. Three albums deep and counting.
+        reduction. Three albums, one EP, and counting.
       </p>
-      <div className="mb-10 grid gap-6 md:grid-cols-3">
+      <div className="mb-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
         {albums.map((album) => (
           <article
             key={album.title}
@@ -75,7 +75,10 @@ export function MusicSection() {
               className="aspect-square w-full self-center object-cover"
               crossOrigin="anonymous"
             />
-            <div className="mb-1 text-[11px] tracking-[0.3em] text-accent">{album.year}</div>
+            <div className="mb-1 text-[11px] tracking-[0.3em] text-accent">
+              {album.year}
+              {album.kind === "ep" ? " · EP" : ""}
+            </div>
             <h3 className="font-display text-lg tracking-[0.06em]">{album.title}</h3>
             <p className="mb-2 text-xs text-dim">
               {album.tracks} tracks · {album.blurb}
