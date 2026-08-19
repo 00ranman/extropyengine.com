@@ -128,7 +128,9 @@ function authPopupPlugin(): Plugin {
 // opens a second dev-server port, which breaks the single-port preview.
 // The dev server starts once `src/router.tsx` and `src/routes/` exist — see
 // AGENTS.md § "First scaffold".
-export default defineConfig(({ command }) => ({
+export default defineConfig(({ command, mode }) => {
+  const hostinger = mode === "hostinger";
+  return {
   server: {
     host: "0.0.0.0",
     port: 8080,
@@ -142,18 +144,44 @@ export default defineConfig(({ command }) => ({
     // PWA head + ?install=1 tutorial page; runs before Start/Nitro.
     grokPwaPlugin(),
     tailwindcss(),
-    tanstackStart(),
+    tanstackStart(
+      hostinger
+        ? {
+            prerender: {
+              enabled: true,
+              crawlLinks: true,
+              autoStaticPathsDiscovery: true,
+              failOnError: true,
+            },
+            pages: [
+              { path: "/" },
+              { path: "/universaltimes" },
+              { path: "/docs" },
+              { path: "/glossary" },
+              { path: "/proof-layers" },
+              { path: "/mvt" },
+              { path: "/open-problems" },
+              { path: "/start" },
+              { path: "/start/money" },
+              { path: "/start/ai" },
+              { path: "/start/governance" },
+              { path: "/start/physics" },
+            ],
+          }
+        : {},
+    ),
     ...(command === "build"
       ? [
           nitro({
-            preset: "vercel",
+            preset: hostinger ? "static" : "vercel",
             // Auto-registers server/middleware/* (the PWA install page +
             // manifest + head-tag middleware). Nitro v3 defaults serverDir to
             // false, so removing this silently unwires /?install=1 on deploys.
-            serverDir: "./server",
+            serverDir: hostinger ? false : "./server",
           }),
         ]
       : []),
     viteReact(),
   ],
-}));
+};
+});

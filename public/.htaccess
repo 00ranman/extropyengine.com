@@ -1,0 +1,25 @@
+# Hostinger / Apache — extropyengine.com
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Serve existing files and prerendered folders as-is
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Client-side routes fall back to the prerendered shell
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+AddType application/pdf .pdf
+AddType application/epub+zip .epub
+AddDefaultCharset UTF-8

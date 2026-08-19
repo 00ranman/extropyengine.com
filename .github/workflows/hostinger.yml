@@ -1,0 +1,53 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build static site
+        run: npm run build:hostinger
+        env:
+          VITE_PUBLIC_HOSTNAME: extropyengine.com
+
+      - name: Locate static output
+        id: out
+        run: |
+          for dir in dist .output/public .vercel/output/static build; do
+            if [ -f "$dir/index.html" ]; then
+              echo "dir=$dir" >> "$GITHUB_OUTPUT"
+              echo "Using $dir"
+              ls -la "$dir" | head
+              exit 0
+            fi
+          done
+          echo "No index.html found. Workspace:"
+          find . -name index.html -not -path './node_modules/*' | head
+          exit 1
+
+      - name: Publish hostinger branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: hostinger
+          publish_dir: ${{ steps.out.outputs.dir }}
+          force_orphan: true
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
+          cname: extropyengine.com

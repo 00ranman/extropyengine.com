@@ -51,11 +51,24 @@ Drop new files in `public/docs/` and point `book.pdf` / `book.epub` at them in `
 
 ```bash
 npm install
-npm run dev      # preview
-npm run build    # production
+npm run dev              # preview
+npm run build            # Vercel / SSR
+npm run build:hostinger  # static files for Hostinger
 ```
 
-Point the custom domain `lladnaros.com` at the host (Vercel / GitHub Pages via a static adapter if you add one). PDFs and the cover are already in `public/`.
+### Hostinger — extropyengine.com
+
+The site is built as static HTML and published to the `hostinger` branch on every push to `main`. Hostinger then serves that branch.
+
+1. In hPanel open **extropyengine.com**.
+2. Remove the current **redirect to lladnaros.com**.
+3. **Advanced → Git** (or Websites → Git). Connect GitHub, pick `00ranman/lladnaros.com`, branch **`hostinger`**, deploy into `public_html`.
+4. Turn on **auto-deploy** so each GitHub push goes live.
+5. Confirm SSL is on (Hostinger → SSL).
+
+After that, edit `src/content/site.ts` or `src/content/essays.ts`, push to `main`, and the domain updates itself.
+
+`extropyengine.com` currently 301s to lladnaros.com — that redirect has to come off or visitors will never see this remake.
 
 ## Pages
 
