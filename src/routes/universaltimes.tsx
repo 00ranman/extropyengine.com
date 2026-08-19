@@ -4,6 +4,7 @@ import { SiteShell } from "@/components/site-shell";
 import { UtClock } from "@/components/ut-clock";
 import {
   CAL,
+  DUR_UNITS,
   HOLIDAYS,
   UT_DAY_NAMES,
   dayOfYear,
@@ -20,37 +21,6 @@ import {
 
 export const Route = createFileRoute("/universaltimes")({ component: UniversalTimes });
 
-const SCALE = [
-  {
-    label: "Solar ticks",
-    hint: "This Earth day, 100,000 ticks",
-    keys: ["Loop", "Arc", "Tick"] as const,
-    tone: "primary" as const,
-    kind: "solar" as const,
-  },
-  {
-    label: "Deep time",
-    hint: "Since the Big Bang — cascaded remainders",
-    keys: ["Eon", "Age", "Era", "Epoch"] as const,
-    tone: "dim" as const,
-    kind: "dur" as const,
-  },
-  {
-    label: "Civil duration",
-    hint: "Years → days of hydrogen time",
-    keys: ["Cycle", "Season", "Current"] as const,
-    tone: "fg" as const,
-    kind: "dur" as const,
-  },
-  {
-    label: "Live ticks",
-    hint: "Hours down to 0.70 seconds — these should move",
-    keys: ["Spin", "Tide", "Pulse", "Wave", "GQ"] as const,
-    tone: "accent" as const,
-    kind: "dur" as const,
-  },
-];
-
 function UniversalTimes() {
   const [calMonth, setCalMonth] = useState(() =>
     utDate(dayOfYear(new Date()), new Date().getFullYear()).month,
@@ -62,6 +32,7 @@ function UniversalTimes() {
   const year = new Date().getFullYear();
   const digits = useRef<Record<string, HTMLSpanElement | null>>({});
   const quantRef = useRef<HTMLSpanElement>(null);
+  const stampRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     let raf = 0;
@@ -69,6 +40,7 @@ function UniversalTimes() {
       const now = new Date();
       const lat = solarLat(now);
       const dur = durationNow(now);
+      if (stampRef.current) stampRef.current.textContent = lat.stamp;
       const set = (key: string, text: string) => {
         const el = digits.current[key];
         if (el && el.textContent !== text) el.textContent = text;
@@ -76,10 +48,8 @@ function UniversalTimes() {
       set("Loop", String(lat.loop));
       set("Arc", pad2(lat.arc));
       set("Tick", pad2(lat.tick));
-      for (const u of dur) {
-        set(u.name, u.name === "Eon" ? String(u.value) : pad2(u.value % 100));
-      }
-      if (quantRef.current) quantRef.current.textContent = formatQuant(quantsSinceBB(now));
+      for (const u of dur) set(u.name, u.name === "Epoch" ? String(u.value) : pad2(u.value % 100));
+      if (quantRef.current) quantRef.current.textContent = `Q: ${formatQuant(quantsSinceBB(now))}`;
       raf = requestAnimationFrame(frame);
     };
     raf = requestAnimationFrame(frame);
@@ -104,62 +74,73 @@ function UniversalTimes() {
             ← Extropy Engine
           </Link>
           <h1 className="font-display text-[clamp(32px,5vw,52px)] tracking-[0.08em]">Universal Times</h1>
+          <p className="mt-2 text-xs tracking-[0.2em] text-accent uppercase">v4.2 · hydrogen-anchored · three systems</p>
           <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-muted">
-            Two different quantities. <span className="text-primary">Solar</span> is where Earth is
-            facing — hours, and Loop:Arc:Tick. <span className="text-accent">Duration</span> is how
-            long has passed, counted in hydrogen oscillations from t:0. They are not the same clock.
+            Position and duration are different quantities. The face is base-10: ten loops in a local
+            day. Hours and minutes are not on this scale.
           </p>
 
           <UtClock />
 
+          <section className="mt-12 grid gap-3 sm:grid-cols-3">
+            <div className="border border-fg/12 px-4 py-4">
+              <div className="text-[10px] tracking-[0.2em] text-dim uppercase">Where</div>
+              <div className="mt-1 font-brand text-lg tabular-nums">
+                <span ref={stampRef}>t:-:--:--</span>
+              </div>
+              <p className="mt-1 text-xs text-dim">Solar Clock. Local day coordinates.</p>
+            </div>
+            <div className="border border-fg/12 px-4 py-4">
+              <div className="text-[10px] tracking-[0.2em] text-dim uppercase">How long</div>
+              <div className="mt-1 text-sm text-fg">Pulse → Epoch</div>
+              <p className="mt-1 text-xs text-dim">Same length on every planet.</p>
+            </div>
+            <div className="border border-fg/12 px-4 py-4">
+              <div className="text-[10px] tracking-[0.2em] text-dim uppercase">When</div>
+              <div className="mt-1 font-brand text-lg tabular-nums">
+                <span ref={quantRef}>Q: —</span>
+              </div>
+              <p className="mt-1 text-xs text-dim">Quants since cosmological t:0.</p>
+            </div>
+          </section>
+
           <section className="mt-14">
-            <h2 className="font-display text-xl tracking-[0.06em]">Full scale</h2>
+            <h2 className="font-display text-xl tracking-[0.06em]">System 1 · Solar Clock</h2>
             <p className="mt-2 max-w-xl text-sm leading-relaxed text-dim">
-              Solar row is this local day. Hydrogen rows cascade like hours:minutes:seconds — each
-              digit is the remainder of the unit above it. Tick and GQ update every frame.
+              Answers “what time is it here?” t:L:AA:TT. Loop 0 is the start of the local day. Loop 5
+              is midday. Tick ≈ 0.864 s on Earth. Do not say “in 3 arcs” — arcs are coordinates.
             </p>
-            <div className="mt-6 space-y-5">
-              {SCALE.map((row) => (
-                <DurationRow
-                  key={row.label}
-                  label={row.label}
-                  hint={row.hint}
-                  keys={row.keys}
-                  tone={row.tone}
-                  kind={row.kind}
-                  register={(name, el) => {
-                    digits.current[name] = el;
-                  }}
-                />
-              ))}
-            </div>
+            <ScaleRow
+              tone="fg"
+              keys={["Loop", "Arc", "Tick"]}
+              spans={{ Loop: "10 / day · ~2.4 hr", Arc: "100 / loop · 86.4 s", Tick: "100 / arc · 0.864 s" }}
+              register={(n, el) => {
+                digits.current[n] = el;
+              }}
+            />
           </section>
 
-          <section className="mt-10 border border-accent/15 px-5 py-5">
-            <div className="text-[10px] tracking-[0.22em] text-accent uppercase">Universe age</div>
-            <div className="font-brand mt-1 text-2xl tracking-[0.04em] text-accent tabular-nums md:text-3xl">
-              <span ref={quantRef}>{formatQuant(quantsSinceBB())}</span>
-            </div>
-            <p className="mt-2 text-sm leading-relaxed text-dim">
-              Quants since t:0. One quant = 10<sup>9</sup> hydrogen periods ≈ 0.704 seconds. Last
-              digits increment in real time.
+          <section className="mt-12">
+            <h2 className="font-display text-xl tracking-[0.06em]">System 2 · Universal Duration</h2>
+            <p className="mt-2 max-w-xl text-sm leading-relaxed text-dim">
+              Answers “how long?” Powers of the hydrogen-1 period. “Give me 3 pulses.” “Back in a
+              spin.” Cascaded remainders, live.
             </p>
-          </section>
-
-          <section className="mt-10 grid gap-4 sm:grid-cols-2">
-            <div className="border border-primary/20 px-5 py-5">
-              <div className="text-[10px] tracking-[0.22em] text-primary uppercase">Why orange</div>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                Solar position. Normal 12-hour face, 24-hour digits underneath, plus Loop:Arc:Tick —
-                a 10 / 1,000 / 100,000 split of the same Earth day. Tick = 0.864 s.
-              </p>
-            </div>
-            <div className="border border-accent/20 px-5 py-5">
-              <div className="text-[10px] tracking-[0.22em] text-accent uppercase">Why cyan</div>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                Duration. Cascaded from Eon to GQ. The cyan Wave hand sweeps ~every 70 s; the green
-                GQ hand sweeps every 0.70 s. Same count on Earth or Mars.
-              </p>
+            <div className="mt-5 space-y-4">
+              <ScaleRow
+                tone="accent"
+                keys={["Pulse", "Wave", "Tide"]}
+                register={(n, el) => {
+                  digits.current[n] = el;
+                }}
+              />
+              <ScaleRow
+                tone="accent"
+                keys={["Spin", "Current", "Season", "Epoch"]}
+                register={(n, el) => {
+                  digits.current[n] = el;
+                }}
+              />
             </div>
           </section>
         </div>
@@ -169,7 +150,7 @@ function UniversalTimes() {
             <div>
               <h2 className="font-display text-xl tracking-[0.06em]">Solar calendar</h2>
               <p className="mt-1 text-sm text-dim">
-                10 months · 40-day cycles · 5-day week. Overlay on Gregorian {year}.
+                Optional 10-month overlay. 40-day cycles · 5-day week. Gregorian {year} still stands.
               </p>
             </div>
             <div className="font-mono text-xs tracking-[0.12em] text-accent">
@@ -191,25 +172,19 @@ function UniversalTimes() {
             ))}
           </div>
           <CalendarGrid year={year} month={calMonth} today={today} />
-          <p className="mt-4 text-xs text-dim">Orange dates are transitional holidays.</p>
         </section>
 
         <div className="mx-auto mt-10 flex max-w-3xl flex-wrap gap-4 text-[11px] tracking-[0.18em] uppercase">
+          <a href="/docs/Universal_Times_v4.2.pdf" className="text-primary hover:underline">
+            Paper v4.2 (PDF) →
+          </a>
           <a
             href="https://github.com/00ranman/xp-timekeeping"
             target="_blank"
             rel="noreferrer"
-            className="text-primary hover:underline"
-          >
-            Source on GitHub →
-          </a>
-          <a
-            href="https://www.academia.edu/170494720/Universal_Times_v4_2"
-            target="_blank"
-            rel="noreferrer"
             className="text-dim hover:text-primary"
           >
-            Paper v4.2
+            Source
           </a>
         </div>
       </main>
@@ -217,37 +192,20 @@ function UniversalTimes() {
   );
 }
 
-function DurationRow({
-  label,
-  hint,
+function ScaleRow({
   keys,
   tone,
-  kind,
+  spans,
   register,
 }: {
-  label: string;
-  hint: string;
   keys: readonly string[];
-  tone: "dim" | "fg" | "accent" | "primary";
-  kind: "solar" | "dur";
+  tone: "fg" | "accent";
+  spans?: Record<string, string>;
   register: (name: string, el: HTMLSpanElement | null) => void;
 }) {
-  const color =
-    tone === "accent"
-      ? "text-accent"
-      : tone === "primary"
-        ? "text-primary"
-        : tone === "fg"
-          ? "text-fg"
-          : "text-muted";
-  const rule =
-    tone === "accent" ? "border-accent/20" : tone === "primary" ? "border-primary/25" : "border-primary/10";
+  const color = tone === "accent" ? "text-accent" : "text-fg";
   return (
-    <div className={`border ${rule} px-4 py-4 sm:px-5`}>
-      <div className="mb-3 flex flex-wrap items-baseline justify-between gap-2">
-        <div className={`text-[11px] tracking-[0.2em] uppercase ${color}`}>{label}</div>
-        <div className="text-xs text-faint">{hint}</div>
-      </div>
+    <div className={`mt-5 border ${tone === "accent" ? "border-accent/20" : "border-fg/12"} px-4 py-4`}>
       <div className="flex flex-wrap items-end gap-x-4 gap-y-3">
         {keys.map((name, i) => (
           <div key={name} className="flex items-end gap-4">
@@ -258,13 +216,9 @@ function DurationRow({
               </div>
               <div className="mt-1.5 text-[11px] tracking-[0.16em] text-dim uppercase">{name}</div>
               <div className="text-[10px] text-faint">
-                {kind === "solar"
-                  ? name === "Tick"
-                    ? "0.864 sec"
-                    : name === "Arc"
-                      ? "1.44 min"
-                      : "2.40 hr"
-                  : formatSpan(unitSeconds(name))}
+                {spans?.[name] ??
+                  DUR_UNITS.find((u) => u.name === name)?.talk ??
+                  formatSpan(unitSeconds(name))}
               </div>
             </div>
           </div>

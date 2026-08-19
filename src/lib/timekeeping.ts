@@ -1,8 +1,8 @@
-/** Hydrogen 21cm hyperfine frequency (Hz) — Universal Times v4.2. */
+/** Universal Times v4.2 — hydrogen-1 hyperfine, 1 420 405 751.768 Hz. */
 export const HF = 1_420_405_751.768;
 export const BB_SEC = 4.350639312e17;
 
-/** Solar day subdivided into exactly 100,000 ticks. */
+/** System 1 — Solar Clock. Coordinates in the local day. Not durations. */
 export const SOLAR = {
   daySec: 86_400,
   ticksPerDay: 100_000,
@@ -11,19 +11,18 @@ export const SOLAR = {
   ticksPerArc: 100,
 } as const;
 
+/**
+ * System 2 — Universal Duration. Powers of the H-1 period.
+ * Pulse 10^11 … Epoch 10^17. Same meaning on every planet.
+ */
 export const DUR_UNITS = [
-  { name: "GQ", exp: 9 },
-  { name: "Wave", exp: 11 },
-  { name: "Pulse", exp: 12 },
-  { name: "Tide", exp: 13 },
-  { name: "Spin", exp: 14 },
-  { name: "Current", exp: 15 },
-  { name: "Season", exp: 16 },
-  { name: "Cycle", exp: 17 },
-  { name: "Epoch", exp: 18 },
-  { name: "Era", exp: 20 },
-  { name: "Age", exp: 22 },
-  { name: "Eon", exp: 24 },
+  { name: "Pulse", exp: 11, talk: "~70 s" },
+  { name: "Wave", exp: 12, talk: "~12 min" },
+  { name: "Tide", exp: 13, talk: "~2 hr" },
+  { name: "Spin", exp: 14, talk: "~20 hr" },
+  { name: "Current", exp: 15, talk: "~8 days" },
+  { name: "Season", exp: 16, talk: "~81 days" },
+  { name: "Epoch", exp: 17, talk: "~2.2 yr" },
 ] as const;
 
 export const DUR_NAMES = DUR_UNITS.map((u) => u.name);
@@ -54,6 +53,10 @@ export function utDate(doy: number, y: number) {
   return { month: 10, day: 1 };
 }
 
+export function cycleDay(d: Date) {
+  return ((dayOfYear(d) - 1) % CAL.cyc) + 1;
+}
+
 export type DurationTick = {
   name: string;
   value: number;
@@ -71,57 +74,62 @@ export function sinceBB(date = new Date()) {
   return BB_SEC + date.getTime() / 1000;
 }
 
-/** Cascaded hydrogen duration — Eon down to GQ, like h:m:s remainders. */
+/** Cascaded remainders, Epoch → Pulse. */
 export function durationNow(date = new Date()): DurationTick[] {
   let rem = sinceBB(date);
   const out: DurationTick[] = [];
   for (let i = DUR_UNITS.length - 1; i >= 0; i--) {
     const seconds = Math.pow(10, DUR_UNITS[i].exp) / HF;
     const value = Math.floor(rem / seconds);
-    rem = rem % seconds;
-    out.push({
-      name: DUR_UNITS[i].name,
-      value,
-      seconds,
-      frac: rem / seconds,
-    });
+    rem %= seconds;
+    out.push({ name: DUR_UNITS[i].name, value, seconds, frac: rem / seconds });
   }
   return out.reverse();
 }
 
+/** System 1 coordinates: t:L:AA:TT */
 export function solarLat(date = new Date()) {
   const { daySec, ticksPerDay, arcsPerLoop, ticksPerArc } = SOLAR;
-  const ms = date.getMilliseconds();
   const sec =
-    date.getHours() * 3600 + date.getMinutes() * 60 + date.getSeconds() + ms / 1000;
+    date.getHours() * 3600 +
+    date.getMinutes() * 60 +
+    date.getSeconds() +
+    date.getMilliseconds() / 1000;
   const dayFrac = sec / daySec;
   const totalTicks = Math.floor(dayFrac * ticksPerDay);
   const loopSize = arcsPerLoop * ticksPerArc;
+  const loop = Math.floor(totalTicks / loopSize);
+  const arc = Math.floor((totalTicks % loopSize) / ticksPerArc);
+  const tick = totalTicks % ticksPerArc;
   return {
-    loop: Math.floor(totalTicks / loopSize),
-    arc: Math.floor((totalTicks % loopSize) / ticksPerArc),
-    tick: totalTicks % ticksPerArc,
+    loop,
+    arc,
+    tick,
     dayFrac,
-    loopFrac: totalTicks / ticksPerDay,
+    loopFrac: dayFrac,
     arcFrac: (totalTicks % loopSize) / loopSize,
     tickFrac: (totalTicks % ticksPerArc) / ticksPerArc,
     totalTicks,
+    stamp: `t:${loop}:${String(arc).padStart(2, "0")}:${String(tick).padStart(2, "0")}`,
   };
 }
 
+/** System 3 — raw H-1 periods since cosmological t:0. */
 export function quantsSinceBB(date = new Date()) {
-  return Math.floor(sinceBB(date) / (Math.pow(10, 9) / HF));
+  return sinceBB(date) * HF;
 }
 
 export function formatQuant(n: number) {
-  return n.toLocaleString("en-US");
+  const [m, e] = n.toExponential(3).split("e");
+  const exp = Number(e);
+  return `${m}×10${exp < 0 ? "⁻" : ""}${Math.abs(exp)}`;
 }
 
 export function formatSpan(seconds: number) {
-  if (seconds < 90) return `${seconds.toFixed(2)} sec`;
-  if (seconds < 7200) return `${(seconds / 60).toFixed(2)} min`;
+  if (seconds < 90) return `${seconds.toFixed(1)} sec`;
+  if (seconds < 7200) return `${(seconds / 60).toFixed(1)} min`;
   if (seconds < 172800) return `${(seconds / 3600).toFixed(2)} hr`;
-  if (seconds < 63_072_000) return `${(seconds / 86400).toFixed(2)} days`;
+  if (seconds < 63_072_000) return `${(seconds / 86400).toFixed(1)} days`;
   return `${(seconds / 31_556_952).toFixed(2)} yr`;
 }
 

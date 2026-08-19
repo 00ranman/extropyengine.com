@@ -314,7 +314,7 @@ export const papers: Paper[] = [
   {
     tag: "New · Time · V4.2",
     title: "Universal Times v4.2",
-    href: "https://www.academia.edu/170494720/Universal_Times_v4_2",
+    href: "/docs/Universal_Times_v4.2.pdf",
   },
   {
     tag: "Epistemology",
@@ -525,7 +525,7 @@ export const docsIndex = [
   },
   {
     title: "Universal Times v4.2",
-    href: "https://www.academia.edu/170494720/Universal_Times_v4_2",
+    href: "/docs/Universal_Times_v4.2.pdf",
     note: "Hydrogen-anchored dual-system timekeeping, July 2026",
   },
   {
