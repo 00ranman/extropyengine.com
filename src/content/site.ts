@@ -305,12 +305,6 @@ export const papers: Paper[] = [
     href: "https://www.academia.edu/169680038/Extropy_Codex_Version_2_0_Comprehensive_Edition",
   },
   {
-    tag: "Codex",
-    title: "Extropy Codex: Comprehensive Technical Specification",
-    href: "/docs/Extropy_Codex_Technical_Specification_Final.pdf",
-    academia: "https://www.academia.edu/167088728/Extropy_Codex_Comprehensive_Technical_Specification",
-  },
-  {
     tag: "New · Music / Criticism",
     title: "Signal, Loop, and Story",
     href: "https://www.academia.edu/170725878/Signal_Loop_and_Story",
@@ -326,22 +320,9 @@ export const papers: Paper[] = [
     href: "/docs/When_the_Signal_Eats_the_Source.pdf",
   },
   {
-    tag: "Tech Docs · V3.1.2",
-    title: "Extropy Engine Technical Docs v3.1.2",
-    href: "/docs/extropy-engine-technical-docs-v3.1.2.pdf",
-  },
-  {
     tag: "DAG Architecture",
     title: "DAG Architecture Breakdown",
     href: "/docs/DAG_Architecture_Breakdown.pdf",
-  },
-  {
-    tag: "Time",
-    title:
-      "Universal Times: Dual-System Temporal Infrastructure, Entropy Economics & the Post-Calendar Coordination Problem",
-    href: "https://www.academia.edu/attachments/132155612/download_file?s=portfolio",
-    academia:
-      "https://www.academia.edu/165180710/Universal_Times_Dual_System_Temporal_Infrastructure_Entropy_Economics_and_the_Post_Calendar_Coordination_Problem",
   },
   {
     tag: "Framework · V4",
@@ -364,6 +345,28 @@ export const papers: Paper[] = [
     tag: "Theology",
     title: "God as Emergent Entropy Reduction: A Falsifiable Framework",
     href: "https://www.academia.edu/attachments/132032004/download_file?s=portfolio",
+  },
+];
+
+export const earlierEditions: Paper[] = [
+  {
+    tag: "Codex",
+    title: "Extropy Codex: Comprehensive Technical Specification",
+    href: "/docs/Extropy_Codex_Technical_Specification_Final.pdf",
+    academia: "https://www.academia.edu/167088728/Extropy_Codex_Comprehensive_Technical_Specification",
+  },
+  {
+    tag: "Tech Docs · V3.1.2",
+    title: "Extropy Engine Technical Docs v3.1.2",
+    href: "/docs/extropy-engine-technical-docs-v3.1.2.pdf",
+  },
+  {
+    tag: "Time",
+    title:
+      "Universal Times: Dual-System Temporal Infrastructure, Entropy Economics & the Post-Calendar Coordination Problem",
+    href: "https://www.academia.edu/attachments/132155612/download_file?s=portfolio",
+    academia:
+      "https://www.academia.edu/165180710/Universal_Times_Dual_System_Temporal_Infrastructure_Entropy_Economics_and_the_Post_Calendar_Coordination_Problem",
   },
 ];
 
@@ -519,16 +522,6 @@ export const docsIndex = [
     note: "Hydrogen-anchored dual-system timekeeping, July 2026",
   },
   {
-    title: "Tech Spec 3.1.2",
-    href: "/docs/extropy-engine-technical-docs-v3.1.2.pdf",
-    note: "Earlier engine technical specification",
-  },
-  {
-    title: "Extropy Codex: Comprehensive Technical Specification",
-    href: "/docs/Extropy_Codex_Technical_Specification_Final.pdf",
-    note: "Consolidated technical specification — local PDF",
-  },
-  {
     title: "When the Signal Eats the Source",
     href: "/docs/When_the_Signal_Eats_the_Source.pdf",
     note: "Epistemology paper",
@@ -547,5 +540,23 @@ export const docsIndex = [
     title: "Unf*ck the World for a Dollar",
     href: "/docs/Unfuck_The_World_For_A_Dollar.pdf",
     note: "The book (PDF)",
+  },
+] as const;
+
+export const earlierDocs = [
+  {
+    title: "Extropy Codex: Comprehensive Technical Specification",
+    href: "/docs/Extropy_Codex_Technical_Specification_Final.pdf",
+    note: "Earlier Codex edition",
+  },
+  {
+    title: "Tech Spec 3.1.2",
+    href: "/docs/extropy-engine-technical-docs-v3.1.2.pdf",
+    note: "Earlier engine technical specification",
+  },
+  {
+    title: "Universal Times (original)",
+    href: "https://www.academia.edu/165180710/Universal_Times_Dual_System_Temporal_Infrastructure_Entropy_Economics_and_the_Post_Calendar_Coordination_Problem",
+    note: "Pre-v4.2 dual-system timekeeping paper",
   },
 ] as const;

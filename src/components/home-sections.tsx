@@ -4,10 +4,12 @@ import {
   albums,
   artistLinks,
   book,
+  earlierEditions,
   papers,
   singles,
   socials,
   suite,
+  type Paper,
   type SuiteApp,
 } from "@/content/site";
 import { Btn, SectionTitle, StatusPill } from "@/components/ui-bits";
@@ -168,6 +170,46 @@ export function Manifesto() {
   );
 }
 
+function PaperCard({ paper }: { paper: Paper }) {
+  if (paper.academia) {
+    return (
+      <div className="flex flex-col border border-primary/18 bg-[rgb(20_12_8_/_0.45)] transition-all hover:-translate-y-0.5 hover:border-primary hover:shadow-[0_12px_28px_rgb(255_90_31_/_0.12)]">
+        <a href={paper.href} target="_blank" rel="noreferrer" className="block px-[22px] pt-[22px] pb-[18px]">
+          <div className="mb-2.5 font-mono text-[10px] tracking-[0.25em] text-primary uppercase">
+            {paper.tag}
+          </div>
+          <h3 className="font-display text-base leading-snug font-normal tracking-[0.02em]">
+            {paper.title}
+          </h3>
+        </a>
+        <a
+          href={paper.academia}
+          target="_blank"
+          rel="noreferrer"
+          className="border-t border-primary/18 px-[22px] py-3 font-mono text-[11px] tracking-[0.18em] text-primary uppercase hover:bg-primary/8"
+        >
+          ↳ Read on Academia
+        </a>
+      </div>
+    );
+  }
+  return (
+    <a
+      href={paper.href}
+      target="_blank"
+      rel="noreferrer"
+      className="block border border-primary/18 bg-[rgb(20_12_8_/_0.45)] px-[22px] py-6 transition-all hover:-translate-y-0.5 hover:border-primary hover:bg-[rgb(40_18_10_/_0.6)] hover:shadow-[0_12px_28px_rgb(255_90_31_/_0.12)]"
+    >
+      <div className="mb-2.5 font-mono text-[10px] tracking-[0.25em] text-primary uppercase">
+        {paper.tag}
+      </div>
+      <h3 className="font-display text-base leading-snug font-normal tracking-[0.02em]">
+        {paper.title}
+      </h3>
+    </a>
+  );
+}
+
 export function PapersSection() {
   return (
     <section id="papers" className="border-t border-primary/12 px-[8vw] py-20">
@@ -177,47 +219,25 @@ export function PapersSection() {
         argument with reality.
       </p>
       <div className="mx-auto grid max-w-[1100px] gap-[18px] md:grid-cols-2">
-        {papers.map((paper) =>
-          paper.academia ? (
-            <div
-              key={paper.title}
-              className="flex flex-col border border-primary/18 bg-[rgb(20_12_8_/_0.45)] transition-all hover:-translate-y-0.5 hover:border-primary hover:shadow-[0_12px_28px_rgb(255_90_31_/_0.12)]"
-            >
-              <a href={paper.href} target="_blank" rel="noreferrer" className="block px-[22px] pt-[22px] pb-[18px]">
-                <div className="mb-2.5 font-mono text-[10px] tracking-[0.25em] text-primary uppercase">
-                  {paper.tag}
-                </div>
-                <h3 className="font-display text-base leading-snug font-normal tracking-[0.02em]">
-                  {paper.title}
-                </h3>
-              </a>
-              <a
-                href={paper.academia}
-                target="_blank"
-                rel="noreferrer"
-                className="border-t border-primary/18 px-[22px] py-3 font-mono text-[11px] tracking-[0.18em] text-primary uppercase hover:bg-primary/8"
-              >
-                ↳ Read on Academia
-              </a>
-            </div>
-          ) : (
-            <a
-              key={paper.title}
-              href={paper.href}
-              target="_blank"
-              rel="noreferrer"
-              className="block border border-primary/18 bg-[rgb(20_12_8_/_0.45)] px-[22px] py-6 transition-all hover:-translate-y-0.5 hover:border-primary hover:bg-[rgb(40_18_10_/_0.6)] hover:shadow-[0_12px_28px_rgb(255_90_31_/_0.12)]"
-            >
-              <div className="mb-2.5 font-mono text-[10px] tracking-[0.25em] text-primary uppercase">
-                {paper.tag}
-              </div>
-              <h3 className="font-display text-base leading-snug font-normal tracking-[0.02em]">
-                {paper.title}
-              </h3>
-            </a>
-          ),
-        )}
+        {papers.map((paper) => (
+          <PaperCard key={paper.title} paper={paper} />
+        ))}
       </div>
+
+      <div id="earlier-editions" className="mx-auto mt-16 max-w-[1100px] border-t border-primary/10 pt-12">
+        <h3 className="font-display mb-2 text-center text-[clamp(20px,2.6vw,28px)] tracking-[0.08em]">
+          Earlier editions
+        </h3>
+        <p className="mx-auto mb-8 max-w-lg text-center text-sm text-dim">
+          Superseded specs. Still readable. Codex v2.0 and Universal Times v4.2 are current.
+        </p>
+        <div className="grid gap-[18px] md:grid-cols-2 lg:grid-cols-3">
+          {earlierEditions.map((paper) => (
+            <PaperCard key={paper.title} paper={paper} />
+          ))}
+        </div>
+      </div>
+
       <div className="mt-10 flex flex-wrap justify-center gap-3.5">
         <Btn href="https://rgossett1.academia.edu/research#papers" external>
           All Papers on Academia →
