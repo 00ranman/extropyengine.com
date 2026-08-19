@@ -6,7 +6,7 @@ export const Route = createFileRoute("/start/")({ component: StartHere });
 
 function StartHere() {
   return (
-    <EssayLayout backTo="/" backLabel="Lladnaros" title={startIntro.title}>
+    <EssayLayout backTo="/" backLabel="Extropy Engine" title={startIntro.title}>
       <p>{startIntro.lead}</p>
       <div className="space-y-4 pt-2">
         {entryPaths.map((path) => (

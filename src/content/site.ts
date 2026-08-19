@@ -1,12 +1,12 @@
 export const site = {
-  name: "Lladnaros",
+  name: "Extropy Engine",
   person: "Randall Gossett",
   palindrome: "Sorandall",
   wordmarkLeft: "Extropy",
   wordmarkRight: "Engine",
   tagline: "They want fire. I bring fungus.",
   description:
-    "Music, writing, and systems theory by Randall Gossett. Three studio albums, a free book, and papers on extropy, entropy reduction, and emergence-first governance.",
+    "Extropy Engine — protocol, papers, and systems work by Randall Gossett. A free book, three studio albums, and research on entropy reduction and emergence-first governance.",
   year: 2026,
 } as const;
 

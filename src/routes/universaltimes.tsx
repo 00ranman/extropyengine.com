@@ -45,7 +45,7 @@ function UniversalTimes() {
             to="/"
             className="mb-8 inline-block text-[11px] tracking-[0.22em] text-dim uppercase hover:text-primary"
           >
-            ← Lladnaros
+            ← Extropy Engine
           </Link>
           <h1 className="font-display text-[clamp(32px,5vw,56px)] tracking-[0.08em]">Universal Times</h1>
           <p className="mt-2 text-xs tracking-[0.22em] text-accent uppercase">

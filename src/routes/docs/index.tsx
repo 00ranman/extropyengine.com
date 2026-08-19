@@ -6,7 +6,7 @@ export const Route = createFileRoute("/docs/")({ component: Docs });
 
 function Docs() {
   return (
-    <EssayLayout backTo="/" backLabel="Lladnaros" title="Docs">
+    <EssayLayout backTo="/" backLabel="Extropy Engine" title="Docs">
       <p>Codex v2.0 is the current specification. Companion papers sit underneath.</p>
       <div className="space-y-3">
         {docsIndex.map((doc) => (

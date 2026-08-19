@@ -29,7 +29,7 @@ function Login() {
             <p className="text-sm text-dim">Sign-in is disabled.</p>
           )}
           <Link to="/" className="block text-center text-[11px] tracking-[0.2em] text-dim uppercase hover:text-primary">
-            ← Back to Lladnaros
+            ← Back to Extropy Engine
           </Link>
         </div>
       </main>

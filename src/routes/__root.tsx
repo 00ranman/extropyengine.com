@@ -3,7 +3,7 @@ import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Lladnaros — Randall Gossett";
+const APP_NAME = "Extropy Engine — Randall Gossett";
 const host = import.meta.env.VITE_PUBLIC_HOSTNAME;
 const ogImage = host ? `https://${host}/og.jpg` : undefined;
 const xBanner = host
@@ -19,21 +19,21 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Lladnaros — music, writing, and systems theory by Randall Gossett. Three studio albums, 14 singles, a free book (Unf*ck the World for a Dollar), and academic papers on extropy, entropy reduction, and emergence-first governance.",
+          "Extropy Engine — protocol, papers, and systems work by Randall Gossett. A free book, three studio albums, and research on entropy reduction and emergence-first governance.",
       },
       { name: "author", content: "Randall Gossett" },
-      { name: "apple-mobile-web-app-title", content: "Lladnaros" },
+      { name: "apple-mobile-web-app-title", content: "Extropy Engine" },
       { name: "theme-color", content: "#060606" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@lladnaros" },
       { name: "twitter:creator", content: "@lladnaros" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Lladnaros" },
+      { property: "og:site_name", content: "Extropy Engine" },
       { property: "og:title", content: APP_NAME },
       {
         property: "og:description",
         content:
-          "Music, writing, and systems theory by Randall Gossett. Three albums, a free book, and papers on extropy and emergence-first governance.",
+          "Protocol, papers, and systems work by Randall Gossett. Entropy reduction. Emergence-first governance.",
       },
       ...(ogImage
         ? [
