@@ -16,6 +16,7 @@ export const SOLAR = {
  * Pulse 10^11 … Epoch 10^17. Same meaning on every planet.
  */
 export const DUR_UNITS = [
+  { name: "GQ", exp: 9, talk: "~0.70 s" },
   { name: "Pulse", exp: 11, talk: "~70 s" },
   { name: "Wave", exp: 12, talk: "~12 min" },
   { name: "Tide", exp: 13, talk: "~2 hr" },
@@ -23,6 +24,9 @@ export const DUR_UNITS = [
   { name: "Current", exp: 15, talk: "~8 days" },
   { name: "Season", exp: 16, talk: "~81 days" },
   { name: "Epoch", exp: 17, talk: "~2.2 yr" },
+  { name: "Era", exp: 20, talk: "~2,230 yr" },
+  { name: "Age", exp: 22, talk: "~223,000 yr" },
+  { name: "Eon", exp: 24, talk: "~22.3 Myr" },
 ] as const;
 
 export const DUR_NAMES = DUR_UNITS.map((u) => u.name);

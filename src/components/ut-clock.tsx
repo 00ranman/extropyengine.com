@@ -10,8 +10,8 @@ import {
 
 const CX = 200;
 const CY = 200;
-const LOOP_R = 112;
-const ARC_R = 86;
+const LOOP_R = 124;
+const ARC_R = 92;
 const TICK_R = 62;
 
 function polar(r: number, deg: number) {
@@ -22,26 +22,10 @@ function polar(r: number, deg: number) {
   };
 }
 
-function wedge(r0: number, r1: number, a0: number, a1: number) {
-  const p0 = polar(r0, a0);
-  const p1 = polar(r0, a1);
-  const p2 = polar(r1, a1);
-  const p3 = polar(r1, a0);
-  return `M${p0.x} ${p0.y} A${r0} ${r0} 0 0 1 ${p1.x} ${p1.y} L${p2.x} ${p2.y} A${r1} ${r1} 0 0 0 ${p3.x} ${p3.y} Z`;
-}
-
-function circ(r: number) {
-  return 2 * Math.PI * r;
-}
-
 export function UtClock() {
-  const sectors = useRef<(SVGPathElement | null)[]>([]);
-  const loopArc = useRef<SVGCircleElement>(null);
-  const arcArc = useRef<SVGCircleElement>(null);
-  const tickArc = useRef<SVGCircleElement>(null);
-  const loopBead = useRef<SVGGElement>(null);
-  const arcBead = useRef<SVGGElement>(null);
-  const tickBead = useRef<SVGGElement>(null);
+  const loopRef = useRef<SVGGElement>(null);
+  const arcRef = useRef<SVGGElement>(null);
+  const tickRef = useRef<SVGGElement>(null);
   const stampRef = useRef<HTMLSpanElement>(null);
   const loopN = useRef<HTMLSpanElement>(null);
   const arcN = useRef<HTMLSpanElement>(null);
@@ -49,25 +33,20 @@ export function UtClock() {
   const qRef = useRef<HTMLSpanElement>(null);
   const seasonRef = useRef<HTMLSpanElement>(null);
   const cycleRef = useRef<HTMLSpanElement>(null);
+  const nums = useRef<(SVGTextElement | null)[]>([]);
 
   useEffect(() => {
-    const cL = circ(LOOP_R);
-    const cA = circ(ARC_R);
-    const cT = circ(TICK_R);
     let raf = 0;
     let lastLoop = -1;
     const frame = () => {
       const now = new Date();
       const lat = solarLat(now);
-      if (loopArc.current) loopArc.current.style.strokeDasharray = `${lat.loopFrac * cL} ${cL}`;
-      if (arcArc.current) arcArc.current.style.strokeDasharray = `${lat.arcFrac * cA} ${cA}`;
-      if (tickArc.current) tickArc.current.style.strokeDasharray = `${lat.tickFrac * cT} ${cT}`;
-      loopBead.current?.setAttribute("transform", `rotate(${lat.loopFrac * 360} ${CX} ${CY})`);
-      arcBead.current?.setAttribute("transform", `rotate(${lat.arcFrac * 360} ${CX} ${CY})`);
-      tickBead.current?.setAttribute("transform", `rotate(${lat.tickFrac * 360} ${CX} ${CY})`);
+      loopRef.current?.setAttribute("transform", `rotate(${lat.loopFrac * 360} ${CX} ${CY})`);
+      arcRef.current?.setAttribute("transform", `rotate(${lat.arcFrac * 360} ${CX} ${CY})`);
+      tickRef.current?.setAttribute("transform", `rotate(${lat.tickFrac * 360} ${CX} ${CY})`);
       if (lat.loop !== lastLoop) {
         lastLoop = lat.loop;
-        sectors.current.forEach((el, i) => el?.setAttribute("data-on", i === lat.loop ? "1" : "0"));
+        nums.current.forEach((el, i) => el?.setAttribute("data-on", i === lat.loop ? "1" : "0"));
       }
       if (stampRef.current) stampRef.current.textContent = lat.stamp;
       if (loopN.current) loopN.current.textContent = String(lat.loop);
@@ -85,147 +64,118 @@ export function UtClock() {
   }, []);
 
   return (
-    <div className="ut-stage mx-auto mt-8 max-w-[520px]">
+    <div className="ut-stage mx-auto mt-8 max-w-[460px]">
       <div className="ut-plaque">
-        <span className="ut-plaque-k">Quant · cosmological t:0</span>
+        <span className="ut-plaque-k">Quant · t:0</span>
         <span ref={qRef} className="ut-plaque-v">
           —
         </span>
       </div>
 
       <div className="ut-case">
-        <svg viewBox="0 0 400 400" className="ut-dial" role="img" aria-label="Universal Times wall clock">
+        <svg viewBox="0 0 400 400" className="ut-dial" role="img" aria-label="Universal Times solar clock">
           <defs>
-            <radialGradient id="ut-void" cx="38%" cy="32%" r="72%">
-              <stop offset="0%" stopColor="#3a2214" />
-              <stop offset="28%" stopColor="#140c08" />
-              <stop offset="70%" stopColor="#070605" />
-              <stop offset="100%" stopColor="#030201" />
+            <radialGradient id="ut-void" cx="42%" cy="36%" r="68%">
+              <stop offset="0%" stopColor="#24140e" />
+              <stop offset="55%" stopColor="#0c0908" />
+              <stop offset="100%" stopColor="#060606" />
             </radialGradient>
-            <radialGradient id="ut-bezel" cx="32%" cy="28%" r="70%">
-              <stop offset="0%" stopColor="#f3e2b0" />
-              <stop offset="35%" stopColor="#d4af37" />
-              <stop offset="62%" stopColor="#7a4a18" />
-              <stop offset="100%" stopColor="#2a1408" />
+            <radialGradient id="ut-ember" cx="35%" cy="30%" r="70%">
+              <stop offset="0%" stopColor="#ffb089" />
+              <stop offset="45%" stopColor="#ff5a1f" />
+              <stop offset="100%" stopColor="#7a2208" />
             </radialGradient>
-            <radialGradient id="ut-well" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="#0c0806" />
-              <stop offset="100%" stopColor="#000" />
-            </radialGradient>
-            <radialGradient id="ut-cab" cx="35%" cy="30%" r="70%">
-              <stop offset="0%" stopColor="#ffd089" />
-              <stop offset="40%" stopColor="#ff5a1f" />
-              <stop offset="100%" stopColor="#4a1206" />
-            </radialGradient>
-            <linearGradient id="ut-gold" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#fff4c8" />
-              <stop offset="45%" stopColor="#d4af37" />
-              <stop offset="100%" stopColor="#ff5a1f" />
-            </linearGradient>
-            <linearGradient id="ut-glass" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="rgb(255 255 255 / 0.18)" />
-              <stop offset="38%" stopColor="rgb(255 255 255 / 0)" />
-            </linearGradient>
-            <filter id="ut-glow" x="-80%" y="-80%" width="260%" height="260%">
-              <feGaussianBlur stdDeviation="4" result="b" />
+            <filter id="ut-glow-ember" x="-80%" y="-80%" width="260%" height="260%">
+              <feGaussianBlur stdDeviation="3.2" result="b" />
               <feMerge>
                 <feMergeNode in="b" />
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
-            <filter id="ut-soft" x="-20%" y="-20%" width="140%" height="140%">
-              <feGaussianBlur stdDeviation="1.1" />
+            <filter id="ut-glow-cyan" x="-80%" y="-80%" width="260%" height="260%">
+              <feGaussianBlur stdDeviation="2.6" result="b" />
+              <feMerge>
+                <feMergeNode in="b" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
             </filter>
           </defs>
 
-          <circle cx={CX} cy={CY} r="198" fill="url(#ut-bezel)" />
-          <circle cx={CX} cy={CY} r="184" fill="#0a0705" />
-          <circle cx={CX} cy={CY} r="181" fill="url(#ut-void)" />
+          <circle cx={CX} cy={CY} r="192" fill="#0a0808" />
+          <circle cx={CX} cy={CY} r="186" fill="url(#ut-void)" />
+          <circle cx={CX} cy={CY} r="186" fill="none" stroke="rgb(255 90 31 / 0.35)" strokeWidth="1.2" />
+          <circle cx={CX} cy={CY} r="148" fill="none" stroke="rgb(34 211 238 / 0.16)" strokeWidth="1" />
+          <circle cx={CX} cy={CY} r="108" fill="none" stroke="rgb(243 236 225 / 0.08)" strokeWidth="0.8" />
 
-          {Array.from({ length: 100 }, (_, i) => {
-            const deg = i * 3.6;
-            const long = i % 10 === 0;
-            const a = polar(long ? 181 : 180, deg);
-            const b = polar(long ? 172 : 176, deg);
+          {Array.from({ length: 10 }, (_, i) => {
+            const a = polar(178, i * 36);
+            const b = polar(i === 5 ? 164 : 170, i * 36);
             return (
               <line
-                key={`h${i}`}
+                key={i}
                 x1={a.x}
                 y1={a.y}
                 x2={b.x}
                 y2={b.y}
-                stroke={long ? "#d4af37" : "rgb(212 175 55 / 0.28)"}
-                strokeWidth={long ? 1.6 : 0.6}
+                stroke={i === 5 ? "#f3ece1" : "rgb(255 90 31 / 0.65)"}
+                strokeWidth={i === 0 || i === 5 ? 2.2 : 1.1}
               />
             );
           })}
 
-          {Array.from({ length: 48 }, (_, i) => {
-            const p = polar(175 + (i % 5), (i * 137.5) % 360);
-            const s = 0.4 + (i % 3) * 0.25;
-            return <circle key={`st${i}`} cx={p.x} cy={p.y} r={s} fill="rgb(243 236 225 / 0.35)" />;
-          })}
-
-          {Array.from({ length: 10 }, (_, i) => (
-            <path
-              key={i}
-              ref={(el) => {
-                sectors.current[i] = el;
-              }}
-              d={wedge(138, 168, i * 36 + 1.4, (i + 1) * 36 - 1.4)}
-              className="ut-sector"
-              data-on="0"
-            />
-          ))}
-
           {Array.from({ length: 10 }, (_, i) => {
-            const p = polar(153, i * 36 + 18);
+            const p = polar(154, i * 36);
             return (
-              <text key={`n${i}`} x={p.x} y={p.y} textAnchor="middle" dominantBaseline="middle" className="ut-num">
+              <text
+                key={`n${i}`}
+                ref={(el) => {
+                  nums.current[i] = el;
+                }}
+                x={p.x}
+                y={p.y}
+                textAnchor="middle"
+                dominantBaseline="middle"
+                className="ut-num"
+                data-on="0"
+              >
                 {i}
               </text>
             );
           })}
 
-          <circle cx={CX} cy={CY} r="128" fill="url(#ut-well)" />
-          <circle cx={CX} cy={CY} r="128" fill="none" stroke="rgb(0 0 0 / 0.8)" strokeWidth="10" opacity="0.35" />
+          <circle cx={CX} cy={CY} r={LOOP_R} className="ut-orbit ut-orbit-loop" />
+          <circle cx={CX} cy={CY} r={ARC_R} className="ut-orbit ut-orbit-arc" />
+          <circle cx={CX} cy={CY} r={TICK_R} className="ut-orbit ut-orbit-tick" />
 
-          <circle cx={CX} cy={CY} r={LOOP_R} className="ut-channel" />
-          <circle cx={CX} cy={CY} r={ARC_R} className="ut-channel" />
-          <circle cx={CX} cy={CY} r={TICK_R} className="ut-channel" />
-
-          <circle ref={loopArc} cx={CX} cy={CY} r={LOOP_R} className="ut-sweep ut-sweep-loop" transform={`rotate(-90 ${CX} ${CY})`} />
-          <circle ref={arcArc} cx={CX} cy={CY} r={ARC_R} className="ut-sweep ut-sweep-arc" transform={`rotate(-90 ${CX} ${CY})`} />
-          <circle ref={tickArc} cx={CX} cy={CY} r={TICK_R} className="ut-sweep ut-sweep-tick" transform={`rotate(-90 ${CX} ${CY})`} />
-
-          <g ref={loopBead}>
-            <circle cx={CX} cy={CY - LOOP_R} r="9" fill="rgb(212 175 55 / 0.25)" filter="url(#ut-soft)" />
-            <circle cx={CX} cy={CY - LOOP_R} r="6.4" fill="url(#ut-gold)" filter="url(#ut-glow)" />
-            <circle cx={CX - 1.6} cy={CY - LOOP_R - 2} r="1.8" fill="rgb(255 255 255 / 0.7)" />
-          </g>
-          <g ref={arcBead}>
-            <circle cx={CX} cy={CY - ARC_R} r="7" fill="rgb(243 236 225 / 0.18)" filter="url(#ut-soft)" />
-            <circle cx={CX} cy={CY - ARC_R} r="4.8" fill="#f3ece1" filter="url(#ut-glow)" />
-            <circle cx={CX - 1.2} cy={CY - ARC_R - 1.6} r="1.3" fill="white" />
-          </g>
-          <g ref={tickBead}>
-            <circle cx={CX} cy={CY - TICK_R} r="6" fill="rgb(255 90 31 / 0.28)" filter="url(#ut-soft)" />
-            <circle cx={CX} cy={CY - TICK_R} r="3.8" fill="#ff5a1f" filter="url(#ut-glow)" />
-            <circle cx={CX - 1} cy={CY - TICK_R - 1.2} r="1" fill="#ffd7c0" />
+          {/* Loop — ember chevron */}
+          <g ref={loopRef}>
+            <polygon
+              points={`${CX},${CY - LOOP_R - 14} ${CX + 11},${CY - LOOP_R + 6} ${CX},${CY - LOOP_R - 1} ${CX - 11},${CY - LOOP_R + 6}`}
+              fill="#ff5a1f"
+              filter="url(#ut-glow-ember)"
+            />
           </g>
 
-          <circle cx={CX} cy={CY} r="34" fill="#070504" />
-          <circle cx={CX} cy={CY} r="30" fill="url(#ut-cab)" filter="url(#ut-glow)" />
-          <circle cx={CX} cy={CY} r="38" className="ut-core-halo" fill="none" />
-          <text x={CX} y={CY - 1} textAnchor="middle" dominantBaseline="middle" className="ut-h">
+          {/* Arc — cyan diamond */}
+          <g ref={arcRef}>
+            <polygon
+              points={`${CX},${CY - ARC_R - 9} ${CX + 8},${CY - ARC_R} ${CX},${CY - ARC_R + 9} ${CX - 8},${CY - ARC_R}`}
+              fill="#22d3ee"
+              filter="url(#ut-glow-cyan)"
+            />
+          </g>
+
+          {/* Tick — ember disc */}
+          <g ref={tickRef}>
+            <circle cx={CX} cy={CY - TICK_R} r="5" fill="#ffb089" filter="url(#ut-glow-ember)" />
+            <circle cx={CX} cy={CY - TICK_R} r="2.2" fill="#fff4ea" />
+          </g>
+
+          <circle cx={CX} cy={CY} r="28" fill="url(#ut-ember)" filter="url(#ut-glow-ember)" />
+          <circle cx={CX} cy={CY} r="34" className="ut-core-halo" fill="none" />
+          <text x={CX} y={CY + 1} textAnchor="middle" dominantBaseline="middle" className="ut-h">
             H
           </text>
-          <text x={CX} y={CY + 13} textAnchor="middle" className="ut-h-sub">
-            21cm
-          </text>
-
-          <path d="M78 86 A150 150 0 0 1 322 78" fill="none" stroke="url(#ut-glass)" strokeWidth="22" strokeLinecap="round" opacity="0.55" />
-          <ellipse cx="148" cy="118" rx="70" ry="28" fill="rgb(255 255 255 / 0.04)" transform="rotate(-28 148 118)" />
         </svg>
       </div>
 
@@ -264,7 +214,7 @@ export function UtClock() {
             Tick <b ref={tickN}>—</b>
           </span>
         </div>
-        <p>Ten loops in a day. Five is midday. Gold is Loop, bone is Arc, ember is Tick.</p>
+        <p>Ember chevron is Loop. Cyan diamond is Arc. The small disc is Tick.</p>
       </div>
     </div>
   );

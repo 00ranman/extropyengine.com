@@ -48,7 +48,7 @@ function UniversalTimes() {
       set("Loop", String(lat.loop));
       set("Arc", pad2(lat.arc));
       set("Tick", pad2(lat.tick));
-      for (const u of dur) set(u.name, u.name === "Epoch" ? String(u.value) : pad2(u.value % 100));
+      for (const u of dur) set(u.name, u.name === "Eon" ? String(u.value) : pad2(u.value % 100));
       if (quantRef.current) quantRef.current.textContent = `Q: ${formatQuant(quantsSinceBB(now))}`;
       raf = requestAnimationFrame(frame);
     };
@@ -92,7 +92,7 @@ function UniversalTimes() {
             </div>
             <div className="border border-fg/12 px-4 py-4">
               <div className="text-[10px] tracking-[0.2em] text-dim uppercase">How long</div>
-              <div className="mt-1 text-sm text-fg">Pulse → Epoch</div>
+              <div className="mt-1 text-sm text-fg">GQ → Eon</div>
               <p className="mt-1 text-xs text-dim">Same length on every planet.</p>
             </div>
             <div className="border border-fg/12 px-4 py-4">
@@ -123,13 +123,13 @@ function UniversalTimes() {
           <section className="mt-12">
             <h2 className="font-display text-xl tracking-[0.06em]">System 2 · Universal Duration</h2>
             <p className="mt-2 max-w-xl text-sm leading-relaxed text-dim">
-              Answers “how long?” Powers of the hydrogen-1 period. “Give me 3 pulses.” “Back in a
-              spin.” Cascaded remainders, live.
+              Answers “how long?” Powers of the hydrogen-1 period, from a GQ (~0.70 s) out through
+              Epoch, Era, Age, and Eon. Cascaded remainders, live.
             </p>
             <div className="mt-5 space-y-4">
               <ScaleRow
                 tone="accent"
-                keys={["Pulse", "Wave", "Tide"]}
+                keys={["GQ", "Pulse", "Wave", "Tide"]}
                 register={(n, el) => {
                   digits.current[n] = el;
                 }}
@@ -137,6 +137,13 @@ function UniversalTimes() {
               <ScaleRow
                 tone="accent"
                 keys={["Spin", "Current", "Season", "Epoch"]}
+                register={(n, el) => {
+                  digits.current[n] = el;
+                }}
+              />
+              <ScaleRow
+                tone="dim"
+                keys={["Era", "Age", "Eon"]}
                 register={(n, el) => {
                   digits.current[n] = el;
                 }}
@@ -199,11 +206,11 @@ function ScaleRow({
   register,
 }: {
   keys: readonly string[];
-  tone: "fg" | "accent";
+  tone: "fg" | "accent" | "dim";
   spans?: Record<string, string>;
   register: (name: string, el: HTMLSpanElement | null) => void;
 }) {
-  const color = tone === "accent" ? "text-accent" : "text-fg";
+  const color = tone === "accent" ? "text-accent" : tone === "dim" ? "text-muted" : "text-fg";
   return (
     <div className={`mt-5 border ${tone === "accent" ? "border-accent/20" : "border-fg/12"} px-4 py-4`}>
       <div className="flex flex-wrap items-end gap-x-4 gap-y-3">
