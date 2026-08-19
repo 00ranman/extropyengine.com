@@ -1,5 +1,4 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { nav, site, startBar } from "@/content/site";
 import { cn } from "@/lib/utils";
@@ -20,38 +19,43 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     <div className="relative min-h-dvh bg-bg text-fg">
       <div className="bg-veil pointer-events-none fixed inset-0 z-0" />
       <header className="sticky top-0 z-50 border-b border-primary/12 bg-bg/92 backdrop-blur-md">
-        <div className="relative flex items-center justify-between px-[8vw] py-6 max-md:px-5 max-md:py-4">
+        <div className="relative flex items-center justify-between px-[8vw] py-7 max-md:items-start max-md:px-[5vw] max-md:pt-2 max-md:pb-[18px]">
           <Link
             to="/"
-            className="font-display text-lg font-bold tracking-[0.35em] text-fg max-md:text-xs max-md:tracking-[0.18em]"
+            className="font-display text-[clamp(18px,2.5vw,26px)] font-bold tracking-[0.35em] text-fg max-md:mt-[17px] max-md:text-[14px] max-md:tracking-[0.2em]"
           >
             L L A D N A R O S
           </Link>
           <span
-            className="pointer-events-none absolute left-1/2 hidden -translate-x-1/2 font-display text-2xl md:block"
+            className="pointer-events-none absolute left-1/2 hidden -translate-x-1/2 font-display text-[clamp(20px,2.5vw,28px)] md:block"
             aria-hidden
           >
             ◈
           </span>
           <Link
             to="/"
-            className="font-display text-lg font-bold tracking-[0.35em] text-fg max-md:text-xs max-md:tracking-[0.18em]"
+            className="font-display text-[clamp(18px,2.5vw,26px)] font-bold tracking-[0.35em] text-fg max-md:mt-[17px] max-md:text-[14px] max-md:tracking-[0.2em]"
           >
             S O R A N D A L L
           </Link>
           <button
             type="button"
-            className="absolute right-5 top-3 z-10 p-2 text-fg md:hidden"
+            className="absolute top-2 left-1/2 z-10 -translate-x-1/2 px-2.5 py-1.5 text-[28px] leading-none text-fg md:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? <X className="size-6" /> : <Menu className="size-6" />}
+            ☰
           </button>
         </div>
         {open ? (
-          <div className="flex flex-col border-t border-primary/20 bg-bg/95 px-5 py-2 md:hidden">
+          <div className="flex flex-col bg-[rgb(6_6_6_/_0.95)] px-[5vw] py-2.5 md:hidden">
             {nav.map((item) => (
-              <NavItem key={item.href} href={item.href} className="border-b border-primary/8 py-3 text-sm tracking-[0.25em] uppercase">
+              <NavItem
+                key={item.href}
+                href={item.href}
+                className="border-b border-primary/8 py-3 text-[13px] tracking-[0.25em] text-fg uppercase last:border-b-0 hover:text-primary"
+              >
                 {item.label}
               </NavItem>
             ))}
@@ -59,23 +63,26 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         ) : null}
       </header>
 
-      <div className="relative z-10 flex flex-wrap items-center justify-center gap-x-0 gap-y-1 border-b border-primary/30 bg-bg/92 px-[5vw] py-2.5 text-center text-[11px] tracking-[0.15em] uppercase md:text-[13px]">
-        <span className="mr-4 text-fg max-md:mr-0 max-md:mb-1 max-md:w-full">{startBar.label}:</span>
+      <div className="relative z-10 flex flex-wrap items-center justify-center gap-x-0 gap-y-1 border-b border-primary/30 bg-bg/92 px-[5vw] py-2.5 text-center text-[13px] tracking-[0.15em] uppercase max-[600px]:flex-col max-[600px]:gap-1.5 max-[600px]:px-3 max-[600px]:py-2 max-[600px]:text-[11px] max-[600px]:tracking-[0.08em]">
+        <span className="mr-4 text-fg max-[600px]:mr-0 max-[600px]:mb-0.5 max-[600px]:w-full">
+          {startBar.label}:
+        </span>
         {startBar.entries.map((item) => (
           <Link
             key={item.href}
             to={item.href}
-            className="px-3 py-1.5 text-primary transition-colors hover:text-fg"
+            className="px-3 py-1.5 whitespace-nowrap text-primary transition-colors hover:text-fg max-[600px]:px-2 max-[600px]:py-1"
           >
             {item.label}
           </Link>
         ))}
-        <span className="ml-6 flex flex-wrap items-center justify-center border-l border-primary/40 pl-6 max-md:ml-0 max-md:mt-1 max-md:w-full max-md:border-l-0 max-md:border-t max-md:pt-2 max-md:pl-0">
+        <span className="ml-6 flex flex-wrap items-center justify-center border-l border-primary/40 pl-6 max-[600px]:mt-1 max-[600px]:ml-0 max-[600px]:w-full max-[600px]:flex-nowrap max-[600px]:border-t max-[600px]:border-l-0 max-[600px]:pt-2 max-[600px]:pl-0">
           {startBar.extras.map((item) => (
             <Link
               key={item.href}
               to={item.href}
-              className="px-2 py-1.5 text-fg/70 transition-colors hover:text-primary"
+              className="px-2 py-1.5 whitespace-nowrap text-fg/70 transition-colors hover:text-primary max-[600px]:px-1 max-[600px]:py-1 max-[600px]:text-[10px]"
+            >
             >
               {item.label}
             </Link>

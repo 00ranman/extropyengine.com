@@ -16,7 +16,7 @@ import { Btn, SectionTitle, StatusPill } from "@/components/ui-bits";
 
 export function BookHero() {
   return (
-    <section id="book" className="grid items-center gap-14 px-[8vw] py-20 md:grid-cols-2 md:gap-16">
+    <section id="book" className="grid items-center gap-14 px-[8vw] py-20 max-md:gap-10 max-md:px-[6vw] max-md:py-10 md:grid-cols-2 md:gap-16">
       <div className="order-2 md:order-1">
         <div className="mb-4 text-[11px] tracking-[0.35em] text-primary uppercase">The Book</div>
         <h1 className="font-display mb-5 text-[clamp(32px,5vw,64px)] leading-[1.1] tracking-[0.04em]">
