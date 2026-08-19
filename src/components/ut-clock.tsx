@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { HF } from "@/lib/timekeeping";
+import { durationNow, pad2, solarLat } from "@/lib/timekeeping";
 
 const CX = 200;
 const CY = 200;
@@ -32,16 +32,18 @@ function ticks(count: number, r0: number, r1: number, every: number, className: 
 }
 
 export function UtClock() {
-  const solarRef = useRef<SVGGElement>(null);
-  const minuteRef = useRef<SVGGElement>(null);
-  const secondRef = useRef<SVGGElement>(null);
-  const durRef = useRef<SVGGElement>(null);
+  const solarH = useRef<SVGGElement>(null);
+  const solarM = useRef<SVGGElement>(null);
+  const solarS = useRef<SVGGElement>(null);
+  const tickHand = useRef<SVGGElement>(null);
+  const waveHand = useRef<SVGGElement>(null);
+  const gqHand = useRef<SVGGElement>(null);
   const electronRef = useRef<SVGGElement>(null);
   const solarRead = useRef<HTMLSpanElement>(null);
+  const latRead = useRef<HTMLSpanElement>(null);
   const durRead = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    const spinSec = 10 ** 14 / HF;
     let raf = 0;
     const frame = () => {
       const now = new Date();
@@ -49,28 +51,31 @@ export function UtClock() {
       const s = now.getSeconds() + ms / 1000;
       const m = now.getMinutes() + s / 60;
       const h = (now.getHours() % 24) + m / 60;
-      const solarDeg = h * 15;
-      const minDeg = m * 6;
-      const secDeg = s * 6;
-      const sinceBB = 4.350639312e17 + now.getTime() / 1000;
-      const durDeg = ((sinceBB / spinSec) % 1) * 360;
-      const eDeg = (now.getTime() / 40) % 360;
+      const lat = solarLat(now);
+      const dur = durationNow(now);
+      const gq = dur.find((d) => d.name === "GQ");
+      const wave = dur.find((d) => d.name === "Wave");
 
-      solarRef.current?.setAttribute("transform", `rotate(${solarDeg} ${CX} ${CY})`);
-      minuteRef.current?.setAttribute("transform", `rotate(${minDeg} ${CX} ${CY})`);
-      secondRef.current?.setAttribute("transform", `rotate(${secDeg} ${CX} ${CY})`);
-      durRef.current?.setAttribute("transform", `rotate(${durDeg} ${CX} ${CY})`);
-      electronRef.current?.setAttribute("transform", `rotate(${eDeg} ${CX} ${CY})`);
+      solarH.current?.setAttribute("transform", `rotate(${h * 15} ${CX} ${CY})`);
+      solarM.current?.setAttribute("transform", `rotate(${m * 6} ${CX} ${CY})`);
+      solarS.current?.setAttribute("transform", `rotate(${s * 6} ${CX} ${CY})`);
+      tickHand.current?.setAttribute("transform", `rotate(${lat.tickFrac * 360} ${CX} ${CY})`);
+      waveHand.current?.setAttribute("transform", `rotate(${(wave?.frac ?? 0) * 360} ${CX} ${CY})`);
+      gqHand.current?.setAttribute("transform", `rotate(${(gq?.frac ?? 0) * 360} ${CX} ${CY})`);
+      electronRef.current?.setAttribute("transform", `rotate(${(now.getTime() / 40) % 360} ${CX} ${CY})`);
 
       if (solarRead.current) {
-        const hh = String(now.getHours()).padStart(2, "0");
-        const mm = String(now.getMinutes()).padStart(2, "0");
-        const ss = String(now.getSeconds()).padStart(2, "0");
-        solarRead.current.textContent = `${hh}:${mm}:${ss}`;
+        solarRead.current.textContent = `${pad2(now.getHours())}:${pad2(now.getMinutes())}:${pad2(now.getSeconds())}`;
+      }
+      if (latRead.current) {
+        latRead.current.textContent = `${lat.loop}:${pad2(lat.arc)}:${pad2(lat.tick)}`;
       }
       if (durRead.current) {
-        const spin = Math.floor(sinceBB / spinSec) % 100;
-        durRead.current.textContent = `${String(spin).padStart(2, "0")} / 100`;
+        const live = ["Spin", "Tide", "Pulse", "Wave", "GQ"].map((n) => {
+          const u = dur.find((d) => d.name === n);
+          return pad2(u ? u.value % 100 : 0);
+        });
+        durRead.current.textContent = live.join(":");
       }
       raf = requestAnimationFrame(frame);
     };
@@ -79,7 +84,7 @@ export function UtClock() {
   }, []);
 
   return (
-    <div className="ut-stage mx-auto mt-10 max-w-[440px]">
+    <div className="ut-stage mx-auto mt-10 max-w-[480px]">
       <svg viewBox="0 0 400 400" className="ut-dial h-auto w-full" role="img" aria-label="Universal Times dual clock">
         <defs>
           <radialGradient id="ut-void" cx="50%" cy="50%" r="50%">
@@ -120,35 +125,12 @@ export function UtClock() {
         {[0, 6, 12, 18].map((h) => {
           const p = polar(CX, CY, 156, h * 15);
           return (
-            <text
-              key={`s${h}`}
-              x={p.x}
-              y={p.y}
-              textAnchor="middle"
-              dominantBaseline="middle"
-              className="ut-label-solar"
-            >
+            <text key={`s${h}`} x={p.x} y={p.y} textAnchor="middle" dominantBaseline="middle" className="ut-label-solar">
               {String(h).padStart(2, "0")}
             </text>
           );
         })}
-        {[0, 2, 5, 7].map((n) => {
-          const p = polar(CX, CY, 118, n * 36);
-          return (
-            <text
-              key={`d${n}`}
-              x={p.x}
-              y={p.y}
-              textAnchor="middle"
-              dominantBaseline="middle"
-              className="ut-label-dur"
-            >
-              {n}
-            </text>
-          );
-        })}
 
-        {/* electron orbit */}
         <ellipse
           cx={CX}
           cy={CY}
@@ -163,24 +145,34 @@ export function UtClock() {
           <circle cx={CX} cy={CY - 78} r="3.4" className="ut-electron" filter="url(#ut-cyan)" />
         </g>
 
-        {/* duration hand — cyan, decimal spin */}
-        <g ref={durRef}>
-          <line x1={CX} y1={CY} x2={CX} y2="78" className="ut-hand-dur" strokeWidth="2.4" filter="url(#ut-cyan)" />
-          <circle cx={CX} cy="78" r="3" className="ut-hand-dur-tip" />
+        <g ref={waveHand}>
+          <line x1={CX} y1={CY} x2={CX} y2="86" className="ut-hand-dur" strokeWidth="2.2" filter="url(#ut-cyan)" />
         </g>
-
-        {/* solar hands */}
-        <g ref={solarRef}>
-          <line x1={CX} y1={CY + 14} x2={CX} y2="92" className="ut-hand-solar" strokeWidth="4" strokeLinecap="round" filter="url(#ut-ember)" />
+        <g ref={gqHand}>
+          <line x1={CX} y1={CY} x2={CX} y2="64" className="ut-hand-gq" strokeWidth="1.2" />
         </g>
-        <g ref={minuteRef}>
-          <line x1={CX} y1={CY + 18} x2={CX} y2="64" className="ut-hand-solar-min" strokeWidth="2" strokeLinecap="round" />
+        <g ref={tickHand}>
+          <line x1={CX} y1={CY + 16} x2={CX} y2="52" className="ut-hand-tick" strokeWidth="1.4" />
         </g>
-        <g ref={secondRef}>
+        <g ref={solarH}>
+          <line
+            x1={CX}
+            y1={CY + 14}
+            x2={CX}
+            y2="100"
+            className="ut-hand-solar"
+            strokeWidth="4"
+            strokeLinecap="round"
+            filter="url(#ut-ember)"
+          />
+        </g>
+        <g ref={solarM}>
+          <line x1={CX} y1={CY + 18} x2={CX} y2="72" className="ut-hand-solar-min" strokeWidth="2" strokeLinecap="round" />
+        </g>
+        <g ref={solarS}>
           <line x1={CX} y1={CY + 22} x2={CX} y2="48" className="ut-hand-solar-sec" strokeWidth="1" />
         </g>
 
-        {/* hydrogen nucleus */}
         <g className="ut-nucleus">
           <circle cx={CX} cy={CY} r="16" fill="url(#ut-core)" filter="url(#ut-ember)" />
           <circle cx={CX} cy={CY} r="22" className="ut-nucleus-halo" fill="none" strokeWidth="1" />
@@ -190,20 +182,31 @@ export function UtClock() {
         </g>
       </svg>
 
-      <div className="mt-6 grid grid-cols-2 gap-3 text-left">
+      <div className="mt-6 grid gap-3 text-left sm:grid-cols-2">
         <div className="border border-primary/25 px-4 py-3">
-          <div className="text-[10px] tracking-[0.2em] text-primary uppercase">Solar · local</div>
+          <div className="text-[10px] tracking-[0.2em] text-primary uppercase">Solar · Earth day</div>
           <div className="font-brand mt-1 text-2xl tracking-[0.08em] text-primary tabular-nums">
             <span ref={solarRead}>--:--:--</span>
           </div>
-          <p className="mt-1 text-xs leading-snug text-dim">Where Earth is in its 24-hour spin. Orange ring and hands.</p>
+          <div className="mt-2 text-[10px] tracking-[0.18em] text-primary/80 uppercase">Loop : Arc : Tick</div>
+          <div className="font-brand text-xl tracking-[0.12em] text-primary tabular-nums">
+            <span ref={latRead}>-:--:--</span>
+          </div>
+          <p className="mt-1 text-xs leading-snug text-dim">
+            10 loops · 1,000 arcs · 100,000 ticks per local day. Tick = 0.864 s. Orange hands.
+          </p>
         </div>
         <div className="border border-accent/25 px-4 py-3">
-          <div className="text-[10px] tracking-[0.2em] text-accent uppercase">Duration · Spin</div>
-          <div className="font-brand mt-1 text-2xl tracking-[0.08em] text-accent tabular-nums">
-            <span ref={durRead}>-- / 100</span>
+          <div className="text-[10px] tracking-[0.2em] text-accent uppercase">Duration · hydrogen</div>
+          <div className="mt-2 text-[10px] tracking-[0.18em] text-accent/80 uppercase">
+            Spin : Tide : Pulse : Wave : GQ
           </div>
-          <p className="mt-1 text-xs leading-snug text-dim">How far through one hydrogen Spin (~19.5 hr). Cyan ring and needle.</p>
+          <div className="font-brand text-[clamp(18px,4vw,26px)] tracking-[0.06em] text-accent tabular-nums">
+            <span ref={durRead}>--:--:--:--:--</span>
+          </div>
+          <p className="mt-1 text-xs leading-snug text-dim">
+            Cascaded remainders. GQ (~0.70 s) and Wave (~70 s) drive the cyan hands. Same count anywhere.
+          </p>
         </div>
       </div>
     </div>
