@@ -1,5 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oxanium:wght@600;700;800&family=Space+Mono:wght@400;700&display=swap");
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Space+Mono:wght@400;700&display=swap");
 
 @theme {
   --color-bg: #060606;
@@ -15,6 +15,7 @@
   --color-surface: #140c08;
   --color-ink: #060606;
   --font-display: "Cinzel", ui-serif, Georgia, serif;
+  --font-brand: "Oxanium", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Space Mono", ui-monospace, monospace;
   --radius-sm: 2px;
   --radius-md: 6px;
@@ -63,4 +64,39 @@
     rgb(255 90 31 / 0.18),
     transparent 60%
   );
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.42em;
+  font-family: var(--font-brand);
+  font-weight: 800;
+  line-height: 0.92;
+  text-transform: uppercase;
+  color: var(--color-fg);
+  text-shadow:
+    0 0 10px rgb(255 90 31 / 0.45),
+    0 0 28px rgb(255 90 31 / 0.22);
+}
+
+.brand-lockup .extropy {
+  font-size: 1em;
+  letter-spacing: 0.14em;
+}
+
+.brand-lockup .engine {
+  font-size: 1.22em;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+  text-shadow:
+    0 0 12px rgb(255 90 31 / 0.7),
+    0 0 34px rgb(255 90 31 / 0.28);
+}
+
+.brand-lockup:hover .engine {
+  text-shadow:
+    0 0 16px rgb(255 90 31 / 0.9),
+    0 0 42px rgb(255 90 31 / 0.4);
 }

@@ -19,28 +19,18 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     <div className="relative min-h-dvh bg-bg text-fg">
       <div className="bg-veil pointer-events-none fixed inset-0 z-0" />
       <header className="sticky top-0 z-50 border-b border-primary/12 bg-bg/92 backdrop-blur-md">
-        <div className="relative flex items-center justify-between px-[8vw] py-7 max-md:items-start max-md:px-[5vw] max-md:pt-2 max-md:pb-[18px]">
+        <div className="relative flex items-center justify-center px-16 py-5 max-md:px-14 max-md:py-4">
           <Link
             to="/"
-            className="font-display text-[clamp(18px,2.5vw,26px)] font-bold tracking-[0.35em] text-fg max-md:mt-[17px] max-md:text-[14px] max-md:tracking-[0.2em]"
+            className="brand-lockup text-[clamp(22px,4.4vw,42px)] max-md:text-[clamp(20px,7vw,28px)]"
+            aria-label="Extropy Engine"
           >
-            {site.wordmarkLeft}
-          </Link>
-          <span
-            className="pointer-events-none absolute left-1/2 hidden -translate-x-1/2 font-display text-[clamp(20px,2.5vw,28px)] md:block"
-            aria-hidden
-          >
-            ◈
-          </span>
-          <Link
-            to="/"
-            className="font-display text-[clamp(18px,2.5vw,26px)] font-bold tracking-[0.35em] text-fg max-md:mt-[17px] max-md:text-[14px] max-md:tracking-[0.2em]"
-          >
-            {site.wordmarkRight}
+            <span className="extropy">{site.wordmarkLeft}</span>
+            <span className="engine">{site.wordmarkRight}</span>
           </Link>
           <button
             type="button"
-            className="absolute top-2 left-1/2 z-10 -translate-x-1/2 px-2.5 py-1.5 text-[28px] leading-none text-fg md:hidden"
+            className="absolute top-1/2 right-3 z-10 flex size-11 -translate-y-1/2 items-center justify-center text-[26px] leading-none text-fg md:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
