@@ -50,13 +50,13 @@ export function UtClock() {
       const ms = now.getMilliseconds();
       const s = now.getSeconds() + ms / 1000;
       const m = now.getMinutes() + s / 60;
-      const h = (now.getHours() % 24) + m / 60;
+      const hourDeg = ((now.getHours() % 12) + m / 60) * 30;
       const lat = solarLat(now);
       const dur = durationNow(now);
       const gq = dur.find((d) => d.name === "GQ");
       const wave = dur.find((d) => d.name === "Wave");
 
-      solarH.current?.setAttribute("transform", `rotate(${h * 15} ${CX} ${CY})`);
+      solarH.current?.setAttribute("transform", `rotate(${hourDeg} ${CX} ${CY})`);
       solarM.current?.setAttribute("transform", `rotate(${m * 6} ${CX} ${CY})`);
       solarS.current?.setAttribute("transform", `rotate(${s * 6} ${CX} ${CY})`);
       tickHand.current?.setAttribute("transform", `rotate(${lat.tickFrac * 360} ${CX} ${CY})`);
@@ -118,15 +118,15 @@ export function UtClock() {
         <circle cx={CX} cy={CY} r="148" className="ut-ring-dur" fill="none" strokeWidth="1.2" />
         <circle cx={CX} cy={CY} r="108" className="ut-ring-inner" fill="none" strokeWidth="0.6" />
 
-        {ticks(24, 182, 168, 6, "ut-tick-solar")}
+        {ticks(12, 182, 166, 3, "ut-tick-solar")}
         {ticks(60, 182, 176, 5, "ut-tick-solar-min")}
         {ticks(10, 146, 132, 1, "ut-tick-dur")}
 
-        {[0, 6, 12, 18].map((h) => {
-          const p = polar(CX, CY, 156, h * 15);
+        {[12, 3, 6, 9].map((h) => {
+          const p = polar(CX, CY, 154, h === 12 ? 0 : h * 30);
           return (
             <text key={`s${h}`} x={p.x} y={p.y} textAnchor="middle" dominantBaseline="middle" className="ut-label-solar">
-              {String(h).padStart(2, "0")}
+              {h}
             </text>
           );
         })}

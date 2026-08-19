@@ -150,8 +150,8 @@ function UniversalTimes() {
             <div className="border border-primary/20 px-5 py-5">
               <div className="text-[10px] tracking-[0.22em] text-primary uppercase">Why orange</div>
               <p className="mt-2 text-sm leading-relaxed text-muted">
-                Solar position. 24-hour analog plus Loop:Arc:Tick — a 10 / 100 / 100 split of the
-                same Earth day. Tick = 0.864 s. Local to this planet.
+                Solar position. Normal 12-hour face, 24-hour digits underneath, plus Loop:Arc:Tick —
+                a 10 / 1,000 / 100,000 split of the same Earth day. Tick = 0.864 s.
               </p>
             </div>
             <div className="border border-accent/20 px-5 py-5">
