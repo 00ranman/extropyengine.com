@@ -305,6 +305,12 @@ export const papers: Paper[] = [
     href: "https://www.academia.edu/169680038/Extropy_Codex_Version_2_0_Comprehensive_Edition",
   },
   {
+    tag: "Codex",
+    title: "Extropy Codex: Comprehensive Technical Specification",
+    href: "/docs/Extropy_Codex_Technical_Specification_Final.pdf",
+    academia: "https://www.academia.edu/167088728/Extropy_Codex_Comprehensive_Technical_Specification",
+  },
+  {
     tag: "New · Music / Criticism",
     title: "Signal, Loop, and Story",
     href: "https://www.academia.edu/170725878/Signal_Loop_and_Story",
@@ -313,11 +319,6 @@ export const papers: Paper[] = [
     tag: "New · Time · V4.2",
     title: "Universal Times v4.2",
     href: "https://www.academia.edu/170494720/Universal_Times_v4_2",
-  },
-  {
-    tag: "Codex · Prior",
-    title: "Extropy Codex: Comprehensive Technical Specification",
-    href: "/docs/Extropy_Codex_Technical_Specification_Final.pdf",
   },
   {
     tag: "Epistemology",
@@ -523,9 +524,9 @@ export const docsIndex = [
     note: "Earlier engine technical specification",
   },
   {
-    title: "Extropy Codex (prior edition)",
+    title: "Extropy Codex: Comprehensive Technical Specification",
     href: "/docs/Extropy_Codex_Technical_Specification_Final.pdf",
-    note: "Earlier comprehensive technical specification",
+    note: "Consolidated technical specification — local PDF",
   },
   {
     title: "When the Signal Eats the Source",
