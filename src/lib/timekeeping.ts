@@ -70,6 +70,20 @@ export function formatQuant(n: number) {
   return n.toLocaleString("en-US");
 }
 
+export function unitSeconds(name: string) {
+  const i = (DUR_NAMES as readonly string[]).indexOf(name);
+  if (i < 0) return 0;
+  return Math.pow(10, DUR_EXP[i]) / HF;
+}
+
+export function formatSpan(seconds: number) {
+  if (seconds < 90) return `${seconds.toFixed(1)} sec`;
+  if (seconds < 7200) return `${(seconds / 60).toFixed(0)} min`;
+  if (seconds < 172800) return `${(seconds / 3600).toFixed(1)} hr`;
+  if (seconds < 63072000) return `${(seconds / 86400).toFixed(1)} days`;
+  return `${(seconds / 31_556_952).toFixed(1)} yr`;
+}
+
 export const HOLIDAYS: Record<number, Record<number, string>> = {
   1: { 1: "New Cycle" },
   3: { 1: "Equinox" },

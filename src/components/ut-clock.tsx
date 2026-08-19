@@ -37,7 +37,8 @@ export function UtClock() {
   const secondRef = useRef<SVGGElement>(null);
   const durRef = useRef<SVGGElement>(null);
   const electronRef = useRef<SVGGElement>(null);
-  const readoutRef = useRef<HTMLDivElement>(null);
+  const solarRead = useRef<HTMLSpanElement>(null);
+  const durRead = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const spinSec = 10 ** 14 / HF;
@@ -61,12 +62,15 @@ export function UtClock() {
       durRef.current?.setAttribute("transform", `rotate(${durDeg} ${CX} ${CY})`);
       electronRef.current?.setAttribute("transform", `rotate(${eDeg} ${CX} ${CY})`);
 
-      if (readoutRef.current) {
+      if (solarRead.current) {
         const hh = String(now.getHours()).padStart(2, "0");
         const mm = String(now.getMinutes()).padStart(2, "0");
         const ss = String(now.getSeconds()).padStart(2, "0");
+        solarRead.current.textContent = `${hh}:${mm}:${ss}`;
+      }
+      if (durRead.current) {
         const spin = Math.floor(sinceBB / spinSec) % 100;
-        readoutRef.current.innerHTML = `<span class="ut-solar-read">${hh}:${mm}:${ss}</span><span class="ut-sep"> · </span><span class="ut-dur-read">SPIN ${String(spin).padStart(2, "0")}</span>`;
+        durRead.current.textContent = `${String(spin).padStart(2, "0")} / 100`;
       }
       raf = requestAnimationFrame(frame);
     };
@@ -186,10 +190,21 @@ export function UtClock() {
         </g>
       </svg>
 
-      <div ref={readoutRef} className="ut-readout" />
-      <div className="mt-2 flex justify-center gap-6 text-[10px] tracking-[0.22em] uppercase">
-        <span className="text-primary">Ember · Earth spin</span>
-        <span className="text-accent">Cyan · Hydrogen duration</span>
+      <div className="mt-6 grid grid-cols-2 gap-3 text-left">
+        <div className="border border-primary/25 px-4 py-3">
+          <div className="text-[10px] tracking-[0.2em] text-primary uppercase">Solar · local</div>
+          <div className="font-brand mt-1 text-2xl tracking-[0.08em] text-primary tabular-nums">
+            <span ref={solarRead}>--:--:--</span>
+          </div>
+          <p className="mt-1 text-xs leading-snug text-dim">Where Earth is in its 24-hour spin. Orange ring and hands.</p>
+        </div>
+        <div className="border border-accent/25 px-4 py-3">
+          <div className="text-[10px] tracking-[0.2em] text-accent uppercase">Duration · Spin</div>
+          <div className="font-brand mt-1 text-2xl tracking-[0.08em] text-accent tabular-nums">
+            <span ref={durRead}>-- / 100</span>
+          </div>
+          <p className="mt-1 text-xs leading-snug text-dim">How far through one hydrogen Spin (~19.5 hr). Cyan ring and needle.</p>
+        </div>
       </div>
     </div>
   );

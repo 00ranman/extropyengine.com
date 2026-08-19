@@ -9,13 +9,36 @@ import {
   dayOfYear,
   durationNow,
   formatQuant,
+  formatSpan,
   isLeap,
-  quantsSinceBB,
+  unitSeconds,
   utDate,
+  quantsSinceBB,
   type DurationTick,
 } from "@/lib/timekeeping";
 
 export const Route = createFileRoute("/universaltimes")({ component: UniversalTimes });
+
+const SCALE = [
+  {
+    label: "Deep time",
+    hint: "Since the Big Bang, coarsest units",
+    keys: ["Eon", "Age", "Era", "Epoch"] as const,
+    tone: "dim" as const,
+  },
+  {
+    label: "Local duration",
+    hint: "Years → days of hydrogen time",
+    keys: ["Orbit", "Season", "Current"] as const,
+    tone: "fg" as const,
+  },
+  {
+    label: "Live ticks",
+    hint: "Hours → less than a second",
+    keys: ["Spin", "Tide", "Wave", "GQ"] as const,
+    tone: "accent" as const,
+  },
+];
 
 function UniversalTimes() {
   const [now, setNow] = useState(() => new Date());
@@ -32,79 +55,82 @@ function UniversalTimes() {
   const doy = dayOfYear(now);
   const today = utDate(doy, year);
 
-  const groups = [
-    { keys: ["Eon", "Age", "Era", "Epoch"], tone: "dim" as const },
-    { keys: ["Orbit", "Season", "Current"], tone: "fg" as const },
-    { keys: ["Spin", "Tide", "Wave", "GQ"], tone: "accent" as const },
-  ];
-
   return (
     <SiteShell>
-      <main className="px-[6vw] py-16">
-        <div className="mx-auto max-w-4xl text-center">
+      <main className="px-[6vw] py-14">
+        <div className="mx-auto max-w-3xl">
           <Link
             to="/"
             className="mb-8 inline-block text-[11px] tracking-[0.22em] text-dim uppercase hover:text-primary"
           >
             ← Extropy Engine
           </Link>
-          <h1 className="font-display text-[clamp(32px,5vw,56px)] tracking-[0.08em]">Universal Times</h1>
-          <p className="mt-2 text-xs tracking-[0.22em] text-accent uppercase">
-            Hydrogen-Anchored Duration Scale
+          <h1 className="font-display text-[clamp(32px,5vw,52px)] tracking-[0.08em]">Universal Times</h1>
+          <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-muted">
+            Two different quantities. <span className="text-primary">Solar</span> is where Earth is
+            facing. <span className="text-accent">Duration</span> is how long has passed, counted in
+            hydrogen oscillations. They are not the same clock.
           </p>
 
           <UtClock />
 
-          <div className="mt-10 flex flex-wrap items-end justify-center gap-x-4 gap-y-6">
-            {groups.map((group, gi) => (
-              <div key={group.tone} className="flex items-end gap-1">
-                {gi > 0 ? <span className="mb-5 px-1 text-2xl text-faint">•</span> : null}
-                {group.keys.map((name) => {
-                  const tick = ticks.find((t) => t.name === name);
-                  return <DurCell key={name} name={name} tick={tick} tone={group.tone} />;
-                })}
-              </div>
-            ))}
-          </div>
-          <div className="mt-3 text-[11px] tracking-[0.15em] text-accent uppercase">
-            Dual-Scale Timekeeping Display
-          </div>
-          <div className="mt-4 font-mono text-sm text-accent">
-            {formatQuant(quants)}
-            <div className="mt-1 text-[10px] tracking-[0.12em] text-faint uppercase">
-              Quants Since Big Bang (Universe Age)
-            </div>
-          </div>
-        </div>
-
-        <div className="mx-auto mt-16 grid max-w-5xl gap-8 md:grid-cols-2">
-          <section className="border border-accent/20 p-6">
-            <div className="mb-2 text-[11px] tracking-[0.28em] text-accent uppercase">Solar Clock</div>
-            <div className="font-display text-3xl tracking-[0.06em]">
-              {now.toLocaleTimeString(undefined, { hour12: false })}
-            </div>
-            <p className="mt-3 text-sm text-muted">
-              Earth rotation for scheduling and navigation. Duration is measured separately — hydrogen
-              emission frequency, powers of ten.
+          <section className="mt-14">
+            <h2 className="font-display text-xl tracking-[0.06em]">Duration scale</h2>
+            <p className="mt-2 max-w-xl text-sm leading-relaxed text-dim">
+              Read left to right, large to small — like hours : minutes : seconds, but powers of ten
+              in the hydrogen line. Each pair is 00–99 of that unit.
             </p>
-            <p className="mt-3 text-xs text-dim">
-              {now.toDateString()} · Gregorian overlay
+            <div className="mt-6 space-y-5">
+              {SCALE.map((row) => (
+                <DurationRow
+                  key={row.label}
+                  label={row.label}
+                  hint={row.hint}
+                  keys={row.keys}
+                  ticks={ticks}
+                  tone={row.tone}
+                />
+              ))}
+            </div>
+          </section>
+
+          <section className="mt-10 border border-accent/15 px-5 py-5">
+            <div className="text-[10px] tracking-[0.22em] text-accent uppercase">Universe age</div>
+            <div className="font-brand mt-1 text-2xl tracking-[0.04em] text-accent tabular-nums md:text-3xl">
+              {formatQuant(quants)}
+            </div>
+            <p className="mt-2 text-sm leading-relaxed text-dim">
+              Quants since t:0 (Big Bang). One quant = 10<sup>9</sup> hydrogen periods ≈ 0.7 seconds.
             </p>
           </section>
 
-          <section className="border border-primary/20 p-6">
-            <div className="mb-2 text-[11px] tracking-[0.28em] text-primary uppercase">Why two clocks</div>
-            <p className="text-sm leading-relaxed text-muted">
-              Duration and solar position are different quantities. Hydrogen-anchored duration is
-              universal. The solar clock is local. Mixing them is why calendars fight physics.
-            </p>
+          <section className="mt-10 grid gap-4 sm:grid-cols-2">
+            <div className="border border-primary/20 px-5 py-5">
+              <div className="text-[10px] tracking-[0.22em] text-primary uppercase">Why orange</div>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                Solar position. Useful for waking up, meetings, seasons. Local to this planet. The
+                outer ring is a 24-hour Earth day.
+              </p>
+            </div>
+            <div className="border border-accent/20 px-5 py-5">
+              <div className="text-[10px] tracking-[0.22em] text-accent uppercase">Why cyan</div>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                Duration. Same count on Earth, Mars, or a server rack. The inner ring is one Spin —
+                about 19.5 hours of hydrogen time.
+              </p>
+            </div>
           </section>
         </div>
 
-        <section className="mx-auto mt-10 max-w-5xl border border-accent/15 p-6">
-          <div className="mb-4 flex items-center justify-between">
-            <h2 className="font-display text-xl tracking-[0.06em]">Solar Calendar · Y{year}</h2>
-            <div className="text-xs tracking-[0.16em] text-dim uppercase">
+        <section className="mx-auto mt-14 max-w-3xl border border-fg/10 px-5 py-6">
+          <div className="mb-4 flex flex-wrap items-end justify-between gap-2">
+            <div>
+              <h2 className="font-display text-xl tracking-[0.06em]">Solar calendar</h2>
+              <p className="mt-1 text-sm text-dim">
+                10 months · 40-day cycles · 5-day week. Overlay on Gregorian {year}.
+              </p>
+            </div>
+            <div className="font-mono text-xs tracking-[0.12em] text-accent">
               Month {today.month} · Day {today.day}
             </div>
           </div>
@@ -115,9 +141,7 @@ function UniversalTimes() {
                 type="button"
                 onClick={() => setCalMonth(m)}
                 className={`px-1 py-1.5 font-mono text-[11px] ${
-                  m === calMonth
-                    ? "bg-accent/15 font-bold text-accent"
-                    : "text-dim hover:text-fg"
+                  m === calMonth ? "bg-accent/15 font-bold text-accent" : "text-dim hover:text-fg"
                 }`}
               >
                 {m <= 9 ? `M${m}` : "Genesis"}
@@ -125,17 +149,10 @@ function UniversalTimes() {
             ))}
           </div>
           <CalendarGrid year={year} month={calMonth} today={today} />
-          <p className="mt-4 text-[11px] tracking-[0.1em] text-dim">
-            = Transitional holiday · 10 months · 40-day cycles · leap Genesis
-          </p>
+          <p className="mt-4 text-xs text-dim">Orange dates are transitional holidays.</p>
         </section>
 
-        <p className="mx-auto mt-10 max-w-3xl text-center text-sm text-muted">
-          Duration is measured by hydrogen emission frequency. Solar position is Earth's rotation. The
-          Hydrogen-Anchored Duration Scale uses powers of 10 in hydrogen oscillations for a universal
-          timescale.
-        </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-4 text-[11px] tracking-[0.18em] uppercase">
+        <div className="mx-auto mt-10 flex max-w-3xl flex-wrap gap-4 text-[11px] tracking-[0.18em] uppercase">
           <a
             href="https://github.com/00ranman/xp-timekeeping"
             target="_blank"
@@ -145,12 +162,12 @@ function UniversalTimes() {
             Source on GitHub →
           </a>
           <a
-            href="https://www.academia.edu/165180710/Universal_Times_Dual_System_Temporal_Infrastructure_Entropy_Economics_and_the_Post_Calendar_Coordination_Problem"
+            href="https://www.academia.edu/170494720/Universal_Times_v4_2"
             target="_blank"
             rel="noreferrer"
             className="text-dim hover:text-primary"
           >
-            Read the paper
+            Paper v4.2
           </a>
         </div>
       </main>
@@ -158,23 +175,45 @@ function UniversalTimes() {
   );
 }
 
-function DurCell({
-  name,
-  tick,
+function DurationRow({
+  label,
+  hint,
+  keys,
+  ticks,
   tone,
 }: {
-  name: string;
-  tick?: DurationTick;
+  label: string;
+  hint: string;
+  keys: readonly string[];
+  ticks: DurationTick[];
   tone: "dim" | "fg" | "accent";
 }) {
   const color =
-    tone === "accent" ? "text-accent" : tone === "fg" ? "text-fg" : "text-dim";
+    tone === "accent" ? "text-accent" : tone === "fg" ? "text-fg" : "text-muted";
+  const rule = tone === "accent" ? "border-accent/20" : "border-primary/10";
   return (
-    <div className="min-w-[2.4ch] text-center">
-      <div className={`font-mono text-xl tabular-nums md:text-3xl ${color}`}>
-        {tick ? String(tick.value).padStart(2, "0") : "--"}
+    <div className={`border ${rule} px-4 py-4 sm:px-5`}>
+      <div className="mb-3 flex flex-wrap items-baseline justify-between gap-2">
+        <div className={`text-[11px] tracking-[0.2em] uppercase ${color}`}>{label}</div>
+        <div className="text-xs text-faint">{hint}</div>
       </div>
-      <div className={`text-[9px] tracking-[0.14em] uppercase ${color}`}>{name}</div>
+      <div className="flex flex-wrap items-end gap-x-5 gap-y-3">
+        {keys.map((name, i) => {
+          const tick = ticks.find((t) => t.name === name);
+          return (
+            <div key={name} className="flex items-end gap-5">
+              {i > 0 ? <span className="mb-6 font-mono text-xl text-faint">:</span> : null}
+              <div>
+                <div className={`font-brand text-[clamp(28px,5vw,40px)] leading-none tabular-nums ${color}`}>
+                  {tick ? String(tick.value).padStart(2, "0") : "--"}
+                </div>
+                <div className="mt-1.5 text-[11px] tracking-[0.16em] text-dim uppercase">{name}</div>
+                <div className="text-[10px] text-faint">{formatSpan(unitSeconds(name as (typeof keys)[number]))}</div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
@@ -202,14 +241,11 @@ function CalendarGrid({
   }
 
   return (
-    <table className="w-full border-collapse font-mono text-xs">
+    <table className="w-full border-collapse font-mono text-sm">
       <thead>
         <tr>
           {UT_DAY_NAMES.map((n) => (
-            <th
-              key={n}
-              className="border-b border-accent/15 px-1 py-1.5 text-center font-normal text-accent"
-            >
+            <th key={n} className="border-b border-accent/15 px-1 py-2 text-center font-normal text-accent">
               {n}
             </th>
           ))}
@@ -226,16 +262,12 @@ function CalendarGrid({
                 <td
                   key={j}
                   title={hol}
-                  className={`px-1 py-2 text-center ${
-                    isToday
-                      ? "bg-accent/20 font-bold text-accent"
-                      : hol
-                        ? "text-primary"
-                        : "text-muted"
+                  className={`px-1 py-2.5 text-center ${
+                    isToday ? "bg-accent/20 font-bold text-accent" : hol ? "text-primary" : "text-muted"
                   }`}
                 >
                   {d}
-                  {hol ? <span className="block text-[8px] tracking-wider">{hol}</span> : null}
+                  {hol ? <span className="mt-0.5 block text-[10px] tracking-wider">{hol}</span> : null}
                 </td>
               );
             })}
