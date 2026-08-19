@@ -121,8 +121,7 @@ export function quantsSinceBB(date = new Date()) {
 
 export function formatQuant(n: number) {
   const [m, e] = n.toExponential(3).split("e");
-  const exp = Number(e);
-  return `${m}×10${exp < 0 ? "⁻" : ""}${Math.abs(exp)}`;
+  return `${m} × 10^${Number(e)}`;
 }
 
 export function formatSpan(seconds: number) {
