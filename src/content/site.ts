@@ -2,6 +2,8 @@ export const site = {
   name: "Lladnaros",
   person: "Randall Gossett",
   palindrome: "Sorandall",
+  wordmarkLeft: "E X T R O P Y",
+  wordmarkRight: "E N G I N E",
   tagline: "They want fire. I bring fungus.",
   description:
     "Music, writing, and systems theory by Randall Gossett. Three studio albums, a free book, and papers on extropy, entropy reduction, and emergence-first governance.",

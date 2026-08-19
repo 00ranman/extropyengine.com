@@ -24,7 +24,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             to="/"
             className="font-display text-[clamp(18px,2.5vw,26px)] font-bold tracking-[0.35em] text-fg max-md:mt-[17px] max-md:text-[14px] max-md:tracking-[0.2em]"
           >
-            L L A D N A R O S
+            {site.wordmarkLeft}
           </Link>
           <span
             className="pointer-events-none absolute left-1/2 hidden -translate-x-1/2 font-display text-[clamp(20px,2.5vw,28px)] md:block"
@@ -36,7 +36,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             to="/"
             className="font-display text-[clamp(18px,2.5vw,26px)] font-bold tracking-[0.35em] text-fg max-md:mt-[17px] max-md:text-[14px] max-md:tracking-[0.2em]"
           >
-            S O R A N D A L L
+            {site.wordmarkRight}
           </Link>
           <button
             type="button"
