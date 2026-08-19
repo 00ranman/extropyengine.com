@@ -302,9 +302,9 @@ export type Paper = {
 
 export const papers: Paper[] = [
   {
-    tag: "New · Codex · V2.0",
-    title: "Extropy Codex, Version 2.0, Comprehensive Edition",
-    href: "https://www.academia.edu/169680038/Extropy_Codex_Version_2_0_Comprehensive_Edition",
+    tag: "New · Codex · V2.1",
+    title: "Extropy Codex, Version 2.1, Comprehensive Edition",
+    href: "/docs/Extropy_Codex_v2.1_Comprehensive.pdf",
   },
   {
     tag: "New · Music / Criticism",
@@ -351,6 +351,12 @@ export const papers: Paper[] = [
 ];
 
 export const earlierEditions: Paper[] = [
+  {
+    tag: "Codex · V2.0",
+    title: "Extropy Codex, Version 2.0, Comprehensive Edition",
+    href: "/docs/Extropy_Codex_v2.0_Comprehensive.pdf",
+    academia: "https://www.academia.edu/169680038/Extropy_Codex_Version_2_0_Comprehensive_Edition",
+  },
   {
     tag: "Codex",
     title: "Extropy Codex: Comprehensive Technical Specification",
@@ -509,9 +515,9 @@ export const socials = [
 
 export const docsIndex = [
   {
-    title: "Extropy Codex v2.0",
-    href: "https://www.academia.edu/169680038/Extropy_Codex_Version_2_0_Comprehensive_Edition",
-    note: "Comprehensive Edition — canonical protocol spec (July 2026)",
+    title: "Extropy Codex v2.1",
+    href: "/docs/Extropy_Codex_v2.1_Comprehensive.pdf",
+    note: "Comprehensive Edition — canonical protocol spec, formula canonical-v3.12, protocol v0.2 (August 2026)",
   },
   {
     title: "Signal, Loop, and Story",
@@ -546,6 +552,11 @@ export const docsIndex = [
 ] as const;
 
 export const earlierDocs = [
+  {
+    title: "Extropy Codex v2.0",
+    href: "/docs/Extropy_Codex_v2.0_Comprehensive.pdf",
+    note: "Superseded Comprehensive Edition (July 2026)",
+  },
   {
     title: "Extropy Codex: Comprehensive Technical Specification",
     href: "/docs/Extropy_Codex_Technical_Specification_Final.pdf",
