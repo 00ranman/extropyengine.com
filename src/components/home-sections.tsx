@@ -230,7 +230,7 @@ export function PapersSection() {
           Earlier editions
         </h3>
         <p className="mx-auto mb-8 max-w-lg text-center text-sm text-dim">
-          Superseded specs. Still readable. Codex v2.0 and Universal Times v4.2 are current.
+          Superseded specs. Still readable. Codex v2.1 and Universal Times v4.2 are current.
         </p>
         <div className="grid gap-[18px] md:grid-cols-2 lg:grid-cols-3">
           {earlierEditions.map((paper) => (
@@ -361,7 +361,7 @@ export function DocsBanner() {
   if (hidden) return null;
   return (
     <div className="fixed right-0 bottom-0 left-0 z-40 border-t border-primary bg-ink px-3 py-2 text-center text-[13px] font-semibold text-fg">
-      CODEX 2.0
+      CODEX 2.1
       <a href="/docs" className="ml-1.5 text-primary hover:underline">
         Read the docs →
       </a>
