@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Space+Mono:wght@400;700&display=swap");
+
+@theme {
+  --color-bg: #060606;
+  --color-fg: #f3ece1;
+  --color-muted: #d8ccb8;
+  --color-dim: #888888;
+  --color-faint: #555555;
+  --color-primary: #ff5a1f;
+  --color-primary-deep: #e04d15;
+  --color-accent: #22d3ee;
+  --color-live: #7fffb0;
+  --color-concept: #a78bfa;
+  --color-surface: #140c08;
+  --color-ink: #060606;
+  --font-display: "Cinzel", ui-serif, Georgia, serif;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+  --radius-sm: 2px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-mono);
+    line-height: 1.7;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+.bg-veil {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgb(255 90 31 / 0.08), transparent 70%),
+    radial-gradient(ellipse at 80% 100%, rgb(120 40 200 / 0.06), transparent 60%);
+}
+
+.tile-glow {
+  background: radial-gradient(
+    circle at var(--mx, 50%) var(--my, 0%),
+    rgb(255 90 31 / 0.18),
+    transparent 60%
+  );
+}
