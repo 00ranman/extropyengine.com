@@ -116,10 +116,11 @@ function NavItem({
   children: React.ReactNode;
 }) {
   if (isHashLink(href)) {
+    const hash = href.replace(/^\/?#/, "");
     return (
-      <a href={href} className={cn(className)}>
+      <Link to="/" hash={hash} className={cn(className)}>
         {children}
-      </a>
+      </Link>
     );
   }
   return (

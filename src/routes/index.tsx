@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useRouterState } from "@tanstack/react-router";
 import { useEffect } from "react";
 import {
   BookHero,
@@ -14,12 +14,17 @@ import { SiteShell } from "@/components/site-shell";
 export const Route = createFileRoute("/")({ component: Home });
 
 function Home() {
+  const hash = useRouterState({ select: (s) => s.location.hash });
+
   useEffect(() => {
-    const id = window.location.hash.replace("#", "");
-    if (!id) return;
+    const id = hash.replace("#", "");
+    if (!id) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, []);
+  }, [hash]);
 
   return (
     <SiteShell>
