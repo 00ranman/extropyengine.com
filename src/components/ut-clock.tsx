@@ -82,8 +82,8 @@ export function UtClock() {
       pulseRef.current?.setAttribute("transform", `rotate(${fracOf(dur, "Pulse") * 360} ${CX} ${CY})`);
 
       const t = fracOf(dur, "GQ") * Math.PI * 2;
-      const rx = 52;
-      const ry = 22;
+      const rx = 44;
+      const ry = 18;
       const rot = -24 * (Math.PI / 180);
       const x = rx * Math.cos(t);
       const y = ry * Math.sin(t);
@@ -152,7 +152,7 @@ export function UtClock() {
   }, []);
 
   return (
-    <div className="ut-stage mx-auto mt-8 max-w-[480px]">
+    <div className="ut-stage mx-auto mt-8 max-w-[340px]">
       <div className="ut-plaque">
         <span className="ut-plaque-k">Quant · t:0</span>
         <span ref={qRef} className="ut-plaque-v">
@@ -174,14 +174,7 @@ export function UtClock() {
               <stop offset="100%" stopColor="#7a2208" />
             </radialGradient>
             <filter id="ut-glow-ember" x="-80%" y="-80%" width="260%" height="260%">
-              <feGaussianBlur stdDeviation="3.2" result="b" />
-              <feMerge>
-                <feMergeNode in="b" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-            <filter id="ut-glow-cyan" x="-80%" y="-80%" width="260%" height="260%">
-              <feGaussianBlur stdDeviation="2.6" result="b" />
+              <feGaussianBlur stdDeviation="1.4" result="b" />
               <feMerge>
                 <feMergeNode in="b" />
                 <feMergeNode in="SourceGraphic" />
@@ -191,8 +184,8 @@ export function UtClock() {
 
           <circle cx={CX} cy={CY} r="192" fill="#0a0808" />
           <circle cx={CX} cy={CY} r="186" fill="url(#ut-void)" />
-          <circle cx={CX} cy={CY} r="186" fill="none" stroke="rgb(255 90 31 / 0.4)" strokeWidth="1.3" />
-          <circle cx={CX} cy={CY} r="146" fill="none" stroke="rgb(34 211 238 / 0.28)" strokeWidth="1.1" />
+          <circle cx={CX} cy={CY} r="186" fill="none" stroke="rgb(255 90 31 / 0.22)" strokeWidth="0.9" />
+          <circle cx={CX} cy={CY} r="146" fill="none" stroke="rgb(140 180 188 / 0.18)" strokeWidth="0.8" />
 
           {Array.from({ length: 10 }, (_, i) => {
             const a = polar(178, i * 36);
@@ -204,8 +197,8 @@ export function UtClock() {
                 y1={a.y}
                 x2={b.x}
                 y2={b.y}
-                stroke={i === 5 ? "#f3ece1" : "rgb(255 90 31 / 0.65)"}
-                strokeWidth={i === 0 || i === 5 ? 2.2 : 1.1}
+                stroke={i === 5 ? "rgb(243 236 225 / 0.55)" : "rgb(255 90 31 / 0.35)"}
+                strokeWidth={i === 0 || i === 5 ? 1.5 : 0.8}
               />
             );
           })}
@@ -234,66 +227,56 @@ export function UtClock() {
           <circle cx={CX} cy={CY} r={ARC_R} className="ut-orbit ut-orbit-loop" />
           <circle cx={CX} cy={CY} r={TICK_R} className="ut-orbit ut-orbit-tick" />
 
-          {/* Duration arms — cyan, different glyphs */}
           <g ref={spinRef}>
             <path
-              d={`M${CX} ${CY + 10} L${CX - 9} ${CY - 96} Q${CX} ${CY - 122} ${CX + 9} ${CY - 96} Z`}
-              fill="#22d3ee"
-              fillOpacity="0.92"
-              filter="url(#ut-glow-cyan)"
+              d={`M${CX} ${CY + 6} L${CX - 5} ${CY - 88} Q${CX} ${CY - 104} ${CX + 5} ${CY - 88} Z`}
+              fill="rgb(140 180 188 / 0.7)"
             />
           </g>
           <g ref={tideRef}>
             <path
-              d={`M${CX - 3.2} ${CY + 8} L${CX - 3.2} ${CY - 78} L${CX - 13} ${CY - 100} L${CX} ${CY - 86} L${CX + 13} ${CY - 100} L${CX + 3.2} ${CY - 78} L${CX + 3.2} ${CY + 8} Z`}
-              fill="#67e8f9"
-              filter="url(#ut-glow-cyan)"
+              d={`M${CX - 2} ${CY + 4} L${CX - 2} ${CY - 70} L${CX - 8} ${CY - 86} L${CX} ${CY - 76} L${CX + 8} ${CY - 86} L${CX + 2} ${CY - 70} L${CX + 2} ${CY + 4} Z`}
+              fill="rgb(140 180 188 / 0.55)"
             />
           </g>
           <g ref={pulseRef}>
             <polygon
-              points={`${CX},${CY - 70} ${CX + 5},${CY - 58} ${CX + 17},${CY - 58} ${CX + 7},${CY - 50} ${CX + 11},${CY - 38} ${CX},${CY - 46} ${CX - 11},${CY - 38} ${CX - 7},${CY - 50} ${CX - 17},${CY - 58} ${CX - 5},${CY - 58}`}
-              fill="#a5f3fc"
-              filter="url(#ut-glow-cyan)"
+              points={`${CX},${CY - 58} ${CX + 3},${CY - 50} ${CX + 10},${CY - 50} ${CX + 4},${CY - 45} ${CX + 6},${CY - 38} ${CX},${CY - 43} ${CX - 6},${CY - 38} ${CX - 4},${CY - 45} ${CX - 10},${CY - 50} ${CX - 3},${CY - 50}`}
+              fill="rgb(180 210 214 / 0.7)"
             />
           </g>
 
-          {/* Solar markers — ember */}
           <g ref={loopRef}>
             <polygon
-              points={`${CX},${CY - LOOP_R - 14} ${CX + 11},${CY - LOOP_R + 6} ${CX},${CY - LOOP_R - 1} ${CX - 11},${CY - LOOP_R + 6}`}
-              fill="#ff5a1f"
-              filter="url(#ut-glow-ember)"
+              points={`${CX},${CY - LOOP_R - 9} ${CX + 7},${CY - LOOP_R + 4} ${CX},${CY - LOOP_R} ${CX - 7},${CY - LOOP_R + 4}`}
+              fill="rgb(224 100 50 / 0.85)"
             />
           </g>
           <g ref={arcRef}>
             <polygon
-              points={`${CX},${CY - ARC_R - 9} ${CX + 8},${CY - ARC_R} ${CX},${CY - ARC_R + 9} ${CX - 8},${CY - ARC_R}`}
-              fill="#ffb089"
-              filter="url(#ut-glow-ember)"
+              points={`${CX},${CY - ARC_R - 6} ${CX + 5},${CY - ARC_R} ${CX},${CY - ARC_R + 6} ${CX - 5},${CY - ARC_R}`}
+              fill="rgb(243 186 150 / 0.75)"
             />
           </g>
           <g ref={tickRef}>
-            <circle cx={CX} cy={CY - TICK_R} r="5" fill="#ff7a3d" filter="url(#ut-glow-ember)" />
-            <circle cx={CX} cy={CY - TICK_R} r="2.1" fill="#fff4ea" />
+            <circle cx={CX} cy={CY - TICK_R} r="3.2" fill="rgb(224 100 50 / 0.8)" />
           </g>
 
-          {/* Hydrogen — dashed oval + electron = GQ */}
           <ellipse
             cx={CX}
             cy={CY}
-            rx="52"
-            ry="22"
+            rx="44"
+            ry="18"
             fill="none"
-            stroke="rgb(34 211 238 / 0.45)"
-            strokeWidth="1.1"
-            strokeDasharray="3 5"
+            stroke="rgb(140 180 188 / 0.35)"
+            strokeWidth="0.8"
+            strokeDasharray="2 4"
             transform={`rotate(-24 ${CX} ${CY})`}
           />
-          <circle ref={electronRef} r="3.4" fill="#22d3ee" filter="url(#ut-glow-cyan)" />
+          <circle ref={electronRef} r="2.2" fill="rgb(180 210 214 / 0.85)" />
 
-          <circle cx={CX} cy={CY} r="22" fill="url(#ut-ember)" filter="url(#ut-glow-ember)" />
-          <circle cx={CX} cy={CY} r="28" className="ut-core-halo" fill="none" />
+          <circle cx={CX} cy={CY} r="16" fill="url(#ut-ember)" />
+          <circle cx={CX} cy={CY} r="21" className="ut-core-halo" fill="none" />
           <text x={CX} y={CY + 1} textAnchor="middle" dominantBaseline="middle" className="ut-h">
             H
           </text>
@@ -372,10 +355,7 @@ export function UtClock() {
           </div>
         </div>
       </div>
-      <p className="ut-legend">
-        Ember chevron / diamond / disc = Loop Arc Tick. Cyan blade = Spin, fork = Tide, spark = Pulse.
-        The electron on the dashed oval is GQ.
-      </p>
+      <p className="ut-legend">Ember is where. Steel is how long. The electron is GQ.</p>
     </div>
   );
 }

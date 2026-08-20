@@ -102,7 +102,299 @@
 }
 
 .ut-stage {
-  filter: drop-shadow(0 18px 40px rgb(0 0 0 / 0.45));
+  filter: none;
+}
+
+.ut-case {
+  position: relative;
+  margin: 0.2rem auto 0;
+  aspect-ratio: 1;
+  max-width: 340px;
+  border-radius: 50%;
+  background: #060606;
+  box-shadow: 0 0 0 1px rgb(255 90 31 / 0.12);
+}
+
+.ut-plaque-k {
+  color: rgb(140 180 188 / 0.55);
+}
+
+.ut-plaque-v {
+  font-size: 0.85rem;
+  color: rgb(180 210 214 / 0.7);
+}
+
+.ut-num {
+  fill: rgb(255 90 31 / 0.38);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ut-num[data-on="1"] {
+  fill: rgb(243 186 150 / 0.85);
+}
+
+.ut-orbit-loop {
+  stroke: rgb(255 90 31 / 0.14);
+}
+
+.ut-orbit-tick {
+  stroke: rgb(255 176 137 / 0.12);
+}
+
+.ut-core-halo {
+  stroke: rgb(255 90 31 / 0.28);
+  stroke-width: 0.8;
+}
+
+.ut-h {
+  font-size: 12px;
+}
+
+.ut-stamp {
+  margin-top: 0.75rem;
+  border: 1px solid rgb(243 236 225 / 0.1);
+  background: transparent;
+  padding: 0.75rem 0.85rem 0.85rem;
+}
+
+.ut-stamp-k {
+  color: #777;
+  letter-spacing: 0.2em;
+}
+
+.ut-stamp-v {
+  font-size: clamp(20px, 4.5vw, 28px);
+  color: #d8ccb8;
+}
+
+.ut-stamp-dur {
+  border-color: rgb(140 180 188 / 0.18);
+  background: transparent;
+}
+
+.ut-stamp-dur .ut-stamp-k {
+  color: rgb(140 180 188 / 0.55);
+}
+
+.ut-stamp-v-dur {
+  font-size: clamp(18px, 4vw, 24px);
+  color: rgb(180 210 214 / 0.85);
+}
+
+.ut-chips span {
+  border-color: rgb(243 236 225 / 0.12);
+}
+
+.ut-chips b {
+  color: #c96a40;
+}
+
+.ut-chips span:nth-child(2) b,
+.ut-chips span:nth-child(3) b {
+  color: #c96a40;
+}
+
+.ut-chips-dur span {
+  border-color: rgb(140 180 188 / 0.16);
+}
+
+.ut-chips-dur b {
+  color: rgb(180 210 214 / 0.8);
+}
+
+.ut-chip-live {
+  box-shadow: none;
+}
+
+.ut-compass-v {
+  font-size: 0.9rem;
+  color: rgb(201 106 64 / 0.75);
+}
+
+.ut-legend {
+  margin-top: 0.65rem;
+  color: #666;
+  font-size: 11px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.ut-dial {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ut-plaque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.ut-plaque-k {
+  font-size: 9px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.ut-plaque-v {
+  font-family: var(--font-brand);
+  letter-spacing: 0.04em;
+}
+
+.ut-num {
+  font-family: var(--font-brand);
+  pointer-events: none;
+}
+
+.ut-orbit {
+  fill: none;
+  stroke-width: 0.7;
+  stroke-dasharray: 2 8;
+}
+
+.ut-h {
+  fill: #060606;
+  font-family: var(--font-brand);
+  font-weight: 800;
+}
+
+.ut-dual {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.55rem;
+  margin-top: 0.7rem;
+}
+
+@media (min-width: 640px) {
+  .ut-dual {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ut-stamp {
+  text-align: center;
+}
+
+.ut-stamp-k {
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.ut-stamp-v {
+  margin-top: 0.25rem;
+  font-family: var(--font-brand);
+  letter-spacing: 0.06em;
+}
+
+.ut-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-top: 0.55rem;
+}
+
+.ut-chips span {
+  border: 1px solid rgb(243 236 225 / 0.12);
+  padding: 0.18rem 0.45rem;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.ut-chips b {
+  margin-left: 0.2rem;
+  font-family: var(--font-brand);
+  font-weight: 700;
+}
+
+.ut-compass {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.4rem;
+  margin-top: 0.7rem;
+  text-align: center;
+}
+
+.ut-compass-k {
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.ut-compass-v {
+  margin-top: 0.1rem;
+  font-family: var(--font-brand);
+}
+
+.ut-live-unit {
+  display: inline-block;
+}
+
+.ut-live-dot {
+  margin: 0 0.02em;
+  color: rgb(243 236 225 / 0.35);
+  animation: ut-blink 0.86s steps(1) infinite;
+}
+
+.ut-stamp-dur .ut-live-dot {
+  animation-duration: 0.7s;
+}
+
+.ut-live-tenth {
+  display: inline-block;
+  min-width: 0.65em;
+  font-size: 0.58em;
+  opacity: 0.7;
+  vertical-align: 0.08em;
+}
+
+.ut-flip {
+  animation: ut-flip 0.18s ease;
+}
+
+@keyframes ut-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes ut-flip {
+  0% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ut-pulse {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ut-core-halo,
+  .ut-live-dot,
+  .ut-flip {
+    animation: none;
+  }
 }
 
 .ut-case {
