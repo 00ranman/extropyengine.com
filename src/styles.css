@@ -135,11 +135,15 @@
 }
 
 .ut-orbit-loop {
-  stroke: rgb(255 90 31 / 0.14);
+  stroke: rgb(255 90 31 / 0.18);
 }
 
 .ut-orbit-tick {
-  stroke: rgb(255 176 137 / 0.12);
+  stroke: rgb(255 176 137 / 0.16);
+}
+
+.ut-orbit-dur {
+  stroke: rgb(140 180 188 / 0.2);
 }
 
 .ut-core-halo {

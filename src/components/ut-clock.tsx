@@ -12,9 +12,14 @@ import {
 
 const CX = 200;
 const CY = 200;
-const LOOP_R = 128;
-const ARC_R = 104;
-const TICK_R = 82;
+const SPIN_R = 152;
+const TIDE_R = 142;
+const PULSE_R = 132;
+const LOOP_R = 78;
+const ARC_R = 68;
+const TICK_R = 58;
+const E_RX = 34;
+const E_RY = 14;
 
 function polar(r: number, deg: number) {
   const a = ((deg - 90) * Math.PI) / 180;
@@ -83,8 +88,8 @@ export function UtClock() {
       pulseRef.current?.setAttribute("transform", `rotate(${fracOf(dur, "Pulse") * 360} ${CX} ${CY})`);
 
       const t = fracOf(dur, "GQ") * Math.PI * 2;
-      const rx = 44;
-      const ry = 18;
+      const rx = E_RX;
+      const ry = E_RY;
       const rot = -24 * (Math.PI / 180);
       const x = rx * Math.cos(t);
       const y = ry * Math.sin(t);
@@ -186,14 +191,14 @@ export function UtClock() {
             </filter>
           </defs>
 
-          <circle cx={CX} cy={CY} r="192" fill="#0a0808" />
-          <circle cx={CX} cy={CY} r="186" fill="url(#ut-void)" />
-          <circle cx={CX} cy={CY} r="186" fill="none" stroke="rgb(255 90 31 / 0.22)" strokeWidth="0.9" />
-          <circle cx={CX} cy={CY} r="146" fill="none" stroke="rgb(140 180 188 / 0.18)" strokeWidth="0.8" />
+          <circle cx={CX} cy={CY} r="196" fill="#120c08" />
+          <circle cx={CX} cy={CY} r="190" fill="none" stroke="rgb(90 48 28 / 0.9)" strokeWidth="10" />
+          <circle cx={CX} cy={CY} r="184" fill="url(#ut-void)" />
+          <circle cx={CX} cy={CY} r="184" fill="none" stroke="rgb(201 106 64 / 0.28)" strokeWidth="1.4" />
 
           {Array.from({ length: 10 }, (_, i) => {
-            const a = polar(178, i * 36);
-            const b = polar(i === 5 ? 164 : 170, i * 36);
+            const a = polar(184, i * 36);
+            const b = polar(176, i * 36);
             return (
               <line
                 key={i}
@@ -201,14 +206,14 @@ export function UtClock() {
                 y1={a.y}
                 x2={b.x}
                 y2={b.y}
-                stroke={i === 5 ? "rgb(243 236 225 / 0.55)" : "rgb(255 90 31 / 0.35)"}
-                strokeWidth={i === 0 || i === 5 ? 1.5 : 0.8}
+                stroke={i === 0 || i === 5 ? "rgb(243 236 225 / 0.4)" : "rgb(201 106 64 / 0.28)"}
+                strokeWidth={i === 0 || i === 5 ? 1.4 : 0.7}
               />
             );
           })}
 
           {Array.from({ length: 10 }, (_, i) => {
-            const p = polar(155, i * 36);
+            const p = polar(166, i * 36);
             return (
               <text
                 key={`n${i}`}
@@ -227,50 +232,55 @@ export function UtClock() {
             );
           })}
 
+          <circle cx={CX} cy={CY} r={SPIN_R} className="ut-orbit ut-orbit-dur" />
+          <circle cx={CX} cy={CY} r={TIDE_R} className="ut-orbit ut-orbit-dur" />
+          <circle cx={CX} cy={CY} r={PULSE_R} className="ut-orbit ut-orbit-dur" />
           <circle cx={CX} cy={CY} r={LOOP_R} className="ut-orbit ut-orbit-loop" />
           <circle cx={CX} cy={CY} r={ARC_R} className="ut-orbit ut-orbit-loop" />
           <circle cx={CX} cy={CY} r={TICK_R} className="ut-orbit ut-orbit-tick" />
 
+          {/* Duration — outer, steel */}
           <g ref={spinRef}>
             <path
-              d={`M${CX} ${CY + 6} L${CX - 5} ${CY - 88} Q${CX} ${CY - 104} ${CX + 5} ${CY - 88} Z`}
-              fill="rgb(140 180 188 / 0.7)"
+              d={`M${CX} ${CY - SPIN_R - 7} L${CX + 6} ${CY - SPIN_R + 4} L${CX} ${CY - SPIN_R} L${CX - 6} ${CY - SPIN_R + 4} Z`}
+              fill="rgb(140 180 188 / 0.75)"
             />
           </g>
           <g ref={tideRef}>
             <path
-              d={`M${CX - 2} ${CY + 4} L${CX - 2} ${CY - 70} L${CX - 8} ${CY - 86} L${CX} ${CY - 76} L${CX + 8} ${CY - 86} L${CX + 2} ${CY - 70} L${CX + 2} ${CY + 4} Z`}
-              fill="rgb(140 180 188 / 0.55)"
+              d={`M${CX - 1.6} ${CY - TIDE_R + 5} L${CX - 1.6} ${CY - TIDE_R - 2} L${CX - 6} ${CY - TIDE_R - 8} L${CX} ${CY - TIDE_R - 3} L${CX + 6} ${CY - TIDE_R - 8} L${CX + 1.6} ${CY - TIDE_R - 2} L${CX + 1.6} ${CY - TIDE_R + 5} Z`}
+              fill="rgb(140 180 188 / 0.6)"
             />
           </g>
           <g ref={pulseRef}>
             <polygon
-              points={`${CX},${CY - 58} ${CX + 3},${CY - 50} ${CX + 10},${CY - 50} ${CX + 4},${CY - 45} ${CX + 6},${CY - 38} ${CX},${CY - 43} ${CX - 6},${CY - 38} ${CX - 4},${CY - 45} ${CX - 10},${CY - 50} ${CX - 3},${CY - 50}`}
-              fill="rgb(180 210 214 / 0.7)"
+              points={`${CX},${CY - PULSE_R - 6} ${CX + 2.2},${CY - PULSE_R - 1.5} ${CX + 7},${CY - PULSE_R - 1.5} ${CX + 3},${CY - PULSE_R + 1.5} ${CX + 4.5},${CY - PULSE_R + 6} ${CX},${CY - PULSE_R + 3} ${CX - 4.5},${CY - PULSE_R + 6} ${CX - 3},${CY - PULSE_R + 1.5} ${CX - 7},${CY - PULSE_R - 1.5} ${CX - 2.2},${CY - PULSE_R - 1.5}`}
+              fill="rgb(180 210 214 / 0.75)"
             />
           </g>
 
+          {/* Solar — inner, ember */}
           <g ref={loopRef}>
             <polygon
-              points={`${CX},${CY - LOOP_R - 9} ${CX + 7},${CY - LOOP_R + 4} ${CX},${CY - LOOP_R} ${CX - 7},${CY - LOOP_R + 4}`}
+              points={`${CX},${CY - LOOP_R - 7} ${CX + 5.5},${CY - LOOP_R + 3} ${CX},${CY - LOOP_R} ${CX - 5.5},${CY - LOOP_R + 3}`}
               fill="rgb(224 100 50 / 0.85)"
             />
           </g>
           <g ref={arcRef}>
             <polygon
-              points={`${CX},${CY - ARC_R - 6} ${CX + 5},${CY - ARC_R} ${CX},${CY - ARC_R + 6} ${CX - 5},${CY - ARC_R}`}
+              points={`${CX},${CY - ARC_R - 5} ${CX + 4},${CY - ARC_R} ${CX},${CY - ARC_R + 5} ${CX - 4},${CY - ARC_R}`}
               fill="rgb(243 186 150 / 0.75)"
             />
           </g>
           <g ref={tickRef}>
-            <circle cx={CX} cy={CY - TICK_R} r="3.2" fill="rgb(224 100 50 / 0.8)" />
+            <circle cx={CX} cy={CY - TICK_R} r="2.6" fill="rgb(224 100 50 / 0.85)" />
           </g>
 
           <ellipse
             cx={CX}
             cy={CY}
-            rx="44"
-            ry="18"
+            rx={E_RX}
+            ry={E_RY}
             fill="none"
             stroke="rgb(140 180 188 / 0.35)"
             strokeWidth="0.8"
@@ -279,8 +289,8 @@ export function UtClock() {
           />
           <circle ref={electronRef} cx={CX} cy={CY} r="2.2" fill="rgb(180 210 214 / 0.85)" />
 
-          <circle cx={CX} cy={CY} r="16" fill="url(#ut-ember)" />
-          <circle cx={CX} cy={CY} r="21" className="ut-core-halo" fill="none" />
+          <circle cx={CX} cy={CY} r="14" fill="url(#ut-ember)" />
+          <circle cx={CX} cy={CY} r="18" className="ut-core-halo" fill="none" />
           <text x={CX} y={CY + 1} textAnchor="middle" dominantBaseline="middle" className="ut-h">
             H
           </text>
@@ -359,7 +369,7 @@ export function UtClock() {
           </div>
         </div>
       </div>
-      <p className="ut-legend">Ember is where. Steel is how long. The electron is GQ.</p>
+      <p className="ut-legend">Ember by the core is where you are. Steel on the rim is how long, anywhere.</p>
     </div>
   );
 }
