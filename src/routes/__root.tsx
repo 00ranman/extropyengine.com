@@ -1,6 +1,7 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
+import { QuietPlayer } from "@/components/quiet-player";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "Extropy Engine — Randall Gossett";
@@ -67,6 +68,7 @@ export const Route = createRootRoute({
         <AuthProvider>
           <Outlet />
         </AuthProvider>
+        <QuietPlayer />
         <Scripts />
       </body>
     </html>

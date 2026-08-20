@@ -1,7 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { nav, site, startBar } from "@/content/site";
-import { QuietPlayer } from "@/components/quiet-player";
 import { cn } from "@/lib/utils";
 
 function isHashLink(href: string) {
@@ -103,7 +102,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         </div>
         <div className="lowercase">{site.tagline.toLowerCase()}</div>
       </footer>
-      <QuietPlayer />
     </div>
   );
 }
