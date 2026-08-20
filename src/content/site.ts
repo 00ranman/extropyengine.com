@@ -125,10 +125,18 @@ export type Single = {
   title: string;
   desc: string;
   art: string;
-  links: MusicLinks;
+  links?: MusicLinks;
+  src?: string;
 };
 
 export const singles: Single[] = [
+  {
+    year: 2026,
+    title: "Evolution, Not Revolution",
+    desc: "A cover. Play it here — quietly.",
+    art: "/og.jpg",
+    src: "/audio/evolution-not-revolution.mp3",
+  },
   {
     year: 2026,
     title: "Inside the Machine",

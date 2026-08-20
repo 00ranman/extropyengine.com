@@ -116,7 +116,17 @@ export function MusicSection() {
               </div>
               <div className="font-display text-[15px] leading-tight">{track.title}</div>
             </div>
-            <MusicLinks links={track.links} />
+            {track.src ? (
+              <button
+                type="button"
+                className="mt-auto border-t border-primary/10 px-3.5 py-2.5 text-left text-[11px] tracking-[0.18em] text-primary uppercase hover:text-fg"
+                onClick={() => window.dispatchEvent(new Event("ee-quiet-play"))}
+              >
+                Play quietly →
+              </button>
+            ) : track.links ? (
+              <MusicLinks links={track.links} />
+            ) : null}
           </article>
         ))}
       </div>
