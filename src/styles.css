@@ -330,8 +330,55 @@
   }
 }
 
+.ut-live-unit {
+  display: inline-block;
+}
+
+.ut-live-dot {
+  margin: 0 0.02em;
+  color: rgb(243 236 225 / 0.45);
+  animation: ut-blink 0.86s steps(1) infinite;
+}
+
+.ut-stamp-dur .ut-live-dot {
+  animation-duration: 0.7s;
+}
+
+.ut-live-tenth {
+  display: inline-block;
+  min-width: 0.7em;
+  font-size: 0.62em;
+  opacity: 0.8;
+  vertical-align: 0.08em;
+}
+
+.ut-flip {
+  animation: ut-flip 0.22s ease;
+}
+
+.ut-chip-live {
+  box-shadow: 0 0 12px rgb(255 90 31 / 0.18);
+}
+
+.ut-chips-dur .ut-chip-live {
+  box-shadow: 0 0 12px rgb(34 211 238 / 0.2);
+}
+
+@keyframes ut-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0.2;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .ut-core-halo {
+  .ut-core-halo,
+  .ut-live-dot,
+  .ut-flip {
     animation: none;
   }
 }

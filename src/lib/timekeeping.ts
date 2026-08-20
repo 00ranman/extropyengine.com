@@ -100,7 +100,8 @@ export function solarLat(date = new Date()) {
     date.getSeconds() +
     date.getMilliseconds() / 1000;
   const dayFrac = sec / daySec;
-  const totalTicks = Math.floor(dayFrac * ticksPerDay);
+  const exactTicks = dayFrac * ticksPerDay;
+  const totalTicks = Math.floor(exactTicks);
   const loopSize = arcsPerLoop * ticksPerArc;
   const loop = Math.floor(totalTicks / loopSize);
   const arc = Math.floor((totalTicks % loopSize) / ticksPerArc);
@@ -109,6 +110,7 @@ export function solarLat(date = new Date()) {
     loop,
     arc,
     tick,
+    tickRem: exactTicks - totalTicks,
     dayFrac,
     loopFrac: dayFrac,
     arcFrac: (totalTicks % loopSize) / loopSize,

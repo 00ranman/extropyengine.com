@@ -44,6 +44,10 @@ export function UtClock() {
   const durStampRef = useRef<HTMLSpanElement>(null);
   const loopN = useRef<HTMLSpanElement>(null);
   const arcN = useRef<HTMLSpanElement>(null);
+  const stampTick = useRef<HTMLSpanElement>(null);
+  const stampTickT = useRef<HTMLSpanElement>(null);
+  const durGq = useRef<HTMLSpanElement>(null);
+  const durGqT = useRef<HTMLSpanElement>(null);
   const tickN = useRef<HTMLSpanElement>(null);
   const spinN = useRef<HTMLSpanElement>(null);
   const tideN = useRef<HTMLSpanElement>(null);
@@ -57,6 +61,15 @@ export function UtClock() {
   useEffect(() => {
     let raf = 0;
     let lastLoop = -1;
+    let lastTick = -1;
+    let lastGq = -1;
+    let skipUntil = 0;
+    const flip = (el: HTMLElement | null) => {
+      if (!el) return;
+      el.classList.remove("ut-flip");
+      void el.offsetWidth;
+      el.classList.add("ut-flip");
+    };
     const frame = () => {
       const now = new Date();
       const lat = solarLat(now);
@@ -83,17 +96,50 @@ export function UtClock() {
         lastLoop = lat.loop;
         nums.current.forEach((el, i) => el?.setAttribute("data-on", i === lat.loop ? "1" : "0"));
       }
-      if (stampRef.current) stampRef.current.textContent = lat.stamp;
-      if (durStampRef.current) {
-        durStampRef.current.textContent = `${pad2(valOf(dur, "Spin") % 100)}:${pad2(valOf(dur, "Tide") % 100)}:${pad2(valOf(dur, "Pulse") % 100)}:${pad2(valOf(dur, "GQ") % 100)}`;
+
+      const gq = valOf(dur, "GQ") % 100;
+      const gqTenth = Math.floor(fracOf(dur, "GQ") * 10);
+      const tickTenth = Math.floor(lat.tickRem * 10);
+      const nowMs = now.getTime();
+
+      let tickShow = lat.tick;
+      if (lat.tick !== lastTick) {
+        if (Math.random() < 0.16) {
+          tickShow = (lat.tick + 1) % 100;
+          skipUntil = nowMs + 120;
+        }
+        lastTick = lat.tick;
+        flip(stampTick.current);
+        flip(tickN.current);
+      } else if (nowMs < skipUntil) {
+        tickShow = (lat.tick + 1) % 100;
       }
+
+      let gqShow = gq;
+      if (gq !== lastGq) {
+        if (Math.random() < 0.16) {
+          gqShow = (gq + 1) % 100;
+        }
+        lastGq = gq;
+        flip(durGq.current);
+        flip(gqN.current);
+      }
+
+      if (stampRef.current) stampRef.current.textContent = `t:${lat.loop}:${pad2(lat.arc)}:`;
+      if (stampTick.current) stampTick.current.textContent = pad2(tickShow);
+      if (stampTickT.current) stampTickT.current.textContent = String(tickTenth);
+      if (durStampRef.current) {
+        durStampRef.current.textContent = `${pad2(valOf(dur, "Spin") % 100)}:${pad2(valOf(dur, "Tide") % 100)}:${pad2(valOf(dur, "Pulse") % 100)}:`;
+      }
+      if (durGq.current) durGq.current.textContent = pad2(gqShow);
+      if (durGqT.current) durGqT.current.textContent = String(gqTenth);
       if (loopN.current) loopN.current.textContent = String(lat.loop);
       if (arcN.current) arcN.current.textContent = pad2(lat.arc);
-      if (tickN.current) tickN.current.textContent = pad2(lat.tick);
+      if (tickN.current) tickN.current.textContent = pad2(tickShow);
       if (spinN.current) spinN.current.textContent = pad2(valOf(dur, "Spin") % 100);
       if (tideN.current) tideN.current.textContent = pad2(valOf(dur, "Tide") % 100);
       if (pulseN.current) pulseN.current.textContent = pad2(valOf(dur, "Pulse") % 100);
-      if (gqN.current) gqN.current.textContent = pad2(valOf(dur, "GQ") % 100);
+      if (gqN.current) gqN.current.textContent = pad2(gqShow);
       if (qRef.current) qRef.current.textContent = formatQuant(quantsSinceBB(now));
       if (seasonRef.current) {
         seasonRef.current.textContent = `${Math.round((dayOfYear(now) / daysInYear(now.getFullYear())) * 100)}%`;
@@ -277,7 +323,14 @@ export function UtClock() {
         <div className="ut-stamp">
           <div className="ut-stamp-k">Solar · where</div>
           <div className="ut-stamp-v">
-            <span ref={stampRef}>t:-:--:--</span>
+            <span ref={stampRef}>t:-:--:</span>
+            <span ref={stampTick} className="ut-live-unit">
+              --
+            </span>
+            <span className="ut-live-dot">.</span>
+            <span ref={stampTickT} className="ut-live-tenth">
+              -
+            </span>
           </div>
           <div className="ut-chips">
             <span>
@@ -286,7 +339,7 @@ export function UtClock() {
             <span>
               Arc <b ref={arcN}>—</b>
             </span>
-            <span>
+            <span className="ut-chip-live">
               Tick <b ref={tickN}>—</b>
             </span>
           </div>
@@ -294,7 +347,14 @@ export function UtClock() {
         <div className="ut-stamp ut-stamp-dur">
           <div className="ut-stamp-k">Duration · how long</div>
           <div className="ut-stamp-v ut-stamp-v-dur">
-            <span ref={durStampRef}>--:--:--:--</span>
+            <span ref={durStampRef}>--:--:--:</span>
+            <span ref={durGq} className="ut-live-unit">
+              --
+            </span>
+            <span className="ut-live-dot">.</span>
+            <span ref={durGqT} className="ut-live-tenth">
+              -
+            </span>
           </div>
           <div className="ut-chips ut-chips-dur">
             <span>
@@ -306,7 +366,7 @@ export function UtClock() {
             <span>
               Pulse <b ref={pulseN}>—</b>
             </span>
-            <span>
+            <span className="ut-chip-live">
               GQ <b ref={gqN}>—</b>
             </span>
           </div>
