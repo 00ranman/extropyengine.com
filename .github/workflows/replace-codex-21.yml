@@ -1,0 +1,36 @@
+name: Replace Codex 2.1 PDF
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replace:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download corrected Comprehensive Edition
+        run: |
+          curl -fsSL -o public/docs/Extropy_Codex_v2.1_Comprehensive.pdf https://litter.catbox.moe/ozk33z.pdf
+          ls -la public/docs/Extropy_Codex_v2.1_Comprehensive.pdf
+          file public/docs/Extropy_Codex_v2.1_Comprehensive.pdf
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('public/docs/Extropy_Codex_v2.1_Comprehensive.pdf')
+          data = p.read_bytes()
+          assert data.startswith(b'%PDF'), data[:20]
+          assert p.stat().st_size > 200000, p.stat().st_size
+          print('ok', p.stat().st_size)
+          PY
+
+      - name: Commit replacement
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/docs/Extropy_Codex_v2.1_Comprehensive.pdf
+          git diff --cached --stat
+          git commit -m "Replace Codex v2.1 PDF: F = Frequency of Decay, script-F = Falsifiability"
+          git push

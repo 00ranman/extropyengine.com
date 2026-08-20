@@ -394,7 +394,7 @@ export const suite: SuiteApp[] = [
     status: "live",
     tag: "Core Protocol",
     blurb: "The root. Where verified entropy reduction becomes the sole basis of value.",
-    body: "XP = R × F × ΔS × (w · E) × log(1/Tₛ). Reach, fidelity, entropy reduction, weighted utility, and time-decay compressed into a single physics-grounded value metric for any contribution, governance vote, or unit of work. Written in TypeScript. MIT licensed.",
+    body: "XP = R × F × ΔS_bₑ × (w · E) × min(α_max, max(1, Tₛ / T_floor)). F is Frequency of Decay. Falsifiability is script-F in V(Q), not a mint factor. Written in TypeScript. MIT licensed.",
     repo: "https://github.com/00ranman/extropy-engine",
   },
   {
@@ -516,7 +516,7 @@ export const docsIndex = [
   {
     title: "Extropy Codex v2.1",
     href: "/docs/Extropy_Codex_v2.1_Comprehensive.pdf",
-    note: "Comprehensive Edition — canonical protocol spec, formula canonical-v3.12, protocol v0.2 (August 2026)",
+    note: "Comprehensive Edition — F = Frequency of Decay, script-F = Falsifiability. canonical-v3.12, protocol v0.2 (August 2026)",
   },
   {
     title: "Signal, Loop, and Story",
