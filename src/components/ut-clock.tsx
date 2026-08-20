@@ -64,6 +64,7 @@ export function UtClock() {
     let lastTick = -1;
     let lastGq = -1;
     let skipUntil = 0;
+    let skipGqUntil = 0;
     const flip = (el: HTMLElement | null) => {
       if (!el) return;
       el.classList.remove("ut-flip");
@@ -104,9 +105,9 @@ export function UtClock() {
 
       let tickShow = lat.tick;
       if (lat.tick !== lastTick) {
-        if (Math.random() < 0.16) {
+        if (Math.random() < 0.006) {
           tickShow = (lat.tick + 1) % 100;
-          skipUntil = nowMs + 120;
+          skipUntil = nowMs + 140;
         }
         lastTick = lat.tick;
         flip(stampTick.current);
@@ -117,12 +118,15 @@ export function UtClock() {
 
       let gqShow = gq;
       if (gq !== lastGq) {
-        if (Math.random() < 0.16) {
+        if (Math.random() < 0.006) {
           gqShow = (gq + 1) % 100;
+          skipGqUntil = nowMs + 140;
         }
         lastGq = gq;
         flip(durGq.current);
         flip(gqN.current);
+      } else if (nowMs < skipGqUntil) {
+        gqShow = (gq + 1) % 100;
       }
 
       if (stampRef.current) stampRef.current.textContent = `t:${lat.loop}:${pad2(lat.arc)}:`;
@@ -273,7 +277,7 @@ export function UtClock() {
             strokeDasharray="2 4"
             transform={`rotate(-24 ${CX} ${CY})`}
           />
-          <circle ref={electronRef} r="2.2" fill="rgb(180 210 214 / 0.85)" />
+          <circle ref={electronRef} cx={CX} cy={CY} r="2.2" fill="rgb(180 210 214 / 0.85)" />
 
           <circle cx={CX} cy={CY} r="16" fill="url(#ut-ember)" />
           <circle cx={CX} cy={CY} r="21" className="ut-core-halo" fill="none" />

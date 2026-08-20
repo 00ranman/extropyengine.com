@@ -78,15 +78,20 @@ export function sinceBB(date = new Date()) {
   return BB_SEC + date.getTime() / 1000;
 }
 
-/** Cascaded remainders, Epoch → Pulse. */
+/** Fine units from unix (ms-precise). Coarse units include the cosmological offset. */
 export function durationNow(date = new Date()): DurationTick[] {
-  let rem = sinceBB(date);
+  const unix = date.getTime() / 1000;
   const out: DurationTick[] = [];
   for (let i = DUR_UNITS.length - 1; i >= 0; i--) {
     const seconds = Math.pow(10, DUR_UNITS[i].exp) / HF;
-    const value = Math.floor(rem / seconds);
-    rem %= seconds;
-    out.push({ name: DUR_UNITS[i].name, value, seconds, frac: rem / seconds });
+    const phase = unix / seconds;
+    let frac = phase - Math.floor(phase);
+    if (frac < 0) frac += 1;
+    const value =
+      seconds >= 86_400
+        ? Math.floor(BB_SEC / seconds + phase)
+        : Math.floor(phase);
+    out.push({ name: DUR_UNITS[i].name, value, seconds, frac });
   }
   return out.reverse();
 }
