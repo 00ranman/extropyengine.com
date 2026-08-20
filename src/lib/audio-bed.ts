@@ -21,7 +21,7 @@ export function getBed() {
   if (!audio) {
     audio = new Audio(SRC);
     audio.preload = "auto";
-    audio.playsInline = true;
+    audio.setAttribute("playsinline", "");
     audio.loop = true;
     audio.volume = 0;
   }
