@@ -132,13 +132,6 @@ export type Single = {
 export const singles: Single[] = [
   {
     year: 2026,
-    title: "Evolution, Not Revolution",
-    desc: "A cover. Play it here — quietly.",
-    art: "/og.jpg",
-    src: "/audio/evolution-not-revolution.mp3",
-  },
-  {
-    year: 2026,
     title: "Inside the Machine",
     desc: "Punk rock as merch. The rebellion was always for sale, and the left repackaged it as their own.",
     art: spotifyArt("c5943e8bc994579a352bfee3"),

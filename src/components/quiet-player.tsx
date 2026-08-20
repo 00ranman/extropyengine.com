@@ -19,28 +19,52 @@ export function QuietPlayer() {
   const userPaused = useRef(false);
   const [playing, setPlaying] = useState(false);
 
-  const start = () => {
+  useEffect(() => {
     const el = audioRef.current;
-    if (!el || userPaused.current) return;
-    if (!el.paused) return;
-    el.volume = 0;
-    const attempt = el.play();
-    if (!attempt) return;
-    attempt
-      .then(() => {
-        setPlaying(true);
-        fadeVolume(el, TARGET, 2800);
-      })
-      .catch(() => {
-        const resume = () => {
-          window.removeEventListener("pointerdown", resume);
-          window.removeEventListener("keydown", resume);
-          start();
-        };
-        window.addEventListener("pointerdown", resume);
-        window.addEventListener("keydown", resume);
-      });
-  };
+    if (!el) return;
+
+    const begin = () => {
+      if (userPaused.current || !el.paused) return;
+      el.muted = false;
+      el.volume = 0;
+      const attempt = el.play();
+      if (!attempt) return;
+      void attempt
+        .then(() => {
+          setPlaying(true);
+          fadeVolume(el, TARGET, 2800);
+        })
+        .catch(() => {
+          /* browser blocked — first gesture will retry */
+        });
+    };
+
+    const onGesture = (e: Event) => {
+      if (userPaused.current) return;
+      if ((e.target as HTMLElement | null)?.closest?.("[data-quiet-toggle]")) return;
+      begin();
+    };
+
+    const onEnded = () => setPlaying(false);
+    el.addEventListener("ended", onEnded);
+    el.addEventListener("canplay", begin);
+    window.addEventListener("load", begin);
+    window.addEventListener("pointerdown", onGesture, { capture: true });
+    window.addEventListener("keydown", onGesture, { capture: true });
+    window.addEventListener("touchstart", onGesture, { capture: true });
+    begin();
+    const id = window.setTimeout(begin, 400);
+
+    return () => {
+      window.clearTimeout(id);
+      el.removeEventListener("ended", onEnded);
+      el.removeEventListener("canplay", begin);
+      window.removeEventListener("load", begin);
+      window.removeEventListener("pointerdown", onGesture, { capture: true });
+      window.removeEventListener("keydown", onGesture, { capture: true });
+      window.removeEventListener("touchstart", onGesture, { capture: true });
+    };
+  }, []);
 
   const toggle = () => {
     const el = audioRef.current;
@@ -50,47 +74,27 @@ export function QuietPlayer() {
       el.volume = 0;
       void el.play().then(() => {
         setPlaying(true);
-        fadeVolume(el, TARGET, 2000);
+        fadeVolume(el, TARGET, 1600);
       });
     } else {
       userPaused.current = true;
-      fadeVolume(el, 0, 450);
-      window.setTimeout(() => el.pause(), 450);
+      fadeVolume(el, 0, 350);
+      window.setTimeout(() => el.pause(), 350);
       setPlaying(false);
     }
   };
 
-  useEffect(() => {
-    const el = audioRef.current;
-    if (!el) return;
-    const onEnded = () => setPlaying(false);
-    el.addEventListener("ended", onEnded);
-    window.addEventListener("ee-quiet-play", toggle);
-    start();
-    return () => {
-      el.removeEventListener("ended", onEnded);
-      window.removeEventListener("ee-quiet-play", toggle);
-    };
-  }, []);
-
   return (
-    <div className="fixed right-3 bottom-3 z-40 max-w-[min(100%-1.5rem,280px)] border border-primary/18 bg-bg/90 px-3 py-2 backdrop-blur-md">
-      <audio ref={audioRef} src={SRC} preload="auto" />
+    <div className="fixed right-3 bottom-3 z-40">
+      <audio ref={audioRef} src={SRC} autoPlay playsInline preload="auto" />
       <button
         type="button"
         onClick={toggle}
-        className="flex w-full items-center gap-2.5 text-left"
-        aria-label={playing ? "Pause Evolution, Not Revolution" : "Play Evolution, Not Revolution, quietly"}
+        data-quiet-toggle
+        className="flex size-11 items-center justify-center border border-primary/25 bg-bg/90 text-sm text-primary backdrop-blur-md hover:border-primary/50"
+        aria-label={playing ? "Pause" : "Play"}
       >
-        <span className="flex size-8 shrink-0 items-center justify-center border border-primary/30 text-xs text-primary">
-          {playing ? "‖" : "▶"}
-        </span>
-        <span className="min-w-0">
-          <span className="block text-[9px] tracking-[0.2em] text-dim uppercase">
-            {playing ? "Playing quietly" : "Tap if silent"}
-          </span>
-          <span className="block truncate font-display text-[13px] leading-tight">Evolution, Not Revolution</span>
-        </span>
+        {playing ? "‖" : "▶"}
       </button>
     </div>
   );
