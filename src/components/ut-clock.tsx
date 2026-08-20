@@ -3,16 +3,18 @@ import {
   cycleDay,
   dayOfYear,
   daysInYear,
+  durationNow,
   formatQuant,
+  pad2,
   quantsSinceBB,
   solarLat,
 } from "@/lib/timekeeping";
 
 const CX = 200;
 const CY = 200;
-const LOOP_R = 124;
-const ARC_R = 92;
-const TICK_R = 62;
+const LOOP_R = 128;
+const ARC_R = 104;
+const TICK_R = 82;
 
 function polar(r: number, deg: number) {
   const a = ((deg - 90) * Math.PI) / 180;
@@ -22,14 +24,31 @@ function polar(r: number, deg: number) {
   };
 }
 
+function fracOf(dur: { name: string; frac: number }[], name: string) {
+  return dur.find((d) => d.name === name)?.frac ?? 0;
+}
+
+function valOf(dur: { name: string; value: number }[], name: string) {
+  return dur.find((d) => d.name === name)?.value ?? 0;
+}
+
 export function UtClock() {
   const loopRef = useRef<SVGGElement>(null);
   const arcRef = useRef<SVGGElement>(null);
   const tickRef = useRef<SVGGElement>(null);
+  const spinRef = useRef<SVGGElement>(null);
+  const tideRef = useRef<SVGGElement>(null);
+  const pulseRef = useRef<SVGGElement>(null);
+  const electronRef = useRef<SVGCircleElement>(null);
   const stampRef = useRef<HTMLSpanElement>(null);
+  const durStampRef = useRef<HTMLSpanElement>(null);
   const loopN = useRef<HTMLSpanElement>(null);
   const arcN = useRef<HTMLSpanElement>(null);
   const tickN = useRef<HTMLSpanElement>(null);
+  const spinN = useRef<HTMLSpanElement>(null);
+  const tideN = useRef<HTMLSpanElement>(null);
+  const pulseN = useRef<HTMLSpanElement>(null);
+  const gqN = useRef<HTMLSpanElement>(null);
   const qRef = useRef<HTMLSpanElement>(null);
   const seasonRef = useRef<HTMLSpanElement>(null);
   const cycleRef = useRef<HTMLSpanElement>(null);
@@ -41,17 +60,40 @@ export function UtClock() {
     const frame = () => {
       const now = new Date();
       const lat = solarLat(now);
+      const dur = durationNow(now);
       loopRef.current?.setAttribute("transform", `rotate(${lat.loopFrac * 360} ${CX} ${CY})`);
       arcRef.current?.setAttribute("transform", `rotate(${lat.arcFrac * 360} ${CX} ${CY})`);
       tickRef.current?.setAttribute("transform", `rotate(${lat.tickFrac * 360} ${CX} ${CY})`);
+      spinRef.current?.setAttribute("transform", `rotate(${fracOf(dur, "Spin") * 360} ${CX} ${CY})`);
+      tideRef.current?.setAttribute("transform", `rotate(${fracOf(dur, "Tide") * 360} ${CX} ${CY})`);
+      pulseRef.current?.setAttribute("transform", `rotate(${fracOf(dur, "Pulse") * 360} ${CX} ${CY})`);
+
+      const t = fracOf(dur, "GQ") * Math.PI * 2;
+      const rx = 52;
+      const ry = 22;
+      const rot = -24 * (Math.PI / 180);
+      const x = rx * Math.cos(t);
+      const y = ry * Math.sin(t);
+      if (electronRef.current) {
+        electronRef.current.setAttribute("cx", String(CX + x * Math.cos(rot) - y * Math.sin(rot)));
+        electronRef.current.setAttribute("cy", String(CY + x * Math.sin(rot) + y * Math.cos(rot)));
+      }
+
       if (lat.loop !== lastLoop) {
         lastLoop = lat.loop;
         nums.current.forEach((el, i) => el?.setAttribute("data-on", i === lat.loop ? "1" : "0"));
       }
       if (stampRef.current) stampRef.current.textContent = lat.stamp;
+      if (durStampRef.current) {
+        durStampRef.current.textContent = `${pad2(valOf(dur, "Spin") % 100)}:${pad2(valOf(dur, "Tide") % 100)}:${pad2(valOf(dur, "Pulse") % 100)}:${pad2(valOf(dur, "GQ") % 100)}`;
+      }
       if (loopN.current) loopN.current.textContent = String(lat.loop);
-      if (arcN.current) arcN.current.textContent = String(lat.arc).padStart(2, "0");
-      if (tickN.current) tickN.current.textContent = String(lat.tick).padStart(2, "0");
+      if (arcN.current) arcN.current.textContent = pad2(lat.arc);
+      if (tickN.current) tickN.current.textContent = pad2(lat.tick);
+      if (spinN.current) spinN.current.textContent = pad2(valOf(dur, "Spin") % 100);
+      if (tideN.current) tideN.current.textContent = pad2(valOf(dur, "Tide") % 100);
+      if (pulseN.current) pulseN.current.textContent = pad2(valOf(dur, "Pulse") % 100);
+      if (gqN.current) gqN.current.textContent = pad2(valOf(dur, "GQ") % 100);
       if (qRef.current) qRef.current.textContent = formatQuant(quantsSinceBB(now));
       if (seasonRef.current) {
         seasonRef.current.textContent = `${Math.round((dayOfYear(now) / daysInYear(now.getFullYear())) * 100)}%`;
@@ -64,7 +106,7 @@ export function UtClock() {
   }, []);
 
   return (
-    <div className="ut-stage mx-auto mt-8 max-w-[460px]">
+    <div className="ut-stage mx-auto mt-8 max-w-[480px]">
       <div className="ut-plaque">
         <span className="ut-plaque-k">Quant · t:0</span>
         <span ref={qRef} className="ut-plaque-v">
@@ -73,7 +115,7 @@ export function UtClock() {
       </div>
 
       <div className="ut-case">
-        <svg viewBox="0 0 400 400" className="ut-dial" role="img" aria-label="Universal Times solar clock">
+        <svg viewBox="0 0 400 400" className="ut-dial" role="img" aria-label="Universal Times dual clock">
           <defs>
             <radialGradient id="ut-void" cx="42%" cy="36%" r="68%">
               <stop offset="0%" stopColor="#24140e" />
@@ -103,9 +145,8 @@ export function UtClock() {
 
           <circle cx={CX} cy={CY} r="192" fill="#0a0808" />
           <circle cx={CX} cy={CY} r="186" fill="url(#ut-void)" />
-          <circle cx={CX} cy={CY} r="186" fill="none" stroke="rgb(255 90 31 / 0.35)" strokeWidth="1.2" />
-          <circle cx={CX} cy={CY} r="148" fill="none" stroke="rgb(34 211 238 / 0.16)" strokeWidth="1" />
-          <circle cx={CX} cy={CY} r="108" fill="none" stroke="rgb(243 236 225 / 0.08)" strokeWidth="0.8" />
+          <circle cx={CX} cy={CY} r="186" fill="none" stroke="rgb(255 90 31 / 0.4)" strokeWidth="1.3" />
+          <circle cx={CX} cy={CY} r="146" fill="none" stroke="rgb(34 211 238 / 0.28)" strokeWidth="1.1" />
 
           {Array.from({ length: 10 }, (_, i) => {
             const a = polar(178, i * 36);
@@ -124,7 +165,7 @@ export function UtClock() {
           })}
 
           {Array.from({ length: 10 }, (_, i) => {
-            const p = polar(154, i * 36);
+            const p = polar(155, i * 36);
             return (
               <text
                 key={`n${i}`}
@@ -144,10 +185,34 @@ export function UtClock() {
           })}
 
           <circle cx={CX} cy={CY} r={LOOP_R} className="ut-orbit ut-orbit-loop" />
-          <circle cx={CX} cy={CY} r={ARC_R} className="ut-orbit ut-orbit-arc" />
+          <circle cx={CX} cy={CY} r={ARC_R} className="ut-orbit ut-orbit-loop" />
           <circle cx={CX} cy={CY} r={TICK_R} className="ut-orbit ut-orbit-tick" />
 
-          {/* Loop — ember chevron */}
+          {/* Duration arms — cyan, different glyphs */}
+          <g ref={spinRef}>
+            <path
+              d={`M${CX} ${CY + 10} L${CX - 9} ${CY - 96} Q${CX} ${CY - 122} ${CX + 9} ${CY - 96} Z`}
+              fill="#22d3ee"
+              fillOpacity="0.92"
+              filter="url(#ut-glow-cyan)"
+            />
+          </g>
+          <g ref={tideRef}>
+            <path
+              d={`M${CX - 3.2} ${CY + 8} L${CX - 3.2} ${CY - 78} L${CX - 13} ${CY - 100} L${CX} ${CY - 86} L${CX + 13} ${CY - 100} L${CX + 3.2} ${CY - 78} L${CX + 3.2} ${CY + 8} Z`}
+              fill="#67e8f9"
+              filter="url(#ut-glow-cyan)"
+            />
+          </g>
+          <g ref={pulseRef}>
+            <polygon
+              points={`${CX},${CY - 70} ${CX + 5},${CY - 58} ${CX + 17},${CY - 58} ${CX + 7},${CY - 50} ${CX + 11},${CY - 38} ${CX},${CY - 46} ${CX - 11},${CY - 38} ${CX - 7},${CY - 50} ${CX - 17},${CY - 58} ${CX - 5},${CY - 58}`}
+              fill="#a5f3fc"
+              filter="url(#ut-glow-cyan)"
+            />
+          </g>
+
+          {/* Solar markers — ember */}
           <g ref={loopRef}>
             <polygon
               points={`${CX},${CY - LOOP_R - 14} ${CX + 11},${CY - LOOP_R + 6} ${CX},${CY - LOOP_R - 1} ${CX - 11},${CY - LOOP_R + 6}`}
@@ -155,24 +220,34 @@ export function UtClock() {
               filter="url(#ut-glow-ember)"
             />
           </g>
-
-          {/* Arc — cyan diamond */}
           <g ref={arcRef}>
             <polygon
               points={`${CX},${CY - ARC_R - 9} ${CX + 8},${CY - ARC_R} ${CX},${CY - ARC_R + 9} ${CX - 8},${CY - ARC_R}`}
-              fill="#22d3ee"
-              filter="url(#ut-glow-cyan)"
+              fill="#ffb089"
+              filter="url(#ut-glow-ember)"
             />
           </g>
-
-          {/* Tick — ember disc */}
           <g ref={tickRef}>
-            <circle cx={CX} cy={CY - TICK_R} r="5" fill="#ffb089" filter="url(#ut-glow-ember)" />
-            <circle cx={CX} cy={CY - TICK_R} r="2.2" fill="#fff4ea" />
+            <circle cx={CX} cy={CY - TICK_R} r="5" fill="#ff7a3d" filter="url(#ut-glow-ember)" />
+            <circle cx={CX} cy={CY - TICK_R} r="2.1" fill="#fff4ea" />
           </g>
 
-          <circle cx={CX} cy={CY} r="28" fill="url(#ut-ember)" filter="url(#ut-glow-ember)" />
-          <circle cx={CX} cy={CY} r="34" className="ut-core-halo" fill="none" />
+          {/* Hydrogen — dashed oval + electron = GQ */}
+          <ellipse
+            cx={CX}
+            cy={CY}
+            rx="52"
+            ry="22"
+            fill="none"
+            stroke="rgb(34 211 238 / 0.45)"
+            strokeWidth="1.1"
+            strokeDasharray="3 5"
+            transform={`rotate(-24 ${CX} ${CY})`}
+          />
+          <circle ref={electronRef} r="3.4" fill="#22d3ee" filter="url(#ut-glow-cyan)" />
+
+          <circle cx={CX} cy={CY} r="22" fill="url(#ut-ember)" filter="url(#ut-glow-ember)" />
+          <circle cx={CX} cy={CY} r="28" className="ut-core-halo" fill="none" />
           <text x={CX} y={CY + 1} textAnchor="middle" dominantBaseline="middle" className="ut-h">
             H
           </text>
@@ -198,24 +273,49 @@ export function UtClock() {
         </div>
       </div>
 
-      <div className="ut-stamp">
-        <div className="ut-stamp-k">Solar coordinates · where you are</div>
-        <div className="ut-stamp-v">
-          <span ref={stampRef}>t:-:--:--</span>
+      <div className="ut-dual">
+        <div className="ut-stamp">
+          <div className="ut-stamp-k">Solar · where</div>
+          <div className="ut-stamp-v">
+            <span ref={stampRef}>t:-:--:--</span>
+          </div>
+          <div className="ut-chips">
+            <span>
+              Loop <b ref={loopN}>—</b>
+            </span>
+            <span>
+              Arc <b ref={arcN}>—</b>
+            </span>
+            <span>
+              Tick <b ref={tickN}>—</b>
+            </span>
+          </div>
         </div>
-        <div className="ut-chips">
-          <span>
-            Loop <b ref={loopN}>—</b>
-          </span>
-          <span>
-            Arc <b ref={arcN}>—</b>
-          </span>
-          <span>
-            Tick <b ref={tickN}>—</b>
-          </span>
+        <div className="ut-stamp ut-stamp-dur">
+          <div className="ut-stamp-k">Duration · how long</div>
+          <div className="ut-stamp-v ut-stamp-v-dur">
+            <span ref={durStampRef}>--:--:--:--</span>
+          </div>
+          <div className="ut-chips ut-chips-dur">
+            <span>
+              Spin <b ref={spinN}>—</b>
+            </span>
+            <span>
+              Tide <b ref={tideN}>—</b>
+            </span>
+            <span>
+              Pulse <b ref={pulseN}>—</b>
+            </span>
+            <span>
+              GQ <b ref={gqN}>—</b>
+            </span>
+          </div>
         </div>
-        <p>Ember chevron is Loop. Cyan diamond is Arc. The small disc is Tick.</p>
       </div>
+      <p className="ut-legend">
+        Ember chevron / diamond / disc = Loop Arc Tick. Cyan blade = Spin, fork = Tide, spark = Pulse.
+        The electron on the dashed oval is GQ.
+      </p>
     </div>
   );
 }
