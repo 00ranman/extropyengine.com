@@ -2,6 +2,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { nav, site, startBar } from "@/content/site";
 import { QuietPlayer } from "@/components/quiet-player";
+import { cn } from "@/lib/utils";
 
 function isHashLink(href: string) {
   return href.startsWith("/#") || href.startsWith("#");
