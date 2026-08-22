@@ -400,6 +400,14 @@ export const suite: SuiteApp[] = [
     repo: "https://github.com/00ranman/extropy-engine",
   },
   {
+    name: "LocalFlow",
+    status: "dev",
+    tag: "Bootstrap · DFAO",
+    blurb: "Free local rides and errands. Confirmation is the validator.",
+    body: "The bootstrap. Post a ride, a grocery run, a task. Someone nearby does it. You confirm. No platform fee, no surge. Users never see XP or DAG — it looks like matchmaking. Underneath, two-party confirmation is the loop: LOOPOPEN → LOOPCLOSE → provisional XP, confirmed after 30 days if nobody disputes. First validators are just people doing the work. Remaining problem is density in a zone.",
+    repo: "https://github.com/00ranman/extropy-engine/tree/main/packages/localflow",
+  },
+  {
     name: "XP-Net",
     status: "dev",
     tag: "Layer 1 Protocol",

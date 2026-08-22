@@ -318,8 +318,8 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
         def: "A process that references itself. Used to enforce system self-auditing.",
       },
       {
-        term: "Goodhart's Law",
-        def: "When a measure becomes a target, it ceases to be a good measure. Used diagnostically to design manipulation-resistant metrics.",
+        term: "LocalFlow",
+        def: "The current bootstrap and validator solution. A free local driver/errand DFAO: post a task, someone nearby does it, you confirm. That confirmation closes the loop and mints provisional XP. Users never see protocol terms. Remaining constraint is subscriber density in a zone, not a validator priesthood.",
       },
     ],
   },
@@ -457,7 +457,7 @@ export const openProblems: Problem[] = [
     section: "Validation",
     hardness: "ACTIVE",
     title: "Adoption Density, Not Validator Priesthood",
-    body: "“Who validates the first validators?” overstates the problem. Validation is not a special caste you have to anoint. You publish a task that pays XP; people do it. That is the whole loop (quest market, LocalFlow, 1/10th blind slices). What remains is density: you need subscribers in range to pick the work up. Cold-start is an audience problem, not a trust-initialization ceremony. Unsolved: how thin a local graph can get before neglected-work escalation is not enough.",
+    body: "“Who validates the first validators?” overstates the problem. LocalFlow is the current answer: a free local errand/ride network. You post a task, someone nearby does it, you confirm. That confirmation is the loop — LOOPOPEN → LOOPCLOSE → provisional XP. No special validator caste, no platform fee, users never see the protocol. What remains is density: enough people in the same zone to pick the work up. Unsolved: how thin a local graph can get before neglected-work escalation is not enough.",
   },
   {
     section: "Validation",
