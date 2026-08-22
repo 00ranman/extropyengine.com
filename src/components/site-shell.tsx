@@ -51,10 +51,13 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           </button>
         </div>
 
-        {open ? (
-          <nav
+        <nav
             aria-label="Site"
-            className="max-h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-primary/12 bg-bg px-[5vw] py-6"
+            className={
+              open
+                ? "max-h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-primary/12 bg-bg px-[5vw] py-6"
+                : "hidden"
+            }
           >
             <div className="mx-auto flex max-w-sm flex-col">
               {menu.map((group, gi) => (
@@ -89,7 +92,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               ))}
             </div>
           </nav>
-        ) : null}
       </header>
 
       <div className="relative z-10">{children}</div>
