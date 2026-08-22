@@ -12,6 +12,17 @@ function OpenProblems() {
         These are the places where this framework might break. Publishing them is deliberate. A
         system that hides its failure conditions is a religion. One that exposes them is engineering.
       </p>
+      <p>
+        The engineering backlog (65 items) lives in{" "}
+        <a
+          href="https://github.com/00ranman/extropy-engine/blob/main/docs/GAPS.md"
+          className="text-primary hover:underline"
+        >
+          extropy-engine/docs/GAPS.md
+        </a>
+        . Codex v2.1 stays frozen for now — this page is the public reading of the gaps, not a new
+        edition.
+      </p>
       {sections.map((section) => (
         <section key={section} className="space-y-4 pt-4">
           <h2 className="font-display text-2xl tracking-[0.04em] text-fg">{section}</h2>

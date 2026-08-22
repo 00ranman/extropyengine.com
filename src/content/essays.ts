@@ -167,7 +167,7 @@ export const essays: Record<string, Essay> = {
       { type: "h2", text: "Where This Can Fail" },
       {
         type: "p",
-        text: "The hard problem: who validates the entropy reduction? If validators are human, you re-import human bias. If validators are AI, you get recursive self-evaluation loops. The Extropy Engine addresses this with a multi-layer validation architecture (human + AI + physical measurement), but the boundary conditions are still being formalized.",
+        text: "The remaining problem is not “who validates.” Validation is a task: post work that pays XP, people do it. Bias and AI-recursion still matter at the slice level (human + AI + physical measurement), but that is an accuracy problem, not a priesthood problem. What still has to be proven is density — enough people in range to pick the tasks up.",
       },
       { type: "h3", text: "What This Is Not" },
       {
@@ -224,7 +224,7 @@ export const essays: Record<string, Essay> = {
       { type: "h2", text: "Where This Can Fail" },
       {
         type: "p",
-        text: "Entropy auditing at institutional scale is computationally expensive and politically contentious. Defining entropy reduction for a school versus a hospital versus a legislature requires domain-specific frameworks that don't yet exist at production quality. The governance layer also faces a bootstrap problem: who governs the governors before the system is self-sustaining?",
+        text: "Entropy auditing at institutional scale is computationally expensive and politically contentious. Defining entropy reduction for a school versus a hospital versus a legislature still needs domain-specific frameworks at production quality. “Who governs the governors” is the wrong shape of bootstrap: governance work is also just tasks with XP. The real constraint is getting enough people inside the institution to do those tasks before the old proxy metrics reassert.",
       },
       { type: "h2", text: "The Invitation" },
       {
@@ -455,9 +455,9 @@ export const openProblems: Problem[] = [
   },
   {
     section: "Validation",
-    hardness: "HARD",
-    title: "Validator Bootstrap Problem",
-    body: "Who validates the first validators? Before the system is self-sustaining, there is a trust initialization problem. Current approach: seed validators with demonstrated track records in their domains, then progressively decentralize as the validation mesh grows.",
+    hardness: "ACTIVE",
+    title: "Adoption Density, Not Validator Priesthood",
+    body: "“Who validates the first validators?” overstates the problem. Validation is not a special caste you have to anoint. You publish a task that pays XP; people do it. That is the whole loop (quest market, LocalFlow, 1/10th blind slices). What remains is density: you need subscribers in range to pick the work up. Cold-start is an audience problem, not a trust-initialization ceremony. Unsolved: how thin a local graph can get before neglected-work escalation is not enough.",
   },
   {
     section: "Validation",
