@@ -76,8 +76,9 @@ function UniversalTimes() {
           <h1 className="font-display text-[clamp(32px,5vw,52px)] tracking-[0.08em]">Universal Times</h1>
           <p className="mt-2 text-xs tracking-[0.2em] text-accent uppercase">v4.2 · hydrogen-anchored · three systems</p>
           <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-muted">
-            Position and duration are different quantities. The face is base-10: ten loops in a local
-            day. Hours and minutes are not on this scale.
+            Base-10 face. Ten loops in a local day. Three solar hands — Loop, Arc, Tick — tell you
+            where you are. The gold pip is Pulse, a duration, the same length on every planet. Hours
+            are not on this scale.
           </p>
 
           <UtClock />
