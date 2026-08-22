@@ -226,18 +226,35 @@
 
 @media print {
   :root {
+    --color-bg: #f4efe6;
+    --color-fg: #1c1814;
+    --color-muted: #4a433c;
+    --color-dim: #5c564e;
+    --color-faint: #7a7368;
+    --color-primary: #c2410c;
+    --color-accent: #0e7490;
+    --color-surface: #ebe3d4;
+    --color-ink: #1c1814;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }
 
   html,
   body {
-    background: #060606 !important;
-    color: #f3ece1 !important;
+    background: #f4efe6 !important;
+    color: #1c1814 !important;
     margin: 0 !important;
     padding: 0 !important;
     height: auto !important;
     overflow: visible !important;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: -2in;
+    background: #f4efe6;
+    z-index: -1;
   }
 
   .no-print {
@@ -245,14 +262,20 @@
   }
 
   .pdf-sheet {
-    background: #060606 !important;
-    color: #f3ece1 !important;
+    background: #f4efe6 !important;
+    color: #1c1814 !important;
     padding: 0.7in 0.8in 0.85in !important;
     min-height: 100%;
   }
 
+  .lyrics-sheet {
+    background: #ebe3d4 !important;
+    color: #1c1814 !important;
+    border-color: rgb(194 65 12 / 0.28) !important;
+  }
+
   a {
-    color: #ff5a1f !important;
+    color: #c2410c !important;
     text-decoration: underline !important;
     text-underline-offset: 3px;
   }
@@ -274,4 +297,5 @@
     page-break-after: avoid;
   }
 }
+
 
