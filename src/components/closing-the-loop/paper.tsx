@@ -18,6 +18,7 @@ import { tracks } from "@/content/closing-the-loop/tracks";
 import { Btn } from "@/components/ui-bits";
 import { ListenLinks } from "./listen-links";
 import { Toc } from "./toc";
+import { PrintSheet } from "./print-sheet";
 import { TrackAudit } from "./track-audit";
 
 function Section({
@@ -31,19 +32,21 @@ function Section({
 }) {
   return (
     <section id={id} className="pdf-break scroll-mt-28 py-8">
-      <h2 className="font-display text-[clamp(26px,3.2vw,36px)] tracking-[0.04em] text-fg">
-        {heading}
-      </h2>
-      <div className="mt-5 space-y-5">
-        {paragraphs.map((p, i) => (
-          <p
-            key={i}
-            className="text-[15px] leading-[1.8] text-pretty text-muted"
-          >
-            {p}
-          </p>
-        ))}
-      </div>
+      <PrintSheet running={heading}>
+        <h2 className="font-display text-[clamp(26px,3.2vw,36px)] tracking-[0.04em] text-fg">
+          {heading}
+        </h2>
+        <div className="mt-5 space-y-5">
+          {paragraphs.map((p, i) => (
+            <p
+              key={i}
+              className="text-[15px] leading-[1.8] text-pretty text-muted"
+            >
+              {p}
+            </p>
+          ))}
+        </div>
+      </PrintSheet>
     </section>
   );
 }
@@ -178,15 +181,17 @@ export function ClosingLoopPaper({ print = false }: { print?: boolean }) {
                   id={`part-${part.id}`}
                   className="pdf-break scroll-mt-28 pt-10"
                 >
-                  <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">
-                    Part {part.roman}
-                  </p>
-                  <h2 className="font-display mt-2 text-[clamp(26px,3.2vw,36px)] tracking-[0.04em] text-fg">
-                    {part.title}
-                  </h2>
-                  <p className="mt-3 text-[15px] leading-relaxed text-pretty text-muted italic">
-                    {part.lede}
-                  </p>
+                  <PrintSheet running={`Part ${part.roman}  ·  ${part.title}`}>
+                    <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">
+                      Part {part.roman}
+                    </p>
+                    <h2 className="font-display mt-2 text-[clamp(26px,3.2vw,36px)] tracking-[0.04em] text-fg">
+                      {part.title}
+                    </h2>
+                    <p className="mt-3 text-[15px] leading-relaxed text-pretty text-muted italic">
+                      {part.lede}
+                    </p>
+                  </PrintSheet>
                   {partTracks.map((track) => (
                     <TrackAudit key={track.slug} track={track} />
                   ))}
@@ -211,16 +216,18 @@ export function ClosingLoopPaper({ print = false }: { print?: boolean }) {
             />
 
             <section id="sources" className="pdf-break scroll-mt-28 py-8">
-              <h2 className="font-display text-[clamp(26px,3.2vw,36px)] tracking-[0.04em] text-fg">
-                Sources
-              </h2>
-              <ol className="mt-6 list-decimal space-y-3 pl-6 text-[14px] leading-relaxed text-muted marker:text-primary">
-                {sources.map((s) => (
-                  <li key={s} className="pl-1">
-                    {s}
-                  </li>
-                ))}
-              </ol>
+              <PrintSheet running="Sources">
+                <h2 className="font-display text-[clamp(26px,3.2vw,36px)] tracking-[0.04em] text-fg">
+                  Sources
+                </h2>
+                <ol className="mt-6 list-decimal space-y-3 pl-6 text-[14px] leading-relaxed text-muted marker:text-primary">
+                  {sources.map((s) => (
+                    <li key={s} className="pl-1">
+                      {s}
+                    </li>
+                  ))}
+                </ol>
+              </PrintSheet>
             </section>
 
             <footer className="mt-16 border-t border-primary/15 pt-8 pb-16 font-mono text-[12px] tracking-[0.04em] text-dim">
