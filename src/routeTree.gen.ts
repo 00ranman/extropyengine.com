@@ -18,6 +18,7 @@ import { Route as ProofLayersRouteImport } from './routes/proof-layers'
 import { Route as SayRouteImport } from './routes/say'
 import { Route as UniversaltimesRouteImport } from './routes/universaltimes'
 import { Route as DocsIndexRouteImport } from './routes/docs/index'
+import { Route as PapersClosingTheLoopRouteImport } from './routes/papers/closing-the-loop'
 import { Route as StartIndexRouteImport } from './routes/start/index'
 import { Route as StartAiRouteImport } from './routes/start/ai'
 import { Route as StartGovernanceRouteImport } from './routes/start/governance'
@@ -70,6 +71,11 @@ const DocsIndexRoute = DocsIndexRouteImport.update({
   path: '/docs/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PapersClosingTheLoopRoute = PapersClosingTheLoopRouteImport.update({
+  id: '/papers/closing-the-loop',
+  path: '/papers/closing-the-loop',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const StartIndexRoute = StartIndexRouteImport.update({
   id: '/start/',
   path: '/start/',
@@ -110,6 +116,7 @@ export interface FileRoutesByFullPath {
   '/proof-layers': typeof ProofLayersRoute
   '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
+  '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
   '/start/governance': typeof StartGovernanceRoute
   '/start/money': typeof StartMoneyRoute
@@ -127,6 +134,7 @@ export interface FileRoutesByTo {
   '/proof-layers': typeof ProofLayersRoute
   '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
+  '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
   '/start/governance': typeof StartGovernanceRoute
   '/start/money': typeof StartMoneyRoute
@@ -145,6 +153,7 @@ export interface FileRoutesById {
   '/proof-layers': typeof ProofLayersRoute
   '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
+  '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
   '/start/governance': typeof StartGovernanceRoute
   '/start/money': typeof StartMoneyRoute
@@ -164,6 +173,7 @@ export interface FileRouteTypes {
     | '/proof-layers'
     | '/say'
     | '/universaltimes'
+    | '/papers/closing-the-loop'
     | '/start/ai'
     | '/start/governance'
     | '/start/money'
@@ -181,6 +191,7 @@ export interface FileRouteTypes {
     | '/proof-layers'
     | '/say'
     | '/universaltimes'
+    | '/papers/closing-the-loop'
     | '/start/ai'
     | '/start/governance'
     | '/start/money'
@@ -198,6 +209,7 @@ export interface FileRouteTypes {
     | '/proof-layers'
     | '/say'
     | '/universaltimes'
+    | '/papers/closing-the-loop'
     | '/start/ai'
     | '/start/governance'
     | '/start/money'
@@ -216,6 +228,7 @@ export interface RootRouteChildren {
   ProofLayersRoute: typeof ProofLayersRoute
   SayRoute: typeof SayRoute
   UniversaltimesRoute: typeof UniversaltimesRoute
+  PapersClosingTheLoopRoute: typeof PapersClosingTheLoopRoute
   StartAiRoute: typeof StartAiRoute
   StartGovernanceRoute: typeof StartGovernanceRoute
   StartMoneyRoute: typeof StartMoneyRoute
@@ -290,6 +303,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/papers/closing-the-loop': {
+      id: '/papers/closing-the-loop'
+      path: '/papers/closing-the-loop'
+      fullPath: '/papers/closing-the-loop'
+      preLoaderRoute: typeof PapersClosingTheLoopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/start/': {
       id: '/start/'
       path: '/start'
@@ -344,6 +364,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProofLayersRoute: ProofLayersRoute,
   SayRoute: SayRoute,
   UniversaltimesRoute: UniversaltimesRoute,
+  PapersClosingTheLoopRoute: PapersClosingTheLoopRoute,
   StartAiRoute: StartAiRoute,
   StartGovernanceRoute: StartGovernanceRoute,
   StartMoneyRoute: StartMoneyRoute,

@@ -171,11 +171,20 @@ export function Manifesto() {
   );
 }
 
+function isOnSitePage(href: string) {
+  return href.startsWith("/") && !/\.pdf($|\?)/i.test(href);
+}
+
 function PaperCard({ paper }: { paper: Paper }) {
+  const sameTab = isOnSitePage(paper.href);
+  const linkProps = sameTab
+    ? {}
+    : { target: "_blank" as const, rel: "noreferrer" };
+
   if (paper.academia) {
     return (
       <div className="flex flex-col border border-primary/18 bg-[rgb(20_12_8_/_0.45)] transition-all hover:-translate-y-0.5 hover:border-primary hover:shadow-[0_12px_28px_rgb(255_90_31_/_0.12)]">
-        <a href={paper.href} target="_blank" rel="noreferrer" className="block px-[22px] pt-[22px] pb-[18px]">
+        <a href={paper.href} {...linkProps} className="block px-[22px] pt-[22px] pb-[18px]">
           <div className="mb-2.5 font-mono text-[10px] tracking-[0.25em] text-primary uppercase">
             {paper.tag}
           </div>
@@ -197,8 +206,7 @@ function PaperCard({ paper }: { paper: Paper }) {
   return (
     <a
       href={paper.href}
-      target="_blank"
-      rel="noreferrer"
+      {...linkProps}
       className="block border border-primary/18 bg-[rgb(20_12_8_/_0.45)] px-[22px] py-6 transition-all hover:-translate-y-0.5 hover:border-primary hover:bg-[rgb(40_18_10_/_0.6)] hover:shadow-[0_12px_28px_rgb(255_90_31_/_0.12)]"
     >
       <div className="mb-2.5 font-mono text-[10px] tracking-[0.25em] text-primary uppercase">

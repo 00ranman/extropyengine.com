@@ -304,14 +304,14 @@ export type Paper = {
 
 export const papers: Paper[] = [
   {
+    tag: "New · Music / Criticism",
+    title: "Closing the Loop",
+    href: "/papers/closing-the-loop",
+  },
+  {
     tag: "New · Codex · V2.1",
     title: "Extropy Codex, Version 2.1, Comprehensive Edition",
     href: "/docs/Extropy_Codex_v2.1_Comprehensive.pdf",
-  },
-  {
-    tag: "New · Music / Criticism",
-    title: "Signal, Loop, and Story",
-    href: "https://www.academia.edu/170725878/Signal_Loop_and_Story",
   },
   {
     tag: "New · Time · V4.2",
@@ -353,6 +353,11 @@ export const papers: Paper[] = [
 ];
 
 export const earlierEditions: Paper[] = [
+  {
+    tag: "Music / Criticism · July 2026",
+    title: "Signal, Loop, and Story",
+    href: "https://www.academia.edu/170725878/Signal_Loop_and_Story",
+  },
   {
     tag: "Codex · V2.0",
     title: "Extropy Codex, Version 2.0, Comprehensive Edition",
@@ -524,14 +529,14 @@ export const socials = [
 
 export const docsIndex = [
   {
+    title: "Closing the Loop",
+    href: "/papers/closing-the-loop",
+    note: "Systems audit of the Lladnaros catalog — recast of Signal, Loop, and Story (August 2026)",
+  },
+  {
     title: "Extropy Codex v2.1",
     href: "/docs/Extropy_Codex_v2.1_Comprehensive.pdf",
     note: "Comprehensive Edition — F = Frequency of Decay, script-F = Falsifiability. canonical-v3.12, protocol v0.2 (August 2026)",
-  },
-  {
-    title: "Signal, Loop, and Story",
-    href: "https://www.academia.edu/170725878/Signal_Loop_and_Story",
-    note: "Lyric analysis — music as systems argument (2026)",
   },
   {
     title: "Universal Times v4.2",
@@ -561,6 +566,11 @@ export const docsIndex = [
 ] as const;
 
 export const earlierDocs = [
+  {
+    title: "Signal, Loop, and Story",
+    href: "https://www.academia.edu/170725878/Signal_Loop_and_Story",
+    note: "July 2026 lyric analysis — recast as Closing the Loop",
+  },
   {
     title: "Extropy Codex v2.0",
     href: "https://www.academia.edu/169680038/Extropy_Codex_Version_2_0_Comprehensive_Edition",
