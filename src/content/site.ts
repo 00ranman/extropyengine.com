@@ -36,6 +36,16 @@ export const startBar = {
   ],
 } as const;
 
+export const menu = [
+  { heading: null as string | null, href: null as string | null, items: nav },
+  {
+    heading: "Start here",
+    href: "/start",
+    items: [...startBar.entries, ...startBar.extras],
+  },
+] as const;
+
+
 export const book = {
   title: "Unf*ck the World for a Dollar",
   tagline: "They want fire. I bring fungus.",
