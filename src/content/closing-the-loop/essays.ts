@@ -118,7 +118,7 @@ export const limitations = {
   heading: "Limitations",
   paragraphs: [
     "These readings remain the author's interpretive proposals. They are checked against named scholarship and against the lyrics quoted here, and they have not been independently reviewed. A specialist in narrative psychology, cultural studies, philosophy of language, moral-panic sociology, or homelessness-intervention research is invited to test each match against the quoted lines, not against this paper's summary of them.",
-    "Two 2026 releases — Inside the Machine and And That's… (How) — did not have a complete public lyric index at the time of this recast. Those sections quote the authorized lyric set used in the July paper and the artist's own public descriptions of the tracks. If a fuller sheet is published, the quotes should be checked against it.",
+    "One 2026 release — Inside the Machine — did not have a complete public lyric index at the time of this recast. That section quotes the authorized lyric set used in the July paper and the artist's own public descriptions of the track. And That's… (How) now uses the full authorized sheet. If a fuller Inside the Machine sheet is published, those quotes should be checked against it.",
     "A different reader might argue that No Filter, No BS is doing more structural work than this paper allows. That would be a useful, checkable critique. The invitation stands.",
   ],
 };

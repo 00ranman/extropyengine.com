@@ -1071,17 +1071,142 @@ But we are.`,
       apple: am("album/the-lladnaros-ep/6786489841"),
       youtube: ytSearch("And That's (How)"),
     },
-    lyricsKind: "selected",
-    lyricsNote:
-      "Full public lyric index was not available for this 2026 EP track at recast. Lines below are from the authorized lyric set used in the July paper.",
-    lyrics: `Homelessness is what happens
-when every feedback loop goes dead
+    lyricsKind: "full",
+    lyrics: `And that…
+another funding round
+another nonprofit
+another plan that don't do shit
 
-immutable proof that says you exist
-not charity tokens, not good-boy praise,
+You wonder why the crisis loops
+why the money burns and never roots
+Wrong equation, wrong translation
+cash on symptoms, dodge causation
+(wrong equation)
+
+The problem ain't shelter, it's signal loss
+human worth getting written off
+Homelessness is what happens when
+every feedback loop goes dead, and then
+(signal loss)
+
+They stop being seen
+world stops giving a fuck
+whether they wake tomorrow
+and you think a roof's enough?
+(enough?)
+
+You thought it was housing
+it's deeper than that
+You can't patch a soul
+with a voucher and a mat
+(deeper than that)
+
+You can feed the body
+while the mirror stays cracked
+and wonder why they slide right back
+
+WE DON'T WANT TO FIX IT!
+Just want to sanitize the view
+WE DON'T WANT TO FIX IT!
+Push it somewhere out of sight from you
+
+So we don't feel that existential itch
+of seeing someone failed by the game
+We're still trying to win
+STILL TRYING TO WIN!
+
+Walk past, avert your eyes, make excuses in your head
+“They probably did it to themselves” is what the practiced pattern said
+(coward script)
+
+Every signal says “disappear”
+loop it long enough, it hardens fear
+Year by year, it cuts in deep
+train a mind to stay beneath
+(disappear)
+
+You think a voucher flips that code?
+Eight shit hours on a dead-end road?
+That's your own cope getting projected
+on people the machine already rejected
+(rejected)
+
+Automated nihilism, polished and proud
+fake joy for the likes, fake rage for the crowd
+Everybody performing, cue the applause
+Homelessness is what happens when the system withdraws
+(system withdraws)
+
+You don't fix this with housing alone
+you fix it when signal correction is shown
+A system that reflects contribution back
+even the smallest acts put on the map
+(put on the map)
+
+Picked up trash? Track it.
+Helped with bags? Track it.
+Showed up, stayed solid, did the task? Track it.
+(track it)
+
+Not for a pity hit
+not for a badge
+not for a feel-good parade
+that fades and gets dragged
+(not for pity)
+
+Permanent proof of impact made
+a ledger that says they were not erased
+Not charity tokens
+not good-boy praise
 but hard signal written in ways that stay
+(not erased)
 
-you don't fix this with housing alone`,
+You exist.
+You did something.
+It counted.
+It stays.
+That's how you start pulling a human
+back out of the haze
+(it stays)
+
+IMMUTABLE PROOF!
+That says, “You exist”
+UNFUCKWITHABLE TRUTH!
+“You did something” on the list
+
+Rebuild reality one loop at a time
+give them agency to climb
+Not therapy
+not just a check
+a new mirror that reflects
+(new mirror)
+
+Burn the old table
+build new feedback loops
+Don't wait for them to “deserve” purpose
+REWARD IT
+(reward it)
+
+One accumulated proof at a time
+one reinforced signal at a time
+one “you matter” at a time
+(you matter)
+
+And that…
+is how you fucking…
+solve…
+homelessness
+
+And that…
+another funding round
+another nonprofit
+another program that won't fix shit
+
+Because if the mirror stays broken
+the loop stays the same
+and you can't house a person
+back into a name
+(broken loop)`,
     reading: [
       "“Homelessness is what happens when every feedback loop goes dead” is the catalog's most precise civic diagnostic. It specifies not just that a system is broken but where: at the feedback stage, not only at the resource stage. The proposed mechanism is equally specific: “immutable proof that says you exist… not charity tokens, not good-boy praise, but hard signal written in ways that stay.”",
       "This is checkable against real evidence, which is rare for a lyric and is why the track belongs at the end of an audit. Housing First randomized controlled trials show that unconditional housing provision, not a feedback-recognition mechanism, is the intervention most reliably associated with housing stability — on the order of eighty percent retention and large reductions in homelessness across trials. That sits in some tension with “you don't fix this with housing alone.” The same evidence base finds only weak to moderate support for housing alone improving the broader social reintegration and sense of recognized agency the song is actually concerned with.",

@@ -308,10 +308,23 @@
     min-height: 100%;
   }
 
+  .pdf-break {
+    break-before: page;
+    page-break-before: always;
+    padding-top: 0.15in;
+  }
+
   .lyrics-sheet {
     background: #ebe3d4 !important;
     color: #1c1814 !important;
     border-color: rgb(194 65 12 / 0.28) !important;
+    break-inside: auto;
+  }
+
+  .track-block > header {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    break-after: avoid;
   }
 
   a {
@@ -322,12 +335,6 @@
 
   a[href]::after {
     content: none !important;
-  }
-
-  .track-block > header,
-  .lyrics-sheet {
-    break-inside: avoid;
-    page-break-inside: avoid;
   }
 
   h1,

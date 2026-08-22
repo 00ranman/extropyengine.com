@@ -30,7 +30,7 @@ function Section({
   paragraphs: string[];
 }) {
   return (
-    <section id={id} className="scroll-mt-28 py-8">
+    <section id={id} className="pdf-break scroll-mt-28 py-8">
       <h2 className="font-display text-[clamp(26px,3.2vw,36px)] tracking-[0.04em] text-fg">
         {heading}
       </h2>
@@ -176,7 +176,7 @@ export function ClosingLoopPaper({ print = false }: { print?: boolean }) {
                 <section
                   key={part.id}
                   id={`part-${part.id}`}
-                  className="scroll-mt-28 pt-10"
+                  className="pdf-break scroll-mt-28 pt-10"
                 >
                   <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">
                     Part {part.roman}
@@ -210,7 +210,7 @@ export function ClosingLoopPaper({ print = false }: { print?: boolean }) {
               paragraphs={limitations.paragraphs}
             />
 
-            <section id="sources" className="scroll-mt-28 py-8">
+            <section id="sources" className="pdf-break scroll-mt-28 py-8">
               <h2 className="font-display text-[clamp(26px,3.2vw,36px)] tracking-[0.04em] text-fg">
                 Sources
               </h2>
