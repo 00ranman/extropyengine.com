@@ -236,27 +236,89 @@ Truth ain't a fact, it's a loop that aligned`,
       apple: am("album/inside-the-machine/1876085436?i=1876085437"),
       youtube: yt("onI8jVtXwd0"),
     },
-    lyricsKind: "selected",
-    lyricsNote:
-      "Full public lyric index was not available for this 2026 single at recast. Lines below are from the authorized lyric set used in the July paper and from the artist's public description of the track.",
-    lyrics: `a joke… a sermon
+    lyricsKind: "full",
+    lyrics: `Timeline says punk was always left wing
+Like that settles it
+Like history is a hashtag
+And context fits in a bio
 
-insurance, security, ticket tiers, sponsors
+They point at Green Day
+Say, see, always political
+Convenient amnesia
+Dookie wasn't a manifesto
+It was kids with guitars and jokes
+Before sermons
+Before handlers
+Before the stadium lights
 
-they weren't punished for the message,
-they were punished for succeeding
-you can't win at punk, that's the rule they forget
+They weren't punished for the message
+They were punished for succeeding
+That part always gets skipped
 
-timeline says punk was always left wing…
-convenient amnesia
+Because punk doesn't lose when it's censored
+It loses when it sells
 
-If it stays small, it's ignored.
-If it grows, it's absorbed.
-the machine didn't lose, it learned`,
+You can't win at punk
+That's the rule they forget
+If it works, it breaks
+If it grows, it gets kept
+They call it raging against the machine
+From a sponsored stage
+Teach a whole generation
+That picking a side is a cage
+
+Venues closed their doors
+Not because the songs changed
+Because the math did
+
+Success exposed the contradiction
+Anti-system doesn't scale
+That's not ideology
+That's mechanics
+The moment you become legible
+You become manageable
+Rage Against the Machine
+Was still rage inside the machine
+Label checks cleared
+Tours booked
+Merch printed
+Rebellion with inventory
+
+You didn't overthrow power
+You licensed the feeling
+
+You can't win at punk
+That's the built-in flaw
+If it stays small, it's ignored
+If it grows, it's absorbed
+Now kids think left wing equals rebel
+Because that's what survived
+Not resistance
+Just a market-approved vibe
+
+Punk wasn't left
+Punk wasn't right
+Punk was refusal
+
+And refusal has no future state
+A system that only negates
+Eventually negates itself
+Self-terminating loop
+Mistaken for virtue
+They didn't corrupt punk
+Punk finished itself
+
+So don't tell me what punk “always was”
+You're pointing at what made it out alive
+The machine didn't lose
+It learned
+
+And now rebellion comes pre-installed
+With terms of service`,
     reading: [
-      "The central image is exact: the transformation of a joke into a sermon. The song grounds that transformation in material infrastructure rather than in a morality play about selling out. “Insurance, security, ticket tiers, sponsors” are what a subculture needs once it succeeds, and needing them is what changes it. Failure was never the danger: “they weren't punished for the message, they were punished for succeeding… you can't win at punk, that's the rule they forget.”",
-      "This maps with real precision onto Dick Hebdige's account of subcultural recuperation: oppositional signs converted into mass-produced, manageable commodities. The first paper worried that “the machine didn't lose, it learned” reaches for Guy Debord's spectacle — a general social condition rather than a specific commercial process — and borrows scale the verses had not earned. Read against No One's Lying, the last line is not Debordian inflation. It is the catalog's distributed-causation thesis applied to a scene. The machine does not need to win an argument. It needs to metabolize the form. Learning is the mechanism, not a poetic upgrade.",
-      "The historical claim about punk's retrospective political labeling — “timeline says punk was always left wing… convenient amnesia” — remains a contestable historical claim this paper does not independently verify. The recuperation mechanism does not depend on that claim being settled. It depends on the joke-to-sermon, insurance-and-sponsors language, which the song actually supplies.",
+      "The mechanism is in the inventory, not in a morality play about selling out. “Dookie wasn't a manifesto / it was kids with guitars and jokes / before sermons / before handlers / before the stadium lights.” Then the rule: “they weren't punished for the message / they were punished for succeeding.” Venues didn't close because the songs changed. “Because the math did.” “Label checks cleared / tours booked / merch printed / rebellion with inventory.” That is recuperation as operations, not as a sermon about authenticity.",
+      "This maps onto Dick Hebdige's account of subcultural recuperation: oppositional signs converted into mass-produced, manageable commodities. “The moment you become legible / you become manageable.” “You didn't overthrow power / you licensed the feeling.” The last move is the catalog's distributed-causation thesis applied to a scene, not Debordian inflation: “the machine didn't lose / it learned.” The machine does not need to win an argument. It needs to metabolize the form. Learning is the mechanism. “And now rebellion comes pre-installed / with terms of service.”",
+      "“Timeline says punk was always left wing… convenient amnesia” is still a contestable historical claim this paper does not independently verify. The song does more than slogan it: Green Day, Dookie, handlers, stadium lights, Rage Against the Machine as “rage inside the machine.” The recuperation mechanism does not depend on settling whether punk “always was” left. It depends on the math, the inventory, and the built-in flaw: “if it stays small, it's ignored / if it grows, it's absorbed.” “Punk wasn't left / punk wasn't right / punk was refusal.” Refusal with no future state is a self-terminating loop. That loop closes on the page.",
     ],
   },
   {
