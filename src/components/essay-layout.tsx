@@ -47,7 +47,7 @@ function Block({ block }: { block: EssayBlock }) {
   }
   if (block.type === "ol") {
     return (
-      <ol className="list-decimal space-y-2 pl-5 text-muted">
+      <ol className="my-3 list-decimal space-y-2.5 pl-6 marker:text-primary">
         {block.items.map((item) => (
           <li key={item}>{item}</li>
         ))}
@@ -56,7 +56,7 @@ function Block({ block }: { block: EssayBlock }) {
   }
   if (block.type === "ul") {
     return (
-      <ul className="list-disc space-y-2 pl-5 text-muted">
+      <ul className="my-3 list-disc space-y-2.5 pl-6 marker:text-primary">
         {block.items.map((item) => (
           <li key={item}>{item}</li>
         ))}

@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { X } from "lucide-react";
+import { entryPaths } from "@/content/essays";
 import {
   albums,
   artistLinks,
@@ -13,6 +15,46 @@ import {
   type SuiteApp,
 } from "@/content/site";
 import { Btn, SectionTitle, StatusPill } from "@/components/ui-bits";
+
+export function EnterStrip() {
+  return (
+    <section
+      id="enter"
+      className="border-b border-primary/15 bg-primary/4 px-[8vw] py-10 max-md:px-[6vw] max-md:py-8"
+    >
+      <div className="mx-auto max-w-5xl">
+        <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <p className="text-[11px] tracking-[0.32em] text-primary uppercase">Enter</p>
+            <h2 className="font-display mt-2 text-[clamp(22px,3vw,32px)] tracking-[0.04em] text-fg">
+              Four doors. Pick the glitch.
+            </h2>
+          </div>
+          <Link
+            to="/start"
+            className="text-[11px] tracking-[0.2em] text-dim uppercase hover:text-primary"
+          >
+            All paths →
+          </Link>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {entryPaths.map((path) => (
+            <Link
+              key={path.id}
+              to={path.href}
+              className="block border border-primary/18 bg-bg/40 p-4 transition-colors hover:border-primary"
+            >
+              <div className="mb-2 text-[10px] tracking-[0.24em] text-primary uppercase">
+                {path.id === "A" ? "Money" : path.id === "B" ? "AI" : path.id === "C" ? "Governance" : "Physics"}
+              </div>
+              <p className="font-display text-[15px] leading-snug text-fg">{path.title}</p>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export function BookHero() {
   return (
@@ -358,7 +400,7 @@ export function FollowSection() {
             key={s.href}
             href={s.href}
             target="_blank"
-            rel="noreferrer"
+            rel="me noreferrer"
             className="border border-primary/25 bg-primary/4 px-[22px] py-3 font-mono text-[11px] font-bold tracking-[0.25em] uppercase transition-all hover:border-primary hover:bg-primary hover:text-ink hover:shadow-[0_0_24px_rgb(255_90_31_/_0.4)]"
           >
             {s.label}

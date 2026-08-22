@@ -20,7 +20,7 @@ export const nav = [
 ] as const;
 
 export const startBar = {
-  label: "Start Here",
+  label: "Enter",
   entries: [
     { label: "Money", href: "/start/money" },
     { label: "AI", href: "/start/ai" },
@@ -36,14 +36,18 @@ export const startBar = {
   ],
 } as const;
 
-export const menu = [
-  { heading: null as string | null, href: null as string | null, items: nav },
+export const menu: {
+  heading: string;
+  href: string;
+  items: readonly { label: string; href: string }[];
+}[] = [
   {
-    heading: "Start here",
+    heading: "Enter",
     href: "/start",
     items: [...startBar.entries, ...startBar.extras],
   },
-] as const;
+  { heading: "The site", href: "/", items: nav },
+];
 
 
 export const book = {

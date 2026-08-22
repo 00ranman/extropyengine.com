@@ -6,7 +6,7 @@ export const Route = createFileRoute("/mvt")({ component: Mvt });
 
 function Mvt() {
   return (
-    <EssayLayout backTo="/start" backLabel="Start Here" title="Try It Yourself">
+    <EssayLayout backTo="/start" backLabel="Enter" title="Try It Yourself">
       <p>
         People trust systems they can touch. These exercises are designed to make entropy reduction
         tangible. Each one takes less than an hour. None require any technology. All will change how

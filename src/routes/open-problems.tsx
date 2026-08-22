@@ -7,7 +7,7 @@ export const Route = createFileRoute("/open-problems")({ component: OpenProblems
 function OpenProblems() {
   const sections = [...new Set(openProblems.map((p) => p.section))];
   return (
-    <EssayLayout backTo="/start" backLabel="Start Here" title="Open Problems">
+    <EssayLayout backTo="/start" backLabel="Enter" title="Open Problems">
       <p>
         These are the places where this framework might break. Publishing them is deliberate. A
         system that hides its failure conditions is a religion. One that exposes them is engineering.

@@ -167,6 +167,7 @@ export default defineConfig(({ command, mode }) => {
               { path: "/start/ai" },
               { path: "/start/governance" },
               { path: "/start/physics" },
+              { path: "/papers/closing-the-loop" },
             ],
           }
         : {},

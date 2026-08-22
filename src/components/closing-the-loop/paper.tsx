@@ -214,7 +214,7 @@ export function ClosingLoopPaper({ print = false }: { print?: boolean }) {
               <h2 className="font-display text-[clamp(26px,3.2vw,36px)] tracking-[0.04em] text-fg">
                 Sources
               </h2>
-              <ol className="mt-6 list-decimal space-y-3 pl-5 text-[14px] leading-relaxed text-muted">
+              <ol className="mt-6 list-decimal space-y-3 pl-6 text-[14px] leading-relaxed text-muted marker:text-primary">
                 {sources.map((s) => (
                   <li key={s} className="pl-1">
                     {s}

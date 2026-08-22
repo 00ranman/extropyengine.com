@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import {
   BookHero,
   DocsBanner,
+  EnterStrip,
   FollowSection,
   Manifesto,
   MusicSection,
@@ -28,6 +29,7 @@ function Home() {
 
   return (
     <SiteShell>
+      <EnterStrip />
       <BookHero />
       <MusicSection />
       <Manifesto />

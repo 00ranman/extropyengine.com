@@ -15,8 +15,8 @@ export type Essay = {
 };
 
 export const startIntro = {
-  title: "Start Here",
-  lead: "You don't need to understand the whole system to use it. Pick the door that matches your frustration. The framework will meet you where you are.",
+  title: "Enter",
+  lead: "You don't need to understand the whole system to use it. Four doors. Pick the one that matches the glitch. The framework meets you there.",
 };
 
 export const entryPaths = [

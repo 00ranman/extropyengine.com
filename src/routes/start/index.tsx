@@ -2,7 +2,19 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { EssayLayout } from "@/components/essay-layout";
 import { entryPaths, startIntro } from "@/content/essays";
 
-export const Route = createFileRoute("/start/")({ component: StartHere });
+export const Route = createFileRoute("/start/")({
+  component: StartHere,
+  head: () => ({
+    meta: [
+      { title: "Enter — Extropy Engine" },
+      {
+        name: "description",
+        content:
+          "Four doors into the Extropy Engine: money, AI, governance, and physics. Pick the glitch that matches yours.",
+      },
+    ],
+  }),
+});
 
 function StartHere() {
   return (

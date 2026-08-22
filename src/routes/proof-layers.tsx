@@ -6,7 +6,7 @@ export const Route = createFileRoute("/proof-layers")({ component: ProofLayers }
 
 function ProofLayers() {
   return (
-    <EssayLayout backTo="/start" backLabel="Start Here" title="Proof Layers">
+    <EssayLayout backTo="/start" backLabel="Enter" title="Proof Layers">
       <p>
         Separate what exists from what is theoretical, planned, or speculative. If something here is
         wrong, that's a bug — report it.
