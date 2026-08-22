@@ -109,7 +109,7 @@ export const unclosed = {
   paragraphs: [
     "Blueprint's MKUltra section is checkable and holds. The turn to Little St. James is a pattern hypothesis about a playbook — sex, drugs, film, wire, leverage — not a documented org-chart of institutional continuity. The song's own last move is a set of questions. This paper leaves them as questions. Reading them as a settled lineage would ignite more than the files currently light.",
     "The Real Magic still has no literature match this paper is willing to cite with confidence. Developmental work on age-appropriate disclosure and philosophy of testimony on epistemic paternalism remain the nearest rooms. A future match should be tested against the song's actual distinction — protective narrative that expires versus protective narrative that becomes permanent — not against a cartoon of anti-myth rhetoric.",
-    "And That's… (How) specifies a mechanism. Housing First evidence is stronger for housing stability than for the recognition and agency the song is actually after. The honest reading remains complement, not rival. The loop closes as a proposal. It does not close as an empirical winner against housing-led intervention, because that is not the race the lyric entered.",
+    "And That's… (How) specifies a mechanism. Housing First trials measure days housed among enrolled participants with mental illness, versus usual care. They do not measure — and have not shown — that a roof without signal correction restores a name. They have not ended homelessness as a civic fact. The song's loop closes as a proposal that literature has not run.",
     "Closing the loop, as the catalog uses the phrase, is not the same as winning the argument. It is making the claim traceable enough that someone else can try to break it. This paper is offered on those terms.",
   ],
 };
@@ -136,7 +136,10 @@ export const sources = [
   "Gödel, K., incompleteness, invoked by Coordinates as image rather than as a formal proof.",
   "National Security Archive and the Church Committee record, on MKUltra, Project Artichoke, Operation Midnight Climax.",
   "Public reporting and DOJ document archives on Little St. James investigations and forfeiture proceedings — cited as documented events, not as proof of MKUltra continuity.",
-  "Housing First randomized controlled trial reviews.",
+  "Goering, P., et al., and Aubry, T., et al., At Home/Chez Soi: five-city Canadian RCT of Housing First (scattered-site housing plus ACT/ICM) versus treatment-as-usual for homeless adults with mental illness. Primary outcome: days stably housed among enrolled participants, not population-level end of homelessness.",
+  "Stergiopoulos, V., et al., 2019, Lancet Psychiatry: six-year Toronto follow-up of Chez Soi. Housing stability endured. No significant difference in quality of life, substance-use severity, or community functioning.",
+  "Baxter, A. J., et al., 2019, Journal of Epidemiology & Community Health: systematic review of Housing First RCTs. Large housing-stability gains; unclear short-term impact on health and well-being.",
+  "National Academies of Sciences, Engineering, and Medicine, 2018, Permanent Supportive Housing: insufficient evidence that the model improves health outcomes.",
   "Systems dynamics references on reinforcing feedback loops.",
 ];
 
