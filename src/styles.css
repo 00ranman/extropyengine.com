@@ -218,3 +218,60 @@
     animation: none;
   }
 }
+
+@page {
+  size: letter;
+  margin: 0;
+}
+
+@media print {
+  :root {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  html,
+  body {
+    background: #060606 !important;
+    color: #f3ece1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .pdf-sheet {
+    background: #060606 !important;
+    color: #f3ece1 !important;
+    padding: 0.7in 0.8in 0.85in !important;
+    min-height: 100%;
+  }
+
+  a {
+    color: #ff5a1f !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+  }
+
+  a[href]::after {
+    content: none !important;
+  }
+
+  .track-block > header,
+  .lyrics-sheet {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+}
+

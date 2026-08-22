@@ -48,12 +48,12 @@ function Section({
   );
 }
 
-export function ClosingLoopPaper() {
+export function ClosingLoopPaper({ print = false }: { print?: boolean }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-bg text-fg">
-      <div className="border-b border-primary/12 px-4 py-3 sm:px-6">
+    <div className={print ? "pdf-sheet bg-bg text-fg" : "bg-bg text-fg"}>
+      <div className="no-print border-b border-primary/12 px-4 py-3 sm:px-6">
         <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-3">
           <Link
             to="/"
@@ -108,12 +108,20 @@ export function ClosingLoopPaper() {
         </div>
       ) : null}
 
-      <div className="mx-auto grid max-w-[1280px] grid-cols-1 lg:grid-cols-[240px_minmax(0,1fr)]">
-        <aside className="sticky top-14 hidden max-h-[calc(100vh-3.5rem)] overflow-y-auto border-r border-primary/12 px-6 py-10 lg:block">
-          <Toc />
-        </aside>
+      <div
+        className={
+          print
+            ? "block"
+            : "mx-auto grid max-w-[1280px] grid-cols-1 lg:grid-cols-[240px_minmax(0,1fr)]"
+        }
+      >
+        {print ? null : (
+          <aside className="no-print sticky top-14 hidden max-h-[calc(100vh-3.5rem)] overflow-y-auto border-r border-primary/12 px-6 py-10 lg:block">
+            <Toc />
+          </aside>
+        )}
 
-        <main className="px-4 py-10 sm:px-8 lg:px-14 lg:py-16">
+        <main className={print ? "p-0" : "px-4 py-10 sm:px-8 lg:px-14 lg:py-16"}>
           <div className="mx-auto max-w-[42rem]">
             <header id="cover" className="scroll-mt-28 pb-12">
               <p className="font-mono text-[11px] tracking-[0.28em] text-primary uppercase">

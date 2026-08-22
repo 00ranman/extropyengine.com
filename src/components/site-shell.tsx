@@ -17,8 +17,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="relative min-h-dvh bg-bg text-fg">
-      <div className="bg-veil pointer-events-none fixed inset-0 z-0" />
-      <header className="sticky top-0 z-50 border-b border-primary/12 bg-bg/92 backdrop-blur-md">
+      <div className="bg-veil pointer-events-none fixed inset-0 z-0 no-print" />
+      <header className="no-print sticky top-0 z-50 border-b border-primary/12 bg-bg/92 backdrop-blur-md">
         <div className="relative flex flex-col items-center justify-center px-16 py-5 max-md:px-14 max-md:py-4">
           <Link
             to="/"
@@ -56,7 +56,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         ) : null}
       </header>
 
-      <div className="relative z-10 flex flex-wrap items-center justify-center gap-x-0 gap-y-1 border-b border-primary/30 bg-bg/92 px-[5vw] py-2.5 text-center text-[13px] tracking-[0.15em] uppercase max-[600px]:flex-col max-[600px]:gap-1.5 max-[600px]:px-3 max-[600px]:py-2 max-[600px]:text-[11px] max-[600px]:tracking-[0.08em]">
+      <div className="no-print relative z-10 flex flex-wrap items-center justify-center gap-x-0 gap-y-1 border-b border-primary/30 bg-bg/92 px-[5vw] py-2.5 text-center text-[13px] tracking-[0.15em] uppercase max-[600px]:flex-col max-[600px]:gap-1.5 max-[600px]:px-3 max-[600px]:py-2 max-[600px]:text-[11px] max-[600px]:tracking-[0.08em]">
         <span className="mr-4 text-fg max-[600px]:mr-0 max-[600px]:mb-0.5 max-[600px]:w-full">
           {startBar.label}:
         </span>
@@ -82,7 +82,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         </span>
       </div>
 
-      <nav className="relative z-10 hidden justify-center gap-7 border-b border-primary/12 bg-bg/60 px-[8vw] py-3 md:flex">
+      <nav className="no-print relative z-10 hidden justify-center gap-7 border-b border-primary/12 bg-bg/60 px-[8vw] py-3 md:flex">
         {nav.map((item) => (
           <NavItem
             key={item.href}
@@ -96,7 +96,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
       <div className="relative z-10">{children}</div>
 
-      <footer className="relative z-10 flex flex-wrap justify-between gap-3 border-t border-primary/12 px-[8vw] py-9 text-[11px] tracking-[0.12em] text-faint">
+      <footer className="no-print relative z-10 flex flex-wrap justify-between gap-3 border-t border-primary/12 px-[8vw] py-9 text-[11px] tracking-[0.12em] text-faint">
         <div>
           © {site.year} {site.name.toUpperCase()} — {site.person}
         </div>

@@ -19,6 +19,7 @@ import { Route as SayRouteImport } from './routes/say'
 import { Route as UniversaltimesRouteImport } from './routes/universaltimes'
 import { Route as DocsIndexRouteImport } from './routes/docs/index'
 import { Route as PapersClosingTheLoopRouteImport } from './routes/papers/closing-the-loop'
+import { Route as PrintClosingTheLoopRouteImport } from './routes/print/closing-the-loop'
 import { Route as StartIndexRouteImport } from './routes/start/index'
 import { Route as StartAiRouteImport } from './routes/start/ai'
 import { Route as StartGovernanceRouteImport } from './routes/start/governance'
@@ -76,6 +77,11 @@ const PapersClosingTheLoopRoute = PapersClosingTheLoopRouteImport.update({
   path: '/papers/closing-the-loop',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrintClosingTheLoopRoute = PrintClosingTheLoopRouteImport.update({
+  id: '/print/closing-the-loop',
+  path: '/print/closing-the-loop',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const StartIndexRoute = StartIndexRouteImport.update({
   id: '/start/',
   path: '/start/',
@@ -117,6 +123,7 @@ export interface FileRoutesByFullPath {
   '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
   '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
+  '/print/closing-the-loop': typeof PrintClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
   '/start/governance': typeof StartGovernanceRoute
   '/start/money': typeof StartMoneyRoute
@@ -135,6 +142,7 @@ export interface FileRoutesByTo {
   '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
   '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
+  '/print/closing-the-loop': typeof PrintClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
   '/start/governance': typeof StartGovernanceRoute
   '/start/money': typeof StartMoneyRoute
@@ -154,6 +162,7 @@ export interface FileRoutesById {
   '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
   '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
+  '/print/closing-the-loop': typeof PrintClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
   '/start/governance': typeof StartGovernanceRoute
   '/start/money': typeof StartMoneyRoute
@@ -174,6 +183,7 @@ export interface FileRouteTypes {
     | '/say'
     | '/universaltimes'
     | '/papers/closing-the-loop'
+    | '/print/closing-the-loop'
     | '/start/ai'
     | '/start/governance'
     | '/start/money'
@@ -192,6 +202,7 @@ export interface FileRouteTypes {
     | '/say'
     | '/universaltimes'
     | '/papers/closing-the-loop'
+    | '/print/closing-the-loop'
     | '/start/ai'
     | '/start/governance'
     | '/start/money'
@@ -210,6 +221,7 @@ export interface FileRouteTypes {
     | '/say'
     | '/universaltimes'
     | '/papers/closing-the-loop'
+    | '/print/closing-the-loop'
     | '/start/ai'
     | '/start/governance'
     | '/start/money'
@@ -229,6 +241,7 @@ export interface RootRouteChildren {
   SayRoute: typeof SayRoute
   UniversaltimesRoute: typeof UniversaltimesRoute
   PapersClosingTheLoopRoute: typeof PapersClosingTheLoopRoute
+  PrintClosingTheLoopRoute: typeof PrintClosingTheLoopRoute
   StartAiRoute: typeof StartAiRoute
   StartGovernanceRoute: typeof StartGovernanceRoute
   StartMoneyRoute: typeof StartMoneyRoute
@@ -310,6 +323,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PapersClosingTheLoopRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/print/closing-the-loop': {
+      id: '/print/closing-the-loop'
+      path: '/print/closing-the-loop'
+      fullPath: '/print/closing-the-loop'
+      preLoaderRoute: typeof PrintClosingTheLoopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/start/': {
       id: '/start/'
       path: '/start'
@@ -365,6 +385,7 @@ const rootRouteChildren: RootRouteChildren = {
   SayRoute: SayRoute,
   UniversaltimesRoute: UniversaltimesRoute,
   PapersClosingTheLoopRoute: PapersClosingTheLoopRoute,
+  PrintClosingTheLoopRoute: PrintClosingTheLoopRoute,
   StartAiRoute: StartAiRoute,
   StartGovernanceRoute: StartGovernanceRoute,
   StartMoneyRoute: StartMoneyRoute,

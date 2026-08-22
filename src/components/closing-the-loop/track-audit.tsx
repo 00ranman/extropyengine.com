@@ -6,7 +6,7 @@ export function TrackAudit({ track }: { track: Track }) {
   return (
     <article
       id={track.slug}
-      className="scroll-mt-28 border-t border-primary/12 pt-12 pb-4"
+      className="track-block scroll-mt-28 border-t border-primary/12 pt-12 pb-4"
     >
       <header>
         <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">

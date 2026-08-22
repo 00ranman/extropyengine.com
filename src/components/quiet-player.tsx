@@ -44,7 +44,7 @@ export function QuietPlayer() {
         toggleBed();
         setPlaying(isBedPlaying());
       }}
-      className="fixed right-3 bottom-3 z-50 flex size-11 items-center justify-center border border-primary/25 bg-bg/90 text-sm text-primary backdrop-blur-md hover:border-primary/50"
+      className="no-print fixed right-3 bottom-3 z-50 flex size-11 items-center justify-center border border-primary/25 bg-bg/90 text-sm text-primary backdrop-blur-md hover:border-primary/50"
       aria-label={playing ? "Pause" : "Play"}
     >
       {playing ? "‖" : "▶"}
