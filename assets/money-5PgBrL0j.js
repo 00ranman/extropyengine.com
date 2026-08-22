@@ -1,0 +1,1 @@
+import{b as e}from"./index-D3hjKfyu.js";import{n as t}from"./essay-layout-CB6PeWCJ.js";import{n}from"./essays-C1pOIgpL.js";var r=e();function i(){return(0,r.jsx)(t,{essay:n.money})}export{i as component};

@@ -1,0 +1,1 @@
+import{t as e}from"./paper-MQCawxoq.js";import{b as t}from"./index-D3hjKfyu.js";var n=t();function r(){return(0,n.jsx)(e,{print:!0})}export{r as component};
