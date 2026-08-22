@@ -32,6 +32,7 @@ export const startBar = {
     { label: "Open Problems", href: "/open-problems" },
     { label: "Proof Layers", href: "/proof-layers" },
     { label: "MVT", href: "/mvt" },
+    { label: "Say the names", href: "/say" },
   ],
 } as const;
 

@@ -161,6 +161,7 @@ export default defineConfig(({ command, mode }) => {
               { path: "/proof-layers" },
               { path: "/mvt" },
               { path: "/open-problems" },
+              { path: "/say" },
               { path: "/start" },
               { path: "/start/money" },
               { path: "/start/ai" },

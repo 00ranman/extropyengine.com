@@ -15,6 +15,7 @@ import { Route as LoginRouteImport } from './routes/login'
 import { Route as MvtRouteImport } from './routes/mvt'
 import { Route as OpenProblemsRouteImport } from './routes/open-problems'
 import { Route as ProofLayersRouteImport } from './routes/proof-layers'
+import { Route as SayRouteImport } from './routes/say'
 import { Route as UniversaltimesRouteImport } from './routes/universaltimes'
 import { Route as DocsIndexRouteImport } from './routes/docs/index'
 import { Route as StartIndexRouteImport } from './routes/start/index'
@@ -52,6 +53,11 @@ const OpenProblemsRoute = OpenProblemsRouteImport.update({
 const ProofLayersRoute = ProofLayersRouteImport.update({
   id: '/proof-layers',
   path: '/proof-layers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SayRoute = SayRouteImport.update({
+  id: '/say',
+  path: '/say',
   getParentRoute: () => rootRouteImport,
 } as any)
 const UniversaltimesRoute = UniversaltimesRouteImport.update({
@@ -102,6 +108,7 @@ export interface FileRoutesByFullPath {
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
   '/proof-layers': typeof ProofLayersRoute
+  '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
   '/start/ai': typeof StartAiRoute
   '/start/governance': typeof StartGovernanceRoute
@@ -118,6 +125,7 @@ export interface FileRoutesByTo {
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
   '/proof-layers': typeof ProofLayersRoute
+  '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
   '/start/ai': typeof StartAiRoute
   '/start/governance': typeof StartGovernanceRoute
@@ -135,6 +143,7 @@ export interface FileRoutesById {
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
   '/proof-layers': typeof ProofLayersRoute
+  '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
   '/start/ai': typeof StartAiRoute
   '/start/governance': typeof StartGovernanceRoute
@@ -153,6 +162,7 @@ export interface FileRouteTypes {
     | '/mvt'
     | '/open-problems'
     | '/proof-layers'
+    | '/say'
     | '/universaltimes'
     | '/start/ai'
     | '/start/governance'
@@ -169,6 +179,7 @@ export interface FileRouteTypes {
     | '/mvt'
     | '/open-problems'
     | '/proof-layers'
+    | '/say'
     | '/universaltimes'
     | '/start/ai'
     | '/start/governance'
@@ -185,6 +196,7 @@ export interface FileRouteTypes {
     | '/mvt'
     | '/open-problems'
     | '/proof-layers'
+    | '/say'
     | '/universaltimes'
     | '/start/ai'
     | '/start/governance'
@@ -202,6 +214,7 @@ export interface RootRouteChildren {
   MvtRoute: typeof MvtRoute
   OpenProblemsRoute: typeof OpenProblemsRoute
   ProofLayersRoute: typeof ProofLayersRoute
+  SayRoute: typeof SayRoute
   UniversaltimesRoute: typeof UniversaltimesRoute
   StartAiRoute: typeof StartAiRoute
   StartGovernanceRoute: typeof StartGovernanceRoute
@@ -254,6 +267,13 @@ declare module '@tanstack/react-router' {
       path: '/proof-layers'
       fullPath: '/proof-layers'
       preLoaderRoute: typeof ProofLayersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/say': {
+      id: '/say'
+      path: '/say'
+      fullPath: '/say'
+      preLoaderRoute: typeof SayRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/universaltimes': {
@@ -322,6 +342,7 @@ const rootRouteChildren: RootRouteChildren = {
   MvtRoute: MvtRoute,
   OpenProblemsRoute: OpenProblemsRoute,
   ProofLayersRoute: ProofLayersRoute,
+  SayRoute: SayRoute,
   UniversaltimesRoute: UniversaltimesRoute,
   StartAiRoute: StartAiRoute,
   StartGovernanceRoute: StartGovernanceRoute,

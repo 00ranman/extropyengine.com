@@ -337,7 +337,12 @@ export function FollowSection() {
         I don't run on a schedule. I move when I see the opportunity and bring order to the chaos
         when it matters. No newsletter, no performance. Just follow me on every platform, turn on
         notifications, and you'll catch it when it drops. I'll be more valuable than anything else
-        in your feed. That's not ego — that's just extropy.
+        in your feed. That's not ego — that's just extropy. If talk-to-text writes entropy or
+        lad-narrows,{" "}
+        <a href="/say" className="text-primary hover:underline">
+          teach the phone the names
+        </a>
+        .
       </p>
       <div className="flex flex-wrap justify-center gap-3">
         {socials.map((s) => (
