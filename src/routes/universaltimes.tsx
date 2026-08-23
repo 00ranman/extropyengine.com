@@ -125,7 +125,8 @@ function UniversalTimes() {
             <h2 className="font-display text-xl tracking-[0.06em]">System 2 · Universal Duration</h2>
             <p className="mt-2 max-w-xl text-sm leading-relaxed text-dim">
               Answers “how long?” Powers of the hydrogen-1 period, from a GQ (~0.70 s) out through
-              Epoch, Era, Age, and Eon. Cascaded remainders, live.
+              Epoch, Era, Age, and Eon. Cascaded remainders, live. The bars on the clock are the
+              mouthful: Pulse, Wave, Tide. Count to ten.
             </p>
             <div className="mt-5 space-y-4">
               <ScaleRow
@@ -150,6 +151,79 @@ function UniversalTimes() {
                 }}
               />
             </div>
+          </section>
+
+          <section className="mt-14">
+            <h2 className="font-display text-xl tracking-[0.06em]">How to say it</h2>
+            <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted">
+              Hours are a costume. They are Earth’s spin wearing a duration hat. Ask a Martian for
+              “three hours” and you have already lied — their day is a different length, so their
+              hour is too. A pulse is 10<sup>11</sup> hydrogen flips. That does not care which rock
+              you are standing on.
+            </p>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-dim">
+              Three questions. Three mouths. Mix them and you get 24, 60, and a calendar that thinks
+              it is physics.
+            </p>
+            <ol className="mt-5 space-y-3 text-sm leading-relaxed text-muted">
+              <li>
+                <span className="text-fg">What time is it here?</span> Solar Clock.{" "}
+                <span className="font-mono text-fg">t:7:42:00</span>. Casual: “seven forty-two.”
+                Coordinates. A place on the face.
+              </li>
+              <li>
+                <span className="text-fg">How long will this take?</span> Duration. “About 3 waves.”
+                A length. Same length in the Kuiper belt.
+              </li>
+              <li>
+                <span className="text-fg">When exactly?</span> Quant accumulator. Machines. You
+                almost never say this out loud.
+              </li>
+            </ol>
+
+            <div className="mt-8 overflow-x-auto border border-accent/18">
+              <table className="w-full min-w-[32rem] border-collapse text-left text-sm">
+                <thead>
+                  <tr className="font-mono text-[10px] tracking-[0.16em] text-accent uppercase">
+                    <th className="border-b border-accent/20 px-3 py-2 font-normal">Say</th>
+                    <th className="border-b border-accent/20 px-3 py-2 font-normal">Means</th>
+                    <th className="border-b border-accent/20 px-3 py-2 font-normal">Old habit</th>
+                  </tr>
+                </thead>
+                <tbody className="text-muted">
+                  {[
+                    ["Give me 3 pulses.", "~3.5 min", "“a couple minutes”"],
+                    ["Half a wave.", "~6 min", "“give me five”"],
+                    ["That ran 3 waves.", "~35 min", "“half an hour”"],
+                    ["I need a tide.", "~2 hr", "“a couple hours”"],
+                    ["Back in a spin.", "~20 hr", "“tomorrow-ish”"],
+                    ["2 currents.", "~16 days", "“two weeks”"],
+                    ["A season.", "~81 days", "“a quarter”"],
+                    ["An epoch.", "~2.2 yr", "“a couple years”"],
+                  ].map(([say, means, old]) => (
+                    <tr key={say}>
+                      <td className="border-b border-fg/10 px-3 py-2.5 text-fg">{say}</td>
+                      <td className="border-b border-fg/10 px-3 py-2.5 font-mono text-xs text-accent">
+                        {means}
+                      </td>
+                      <td className="border-b border-fg/10 px-3 py-2.5 text-dim">{old}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <p className="mt-6 max-w-xl text-sm leading-relaxed text-muted">
+              Ten of the smaller word is one of the next. Double it, triple it, say five, say half.
+              There is no “minute” between pulse and wave on purpose — “4 or 5 pulses” covers five
+              minutes, and the gap is 10×, not 60×. GQs are the twitch. Machines count those. You
+              don’t.
+            </p>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-dim">
+              Do not say “I’ll be there in 3 arcs.” Arcs are a place on the clock, like saying “I’ll
+              be there in 3 o’clock.” Meeting <em>at</em> t:7:30. Arrive <em>in</em> 5 pulses. One is
+              a door. The other is a walk.
+            </p>
           </section>
         </div>
 

@@ -147,6 +147,31 @@ export function pad2(n: number) {
   return String(n).padStart(2, "0");
 }
 
+/** Ten of the smaller word is one of the next. Pulse → Wave → Tide → Spin. */
+export function durationBits(date = new Date()) {
+  const unix = date.getTime() / 1000;
+  const pulseSec = Math.pow(10, 11) / HF;
+  const inPulse = unix / pulseSec;
+  const pulseInWave = inPulse % 10;
+  const waveInTide = (inPulse / 10) % 10;
+  const tideInSpin = (inPulse / 100) % 10;
+  return {
+    pulseInWave,
+    waveInTide,
+    tideInSpin,
+    phrase: sayPulses(pulseInWave),
+  };
+}
+
+function sayPulses(n: number) {
+  if (n < 0.2) return "a fresh wave";
+  if (Math.abs(n - 5) < 0.35) return "half a wave";
+  if (n < 1.35) return "a pulse";
+  if (n < 8.4) return `${Math.round(n)} pulses`;
+  if (n < 9.6) return "nearly a wave";
+  return "a wave";
+}
+
 export const HOLIDAYS: Record<number, Record<number, string>> = {
   1: { 1: "New Cycle" },
   3: { 1: "Equinox" },

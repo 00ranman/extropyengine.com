@@ -1,6 +1,7 @@
 import { useEffect, useRef, type PointerEvent } from "react";
 import {
   cycleDay,
+  durationBits,
   durationNow,
   formatQuant,
   pad2,
@@ -82,7 +83,7 @@ function copyFor(key: string, live: Live): TipCopy | null {
       return {
         title: "Pulse",
         value: live.pulse.toFixed(3).replace(/^0/, "") || ".000",
-        note: "Duration. ~70 s of hydrogen periods. Same length on every planet.",
+        note: "Duration. ~70 s. Ten of these is a wave. Same length on every planet.",
       };
     case "season":
       return {
@@ -137,6 +138,9 @@ export function UtClock() {
   const stampRef = useRef<HTMLSpanElement>(null);
   const qReadRef = useRef<HTMLSpanElement>(null);
   const pulseReadRef = useRef<HTMLDivElement>(null);
+  const sayRef = useRef<HTMLSpanElement>(null);
+  const barRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const numRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const stageRef = useRef<HTMLDivElement>(null);
   const tipRef = useRef<HTMLDivElement>(null);
   const tipTitle = useRef<HTMLSpanElement>(null);
@@ -242,6 +246,15 @@ export function UtClock() {
       if (pulseReadRef.current) {
         pulseReadRef.current.textContent = `PULSE ${(pulse?.frac ?? 0).toFixed(3).slice(1)}`;
       }
+      const bits = durationBits(now);
+      if (sayRef.current) sayRef.current.textContent = bits.phrase;
+      const fills = [bits.pulseInWave, bits.waveInTide, bits.tideInSpin];
+      fills.forEach((n, i) => {
+        const bar = barRefs.current[i];
+        const num = numRefs.current[i];
+        if (bar) bar.style.width = `${Math.min(100, n * 10)}%`;
+        if (num) num.textContent = n.toFixed(1);
+      });
       if (tipKey.current) paintTip();
 
       raf = requestAnimationFrame(frame);
@@ -430,6 +443,44 @@ export function UtClock() {
         <span className="ut-planet">P:EARTH</span>
       </div>
       <div ref={pulseReadRef} className="ut-pulse-read" />
+
+      <div className="ut-bits">
+        <p className="ut-bits-say">
+          Say it: “<span ref={sayRef}>—</span>”
+        </p>
+        {(
+          [
+            ["Pulse → Wave", "~70 s  ·  ten pulses is a wave"],
+            ["Wave → Tide", "~12 min  ·  ten waves is a tide"],
+            ["Tide → Spin", "~2 hr  ·  ten tides is a spin"],
+          ] as const
+        ).map(([label, hint], i) => (
+          <div key={label} className="ut-bit">
+            <div className="ut-bit-meta">
+              <span>{label}</span>
+              <span ref={(el) => { numRefs.current[i] = el; }} className="ut-bit-n">
+                0.0
+              </span>
+            </div>
+            <div className="ut-bit-track" aria-hidden>
+              {Array.from({ length: 10 }, (_, k) => (
+                <span key={k} className="ut-bit-cell" />
+              ))}
+              <div
+                ref={(el) => {
+                  barRefs.current[i] = el;
+                }}
+                className="ut-bit-fill"
+              />
+            </div>
+            <p className="ut-bit-hint">{hint}</p>
+          </div>
+        ))}
+        <p className="ut-bits-foot">
+          Half is half. Five is halfway to the next word. You already know how to count to ten.
+        </p>
+      </div>
+
       <div className="mt-3 flex flex-wrap justify-center gap-x-5 gap-y-1 text-[10px] tracking-[0.18em] uppercase text-dim">
         <span>Silver · Loop / Arc / Tick</span>
         <span className="ut-gold-text">Gold · Pulse / Quant</span>
