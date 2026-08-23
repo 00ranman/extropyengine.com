@@ -2,7 +2,6 @@ import { parts } from "@/content/closing-the-loop/essays";
 import { tracks } from "@/content/closing-the-loop/tracks";
 
 const front = [
-  { href: "#preface", label: "Preface — Coordinates" },
   { href: "#how-to-listen", label: "How to listen" },
   { href: "#abstract", label: "Abstract" },
   { href: "#method", label: "Method" },

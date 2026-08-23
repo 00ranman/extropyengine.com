@@ -10,7 +10,6 @@ import {
   meta,
   method,
   parts,
-  preface,
   sources,
   systemEssay,
   unclosed,
@@ -154,26 +153,9 @@ export function ClosingLoopPaper({ print = false }: { print?: boolean }) {
             </header>
 
             <Section
-              id="preface"
-              heading={preface.heading}
-              paragraphs={preface.paragraphs}
-            />
-            {!print ? (
-              <div className="no-print -mt-2 mb-4">
-                <ListenLinks
-                  links={tracks.find((t) => t.slug === "coordinates")!.links}
-                  local="/audio/coordinates.mp3"
-                />
-              </div>
-            ) : null}
-            <Section
               id="how-to-listen"
               heading={howToListen.heading}
-              paragraphs={
-                print
-                  ? howToListen.paragraphs.filter((p) => !p.includes("Play here"))
-                  : howToListen.paragraphs
-              }
+              paragraphs={howToListen.paragraphs}
             />
             <Section
               id="abstract"

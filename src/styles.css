@@ -359,6 +359,16 @@
     display: none !important;
   }
 
+  .listen-btn {
+    border: none !important;
+    background: none !important;
+    padding: 0 !important;
+    color: #c2410c !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+    font-size: 11px !important;
+  }
+
   .pdf-sheet {
     background: #f4efe6 !important;
     color: #1c1814 !important;

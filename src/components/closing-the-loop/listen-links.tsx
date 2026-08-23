@@ -2,6 +2,12 @@ import { useEffect, useState } from "react";
 import type { ListenLinks as Links } from "@/content/closing-the-loop/types";
 import { getBed, isPlayingPath, toggleSrc } from "@/lib/audio-bed";
 
+const services: { key: keyof Links; label: string }[] = [
+  { key: "spotify", label: "Spotify" },
+  { key: "apple", label: "Apple Music" },
+  { key: "youtube", label: "YouTube Music" },
+];
+
 export function ListenLinks({
   links,
   local,
@@ -30,56 +36,30 @@ export function ListenLinks({
   }, [local]);
 
   return (
-    <p
-      className={
-        compact
-          ? "font-mono text-sm text-dim"
-          : "mt-3 font-mono text-[13px] tracking-[0.08em] text-dim"
-      }
-    >
+    <div className={compact ? "mt-2 flex flex-wrap items-center gap-2" : "mt-4 flex flex-wrap items-center gap-2"}>
       {!compact && (
-        <span className="mr-3 text-[10px] font-bold tracking-[0.22em] text-accent uppercase">
+        <span className="mr-1 font-mono text-[10px] font-bold tracking-[0.22em] text-accent uppercase">
           Listen
         </span>
       )}
+      {services.map((s) => (
+        <a
+          key={s.key}
+          href={links[s.key]}
+          className="listen-btn inline-flex items-center border border-primary/35 px-3 py-1.5 font-mono text-[11px] tracking-[0.12em] text-primary uppercase transition-colors hover:border-primary hover:bg-primary hover:text-ink"
+        >
+          {s.label}
+        </a>
+      ))}
       {local ? (
-        <span className="no-print">
-          <button
-            type="button"
-            className="play-here text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
-            onClick={() => toggleSrc(local, false)}
-          >
-            {here ? "Pause" : "Play here"}
-          </button>
-          <span className="mx-2 text-faint" aria-hidden>
-            ·
-          </span>
-        </span>
+        <button
+          type="button"
+          className="play-here no-print inline-flex items-center border border-primary bg-primary/15 px-5 py-2.5 font-mono text-[13px] font-bold tracking-[0.16em] text-primary uppercase transition-colors hover:bg-primary hover:text-ink"
+          onClick={() => toggleSrc(local, false)}
+        >
+          {here ? "Pause" : "Play here"}
+        </button>
       ) : null}
-      <a
-        className="text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
-        href={links.spotify}
-      >
-        Spotify
-      </a>
-      <span className="mx-2 text-faint" aria-hidden>
-        ·
-      </span>
-      <a
-        className="text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
-        href={links.apple}
-      >
-        Apple Music
-      </a>
-      <span className="mx-2 text-faint" aria-hidden>
-        ·
-      </span>
-      <a
-        className="text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
-        href={links.youtube}
-      >
-        YouTube Music
-      </a>
-    </p>
+    </div>
   );
 }
