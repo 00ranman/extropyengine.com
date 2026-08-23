@@ -13,14 +13,13 @@ export function QuietPlayer() {
 
     const onGesture = (e: Event) => {
       if (userPaused) return;
-      if ((e.target as HTMLElement | null)?.closest?.("[data-quiet-toggle]")) return;
+      if ((e.target as HTMLElement | null)?.closest?.("[data-quiet-toggle], .play-here")) return;
       startBed();
     };
 
     el.addEventListener("play", sync);
     el.addEventListener("pause", sync);
     el.addEventListener("ended", sync);
-    el.addEventListener("canplay", startBed);
     window.addEventListener("pointerdown", onGesture, true);
     window.addEventListener("keydown", onGesture, true);
     window.addEventListener("touchstart", onGesture, true);
@@ -29,7 +28,6 @@ export function QuietPlayer() {
       el.removeEventListener("play", sync);
       el.removeEventListener("pause", sync);
       el.removeEventListener("ended", sync);
-      el.removeEventListener("canplay", startBed);
       window.removeEventListener("pointerdown", onGesture, true);
       window.removeEventListener("keydown", onGesture, true);
       window.removeEventListener("touchstart", onGesture, true);
