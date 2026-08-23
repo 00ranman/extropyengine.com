@@ -29,7 +29,7 @@ export function TrackAudit({ track }: { track: Track }) {
           <p className="mt-3 font-mono text-[10px] tracking-[0.16em] text-accent uppercase">
             {track.loopLabel}
           </p>
-          <ListenLinks links={track.links} />
+          <ListenLinks links={track.links} local={`/audio/${track.slug}.mp3`} />
         </header>
 
         <LyricsBlock track={track} />

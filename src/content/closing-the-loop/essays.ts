@@ -8,11 +8,21 @@ export const meta = {
   predecessorDate: "26 July 2026",
 };
 
+export const preface = {
+  heading: "Preface — Coordinates, or how to read this map",
+  paragraphs: [
+    "This paper keeps quoting Coordinates because that song is the key, not a side thesis. “It's the map behind the mask.” A map is a tool. It is not the ground. Most systems this catalog looks at fail the moment they forget that distinction and start selling the diagram as the territory. This audit is a map of a catalog of maps. It admits that up front.",
+    "Coordinates states the reading rule in one line: “Contradiction ain't the bug, it's the breadcrumb trail in the mud.” If a later section holds two temperatures at once, that is not the paper losing control. That is the catalog doing what this song says catalogs do when they are telling the truth. “Not broken. Just boundary-aware.” The observer is inside the system being described. So is this paper. So is the person who wrote the songs. So is the person reading.",
+    "The full lyric sheet and the track audit live in Part V, where identity under recursion is the job. They are not moved here. This preface is only the lens: treat what follows as a map, argue with it, and do not promote it into a reality it did not claim to be.",
+  ],
+};
+
 export const howToListen = {
   heading: "How to listen while you read",
   paragraphs: [
     "This paper is written to be argued with, which means the songs should be available, not summarized out of existence. Every track section has a Listen line. The words Spotify, Apple Music, and YouTube Music are links — in this page and in the PDF. Click the service you use and the corresponding track should open.",
-    "Read the lyric sheet first if you want the claim in the author's own words. Then read the audit. The lyrics are set in a different type so they stay distinct from the argument built on top of them. Nothing here is a substitute for the recording.",
+    "On this site there is one more word: Play here. It starts that track in the same corner player already on the page. No title card. No now-playing stack. Pause is the same button. Read the lyric sheet with the recording if you want the claim in the author's own words, then read the audit.",
+    "The lyrics are set in a different type so they stay distinct from the argument built on top of them. Nothing here is a substitute for the recording.",
   ],
 };
 

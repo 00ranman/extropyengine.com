@@ -1,6 +1,7 @@
-const SRC = "/audio/evolution-not-revolution.mp3";
+export const BED_SRC = "/audio/irrelevance-is-the-killshot.mp3";
 export const BED_VOLUME = 0.18;
 const TIME_KEY = "ee-bed-t";
+const SRC_KEY = "ee-audio-src";
 const PAUSE_KEY = "ee-bed-paused";
 
 let audio: HTMLAudioElement | null = null;
@@ -18,24 +19,40 @@ function fadeVolume(el: HTMLAudioElement, to: number, ms: number) {
   requestAnimationFrame(tick);
 }
 
+function pathOf(el: HTMLAudioElement) {
+  try {
+    return new URL(el.currentSrc || el.src, window.location.origin).pathname;
+  } catch {
+    return el.getAttribute("data-src") || BED_SRC;
+  }
+}
+
 function saveTime() {
   if (!audio || typeof sessionStorage === "undefined") return;
   sessionStorage.setItem(TIME_KEY, String(audio.currentTime));
+  sessionStorage.setItem(SRC_KEY, pathOf(audio));
+}
+
+function isBedPath(src: string) {
+  return src.endsWith("irrelevance-is-the-killshot.mp3") || src.endsWith("evolution-not-revolution.mp3");
 }
 
 export function getBed() {
   if (typeof window === "undefined") return null;
   if (!audio) {
-    audio = new Audio(SRC);
-    audio.preload = "auto";
-    audio.setAttribute("playsinline", "");
-    audio.loop = true;
-    audio.volume = 0;
+    let initial = BED_SRC;
     try {
       userPaused = sessionStorage.getItem(PAUSE_KEY) === "1";
+      initial = sessionStorage.getItem(SRC_KEY) || BED_SRC;
     } catch {
       /* ignore */
     }
+    audio = new Audio(initial);
+    audio.preload = "auto";
+    audio.setAttribute("playsinline", "");
+    audio.setAttribute("data-src", initial);
+    audio.loop = isBedPath(initial);
+    audio.volume = 0;
     const restore = () => {
       try {
         const t = Number(sessionStorage.getItem(TIME_KEY) || 0);
@@ -48,6 +65,10 @@ export function getBed() {
     };
     audio.addEventListener("loadedmetadata", restore);
     audio.addEventListener("timeupdate", saveTime);
+    audio.addEventListener("ended", () => {
+      if (!audio || isBedPath(pathOf(audio))) return;
+      playSrc(BED_SRC, true);
+    });
   }
   return audio;
 }
@@ -67,6 +88,49 @@ export function startBed() {
   }).catch(() => {
     /* wait for a gesture */
   });
+}
+
+export function playSrc(src: string, loop = false) {
+  const el = getBed();
+  if (!el) return;
+  userPaused = false;
+  try {
+    sessionStorage.setItem(PAUSE_KEY, "0");
+    sessionStorage.setItem(SRC_KEY, src);
+  } catch {
+    /* ignore */
+  }
+  const current = pathOf(el);
+  if (current !== src) {
+    fadedIn = false;
+    el.loop = loop;
+    el.src = src;
+    el.setAttribute("data-src", src);
+    try {
+      sessionStorage.removeItem(TIME_KEY);
+    } catch {
+      /* ignore */
+    }
+  } else {
+    el.loop = loop;
+  }
+  el.volume = 0;
+  void el.play().then(() => {
+    fadeVolume(el, BED_VOLUME, 1600);
+    fadedIn = true;
+  }).catch(() => {
+    /* missing file or autoplay block */
+  });
+}
+
+export function toggleSrc(src: string, loop = false) {
+  const el = getBed();
+  if (!el) return;
+  if (!el.paused && pathOf(el) === src) {
+    toggleBed();
+    return;
+  }
+  playSrc(src, loop);
 }
 
 export function toggleBed() {
@@ -101,4 +165,8 @@ export function toggleBed() {
 
 export function isBedPlaying() {
   return Boolean(audio && !audio.paused);
+}
+
+export function isPlayingPath(src: string) {
+  return Boolean(audio && !audio.paused && pathOf(audio) === src);
 }

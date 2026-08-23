@@ -1,12 +1,34 @@
+import { useEffect, useState } from "react";
 import type { ListenLinks as Links } from "@/content/closing-the-loop/types";
+import { getBed, isPlayingPath, toggleSrc } from "@/lib/audio-bed";
 
 export function ListenLinks({
   links,
+  local,
   compact = false,
 }: {
   links: Links;
+  local?: string;
   compact?: boolean;
 }) {
+  const [here, setHere] = useState(false);
+
+  useEffect(() => {
+    if (!local) return;
+    const el = getBed();
+    if (!el) return;
+    const sync = () => setHere(isPlayingPath(local));
+    sync();
+    el.addEventListener("play", sync);
+    el.addEventListener("pause", sync);
+    el.addEventListener("ended", sync);
+    return () => {
+      el.removeEventListener("play", sync);
+      el.removeEventListener("pause", sync);
+      el.removeEventListener("ended", sync);
+    };
+  }, [local]);
+
   return (
     <p
       className={
@@ -20,6 +42,20 @@ export function ListenLinks({
           Listen
         </span>
       )}
+      {local ? (
+        <span className="no-print">
+          <button
+            type="button"
+            className="play-here text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+            onClick={() => toggleSrc(local, false)}
+          >
+            {here ? "Pause" : "Play here"}
+          </button>
+          <span className="mx-2 text-faint" aria-hidden>
+            ·
+          </span>
+        </span>
+      ) : null}
       <a
         className="text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
         href={links.spotify}
