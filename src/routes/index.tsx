@@ -8,7 +8,7 @@ import {
   Manifesto,
   MusicSection,
   PapersSection,
-  SuiteSection,
+  EngineSection,
 } from "@/components/home-sections";
 import { SiteShell } from "@/components/site-shell";
 
@@ -34,7 +34,7 @@ function Home() {
       <MusicSection />
       <Manifesto />
       <PapersSection />
-      <SuiteSection />
+      <EngineSection />
       <FollowSection />
       <DocsBanner />
     </SiteShell>

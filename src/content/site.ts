@@ -14,7 +14,7 @@ export const nav = [
   { label: "The Book", href: "/#book" },
   { label: "Music", href: "/#music" },
   { label: "Papers", href: "/#papers" },
-  { label: "Suite", href: "/#suite" },
+  { label: "Engine", href: "/#engine" },
   { label: "Connect", href: "/#follow" },
   { label: "Universal Times", href: "/universaltimes" },
 ] as const;
@@ -400,134 +400,81 @@ export const earlierEditions: Paper[] = [
 
 export type AppStatus = "live" | "dev" | "concept";
 
-export type SuiteApp = {
-  name: string;
-  status: AppStatus;
-  tag: string;
-  blurb: string;
-  body: string;
-  repo?: string;
-};
+export const engineViews = {
+  consumer: {
+    title: "What a person sees",
+    kicker: "LocalFlow",
+    lines: [
+      "Need a ride, a grocery run, a thing done. Post it.",
+      "Someone nearby takes it. They do the work.",
+      "You tap done. That’s the whole app.",
+      "No XP. No DAG. No validator class. Confirmation is the receipt.",
+    ],
+  },
+  merchant: {
+    title: "What a shop sees",
+    kicker: "EP tab",
+    lines: [
+      "A regular comes in. Their standing is a number the till already knows.",
+      "EP settles the loyalty slice: EP = XP × L. Not a coin they bought.",
+      "No fiat on-ramp. The protocol does not cash out to dollars.",
+      "The merchant never has to say “entropy.” They see a tab.",
+    ],
+  },
+} as const;
 
-export const suite: SuiteApp[] = [
+export const engineLoop = [
+  { code: "OPEN", note: "Task posted. Vertex on the DAG with causal parents." },
+  { code: "CLOSED", note: "Two-party confirm. Provisional XP mints. 30-day window starts." },
+  { code: "SETTLED", note: "Nobody disputes. Mint holds. Reputation moves a little." },
+  { code: "BURNED", note: "Dispute holds. Provisional XP is destroyed. That’s the slash." },
+] as const;
+
+export const engineTokens = [
+  { t: "XP", d: "Minted on verified ΔS > 0. Non-transferable. You cannot buy it." },
+  { t: "EP", d: "Merchant settlement. XP × loyalty. Burns when spent." },
+  { t: "IT", d: "Governance weight. Decays ~5%/month if you stop showing up." },
+  { t: "CT / CAT / DT", d: "Standing, skill, domain. Separate so influence cannot be purchased with XP." },
+] as const;
+
+export const engineGit = [
   {
-    name: "Extropy Engine",
-    status: "live",
-    tag: "Core Protocol",
-    blurb: "The root. Where verified entropy reduction becomes the sole basis of value.",
-    body: "XP = R × F × ΔS_bₑ × (w · E) × min(α_max, max(1, Tₛ / T_floor)). F is Frequency of Decay. Falsifiability is script-F in V(Q), not a mint factor. Written in TypeScript. MIT licensed.",
-    repo: "https://github.com/00ranman/extropy-engine",
+    status: "live" as const,
+    name: "Protocol kernel",
+    note: "xp-formula, loop-ledger, dag-substrate, xp-mint. Happy path closes and settles. Docker Compose on the repo.",
+    href: "https://github.com/00ranman/extropy-engine",
   },
   {
+    status: "dev" as const,
     name: "LocalFlow",
-    status: "dev",
-    tag: "Bootstrap · DFAO",
-    blurb: "Free local rides and errands. Confirmation is the validator.",
-    body: "The bootstrap. Post a ride, a grocery run, a task. Someone nearby does it. You confirm. No platform fee, no surge. Users never see XP or DAG — it looks like matchmaking. Underneath, two-party confirmation is the loop: LOOPOPEN → LOOPCLOSE → provisional XP, confirmed after 30 days if nobody disputes. First validators are just people doing the work. Remaining problem is density in a zone.",
-    repo: "https://github.com/00ranman/extropy-engine/tree/main/packages/localflow",
+    note: "Bootstrap DFAO. Rides and errands. Confirmation is the validator. Density in a zone is still the remaining problem.",
+    href: "https://github.com/00ranman/extropy-engine/tree/main/packages/localflow",
   },
   {
-    name: "XP-Net",
-    status: "dev",
-    tag: "Layer 1 Protocol",
-    blurb: "DAG-based Layer 1 with Extropy Engine integration for entropy-anchored governance.",
-    body: "Physics-based DAG Layer 1 protocol where consensus weight derives directly from verified entropy reduction. No proof-of-work, no proof-of-stake—proof-of-extropy. Integrates natively with the XP formula for on-chain governance.",
-    repo: "https://github.com/00ranman/xp-net",
+    status: "dev" as const,
+    name: "Node handshake",
+    note: "Sandbox: VPS ↔ laptop. Hello, capabilities, DAG replay, heartbeat. HTTPS + signatures, not production P2P.",
+    href: "https://github.com/00ranman/extropy-engine/tree/main/packages/node-handshake",
   },
   {
-    name: "XP-DAG-Mesh",
-    status: "dev",
-    tag: "Layer 1 Protocol",
-    blurb: "Physics-anchored DAG with entropy-weighted consensus. No blocks. Thermodynamic validation.",
-    body: "The mesh layer. A blockless directed acyclic graph where every transaction is validated thermodynamically. Nodes earn weight by provable entropy reduction, not hashrate or stake. Designed for civilisation-scale throughput.",
-    repo: "https://github.com/00ranman/xp-dag-mesh",
-  },
-  {
+    status: "dev" as const,
     name: "Universal Times",
-    status: "dev",
-    tag: "Temporal Infrastructure",
-    blurb: "Hydrogen-anchored dual-system timekeeping for multi-planetary coordination.",
-    body: "Universal Times v4.0. Replaces the calendar with a hydrogen-decay-anchored temporal DAG. Two parallel clocks: one for Earth-local civic scheduling, one for physics-absolute coordination across planets. Written in Rust.",
-    repo: "https://github.com/00ranman/xp-timekeeping",
+    note: "Hydrogen-anchored clocks. Spec v4.2 is public. temporal-service in the monorepo. Face on this site.",
+    href: "/universaltimes",
   },
   {
-    name: "Master Control Hub",
-    status: "dev",
-    tag: "Ecosystem Orchestration",
-    blurb: "Unified orchestration platform for physics-based civilization coordination.",
-    body: "The dashboard that binds the constellation. Routes XP flows between all suite apps, visualises entropy reduction in real time, manages governance proposals, and coordinates cross-app state. The cockpit of the Extropy Engine.",
-    repo: "https://github.com/00ranman/extropy-master-control-hub",
+    status: "concept" as const,
+    name: "DFAO registry",
+    note: "MICRO (2–7 people) up. Specified. Implementation incremental. A task board with confirmation is already a DFAO.",
+    href: "https://github.com/00ranman/extropy-engine/tree/main/packages/dfao-registry",
   },
   {
-    name: "HomeFlow",
-    status: "dev",
-    tag: "Household Optimization",
-    blurb: "Physics-based household coordination. From toilet paper to q-tips.",
-    body: "Complete household coordination system that treats your home as a thermodynamic system. Tracks consumption rates, optimises restocking, coordinates chores via entropy-weighted task assignment. Proof that the framework scales down to daily life.",
-    repo: "https://github.com/00ranman/homeflow",
+    status: "concept" as const,
+    name: "Node kit",
+    note: "Prototype: modular box — compute, signed local log, optional sensor. Plug in. Not for sale. For people who should not have to run Docker.",
+    href: "https://github.com/00ranman/extropy-engine/blob/main/docs/VPS_NODE.md",
   },
-  {
-    name: "LevelUp Academy",
-    status: "dev",
-    tag: "Adaptive Learning",
-    blurb: "Physics-based adaptive learning with entropy reduction rewards and skill progression.",
-    body: "An education platform where learning is measured by verified entropy reduction—not seat time. Adaptive difficulty, XP-weighted skill trees, and real-time feedback loops. Gamified not for dopamine but for actual demonstrated competence.",
-    repo: "https://github.com/00ranman/levelup-academy",
-  },
-  {
-    name: "Extropialingo",
-    status: "dev",
-    tag: "Language Learning",
-    blurb: "Gamified Extropian language learning with physics-based XP rewards.",
-    body: "Language acquisition rebuilt on physics. Lessons generate XP through verified entropy reduction in comprehension and production. Tracks fluency as a thermodynamic curve, not a streak counter. Revolutionary gamification that actually measures learning.",
-    repo: "https://github.com/00ranman/extropialingo",
-  },
-  {
-    name: "SignalFlow",
-    status: "dev",
-    tag: "AI Task Management",
-    blurb: "AI-enhanced task management with an invisible validation mesh. The internet as truth engine.",
-    body: "Task management meets epistemic infrastructure. An invisible validation mesh sits behind every workflow, scoring signal quality and routing attention to highest-entropy-reduction actions. AI-enhanced, physics-grounded, designed to transform the internet into a truth engine.",
-    repo: "https://github.com/00ranman/signalflow",
-  },
-  {
-    name: "Emergence Detector",
-    status: "dev",
-    tag: "Hardware · ESP32",
-    blurb: "ESP32 device detecting emergent patterns in environmental data via LEDs and web dashboard.",
-    body: "Hardware meets emergence theory. An ESP32 microcontroller that samples environmental data—temperature, humidity, light, sound—detects emergent patterns in real time, and visualises them through dynamic LED patterns and a companion web dashboard.",
-    repo: "https://github.com/00ranman/esp32-emergence-detector",
-  },
-  {
-    name: "AcademicXP",
-    status: "concept",
-    tag: "Peer Review Platform",
-    blurb: "Peer review rebuilt on physics-based evaluation metrics.",
-    body: "A platform where academic peer review is scored by the XP formula. Reviewer weight comes from verified entropy reduction in their own published work. Eliminates credential gatekeeping. Rewards rigorous critique. Paper quality measured thermodynamically.",
-  },
-  {
-    name: "DFAO Governance",
-    status: "concept",
-    tag: "Decentralized Organization",
-    blurb: "Decentralized Feedback-Aware Organization. Governance that adapts.",
-    body: "The organisational layer. A decentralised feedback-aware organisation where every governance decision is weighted by the proposer’s verified entropy reduction. Adaptive goal evolution. Convergent validation. No politicians—just physics.",
-  },
-  {
-    name: "Doctrine of Z",
-    status: "concept",
-    tag: "Philosophy · Framework",
-    blurb: "The blueprint for emergent coherence.",
-    body: "A philosophical operating system. The Doctrine of Z maps the territory between chaos and order, providing a formal grammar for how coherent systems emerge from noise. Not a religion—a recursive instruction set for reality.",
-  },
-  {
-    name: "Whiteroom.exe",
-    status: "dev",
-    tag: "Stealth",
-    blurb: "Details classified. Currently in build.",
-    body: "Whiteroom.exe is under active development. Specifications are not yet public. Watch the GitHub for updates.",
-    repo: "https://github.com/00ranman/whiteroom-exe",
-  },
-];
+] as const;
 
 export const socials = [
   { label: "YouTube", href: "https://www.youtube.com/@Lladnaros" },

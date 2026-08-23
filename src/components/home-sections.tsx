@@ -1,18 +1,19 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { X } from "lucide-react";
 import { entryPaths } from "@/content/essays";
 import {
   albums,
   artistLinks,
   book,
   earlierEditions,
+  engineGit,
+  engineLoop,
+  engineTokens,
+  engineViews,
   papers,
   singles,
   socials,
-  suite,
   type Paper,
-  type SuiteApp,
 } from "@/content/site";
 import { Btn, SectionTitle, StatusPill } from "@/components/ui-bits";
 
@@ -301,75 +302,126 @@ export function PapersSection() {
   );
 }
 
-export function SuiteSection() {
-  const [active, setActive] = useState<SuiteApp | null>(null);
-
+export function EngineSection() {
   return (
-    <section id="suite" className="border-t border-primary/12 px-[8vw] py-[90px]">
-      <SectionTitle className="mb-3 text-center">The App Suite</SectionTitle>
+    <section id="engine" className="border-t border-primary/12 px-[8vw] py-[90px] max-md:px-[6vw]">
+      <span id="suite" className="sr-only" />
+      <SectionTitle className="mb-3 text-center">How it runs</SectionTitle>
       <p className="mx-auto mb-12 max-w-xl text-center text-[15px] leading-relaxed text-muted">
-        The Extropy Engine is not one app — it is a constellation. Some are shipped. Some are in
-        build. Some are still on the napkin. Hover any tile to feel it. Click to open the spec.
+        Not a pile of apps. One loop. Two faces. A DAG under the floor. Archived experiments are
+        off this page on purpose.
       </p>
-      <div className="mx-auto grid max-w-[1200px] grid-cols-2 gap-3.5 md:grid-cols-3 xl:grid-cols-4">
-        {suite.map((app) => (
-          <button
-            key={app.name}
-            type="button"
-            onClick={() => setActive(app)}
-            onMouseMove={(e) => {
-              const r = e.currentTarget.getBoundingClientRect();
-              e.currentTarget.style.setProperty("--mx", `${((e.clientX - r.left) / r.width) * 100}%`);
-              e.currentTarget.style.setProperty("--my", `${((e.clientY - r.top) / r.height) * 100}%`);
-            }}
-            className="group relative overflow-hidden rounded-md border border-primary/14 bg-linear-to-br from-[rgb(28_18_12_/_0.55)] to-[rgb(12_8_6_/_0.65)] p-5 text-left transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/55 hover:shadow-[0_16px_40px_rgb(255_90_31_/_0.14)]"
-          >
-            <span className="tile-glow pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-400 group-hover:opacity-100" />
-            <StatusPill status={app.status} className="mb-3" />
-            <div className="font-display mb-2 text-[17px] leading-snug tracking-[0.03em]">{app.name}</div>
-            <p className="text-xs leading-relaxed text-[#a89e8e]">{app.blurb}</p>
-          </button>
-        ))}
+
+      <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2">
+        {(["consumer", "merchant"] as const).map((key) => {
+          const view = engineViews[key];
+          return (
+            <div key={key} className="border border-primary/16 bg-surface/40 px-5 py-6">
+              <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">{view.kicker}</p>
+              <h3 className="font-display mt-2 text-xl tracking-[0.04em]">{view.title}</h3>
+              <ol className="mt-4 space-y-3 text-sm leading-relaxed text-muted">
+                {view.lines.map((line, i) => (
+                  <li key={line} className="flex gap-3">
+                    <span className="font-mono text-[11px] text-faint">{String(i + 1).padStart(2, "0")}</span>
+                    <span>{line}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          );
+        })}
       </div>
 
-      {active ? (
-        <div className="fixed inset-0 z-100 flex items-center justify-center p-5">
-          <button
-            type="button"
-            className="absolute inset-0 bg-[rgb(6_4_2_/_0.78)] backdrop-blur-md"
-            aria-label="Close"
-            onClick={() => setActive(null)}
-          />
-          <div
-            role="dialog"
-            aria-modal="true"
-            className="relative max-h-[85vh] w-full max-w-[560px] overflow-y-auto rounded-[10px] border border-primary/32 bg-linear-to-br from-[rgb(28_20_14_/_0.96)] to-[rgb(14_10_8_/_0.98)] px-9 py-10 shadow-[0_30px_80px_rgb(0_0_0_/_0.6)]"
-          >
-            <button
-              type="button"
-              className="absolute top-3.5 right-4 text-[#a89e8e] hover:text-primary"
-              aria-label="Close"
-              onClick={() => setActive(null)}
-            >
-              <X className="size-7" />
-            </button>
-            <StatusPill status={active.status} className="mb-4 text-[10px]" />
-            <h3 className="font-display mb-1.5 text-[26px] font-bold tracking-[0.04em]">{active.name}</h3>
-            <p className="mb-5 font-mono text-[11px] tracking-[0.2em] text-primary uppercase">{active.tag}</p>
-            <p className="mb-6 text-sm leading-relaxed text-muted">{active.body}</p>
-            {active.repo ? (
-              <a
-                href={active.repo}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-block border border-primary/40 px-[18px] py-2.5 font-mono text-[11px] tracking-[0.22em] uppercase transition-all hover:border-primary hover:bg-primary hover:text-ink"
-              >
-                GitHub
-              </a>
-            ) : null}
-          </div>
+      <div className="mx-auto mt-10 max-w-5xl border border-accent/18 px-5 py-6">
+        <p className="font-mono text-[10px] tracking-[0.24em] text-accent uppercase">Under the floor</p>
+        <h3 className="font-display mt-2 text-xl tracking-[0.04em]">Mint, then maybe burn</h3>
+        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-dim">
+          Every confirm writes a vertex. Parents are causal, not a block. XP at close is
+          provisional. Thirty days later it settles or it is destroyed. That window is the
+          anti-collusion device, not a slogan.
+        </p>
+        <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {engineLoop.map((step) => (
+            <div key={step.code} className="border border-fg/10 px-4 py-4">
+              <div className="font-brand text-lg tracking-[0.08em] text-fg">{step.code}</div>
+              <p className="mt-2 text-xs leading-relaxed text-dim">{step.note}</p>
+            </div>
+          ))}
         </div>
-      ) : null}
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          {engineTokens.map((tok) => (
+            <div key={tok.t} className="flex gap-3 text-sm">
+              <span className="shrink-0 font-mono text-[11px] tracking-[0.16em] text-primary">{tok.t}</span>
+              <span className="text-muted">{tok.d}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mx-auto mt-12 max-w-5xl">
+        <p className="font-mono text-[10px] tracking-[0.24em] text-dim uppercase">On git, today</p>
+        <h3 className="font-display mt-2 text-xl tracking-[0.04em]">What is code vs napkin</h3>
+        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-dim">
+          Kernel is MIT, TypeScript, Docker. Happy path is real. Adversarial path is the current
+          build. Older standalone repos were archived into the monorepo or retired. They are not
+          listed here.
+        </p>
+        <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {engineGit.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              target={item.href.startsWith("http") ? "_blank" : undefined}
+              rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+              className="block border border-primary/14 p-5 transition-colors hover:border-primary/50"
+            >
+              <StatusPill status={item.status} className="mb-3" />
+              <div className="font-display text-[17px] tracking-[0.03em]">{item.name}</div>
+              <p className="mt-2 text-xs leading-relaxed text-dim">{item.note}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div className="mx-auto mt-12 grid max-w-5xl gap-4 md:grid-cols-2">
+        <div className="border border-primary/16 px-5 py-6">
+          <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">A node</p>
+          <h3 className="font-display mt-2 text-xl tracking-[0.04em]">Bring your own machine</h3>
+          <p className="mt-3 text-sm leading-relaxed text-muted">
+            Clone the engine. Compose up. Run the happy-path script. Handshake a peer from a laptop
+            if you want to see two machines talk. That is a node. Not a product. Equipment you
+            already have.
+          </p>
+          <pre className="mt-4 overflow-x-auto border border-fg/10 bg-bg px-3 py-3 font-mono text-[11px] leading-relaxed text-dim">
+            {`git clone https://github.com/00ranman/extropy-engine
+cd extropy-engine
+docker compose up --build -d
+./scripts/test-happy-path.sh`}
+          </pre>
+        </div>
+        <div className="border border-primary/16 px-5 py-6">
+          <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">A DFAO</p>
+          <h3 className="font-display mt-2 text-xl tracking-[0.04em]">Two to seven people</h3>
+          <p className="mt-3 text-sm leading-relaxed text-muted">
+            Post tasks. Confirm when they land. That is a MICRO DFAO. Validators are just the people
+            doing the work. You do not wait for a priesthood. Density in a zone is the actual
+            constraint. Start small, locally, with something boring.
+          </p>
+          <p className="mt-4 text-sm leading-relaxed text-dim">
+            The node kit is a prototype idea for the rest: a modular box — compute, signed local
+            log, optional sensor — that plugs in so you do not have to babysit Docker. Not shipping.
+            Not a drop. If you can run the commands, you do not need the box.
+          </p>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-10 flex max-w-5xl flex-wrap gap-3">
+        <Btn href="https://github.com/00ranman/extropy-engine" external>
+          Monorepo
+        </Btn>
+        <Btn href="/docs/Extropy_Codex_v2.1_Comprehensive.pdf">Codex v2.1</Btn>
+        <Btn href="/open-problems">Open problems</Btn>
+      </div>
     </section>
   );
 }
