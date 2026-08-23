@@ -1,8 +1,9 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type PointerEvent } from "react";
 import {
   cycleDay,
   durationNow,
   formatQuant,
+  pad2,
   quantsSinceBB,
   solarLat,
 } from "@/lib/timekeeping";
@@ -35,6 +36,95 @@ function marks(count: number, r0: number, r1: number, majorEvery: number, cls: s
   });
 }
 
+type Live = {
+  loop: number;
+  arc: number;
+  tick: number;
+  tenths: number;
+  stamp: string;
+  pulse: number;
+  season: number;
+  quant: string;
+  cycle: number;
+};
+
+type TipCopy = { title: string; value: string; note: string };
+
+function copyFor(key: string, live: Live): TipCopy | null {
+  if (key.startsWith("mark-")) {
+    const n = Number(key.slice(5));
+    return {
+      title: `Loop ${n}`,
+      value: String(n),
+      note: n === 0 ? "Start of the local day." : n === 5 ? "Midday." : "Mark on the solar face. Coordinate, not a duration.",
+    };
+  }
+  switch (key) {
+    case "loop":
+      return {
+        title: "Loop",
+        value: String(Math.floor(live.loop)),
+        note: "Where you are in the local day. 10 loops. A coordinate.",
+      };
+    case "arc":
+      return {
+        title: "Arc",
+        value: pad2(Math.floor(live.arc)),
+        note: "100 per loop · ~86.4 s on Earth. Still a coordinate.",
+      };
+    case "tick":
+      return {
+        title: "Tick",
+        value: `${pad2(Math.floor(live.tick))}.${live.tenths}`,
+        note: "100 per arc · ~0.864 s on Earth. Closest thing to a second here.",
+      };
+    case "pulse":
+      return {
+        title: "Pulse",
+        value: live.pulse.toFixed(3).replace(/^0/, "") || ".000",
+        note: "Duration. ~70 s of hydrogen periods. Same length on every planet.",
+      };
+    case "season":
+      return {
+        title: "Season",
+        value: `${Math.round(live.season * 100)}%`,
+        note: "Orbit progress. ~81 days of hydrogen periods.",
+      };
+    case "quant":
+      return {
+        title: "Quant",
+        value: live.quant,
+        note: "Estimated H-1 periods since cosmological t:0. Universal.",
+      };
+    case "cycle":
+      return {
+        title: "Cycle day",
+        value: `C${live.cycle}`,
+        note: "Optional 5-day week. Planet-local, not physics.",
+      };
+    case "earth":
+      return {
+        title: "Planet",
+        value: "EARTH",
+        note: "Solar clock profile. Loop / Arc / Tick are for this rotation.",
+      };
+    case "nucleus":
+      return {
+        title: "Hydrogen-1",
+        value: "21 cm",
+        note: "The constant. 1,420,405,751.768 Hz. One period is a quant.",
+      };
+    case "electron":
+      return {
+        title: "Electron",
+        value: "orbit",
+        note: "The 21 cm hyperfine picture. Not a time hand.",
+      };
+    default:
+      return null;
+  }
+}
+
 export function UtClock() {
   const loopRef = useRef<SVGGElement>(null);
   const arcRef = useRef<SVGGElement>(null);
@@ -47,6 +137,63 @@ export function UtClock() {
   const stampRef = useRef<HTMLSpanElement>(null);
   const qReadRef = useRef<HTMLSpanElement>(null);
   const pulseReadRef = useRef<HTMLDivElement>(null);
+  const stageRef = useRef<HTMLDivElement>(null);
+  const tipRef = useRef<HTMLDivElement>(null);
+  const tipTitle = useRef<HTMLSpanElement>(null);
+  const tipVal = useRef<HTMLSpanElement>(null);
+  const tipNote = useRef<HTMLSpanElement>(null);
+  const tipKey = useRef<string | null>(null);
+  const live = useRef<Live>({
+    loop: 0,
+    arc: 0,
+    tick: 0,
+    tenths: 0,
+    stamp: "t:-:--:--",
+    pulse: 0,
+    season: 0,
+    quant: "—",
+    cycle: 1,
+  });
+
+  const paintTip = () => {
+    const key = tipKey.current;
+    const box = tipRef.current;
+    if (!key || !box) return;
+    const copy = copyFor(key, live.current);
+    if (!copy) return;
+    if (tipTitle.current) tipTitle.current.textContent = copy.title;
+    if (tipVal.current) tipVal.current.textContent = copy.value;
+    if (tipNote.current) tipNote.current.textContent = copy.note;
+  };
+
+  const placeTip = (clientX: number, clientY: number) => {
+    const stage = stageRef.current;
+    const box = tipRef.current;
+    if (!stage || !box) return;
+    const r = stage.getBoundingClientRect();
+    let x = clientX - r.left + 12;
+    let y = clientY - r.top - 12;
+    box.style.display = "block";
+    const w = box.offsetWidth;
+    const h = box.offsetHeight;
+    if (x + w > r.width - 8) x = r.width - w - 8;
+    if (x < 8) x = 8;
+    if (y - h < 8) y = clientY - r.top + h + 18;
+    box.style.left = `${x}px`;
+    box.style.top = `${y}px`;
+    box.style.transform = "translateY(-100%)";
+  };
+
+  const showTip = (key: string, e: PointerEvent) => {
+    tipKey.current = key;
+    paintTip();
+    placeTip(e.clientX, e.clientY);
+  };
+
+  const hideTip = () => {
+    tipKey.current = null;
+    if (tipRef.current) tipRef.current.style.display = "none";
+  };
 
   useEffect(() => {
     let raf = 0;
@@ -59,6 +206,21 @@ export function UtClock() {
       const loopS = lat.loop + arcS / 100;
       const pulse = dur.find((u) => u.name === "Pulse");
       const season = dur.find((u) => u.name === "Season");
+      const quant = formatQuant(quantsSinceBB(now));
+      const tenths = Math.floor(lat.tickRem * 10);
+      const cycle = cycleDay(now);
+
+      live.current = {
+        loop: loopS,
+        arc: arcS,
+        tick: tickS,
+        tenths,
+        stamp: lat.stamp,
+        pulse: pulse?.frac ?? 0,
+        season: season?.frac ?? 0,
+        quant,
+        cycle,
+      };
 
       loopRef.current?.setAttribute("transform", `rotate(${(loopS / 10) * 360} ${CX} ${CY})`);
       arcRef.current?.setAttribute("transform", `rotate(${(arcS / 100) * 360} ${CX} ${CY})`);
@@ -71,22 +233,16 @@ export function UtClock() {
         "transform",
         `rotate(${(now.getTime() / 48) % 360} ${CX} ${CY})`,
       );
-      seasonRef.current?.setAttribute(
-        "transform",
-        `rotate(${(season?.frac ?? 0) * 360})`,
-      );
+      seasonRef.current?.setAttribute("transform", `rotate(${(season?.frac ?? 0) * 360})`);
 
-      if (quantRef.current) quantRef.current.textContent = formatQuant(quantsSinceBB(now));
-      if (cycleRef.current) cycleRef.current.textContent = `C${cycleDay(now)}`;
-      if (stampRef.current) {
-        const tenths = Math.floor(lat.tickRem * 10);
-        stampRef.current.textContent = `${lat.stamp}.${tenths}`;
-      }
-      if (qReadRef.current) qReadRef.current.textContent = `Q:${formatQuant(quantsSinceBB(now))}`;
+      if (quantRef.current) quantRef.current.textContent = quant;
+      if (cycleRef.current) cycleRef.current.textContent = `C${cycle}`;
+      if (stampRef.current) stampRef.current.textContent = `${lat.stamp}.${tenths}`;
+      if (qReadRef.current) qReadRef.current.textContent = `Q:${quant}`;
       if (pulseReadRef.current) {
-        const p = pulse?.frac ?? 0;
-        pulseReadRef.current.textContent = `PULSE ${p.toFixed(3).slice(1)}`;
+        pulseReadRef.current.textContent = `PULSE ${(pulse?.frac ?? 0).toFixed(3).slice(1)}`;
       }
+      if (tipKey.current) paintTip();
 
       raf = requestAnimationFrame(frame);
     };
@@ -94,8 +250,18 @@ export function UtClock() {
     return () => cancelAnimationFrame(raf);
   }, []);
 
+  const hit = (key: string, className = "ut-hit") => ({
+    className,
+    onPointerEnter: (e: PointerEvent) => showTip(key, e),
+    onPointerMove: (e: PointerEvent) => {
+      if (tipKey.current === key) placeTip(e.clientX, e.clientY);
+      else showTip(key, e);
+    },
+    onPointerLeave: hideTip,
+  });
+
   return (
-    <div className="ut-stage mx-auto mt-10 max-w-[420px]">
+    <div ref={stageRef} className="ut-stage relative mx-auto mt-10 max-w-[420px]">
       <svg
         viewBox="0 0 400 400"
         className="ut-dial h-auto w-full"
@@ -133,29 +299,27 @@ export function UtClock() {
         {Array.from({ length: 10 }, (_, i) => {
           const p = polar(150, i * 36);
           return (
-            <text
-              key={`L${i}`}
-              x={p.x}
-              y={p.y}
-              textAnchor="middle"
-              dominantBaseline="middle"
-              className="ut-label-loop"
-            >
-              {i}
-            </text>
+            <g key={`L${i}`} {...hit(`mark-${i}`)}>
+              <circle cx={p.x} cy={p.y} r="14" fill="transparent" />
+              <text x={p.x} y={p.y} textAnchor="middle" dominantBaseline="middle" className="ut-label-loop">
+                {i}
+              </text>
+            </g>
           );
         })}
 
-        {/* 12 — Quant */}
-        <text x={CX} y="78" textAnchor="middle" className="ut-compass-k">
-          QUANT
-        </text>
-        <text ref={quantRef} x={CX} y="94" textAnchor="middle" className="ut-compass-v">
-          —
-        </text>
+        <g {...hit("quant")}>
+          <rect x="130" y="64" width="140" height="40" fill="transparent" />
+          <text x={CX} y="78" textAnchor="middle" className="ut-compass-k">
+            QUANT
+          </text>
+          <text ref={quantRef} x={CX} y="94" textAnchor="middle" className="ut-compass-v">
+            —
+          </text>
+        </g>
 
-        {/* 3 — Season */}
-        <g transform="translate(322 200)">
+        <g transform="translate(322 200)" {...hit("season")}>
+          <circle r="22" fill="transparent" />
           <circle r="16" className="ut-ring-gold" fill="none" strokeWidth="0.7" />
           <g ref={seasonRef}>
             <circle cx="0" cy="-16" r="2.4" className="ut-gold-fill" />
@@ -165,8 +329,8 @@ export function UtClock() {
           </text>
         </g>
 
-        {/* 6 — Earth */}
-        <g transform="translate(200 318)">
+        <g transform="translate(200 318)" {...hit("earth")}>
+          <circle r="22" fill="transparent" />
           <circle r="9" className="ut-ring-solar" fill="none" strokeWidth="1" />
           <ellipse rx="9" ry="3.4" className="ut-ring-solar" fill="none" strokeWidth="0.6" />
           <line x1="0" y1="-9" x2="0" y2="9" className="ut-ring-solar" strokeWidth="0.6" />
@@ -175,8 +339,8 @@ export function UtClock() {
           </text>
         </g>
 
-        {/* 9 — Cycle day */}
-        <g transform="translate(78 200)">
+        <g transform="translate(78 200)" {...hit("cycle")}>
+          <circle r="22" fill="transparent" />
           <text ref={cycleRef} y="-2" textAnchor="middle" className="ut-cycle">
             C1
           </text>
@@ -195,16 +359,18 @@ export function UtClock() {
           strokeWidth="0.7"
           transform={`rotate(-22 ${CX} ${CY})`}
         />
-        <g ref={electronRef}>
+        <g ref={electronRef} {...hit("electron")}>
+          <circle cx={CX} cy={CY - 58} r="10" fill="transparent" />
           <circle cx={CX} cy={CY - 58} r="2.6" className="ut-electron" filter="url(#ut-gold)" />
         </g>
 
-        {/* Duration: Pulse pip on the gold ring */}
-        <g ref={pulseRef}>
+        <g ref={pulseRef} {...hit("pulse")}>
+          <circle cx={CX} cy="64" r="12" fill="transparent" />
           <circle cx={CX} cy="64" r="3.2" className="ut-gold-fill" filter="url(#ut-gold)" />
         </g>
 
-        <g ref={loopRef}>
+        <g ref={loopRef} {...hit("loop")}>
+          <line x1={CX} y1={CY + 12} x2={CX} y2="102" stroke="transparent" strokeWidth="16" />
           <line
             x1={CX}
             y1={CY + 12}
@@ -215,7 +381,8 @@ export function UtClock() {
             strokeLinecap="round"
           />
         </g>
-        <g ref={arcRef}>
+        <g ref={arcRef} {...hit("arc")}>
+          <line x1={CX} y1={CY + 16} x2={CX} y2="78" stroke="transparent" strokeWidth="14" />
           <line
             x1={CX}
             y1={CY + 16}
@@ -226,12 +393,14 @@ export function UtClock() {
             strokeLinecap="round"
           />
         </g>
-        <g ref={tickRef}>
+        <g ref={tickRef} {...hit("tick")}>
+          <line x1={CX} y1={CY + 20} x2={CX} y2="54" stroke="transparent" strokeWidth="12" />
           <line x1={CX} y1={CY + 20} x2={CX} y2="54" className="ut-hand-tick" strokeWidth="1" />
           <circle cx={CX} cy="54" r="2.1" className="ut-hand-tick-tip" />
         </g>
 
-        <g className="ut-nucleus">
+        <g {...hit("nucleus", "ut-nucleus ut-hit")}>
+          <circle cx={CX} cy={CY} r="24" fill="transparent" />
           <circle cx={CX} cy={CY} r="15" fill="url(#ut-core)" filter="url(#ut-gold)" />
           <circle cx={CX} cy={CY} r="21" className="ut-nucleus-halo" fill="none" strokeWidth="0.9" />
           <text x={CX} y={CY - 2} textAnchor="middle" dominantBaseline="middle" className="ut-h">
@@ -242,6 +411,12 @@ export function UtClock() {
           </text>
         </g>
       </svg>
+
+      <div ref={tipRef} className="ut-tip">
+        <span ref={tipTitle} className="ut-tip-k" />
+        <span ref={tipVal} className="ut-tip-v" />
+        <span ref={tipNote} className="ut-tip-n" />
+      </div>
 
       <div className="ut-readout">
         <span ref={stampRef} className="ut-solar-read">
