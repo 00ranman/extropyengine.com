@@ -146,27 +146,27 @@
 }
 
 .ut-ring-solar {
-  stroke: rgb(183 179 170 / 0.55);
+  stroke: rgb(176 184 196 / 0.55);
 }
 
 .ut-ring-gold {
-  stroke: rgb(201 165 106 / 0.55);
+  stroke: rgb(212 148 60 / 0.55);
 }
 
 .ut-ring-inner {
-  stroke: rgb(201 165 106 / 0.32);
+  stroke: rgb(212 148 60 / 0.38);
 }
 
 .ut-tick-loop {
-  stroke: rgb(198 194 186 / 0.85);
+  stroke: rgb(210 216 226 / 0.88);
 }
 
 .ut-tick-arc {
-  stroke: rgb(183 179 170 / 0.35);
+  stroke: rgb(160 170 184 / 0.38);
 }
 
 .ut-label-loop {
-  fill: #c8c3b8;
+  fill: #c5ccd6;
   font-family: var(--font-brand);
   font-size: 13px;
   font-weight: 700;
@@ -180,42 +180,50 @@
   letter-spacing: 0.22em;
 }
 
+.ut-compass-solar {
+  fill: rgb(176 184 196 / 0.75);
+}
+
 .ut-compass-v {
-  fill: #ead9b0;
+  fill: #e8c878;
   font-family: var(--font-mono);
   font-size: 8px;
   letter-spacing: 0.04em;
 }
 
 .ut-cycle {
-  fill: #ead9b0;
+  fill: #c5ccd6;
   font-family: var(--font-brand);
   font-size: 16px;
   font-weight: 700;
 }
 
-.ut-gold-fill {
-  fill: #d4af77;
+.ut-pip-pulse {
+  fill: #f3d27a;
 }
 
-.ut-gold-fill {
-  fill: #d4af77;
+.ut-pip-tide {
+  fill: #d4943c;
+}
+
+.ut-pip-season {
+  fill: #a56b28;
 }
 
 .ut-hand-loop {
-  stroke: #d8d3c8;
+  stroke: #d5dce6;
 }
 
 .ut-hand-arc {
-  stroke: #b7b3aa;
+  stroke: #8b93a0;
 }
 
 .ut-hand-tick {
-  stroke: #ead9b0;
+  stroke: #f4f6f8;
 }
 
 .ut-hand-tick-tip {
-  fill: #ead9b0;
+  fill: #f4f6f8;
 }
 
 .ut-nucleus-halo {
@@ -273,6 +281,35 @@
 
 .ut-gold-text {
   color: #c9a56a;
+}
+
+.ut-swatch {
+  display: inline-block;
+  width: 0.55em;
+  height: 0.55em;
+  margin: 0 0.45em 0.05em 0.15em;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.ut-swatch-loop {
+  background: #d5dce6;
+  margin-left: 0;
+}
+.ut-swatch-arc {
+  background: #8b93a0;
+}
+.ut-swatch-tick {
+  background: #f4f6f8;
+}
+.ut-swatch-pulse {
+  background: #f3d27a;
+}
+.ut-swatch-tide {
+  background: #d4943c;
+}
+.ut-swatch-season {
+  background: #a56b28;
 }
 
 .ut-hit {

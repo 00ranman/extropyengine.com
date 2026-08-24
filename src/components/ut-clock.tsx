@@ -341,7 +341,7 @@ export function UtClock() {
           <circle r="22" fill="transparent" />
           <circle r="16" className="ut-ring-gold" fill="none" strokeWidth="0.7" />
           <g ref={seasonRef}>
-            <circle cx="0" cy="-16" r="2.4" className="ut-gold-fill" />
+            <circle cx="0" cy="-16" r="2.4" className="ut-pip-season" />
           </g>
           <text y="28" textAnchor="middle" className="ut-compass-k">
             SEASON
@@ -353,7 +353,7 @@ export function UtClock() {
           <circle r="9" className="ut-ring-solar" fill="none" strokeWidth="1" />
           <ellipse rx="9" ry="3.4" className="ut-ring-solar" fill="none" strokeWidth="0.6" />
           <line x1="0" y1="-9" x2="0" y2="9" className="ut-ring-solar" strokeWidth="0.6" />
-          <text y="22" textAnchor="middle" className="ut-compass-k">
+          <text y="22" textAnchor="middle" className="ut-compass-k ut-compass-solar">
             EARTH
           </text>
         </g>
@@ -363,18 +363,18 @@ export function UtClock() {
           <text ref={cycleRef} y="-2" textAnchor="middle" className="ut-cycle">
             C1
           </text>
-          <text y="16" textAnchor="middle" className="ut-compass-k">
+          <text y="16" textAnchor="middle" className="ut-compass-k ut-compass-solar">
             CYCLE
           </text>
         </g>
 
         <g ref={pulseRef} {...hit("pulse")}>
           <circle cx={CX} cy="64" r="12" fill="transparent" />
-          <circle cx={CX} cy="64" r="3.2" className="ut-gold-fill" filter="url(#ut-gold)" />
+          <circle cx={CX} cy="64" r="3.2" className="ut-pip-pulse" filter="url(#ut-gold)" />
         </g>
         <g ref={tideRef} {...hit("tide")}>
           <circle cx={CX} cy="108" r="12" fill="transparent" />
-          <circle cx={CX} cy="108" r="4.2" className="ut-gold-fill" filter="url(#ut-gold)" />
+          <circle cx={CX} cy="108" r="4.2" className="ut-pip-tide" filter="url(#ut-gold)" />
         </g>
 
         <g ref={loopRef} {...hit("loop")}>
@@ -477,8 +477,22 @@ export function UtClock() {
       </div>
 
       <div className="mt-3 flex flex-wrap justify-center gap-x-5 gap-y-1 text-[10px] tracking-[0.18em] uppercase text-dim">
-        <span>Silver · Loop / Arc / Tick</span>
-        <span className="ut-gold-text">Gold · Pulse / Tide</span>
+        <span>
+          <span className="ut-swatch ut-swatch-loop" />
+          Loop
+          <span className="ut-swatch ut-swatch-arc" />
+          Arc
+          <span className="ut-swatch ut-swatch-tick" />
+          Tick
+        </span>
+        <span className="ut-gold-text">
+          <span className="ut-swatch ut-swatch-pulse" />
+          Pulse
+          <span className="ut-swatch ut-swatch-tide" />
+          Tide
+          <span className="ut-swatch ut-swatch-season" />
+          Season
+        </span>
       </div>
     </div>
   );
