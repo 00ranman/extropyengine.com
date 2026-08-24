@@ -13,7 +13,7 @@ const SKIP = new Set(["cover.jpg", "cover.png", "feed.xml", "index.json", "readm
 export const podcastMeta = {
   title: "Extropy Engine",
   author: "Randall Gossett",
-  email: "podcast@extropyengine.com",
+  email: "00ranman@gmail.com",
   description:
     "Talk, field notes, and loops from Randall Gossett. Entropy reduction. Not a newsletter.",
   language: "en-us",
