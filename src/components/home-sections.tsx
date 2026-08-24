@@ -435,6 +435,17 @@ export function EngineSection() {
             </li>
           ))}
         </ol>
+        <p className="mt-4 flex flex-wrap gap-x-4 gap-y-1 font-mono text-[11px] tracking-[0.08em]">
+          <Link to="/glossary" hash="not-a-metaphor" className="text-primary hover:underline">
+            Not a metaphor →
+          </Link>
+          <Link to="/glossary" hash="bits-equivalent" className="text-primary hover:underline">
+            Bits-equivalent →
+          </Link>
+          <Link to="/glossary" hash="late-mint" className="text-primary hover:underline">
+            Late mint →
+          </Link>
+        </p>
       </div>
 
       <div className="mx-auto mt-12 max-w-5xl">

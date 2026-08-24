@@ -484,7 +484,8 @@ export const engineDag = {
   points: [
     "Every closed loop hangs evidence and a provisional ΔS on a vertex with causal parents. Next time a similar fight, a similar lawn, the network has somewhere to look besides a vibe.",
     "Edge intelligence unveils only the ZKP the equation needs. Nobody sits on the diary. Digital Autarky is how you get detail without a panopticon.",
-    "Landauer is the bridge, not a costume: information erased has a heat floor. Social and cognitive events are information events. The number is a weighted if-then across domains, fine-tuned as like-cases stack and survive without negative feedback.",
+    "Landauer is the bridge, not a costume: information erased has a heat floor. Social and cognitive events are information events. Bits-equivalent is the stand-in — a proxy, not a worshipped constant. If later data contradicts it, it moves. Not a metaphor. Physicists who stop at that sentence are not the audience.",
+    "A closed loop can still pay or burn later. More domains converge — a teacher whose student later traces the turnaround — and the original vertex can mint again. That is late mint. Settled is not sacred. The graph is allowed to catch up.",
     "Curating that graph is work. A DAG specialist who makes the ledger more navigable is reducing entropy and minting XP. Human in the loop is not a disclaimer. It is a job the protocol pays.",
     "No extractive microtransaction at each hop. Transactionality is the loop itself. The machine talks to its own history. When interpretations of “this kind of fight” stop getting pushback, the needle moves less. That is calibration, not a cult of the founder — the founder has no privileged key.",
   ],

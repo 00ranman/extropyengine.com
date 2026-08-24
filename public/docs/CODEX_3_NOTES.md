@@ -47,7 +47,11 @@ Intended product. For-profit. Not a 501(c). Surplus after salary and lights into
 
 Subjectivity is the start, not the attractor. Eight domains are a weighted vector. A mediation and a lawn share a DAG that gets denser, not a constant on day one.
 
-Landauer is the bridge: information erased has a heat floor; social/cognitive events are information events. Edge intelligence unveils only the ZKP the equation needs. DAG curator is a paid job. No extractive hop. The founder has no mint key.
+Landauer is the claimed conversion, not a costume: information erased has a heat floor; social/cognitive events are information events. The stand-in is a **bits-equivalent proxy**, not a worshipped constant. Equivocation (Shannon bits vs J/K vs English “order”) is acknowledged. If later data contradicts the proxy, the proxy moves. “This is not a metaphor” stays. Physicist sign-off is not a requirement. Do not sand the sentence for grants.
+
+**Late mint:** a closed loop can still receive XP (or burn) when later domains converge — teacher whose student later traces the turnaround. Settled is not the last word. Retroactive revalidation is the audit not stopping.
+
+Edge intelligence unveils only the ZKP the equation needs. DAG curator is a paid job. No extractive hop. The founder has no mint key.
 
 Convergence of like-cases \u2260 automatically kT ln 2 in a quarrel. 3.0 has to say which claim it is making.
 

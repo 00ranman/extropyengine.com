@@ -300,7 +300,17 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       },
       {
         term: "Entropy Reduction (ΔS)",
-        def: "The act of creating order from disorder, verifiably. ΔS must be strictly positive for XP to mint. Measured in domain-native units (J/K, bits, normalized scalars) and normalized before cross-domain aggregation.",
+        def: "The act of creating order from disorder, verifiably. ΔS must be strictly positive for XP to mint. Domain-native units (J/K, bits, normalized scalars) get a bits-equivalent so they can sit on one graph. That is a proxy, not a worshipped constant. If later data contradicts it, the proxy moves.",
+      },
+      {
+        term: "Bits-equivalent",
+        id: "bits-equivalent",
+        def: "The conversion the Engine actually means. A lawn, a mediation, a trade deal, a negotiation — information events. Landauer: erasing information has a heat floor. You do not need a frozen joule for “mowed.” You need a stand-in in bits (or a normalized scalar treated as bits-equivalent) that can be updated when new measurements land. Equivocation is possible: Shannon bits, thermodynamic entropy, and the English word “order” are not the same object. The proxy is how you live with that without pretending you found a constant. Not a metaphor. Not a poem about tidiness.",
+      },
+      {
+        term: "Not a metaphor",
+        id: "not-a-metaphor",
+        def: "This line stays. Social and cognitive events are treated as information events with a bits-equivalent, not as a figure of speech about “order.” If a physicist stops here because they do not want to be an economist, or because two domains in one sentence offends the lab partition, they are not the audience. The Engine does not sand the sentence off to get a stamp or a grant. The audit loop is the test. Sign-off is not.",
       },
       {
         term: "Coherence",
@@ -441,6 +451,11 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
         def: "Timestamp decay in (0, 1], typically exp(−λΔt). log(1/Tₛ) stops farming by slamming loops shut.",
       },
       {
+        term: "Late mint",
+        id: "late-mint",
+        def: "A closed loop is not the last word. If later domains converge on a higher or lower ΔS — a student becomes president and traces it to a teacher; a deal that looked cheap poisons a basin — the DAG can mint into or burn the original vertex. Settled is not sacred. Retroactive revalidation is what an audit system that does not stop is for. More cross-reference, more signal, the proxy moves. That is not a rewrite of physics. It is the graph catching up.",
+      },
+      {
         term: "The glass of water",
         id: "glass-of-water",
         def: "Textbook move: a glass is worthless next to a stream and priceless in a desert, therefore value lives in the head, therefore ΔS cannot be value. The trick is isolation. They hold the glass still and move the story around it, then call the story subjective. Next to a stream versus in a desert the coupled system is not the same object — body water, time-to-next-source, search cost, biological disorder, alternatives, who else is dying. That is w · E across domains, not a feeling painted onto unchanged physics. A dehydrated organism is a different thermodynamic situation. Distance to the next drink is a different informational and physical state. Marginal willingness-to-pay maps an isolated commodity. It does not measure the mesh. If the debate stops at the glass, the system never got opened.",
@@ -484,7 +499,7 @@ export const openProblems: Problem[] = [
     section: "Measurement",
     hardness: "HARD",
     title: "Observer-Dependent Measurement",
-    body: "A kitchen looks clean to one person and disordered to another. That is the opening condition, not the attractor. The bet is a weighted eight-domain DAG: like-cases stack, ZKPs unveil only what the equation needs, and a number that keeps surviving without negative feedback moves the needle less. Landauer is the claimed bridge for social/cognitive events (information erased has a heat floor) — still a bridge, not a lab joule for a quarrel. Unsolved: whether convergence of the graph is calibration of a physical quantity, or a folk taxonomy that got dense and stable.",
+    body: "A kitchen looks clean to one person and disordered to another. That is the opening condition, not the attractor. The bet is a weighted eight-domain DAG: like-cases stack, ZKPs unveil only what the equation needs, and a number that keeps surviving without negative feedback moves the needle less. Landauer is the claimed conversion for social/cognitive events (information erased has a heat floor) into a bits-equivalent proxy — not a metaphor, and not a frozen joule for a quarrel. Unsolved: whether convergence of the graph is calibration of a physical quantity, or a folk taxonomy that got dense and stable. That unsolved is a research problem, not a reason to recant the sentence.",
   },
   {
     section: "Measurement",
