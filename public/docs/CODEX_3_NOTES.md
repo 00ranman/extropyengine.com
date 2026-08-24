@@ -55,7 +55,9 @@ Landauer is the claimed conversion, not a costume: information erased has a heat
 
 1. **Combinatorial explosion / teacher → president.** The protocol does not walk the light cone. Late mint is citation-gated: a new vertex has to exist that names causal parents and hangs evidence. No citation, no edge, no XP. Infinite downstream is cosmology, not a query. Curators exist because the hairball is a real failure mode. How much of a later ΔS flows back how many hops is a 3.0 knob — do not freeze a fraction. Bound: asserted edges only, proxy *delta* only (not a second full paycheck), confirm path still applies.
 
-2. **Symmetric burn.** Yes. Late mint and late burn are the same machine. Disaster-president can burn the teacher’s earlier XP if the new evidence holds. No expiry. A ratchet that only adds is a church. False late-burn is a claim; it can burn the accuser. Whether burn should be *harder* than mint (griefing) is a knob, not an axiom yet. Decay already eats standing XP either way.
+2. **Symmetric burn.** Yes. Late mint and late burn are the same machine. Disaster-president can burn the teacher’s earlier XP if the new evidence holds. No expiry. A ratchet that only adds is a church. False late-burn is a claim; it can burn the accuser. Whether burn should be *harder* than mint (griefing) is a knob, not an axiom yet.
+
+   Decay ≠ burn. 1%/month of remaining never hits zero in the reals (0.99^n). That’s a map seam, not a fuse. On a machine: dust floor → access band. Late burn after most of the pile has leaked does **not** claw back the 99% that’s gone. It marks the vertex BURNED, slashes remaining dust, drops a band that sat on that mint. Scope: that vertex + citation-gated children, not the person’s whole wallet.
 
 3. **Bits-equivalent for a fight.** Not a thermometer. Not a 1/10 validator caste — that is not in the canon. SignalFlow + PSLL + evidence propose a provisional bits-equivalent (uncertainty collapsed, duration, recurrence, who confirms). Other side of the loop agrees. Domain-native terms → bits-equivalent proxy → mint formula. You never type in your own score.
 
