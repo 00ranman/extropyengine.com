@@ -434,11 +434,16 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       },
       {
         term: "w · E",
-        def: "Weight vector dotted with the effort / eight-domain vector. Where cross-domain terms (gas, ozone, alternative trips) actually accumulate.",
+        def: "Weight vector dotted with the effort / eight-domain vector. Where cross-domain terms (gas, ozone, alternative trips) actually accumulate. The glass of water lives here — not in a vibe.",
       },
       {
         term: "Tₛ",
         def: "Timestamp decay in (0, 1], typically exp(−λΔt). log(1/Tₛ) stops farming by slamming loops shut.",
+      },
+      {
+        term: "The glass of water",
+        id: "glass-of-water",
+        def: "Textbook move: a glass is worthless next to a stream and priceless in a desert, therefore value lives in the head, therefore ΔS cannot be value. The trick is isolation. They hold the glass still and move the story around it, then call the story subjective. Next to a stream versus in a desert the coupled system is not the same object — body water, time-to-next-source, search cost, biological disorder, alternatives, who else is dying. That is w · E across domains, not a feeling painted onto unchanged physics. A dehydrated organism is a different thermodynamic situation. Distance to the next drink is a different informational and physical state. Marginal willingness-to-pay maps an isolated commodity. It does not measure the mesh. If the debate stops at the glass, the system never got opened.",
       },
     ],
   },

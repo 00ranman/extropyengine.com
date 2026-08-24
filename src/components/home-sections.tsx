@@ -415,6 +415,11 @@ export function EngineSection() {
           {engineMath.body.map((p) => (
             <p key={p.slice(0, 24)}>{p}</p>
           ))}
+          <p>
+            <Link to="/glossary" hash="glass-of-water" className="text-primary hover:underline">
+              Glossary — the glass of water →
+            </Link>
+          </p>
         </div>
       </div>
 
