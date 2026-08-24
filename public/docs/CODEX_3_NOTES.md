@@ -79,6 +79,14 @@ Immersion test: still worth doing if the cosmetics are off? If no, it’s extrac
 
 https://github.com/00ranman/extropy-engine/blob/main/docs/CODEX_3_NOTES_PLAY.md
 
+## ZKP reputation
+
+Identity ZKP already covers uniqueness. Reputation still looks like a public vector on a DID, which undoes the nullifiers.
+
+Prove predicates, not numbers: band, domain standing, not-slashed, eligible to vote. Decay belongs in the circuit. SignalFlow should match on a predicate + VRF, not read raw R. Sticky secret so you cannot launder a burn; unlinkable names so two rooms cannot cross-graph you.
+
+https://github.com/00ranman/extropy-engine/blob/main/docs/CODEX_3_NOTES_ZKP_REPUTATION.md
+
 ## What 3.0 has to actually write
 
-Settle knob. XP decay next to IT decay. Late burn. SignalFlow as first-class. Claim path with evidence. MICRO overselling acknowledged. DAG as instrument. Burn-floor axiom yes/no. Box as for-profit intent. Access band as ZKP (display default off). Play boards opt-in, no power. Soulbound marks. Seasons ≠ diplomacy. Roles from showing up; votes for knobs. Immersion test. Leave 2.1 alone until then.
+Settle knob. XP decay next to IT decay. Late burn. SignalFlow as first-class. Claim path with evidence. MICRO overselling acknowledged. DAG as instrument. Burn-floor axiom yes/no. Box as for-profit intent. Access band as ZKP (display default off). Play boards opt-in, no power. Soulbound marks. Seasons ≠ diplomacy. Roles from showing up; votes for knobs. ZKP reputation as predicates, not a public graph. Leave 2.1 alone until then.

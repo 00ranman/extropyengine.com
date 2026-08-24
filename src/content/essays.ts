@@ -335,6 +335,10 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
         def: "Human-in-the-loop job: make the ledger navigable, factor new data, mark which slice of history should weight a new like-case. That work is entropy reduction. It mints XP. The graph feeding itself is the point.",
       },
       {
+        term: "ZKP reputation",
+        def: "Prove a predicate (access band, domain standing, clean-in-epoch, vote eligibility) without revealing XP, R, loops, or the DID. Epoch-stamped; decay is inside the proof or it is a lie about now. SignalFlow should match on predicates, not a public reputation graph. Sticky secret, unlinkable names.",
+      },
+      {
         term: "Digital Autarky",
         def: "Intelligence, identity, and local context stay at the edge. The network is a handshake, a claim schema, and a DAG — not a supermind. Company login means company tether. Own hardware is how you stay unknown. Edge intelligence unveils only the ZKP the equation needs.",
       },
