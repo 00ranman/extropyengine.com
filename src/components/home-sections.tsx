@@ -19,6 +19,7 @@ import {
   type Paper,
 } from "@/content/site";
 import { Btn, SectionTitle, StatusPill } from "@/components/ui-bits";
+import { podcast } from "@/content/podcast";
 
 export function EnterStrip() {
   return (
@@ -173,6 +174,9 @@ export function MusicSection() {
           </Btn>
         ))}
         <Btn href="/podcast">Podcast RSS</Btn>
+        <Btn href={podcast.spotify} external>
+          Spotify
+        </Btn>
         <Btn href="/podcast#subscribe" primary>
           Subscribe
         </Btn>

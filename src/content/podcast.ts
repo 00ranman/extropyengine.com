@@ -12,9 +12,17 @@ export const podcast = {
   feedUrl,
   cover: "/podcast/cover.jpg",
   page: "/podcast",
+  spotify: "https://open.spotify.com/show/7G9pK1dHFCam95qQlFAMNE",
 } as const;
 
 export const subscribeApps = [
+  {
+    id: "spotify",
+    label: "Spotify",
+    hint: "phone / desktop / web",
+    href: podcast.spotify,
+    kind: "app" as const,
+  },
   {
     id: "apple",
     label: "Apple Podcasts",
@@ -60,11 +68,6 @@ export const subscribeApps = [
 ] as const;
 
 export const directorySubmit = [
-  {
-    label: "Submit to Spotify",
-    href: "https://podcasters.spotify.com/",
-    note: "One-time. After they list it, a Spotify button can go here.",
-  },
   {
     label: "Submit to YouTube",
     href: "https://studio.youtube.com/",

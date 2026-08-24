@@ -32,9 +32,9 @@ function preferredIds() {
   const ua = navigator.userAgent;
   const apple = /iPhone|iPad|iPod|Macintosh/.test(ua);
   const android = /Android/.test(ua);
-  if (apple) return ["apple", "overcast", "pocketcasts", "castro"];
-  if (android) return ["pocketcasts", "antennapod", "addict"];
-  return ["pocketcasts", "apple"];
+  if (apple) return ["apple", "spotify", "overcast", "pocketcasts", "castro"];
+  if (android) return ["spotify", "pocketcasts", "antennapod", "addict"];
+  return ["spotify", "pocketcasts", "apple"];
 }
 
 function Subscribe() {
@@ -91,8 +91,8 @@ function Subscribe() {
         </button>
       </div>
       <p className="text-sm text-dim">
-        Spotify and YouTube don’t take a raw RSS tap from a listener. Submit the same feed once
-        (you), then those buttons can be added.
+        Spotify is submitted. The show page may sit empty for up to a day while they ingest the
+        feed. YouTube and Apple still need a one-time submit if you want official listings there.
       </p>
       <div className="flex flex-wrap gap-2">
         {directorySubmit.map((d) => (
