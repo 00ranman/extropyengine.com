@@ -8,6 +8,7 @@ import {
   earlierEditions,
   engineGit,
   engineLoop,
+  engineMath,
   engineTokens,
   engineViews,
   papers,
@@ -354,6 +355,28 @@ export function EngineSection() {
               <span className="shrink-0 font-mono text-[11px] tracking-[0.16em] text-primary">{tok.t}</span>
               <span className="text-muted">{tok.d}</span>
             </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mx-auto mt-10 max-w-5xl border border-fg/12 px-5 py-6">
+        <p className="font-mono text-[10px] tracking-[0.24em] text-dim uppercase">{engineMath.kicker}</p>
+        <h3 className="font-display mt-2 text-xl tracking-[0.04em]">{engineMath.title}</h3>
+        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-dim">{engineMath.lead}</p>
+        <p className="font-brand mt-5 text-[clamp(22px,4vw,32px)] tracking-[0.04em] text-fg">
+          {engineMath.formula}
+        </p>
+        <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          {engineMath.terms.map((term) => (
+            <div key={term.t} className="flex gap-3 text-sm">
+              <span className="shrink-0 font-mono text-[11px] tracking-[0.16em] text-primary">{term.t}</span>
+              <span className="text-muted">{term.d}</span>
+            </div>
+          ))}
+        </div>
+        <div className="mt-6 max-w-2xl space-y-3 text-sm leading-relaxed text-muted">
+          {engineMath.body.map((p) => (
+            <p key={p.slice(0, 24)}>{p}</p>
           ))}
         </div>
       </div>

@@ -397,7 +397,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       },
       {
         term: "ΔS",
-        def: "Verified entropy reduction in normalized domain units. Must be strictly positive.",
+        def: "Verified entropy reduction in normalized domain units. Must be strictly positive. A proxy we fine-tune as data arrives — not a promised constant for “mowing a lawn.” Words drift. The number should too, honestly.",
       },
       {
         term: "C — Coherence Factor",

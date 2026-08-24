@@ -437,6 +437,24 @@ export const engineTokens = [
   { t: "CT / CAT / DT", d: "Standing, skill, domain. Separate so influence cannot be purchased with XP." },
 ] as const;
 
+export const engineMath = {
+  kicker: "If you care about the math",
+  title: "Most people never see this",
+  lead: "You post. Someone does it. You tap done. That is the product. The formula is for the people who want to know what the mint is claiming. Skip it if you came for a ride.",
+  formula: "XP = ΔS · C · R · (1 / F)",
+  terms: [
+    { t: "ΔS", d: "The entropy-reduction claim. Has to be positive or nothing mints." },
+    { t: "C", d: "Coherence. Did the output match the intent. 0 to 1." },
+    { t: "R", d: "Rarity. How scarce this class of reduction is on the network. Not reputation." },
+    { t: "F", d: "Frequency of decay. Repeating the same move pays less. Not falsifiability." },
+  ],
+  body: [
+    "We are open to a constant for “mowing a lawn.” We do not expect one. “Lawn” and “mowed” are words. Words drift. Linguistic relativity is not a vibe; it is why freezing a number and calling it a constant is often an ontological sleight of hand. You did not find physics. You froze a description.",
+    "What we actually need is honesty about a proxy: a starting ΔS we attribute to a class of work — a lawn cut, a ride completed — and then we fine-tune it. Gas against the alternative. They would have driven themselves. They would have taken the bus. They would not have gone. Ozone, wear, idle time. Every extra scrap of data is another term in a cross-domain ΔS that gets less stupid.",
+    "We start with the easy variables. We do not wait for a perfect lawn-mowing constant that will never arrive. The proxy gets more accurate as the graph fills in. That is the math. Not a religion of constants.",
+  ],
+} as const;
+
 export const engineGit = [
   {
     status: "live" as const,
