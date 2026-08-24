@@ -25,18 +25,15 @@ function OpenProblems() {
       </p>
       <section className="space-y-3 border border-primary/20 bg-primary/4 p-5">
         <div className="text-[10px] tracking-[0.28em] text-primary uppercase">Current answer</div>
-        <h2 className="font-display text-2xl tracking-[0.04em] text-fg">LocalFlow</h2>
+        <h2 className="font-display text-2xl tracking-[0.04em] text-fg">LocalFlow is the errand face</h2>
         <p>
-          LocalFlow is the bootstrap. On the surface it is a free local driver/errand network: post
-          a ride, a grocery run, a task. Someone nearby does it. You confirm. No platform fee, no
-          surge. Users never see XP, EP, or DAG — it just looks like matchmaking.
+          LocalFlow replaces the pile: Uber, Lyft, DoorDash, Grubhub, plus the run you don’t have a
+          car for. Post it. Someone nearby does it. You confirm. No platform fee, no surge. Users
+          never have to say XP.
         </p>
         <p>
-          Underneath, that confirmation <em>is</em> validation. Client posts → LOOPOPEN. Driver
-          finishes, client confirms → LOOPCLOSE and provisional XP. Thirty days, no dispute →
-          confirmed. Two parties have to agree, so you cannot mint by yourself. The first
-          “validators” are just people doing the work. The remaining problem is density: enough
-          subscribers in the same zone to pick the tasks up.
+          That confirmation closes a loop. It is not how the score is invented. You do not type in
+          how much a lawn is worth.
         </p>
         <p>
           <a
@@ -44,6 +41,30 @@ function OpenProblems() {
             className="text-primary hover:underline"
           >
             packages/localflow on GitHub →
+          </a>
+        </p>
+      </section>
+      <section className="space-y-3 border border-primary/20 bg-primary/4 p-5">
+        <div className="text-[10px] tracking-[0.28em] text-primary uppercase">Current answer</div>
+        <h2 className="font-display text-2xl tracking-[0.04em] text-fg">SignalFlow is the protocol</h2>
+        <p>
+          You talk to SignalFlow. It talks to the assistant you already trust — ChatGPT, Claude,
+          Gemini, or a model on your own hardware — plus your PSLL. It looks at the task, the
+          duration, before/after evidence on the DAG, and proposes a provisional ΔS. If-then. The
+          other side has to agree.
+        </p>
+        <p>
+          Company login means company tether. Own hardware is how you stay unknown. A
+          network-hosted model is a later idea, not a product today. MICRO overselling is real.
+          SignalFlow plus evidence plus late burn is how we live with it, not a claim that people
+          will not try.
+        </p>
+        <p>
+          <a
+            href="https://github.com/00ranman/extropy-engine/tree/main/packages/signalflow"
+            className="text-primary hover:underline"
+          >
+            packages/signalflow on GitHub →
           </a>
         </p>
       </section>

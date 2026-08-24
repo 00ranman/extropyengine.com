@@ -91,11 +91,11 @@ export const essays: Record<string, Essay> = {
       {
         type: "ol",
         items: [
-          "An agent (person, org, AI) performs an action.",
-          "Validators assess whether entropy was reduced.",
-          "The reduction is quantified and recorded on a DAG (directed acyclic graph).",
-          "XP (extropy points) are issued proportional to verified reduction.",
-          "XP cannot be transferred, only earned. No speculation. No inflation.",
+          "An agent does the work. They do not type in a score.",
+          "SignalFlow talks to the assistant they already trust, plus their personal log, plus evidence on the DAG (before/after, duration).",
+          "A provisional ΔS is proposed. The other side has to agree. If-then.",
+          "XP mints provisional, then settles — or burns, then or years later. XP is not spent. It decays.",
+          "You cannot buy it. You cannot transfer it. Sitting on a pile does nothing.",
         ],
       },
       {
@@ -167,7 +167,7 @@ export const essays: Record<string, Essay> = {
       { type: "h2", text: "Where This Can Fail" },
       {
         type: "p",
-        text: "The remaining problem is not “who validates.” Validation is a task: post work that pays XP, people do it. Bias and AI-recursion still matter at the slice level (human + AI + physical measurement), but that is an accuracy problem, not a priesthood problem. What still has to be proven is density — enough people in range to pick the tasks up.",
+        text: "The remaining problem is not “who validates.” Validation is a task. SignalFlow proposes ΔS from the work plus evidence; people confirm. Bias and AI-recursion still matter at the slice level (the model you plugged in is only as honest as you allowed it to be), but that is an accuracy problem, not a priesthood problem. What still has to be proven is density — enough people in range to pick the tasks up.",
       },
       { type: "h3", text: "What This Is Not" },
       {
@@ -320,7 +320,19 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       },
       {
         term: "LocalFlow",
-        def: "The current bootstrap and validator solution. A free local driver/errand DFAO: post a task, someone nearby does it, you confirm. That confirmation closes the loop and mints provisional XP. Users never see protocol terms. Remaining constraint is subscriber density in a zone, not a validator priesthood.",
+        def: "The errand face. Rides, food, groceries, the car you don’t have — Uber, Lyft, DoorDash, Grubhub in one pile. Confirmation is the receipt. Not the protocol. Remaining constraint is subscriber density in a zone.",
+      },
+      {
+        term: "SignalFlow",
+        def: "The protocol you talk to. Your assistant (ChatGPT, Claude, Gemini, or a model on your own hardware) plus your PSLL plus the network. It packages the claim, reads evidence, proposes provisional ΔS. You do not score yourself.",
+      },
+      {
+        term: "PSLL",
+        def: "Personal Signed Local Log. Append-only, hash-chained, yours. SignalFlow reads it. The mesh gets receipts, not your diary. Digital Autarky requires this.",
+      },
+      {
+        term: "Digital Autarky",
+        def: "Intelligence, identity, and local context stay at the edge. The network is a handshake, a claim schema, and a DAG — not a supermind. Company login means company tether. Own hardware is how you stay unknown.",
       },
       {
         term: "DFAO",
@@ -333,7 +345,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
     entries: [
       {
         term: "XP — Extropy",
-        def: "The base unit. Minted only on verified entropy reduction (ΔS > 0). Cannot be purchased, transferred, or fabricated. Substrate of all higher tokens.",
+        def: "The base unit. Minted only on verified entropy reduction (ΔS > 0). Cannot be purchased or transferred. You do not spend it — access economy. It decays on a schedule. Settled XP can still burn later. Defaults are knobs.",
       },
       {
         term: "CT — Coherence Token",
@@ -466,7 +478,13 @@ export const openProblems: Problem[] = [
     section: "Validation",
     hardness: "ACTIVE",
     title: "Adoption Density, Not Validator Priesthood",
-    body: "“Who validates the first validators?” overstates the problem. LocalFlow is the current answer: a free local errand/ride network. You post a task, someone nearby does it, you confirm. That confirmation is the loop — LOOPOPEN → LOOPCLOSE → provisional XP. No special validator caste, no platform fee, users never see the protocol. What remains is density: enough people in the same zone to pick the work up. Unsolved: how thin a local graph can get before neglected-work escalation is not enough.",
+    body: "“Who validates the first validators?” overstates the problem. LocalFlow is the errand face: rides, food, the car you don’t have. Confirmation closes the loop. SignalFlow is how the ΔS gets proposed — assistant + PSLL + evidence, not a self-score. Remaining constraint is density: enough people in the same zone to pick the work up. Unsolved: how thin a local graph can get before neglected-work escalation is not enough.",
+  },
+  {
+    section: "Validation",
+    hardness: "ACTIVE",
+    title: "Micro Overselling and MACRO Coordination",
+    body: "A MICRO can puff a lawn. A MACRO that has to take those numbers as gospel will drift. That pressure is real. The answer on the table is not “people are honest.” It is SignalFlow proposing ΔS from task + duration + evidence on the DAG, two-party agreement, settle as a knob, and burn that can still land years later. Votes change the DFAO they are cast in. Only a PLANETARY vote hits the mesh, and that is supposed to be hard. Unsolved: whether nested defaults actually stop a popular MICRO from laundering a story upward.",
   },
   {
     section: "Validation",

@@ -9,6 +9,7 @@ import {
   engineGit,
   engineLoop,
   engineMath,
+  engineSignal,
   engineTokens,
   engineViews,
   papers,
@@ -309,8 +310,8 @@ export function EngineSection() {
       <span id="suite" className="sr-only" />
       <SectionTitle className="mb-3 text-center">How it runs</SectionTitle>
       <p className="mx-auto mb-12 max-w-xl text-center text-[15px] leading-relaxed text-muted">
-        Not a pile of apps. One loop. Two faces. A DAG under the floor. Archived experiments are
-        off this page on purpose.
+        Not a pile of apps. LocalFlow is the errand face. SignalFlow is how you talk to the
+        protocol. A DAG under the floor. Archived experiments are off this page on purpose.
       </p>
 
       <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2">
@@ -333,13 +334,30 @@ export function EngineSection() {
         })}
       </div>
 
+      <div className="mx-auto mt-10 max-w-5xl border border-primary/22 bg-primary/4 px-5 py-6">
+        <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">{engineSignal.kicker}</p>
+        <h3 className="font-display mt-2 text-xl tracking-[0.04em]">{engineSignal.title}</h3>
+        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">{engineSignal.lead}</p>
+        <ol className="mt-5 max-w-2xl space-y-3 text-sm leading-relaxed text-muted">
+          {engineSignal.steps.map((line, i) => (
+            <li key={line} className="flex gap-3">
+              <span className="font-mono text-[11px] text-faint">{String(i + 1).padStart(2, "0")}</span>
+              <span>{line}</span>
+            </li>
+          ))}
+        </ol>
+        <p className="mt-5 max-w-2xl text-sm leading-relaxed text-dim">{engineSignal.privacy}</p>
+      </div>
+
       <div className="mx-auto mt-10 max-w-5xl border border-accent/18 px-5 py-6">
         <p className="font-mono text-[10px] tracking-[0.24em] text-accent uppercase">Under the floor</p>
         <h3 className="font-display mt-2 text-xl tracking-[0.04em]">Mint, then maybe burn</h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-dim">
           Every confirm writes a vertex. Parents are causal, not a block. XP at close is
-          provisional. Thirty days later it settles or it is destroyed. That window is the
-          anti-collusion device, not a slogan.
+          provisional. The first settle window was thrown out as about thirty days. Could be five.
+          A DFAO can vote its own. PLANETARY is the only vote that hits everyone, and that is
+          supposed to be hard. Settled XP still decays, and it can still burn years later. You do
+          not spend it.
         </p>
         <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {engineLoop.map((step) => (
@@ -435,9 +453,11 @@ docker compose up --build -d
             not a headcount cap. Eight people is still a team. Nest when you grow a second crew.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-dim">
-            The node kit is a prototype idea for people who should not have to babysit Docker:
-            modular box, signed local log, optional sensor. Not shipping. If you can run the
-            commands, you do not need the box.
+            A box is on the roadmap as a product: plug-in node, PSLL, optional sensor, so you are
+            not babysitting Docker. For-profit. Not a 501(c) — that paperwork is more entropy than
+            it saves. Surplus after a salary and keeping the lights on goes into R&D, nodes
+            where people actually need them, maybe later compute you can run a model on without
+            owning the rack. Not shipping. If you can clone the repo you do not need the box.
           </p>
           <a
             href="/dfao"

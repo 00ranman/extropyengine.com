@@ -406,9 +406,9 @@ export const engineViews = {
     kicker: "LocalFlow",
     lines: [
       "Need a ride, a grocery run, a thing done. Post it.",
-      "Someone nearby takes it. They do the work.",
+      "Someone nearby takes it. They do the work. Maybe they brought the car you don’t have.",
       "You tap done. That’s the whole app.",
-      "No XP. No DAG. No validator class. Confirmation is the receipt.",
+      "Uber, Lyft, DoorDash, Grubhub — one pile. Not the protocol. Confirmation is the receipt.",
     ],
   },
   merchant: {
@@ -423,17 +423,31 @@ export const engineViews = {
   },
 } as const;
 
+export const engineSignal = {
+  kicker: "SignalFlow",
+  title: "You do not score yourself",
+  lead: "LocalFlow is the errand face. SignalFlow is the protocol you actually talk to. Your assistant — ChatGPT, Claude, Gemini, or a model on your own box — plus your personal log. That is the UI.",
+  steps: [
+    "You mow the lawn. You do not type in a number.",
+    "SignalFlow reads the task, the time, your PSLL, and whatever evidence you attached — before/after photos live on the DAG.",
+    "It proposes a provisional ΔS with the model you already trust. If-then. The other side has to agree.",
+    "If it holds, it settles into standing XP. If someone contests — later, even years later — it can still burn.",
+  ],
+  privacy:
+    "Log in with a company and you are tethered to a company. Own hardware is how you stay unknown. A network-hosted model you can run without owning the rack is a later idea, not a product today.",
+} as const;
+
 export const engineLoop = [
-  { code: "OPEN", note: "Task posted. Vertex on the DAG with causal parents." },
-  { code: "CLOSED", note: "Two-party confirm. Provisional XP mints. 30-day window starts." },
-  { code: "SETTLED", note: "Nobody disputes. Mint holds. Reputation moves a little." },
-  { code: "BURNED", note: "Dispute holds. Provisional XP is destroyed. That’s the slash." },
+  { code: "OPEN", note: "Task posted. Vertex on the DAG with causal parents. Evidence can hang off it." },
+  { code: "CLOSED", note: "Agreement. Provisional XP mints. The first settle window is a knob — 30 days was a starting number, not a law." },
+  { code: "SETTLED", note: "Moves from provisional to standing. Still burnable later. XP is not spent. Access economy." },
+  { code: "BURNED", note: "Dispute holds — five days later or thirty years later. Decay burns XP on a schedule anyway." },
 ] as const;
 
 export const engineTokens = [
-  { t: "XP", d: "Minted on verified ΔS > 0. Non-transferable. You cannot buy it." },
+  { t: "XP", d: "Minted on verified ΔS > 0. You do not spend it. Access economy. It decays. Still burnable after settle." },
   { t: "EP", d: "Merchant settlement. XP × loyalty. Burns when spent." },
-  { t: "IT", d: "Governance weight. Decays ~5%/month if you stop showing up." },
+  { t: "IT", d: "Governance weight. Decays if you stop showing up. Default ~5%/month is a knob, not a commandment." },
   { t: "CT / CAT / DT", d: "Standing, skill, domain. Separate so influence cannot be purchased with XP." },
 ] as const;
 
@@ -455,6 +469,7 @@ export const engineMath = {
     "We are open to a constant for “mowing a lawn.” We do not expect one. “Lawn” and “mowed” are words. Words drift. Linguistic relativity is not a vibe; it is why freezing a number and calling it a constant is often an ontological sleight of hand. You did not find physics. You froze a description.",
     "What we actually need is honesty about a proxy: a starting ΔS we attribute to a class of work — a lawn cut, a ride completed — and then we fine-tune it. Gas against the alternative. They would have driven themselves. They would have taken the bus. They would not have gone. Ozone, wear, idle time. Every extra scrap of data is another term in w · E, a cross-domain ΔS that gets less stupid.",
     "We start with the easy variables. We do not wait for a perfect lawn-mowing constant that will never arrive. The proxy gets more accurate as the graph fills in. That is the math. Not a religion of constants.",
+    "You do not put yourself in for a score. SignalFlow and the model you trust propose the ΔS. Photos, duration, the alternative trip — those are terms. People will still try to oversell. That is the MICRO subjectivity problem. Evidence on the DAG plus late burn is how we live with it, not a claim that it cannot happen.",
   ],
 } as const;
 
@@ -467,8 +482,14 @@ export const engineGit = [
   },
   {
     status: "dev" as const,
+    name: "SignalFlow",
+    note: "The protocol you talk to. Your assistant + PSLL + the network. Routes work, packages claims, proposes provisional ΔS. Not LocalFlow.",
+    href: "https://github.com/00ranman/extropy-engine/tree/main/packages/signalflow",
+  },
+  {
+    status: "dev" as const,
     name: "LocalFlow",
-    note: "Bootstrap DFAO. Rides and errands. Confirmation is the validator. Density in a zone is still the remaining problem.",
+    note: "The errand face. Rides, food, groceries, the car you don’t have. Confirmation is the receipt. Density in a zone is still the remaining problem.",
     href: "https://github.com/00ranman/extropy-engine/tree/main/packages/localflow",
   },
   {
@@ -492,7 +513,7 @@ export const engineGit = [
   {
     status: "concept" as const,
     name: "Node kit",
-    note: "Prototype: modular box — compute, signed local log, optional sensor. Plug in. Not for sale. For people who should not have to run Docker.",
+    note: "Intended product: plug-in node, PSLL, optional sensor. For-profit. Not a 501(c). Surplus after keeping the lights on goes into R&D and nodes, including where people actually need them. Not shipping.",
     href: "https://github.com/00ranman/extropy-engine/blob/main/docs/VPS_NODE.md",
   },
 ] as const;
