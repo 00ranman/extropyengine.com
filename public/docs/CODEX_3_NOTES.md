@@ -43,6 +43,16 @@ A vote rewrites the DFAO it is cast in. PLANETARY is the only vote against every
 
 Intended product. For-profit. Not a 501(c). Surplus after salary and lights into R&D, nodes (including where people need them), maybe later compute you can run a model on without owning the rack. Not shipping.
 
-## What 3.0 has to actually write
+## The graph is the instrument
+
+Subjectivity is the start, not the attractor. Eight domains are a weighted vector. A mediation and a lawn share a DAG that gets denser, not a constant on day one.
+
+Landauer is the bridge: information erased has a heat floor; social/cognitive events are information events. Edge intelligence unveils only the ZKP the equation needs. DAG curator is a paid job. No extractive hop. The founder has no mint key.
+
+Convergence of like-cases \u2260 automatically kT ln 2 in a quarrel. 3.0 has to say which claim it is making.
+
+Full note + rant:
+
+https://github.com/00ranman/extropy-engine/blob/main/docs/CODEX_3_NOTES_CALIBRATION.md
 
 Settle knob. XP decay next to IT decay. Late burn. SignalFlow as first-class. Claim path with evidence. MICRO overselling acknowledged. Burn-floor axiom yes/no. Box as for-profit intent. Leave 2.1 alone until then.

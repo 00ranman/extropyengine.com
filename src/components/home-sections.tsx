@@ -6,6 +6,7 @@ import {
   artistLinks,
   book,
   earlierEditions,
+  engineDag,
   engineGit,
   engineLoop,
   engineMath,
@@ -399,6 +400,20 @@ export function EngineSection() {
             <p key={p.slice(0, 24)}>{p}</p>
           ))}
         </div>
+      </div>
+
+      <div className="mx-auto mt-10 max-w-5xl border border-primary/16 px-5 py-6">
+        <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">{engineDag.kicker}</p>
+        <h3 className="font-display mt-2 text-xl tracking-[0.04em]">{engineDag.title}</h3>
+        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">{engineDag.lead}</p>
+        <ol className="mt-5 max-w-2xl space-y-3 text-sm leading-relaxed text-muted">
+          {engineDag.points.map((line, i) => (
+            <li key={line.slice(0, 28)} className="flex gap-3">
+              <span className="font-mono text-[11px] text-faint">{String(i + 1).padStart(2, "0")}</span>
+              <span>{line}</span>
+            </li>
+          ))}
+        </ol>
       </div>
 
       <div className="mx-auto mt-12 max-w-5xl">

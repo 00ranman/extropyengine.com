@@ -331,8 +331,12 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
         def: "Personal Signed Local Log. Append-only, hash-chained, yours. SignalFlow reads it. The mesh gets receipts, not your diary. Digital Autarky requires this.",
       },
       {
+        term: "DAG curator",
+        def: "Human-in-the-loop job: make the ledger navigable, factor new data, mark which slice of history should weight a new like-case. That work is entropy reduction. It mints XP. The graph feeding itself is the point.",
+      },
+      {
         term: "Digital Autarky",
-        def: "Intelligence, identity, and local context stay at the edge. The network is a handshake, a claim schema, and a DAG — not a supermind. Company login means company tether. Own hardware is how you stay unknown.",
+        def: "Intelligence, identity, and local context stay at the edge. The network is a handshake, a claim schema, and a DAG — not a supermind. Company login means company tether. Own hardware is how you stay unknown. Edge intelligence unveils only the ZKP the equation needs.",
       },
       {
         term: "DFAO",
@@ -466,7 +470,7 @@ export const openProblems: Problem[] = [
     section: "Measurement",
     hardness: "HARD",
     title: "Observer-Dependent Measurement",
-    body: "Entropy reduction is observer-relative. A kitchen looks clean to one person and disordered to another. Physical measurements (temperature, molecular arrangement) are more objective but don't capture all forms of meaningful entropy reduction (conceptual clarity, emotional regulation, social coordination). Where is the boundary?",
+    body: "A kitchen looks clean to one person and disordered to another. That is the opening condition, not the attractor. The bet is a weighted eight-domain DAG: like-cases stack, ZKPs unveil only what the equation needs, and a number that keeps surviving without negative feedback moves the needle less. Landauer is the claimed bridge for social/cognitive events (information erased has a heat floor) — still a bridge, not a lab joule for a quarrel. Unsolved: whether convergence of the graph is calibration of a physical quantity, or a folk taxonomy that got dense and stable.",
   },
   {
     section: "Measurement",
@@ -484,7 +488,7 @@ export const openProblems: Problem[] = [
     section: "Validation",
     hardness: "ACTIVE",
     title: "Micro Overselling and MACRO Coordination",
-    body: "A MICRO can puff a lawn. A MACRO that has to take those numbers as gospel will drift. That pressure is real. The answer on the table is not “people are honest.” It is SignalFlow proposing ΔS from task + duration + evidence on the DAG, two-party agreement, settle as a knob, and burn that can still land years later. Votes change the DFAO they are cast in. Only a PLANETARY vote hits the mesh, and that is supposed to be hard. Unsolved: whether nested defaults actually stop a popular MICRO from laundering a story upward.",
+    body: "A MICRO can puff a lawn. A MACRO that treats those numbers as gospel will drift. That pressure is real and is not denied. The stronger answer is not “people are honest.” It is the DAG as instrument: SignalFlow proposes ΔS, evidence hangs on the vertex, like-cases get referenced, DAG curators (paid in XP) keep the graph navigable, ZKPs keep the diary at the edge, settle/decay/late-burn still apply, votes stay in the DFAO. Unsolved: whether a dense graph of surviving interpretations is calibration, or a popular story with better footnotes. Also unsolved: purchased anonymized backlogs as training fuel vs contamination from the extractive systems that made them.",
   },
   {
     section: "Validation",

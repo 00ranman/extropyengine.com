@@ -473,6 +473,19 @@ export const engineMath = {
   ],
 } as const;
 
+export const engineDag = {
+  kicker: "The graph is the instrument",
+  title: "Subjectivity is the start, not the attractor",
+  lead: "The eight domains are a weighted vector, not eight sermons. A mediation and a mowed lawn do not share a constant. They share a DAG that gets denser. That is the claim. Overselling is the opening condition. Convergence is the bet.",
+  points: [
+    "Every closed loop hangs evidence and a provisional ΔS on a vertex with causal parents. Next time a similar fight, a similar lawn, the network has somewhere to look besides a vibe.",
+    "Edge intelligence unveils only the ZKP the equation needs. Nobody sits on the diary. Digital Autarky is how you get detail without a panopticon.",
+    "Landauer is the bridge, not a costume: information erased has a heat floor. Social and cognitive events are information events. The number is a weighted if-then across domains, fine-tuned as like-cases stack and survive without negative feedback.",
+    "Curating that graph is work. A DAG specialist who makes the ledger more navigable is reducing entropy and minting XP. Human in the loop is not a disclaimer. It is a job the protocol pays.",
+    "No extractive microtransaction at each hop. Transactionality is the loop itself. The machine talks to its own history. When interpretations of “this kind of fight” stop getting pushback, the needle moves less. That is calibration, not a cult of the founder — the founder has no privileged key.",
+  ],
+} as const;
+
 export const engineGit = [
   {
     status: "live" as const,
@@ -534,7 +547,7 @@ export const docsIndex = [
   {
     title: "Codex 3.0 notes",
     href: "/docs/CODEX_3_NOTES.md",
-    note: "Capture for the next Codex — XP decay vs IT, settle knob, late burn. 2.1 stays frozen.",
+    note: "Capture for the next Codex — XP decay vs IT, settle knob, late burn, DAG as instrument. 2.1 stays frozen.",
   },
   {
     title: "Extropy Codex v2.1",
