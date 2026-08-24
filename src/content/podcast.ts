@@ -13,6 +13,7 @@ export const podcast = {
   cover: "/podcast/cover.jpg",
   page: "/podcast",
   spotify: "https://open.spotify.com/show/7G9pK1dHFCam95qQlFAMNE",
+  youtube: "https://www.youtube.com/@Lladnaros/podcasts",
 } as const;
 
 export const subscribeApps = [
@@ -21,61 +22,63 @@ export const subscribeApps = [
     label: "Spotify",
     hint: "phone / desktop / web",
     href: podcast.spotify,
-    kind: "app" as const,
+    kind: "https" as const,
+  },
+  {
+    id: "youtube",
+    label: "YouTube",
+    hint: "YouTube / YouTube Music",
+    href: podcast.youtube,
+    kind: "https" as const,
   },
   {
     id: "apple",
     label: "Apple Podcasts",
-    hint: "iPhone / Mac",
-    href: `itpc://${hostPath}`,
-    kind: "app" as const,
+    hint: "copies RSS, then paste in the app",
+    href: `podcast://${hostPath}`,
+    kind: "scheme" as const,
   },
   {
     id: "pocketcasts",
     label: "Pocket Casts",
     hint: "iPhone / Android / web",
     href: `https://pca.st/subscribe?url=${encoded}`,
-    kind: "app" as const,
+    kind: "https" as const,
   },
   {
     id: "overcast",
     label: "Overcast",
     hint: "iPhone",
     href: `overcast://x-callback-url/add?url=${encoded}`,
-    kind: "app" as const,
+    kind: "scheme" as const,
   },
   {
     id: "antennapod",
     label: "AntennaPod",
     hint: "Android",
     href: `https://antennapod.org/deeplink/subscribe?url=${encoded}`,
-    kind: "app" as const,
+    kind: "https" as const,
   },
   {
     id: "addict",
     label: "Podcast Addict",
     hint: "Android",
     href: `podcastaddict://subscribe?url=${encoded}`,
-    kind: "app" as const,
+    kind: "scheme" as const,
   },
   {
     id: "castro",
     label: "Castro",
     hint: "iPhone",
     href: `castro://subscribe/${feedUrl}`,
-    kind: "app" as const,
+    kind: "scheme" as const,
   },
 ] as const;
 
 export const directorySubmit = [
   {
-    label: "Submit to YouTube",
-    href: "https://studio.youtube.com/",
-    note: "YouTube Studio → Content → Podcasts. Same RSS.",
-  },
-  {
-    label: "Submit to Apple",
+    label: "Submit to Apple (for a real listing)",
     href: "https://podcasters.apple.com/",
-    note: "Makes the official Apple listing. The iPhone button above works before that.",
+    note: "One-time. After they list it, the Apple button can go to podcasts.apple.com/id…",
   },
 ] as const;

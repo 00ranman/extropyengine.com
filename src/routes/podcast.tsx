@@ -32,13 +32,14 @@ function preferredIds() {
   const ua = navigator.userAgent;
   const apple = /iPhone|iPad|iPod|Macintosh/.test(ua);
   const android = /Android/.test(ua);
-  if (apple) return ["apple", "spotify", "overcast", "pocketcasts", "castro"];
-  if (android) return ["spotify", "pocketcasts", "antennapod", "addict"];
-  return ["spotify", "pocketcasts", "apple"];
+  if (apple) return ["apple", "spotify", "youtube", "overcast", "pocketcasts"];
+  if (android) return ["spotify", "youtube", "pocketcasts", "antennapod", "addict"];
+  return ["spotify", "youtube", "pocketcasts", "apple"];
 }
 
 function Subscribe() {
   const [copied, setCopied] = useState(false);
+  const [appleHelp, setAppleHelp] = useState(false);
   const [fav, setFav] = useState<string[]>([]);
 
   useEffect(() => {
@@ -55,6 +56,28 @@ function Subscribe() {
     }
   };
 
+  const onAppClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string, kind: string) => {
+    if (id === "apple") {
+      void navigator.clipboard.writeText(podcast.feedUrl).catch(() => {});
+      setAppleHelp(true);
+      const ua = navigator.userAgent;
+      const native = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && !/Mobile/.test(ua));
+      if (!native) e.preventDefault();
+      return;
+    }
+    if (kind === "scheme") {
+      const ua = navigator.userAgent;
+      const ios = /iPhone|iPad|iPod/.test(ua);
+      const android = /Android/.test(ua);
+      if (!ios && !android) {
+        e.preventDefault();
+        void navigator.clipboard.writeText(podcast.feedUrl).catch(() => {});
+        setCopied(true);
+        window.setTimeout(() => setCopied(false), 1800);
+      }
+    }
+  };
+
   const ranked = [...subscribeApps].sort((a, b) => {
     const ia = fav.indexOf(a.id);
     const ib = fav.indexOf(b.id);
@@ -65,15 +88,19 @@ function Subscribe() {
     <div id="subscribe" className="space-y-4">
       <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">Add this show</p>
       <p>
-        Tap the app you actually use. It should open with this feed already loaded. If nothing
-        happens, the app isn’t installed — copy the RSS and paste it in the app’s “add by URL.”
+        Spotify and YouTube are real pages — tap and they open. Apple doesn’t list a show until you
+        submit it once, so that button copies the RSS. Paste it in Podcasts → Library → Follow a
+        Show by URL.
       </p>
       <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
         {ranked.map((app) => (
           <a
             key={app.id}
             href={app.href}
+            target={app.kind === "https" ? "_blank" : undefined}
+            rel={app.kind === "https" ? "noreferrer" : undefined}
             className="flex items-baseline justify-between gap-3 border border-primary/35 px-4 py-3 font-mono text-[12px] tracking-[0.14em] text-primary uppercase transition-colors hover:border-primary hover:bg-primary hover:text-ink"
+            onClick={(e) => onAppClick(e, app.id, app.kind)}
           >
             <span>{app.label}</span>
             <span className="text-[9px] tracking-[0.16em] text-dim normal-case">{app.hint}</span>
@@ -90,9 +117,18 @@ function Subscribe() {
           </span>
         </button>
       </div>
+      {appleHelp ? (
+        <p className="border border-primary/30 bg-primary/8 px-4 py-3 text-sm text-fg">
+          RSS is on the clipboard. Open <strong className="text-primary">Apple Podcasts</strong> →
+          Library → the ••• menu → Follow a Show by URL → paste. That’s the only way it works until
+          Apple lists the show. Submit once at podcasters.apple.com and we can swap this for a real
+          link.
+        </p>
+      ) : null}
       <p className="text-sm text-dim">
-        Spotify is submitted. The show page may sit empty for up to a day while they ingest the
-        feed. YouTube and Apple still need a one-time submit if you want official listings there.
+        Spotify may sit empty for a day while they ingest. YouTube lives on @Lladnaros. If YouTube
+        gave you a playlist URL different from the channel podcasts tab, send it and we’ll pin that
+        instead.
       </p>
       <div className="flex flex-wrap gap-2">
         {directorySubmit.map((d) => (
