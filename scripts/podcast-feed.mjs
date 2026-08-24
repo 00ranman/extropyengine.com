@@ -45,6 +45,16 @@ function xml(s) {
   });
 }
 
+function appleText(s) {
+  return String(s)
+    .replace(/ΔS/g, "delta S")
+    .replace(/Δ/g, "delta ")
+    .replace(/[·•]/g, " ")
+    .replace(/[—–]/g, "-")
+    .replace(/[’‘]/g, "'")
+    .replace(/[“”]/g, '"');
+}
+
 function stemOf(name) {
   return name.replace(/\.(mp3|m4a|aac)$/i, "");
 }
@@ -68,7 +78,10 @@ function pubFromName(name, mtime) {
 }
 
 function rfc2822(d) {
-  return d.toUTCString();
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const pad = (n) => String(n).padStart(2, "0");
+  return `${days[d.getUTCDay()]}, ${d.getUTCDate()} ${months[d.getUTCMonth()]} ${d.getUTCFullYear()} ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())} +0000`;
 }
 
 function durationOf(file) {
@@ -146,11 +159,10 @@ export function renderFeed(episodes = scanEpisodes()) {
       const season = ep.season != null ? `\n      <itunes:season>${xml(ep.season)}</itunes:season>` : "";
       const episode =
         ep.episode != null ? `\n      <itunes:episode>${xml(ep.episode)}</itunes:episode>` : "";
-      const summary = ep.summary
-        ? `\n      <description>${xml(ep.summary)}</description>\n      <itunes:summary>${xml(ep.summary)}</itunes:summary>`
-        : `\n      <description>${xml(ep.title)}</description>`;
+      const body = xml(appleText(ep.summary || ep.title));
+      const summary = `\n      <description>${body}</description>\n      <itunes:summary>${body}</itunes:summary>`;
       return `    <item>
-      <title>${xml(ep.title)}</title>${summary}
+      <title>${xml(appleText(ep.title))}</title>${summary}
       <pubDate>${xml(ep.pubDate)}</pubDate>
       <guid isPermaLink="false">${xml(ep.guid)}</guid>
       <link>${xml(abs(m.link))}</link>
@@ -165,15 +177,16 @@ export function renderFeed(episodes = scanEpisodes()) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
   xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
   xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>${xml(m.title)}</title>
     <link>${xml(abs(m.link))}</link>
     <language>${xml(m.language)}</language>
-    <copyright>© ${new Date().getUTCFullYear()} ${xml(m.author)}</copyright>
-    <description>${xml(m.description)}</description>
+    <copyright>&#169; ${new Date().getUTCFullYear()} ${xml(m.author)}</copyright>
+    <description>${xml(appleText(m.description))}</description>
     <itunes:author>${xml(m.author)}</itunes:author>
-    <itunes:summary>${xml(m.description)}</itunes:summary>
+    <itunes:summary>${xml(appleText(m.description))}</itunes:summary>
     <itunes:explicit>${m.explicit ? "true" : "false"}</itunes:explicit>
     <itunes:owner>
       <itunes:name>${xml(m.author)}</itunes:name>

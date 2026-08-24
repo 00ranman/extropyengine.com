@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
   xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
   xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Extropy Engine</title>
     <link>https://extropyengine.com/podcast</link>
     <language>en-us</language>
-    <copyright>© 2026 Randall Gossett</copyright>
+    <copyright>&#169; 2026 Randall Gossett</copyright>
     <description>Talk, field notes, and loops from Randall Gossett. Entropy reduction. Not a newsletter.</description>
     <itunes:author>Randall Gossett</itunes:author>
     <itunes:summary>Talk, field notes, and loops from Randall Gossett. Entropy reduction. Not a newsletter.</itunes:summary>
@@ -20,7 +21,7 @@
       <itunes:category text="Philosophy"/>
     </itunes:category>
     <itunes:type>episodic</itunes:type>
-    <lastBuildDate>Mon, 24 Aug 2026 07:09:01 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 07:14:54 +0000</lastBuildDate>
     <atom:link href="https://extropyengine.com/podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://extropyengine.com/podcast/cover.jpg</url>
@@ -31,7 +32,7 @@
       <title>Escaping the recursive loop of human control</title>
       <description>Closing the Loop as systems audit. Determinism vs the glitch. Monkey middleware, MKUltra-to-algorithm, compression warfare, burn the arc, God as entropy reduced by love, homelessness as dead feedback. Are you writing the code or is it writing you?</description>
       <itunes:summary>Closing the Loop as systems audit. Determinism vs the glitch. Monkey middleware, MKUltra-to-algorithm, compression warfare, burn the arc, God as entropy reduced by love, homelessness as dead feedback. Are you writing the code or is it writing you?</itunes:summary>
-      <pubDate>Mon, 24 Aug 2026 06:20:00 GMT</pubDate>
+      <pubDate>Mon, 24 Aug 2026 06:20:00 +0000</pubDate>
       <guid isPermaLink="false">49ddc920a8c320c0ad29415051fa1951cc7e50a7</guid>
       <link>https://extropyengine.com/podcast</link>
       <enclosure url="https://extropyengine.com/podcast/2026-08-24-escaping-the-recursive-loop-of-human-control.mp3" length="14788682" type="audio/mpeg"/>
@@ -46,7 +47,7 @@
       <title>The cold math of mild spanking</title>
       <description>NotebookLM on the Mild Spanking Efficiency paper. Person-as-DAG, severity lock, XP vs settlement time, confounders (severity, genetics, child-evoked), Sweden 1979. Exploration of the argument, not an endorsement.</description>
       <itunes:summary>NotebookLM on the Mild Spanking Efficiency paper. Person-as-DAG, severity lock, XP vs settlement time, confounders (severity, genetics, child-evoked), Sweden 1979. Exploration of the argument, not an endorsement.</itunes:summary>
-      <pubDate>Mon, 24 Aug 2026 06:00:00 GMT</pubDate>
+      <pubDate>Mon, 24 Aug 2026 06:00:00 +0000</pubDate>
       <guid isPermaLink="false">80c2b904c360945c1c81b6d4baf41d5f6de9c329</guid>
       <link>https://extropyengine.com/podcast</link>
       <enclosure url="https://extropyengine.com/podcast/2026-08-24-the-cold-math-of-mild-spanking.mp3" length="31023888" type="audio/mpeg"/>
@@ -61,7 +62,7 @@
       <title>The Extropy Engine brings fungus, not fire</title>
       <description>The whole stack in one pass: Unfuck the World, Lladnaros as systems theory smuggled as sound, God as direction, LocalFlow, EP = XP × L, no fiat on-ramp, DAG, 30-day slash, IT decay, bring-your-own-machine. Fire vs mycelium.</description>
       <itunes:summary>The whole stack in one pass: Unfuck the World, Lladnaros as systems theory smuggled as sound, God as direction, LocalFlow, EP = XP × L, no fiat on-ramp, DAG, 30-day slash, IT decay, bring-your-own-machine. Fire vs mycelium.</itunes:summary>
-      <pubDate>Mon, 24 Aug 2026 05:40:00 GMT</pubDate>
+      <pubDate>Mon, 24 Aug 2026 05:40:00 +0000</pubDate>
       <guid isPermaLink="false">becd8002e4c96480072b94e2cd6f7ab1d238c467</guid>
       <link>https://extropyengine.com/podcast</link>
       <enclosure url="https://extropyengine.com/podcast/2026-08-24-the-extropy-engine-brings-fungus-not-fire.mp3" length="23902177" type="audio/mpeg"/>
@@ -74,9 +75,9 @@
     </item>
     <item>
       <title>Can thermodynamic entropy replace economic value?</title>
-      <description>Landauer, six-token split, W·E as hidden politics, glass of water in the desert, R as rarity not reputation, 30-day window, corporate capture via fiat-paid validators, 63 gaps. Physics as gold standard vs subjective utility.</description>
-      <itunes:summary>Landauer, six-token split, W·E as hidden politics, glass of water in the desert, R as rarity not reputation, 30-day window, corporate capture via fiat-paid validators, 63 gaps. Physics as gold standard vs subjective utility.</itunes:summary>
-      <pubDate>Mon, 24 Aug 2026 05:20:00 GMT</pubDate>
+      <description>Landauer, six-token split, W E as hidden politics, glass of water in the desert, R as rarity not reputation, 30-day window, corporate capture via fiat-paid validators, 63 gaps. Physics as gold standard vs subjective utility.</description>
+      <itunes:summary>Landauer, six-token split, W E as hidden politics, glass of water in the desert, R as rarity not reputation, 30-day window, corporate capture via fiat-paid validators, 63 gaps. Physics as gold standard vs subjective utility.</itunes:summary>
+      <pubDate>Mon, 24 Aug 2026 05:20:00 +0000</pubDate>
       <guid isPermaLink="false">af29c7fb87b4952dee5f3942ad6bc529b9d94a6d</guid>
       <link>https://extropyengine.com/podcast</link>
       <enclosure url="https://extropyengine.com/podcast/2026-08-24-can-thermodynamic-entropy-replace-economic-value.mp3" length="14277727" type="audio/mpeg"/>
@@ -89,9 +90,9 @@
     </item>
     <item>
       <title>Replacing financial extraction with entropy reduction</title>
-      <description>Why price selects for toll booths. XP from ΔS × reputation × falsifiability. DFAO as layer-zero, DAG vs chain, two-person minimum, clap/convergence vertex, blind SignalFlow routing, sensors as evidence not mint, HomeFlow hides the math.</description>
-      <itunes:summary>Why price selects for toll booths. XP from ΔS × reputation × falsifiability. DFAO as layer-zero, DAG vs chain, two-person minimum, clap/convergence vertex, blind SignalFlow routing, sensors as evidence not mint, HomeFlow hides the math.</itunes:summary>
-      <pubDate>Mon, 24 Aug 2026 05:00:00 GMT</pubDate>
+      <description>Why price selects for toll booths. XP from delta S × reputation × falsifiability. DFAO as layer-zero, DAG vs chain, two-person minimum, clap/convergence vertex, blind SignalFlow routing, sensors as evidence not mint, HomeFlow hides the math.</description>
+      <itunes:summary>Why price selects for toll booths. XP from delta S × reputation × falsifiability. DFAO as layer-zero, DAG vs chain, two-person minimum, clap/convergence vertex, blind SignalFlow routing, sensors as evidence not mint, HomeFlow hides the math.</itunes:summary>
+      <pubDate>Mon, 24 Aug 2026 05:00:00 +0000</pubDate>
       <guid isPermaLink="false">2950e799638174b5f001e980e0d33b82345494d5</guid>
       <link>https://extropyengine.com/podcast</link>
       <enclosure url="https://extropyengine.com/podcast/2026-08-24-replacing-financial-extraction-with-entropy-reduction.mp3" length="26897377" type="audio/mpeg"/>
@@ -104,9 +105,9 @@
     </item>
     <item>
       <title>Thermodynamic governance and the Extropy Engine</title>
-      <description>Genius vs crank on v3.1. ΔS as value vs Goodhart. Digital autarky, SIIR, Maya the lawyer, echo-chamber DFAOs, swarm obscuration, waste as latent coherence, God as emergent entropy reduction. Both sides grant the mechanics; they split on the soul.</description>
-      <itunes:summary>Genius vs crank on v3.1. ΔS as value vs Goodhart. Digital autarky, SIIR, Maya the lawyer, echo-chamber DFAOs, swarm obscuration, waste as latent coherence, God as emergent entropy reduction. Both sides grant the mechanics; they split on the soul.</itunes:summary>
-      <pubDate>Mon, 24 Aug 2026 04:40:00 GMT</pubDate>
+      <description>Genius vs crank on v3.1. delta S as value vs Goodhart. Digital autarky, SIIR, Maya the lawyer, echo-chamber DFAOs, swarm obscuration, waste as latent coherence, God as emergent entropy reduction. Both sides grant the mechanics; they split on the soul.</description>
+      <itunes:summary>Genius vs crank on v3.1. delta S as value vs Goodhart. Digital autarky, SIIR, Maya the lawyer, echo-chamber DFAOs, swarm obscuration, waste as latent coherence, God as emergent entropy reduction. Both sides grant the mechanics; they split on the soul.</itunes:summary>
+      <pubDate>Mon, 24 Aug 2026 04:40:00 +0000</pubDate>
       <guid isPermaLink="false">d677d62c5463844d1d2f7c871ec4bf248bb86324</guid>
       <link>https://extropyengine.com/podcast</link>
       <enclosure url="https://extropyengine.com/podcast/2026-08-24-thermodynamic-governance-and-the-extropy-engine.mp3" length="15177384" type="audio/mpeg"/>
@@ -119,9 +120,9 @@
     </item>
     <item>
       <title>Replacing politics with thermodynamics</title>
-      <description>NotebookLM pitch of the Extropy Engine as a civilizational OS: consensus as the bug, XP as ΔS over causal-loop speed, SignalFlow as invisible validation, Extropian speech, Universal Times, reputation decay, adversarial convergence, DFAO. Blueprint, not manifesto.</description>
-      <itunes:summary>NotebookLM pitch of the Extropy Engine as a civilizational OS: consensus as the bug, XP as ΔS over causal-loop speed, SignalFlow as invisible validation, Extropian speech, Universal Times, reputation decay, adversarial convergence, DFAO. Blueprint, not manifesto.</itunes:summary>
-      <pubDate>Mon, 24 Aug 2026 04:20:00 GMT</pubDate>
+      <description>NotebookLM pitch of the Extropy Engine as a civilizational OS: consensus as the bug, XP as delta S over causal-loop speed, SignalFlow as invisible validation, Extropian speech, Universal Times, reputation decay, adversarial convergence, DFAO. Blueprint, not manifesto.</description>
+      <itunes:summary>NotebookLM pitch of the Extropy Engine as a civilizational OS: consensus as the bug, XP as delta S over causal-loop speed, SignalFlow as invisible validation, Extropian speech, Universal Times, reputation decay, adversarial convergence, DFAO. Blueprint, not manifesto.</itunes:summary>
+      <pubDate>Mon, 24 Aug 2026 04:20:00 +0000</pubDate>
       <guid isPermaLink="false">c7dfca8ac898e80e41aa3946a1bdce8a86a589d7</guid>
       <link>https://extropyengine.com/podcast</link>
       <enclosure url="https://extropyengine.com/podcast/2026-08-24-replacing-politics-with-thermodynamics.mp3" length="19674102" type="audio/mpeg"/>
@@ -134,9 +135,9 @@
     </item>
     <item>
       <title>Mapping human interactions to entropy reduction</title>
-      <description>A NotebookLM debate on the Extropy Engine. Is mapping human work onto verified ΔS — via a local DAG, no fiat on-ramp, and a proxy that gets less wrong as the graph fills — a rigorous answer to broken rewards, or a category error that measures the exhaust of a ride instead of the reason for it? Codex v2.1, the mint formula, LocalFlow, DFAO scale, standing unbundled from XP.</description>
-      <itunes:summary>A NotebookLM debate on the Extropy Engine. Is mapping human work onto verified ΔS — via a local DAG, no fiat on-ramp, and a proxy that gets less wrong as the graph fills — a rigorous answer to broken rewards, or a category error that measures the exhaust of a ride instead of the reason for it? Codex v2.1, the mint formula, LocalFlow, DFAO scale, standing unbundled from XP.</itunes:summary>
-      <pubDate>Mon, 24 Aug 2026 04:00:00 GMT</pubDate>
+      <description>A NotebookLM debate on the Extropy Engine. Is mapping human work onto verified delta S - via a local DAG, no fiat on-ramp, and a proxy that gets less wrong as the graph fills - a rigorous answer to broken rewards, or a category error that measures the exhaust of a ride instead of the reason for it? Codex v2.1, the mint formula, LocalFlow, DFAO scale, standing unbundled from XP.</description>
+      <itunes:summary>A NotebookLM debate on the Extropy Engine. Is mapping human work onto verified delta S - via a local DAG, no fiat on-ramp, and a proxy that gets less wrong as the graph fills - a rigorous answer to broken rewards, or a category error that measures the exhaust of a ride instead of the reason for it? Codex v2.1, the mint formula, LocalFlow, DFAO scale, standing unbundled from XP.</itunes:summary>
+      <pubDate>Mon, 24 Aug 2026 04:00:00 +0000</pubDate>
       <guid isPermaLink="false">3ebf4b01f523b42a1e4135b3eb9032d9fb07004f</guid>
       <link>https://extropyengine.com/podcast</link>
       <enclosure url="https://extropyengine.com/podcast/2026-08-24-mapping-human-interactions-to-entropy-reduction.mp3" length="15763258" type="audio/mpeg"/>
