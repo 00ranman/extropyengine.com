@@ -29,6 +29,7 @@ export const startBar = {
     { label: "Physics", href: "/start/physics" },
   ],
   extras: [
+    { label: "FAQ", href: "/faq" },
     { label: "DFAO", href: "/dfao" },
     { label: "Open Problems", href: "/open-problems" },
     { label: "Proof Layers", href: "/proof-layers" },

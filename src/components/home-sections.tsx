@@ -436,6 +436,9 @@ export function EngineSection() {
           ))}
         </ol>
         <p className="mt-4 flex flex-wrap gap-x-4 gap-y-1 font-mono text-[11px] tracking-[0.08em]">
+          <Link to="/faq" className="text-primary hover:underline">
+            FAQ →
+          </Link>
           <Link to="/glossary" hash="not-a-metaphor" className="text-primary hover:underline">
             Not a metaphor →
           </Link>

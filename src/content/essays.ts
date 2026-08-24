@@ -423,6 +423,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
     entries: [
       {
         term: "XP = R × F × ΔS × (w · E) × log(1/Tₛ)",
+        id: "xp-formula",
         def: "Canonical mint, v3.1.2, packages/xp-formula. Reputation never enters the XP formula. This is the thing that runs. The floor below is the irreducible form of this line — a compression, not a second theory.",
       },
       {

@@ -97,6 +97,9 @@ export function EssayPage({ essay }: { essay: Essay }) {
         <Link to="/start/physics" className="text-dim hover:text-primary">
           Physics
         </Link>
+        <Link to="/faq" className="text-dim hover:text-primary">
+          FAQ
+        </Link>
         <Link to="/glossary" className="text-dim hover:text-primary">
           Glossary
         </Link>
