@@ -172,6 +172,7 @@ export function MusicSection() {
             {link.label}
           </Btn>
         ))}
+        <Btn href="/podcast">Podcast RSS</Btn>
       </div>
     </section>
   );
@@ -512,6 +513,10 @@ export function FollowSection() {
         lad-narrows,{" "}
         <a href="/say" className="text-primary hover:underline">
           teach the phone the names
+        </a>
+        . Podcast RSS lives at{" "}
+        <a href="/podcast" className="text-primary hover:underline">
+          /podcast
         </a>
         .
       </p>

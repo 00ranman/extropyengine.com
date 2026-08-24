@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Extropy Engine</title>
+    <link>https://extropyengine.com/podcast</link>
+    <language>en-us</language>
+    <copyright>© 2026 Randall Gossett</copyright>
+    <description>Talk, field notes, and loops from Randall Gossett. Entropy reduction. Not a newsletter.</description>
+    <itunes:author>Randall Gossett</itunes:author>
+    <itunes:summary>Talk, field notes, and loops from Randall Gossett. Entropy reduction. Not a newsletter.</itunes:summary>
+    <itunes:explicit>true</itunes:explicit>
+    <itunes:owner>
+      <itunes:name>Randall Gossett</itunes:name>
+      <itunes:email>podcast@extropyengine.com</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
+    <itunes:category text="Society &amp; Culture">
+      <itunes:category text="Philosophy"/>
+    </itunes:category>
+    <itunes:type>episodic</itunes:type>
+    <atom:link href="https://extropyengine.com/podcast/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://extropyengine.com/podcast/cover.jpg</url>
+      <title>Extropy Engine</title>
+      <link>https://extropyengine.com/podcast</link>
+    </image>
+
+  </channel>
+</rss>

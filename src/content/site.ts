@@ -17,6 +17,7 @@ export const nav = [
   { label: "Engine", href: "/#engine" },
   { label: "Connect", href: "/#follow" },
   { label: "Universal Times", href: "/universaltimes" },
+  { label: "Podcast", href: "/podcast" },
 ] as const;
 
 export const startBar = {
@@ -33,6 +34,7 @@ export const startBar = {
     { label: "Proof Layers", href: "/proof-layers" },
     { label: "MVT", href: "/mvt" },
     { label: "Say the names", href: "/say" },
+    { label: "Podcast", href: "/podcast" },
   ],
 } as const;
 
