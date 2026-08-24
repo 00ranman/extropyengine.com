@@ -28,7 +28,7 @@ export const startBar = {
     { label: "Physics", href: "/start/physics" },
   ],
   extras: [
-    { label: "Glossary", href: "/glossary" },
+    { label: "DFAO", href: "/dfao" },
     { label: "Open Problems", href: "/open-problems" },
     { label: "Proof Layers", href: "/proof-layers" },
     { label: "MVT", href: "/mvt" },
@@ -465,7 +465,7 @@ export const engineGit = [
   {
     status: "concept" as const,
     name: "DFAO registry",
-    note: "MICRO (2–7 people) up. Specified. Implementation incremental. A task board with confirmation is already a DFAO.",
+    note: "Scale labels NANO → PLANETARY. Bands are suggestions, not fences. Fractal nesting. Implementation incremental.",
     href: "https://github.com/00ranman/extropy-engine/tree/main/packages/dfao-registry",
   },
   {
@@ -490,9 +490,9 @@ export const socials = [
 
 export const docsIndex = [
   {
-    title: "Closing the Loop",
-    href: "/papers/closing-the-loop",
-    note: "Systems audit of the Lladnaros catalog — recast of Signal, Loop, and Story (August 2026)",
+    title: "DFAO",
+    href: "/dfao",
+    note: "Decentralized Fractal Autonomous Organization — scales, phases, mechanics. Seven is not a law.",
   },
   {
     title: "Extropy Codex v2.1",

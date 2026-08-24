@@ -401,17 +401,25 @@ docker compose up --build -d
         </div>
         <div className="border border-primary/16 px-5 py-6">
           <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">A DFAO</p>
-          <h3 className="font-display mt-2 text-xl tracking-[0.04em]">Two to seven people</h3>
+          <h3 className="font-display mt-2 text-xl tracking-[0.04em]">
+            Decentralized Fractal Autonomous Organization
+          </h3>
           <p className="mt-3 text-sm leading-relaxed text-muted">
-            Post tasks. Confirm when they land. That is a MICRO DFAO. Validators are just the people
-            doing the work. You do not wait for a priesthood. Density in a zone is the actual
-            constraint. Start small, locally, with something boring.
+            Same loop at every size: post, do, confirm. NANO is one person. MICRO is a team. MESO a
+            community. MACRO a city. PLANETARY the mesh. Those are labels for a suggested rule set,
+            not a headcount cap. Eight people is still a team. Nest when you grow a second crew.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-dim">
-            The node kit is a prototype idea for the rest: a modular box — compute, signed local
-            log, optional sensor — that plugs in so you do not have to babysit Docker. Not shipping.
-            Not a drop. If you can run the commands, you do not need the box.
+            The node kit is a prototype idea for people who should not have to babysit Docker:
+            modular box, signed local log, optional sensor. Not shipping. If you can run the
+            commands, you do not need the box.
           </p>
+          <a
+            href="/dfao"
+            className="mt-5 inline-block font-mono text-[11px] tracking-[0.2em] text-primary uppercase hover:underline"
+          >
+            Scales and mechanics →
+          </a>
         </div>
       </div>
 
@@ -420,6 +428,7 @@ docker compose up --build -d
           Monorepo
         </Btn>
         <Btn href="/docs/Extropy_Codex_v2.1_Comprehensive.pdf">Codex v2.1</Btn>
+        <Btn href="/dfao">DFAO</Btn>
         <Btn href="/open-problems">Open problems</Btn>
       </div>
     </section>

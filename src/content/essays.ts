@@ -210,7 +210,7 @@ export const essays: Record<string, Essay> = {
       { type: "h2", text: "The DFAO Model" },
       {
         type: "p",
-        text: "The Extropy Engine proposes a different governance architecture: the Decentralized Feedback-Aware Organization (DFAO). Instead of static hierarchies with proxy metrics, DFAOs use:",
+        text: "The Extropy Engine proposes a different governance architecture: the Decentralized Fractal Autonomous Organization (DFAO). Fractal: a DFAO at one scale is made of DFAOs at the scale below. Same confirmation loop. Different default knobs. Instead of static hierarchies with proxy metrics, DFAOs use:",
       },
       {
         type: "ol",
@@ -219,6 +219,7 @@ export const essays: Record<string, Essay> = {
           "Adaptive feedback loops — governance rules that automatically adjust when entropy metrics diverge from mission targets.",
           "Role fluidity — authority flows to whoever is demonstrably reducing entropy, not whoever holds a title.",
           "Falsifiable mandates — every policy has explicit failure conditions. If the conditions are met, the policy auto-sunsets.",
+          "Scale labels, not fences — NANO, MICRO, MESO, MACRO, PLANETARY. Suggested rule sets for a typical size. Crossing seven people does not eject you from MICRO.",
         ],
       },
       { type: "h2", text: "Where This Can Fail" },
@@ -229,7 +230,7 @@ export const essays: Record<string, Essay> = {
       { type: "h2", text: "The Invitation" },
       {
         type: "p",
-        text: "If you work inside an institution and feel the drift, this framework gives you language and architecture to name it and propose structural alternatives. You don't need to adopt the whole system. Start by asking: what would our organization look like if we measured actual entropy reduction instead of proxy metrics?",
+        text: "If you work inside an institution and feel the drift, this framework gives you language and architecture to name it and propose structural alternatives. You don't need to adopt the whole system. Start by asking: what would our organization look like if we measured actual entropy reduction instead of proxy metrics? Full scale table: /dfao.",
       },
     ],
   },
@@ -320,6 +321,10 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "LocalFlow",
         def: "The current bootstrap and validator solution. A free local driver/errand DFAO: post a task, someone nearby does it, you confirm. That confirmation closes the loop and mints provisional XP. Users never see protocol terms. Remaining constraint is subscriber density in a zone, not a validator priesthood.",
+      },
+      {
+        term: "DFAO",
+        def: "Decentralized Fractal Autonomous Organization. Not “feedback-aware.” A DFAO at one scale is made of DFAOs at the scale below. Same loop (post, do, confirm). Scale labels — NANO, MICRO, MESO, MACRO, PLANETARY — are suggested rule sets, not membership caps. Seven is not a law.",
       },
     ],
   },
@@ -475,7 +480,7 @@ export const openProblems: Problem[] = [
     section: "Governance",
     hardness: "ACTIVE",
     title: "DFAO Power Concentration",
-    body: "If authority flows to top entropy reducers, does this create a new elite that entrenches itself? The framework needs anti-concentration mechanisms that prevent meritocratic capture. Current approach: decay functions on accumulated influence, mandatory role rotation at threshold levels.",
+    body: "If authority flows to top entropy reducers, does this create a new elite that entrenches itself? Decay on influence and role rotation are the current approach. Fractal scale is the other: a MACRO that tries to act like a MICRO chat will choke; a MICRO that pretends to be PLANETARY will capture. Defaults change with scale. Caps do not. Unsolved: whether nested DFAOs actually prevent concentration or just hide it one layer down.",
   },
   {
     section: "Governance",
