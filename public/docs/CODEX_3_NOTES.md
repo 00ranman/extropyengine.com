@@ -65,6 +65,20 @@ Do not mash this with CAT levels or reputation titles. Those are credentials. Re
 
 https://github.com/00ranman/extropy-engine/blob/main/docs/CODEX_3_NOTES_ACCESS.md
 
+## Play, seasons, roles
+
+Public ladders are allowed as **play**. Not as power. A board that cannot buy IT, un-burn, or rewrite a knob is a skin. Opt-in per DFAO. No PLANETARY crown.
+
+Soulbound marks (Nobel-shaped): display, don’t vote, don’t mint. If it gets a floor price, it failed.
+
+Seasons stay accounting + optional skins. The diplomacy-season idea is probably a bad one — people play the season instead of the task. Don’t wipe XP.
+
+Roles: you keep showing up where you’re depended on. Trust occupies the seat. IT decay empties it if you vanish. Votes remain for knobs, not for a seasonal election.
+
+Immersion test: still worth doing if the cosmetics are off? If no, it’s extracting.
+
+https://github.com/00ranman/extropy-engine/blob/main/docs/CODEX_3_NOTES_PLAY.md
+
 ## What 3.0 has to actually write
 
-Settle knob. XP decay next to IT decay. Late burn. SignalFlow as first-class. Claim path with evidence. MICRO overselling acknowledged. DAG as instrument. Burn-floor axiom yes/no. Box as for-profit intent. Access band as ZKP, not a ladder. Leave 2.1 alone until then.
+Settle knob. XP decay next to IT decay. Late burn. SignalFlow as first-class. Claim path with evidence. MICRO overselling acknowledged. DAG as instrument. Burn-floor axiom yes/no. Box as for-profit intent. Access band as ZKP (display default off). Play boards opt-in, no power. Soulbound marks. Seasons ≠ diplomacy. Roles from showing up; votes for knobs. Immersion test. Leave 2.1 alone until then.
