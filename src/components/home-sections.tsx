@@ -445,6 +445,12 @@ export function EngineSection() {
           <Link to="/glossary" hash="late-mint" className="text-primary hover:underline">
             Late mint →
           </Link>
+          <Link to="/glossary" hash="citation-gated" className="text-primary hover:underline">
+            Citation-gated →
+          </Link>
+          <Link to="/glossary" hash="late-burn" className="text-primary hover:underline">
+            Late burn →
+          </Link>
         </p>
       </div>
 

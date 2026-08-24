@@ -305,7 +305,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "Bits-equivalent",
         id: "bits-equivalent",
-        def: "The conversion the Engine actually means. A lawn, a mediation, a trade deal, a negotiation — information events. Landauer: erasing information has a heat floor. You do not need a frozen joule for “mowed.” You need a stand-in in bits (or a normalized scalar treated as bits-equivalent) that can be updated when new measurements land. Equivocation is possible: Shannon bits, thermodynamic entropy, and the English word “order” are not the same object. The proxy is how you live with that without pretending you found a constant. Not a metaphor. Not a poem about tidiness.",
+        def: "The conversion the Engine actually means. A lawn, a mediation, a trade deal — information events. Landauer: erasing information has a heat floor. You do not need a frozen joule for “mowed.” You need a stand-in in bits (or a normalized scalar treated as bits-equivalent) that can be updated when new measurements land. Equivocation is possible: Shannon bits, thermodynamic entropy, and the English word “order” are not the same object. The proxy is how you live with that without pretending you found a constant. For a fight: SignalFlow plus evidence (duration, who confirms, whether it recurs) propose a provisional bits-equivalent. You do not score yourself. The other side of the loop has to agree. That output hits the mint formula. Not a thermometer in the room. Not a validator caste taking a tenth. Not a metaphor. Not a poem about tidiness.",
       },
       {
         term: "Not a metaphor",
@@ -453,7 +453,17 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "Late mint",
         id: "late-mint",
-        def: "A closed loop is not the last word. If later domains converge on a higher or lower ΔS — a student becomes president and traces it to a teacher; a deal that looked cheap poisons a basin — the DAG can mint into or burn the original vertex. Settled is not sacred. Retroactive revalidation is what an audit system that does not stop is for. More cross-reference, more signal, the proxy moves. That is not a rewrite of physics. It is the graph catching up.",
+        def: "A closed loop is not the last word. If later domains converge on a higher or lower ΔS — a student becomes president and traces it to a teacher; a deal that looked cheap poisons a basin — the DAG can mint into or burn the original vertex. Settled is not sacred. The delta of the proxy moves, not a second full paycheck for existing. Retroactive revalidation is what an audit system that does not stop is for.",
+      },
+      {
+        term: "Citation-gated credit",
+        id: "citation-gated",
+        def: "The graph does not walk the light cone. Infinite downstream is a story about the universe, not a query the protocol runs. Late mint only fires if a new vertex exists that names causal parents and hangs evidence — the autobiography that cites the teacher, not a crawler assigning every butterfly. No citation, no edge, no XP. DAG curators keep that from becoming a hairball. How much of a later ΔS flows back how many hops is a knob for Codex 3.0, not a frozen fraction. Bound: asserted edges only, proxy delta only, confirm path still applies.",
+      },
+      {
+        term: "Late burn",
+        id: "late-burn",
+        def: "Same machine as late mint, the other direction. If the president is later a disaster and the “turnaround” enabled harm, the teacher’s earlier XP can burn — if the new evidence holds. No expiry. Five days or thirty years. Direction is symmetric: add or destroy. Magnitude and difficulty are knobs; a ratchet that only adds is a church. False late-burn is itself a claim. It can burn the accuser. Decay already eats standing XP on a schedule either way.",
       },
       {
         term: "The glass of water",

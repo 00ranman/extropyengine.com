@@ -51,6 +51,14 @@ Landauer is the claimed conversion, not a costume: information erased has a heat
 
 **Late mint:** a closed loop can still receive XP (or burn) when later domains converge — teacher whose student later traces the turnaround. Settled is not the last word. Retroactive revalidation is the audit not stopping.
 
+### Kimi’s three questions (24 Aug 2026) — answer, don’t dodge
+
+1. **Combinatorial explosion / teacher → president.** The protocol does not walk the light cone. Late mint is citation-gated: a new vertex has to exist that names causal parents and hangs evidence. No citation, no edge, no XP. Infinite downstream is cosmology, not a query. Curators exist because the hairball is a real failure mode. How much of a later ΔS flows back how many hops is a 3.0 knob — do not freeze a fraction. Bound: asserted edges only, proxy *delta* only (not a second full paycheck), confirm path still applies.
+
+2. **Symmetric burn.** Yes. Late mint and late burn are the same machine. Disaster-president can burn the teacher’s earlier XP if the new evidence holds. No expiry. A ratchet that only adds is a church. False late-burn is a claim; it can burn the accuser. Whether burn should be *harder* than mint (griefing) is a knob, not an axiom yet. Decay already eats standing XP either way.
+
+3. **Bits-equivalent for a fight.** Not a thermometer. Not a 1/10 validator caste — that is not in the canon. SignalFlow + PSLL + evidence propose a provisional bits-equivalent (uncertainty collapsed, duration, recurrence, who confirms). Other side of the loop agrees. Domain-native terms → bits-equivalent proxy → mint formula. You never type in your own score.
+
 Edge intelligence unveils only the ZKP the equation needs. DAG curator is a paid job. No extractive hop. The founder has no mint key.
 
 Convergence of like-cases \u2260 automatically kT ln 2 in a quarrel. 3.0 has to say which claim it is making.
