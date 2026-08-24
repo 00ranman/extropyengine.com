@@ -87,6 +87,12 @@ Prove predicates, not numbers: band, domain standing, not-slashed, eligible to v
 
 https://github.com/00ranman/extropy-engine/blob/main/docs/CODEX_3_NOTES_ZKP_REPUTATION.md
 
+## Looking is a verb
+
+Hermit privacy is not the product. Google already has the file. A common person **can** walk the DAG to reconstruct whether someone did the thing. The requirement is they cannot do it silently. A look is a vertex. Stalking-shaped bursts can slash or unmask (same cause-shown vote as identity reveal). Tills still get yes/no. Dossiers leave footprints.
+
+https://github.com/00ranman/extropy-engine/blob/main/docs/CODEX_3_NOTES_LOOK.md
+
 ## What 3.0 has to actually write
 
-Settle knob. XP decay next to IT decay. Late burn. SignalFlow as first-class. Claim path with evidence. MICRO overselling acknowledged. DAG as instrument. Burn-floor axiom yes/no. Box as for-profit intent. Access band as ZKP (display default off). Play boards opt-in, no power. Soulbound marks. Seasons ≠ diplomacy. Roles from showing up; votes for knobs. ZKP reputation as predicates, not a public graph. Leave 2.1 alone until then.
+Settle knob. XP decay next to IT decay. Late burn. SignalFlow as first-class. Claim path with evidence. MICRO overselling acknowledged. DAG as instrument. Burn-floor axiom yes/no. Box as for-profit intent. Access band as ZKP (display default off). Play boards opt-in, no power. Soulbound marks. Seasons ≠ diplomacy. Roles from showing up; votes for knobs. LOOK vertices; silent fetch forbidden. Leave 2.1 alone until then.

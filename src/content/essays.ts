@@ -336,7 +336,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       },
       {
         term: "ZKP reputation",
-        def: "Prove a predicate (access band, domain standing, clean-in-epoch, vote eligibility) without revealing XP, R, loops, or the DID. Epoch-stamped; decay is inside the proof or it is a lie about now. SignalFlow should match on predicates, not a public reputation graph. Sticky secret, unlinkable names.",
+        def: "Prove a predicate (access band, domain standing, clean-in-epoch, vote eligibility) without dumping a dossier on a till. Not hermit invisibility — looking at someone’s graph is allowed and is itself a DAG vertex. Silent stalking is the failure mode. Unmask still wants cause + a DFAO vote.",
       },
       {
         term: "Digital Autarky",
