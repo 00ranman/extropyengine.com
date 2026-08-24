@@ -45,8 +45,12 @@ function xml(s) {
   });
 }
 
+function stemOf(name) {
+  return name.replace(/\.(mp3|m4a|aac)$/i, "");
+}
+
 function titleFromName(name) {
-  const stem = name.replace(/\.mp3$/i, "");
+  const stem = stemOf(name);
   const dated = stem.match(/^(\d{4}-\d{2}-\d{2})-(.+)$/);
   const raw = dated ? dated[2] : stem;
   return raw
@@ -57,7 +61,7 @@ function titleFromName(name) {
 }
 
 function pubFromName(name, mtime) {
-  const stem = name.replace(/\.mp3$/i, "");
+  const stem = stemOf(name);
   const dated = stem.match(/^(\d{4}-\d{2}-\d{2})/);
   if (dated) return new Date(`${dated[1]}T12:00:00Z`);
   return new Date(mtime);
@@ -68,27 +72,29 @@ function rfc2822(d) {
 }
 
 function durationOf(file) {
+  let msg = "";
   try {
-    const out = execFileSync(
-      "ffprobe",
-      ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", file],
-      { encoding: "utf8" },
-    ).trim();
-    const sec = Math.round(Number(out));
-    if (!Number.isFinite(sec) || sec <= 0) return null;
-    const h = Math.floor(sec / 3600);
-    const m = Math.floor((sec % 3600) / 60);
-    const s = sec % 60;
-    return h > 0
-      ? `${h}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`
-      : `${m}:${String(s).padStart(2, "0")}`;
-  } catch {
-    return null;
+    msg = execFileSync("ffmpeg", ["-hide_banner", "-i", file, "-f", "null", "-"], {
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "pipe"],
+    });
+  } catch (e) {
+    msg = String(e.stderr || e.stdout || "");
   }
+  const m = String(msg).match(/Duration:\s*(\d+):(\d+):(\d+(?:\.\d+)?)/);
+  if (!m) return null;
+  const sec = Number(m[1]) * 3600 + Number(m[2]) * 60 + Number(m[3]);
+  if (!Number.isFinite(sec) || sec <= 0) return null;
+  const h = Math.floor(sec / 3600);
+  const min = Math.floor((sec % 3600) / 60);
+  const s = Math.round(sec % 60);
+  return h > 0
+    ? `${h}:${String(min).padStart(2, "0")}:${String(s).padStart(2, "0")}`
+    : `${min}:${String(s).padStart(2, "0")}`;
 }
 
-function readSidecar(mp3Path) {
-  const jsonPath = mp3Path.replace(/\.mp3$/i, ".json");
+function readSidecar(audioPath) {
+  const jsonPath = audioPath.replace(/\.(mp3|m4a|aac)$/i, ".json");
   if (!existsSync(jsonPath)) return {};
   try {
     return JSON.parse(readFileSync(jsonPath, "utf8"));
@@ -99,13 +105,18 @@ function readSidecar(mp3Path) {
 
 export function scanEpisodes() {
   if (!existsSync(DIR)) return [];
-  const files = readdirSync(DIR).filter(
-    (f) => f.toLowerCase().endsWith(".mp3") && !SKIP.has(f.toLowerCase()),
-  );
+  const files = readdirSync(DIR).filter((f) => {
+    const low = f.toLowerCase();
+    if (SKIP.has(low)) return false;
+    return low.endsWith(".mp3") || low.endsWith(".m4a") || low.endsWith(".aac");
+  });
   const episodes = files.map((file) => {
     const full = join(DIR, file);
     const st = statSync(full);
     const extra = readSidecar(full);
+    const mime = file.toLowerCase().endsWith(".m4a") || file.toLowerCase().endsWith(".aac")
+      ? "audio/mp4"
+      : "audio/mpeg";
     const pub = extra.pubDate ? new Date(extra.pubDate) : pubFromName(file, st.mtimeMs);
     const src = `/podcast/${file}`;
     return {
@@ -121,6 +132,7 @@ export function scanEpisodes() {
       season: extra.season ?? null,
       episode: extra.episode ?? null,
       duration: extra.duration || durationOf(full),
+      mime,
       guid: extra.guid || createHash("sha1").update(file).digest("hex"),
     };
   });
@@ -144,7 +156,7 @@ export function renderFeed(episodes = scanEpisodes()) {
       <pubDate>${xml(ep.pubDate)}</pubDate>
       <guid isPermaLink="false">${xml(ep.guid)}</guid>
       <link>${xml(ep.url)}</link>
-      <enclosure url="${xml(ep.url)}" length="${ep.bytes}" type="audio/mpeg"/>
+      <enclosure url="${xml(ep.url)}" length="${ep.bytes}" type="${xml(ep.mime || "audio/mpeg")}"/>
       <itunes:author>${xml(m.author)}</itunes:author>
       <itunes:explicit>${ep.explicit ? "true" : "false"}</itunes:explicit>${dur}${season}${episode}
     </item>`;

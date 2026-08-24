@@ -26,6 +26,19 @@
       <title>Extropy Engine</title>
       <link>https://extropyengine.com/podcast</link>
     </image>
-
+    <item>
+      <title>Mapping human interactions to entropy reduction</title>
+      <description>A NotebookLM debate on the Extropy Engine. Is mapping human work onto verified ΔS — via a local DAG, no fiat on-ramp, and a proxy that gets less wrong as the graph fills — a rigorous answer to broken rewards, or a category error that measures the exhaust of a ride instead of the reason for it? Codex v2.1, the mint formula, LocalFlow, DFAO scale, standing unbundled from XP.</description>
+      <itunes:summary>A NotebookLM debate on the Extropy Engine. Is mapping human work onto verified ΔS — via a local DAG, no fiat on-ramp, and a proxy that gets less wrong as the graph fills — a rigorous answer to broken rewards, or a category error that measures the exhaust of a ride instead of the reason for it? Codex v2.1, the mint formula, LocalFlow, DFAO scale, standing unbundled from XP.</itunes:summary>
+      <pubDate>Mon, 24 Aug 2026 12:00:00 GMT</pubDate>
+      <guid isPermaLink="false">3ebf4b01f523b42a1e4135b3eb9032d9fb07004f</guid>
+      <link>https://extropyengine.com/podcast/2026-08-24-mapping-human-interactions-to-entropy-reduction.mp3</link>
+      <enclosure url="https://extropyengine.com/podcast/2026-08-24-mapping-human-interactions-to-entropy-reduction.mp3" length="15763258" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:explicit>true</itunes:explicit>
+      <itunes:duration>21:54</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>1</itunes:episode>
+    </item>
   </channel>
 </rss>
