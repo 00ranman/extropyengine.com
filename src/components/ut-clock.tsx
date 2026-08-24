@@ -44,6 +44,7 @@ type Live = {
   tenths: number;
   stamp: string;
   pulse: number;
+  tide: number;
   season: number;
   quant: string;
   cycle: number;
@@ -85,6 +86,12 @@ function copyFor(key: string, live: Live): TipCopy | null {
         value: live.pulse.toFixed(3).replace(/^0/, "") || ".000",
         note: "Duration. ~70 s. Ten of these is a wave. Same length on every planet.",
       };
+    case "tide":
+      return {
+        title: "Tide",
+        value: live.tide.toFixed(3).replace(/^0/, "") || ".000",
+        note: "Duration. ~2 hours. Ten waves. Ten of these is a spin.",
+      };
     case "season":
       return {
         title: "Season",
@@ -115,12 +122,6 @@ function copyFor(key: string, live: Live): TipCopy | null {
         value: "21 cm",
         note: "The constant. 1,420,405,751.768 Hz. One period is a quant.",
       };
-    case "electron":
-      return {
-        title: "Electron",
-        value: "orbit",
-        note: "The 21 cm hyperfine picture. Not a time hand.",
-      };
     default:
       return null;
   }
@@ -131,7 +132,7 @@ export function UtClock() {
   const arcRef = useRef<SVGGElement>(null);
   const tickRef = useRef<SVGGElement>(null);
   const pulseRef = useRef<SVGGElement>(null);
-  const electronRef = useRef<SVGGElement>(null);
+  const tideRef = useRef<SVGGElement>(null);
   const seasonRef = useRef<SVGGElement>(null);
   const quantRef = useRef<SVGTextElement>(null);
   const cycleRef = useRef<SVGTextElement>(null);
@@ -154,6 +155,7 @@ export function UtClock() {
     tenths: 0,
     stamp: "t:-:--:--",
     pulse: 0,
+    tide: 0,
     season: 0,
     quant: "—",
     cycle: 1,
@@ -209,6 +211,7 @@ export function UtClock() {
       const arcS = lat.arc + tickS / 100;
       const loopS = lat.loop + arcS / 100;
       const pulse = dur.find((u) => u.name === "Pulse");
+      const tide = dur.find((u) => u.name === "Tide");
       const season = dur.find((u) => u.name === "Season");
       const quant = formatQuant(quantsSinceBB(now));
       const tenths = Math.floor(lat.tickRem * 10);
@@ -221,6 +224,7 @@ export function UtClock() {
         tenths,
         stamp: lat.stamp,
         pulse: pulse?.frac ?? 0,
+        tide: tide?.frac ?? 0,
         season: season?.frac ?? 0,
         quant,
         cycle,
@@ -233,9 +237,9 @@ export function UtClock() {
         "transform",
         `rotate(${(pulse?.frac ?? 0) * 360} ${CX} ${CY})`,
       );
-      electronRef.current?.setAttribute(
+      tideRef.current?.setAttribute(
         "transform",
-        `rotate(${(now.getTime() / 48) % 360} ${CX} ${CY})`,
+        `rotate(${(tide?.frac ?? 0) * 360} ${CX} ${CY})`,
       );
       seasonRef.current?.setAttribute("transform", `rotate(${(season?.frac ?? 0) * 360})`);
 
@@ -244,7 +248,9 @@ export function UtClock() {
       if (stampRef.current) stampRef.current.textContent = `${lat.stamp}.${tenths}`;
       if (qReadRef.current) qReadRef.current.textContent = `Q:${quant}`;
       if (pulseReadRef.current) {
-        pulseReadRef.current.textContent = `PULSE ${(pulse?.frac ?? 0).toFixed(3).slice(1)}`;
+        const p = (pulse?.frac ?? 0).toFixed(3).slice(1);
+        const t = (tide?.frac ?? 0).toFixed(3).slice(1);
+        pulseReadRef.current.textContent = `PULSE ${p}  ·  TIDE ${t}`;
       }
       const bits = durationBits(now);
       if (sayRef.current) sayRef.current.textContent = bits.phrase;
@@ -362,24 +368,13 @@ export function UtClock() {
           </text>
         </g>
 
-        <ellipse
-          cx={CX}
-          cy={CY}
-          rx="58"
-          ry="26"
-          className="ut-e-path"
-          fill="none"
-          strokeWidth="0.7"
-          transform={`rotate(-22 ${CX} ${CY})`}
-        />
-        <g ref={electronRef} {...hit("electron")}>
-          <circle cx={CX} cy={CY - 58} r="10" fill="transparent" />
-          <circle cx={CX} cy={CY - 58} r="2.6" className="ut-electron" filter="url(#ut-gold)" />
-        </g>
-
         <g ref={pulseRef} {...hit("pulse")}>
           <circle cx={CX} cy="64" r="12" fill="transparent" />
           <circle cx={CX} cy="64" r="3.2" className="ut-gold-fill" filter="url(#ut-gold)" />
+        </g>
+        <g ref={tideRef} {...hit("tide")}>
+          <circle cx={CX} cy="108" r="12" fill="transparent" />
+          <circle cx={CX} cy="108" r="4.2" className="ut-gold-fill" filter="url(#ut-gold)" />
         </g>
 
         <g ref={loopRef} {...hit("loop")}>
@@ -483,7 +478,7 @@ export function UtClock() {
 
       <div className="mt-3 flex flex-wrap justify-center gap-x-5 gap-y-1 text-[10px] tracking-[0.18em] uppercase text-dim">
         <span>Silver · Loop / Arc / Tick</span>
-        <span className="ut-gold-text">Gold · Pulse / Quant</span>
+        <span className="ut-gold-text">Gold · Pulse / Tide</span>
       </div>
     </div>
   );

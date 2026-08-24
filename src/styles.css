@@ -154,7 +154,7 @@
 }
 
 .ut-ring-inner {
-  stroke: rgb(243 236 225 / 0.1);
+  stroke: rgb(201 165 106 / 0.32);
 }
 
 .ut-tick-loop {
@@ -198,13 +198,8 @@
   fill: #d4af77;
 }
 
-.ut-e-path {
-  stroke: rgb(201 165 106 / 0.4);
-  stroke-dasharray: 3 5;
-}
-
-.ut-electron {
-  fill: #ead9b0;
+.ut-gold-fill {
+  fill: #d4af77;
 }
 
 .ut-hand-loop {

@@ -77,8 +77,8 @@ function UniversalTimes() {
           <p className="mt-2 text-xs tracking-[0.2em] text-accent uppercase">v4.2 · hydrogen-anchored · three systems</p>
           <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-muted">
             Base-10 face. Ten loops in a local day. Three solar hands — Loop, Arc, Tick — tell you
-            where you are. The gold pip is Pulse, a duration, the same length on every planet. Hours
-            are not on this scale.
+            where you are. Gold pips are duration: Pulse (~70 s) on the outer gold ring, Tide
+            (~2 hr) on the inner one. Same length on every planet. Hours are not on this scale.
           </p>
 
           <UtClock />
