@@ -88,9 +88,7 @@ function durationOf(file) {
   const h = Math.floor(sec / 3600);
   const min = Math.floor((sec % 3600) / 60);
   const s = Math.round(sec % 60);
-  return h > 0
-    ? `${h}:${String(min).padStart(2, "0")}:${String(s).padStart(2, "0")}`
-    : `${min}:${String(s).padStart(2, "0")}`;
+  return `${String(h).padStart(2, "0")}:${String(min).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
 }
 
 function readSidecar(audioPath) {
@@ -155,9 +153,10 @@ export function renderFeed(episodes = scanEpisodes()) {
       <title>${xml(ep.title)}</title>${summary}
       <pubDate>${xml(ep.pubDate)}</pubDate>
       <guid isPermaLink="false">${xml(ep.guid)}</guid>
-      <link>${xml(ep.url)}</link>
+      <link>${xml(abs(m.link))}</link>
       <enclosure url="${xml(ep.url)}" length="${ep.bytes}" type="${xml(ep.mime || "audio/mpeg")}"/>
       <itunes:author>${xml(m.author)}</itunes:author>
+      <itunes:image href="${xml(abs(m.image))}"/>
       <itunes:explicit>${ep.explicit ? "true" : "false"}</itunes:explicit>${dur}${season}${episode}
     </item>`;
     })
@@ -185,6 +184,7 @@ export function renderFeed(episodes = scanEpisodes()) {
       <itunes:category text="${xml(m.subcategory)}"/>
     </itunes:category>
     <itunes:type>episodic</itunes:type>
+    <lastBuildDate>${rfc2822(new Date())}</lastBuildDate>
     <atom:link href="${xml(abs(m.feedPath))}" rel="self" type="application/rss+xml"/>
     <image>
       <url>${xml(abs(m.image))}</url>
