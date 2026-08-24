@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DfaoRouteImport } from './routes/dfao'
 import { Route as GlossaryRouteImport } from './routes/glossary'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as MvtRouteImport } from './routes/mvt'
@@ -30,6 +31,11 @@ import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DfaoRoute = DfaoRouteImport.update({
+  id: '/dfao',
+  path: '/dfao',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GlossaryRoute = GlossaryRouteImport.update({
@@ -115,6 +121,7 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/dfao': typeof DfaoRoute
   '/glossary': typeof GlossaryRoute
   '/login': typeof LoginRoute
   '/mvt': typeof MvtRoute
@@ -134,6 +141,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/dfao': typeof DfaoRoute
   '/glossary': typeof GlossaryRoute
   '/login': typeof LoginRoute
   '/mvt': typeof MvtRoute
@@ -154,6 +162,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/dfao': typeof DfaoRoute
   '/glossary': typeof GlossaryRoute
   '/login': typeof LoginRoute
   '/mvt': typeof MvtRoute
@@ -175,6 +184,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/dfao'
     | '/glossary'
     | '/login'
     | '/mvt'
@@ -194,6 +204,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/dfao'
     | '/glossary'
     | '/login'
     | '/mvt'
@@ -213,6 +224,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/dfao'
     | '/glossary'
     | '/login'
     | '/mvt'
@@ -233,6 +245,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DfaoRoute: typeof DfaoRoute
   GlossaryRoute: typeof GlossaryRoute
   LoginRoute: typeof LoginRoute
   MvtRoute: typeof MvtRoute
@@ -258,6 +271,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dfao': {
+      id: '/dfao'
+      path: '/dfao'
+      fullPath: '/dfao'
+      preLoaderRoute: typeof DfaoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/glossary': {
@@ -377,6 +397,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DfaoRoute: DfaoRoute,
   GlossaryRoute: GlossaryRoute,
   LoginRoute: LoginRoute,
   MvtRoute: MvtRoute,
