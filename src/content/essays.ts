@@ -392,24 +392,28 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
     heading: "XP Mint Formula",
     entries: [
       {
-        term: "XP = ΔS · C · R · (1 / F)",
-        def: "Canonical mint formula. Reputation never enters the XP formula.",
-      },
-      {
-        term: "ΔS",
-        def: "Verified entropy reduction in normalized domain units. Must be strictly positive. A proxy we fine-tune as data arrives — not a promised constant for “mowing a lawn.” Words drift. The number should too, honestly.",
-      },
-      {
-        term: "C — Coherence Factor",
-        def: "Measured alignment between declared intent and measured output across the cycle. Range [0,1].",
+        term: "XP = R × F × ΔS × (w · E) × log(1/Tₛ)",
+        def: "Canonical mint, v3.1.2, packages/xp-formula. Reputation never enters the XP formula. Floor: XP ≥ ΔS / cₗ².",
       },
       {
         term: "R — Rarity",
-        def: "Scarcity weighting of the entropy-reduction event across the network. Range 0.1–10.0. R is rarity, not reputation.",
+        def: "Action-class scarcity / base difficulty. Property of the loop, not the actor. Range [0.1, 10]. Not reputation.",
       },
       {
         term: "F — Frequency of Decay",
-        def: "Schedule controlling DT accrual against the minted XP over time. F is not falsifiability.",
+        def: "Diminishing returns for repeating this action class. 1.0 the first time. F is not falsifiability.",
+      },
+      {
+        term: "ΔS",
+        def: "Verified entropy reduction. Must be strictly positive. A proxy we fine-tune as data arrives — not a promised constant for “mowing a lawn.” Words drift. The number should too, honestly.",
+      },
+      {
+        term: "w · E",
+        def: "Weight vector dotted with the effort / eight-domain vector. Where cross-domain terms (gas, ozone, alternative trips) actually accumulate.",
+      },
+      {
+        term: "Tₛ",
+        def: "Timestamp decay in (0, 1], typically exp(−λΔt). log(1/Tₛ) stops farming by slamming loops shut.",
       },
     ],
   },

@@ -363,9 +363,10 @@ export function EngineSection() {
         <p className="font-mono text-[10px] tracking-[0.24em] text-dim uppercase">{engineMath.kicker}</p>
         <h3 className="font-display mt-2 text-xl tracking-[0.04em]">{engineMath.title}</h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-dim">{engineMath.lead}</p>
-        <p className="font-brand mt-5 text-[clamp(22px,4vw,32px)] tracking-[0.04em] text-fg">
+        <p className="font-brand mt-5 text-[clamp(18px,3.4vw,28px)] tracking-[0.03em] text-fg">
           {engineMath.formula}
         </p>
+        <p className="mt-2 font-mono text-[11px] leading-relaxed text-dim">{engineMath.floor}</p>
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
           {engineMath.terms.map((term) => (
             <div key={term.t} className="flex gap-3 text-sm">
@@ -374,6 +375,7 @@ export function EngineSection() {
             </div>
           ))}
         </div>
+        <p className="mt-4 font-mono text-[10px] tracking-[0.12em] text-faint">{engineMath.source}</p>
         <div className="mt-6 max-w-2xl space-y-3 text-sm leading-relaxed text-muted">
           {engineMath.body.map((p) => (
             <p key={p.slice(0, 24)}>{p}</p>
