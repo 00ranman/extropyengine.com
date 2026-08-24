@@ -30,7 +30,7 @@ MACROs coordinate off MICROs. MICROs are subjective. People oversell. Numbers ca
 | --- | --- | --- |
 | Settle window | Provisional → standing | ~30 days was a throw. Could be 5–40. Per-DFAO. |
 | Late burn | Standing can still die | No expiry. Thirty years later is still allowed. |
-| XP decay | Pile shrinks with no dispute | ρ = 0.01 / 30 cycles (~1%/month). Access economy. You do not spend it. |
+| XP decay | Pile shrinks with no dispute | ρ = 0.01 / 30 cycles (~1%/month **of remaining**, multiplicative). Half-life ~69 months. Never hits 0; floor → access band. Knob. Not late burn. |
 | IT decay | Weight bleeds if you vanish | ~5%/month. IT holders can vote it down in their DFAO. |
 
 Possible axiom, not written: some XP and some IT always burn.

@@ -451,6 +451,9 @@ export function EngineSection() {
           <Link to="/glossary" hash="late-burn" className="text-primary hover:underline">
             Late burn →
           </Link>
+          <Link to="/glossary" hash="xp-decay" className="text-primary hover:underline">
+            XP decay →
+          </Link>
         </p>
       </div>
 

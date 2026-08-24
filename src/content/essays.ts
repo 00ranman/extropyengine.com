@@ -363,7 +363,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
     entries: [
       {
         term: "XP — Extropy",
-        def: "The base unit. Minted only on verified entropy reduction (ΔS > 0). Cannot be purchased or transferred. You do not spend it — access economy. Decays ~1%/month (ρ = 0.01 / 30 cycles), not 5% — that is IT. Settled XP can still burn later. Under the floor, decayed XP may quantize into a ZKP access band (prove L ≥ n, don’t publish the pile). Public boards, if any, are play — they cannot steer mint, IT, or knobs. Defaults are knobs.",
+        def: "The base unit. Minted only on verified entropy reduction (ΔS > 0). Cannot be purchased or transferred. You do not spend it — access economy. Decays ~1%/month of what is left (ρ = 0.01 / 30 cycles), not 5% — that is IT. That is a leak, not a verdict. Half-life ~69 months if multiplicative. It does not hit zero; it gets small. Settled XP can still late-burn. Under the floor, decayed XP may quantize into a ZKP access band (prove L ≥ n, don’t publish the pile). Public boards, if any, are play — they cannot steer mint, IT, or knobs. Defaults are knobs.",
       },
       {
         term: "CT — Coherence Token",
@@ -463,7 +463,12 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "Late burn",
         id: "late-burn",
-        def: "Same machine as late mint, the other direction. If the president is later a disaster and the “turnaround” enabled harm, the teacher’s earlier XP can burn — if the new evidence holds. No expiry. Five days or thirty years. Direction is symmetric: add or destroy. Magnitude and difficulty are knobs; a ratchet that only adds is a church. False late-burn is itself a claim. It can burn the accuser. Decay already eats standing XP on a schedule either way.",
+        def: "Same machine as late mint, the other direction. If the president is later a disaster and the “turnaround” enabled harm, the teacher’s earlier XP can burn — if the new evidence holds. No expiry. Five days or thirty years. Direction is symmetric: add or destroy. Magnitude and difficulty are knobs; a ratchet that only adds is a church. False late-burn is itself a claim. It can burn the accuser. Decay already eats standing XP on a schedule either way. Decay is not this. Decay is a leak. This is a verdict. If the pile has already leaked to dust, you are burning the claim and whatever is left (including an access band), not a wallet that is still full.",
+      },
+      {
+        term: "XP decay",
+        id: "xp-decay",
+        def: "Treadmill, not a court. Default ρ ≈ 1% of the remaining pile per ~30 days (knob). That is multiplicative, not “subtract 1% of the original until it hits zero.” Remaining after n months is 0.99^n. Half-life ≈ 69 months (~5.7 years). ~1% left around 38 years. 30,000 days (~82 years) is not the lifetime — that’s a linear-arithmetic miss (and a zero too many even on the linear read: 1% of original per 30 days would zero in ~3,000 days). Multiplicative decay never reaches zero; it gets small, then the floor can quantize what’s left into a ZKP access band. You keep minting or the pile fades. Late burn can still hit whatever remains, and it still marks the vertex. The DAG does not forget just because the wallet thinned.",
       },
       {
         term: "The glass of water",
