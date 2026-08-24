@@ -345,7 +345,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
     entries: [
       {
         term: "XP — Extropy",
-        def: "The base unit. Minted only on verified entropy reduction (ΔS > 0). Cannot be purchased or transferred. You do not spend it — access economy. It decays on a schedule. Settled XP can still burn later. Defaults are knobs.",
+        def: "The base unit. Minted only on verified entropy reduction (ΔS > 0). Cannot be purchased or transferred. You do not spend it — access economy. Decays ~1%/month (ρ = 0.01 / 30 cycles), not 5% — that is IT. Settled XP can still burn later. Defaults are knobs.",
       },
       {
         term: "CT — Coherence Token",

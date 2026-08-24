@@ -445,9 +445,9 @@ export const engineLoop = [
 ] as const;
 
 export const engineTokens = [
-  { t: "XP", d: "Minted on verified ΔS > 0. You do not spend it. Access economy. It decays. Still burnable after settle." },
+  { t: "XP", d: "Minted on verified ΔS > 0. You do not spend it. Access economy. Decays ~1%/month (ρ = 0.01 / 30 cycles) — not 5%. That is IT. Still burnable after settle." },
   { t: "EP", d: "Merchant settlement. XP × loyalty. Burns when spent." },
-  { t: "IT", d: "Governance weight. Decays if you stop showing up. Default ~5%/month is a knob, not a commandment." },
+  { t: "IT", d: "Governance weight. Decays ~5%/month if you stop showing up. Different token from XP. Knob, not commandment." },
   { t: "CT / CAT / DT", d: "Standing, skill, domain. Separate so influence cannot be purchased with XP." },
 ] as const;
 
@@ -532,9 +532,9 @@ export const socials = [
 
 export const docsIndex = [
   {
-    title: "DFAO",
-    href: "/dfao",
-    note: "Decentralized Fractal Autonomous Organization — scales, phases, mechanics. Seven is not a law.",
+    title: "Codex 3.0 notes",
+    href: "/docs/CODEX_3_NOTES.md",
+    note: "Capture for the next Codex — XP decay vs IT, settle knob, late burn. 2.1 stays frozen.",
   },
   {
     title: "Extropy Codex v2.1",
