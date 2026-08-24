@@ -445,7 +445,7 @@ export const engineLoop = [
 ] as const;
 
 export const engineTokens = [
-  { t: "XP", d: "Minted on verified ΔS > 0. You do not spend it. Access economy. Decays ~1%/month (ρ = 0.01 / 30 cycles) — not 5%. That is IT. Still burnable after settle." },
+  { t: "XP", d: "Minted on verified ΔS > 0. You do not spend it. Access economy. Decays ~1%/month (ρ = 0.01 / 30 cycles) — not 5%. That is IT. Still burnable after settle. Under the floor it can quantize into a ZKP access band. Not a public ladder." },
   { t: "EP", d: "Merchant settlement. XP × loyalty. Burns when spent." },
   { t: "IT", d: "Governance weight. Decays ~5%/month if you stop showing up. Different token from XP. Knob, not commandment." },
   { t: "CT / CAT / DT", d: "Standing, skill, domain. Separate so influence cannot be purchased with XP." },

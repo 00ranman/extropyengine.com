@@ -55,4 +55,16 @@ Full note + rant:
 
 https://github.com/00ranman/extropy-engine/blob/main/docs/CODEX_3_NOTES_CALIBRATION.md
 
-Settle knob. XP decay next to IT decay. Late burn. SignalFlow as first-class. Claim path with evidence. MICRO overselling acknowledged. Burn-floor axiom yes/no. Box as for-profit intent. Leave 2.1 alone until then.
+## Access bands
+
+1% decay is already the treadmill. Do not seasonal-wipe standing XP — that punishes slow work. Seasons stay accounting windows.
+
+Under the floor, decayed XP can quantize into a **log access band**. ZKP: prove `L ≥ n` without revealing the pile. Default display off. If you print titles, you rebuilt a leaderboard.
+
+Do not mash this with CAT levels or reputation titles. Those are credentials. Reputation is not XP.
+
+https://github.com/00ranman/extropy-engine/blob/main/docs/CODEX_3_NOTES_ACCESS.md
+
+## What 3.0 has to actually write
+
+Settle knob. XP decay next to IT decay. Late burn. SignalFlow as first-class. Claim path with evidence. MICRO overselling acknowledged. DAG as instrument. Burn-floor axiom yes/no. Box as for-profit intent. Access band as ZKP, not a ladder. Leave 2.1 alone until then.
