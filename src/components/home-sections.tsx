@@ -173,6 +173,9 @@ export function MusicSection() {
           </Btn>
         ))}
         <Btn href="/podcast">Podcast RSS</Btn>
+        <Btn href="/podcast#subscribe" primary>
+          Subscribe
+        </Btn>
       </div>
     </section>
   );

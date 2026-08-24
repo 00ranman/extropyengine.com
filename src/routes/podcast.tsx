@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { EssayLayout } from "@/components/essay-layout";
-import { Btn } from "@/components/ui-bits";
-import { podcast } from "@/content/podcast";
+import { directorySubmit, podcast, subscribeApps } from "@/content/podcast";
 import { getBed, isPlayingPath, toggleSrc } from "@/lib/audio-bed";
 
 export const Route = createFileRoute("/podcast")({
@@ -27,6 +26,91 @@ type Episode = {
   pubDate: string;
   duration: string | null;
 };
+
+function preferredIds() {
+  if (typeof navigator === "undefined") return [] as string[];
+  const ua = navigator.userAgent;
+  const apple = /iPhone|iPad|iPod|Macintosh/.test(ua);
+  const android = /Android/.test(ua);
+  if (apple) return ["apple", "overcast", "pocketcasts", "castro"];
+  if (android) return ["pocketcasts", "antennapod", "addict"];
+  return ["pocketcasts", "apple"];
+}
+
+function Subscribe() {
+  const [copied, setCopied] = useState(false);
+  const [fav, setFav] = useState<string[]>([]);
+
+  useEffect(() => {
+    setFav(preferredIds());
+  }, []);
+
+  const copyFeed = async () => {
+    try {
+      await navigator.clipboard.writeText(podcast.feedUrl);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1600);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  const ranked = [...subscribeApps].sort((a, b) => {
+    const ia = fav.indexOf(a.id);
+    const ib = fav.indexOf(b.id);
+    return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
+  });
+
+  return (
+    <div id="subscribe" className="space-y-4">
+      <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">Add this show</p>
+      <p>
+        Tap the app you actually use. It should open with this feed already loaded. If nothing
+        happens, the app isn’t installed — copy the RSS and paste it in the app’s “add by URL.”
+      </p>
+      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+        {ranked.map((app) => (
+          <a
+            key={app.id}
+            href={app.href}
+            className="flex items-baseline justify-between gap-3 border border-primary/35 px-4 py-3 font-mono text-[12px] tracking-[0.14em] text-primary uppercase transition-colors hover:border-primary hover:bg-primary hover:text-ink"
+          >
+            <span>{app.label}</span>
+            <span className="text-[9px] tracking-[0.16em] text-dim normal-case">{app.hint}</span>
+          </a>
+        ))}
+        <button
+          type="button"
+          className="flex items-baseline justify-between gap-3 border border-primary bg-primary/15 px-4 py-3 font-mono text-[12px] tracking-[0.14em] text-primary uppercase transition-colors hover:bg-primary hover:text-ink sm:col-span-2"
+          onClick={copyFeed}
+        >
+          <span>{copied ? "Copied" : "Copy RSS link"}</span>
+          <span className="truncate text-[9px] tracking-normal normal-case text-dim">
+            {podcast.feedUrl}
+          </span>
+        </button>
+      </div>
+      <p className="text-sm text-dim">
+        Spotify and YouTube don’t take a raw RSS tap from a listener. Submit the same feed once
+        (you), then those buttons can be added.
+      </p>
+      <div className="flex flex-wrap gap-2">
+        {directorySubmit.map((d) => (
+          <a
+            key={d.href}
+            href={d.href}
+            target="_blank"
+            rel="noreferrer"
+            className="border border-fg/20 px-3 py-2 font-mono text-[10px] tracking-[0.16em] text-dim uppercase hover:border-primary hover:text-primary"
+            title={d.note}
+          >
+            {d.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function EpisodeRow({ ep }: { ep: Episode }) {
   const [here, setHere] = useState(false);
@@ -69,7 +153,6 @@ function EpisodeRow({ ep }: { ep: Episode }) {
 
 function PodcastPage() {
   const [episodes, setEpisodes] = useState<Episode[] | null>(null);
-  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     fetch("/podcast/index.json", { cache: "no-store" })
@@ -78,37 +161,16 @@ function PodcastPage() {
       .catch(() => setEpisodes([]));
   }, []);
 
-  const copyFeed = async () => {
-    try {
-      await navigator.clipboard.writeText(podcast.feedUrl);
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 1600);
-    } catch {
-      setCopied(false);
-    }
-  };
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.location.hash !== "#subscribe") return;
+    document.getElementById("subscribe")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [episodes]);
 
   return (
     <EssayLayout backTo="/" backLabel="Home" kicker="RSS" title={podcast.title}>
       <p>{podcast.description}</p>
-      <p className="font-mono text-[13px] tracking-[0.04em] text-primary">{podcast.feedUrl}</p>
-      <div className="flex flex-wrap gap-3 pt-2">
-        <Btn href={podcast.feedPath} external>
-          Open RSS
-        </Btn>
-        <button
-          type="button"
-          className="border border-primary/40 px-4 py-2.5 font-mono text-[11px] tracking-[0.2em] text-primary uppercase transition-colors hover:border-primary hover:bg-primary hover:text-ink"
-          onClick={copyFeed}
-        >
-          {copied ? "Copied" : "Copy RSS link"}
-        </button>
-      </div>
-      <p className="text-sm text-dim">
-        Apple Podcasts: Library → three dots → Follow a Show by URL. Pocket Casts, Overcast,
-        AntennaPod, YouTube Music: paste the same link. Spotify wants a separate submit; the RSS is
-        still the library.
-      </p>
+      <Subscribe />
 
       <h2 className="font-display pt-6 text-2xl tracking-[0.04em] text-fg">Library</h2>
       {episodes === null ? (
