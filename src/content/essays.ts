@@ -284,7 +284,7 @@ export const essays: Record<string, Essay> = {
   },
 };
 
-export type GlossaryEntry = { term: string; def: string };
+export type GlossaryEntry = { term: string; def: string; id?: string };
 
 export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] = [
   {
@@ -413,7 +413,12 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
     entries: [
       {
         term: "XP = R × F × ΔS × (w · E) × log(1/Tₛ)",
-        def: "Canonical mint, v3.1.2, packages/xp-formula. Reputation never enters the XP formula. Floor: XP ≥ ΔS / cₗ².",
+        def: "Canonical mint, v3.1.2, packages/xp-formula. Reputation never enters the XP formula. This is the thing that runs. The floor below is the irreducible form of this line — a compression, not a second theory.",
+      },
+      {
+        term: "XP ≥ ΔS / cₗ²",
+        id: "irreducible-floor",
+        def: "The irreducible form. Pedagogical compression of the canonical mint — same job as E = mc² relative to E² = (pc)² + (mc²)². It is not the theory. Alone it has no experiment, no mint, and no lose-condition. It is a rest-frame slogan so you can point at the floor without reading the paper out loud. Scoring this line as if it were the Engine is a category error. Structural analogy, not a new physics law. Untested is not the same as not physics. The audit loop is the test; the slogan is not supposed to survive a calorimeter.",
       },
       {
         term: "R — Rarity",

@@ -458,7 +458,8 @@ export const engineMath = {
   title: "Most people never see this",
   lead: "You post. Someone does it. You tap done. That is the product. The formula is for the people who want to know what the mint is claiming. Skip it if you came for a ride.",
   formula: "XP = R × F × ΔS × (w · E) × log(1/Tₛ)",
-  floor: "Floor: XP ≥ ΔS / cₗ². A real reduction cannot mint below the domain’s causal-closure speed. Structural analogy, not a new physics law.",
+  floor:
+    "Floor: XP ≥ ΔS / cₗ². Irreducible form — a compression of the mint above, same job as E = mc² next to the full energy-momentum relation. Not the theory. Not a new physics law. Glossary has the line.",
   source: "packages/xp-formula — canonical v3.1.2. Reputation never enters this formula.",
   terms: [
     { t: "R", d: "Rarity. Scarcity / base difficulty of this action class. Property of the loop, not the person." },

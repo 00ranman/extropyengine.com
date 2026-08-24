@@ -396,7 +396,12 @@ export function EngineSection() {
         <p className="font-brand mt-5 text-[clamp(18px,3.4vw,28px)] tracking-[0.03em] text-fg">
           {engineMath.formula}
         </p>
-        <p className="mt-2 font-mono text-[11px] leading-relaxed text-dim">{engineMath.floor}</p>
+        <p className="mt-2 font-mono text-[11px] leading-relaxed text-dim">
+          {engineMath.floor}{" "}
+          <Link to="/glossary" hash="irreducible-floor" className="text-primary hover:underline">
+            Glossary →
+          </Link>
+        </p>
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
           {engineMath.terms.map((term) => (
             <div key={term.t} className="flex gap-3 text-sm">
