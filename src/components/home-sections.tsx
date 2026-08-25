@@ -109,8 +109,9 @@ export function MusicSection() {
     <section id="music" className="border-t border-primary/12 px-[8vw] py-20">
       <SectionTitle className="mb-3">The Music</SectionTitle>
       <p className="mb-12 max-w-xl text-[15px] text-muted">
-        Systems theory disguised as sound. Each track is a recursive loop about reality and entropy
-        reduction. Three albums, one EP, and counting.
+        Systems theory as a show: electronics, glitch, post-punk hop, circus when the tent goes up,
+        ridiculous when it should be. One track argues with punk. The rest don’t stay in that lane.
+        Three albums, one EP, and counting.
       </p>
       <div className="mb-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
         {albums.map((album) => (

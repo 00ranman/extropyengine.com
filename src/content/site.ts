@@ -93,7 +93,7 @@ export const albums: Album[] = [
     year: 2026,
     title: "Unf*ck the World for a Dollar",
     tracks: 18,
-    blurb: "The album companion to the book.",
+    blurb: "The album companion to the book. Bigger tent than three chords.",
     art: spotifyArt("d2bdf809d89a7f17b3066060"),
     links: {
       spotify: "https://open.spotify.com/album/6zfPqSX9aI6xSg5wibMUlq",
@@ -105,7 +105,7 @@ export const albums: Album[] = [
     year: 2025,
     title: "The Glitch Was Me",
     tracks: 25,
-    blurb: "The origin story in glitch form.",
+    blurb: "The origin story in glitch and electronics.",
     art: spotifyArt("f2ab9a76673f72fd5248fa08"),
     links: {
       spotify: "https://open.spotify.com/album/0KASNP03vhiZLTENy3sg8s",
@@ -117,7 +117,7 @@ export const albums: Album[] = [
     year: 2025,
     title: "Patterns and Mouth Noises",
     tracks: 14,
-    blurb: "Consensus hell and syntax sabotage.",
+    blurb: "Consensus hell and syntax sabotage. Mouth noises, machines, a little hop.",
     art: spotifyArt("9681bd6f34e00e40444dc16c"),
     links: {
       spotify: "https://open.spotify.com/album/12RvKFIT6zbj64UekqdYDZ",
@@ -140,7 +140,7 @@ export const singles: Single[] = [
   {
     year: 2026,
     title: "Inside the Machine",
-    desc: "Punk rock as merch. The rebellion was always for sale, and the left repackaged it as their own.",
+    desc: "A song about punk getting sold as merch — recuperation, inventory, terms of service. The argument isn’t a genre tag.",
     art: spotifyArt("c5943e8bc994579a352bfee3"),
     links: {
       spotify: "https://open.spotify.com/search/Lladnaros%20Inside%20the%20Machine",

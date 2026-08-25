@@ -29,6 +29,16 @@ export function JsonLd() {
         jobTitle: "Writer, musician, systems researcher",
         sameAs: socials.map((s) => s.href),
       },
+      {
+        "@type": "MusicGroup",
+        "@id": `${origin}/#lladnaros`,
+        name: "Lladnaros",
+        url: `${origin}/#music`,
+        genre: ["Experimental", "Electronic", "Glitch", "Post-punk", "Alternative hip hop"],
+        description:
+          "Randall Gossett as Lladnaros. Electronics, glitch, post-punk hop, circus when the tent goes up. Systems theory as a show — not a single lane.",
+        member: { "@id": `${origin}/#person` },
+      },
     ],
   };
 
