@@ -21,7 +21,7 @@
       <itunes:category text="Philosophy"/>
     </itunes:category>
     <itunes:type>episodic</itunes:type>
-    <lastBuildDate>Mon, 24 Aug 2026 16:37:24 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 22:32:55 +0000</lastBuildDate>
     <atom:link href="https://extropyengine.com/podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://extropyengine.com/podcast/cover.jpg</url>
@@ -57,21 +57,6 @@
       <itunes:duration>00:43:05</itunes:duration>
       <itunes:season>1</itunes:season>
       <itunes:episode>7</itunes:episode>
-    </item>
-    <item>
-      <title>The Extropy Engine brings fungus, not fire</title>
-      <description>The whole stack in one pass: Unfuck the World, Lladnaros as systems theory smuggled as sound, God as direction, LocalFlow, EP = XP × L, no fiat on-ramp, DAG, 30-day slash, IT decay, bring-your-own-machine. Fire vs mycelium.</description>
-      <itunes:summary>The whole stack in one pass: Unfuck the World, Lladnaros as systems theory smuggled as sound, God as direction, LocalFlow, EP = XP × L, no fiat on-ramp, DAG, 30-day slash, IT decay, bring-your-own-machine. Fire vs mycelium.</itunes:summary>
-      <pubDate>Sat, 22 Aug 2026 16:00:00 +0000</pubDate>
-      <guid isPermaLink="false">becd8002e4c96480072b94e2cd6f7ab1d238c467</guid>
-      <link>https://extropyengine.com/podcast</link>
-      <enclosure url="https://extropyengine.com/podcast/2026-08-24-the-extropy-engine-brings-fungus-not-fire.mp3" length="23902177" type="audio/mpeg"/>
-      <itunes:author>Randall Gossett</itunes:author>
-      <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:duration>00:33:12</itunes:duration>
-      <itunes:season>1</itunes:season>
-      <itunes:episode>6</itunes:episode>
     </item>
     <item>
       <title>Can thermodynamic entropy replace economic value?</title>
