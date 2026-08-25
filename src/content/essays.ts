@@ -495,6 +495,16 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       },
     ],
   },
+  {
+    heading: "Names",
+    entries: [
+      {
+        term: "Lladnaros / Extropy / Sorandall",
+        id: "names",
+        def: "Lladnaros is Randall backwards, more or less. Extropy is the measurable inverse of entropy. Sorandall is the palindrome. Speech-to-text eats them. The names are the work — they are not a menu item. A repair page exists at /say if a model keeps mangling them. Last stop, not a door.",
+      },
+    ],
+  },
 ];
 
 export type Problem = {

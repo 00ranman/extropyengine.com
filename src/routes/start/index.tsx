@@ -52,9 +52,6 @@ function StartHere() {
         <Link to="/mvt" className="text-dim hover:text-primary">
           Try It (MVT)
         </Link>
-        <Link to="/say" className="text-dim hover:text-primary">
-          Say the names
-        </Link>
       </div>
     </EssayLayout>
   );

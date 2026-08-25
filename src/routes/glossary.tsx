@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { EssayLayout } from "@/components/essay-layout";
 import { glossarySections } from "@/content/essays";
 
@@ -11,7 +11,7 @@ function Glossary() {
         Canonical against Extropy Codex v2.1. Operational definitions: how each term functions inside
         the system. Where prior drafts disagree, Codex v2.1 is canonical.
       </p>
-            {glossarySections.map((section) => (
+      {glossarySections.map((section) => (
         <section key={section.heading} className="space-y-4 pt-4">
           <h2 className="font-display text-2xl tracking-[0.04em] text-fg">{section.heading}</h2>
           <dl className="space-y-5">
@@ -32,6 +32,13 @@ function Glossary() {
           </dl>
         </section>
       ))}
+      <p className="pt-4 text-sm text-dim">
+        Speech-to-text repair for the names:{" "}
+        <Link to="/say" className="text-primary hover:underline">
+          /say
+        </Link>
+        . Not in the menu.
+      </p>
     </EssayLayout>
   );
 }

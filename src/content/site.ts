@@ -10,47 +10,36 @@ export const site = {
   year: 2026,
 } as const;
 
-export const nav = [
-  { label: "The Book", href: "/#book" },
+export type NavLink = { label: string; href: string };
+export type NavItem = NavLink & { children?: readonly NavLink[] };
+
+/** One top bar. Engine holds the protocol list so it is not a junk drawer next to the book. */
+export const primaryNav: readonly NavItem[] = [
+  { label: "Book", href: "/#book" },
   { label: "Music", href: "/#music" },
   { label: "Papers", href: "/#papers" },
-  { label: "Engine", href: "/#engine" },
-  { label: "Connect", href: "/#follow" },
-  { label: "Universal Times", href: "/universaltimes" },
-  { label: "Podcast", href: "/podcast" },
-] as const;
-
-export const startBar = {
-  label: "Enter",
-  entries: [
-    { label: "Money", href: "/start/money" },
-    { label: "AI", href: "/start/ai" },
-    { label: "Governance", href: "/start/governance" },
-    { label: "Physics", href: "/start/physics" },
-  ],
-  extras: [
-    { label: "FAQ", href: "/faq" },
-    { label: "DFAO", href: "/dfao" },
-    { label: "Open Problems", href: "/open-problems" },
-    { label: "Proof Layers", href: "/proof-layers" },
-    { label: "MVT", href: "/mvt" },
-    { label: "Say the names", href: "/say" },
-    { label: "Podcast", href: "/podcast" },
-  ],
-} as const;
-
-export const menu: {
-  heading: string;
-  href: string;
-  items: readonly { label: string; href: string }[];
-}[] = [
   {
-    heading: "Enter",
-    href: "/start",
-    items: [...startBar.entries, ...startBar.extras],
+    label: "Engine",
+    href: "/#engine",
+    children: [
+      { label: "How it works", href: "/#engine" },
+      { label: "Start here", href: "/start" },
+      { label: "Money", href: "/start/money" },
+      { label: "AI", href: "/start/ai" },
+      { label: "Governance", href: "/start/governance" },
+      { label: "Physics", href: "/start/physics" },
+      { label: "FAQ", href: "/faq" },
+      { label: "Glossary", href: "/glossary" },
+      { label: "DFAO", href: "/dfao" },
+      { label: "Open problems", href: "/open-problems" },
+      { label: "Proof layers", href: "/proof-layers" },
+      { label: "Try it", href: "/mvt" },
+      { label: "Universal Times", href: "/universaltimes" },
+    ],
   },
-  { heading: "The site", href: "/", items: nav },
-];
+  { label: "Podcast", href: "/podcast" },
+  { label: "Connect", href: "/#follow" },
+] as const;
 
 
 export const book = {
