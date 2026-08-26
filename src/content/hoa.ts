@@ -73,12 +73,12 @@ export const hoaClone = {
   ],
 } as const;
 
-export const hoaFb = `We're paying HOA dues and then still doing their jobs. Grass. Lights. The ditch. That's the complaint.
+export const hoaFb = `We're paying dues and then still doing their jobs. That's the whole complaint.
 
-So we start doing the jobs. Someone in the neighborhood takes it. Neighbors confirm it actually got done. If it didn't, it doesn't count. The rules can be a smart contract — that's just "if the work is confirmed, it counts," no board meeting, no next quarter.
+So we just start doing the jobs. Grass. Lights. The ditch. A neighbor takes it. Other neighbors say yeah, that's actually done — or no, it isn't. If it isn't, it doesn't count. No board meeting. No "we'll look at it next quarter."
 
-Keep paying the HOA bill for now so they can't lien your house. When we're the ones keeping this place running, they're a leftover fee. Then a lawyer can look at the paperwork if enough owners want it gone.
+Keep paying the HOA bill so they can't lien your house. When we're the ones keeping the place running, they're a leftover fee.
 
-Don't egg anyone's car. Mow the grass.
+Don't egg anybody's truck. Mow the grass.
 
 https://extropyengine.com/hoa`;
