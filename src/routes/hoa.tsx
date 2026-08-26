@@ -1,17 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { EssayLayout } from "@/components/essay-layout";
-import { hoaClone, hoaFb, hoaJobs, hoaNotLegal, hoaPage, hoaSmart, hoaSteps } from "@/content/hoa";
+import { hoaClone, hoaDoors, hoaFb, hoaJobs, hoaNotLegal, hoaPage, hoaSmart, hoaSteps, hoaStory } from "@/content/hoa";
 
 export const Route = createFileRoute("/hoa")({
   component: HoaPage,
   head: () => ({
     meta: [
-      { title: "Do the HOA’s jobs — Extropy Engine" },
+      { title: "Get rid of the HOA — Extropy Engine" },
       {
         name: "description",
         content:
-          "Take over a neighborhood by doing the HOA’s actual jobs: grass, lights, drainage, disputes. Neighbors confirm. Smart contracts are if-then rules. Keep paying dues until the paperwork catches up.",
+          "Register like you would for any neighborhood group. Take the HOA’s jobs. Work orders neighbors sign closed. Dissolve them on paper if the vote is there — in practice if it isn’t.",
       },
     ],
   }),
@@ -32,7 +32,20 @@ function HoaPage() {
   return (
     <EssayLayout backTo="/dfao" backLabel="DFAO" kicker={hoaPage.kicker} title={hoaPage.title}>
       <p>{hoaPage.lead}</p>
+      {hoaStory.map((p) => (
+        <p key={p.slice(0, 48)}>{p}</p>
+      ))}
       <p className="border border-primary/20 bg-primary/5 px-4 py-3 text-sm">{hoaNotLegal}</p>
+
+      <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">Two doors. You always have the second.</h2>
+      <dl className="space-y-4">
+        {hoaDoors.map((d) => (
+          <div key={d.title}>
+            <dt className="font-mono text-[12px] tracking-[0.08em] text-primary">{d.title}</dt>
+            <dd>{d.body}</dd>
+          </div>
+        ))}
+      </dl>
 
       <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">Their jobs. We take them.</h2>
       <dl className="space-y-4">

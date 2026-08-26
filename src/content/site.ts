@@ -31,7 +31,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "FAQ", href: "/faq" },
       { label: "Glossary", href: "/glossary" },
       { label: "DFAO", href: "/dfao" },
-      { label: "Do the HOA’s jobs", href: "/hoa" },
+      { label: "Get rid of the HOA", href: "/hoa" },
       { label: "Open problems", href: "/open-problems" },
       { label: "Proof layers", href: "/proof-layers" },
       { label: "Try it", href: "/mvt" },
@@ -542,9 +542,9 @@ export const socials = [
 
 export const docsIndex = [
   {
-    title: "Do the HOA’s jobs",
+    title: "Get rid of the HOA",
     href: "/hoa",
-    note: "Take over a neighborhood by doing the work: grass, lights, drainage, disputes. Smart contracts = if-then. Keep paying dues. Not legal advice.",
+    note: "Register. Take the jobs. Paper door if the vote is there. Work door if it isn’t.",
   },
   {
     title: "Codex 3.0 notes",

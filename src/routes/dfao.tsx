@@ -102,9 +102,9 @@ function DfaoDoc() {
         That would be an axiom. It is not written in as one yet.
       </p>
       <p>
-        Worked example — take the association’s jobs, in English:{" "}
+        Worked example — register, take the jobs, two doors:{" "}
         <Link to="/hoa" className="text-primary hover:underline">
-          Do the HOA’s jobs →
+          Get rid of the HOA →
         </Link>
       </p>
       <p>

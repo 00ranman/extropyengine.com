@@ -159,7 +159,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "hoa",
         q: "Can this replace an HOA?",
-        a: "By doing their jobs. Grass, lights, drainage, disputes — post it, a neighbor does it, neighbors confirm. Smart contracts here just mean if-then: if it’s confirmed, it counts, no board meeting. Keep paying dues so they cannot lien you. Recorded neighborhood rules still stick to the house until owners vote the percentage in that document. Taking the work makes them a leftover bill. Eggs on a truck make you the problem.",
+        a: "You register, same as joining any neighborhood group. Jobs go on a list like a work order. Neighbors do them and sign them closed. Keep paying the old dues so they cannot lien you. Two doors: enough owners vote and a lawyer files it — that’s paper. Or you already did every job, so they’re a bill for a service nobody uses — that’s practice. The second door is never locked.",
         also: [{ label: "Replace the HOA", href: "/hoa" }],
       },
     ],
