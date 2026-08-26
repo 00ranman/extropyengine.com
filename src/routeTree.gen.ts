@@ -22,6 +22,7 @@ import { Route as ProofLayersRouteImport } from './routes/proof-layers'
 import { Route as SayRouteImport } from './routes/say'
 import { Route as UniversaltimesRouteImport } from './routes/universaltimes'
 import { Route as DocsIndexRouteImport } from './routes/docs/index'
+import { Route as HoaBoardRouteImport } from './routes/hoa/board'
 import { Route as PapersClosingTheLoopRouteImport } from './routes/papers/closing-the-loop'
 import { Route as PrintClosingTheLoopRouteImport } from './routes/print/closing-the-loop'
 import { Route as StartIndexRouteImport } from './routes/start/index'
@@ -96,6 +97,11 @@ const DocsIndexRoute = DocsIndexRouteImport.update({
   path: '/docs/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HoaBoardRoute = HoaBoardRouteImport.update({
+  id: '/board',
+  path: '/board',
+  getParentRoute: () => HoaRoute,
+} as any)
 const PapersClosingTheLoopRoute = PapersClosingTheLoopRouteImport.update({
   id: '/papers/closing-the-loop',
   path: '/papers/closing-the-loop',
@@ -142,7 +148,7 @@ export interface FileRoutesByFullPath {
   '/dfao': typeof DfaoRoute
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
-  '/hoa': typeof HoaRoute
+  '/hoa': typeof HoaRouteWithChildren
   '/login': typeof LoginRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
@@ -150,6 +156,7 @@ export interface FileRoutesByFullPath {
   '/proof-layers': typeof ProofLayersRoute
   '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
+  '/hoa/board': typeof HoaBoardRoute
   '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
   '/print/closing-the-loop': typeof PrintClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
@@ -165,7 +172,7 @@ export interface FileRoutesByTo {
   '/dfao': typeof DfaoRoute
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
-  '/hoa': typeof HoaRoute
+  '/hoa': typeof HoaRouteWithChildren
   '/login': typeof LoginRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
@@ -173,6 +180,7 @@ export interface FileRoutesByTo {
   '/proof-layers': typeof ProofLayersRoute
   '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
+  '/hoa/board': typeof HoaBoardRoute
   '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
   '/print/closing-the-loop': typeof PrintClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
@@ -189,7 +197,7 @@ export interface FileRoutesById {
   '/dfao': typeof DfaoRoute
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
-  '/hoa': typeof HoaRoute
+  '/hoa': typeof HoaRouteWithChildren
   '/login': typeof LoginRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
@@ -197,6 +205,7 @@ export interface FileRoutesById {
   '/proof-layers': typeof ProofLayersRoute
   '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
+  '/hoa/board': typeof HoaBoardRoute
   '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
   '/print/closing-the-loop': typeof PrintClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
@@ -222,6 +231,7 @@ export interface FileRouteTypes {
     | '/proof-layers'
     | '/say'
     | '/universaltimes'
+    | '/hoa/board'
     | '/papers/closing-the-loop'
     | '/print/closing-the-loop'
     | '/start/ai'
@@ -245,6 +255,7 @@ export interface FileRouteTypes {
     | '/proof-layers'
     | '/say'
     | '/universaltimes'
+    | '/hoa/board'
     | '/papers/closing-the-loop'
     | '/print/closing-the-loop'
     | '/start/ai'
@@ -268,6 +279,7 @@ export interface FileRouteTypes {
     | '/proof-layers'
     | '/say'
     | '/universaltimes'
+    | '/hoa/board'
     | '/papers/closing-the-loop'
     | '/print/closing-the-loop'
     | '/start/ai'
@@ -284,7 +296,7 @@ export interface RootRouteChildren {
   DfaoRoute: typeof DfaoRoute
   FaqRoute: typeof FaqRoute
   GlossaryRoute: typeof GlossaryRoute
-  HoaRoute: typeof HoaRoute
+  HoaRoute: typeof HoaRouteWithChildren
   LoginRoute: typeof LoginRoute
   MvtRoute: typeof MvtRoute
   OpenProblemsRoute: typeof OpenProblemsRoute
@@ -396,6 +408,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/hoa/board': {
+      id: '/hoa/board'
+      path: '/board'
+      fullPath: '/hoa/board'
+      preLoaderRoute: typeof HoaBoardRouteImport
+      parentRoute: typeof HoaRoute
+    }
     '/papers/closing-the-loop': {
       id: '/papers/closing-the-loop'
       path: '/papers/closing-the-loop'
@@ -455,12 +474,22 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface HoaRouteChildren {
+  HoaBoardRoute: typeof HoaBoardRoute
+}
+
+const HoaRouteChildren: HoaRouteChildren = {
+  HoaBoardRoute: HoaBoardRoute,
+}
+
+const HoaRouteWithChildren = HoaRoute._addFileChildren(HoaRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DfaoRoute: DfaoRoute,
   FaqRoute: FaqRoute,
   GlossaryRoute: GlossaryRoute,
-  HoaRoute: HoaRoute,
+  HoaRoute: HoaRouteWithChildren,
   LoginRoute: LoginRoute,
   MvtRoute: MvtRoute,
   OpenProblemsRoute: OpenProblemsRoute,

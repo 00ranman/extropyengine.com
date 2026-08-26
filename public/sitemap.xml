@@ -13,6 +13,7 @@
   <url><loc>https://extropyengine.com/glossary</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://extropyengine.com/dfao</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://extropyengine.com/hoa</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://extropyengine.com/hoa/board</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://extropyengine.com/open-problems</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://extropyengine.com/proof-layers</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://extropyengine.com/mvt</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>

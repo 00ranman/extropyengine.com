@@ -32,6 +32,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "Glossary", href: "/glossary" },
       { label: "DFAO", href: "/dfao" },
       { label: "Neighborhood MESO", href: "/hoa" },
+      { label: "Sunset Oaks board", href: "/hoa/board" },
       { label: "Open problems", href: "/open-problems" },
       { label: "Proof layers", href: "/proof-layers" },
       { label: "Try it", href: "/mvt" },

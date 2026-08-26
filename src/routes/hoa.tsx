@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, Outlet, useChildMatches } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   hoaAfter,
@@ -7,7 +7,9 @@ import {
   hoaDownload,
   hoaFb,
   hoaGit,
+  hoaLegal,
   hoaLine,
+  hoaMeso,
   hoaPage,
   hoaRoles,
   hoaUrls,
@@ -19,18 +21,20 @@ export const Route = createFileRoute("/hoa")({
   component: HoaPage,
   head: () => ({
     meta: [
-      { title: "Neighborhood MESO — Extropy Engine" },
+      { title: "Sunset Oaks MESO — Extropy Engine" },
       {
         name: "description",
         content:
-          "Download Docker. Paste one line. Your laptop is a node. HOA jobs run on the Extropy Engine. The DAG starts today.",
+          "Sunset Oaks is a MESO. Crews are MICROs. Job board and DAG you can audit. Download Docker or open the board in the browser.",
       },
     ],
   }),
 });
 
 function HoaPage() {
+  const kids = useChildMatches();
   const [copied, setCopied] = useState(false);
+  if (kids.length > 0) return <Outlet />;
   async function copyBlurb() {
     await navigator.clipboard.writeText(hoaFb);
     setCopied(true);
@@ -40,6 +44,28 @@ function HoaPage() {
   return (
     <EssayLayout backTo="/#engine" backLabel="Engine" kicker={hoaPage.kicker} title={hoaPage.title}>
       <p>{hoaPage.lead}</p>
+      <p>
+        <Link
+          to="/hoa/board"
+          className="inline-block border border-primary/40 bg-primary/10 px-4 py-2 font-mono text-xs tracking-[0.12em] text-primary"
+        >
+          Open the job board + DAG →
+        </Link>
+      </p>
+
+      <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">{hoaMeso.title}</h2>
+      <p>{hoaMeso.lead}</p>
+      {hoaMeso.meso.map((p) => (
+        <p key={p.slice(0, 48)}>{p}</p>
+      ))}
+      <dl className="space-y-4">
+        {hoaMeso.micros.map((m) => (
+          <div key={m.name}>
+            <dt className="font-mono text-[12px] tracking-[0.08em] text-primary">MICRO · {m.name}</dt>
+            <dd>{m.does}</dd>
+          </div>
+        ))}
+      </dl>
 
       <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">What to download</h2>
       {hoaDownload.map((s) => (
@@ -65,9 +91,6 @@ function HoaPage() {
           <li key={s.slice(0, 40)}>{s}</li>
         ))}
       </ul>
-      <p className="text-sm text-dim">
-        After it comes up, these are on this machine:
-      </p>
       <ul className="list-disc space-y-1 pl-5 font-mono text-xs">
         {hoaUrls.map((u) => (
           <li key={u.href}>
@@ -109,9 +132,6 @@ function HoaPage() {
       </div>
 
       <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">Positions, rebranded</h2>
-      <p>
-        You don’t clone their org chart. You convert the gavel into rules that run themselves.
-      </p>
       <dl className="space-y-4">
         {hoaRoles.map((row) => (
           <div key={row.old}>
@@ -120,6 +140,12 @@ function HoaPage() {
           </div>
         ))}
       </dl>
+
+      <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">{hoaLegal.title}</h2>
+      {hoaLegal.known.map((p) => (
+        <p key={p.slice(0, 48)}>{p}</p>
+      ))}
+      <p className="border border-primary/20 bg-primary/5 px-4 py-3 text-sm">{hoaLegal.dues}</p>
 
       <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">Two doors</h2>
       <dl className="space-y-4">
@@ -138,7 +164,11 @@ function HoaPage() {
         </a>
         {" · "}
         <a href={hoaGit.preset} className="text-primary hover:underline" target="_blank" rel="noreferrer">
-          preset
+          Sunset Oaks preset
+        </a>
+        {" · "}
+        <a href={hoaGit.ui} className="text-primary hover:underline" target="_blank" rel="noreferrer">
+          neighborhood-ui
         </a>
         {" · "}
         <Link to="/dfao" className="text-primary hover:underline">
@@ -148,7 +178,6 @@ function HoaPage() {
       </p>
 
       <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">The pitch</h2>
-      <p>For the group. Copy it. Don’t turn it into a whitepaper.</p>
       <p>
         <button
           type="button"
