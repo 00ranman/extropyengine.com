@@ -11,7 +11,6 @@ import {
   engineLoop,
   engineMath,
   engineSignal,
-  engineTill,
   engineTokens,
   engineViews,
   papers,
@@ -335,6 +334,9 @@ export function EngineSection() {
             <div key={key} className="border border-primary/16 bg-surface/40 px-5 py-6">
               <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">{view.kicker}</p>
               <h3 className="font-display mt-2 text-xl tracking-[0.04em]">{view.title}</h3>
+              {"formula" in view && view.formula ? (
+                <p className="font-brand mt-3 text-lg tracking-[0.04em] text-fg">{view.formula}</p>
+              ) : null}
               <ol className="mt-4 space-y-3 text-sm leading-relaxed text-muted">
                 {view.lines.map((line, i) => (
                   <li key={line} className="flex gap-3">
@@ -356,32 +358,6 @@ export function EngineSection() {
           Emergent Points →
         </Link>
       </p>
-
-      <div id="till" className="mx-auto mt-10 max-w-5xl scroll-mt-24 border border-primary/28 bg-primary/5 px-5 py-6">
-        <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">{engineTill.kicker}</p>
-        <h3 className="font-display mt-2 text-xl tracking-[0.04em]">{engineTill.title}</h3>
-        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">{engineTill.lead}</p>
-        <p className="font-brand mt-5 text-[clamp(18px,3.4vw,28px)] tracking-[0.03em] text-fg">
-          {engineTill.formula}
-        </p>
-        <div className="mt-5 grid gap-3 sm:grid-cols-2">
-          {engineTill.terms.map((term) => (
-            <div key={term.t} className="flex gap-3 text-sm">
-              <span className="shrink-0 font-mono text-[11px] tracking-[0.16em] text-primary">{term.t}</span>
-              <span className="text-muted">{term.d}</span>
-            </div>
-          ))}
-        </div>
-        <ol className="mt-6 max-w-2xl space-y-3 text-sm leading-relaxed text-muted">
-          {engineTill.steps.map((line, i) => (
-            <li key={line.slice(0, 28)} className="flex gap-3">
-              <span className="font-mono text-[11px] text-faint">{String(i + 1).padStart(2, "0")}</span>
-              <span>{line}</span>
-            </li>
-          ))}
-        </ol>
-        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-dim">{engineTill.note}</p>
-      </div>
 
       <div className="mx-auto mt-10 max-w-5xl border border-primary/22 bg-primary/4 px-5 py-6">
         <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">{engineSignal.kicker}</p>
