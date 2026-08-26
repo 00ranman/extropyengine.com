@@ -9,13 +9,13 @@ function isHashLink(href: string) {
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
-  const [engineOpen, setEngineOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const hash = useRouterState({ select: (s) => s.location.hash });
 
   useEffect(() => {
     setOpen(false);
-    setEngineOpen(false);
+    setOpenMenu(null);
   }, [pathname, hash]);
 
   useEffect(() => {
@@ -24,6 +24,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  const active = primaryNav.find((n) => n.label === openMenu);
 
   return (
     <div className="relative min-h-dvh bg-bg text-fg">
@@ -65,12 +67,12 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         >
           {primaryNav.map((item) =>
             item.children ? (
-              <EngineMenu
+              <DropTrigger
                 key={item.label}
-                item={item}
-                open={engineOpen}
-                setOpen={setEngineOpen}
+                label={item.label}
+                open={openMenu === item.label}
                 desktop
+                onToggle={() => setOpenMenu((cur) => (cur === item.label ? null : item.label))}
               />
             ) : (
               <NavItem key={item.href} href={item.href} className="px-3 py-1.5 text-dim hover:text-primary">
@@ -80,9 +82,9 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           )}
         </nav>
 
-        {engineOpen ? (
+        {active?.children ? (
           <div className="hidden border-t border-primary/10 bg-bg/98 md:block">
-            <EnginePanel onPick={() => setEngineOpen(false)} />
+            <DropPanel item={active} onPick={() => setOpenMenu(null)} />
           </div>
         ) : null}
 
@@ -101,13 +103,13 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                   <button
                     type="button"
                     className="flex w-full items-center justify-between py-3 text-left text-[14px] tracking-[0.14em] text-primary uppercase"
-                    aria-expanded={engineOpen}
-                    onClick={() => setEngineOpen((v) => !v)}
+                    aria-expanded={openMenu === item.label}
+                    onClick={() => setOpenMenu((cur) => (cur === item.label ? null : item.label))}
                   >
                     <span>{item.label}</span>
-                    <span className="text-dim">{engineOpen ? "–" : "+"}</span>
+                    <span className="text-dim">{openMenu === item.label ? "–" : "+"}</span>
                   </button>
-                  {engineOpen ? (
+                  {openMenu === item.label ? (
                     <ul className="m-0 mb-2 list-none p-0">
                       {item.children.map((child) => (
                         <li key={child.href} className="m-0">
@@ -150,15 +152,15 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   );
 }
 
-function EngineMenu({
-  item,
+function DropTrigger({
+  label,
   open,
-  setOpen,
+  onToggle,
   desktop,
 }: {
-  item: NavItem;
+  label: string;
   open: boolean;
-  setOpen: (v: boolean | ((p: boolean) => boolean)) => void;
+  onToggle: () => void;
   desktop?: boolean;
 }) {
   return (
@@ -170,33 +172,36 @@ function EngineMenu({
       )}
       aria-expanded={open}
       aria-haspopup="true"
-      onClick={() => setOpen((v) => !v)}
+      onClick={onToggle}
     >
-      {item.label}
+      {label}
       {desktop ? <span className="ml-1 text-[9px]">{open ? "▴" : "▾"}</span> : null}
     </button>
   );
 }
 
-function EnginePanel({ onPick }: { onPick: () => void }) {
-  const engine = primaryNav.find((n) => n.children);
-  const kids = engine?.children ?? [];
-  const start = kids.filter((k) => k.href === "/#engine" || k.href.startsWith("/start"));
-  const docs = kids.filter((k) => ["/faq", "/glossary", "/dfao"].includes(k.href));
-  const hoa = kids.filter((k) => k.href.startsWith("/hoa"));
-  const more = kids.filter(
-    (k) =>
-      k.href !== "/#engine" &&
-      !k.href.startsWith("/start") &&
-      !["/faq", "/glossary", "/dfao"].includes(k.href) &&
-      !k.href.startsWith("/hoa"),
-  );
+function DropPanel({ item, onPick }: { item: NavItem; onPick: () => void }) {
+  const kids = item.children ?? [];
+  if (item.label === "Engine") {
+    const runHref = new Set(["/#engine", "/start", "/mvt", "/universaltimes"]);
+    const run = kids.filter((k) => runHref.has(k.href));
+    const read = kids.filter((k) => !runHref.has(k.href));
+    return (
+      <div className="mx-auto grid max-w-3xl grid-cols-2 gap-8 px-8 py-5 text-[11px] tracking-[0.14em] uppercase">
+        <EngineCol heading="Run" items={run} onPick={onPick} />
+        <EngineCol heading="Read" items={read} onPick={onPick} />
+      </div>
+    );
+  }
   return (
-    <div className="mx-auto grid max-w-5xl grid-cols-2 gap-8 px-8 py-5 text-[11px] tracking-[0.14em] uppercase lg:grid-cols-4">
-      <EngineCol heading="Start" items={start} onPick={onPick} />
-      <EngineCol heading="Read" items={docs} onPick={onPick} />
-      <EngineCol heading="HOA" items={hoa} onPick={onPick} />
-      <EngineCol heading="More" items={more} onPick={onPick} />
+    <div className="mx-auto flex max-w-3xl flex-wrap justify-center gap-x-8 gap-y-1 px-8 py-4 text-[11px] tracking-[0.14em] uppercase">
+      {kids.map((child) => (
+        <span key={child.href} onClick={onPick}>
+          <NavItem href={child.href} className="block py-1.5 text-dim hover:text-primary">
+            {child.label}
+          </NavItem>
+        </span>
+      ))}
     </div>
   );
 }

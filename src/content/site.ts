@@ -13,7 +13,7 @@ export const site = {
 export type NavLink = { label: string; href: string };
 export type NavItem = NavLink & { children?: readonly NavLink[] };
 
-/** One top bar. Engine holds the protocol list so it is not a junk drawer next to the book. */
+/** Top bar stays short. Engine is the protocol. HOA is its own door. */
 export const primaryNav: readonly NavItem[] = [
   { label: "Book", href: "/#book" },
   { label: "Music", href: "/#music" },
@@ -24,19 +24,21 @@ export const primaryNav: readonly NavItem[] = [
     children: [
       { label: "How it works", href: "/#engine" },
       { label: "Start here", href: "/start" },
-      { label: "Money", href: "/start/money" },
-      { label: "AI", href: "/start/ai" },
-      { label: "Governance", href: "/start/governance" },
-      { label: "Physics", href: "/start/physics" },
       { label: "FAQ", href: "/faq" },
       { label: "Glossary", href: "/glossary" },
       { label: "DFAO", href: "/dfao" },
-      { label: "HOA takeover", href: "/hoa" },
-      { label: "Sunset Oaks", href: "/hoa/sunset-oaks" },
       { label: "Open problems", href: "/open-problems" },
       { label: "Proof layers", href: "/proof-layers" },
       { label: "Try it", href: "/mvt" },
       { label: "Universal Times", href: "/universaltimes" },
+    ],
+  },
+  {
+    label: "HOA",
+    href: "/hoa",
+    children: [
+      { label: "The takeover", href: "/hoa" },
+      { label: "Sunset Oaks", href: "/hoa/sunset-oaks" },
     ],
   },
   { label: "Podcast", href: "/podcast" },
