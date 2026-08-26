@@ -1,6 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  hoaAfter,
+  hoaCan,
+  hoaDoors,
+  hoaDownload,
+  hoaGit,
+  hoaLine,
+  hoaPage,
+  hoaRoles,
+  hoaUrls,
+  hoaWrap,
+} from "@/content/hoa";
 import { EssayLayout } from "@/components/essay-layout";
-import { hoaNode, hoaPage, hoaWrap } from "@/content/hoa";
 
 export const Route = createFileRoute("/hoa")({
   component: HoaPage,
@@ -10,7 +21,7 @@ export const Route = createFileRoute("/hoa")({
       {
         name: "description",
         content:
-          "Run the Extropy Engine as an HOA-shaped MESO. Old laptop, one command, you are a node. Jobs an association already does, confirmed, XP minted.",
+          "Download Docker. Paste one line. Your laptop is a node. HOA jobs run on the Extropy Engine. The DAG starts today.",
       },
     ],
   }),
@@ -21,18 +32,58 @@ function HoaPage() {
     <EssayLayout backTo="/#engine" backLabel="Engine" kicker={hoaPage.kicker} title={hoaPage.title}>
       <p>{hoaPage.lead}</p>
 
-      <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">The wrapper</h2>
-      <p>
-        Not a new religion. The association already has a job list. We run that list on the Engine.
-        LocalFlow is the face so nobody has to say protocol. SignalFlow proposes ΔS. You never type
-        a score.
+      <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">What to download</h2>
+      {hoaDownload.map((s) => (
+        <section key={s.n} className="space-y-2 pt-2">
+          <h3 className="font-display text-xl text-fg">
+            <span className="font-mono text-sm tracking-[0.16em] text-primary">{s.n}</span> {s.title}
+          </h3>
+          <p>{s.body}</p>
+          {"href" in s && s.href ? (
+            <p>
+              <a href={s.href} className="text-primary hover:underline" target="_blank" rel="noreferrer">
+                {s.label} →
+              </a>
+            </p>
+          ) : null}
+        </section>
+      ))}
+      <pre className="overflow-x-auto whitespace-pre-wrap border border-primary/18 bg-surface/40 p-4 font-mono text-xs leading-relaxed text-fg">
+        {hoaLine}
+      </pre>
+      <ul className="list-disc space-y-2 pl-5">
+        {hoaAfter.map((s) => (
+          <li key={s.slice(0, 40)}>{s}</li>
+        ))}
+      </ul>
+      <p className="text-sm text-dim">
+        After it comes up, these are on this machine:
       </p>
+      <ul className="list-disc space-y-1 pl-5 font-mono text-xs">
+        {hoaUrls.map((u) => (
+          <li key={u.href}>
+            {u.label}: {u.href}
+          </li>
+        ))}
+      </ul>
+
+      <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">What this lets you do — today</h2>
+      <dl className="space-y-4">
+        {hoaCan.map((row) => (
+          <div key={row.t}>
+            <dt className="font-mono text-[12px] tracking-[0.08em] text-primary">{row.t}</dt>
+            <dd>{row.d}</dd>
+          </div>
+        ))}
+      </dl>
+
+      <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">HOA jobs, on the Engine</h2>
       <div className="overflow-x-auto border border-primary/18">
         <table className="w-full min-w-[32rem] border-collapse text-left text-sm">
           <thead>
             <tr className="font-mono text-[10px] tracking-[0.16em] text-primary uppercase">
-              <th className="border-b border-primary/20 px-3 py-2 font-normal">What an HOA does</th>
-              <th className="border-b border-primary/20 px-3 py-2 font-normal">On the Engine</th>
+              <th className="border-b border-primary/20 px-3 py-2 font-normal">Their list</th>
+              <th className="border-b border-primary/20 px-3 py-2 font-normal">The wrapper</th>
             </tr>
           </thead>
           <tbody>
@@ -48,24 +99,39 @@ function HoaPage() {
         </table>
       </div>
 
-      <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">{hoaNode.title}</h2>
-      <p>{hoaNode.need}</p>
-      <pre className="overflow-x-auto whitespace-pre-wrap border border-primary/18 bg-surface/40 p-4 font-mono text-xs leading-relaxed text-fg">
-        {hoaNode.line}
-      </pre>
-      <ol className="list-decimal space-y-2 pl-5">
-        {hoaNode.after.map((s) => (
-          <li key={s.slice(0, 40)}>{s}</li>
-        ))}
-      </ol>
-      <p>{hoaNode.windows}</p>
-      <p className="font-mono text-xs text-dim">Stop: {hoaNode.stop}</p>
+      <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">Positions, rebranded</h2>
       <p>
-        Preset and script:{" "}
-        <a href={hoaNode.href} className="text-primary hover:underline" target="_blank" rel="noreferrer">
-          presets/hoa-meso
+        You don’t clone their org chart. You convert the gavel into rules that run themselves.
+      </p>
+      <dl className="space-y-4">
+        {hoaRoles.map((row) => (
+          <div key={row.old}>
+            <dt className="font-mono text-[12px] tracking-[0.08em] text-primary">{row.old}</dt>
+            <dd>{row.now}</dd>
+          </div>
+        ))}
+      </dl>
+
+      <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">Two doors</h2>
+      <dl className="space-y-4">
+        {hoaDoors.map((d) => (
+          <div key={d.title}>
+            <dt className="font-mono text-[12px] tracking-[0.08em] text-primary">{d.title}</dt>
+            <dd>{d.body}</dd>
+          </div>
+        ))}
+      </dl>
+
+      <p>
+        Kernel:{" "}
+        <a href={hoaGit.repo} className="text-primary hover:underline" target="_blank" rel="noreferrer">
+          github.com/00ranman/extropy-engine
         </a>
-        . Scale table:{" "}
+        {" · "}
+        <a href={hoaGit.preset} className="text-primary hover:underline" target="_blank" rel="noreferrer">
+          preset
+        </a>
+        {" · "}
         <Link to="/dfao" className="text-primary hover:underline">
           DFAO
         </Link>
