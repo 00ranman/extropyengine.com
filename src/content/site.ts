@@ -419,10 +419,10 @@ export const engineViews = {
 } as const;
 
 export const engineGame = {
-  kicker: "Why this is not scary",
-  title: "It is a UI for the life you already live",
-  lead: "Treat the Codex as a design bible for an online multiplayer game that happens to run on top of the week you are already having. We are past paper. This is friends-and-family multiplayer. Worldwide when the mesh is. The internet is the WAN — you can log on that way — but the intended client is a low-end laptop, git clone, you are a node. Next laptop does the same. Nearby, you talk node to node. Farther, the internet introduces you. ZKPs are how the clients speak without dumping the save file on a company server.",
-  why: "That is why the confidence. It is a game. We already live inside unintended consequences. Throwing this ledger on the table is not a doomsday switch. The hurdle is not physics. The hurdle is a campaign: a big-brain object with a lot of parts, explained only as far as the seat you are in. Other people check it. Then more people talk. Then more people play. Why not play it on top of the life you are already living?",
+  kicker: "The game",
+  title: "It's just a UI for your life",
+  lead: "Picture what's on paper as a game that's going worldwide. You can log on through the internet you already have. That's not the only way, and it's not the correct way. Correct way: a cheap laptop, clone the repo, you're a node. Somebody else does the same thing. Nearby, you talk node to node — you don't even have to go through the internet. The internet is there so you can reach people who aren't next door. ZKPs talk to each other. That's the client.",
+  why: "That's why I'm confident. This is a game. I keep getting pushback that it's untested, that it's a bad idea. There's no special risk here. We live in a world built on unintended consequences. I don't get why people are so against throwing this ledger out there. The hurdle is the campaign. It's a big-brain thing with a lot of parts. You don't need the whole object. You need the part for the seat you're in. Other people check it. They go, oh, this is okay. Then more people talk. Then more people do it. Why not play the game on top of the life you're already living?",
 } as const;
 
 export const engineSignal = {

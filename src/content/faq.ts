@@ -25,7 +25,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "what",
         q: "What is the Extropy Engine?",
-        a: "An audit loop. Also: a multiplayer UI for the life you already live. Post work. Someone does it. You confirm. SignalFlow proposes a ΔS. XP mints if the reduction holds. The DAG keeps the receipts. The intended client is a laptop node, not a company server. Not a coin you buy. Not a church. Not a lab stamp.",
+        a: "An audit loop. A UI for the life you're already living. Post work. Someone does it. You confirm. SignalFlow proposes a ΔS. XP mints if the reduction holds. The DAG keeps the receipts. Cheap laptop, clone the repo, you're a node. Not a coin you buy. Not a church. Not a lab stamp.",
         also: [
           { label: "Engine", href: "/#engine" },
           { label: "Enter", href: "/start" },
@@ -40,7 +40,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "game",
         q: "This is untested. Why throw a ledger at the world?",
-        a: "Because it is a game overlay, not a doomsday switch. We already live inside unintended consequences. The Codex is the design bible. Git is the build. Hostinger organizes the ΔS. Spare-room laptops are the clients and the servers. Nearby they talk node to node; the internet is just the WAN for people who are not nearby. ZKPs are how the clients speak. The hurdle is a campaign — enough of the big object for the seat you are in — then other people check it, then more people play. Why not play it on top of the life you are already living?",
+        a: "Because this is a game. There's no special risk here. We live in a world built on unintended consequences. I don't get why people are so against throwing this ledger out there. You can log on through the regular internet. Correct way is a cheap laptop, clone the repo, you're a node. Next person does the same. Nearby you talk node to node. Internet is for people who aren't next door. ZKPs talk to each other. The hurdle is the campaign — big-brain thing, a lot of parts. You get the part for your seat. Other people check it. They go, oh, this is okay. Then more people talk. Then more people do it. Why not play the game on top of the life you're already living?",
         also: [
           { label: "Engine — the game", href: "/#engine" },
           { label: "UI for your life", href: "/glossary", hash: "ui-for-your-life" },

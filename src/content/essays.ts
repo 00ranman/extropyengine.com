@@ -293,7 +293,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "UI for your life",
         id: "ui-for-your-life",
-        def: "The Engine as a multiplayer overlay on the week you are already having. Not a new planet. A client: low-end laptop, git clone, you are a node. Nearby, node to node. Farther, the internet introduces you. ZKPs instead of a company holding the save. Hostinger is the storefront. The Codex is the design bible. Confidence is not “this replaced physics in a lab.” It is “this is a game, and we already live in unintended consequences.”",
+        def: "It's just a UI for your life. Picture the paper as a game that's going worldwide. You can log on through the internet you already have. Correct way: cheap laptop, clone the repo, you're a node. Nearby, node to node. Internet is for people who aren't next door. ZKPs talk to each other. That's why the confidence. This is a game. We live in a world built on unintended consequences. I don't get why people are so against throwing this ledger out there.",
       },
       {
         term: "Extropy",

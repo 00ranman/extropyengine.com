@@ -1,7 +1,7 @@
 export const hoaPage = {
   title: "Neighborhood MESO",
   kicker: "Extropy Engine · Sunset Oaks",
-  lead: "This is the Extropy Engine. Treat it like an online multiplayer game that runs on top of the life you already live. Hostinger is the storefront — it organizes ΔS into something you can actually run. The operation is spare-room laptops, coordinating. Sunset Oaks is the first MESO. Crews under it are MICROs. The book is not on this server.",
+  lead: "This is the Extropy Engine. It's a UI for the life you're already living. Hostinger just organizes the ΔS. The game runs on spare-room laptops. Sunset Oaks is the first MESO. Crews under it are MICROs. The book is not on this server.",
 } as const;
 
 export const hoaDownload = [
