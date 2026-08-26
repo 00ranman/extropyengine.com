@@ -204,6 +204,16 @@ export const faqSections: FaqSection[] = [
         ],
       },
       {
+        id: "did",
+        q: "How do I get a DID? And what stops a bad actor on my node?",
+        a: "You don't apply. The node writes a keypair on first boot. That's a did:key — W3C, no registrar, no company. Backup the file. Lose it and you're a new node. ZKPs are what you show: band, confirmed this loop, unique in this room, not slashed. The till gets yes or no, not your diary. Keys stay on the box. Don't punch the database at the WAN. One captured node can lie about itself; it cannot silently rewrite a neighbor's DAG. Sybil: identity is cheap, standing is not. Unique-in-DFAO stops fifty votes from one person. Looking is a vertex. Today the handshake is signatures. Circuits are Codex 3. Neighborhood-app does not mint a DID yet — don't pretend it does.",
+        also: [
+          { label: "The node", href: "/#node" },
+          { label: "DID", href: "/glossary", hash: "did" },
+          { label: "ZKP reputation", href: "/glossary", hash: "zkp-reputation" },
+        ],
+      },
+      {
         id: "listen",
         q: "Where do I listen / read?",
         a: "Book, papers, and the podcast are on this site. RSS is https://extropyengine.com/podcast/feed.xml. Spotify and YouTube listings exist. Apple still wants a one-time submit at Podcasts Connect — the feed is valid; their banner is not a feed error.",

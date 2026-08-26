@@ -441,6 +441,22 @@ export const engineSignal = {
     "Log in with a company and you are tethered to a company. Own hardware is how you stay unknown. A network-hosted model you can run without owning the rack is a later idea, not a product today.",
 } as const;
 
+export const engineNode = {
+  kicker: "The node",
+  title: "Keys stay on the box",
+  lead: "Each laptop is an independent node. Hostinger is not the network. Security is: you hold the key, the mesh verifies signatures, and a bad actor cannot silently rewrite someone else's book.",
+  did: "You do not apply for a DID. First boot writes a keypair on disk. The name is a did:key — W3C, from the public key, no registrar, no Microsoft, no Google. That is how you get one. Backup the file. Lose it and you are a new node. Standing does not teleport. did:web is optional if you want a domain on the document. Not required.",
+  zkp: "The DID is the name. A ZKP is what you show. Prove a predicate: this DID, band ≥ n, confirmed this loop, not slashed in this DFAO, unique in this room. The till gets yes or no. Not your diary. Not the XP pile. Circuits are Codex 3. Today the handshake is signatures. Same job, thinner proof.",
+  points: [
+    { t: "On the box", d: "Keys, PSLL, postgres if you run the full stack — stay local. Do not punch the database at the WAN. You pull git. Nobody remote-admins you unless you handed them the key." },
+    { t: "On the wire", d: "LAN talks node to node. WAN is TLS. Handshake is a signed hello plus capabilities. One captured node can lie about its own claims. It cannot quietly rewrite a neighbor's DAG. Other nodes check signatures and causal parents." },
+    { t: "Sybil", d: "did:key is cheap on purpose. KYC is not the defense. Standing costs work. A new DID has no XP, no IT, no vote weight. Unique-in-DFAO ZKP is how one person does not vote fifty times in the same room. F punishes farmed loops." },
+    { t: "Fake work", d: "Both edges have to agree. Evidence hangs on the vertex. Late burn still hits. Repeat-farming is F. A MICRO can puff a lawn. The DAG plus burn is how we live with that — not a speech about honesty." },
+    { t: "Looking", d: "A common person can walk the DAG. They cannot do it silently. A look is a vertex. Stalking-shaped bursts can slash. Tills still get yes/no." },
+  ],
+  today: "Neighborhood-app today is a JSON book on one machine. It does not mint a DID yet. Handshake is HTTPS + signatures, not production P2P. The protocol is: first boot writes did:key. Wire that. Don't pretend the box already did.",
+} as const;
+
 export const engineLoop = [
   { code: "OPEN", note: "Task posted. Vertex on the DAG with causal parents. Evidence can hang off it." },
   { code: "CLOSED", note: "Agreement. Provisional XP mints. The first settle window is a knob — 30 days was a starting number, not a law." },
@@ -515,7 +531,7 @@ export const engineGit = [
   {
     status: "dev" as const,
     name: "Node handshake",
-    note: "Sandbox: VPS ↔ laptop. Hello, capabilities, DAG replay, heartbeat. HTTPS + signatures, not production P2P.",
+    note: "Sandbox: VPS ↔ laptop. Signed hello, capabilities, DAG replay, heartbeat. HTTPS + signatures, not production P2P. Protocol: first boot writes did:key. Not wired in neighborhood-app yet.",
     href: "https://github.com/00ranman/extropy-engine/tree/main/packages/node-handshake",
   },
   {

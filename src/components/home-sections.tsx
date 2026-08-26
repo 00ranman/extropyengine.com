@@ -11,6 +11,7 @@ import {
   engineGit,
   engineLoop,
   engineMath,
+  engineNode,
   engineSignal,
   engineTokens,
   engineViews,
@@ -382,6 +383,32 @@ export function EngineSection() {
           ))}
         </ol>
         <p className="mt-5 max-w-2xl text-sm leading-relaxed text-dim">{engineSignal.privacy}</p>
+      </div>
+
+      <div id="node" className="mx-auto mt-10 max-w-5xl border border-primary/22 bg-primary/4 px-5 py-6">
+        <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">{engineNode.kicker}</p>
+        <h3 className="font-display mt-2 text-xl tracking-[0.04em]">{engineNode.title}</h3>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">{engineNode.lead}</p>
+        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted">{engineNode.did}</p>
+        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">{engineNode.zkp}</p>
+        <ul className="mt-5 max-w-3xl space-y-3 text-sm leading-relaxed text-muted">
+          {engineNode.points.map((p) => (
+            <li key={p.t} className="flex gap-3">
+              <span className="shrink-0 font-mono text-[11px] tracking-[0.14em] text-primary">{p.t}</span>
+              <span>{p.d}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-5 max-w-3xl text-sm leading-relaxed text-dim">{engineNode.today}</p>
+        <p className="mt-4 font-mono text-[11px] tracking-[0.08em]">
+          <Link to="/faq" hash="did" className="text-primary hover:underline">
+            How do I get a DID? →
+          </Link>
+          <span className="text-faint"> · </span>
+          <Link to="/glossary" hash="did" className="text-primary hover:underline">
+            DID →
+          </Link>
+        </p>
       </div>
 
       <div className="mx-auto mt-10 max-w-5xl border border-accent/18 px-5 py-6">

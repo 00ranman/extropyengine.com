@@ -347,11 +347,27 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       },
       {
         term: "ZKP reputation",
+        id: "zkp-reputation",
         def: "Prove a predicate (access band, domain standing, clean-in-epoch, vote eligibility) without dumping a dossier on a till. Not hermit invisibility — looking at someone’s graph is allowed and is itself a DAG vertex. Silent stalking is the failure mode. Unmask still wants cause + a DFAO vote.",
       },
       {
         term: "Digital Autarky",
         def: "Intelligence, identity, and local context stay at the edge. The network is a handshake, a claim schema, and a DAG — not a supermind. Company login means company tether. Own hardware is how you stay unknown. Edge intelligence unveils only the ZKP the equation needs.",
+      },
+      {
+        term: "DID",
+        id: "did",
+        def: "Decentralized Identifier. You do not apply. First boot of a node writes a keypair on that box. The name is did:key — W3C, derived from the public key, no registrar. Backup the file. Lose it and you are a new node; standing does not teleport. did:web is optional. Microsoft and Google are not how you get one. The DID is the name. A ZKP is what you show.",
+      },
+      {
+        term: "Node",
+        id: "node",
+        def: "A machine running the Engine. Keys stay on the box. LAN talks node to node. WAN is TLS plus a signed handshake. Hostinger is not a node. One captured node can lie about itself. It cannot silently rewrite a neighbor's DAG — other nodes check signatures and causal parents. Neighborhood-app today is a JSON book; it does not mint a DID yet.",
+      },
+      {
+        term: "Sybil",
+        id: "sybil",
+        def: "Spinning many cheap identities. did:key is cheap on purpose. KYC is not the defense. Standing costs work. A new DID has no XP, no IT, no vote weight. Unique-in-DFAO ZKP is how one person does not vote fifty times in the same room. F punishes farmed loops.",
       },
       {
         term: "DFAO",

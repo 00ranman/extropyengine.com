@@ -123,6 +123,20 @@ Hermit privacy is not the product. Google already has the file. A common person 
 
 https://github.com/00ranman/extropy-engine/blob/main/docs/CODEX_3_NOTES_LOOK.md
 
+## Node, DID, bad actors
+
+You do not apply for a DID. First boot writes a keypair on the box. Name is `did:key` (W3C, no registrar). Backup the file. Lose it → new node; standing does not teleport. `did:web` optional.
+
+DID is the name. ZKP is what you show (band, unique-in-DFAO, confirmed this loop, not slashed). Till gets yes/no. Not the PSLL.
+
+Keys stay on the box. Do not expose postgres/redis to the WAN. LAN: node to node. WAN: TLS + signed handshake. One captured node lies about itself. It cannot silently rewrite a neighbor’s DAG.
+
+Sybil: `did:key` is cheap on purpose. KYC is not the defense. Standing costs work. Unique-in-DFAO ZKP stops fifty votes from one person. F punishes farmed loops. LOOK is a vertex.
+
+Today: neighborhood-app is a JSON book, no DID mint. Handshake is HTTPS + signatures. Wire `did:key` on first boot. Circuits are 3.0. Don’t ship a story that the box already did it.
+
+https://github.com/00ranman/extropy-engine/blob/main/docs/NODE_SECURITY.md
+
 ## What 3.0 has to actually write
 
-Settle knob. XP decay next to IT decay. Late burn. SignalFlow as first-class. Claim path with evidence. MICRO overselling acknowledged. DAG as instrument. Burn-floor axiom yes/no. Box as for-profit intent. Access band as ZKP (display default off). Play boards opt-in, no power. Soulbound marks. Seasons ≠ diplomacy. Roles from showing up; votes for knobs. LOOK vertices; silent fetch forbidden. Leave 2.1 alone until then.
+Settle knob. XP decay next to IT decay. Late burn. SignalFlow as first-class. Claim path with evidence. MICRO overselling acknowledged. DAG as instrument. Burn-floor axiom yes/no. Box as for-profit intent. Access band as ZKP (display default off). Play boards opt-in, no power. Soulbound marks. Seasons ≠ diplomacy. Roles from showing up; votes for knobs. LOOK vertices; silent fetch forbidden. did:key on first boot. Unique-in-DFAO ZKP. Leave 2.1 alone until then.
