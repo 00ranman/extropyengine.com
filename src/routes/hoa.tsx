@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, Outlet, useChildMatches } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   hoaFb,
@@ -25,7 +25,9 @@ export const Route = createFileRoute("/hoa")({
 });
 
 function HoaPage() {
+  const kids = useChildMatches();
   const [copied, setCopied] = useState(false);
+  if (kids.length > 0) return <Outlet />;
   async function copyBlurb() {
     await navigator.clipboard.writeText(hoaFb);
     setCopied(true);
