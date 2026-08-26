@@ -378,7 +378,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "Not a panopticon",
         id: "not-a-panopticon",
-        def: "A panopticon is one tower that sees every diary. This is the opposite. PSLL on the box. ZKP at the till: yes or no. Looking writes a vertex. Silent fetch is forbidden. extropyengine.com is not the Engine and not a server for your log. If a show ended on 'surveillance state' after saying all of that, the close was a reading error.",
+        def: "A panopticon is one tower that sees every diary. A surveillance state is a central log you cannot opt out of. This has neither. PSLL is a file on your disk. The network sees a proof — yes or no — not the file. Looking writes a vertex. Silent fetch is a detectable act. extropyengine.com is a website, not a watchtower and not a host for the Engine.",
       },
       {
         term: "DID",
@@ -502,7 +502,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "Late mint",
         id: "late-mint",
-        def: "A closed loop is not the last word. If later domains converge on a higher or lower ΔS — a student becomes president and traces it to a teacher; a deal that looked cheap poisons a basin — the DAG can mint into or burn the original vertex. Settled is not sacred. The delta of the proxy moves, not a second full paycheck for existing. Retroactive revalidation is what an audit system that does not stop is for.",
+        def: "A closed loop is not the last word. The long-horizon mechanism that still has weight is this one: later domains converge, a new vertex cites the old one, a huge ΔS shows up — Nobel, a society-scale fix — and the original vertex can mint a delta. Not a second full paycheck. Ordinary work thirty years on has already leaked to dust on the 0.99ⁿ curve; that is not the story. Citation-gated. Settled is not sacred.",
       },
       {
         term: "Citation-gated credit",
@@ -512,12 +512,12 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "Late burn",
         id: "late-burn",
-        def: "Verdict, not a leak. Same machine as late mint, the other direction. If the president is later a disaster and the “turnaround” enabled harm, the teacher’s earlier vertex can burn — if the new evidence holds. No expiry. You do not claw back the 99% decay already ate. That XP is gone. You mark the vertex BURNED, slash whatever dust is left, and drop an access band that sat on that mint. Scope is the vertex and citation-gated children, not the person’s whole life. False late-burn can burn the accuser. A ratchet that only adds is a church.",
+        def: "Same machine as late mint, the other direction. A later-revealed harm, cited, can mark the vertex BURNED and slash remaining dust plus any new delta that sat on that citation. Scope is the vertex and citation-gated children, not the whole wallet. You do not claw back what decay already ate. Ordinary remaining pile at 30 years is ≈ 2.7% of that mint — bookkeeping, not a sword over a lawn. False late-burn can burn the accuser. A ratchet that only adds is a church.",
       },
       {
         term: "XP decay",
         id: "xp-decay",
-        def: "Treadmill, not a court. Default ρ ≈ 1% of the remaining pile per ~30 days (knob). Multiplicative: remaining after n months is 0.99^n. Half-life ≈ 69 months. It never hits zero in the reals — that’s the compression showing. On a machine you still pick a dust floor (underflow, or quantize into a ZKP access band). You keep minting or the pile fades. Late burn is not this.",
+        def: "Treadmill, not a court. ρ ≈ 1% of the remaining pile per ~30 days (knob). Remaining after n months: 0.99ⁿ. Half-life ≈ 69 months (~50%). ~1 year ≈ 89%. ~8 years ≈ 38%. ~20 years ≈ 9%. ~30 years ≈ 2.7%. Never zero in the reals — map seam, not a fuse. Dust floor on a machine. You keep minting or the pile fades. Late mint is the decades-later mechanism that can still move a number (huge cited ΔS). Late burn of ordinary remaining dust is not a headline.",
       },
       {
         term: "The glass of water",

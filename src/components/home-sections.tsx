@@ -7,6 +7,7 @@ import {
   book,
   earlierEditions,
   engineDag,
+  engineDecay,
   engineGame,
   engineGit,
   engineLoop,
@@ -461,10 +462,9 @@ export function EngineSection() {
         <h3 className="font-display mt-2 text-xl tracking-[0.04em]">Mint, then maybe burn</h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-dim">
           Every confirm writes a vertex. Parents are causal, not a block. XP at close is
-          provisional. The first settle window was thrown out as about thirty days. Could be five.
-          A DFAO can vote its own. PLANETARY is the only vote that hits everyone, and that is
-          supposed to be hard. Settled XP still decays, and it can still burn years later. You do
-          not spend it.
+          provisional. Settled XP decays. The long-horizon mechanism that still has weight is late
+          mint — a later huge ΔS, citation-gated — not clawing a lawn from thirty years ago. That
+          lawn is already dust on the 0.99ⁿ curve. You do not spend XP.
         </p>
         <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {engineLoop.map((step) => (
@@ -472,6 +472,24 @@ export function EngineSection() {
               <div className="font-brand text-lg tracking-[0.08em] text-fg">{step.code}</div>
               <p className="mt-2 text-xs leading-relaxed text-dim">{step.note}</p>
             </div>
+          ))}
+        </div>
+        <div id="decay" className="mt-6 border border-fg/10 px-4 py-4">
+          <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">{engineDecay.kicker}</p>
+          <h4 className="font-display mt-2 text-lg tracking-[0.03em]">{engineDecay.title}</h4>
+          <p className="mt-2 text-sm leading-relaxed text-muted">{engineDecay.lead}</p>
+          <ul className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
+            {engineDecay.rows.map((r) => (
+              <li key={r.t} className="text-sm">
+                <span className="font-mono text-[11px] tracking-[0.12em] text-primary">{r.t}</span>
+                <span className="mt-1 block text-xs leading-relaxed text-dim">{r.d}</span>
+              </li>
+            ))}
+          </ul>
+          {engineDecay.body.map((p) => (
+            <p key={p.slice(0, 24)} className="mt-3 text-sm leading-relaxed text-muted">
+              {p}
+            </p>
           ))}
         </div>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">

@@ -480,9 +480,9 @@ export const engineNode = {
 export const engineNotThat = {
   kicker: "Not a panopticon",
   title: "This domain is not the Engine",
-  lead: "extropyengine.com is a website. Papers, a clock face, an RSS feed. Hostinger is not a node. The Engine is the git you clone onto a laptop. If a narrator said the Extropy Engine is hosted here, that was a slip. Correct it.",
+  lead: "extropyengine.com is a website. Papers, a clock face, an RSS feed. Hostinger is not a node. The Engine is the git you clone onto a laptop. Keys stay on that laptop.",
   close:
-    "A panopticon is one tower that can see every diary. This is the opposite. PSLL stays on the box. A till gets a ZKP — yes or no — not the pile, not the photos. Looking is a vertex. Silent stalking is the failure mode. did:key on first boot. Node to node on the LAN. Internet for people who aren't next door. If you talked through all of that and still ended on 'surveillance state,' you weren't listening. Don't close the show on that cheap question. The architecture already answered it. The diary stays yours.",
+    "A panopticon is one tower that can see every diary. A surveillance state is a central log you cannot opt out of. This has neither. The PSLL is a file on your disk. The network sees a proof — yes or no — not the file, not the photos, not last year. Looking at a graph writes a vertex; a silent fetch is a detectable act. did:key on first boot, no registrar. Node to node on the LAN. Internet for people who aren't next door. That is not a watchtower with extra vocabulary. Treating a ledger you hold as a camera pointed at you is the category error.",
 } as const;
 
 const P = "https://github.com/00ranman/extropy-engine/tree/main/packages";
@@ -490,7 +490,7 @@ const P = "https://github.com/00ranman/extropy-engine/tree/main/packages";
 export const engineStack = {
   kicker: "If it's in the git, it's in the process",
   title: "The Engine is the whole monorepo",
-  lead: "AIs keep collapsing this into LocalFlow plus SignalFlow. Those are two packages. The rest did not get deleted because we talked about errands last. Same loop everywhere: post, do, confirm, mint, maybe burn. Faces differ. The book does not.",
+  lead: "LocalFlow and SignalFlow are two packages. HomeFlow, quests, GrantFlow, identity, the kernel did not get deleted because errands got talked about last. Same loop everywhere: post, do, confirm, mint, maybe burn. Faces differ. The book does not.",
   groups: [
     {
       heading: "Faces",
@@ -543,9 +543,27 @@ export const engineStack = {
 export const engineLoop = [
   { code: "OPEN", note: "Task posted. Vertex on the DAG with causal parents. Evidence can hang off it." },
   { code: "CLOSED", note: "Agreement. Provisional XP mints. The first settle window is a knob — 30 days was a starting number, not a law." },
-  { code: "SETTLED", note: "Moves from provisional to standing. Still burnable later. XP is not spent. Access economy." },
-  { code: "BURNED", note: "Dispute holds — five days later or thirty years later. Decay burns XP on a schedule anyway." },
+  { code: "SETTLED", note: "Moves from provisional to standing. Still burnable later. XP is not spent. Access economy. Decay is already eating it." },
+  { code: "BURNED", note: "A later verdict on that vertex. Same machine as late mint, the other way. Ordinary remaining pile after decades is dust. See the 0.99ⁿ note." },
 ] as const;
+
+export const engineDecay = {
+  kicker: "Think it through",
+  title: "What 0.99ⁿ actually does",
+  lead: "1% of what is left, about every 30 days. Not 1% of the original. Remaining after n months is 0.99ⁿ. Half-life ≈ 69 months. It never hits zero in the reals. That is a map seam, not a fuse.",
+  rows: [
+    { t: "~1 year", d: "≈ 89% of that mint still there" },
+    { t: "~5.8 years", d: "half-life. ≈ 50%" },
+    { t: "~8 years", d: "≈ 38%" },
+    { t: "~20 years", d: "≈ 9%" },
+    { t: "~30 years", d: "≈ 2.7% — dust of the original mint" },
+  ],
+  body: [
+    "The long-horizon mechanism that still has weight is late mint, not late burn of a lawn. An ordinary loop, thirty years on, has leaked to a sliver. Clawing that sliver is a bookkeeping mark on a vertex. It is not a punishment that still moves a life.",
+    "Late mint is the same machine going the other way: new evidence, citation-gated, a later huge ΔS — a student who becomes a Nobel, someone who actually fixes a broken piece of the world — can still write a delta into the original vertex. That is when thirty years later still matters. You get the delta of the proxy, not a second full paycheck, and only along asserted edges.",
+    "Late burn of that same later-revealed harm is the symmetric case. It slashes remaining dust plus whatever new delta sat on that citation. It is not a time machine emptying the wallet. It does not reach back and un-mow the common. Treating “XP can be taken away in 30 years” as the headline, without the mint direction and without the 0.99ⁿ curve, is not the logistics.",
+  ],
+} as const;
 
 export const engineTokens = [
   { t: "XP", d: "Minted on verified ΔS > 0. You do not spend it. Access economy. Decays ~1%/month (ρ = 0.01 / 30 cycles) — not 5%. That is IT. Still burnable after settle. Under the floor it can quantize into a ZKP access band. Not a public ladder." },
@@ -586,7 +604,7 @@ export const engineDag = {
     "Every closed loop hangs evidence and a provisional ΔS on a vertex with causal parents. Next time a similar fight, a similar lawn, the network has somewhere to look besides a vibe.",
     "Edge intelligence unveils only the ZKP the equation needs. Nobody sits on the diary. Digital Autarky is how you get detail without a panopticon.",
     "Landauer is the bridge, not a costume: information erased has a heat floor. Social and cognitive events are information events. Bits-equivalent is the stand-in — a proxy, not a worshipped constant. If later data contradicts it, it moves. Not a metaphor. Physicists who stop at that sentence are not the audience.",
-    "A closed loop can still pay or burn later. More domains converge — a teacher whose student later traces the turnaround — and the original vertex can mint again. That is late mint. Settled is not sacred. The graph is allowed to catch up.",
+    "A closed loop can still mint later. That is the long-horizon mechanism with weight: a later huge, cited ΔS — Nobel, a society-scale fix — writes a delta into the original vertex. Ordinary remaining pile at thirty years is ≈ 2.7% of that mint. Late burn of that dust is a mark on a vertex, not a sword. Settled is not sacred. The graph is allowed to catch up.",
     "Curating that graph is work. A DAG specialist who makes the ledger more navigable is reducing entropy and minting XP. Human in the loop is not a disclaimer. It is a job the protocol pays.",
     "No extractive microtransaction at each hop. Transactionality is the loop itself. The machine talks to its own history. When interpretations of “this kind of fight” stop getting pushback, the needle moves less. That is calibration, not a cult of the founder — the founder has no privileged key.",
   ],

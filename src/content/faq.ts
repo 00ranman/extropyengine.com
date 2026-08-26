@@ -40,7 +40,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "hosted",
         q: "Is the Extropy Engine hosted on extropyengine.com?",
-        a: "No. That's a website. Papers, a clock face, an RSS feed. Hostinger is not a node. The Engine is the git you clone onto a laptop. Keys stay on the box. Nearby, node to node. Internet is for people who aren't next door. If a narrator said the Engine is hosted here, correct it.",
+        a: "No. That's a website. Papers, a clock face, an RSS feed. Hostinger is not a node. The Engine is the git you clone onto a laptop. Keys stay on the box. Nearby, node to node. Internet is for people who aren't next door.",
         also: [
           { label: "This domain is not the Engine", href: "/#not-a-panopticon" },
           { label: "The node", href: "/#node" },
@@ -49,7 +49,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "panopticon",
         q: "Isn't this just a panopticon? A surveillance state with extra steps?",
-        a: "No. A panopticon is one tower that can see every diary. This is the opposite. PSLL stays on the box. A till gets a ZKP — yes or no — not the pile, not the photos, not last year. Looking is a vertex. Silent stalking is the failure mode, not the product. did:key on first boot. No registrar. If you walked through DIDs, ZKPs, and decentralization and then closed on that bleak question, you weren't listening. Don't end the show there. The architecture already answered it. The diary stays yours.",
+        a: "No. A panopticon is one tower that can see every diary. A surveillance state is a central log you cannot opt out of. This has neither. The PSLL is a file on your disk. The network sees a proof — yes or no — not the file, not the photos. Looking writes a vertex. A silent fetch is a detectable act. did:key on first boot, no registrar. Node to node on the LAN. That is a ledger you hold, not a camera pointed at you.",
         also: [
           { label: "Not a panopticon", href: "/#not-a-panopticon" },
           { label: "Digital Autarky", href: "/glossary", hash: "digital-autarky" },
@@ -142,24 +142,29 @@ export const faqSections: FaqSection[] = [
         also: [
           { label: "Late mint", href: "/glossary", hash: "late-mint" },
           { label: "Citation-gated", href: "/glossary", hash: "citation-gated" },
+          { label: "0.99ⁿ", href: "/#decay" },
         ],
       },
       {
         id: "burn",
         q: "If the president is later a disaster, can the teacher’s XP be destroyed?",
-        a: "Yes. Late mint and late burn are the same machine. Direction is symmetric. A ratchet that only adds is a church. No expiry. False late-burn is a claim; it can burn the accuser. Scope is that vertex and citation-gated children, not the person’s whole life.",
-        also: [{ label: "Late burn", href: "/glossary", hash: "late-burn" }],
+        a: "Late mint first. Same machine both ways. A later huge ΔS — Nobel, a society-scale fix — can still write a citation-gated delta into the original vertex. That is when decades later still has weight. Late burn of later-revealed harm is the other direction. It slashes remaining dust plus that new delta. It does not empty the wallet. Ordinary XP thirty years on is ≈ 2.7% of the original mint (0.99³⁶⁰). Clawing a lawn from 1996 is bookkeeping. Treating “it can take your XP away in 30 years” as the headline, without the mint direction and without the curve, skips the logistics.",
+        also: [
+          { label: "Late mint", href: "/glossary", hash: "late-mint" },
+          { label: "Late burn", href: "/glossary", hash: "late-burn" },
+          { label: "0.99ⁿ", href: "/#decay" },
+        ],
       },
       {
         id: "decay",
         q: "1% every 30 days — so it lasts 30,000 days?",
-        a: "No. That is 1% of what is left, not 1% of the original until empty. Remaining is 0.99ⁿ. Half-life ≈ 69 months. It never hits zero in the reals. That’s a map seam, not a fuse. On a machine you pick a dust floor; under it, what’s left can sit in a ZKP access band. 30,000 days is the wrong arithmetic (even the linear reading zeros in ~3,000). Decay is a leak. Late burn is a verdict.",
-        also: [{ label: "XP decay", href: "/glossary", hash: "xp-decay" }],
+        a: "No. 1% of what is left, each ~30 days. Remaining after n months is 0.99ⁿ. Half-life ≈ 69 months (~5.8 years, half still there). ~8 years ≈ 38%. ~20 years ≈ 9%. ~30 years ≈ 2.7% — dust. It never hits zero in the reals. 30,000 days is the wrong arithmetic. Decay is a leak. Late mint is the long-horizon mechanism that can still move a number, and only for a later huge, cited ΔS. Late burn of ordinary remaining pile is a mark on a vertex, not a sword.",
+        also: [{ label: "XP decay", href: "/glossary", hash: "xp-decay" }, { label: "0.99ⁿ", href: "/#decay" }],
       },
       {
         id: "clawback",
         q: "If most of it already leaked, do you claw the old XP back?",
-        a: "No. You don’t collect the 99% that’s gone. You mark the vertex BURNED, slash remaining dust, and drop an access band that sat on that mint. The DAG does not forget because the wallet thinned.",
+        a: "No. You don’t collect what decay already ate. You mark the vertex BURNED and slash remaining dust. At 30 years that remaining is ≈ 2.7% of the original mint. The DAG does not forget. The wallet does not get a 1996-shaped hole.",
         also: [{ label: "Late burn", href: "/glossary", hash: "late-burn" }],
       },
       {

@@ -144,24 +144,19 @@ function PodcastPage() {
         <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">Afterword</p>
         <h2 className="font-display mt-2 text-2xl tracking-[0.04em] text-fg">This is not a panopticon</h2>
         <p className="mt-3">
-          If a deep dive dumped you on “isn’t this just a surveillance state,” that close was a
-          reading error. Stop there and you skipped the machine.
+          extropyengine.com is a website. Papers. A clock face. This RSS feed. Hostinger is not a
+          node. The Engine is the git you clone onto a laptop. Keys stay on the box. First boot
+          writes a did:key. Nobody at this domain holds that.
         </p>
         <p className="mt-3">
-          extropyengine.com is not the Engine. Papers. A clock face. This RSS feed. Hostinger is
-          not a node. The Engine is the git you clone onto a laptop. Keys stay on the box. First
-          boot writes a did:key. Nobody at this domain holds that.
+          A panopticon is one tower that can see every diary. A surveillance state is a central log
+          you cannot opt out of. This has neither. Your PSLL is a file on your disk. The network
+          sees a proof — yes or no — not the file, not the photos. Looking at someone’s graph
+          writes a vertex. A silent fetch is a detectable act. Node to node on the LAN. Internet
+          for people who aren’t next door.
         </p>
         <p className="mt-3">
-          A panopticon is one tower that can see every diary. This is the opposite. Your PSLL never
-          leaves the machine unless you unveil a proof. A till gets yes or no. Not the pile. Not
-          the photos. Looking at someone’s graph is allowed — and it writes a vertex. Silent
-          stalking is the failure mode, not the product.
-        </p>
-        <p className="mt-3">
-          DIDs. ZKPs. Node to node on the LAN. Internet for people who aren’t next door. If a show
-          walked through all of that and still ended bleak, it wasn’t listening. Don’t close there.
-          The diary stays yours.
+          That is a ledger you hold, not a camera pointed at you. The diary stays yours.
         </p>
       </div>
 
