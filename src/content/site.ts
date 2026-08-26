@@ -408,10 +408,10 @@ export const engineViews = {
     kicker: "Emergent Points",
     formula: "EP = XP × L",
     lines: [
-      "L is not a coupon. At purchase, both edges estimate from the mesh: your contribution, this shop’s local ΔS, the region, the domains in play. A fraction. 0.something.",
-      "EP = XP × L. No map to dollars. The number is an agreed estimate of how much of this exchange the network will settle. Both sides have to agree. Keep missing and the shop changes its parameters — or the customer is looking entropic.",
-      "Fiat still rings the rest because dollars still exist, not because EP equals this many dollars. Cash cannot mint XP. Mom-and-pop first. Walmart last.",
-      "Repeat-farming is F. You do not get full coverage from the get-go. By the time you do, you already live in the contract. ZKPs, not a KPI warehouse. MICRO → PLANETARY.",
+      "You still spend dollars. This is a layer on top of that, not a replacement. It tracks the exchange, converts it to a bits-equivalent proxy, and fine-tunes the average ΔS for this kind of situation in these domains until the proxy is less wrong.",
+      "L is estimated at purchase from the mesh — your contribution, this shop’s local ΔS, the region, the domains in play. A fraction. 0.something. EP = XP × L. No 1:1 to cash. There is no table.",
+      "What you get off the remaining bill is not a coupon. A vertex settles some of the exchange. How much is an agreed estimate both edges have to accept. Keep missing and the shop changes its parameters — or the customer is looking entropic.",
+      "The point of the layer is to show why that ΔS should be worth more than the fiat-only reading, if it isn’t already. Repeat-farming is F. Mom-and-pop first. Cash cannot mint XP.",
     ],
   },
 } as const;
@@ -439,7 +439,7 @@ export const engineLoop = [
 
 export const engineTokens = [
   { t: "XP", d: "Minted on verified ΔS > 0. You do not spend it. Access economy. Decays ~1%/month (ρ = 0.01 / 30 cycles) — not 5%. That is IT. Still burnable after settle. Under the floor it can quantize into a ZKP access band. Not a public ladder." },
-  { t: "EP", d: "Emergent Points. EP = XP × L at purchase. L is a mesh estimate (0.something), not a coupon. No EP = $ map. Both edges agree or it is a problem. Fiat still exists. Cash cannot mint XP." },
+  { t: "EP", d: "Emergent Points. Top layer on fiat, not a currency. EP = XP × L at purchase. L from the mesh (0.something). A vertex settles some of the exchange. No 1:1 to cash. Both edges agree." },
   { t: "IT", d: "Governance weight. Decays ~5%/month if you stop showing up. Different token from XP. Knob, not commandment." },
   { t: "CT / CAT / DT", d: "Standing, skill, domain. Separate so influence cannot be purchased with XP." },
 ] as const;

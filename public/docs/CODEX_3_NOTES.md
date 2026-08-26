@@ -22,19 +22,17 @@ MACROs coordinate off MICROs. MICROs are subjective. People oversell. Numbers ca
 
 **Digital Autarky** — intelligence and identity at the edge. The network is a handshake and a DAG, not a supermind. The assistant you trust is the UI.
 
-## Emergent Points (not a cash ban, not a dollar map)
+## Emergent Points (layer on fiat, not a dollar map)
 
-**EP = XP × L at purchase.** No EP = $ table. Do not invent one.
+People still spend dollars. EP is a **top layer**: track the exchange, convert to a bits-equivalent proxy, fine-tune average ΔS for that situation / those domains until the proxy is less wrong. The layer exists to show why that ΔS should be worth more than the fiat-only reading.
 
-**L** is not a coupon and not 1.4×. Both edges estimate from the mesh: customer contribution, this shop’s local ΔS, the region, the domains in play. A fraction. Times standing XP.
+**EP = XP × L at purchase.** L from the mesh (customer, shop local ΔS, region, domains) — a fraction, not a coupon, not 1.4×. No 1:1 to cash. Do not invent a table.
 
-The number is an **agreed estimate** of how much of this exchange the network will settle. Both sides have to agree. Keep missing → shop changes parameters, or the customer is looking entropic (hits their own ΔS). Repeat-farming is **F**.
+A **vertex** settles some of the exchange. How much is an agreed estimate. Both edges have to accept. Keep missing → shop changes parameters, or the customer is looking entropic. Repeat-farming is **F**.
 
-Fiat still rings because dollars still exist. Cash cannot mint XP. Low EP ≠ no milk. Mom-and-pop first. Walmart last. You do not get full coverage from the get-go.
+Fiat still rings the rest. Cash cannot mint XP. Low EP ≠ no milk. Mom-and-pop first. Walmart last.
 
-This is not a pairwise coupling with a currency converter bolted on. The mesh is the instrument.
-
-Emergent Points, not entropy points, not Epistemic Proof.
+Not pairwise coupling plus a currency converter. The mesh is the instrument. Emergent Points, not entropy points, not Epistemic Proof.
 
 The strict rule is the other door: **cash cannot mint XP.** No on-ramp into standing. Low EP ≠ no milk.
 

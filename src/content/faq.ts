@@ -164,13 +164,13 @@ export const faqSections: FaqSection[] = [
       {
         id: "milk",
         q: "If I don’t have enough EP, can I still buy milk with cash?",
-        a: "Yes. There is no EP-to-dollar table, so there is nothing to be short of in cash terms. EP = XP × L at purchase: a mesh estimate both edges have to agree on. Fiat still rings because dollars still exist. Low standing means the estimate covers less of the exchange, not that the fridge locks. Cash cannot mint XP.",
+        a: "Yes. You are still spending dollars. EP is a layer on top of that, not a lock and not a cash table. At purchase, both edges agree on a bits-equivalent estimate (EP = XP × L from the mesh). A vertex settles some of the exchange. The rest still rings in fiat. Low standing means the layer covers less, not that the fridge locks. Cash cannot mint XP.",
         also: [{ label: "Emergent Points", href: "/glossary", hash: "emergent-points" }],
       },
       {
         id: "on-ramp",
         q: "You said no fiat on-ramp. So this replaces money?",
-        a: "No. No on-ramp means cash cannot mint XP. It does not mean cash is banned, and it does not mean EP converts to dollars. There is no conversion. L is estimated from the mesh at purchase; times XP; both edges agree. Mom-and-pop first. You work toward the estimate covering the exchange. Repeat-farming is F. Trying to extract looks entropic. Keep the other job or don’t.",
+        a: "No. No on-ramp means cash cannot mint XP. People keep spending dollars. The Engine is a tracking layer: bits-equivalent proxies, fine-tuned as like-cases stack, so the ΔS of this kind of exchange gets less wrong. A vertex can settle some of the ticket. That is not EP = this many dollars. Mom-and-pop first. Repeat-farming is F. Keep the other job or don’t.",
         also: [{ label: "Engine — shop view", href: "/#engine" }],
       },
     ],
