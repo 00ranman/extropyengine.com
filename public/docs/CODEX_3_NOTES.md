@@ -22,6 +22,16 @@ MACROs coordinate off MICROs. MICROs are subjective. People oversell. Numbers ca
 
 **Digital Autarky** — intelligence and identity at the edge. The network is a handshake and a DAG, not a supermind. The assistant you trust is the UI.
 
+## Emergent Points at the till (not a cash ban)
+
+Till **EP = XP × L**. Emergent Points, not entropy points, not Epistemic Proof.
+
+They burn against **this** bill. Fiat pays the remainder. Parallel economy. Grocery still takes dollars on day one.
+
+The strict rule is the other door: **cash cannot mint XP.** No on-ramp into standing. Low EP ≠ no milk.
+
+Discount starts small, grows with participation, can hit a zero fiat line. Same math merchant → supplier → MACRO. Optional. Not a forced conversion. A treadmill on the social contract, not a lockout.
+
 ## Two clocks of death
 
 5%/month is **IT**, not XP.

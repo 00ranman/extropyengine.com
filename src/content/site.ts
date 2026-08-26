@@ -405,12 +405,12 @@ export const engineViews = {
   },
   merchant: {
     title: "What a shop sees",
-    kicker: "EP tab",
+    kicker: "Emergent Points",
     lines: [
-      "A regular comes in. Their standing is a number the till already knows.",
-      "EP settles the loyalty slice: EP = XP × L. Not a coin they bought.",
-      "No fiat on-ramp. The protocol does not cash out to dollars.",
-      "The merchant never has to say “entropy.” They see a tab.",
+      "A regular walks in. Standing × loyalty is already a number: EP = XP × L. Emergent Points, not entropy points. They burn against this bill.",
+      "Fiat still takes the rest. A grocery store still rings dollars. This is a parallel economy, not a day-one replacement.",
+      "The strict rule is the other direction: cash cannot mint XP. No on-ramp into standing. The fridge does not lock if EP is low.",
+      "The discount starts small and grows with showing up. Enough standing, the fiat line can go to zero. Same math the shop uses with its suppliers. Nobody is forced off their other job.",
     ],
   },
 } as const;
@@ -438,7 +438,7 @@ export const engineLoop = [
 
 export const engineTokens = [
   { t: "XP", d: "Minted on verified ΔS > 0. You do not spend it. Access economy. Decays ~1%/month (ρ = 0.01 / 30 cycles) — not 5%. That is IT. Still burnable after settle. Under the floor it can quantize into a ZKP access band. Not a public ladder." },
-  { t: "EP", d: "Merchant settlement. XP × loyalty. Burns when spent." },
+  { t: "EP", d: "Emergent Points. Till settlement: EP = XP × loyalty. Burns against the bill. Fiat pays the remainder. Cash cannot mint XP. Low EP does not mean no milk." },
   { t: "IT", d: "Governance weight. Decays ~5%/month if you stop showing up. Different token from XP. Knob, not commandment." },
   { t: "CT / CAT / DT", d: "Standing, skill, domain. Separate so influence cannot be purchased with XP." },
 ] as const;

@@ -159,6 +159,23 @@ export const faqSections: FaqSection[] = [
     ],
   },
   {
+    heading: "At the till",
+    items: [
+      {
+        id: "milk",
+        q: "If I don’t have enough EP, can I still buy milk with cash?",
+        a: "Yes. Emergent Points are a discount on a fiat bill, not a lock on the fridge. EP = XP × loyalty. They burn against this sale. Dollars take the rest. Day one this is a parallel economy. A grocery store still rings cash. The strict rule is the other direction: you cannot buy XP with cash. Low standing means a small discount, not a denied gallon.",
+        also: [{ label: "Emergent Points", href: "/glossary", hash: "emergent-points" }],
+      },
+      {
+        id: "on-ramp",
+        q: "You said no fiat on-ramp. So this replaces money?",
+        a: "No. No on-ramp means cash cannot mint XP. It does not mean cash is banned at the shop. The discount starts small and grows with showing up. Enough standing, the fiat line can go to zero. That’s an attractor, not a forced conversion. Keep the other job or don’t. Merchants use the same math with their suppliers. When those distributors are their own MACROs, the discount can run the whole way up. A continuous test of the social contract — not a new priesthood of dollars.",
+        also: [{ label: "Engine — shop view", href: "/#engine" }],
+      },
+    ],
+  },
+  {
     heading: "Run it",
     items: [
       {

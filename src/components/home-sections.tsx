@@ -346,6 +346,15 @@ export function EngineSection() {
           );
         })}
       </div>
+      <p className="mx-auto mt-3 max-w-5xl font-mono text-[11px] tracking-[0.08em]">
+        <Link to="/faq" hash="milk" className="text-primary hover:underline">
+          Can I still pay cash for milk? →
+        </Link>
+        <span className="text-faint"> · </span>
+        <Link to="/glossary" hash="emergent-points" className="text-primary hover:underline">
+          Emergent Points →
+        </Link>
+      </p>
 
       <div className="mx-auto mt-10 max-w-5xl border border-primary/22 bg-primary/4 px-5 py-6">
         <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">{engineSignal.kicker}</p>

@@ -366,6 +366,11 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
         def: "The base unit. Minted only on verified entropy reduction (ΔS > 0). Cannot be purchased or transferred. You do not spend it — access economy. Decays ~1%/month of what is left (ρ = 0.01 / 30 cycles), not 5% — that is IT. That is a leak, not a verdict. Half-life ~69 months if multiplicative. It does not hit zero; it gets small. Settled XP can still late-burn. Under the floor, decayed XP may quantize into a ZKP access band (prove L ≥ n, don’t publish the pile). Public boards, if any, are play — they cannot steer mint, IT, or knobs. Defaults are knobs.",
       },
       {
+        term: "EP — Emergent Points",
+        id: "emergent-points",
+        def: "Till settlement, not a coin. EP = XP × L (loyalty / standing at this shop). Burns at the point of sale against that bill. Fiat pays whatever is left. Parallel economy: groceries still take dollars on day one. The strict rule is no on-ramp the other way — cash cannot mint XP. Low EP does not lock the fridge. The discount starts small and grows with participation until the fiat line can hit zero. Same math merchant-to-supplier, up the MACRO chain. A continuous test of the social contract, not a ban on cash. Not entropy points. Not Epistemic Proof.",
+      },
+      {
         term: "CT — Coherence Token",
         def: "Minted when a system demonstrates sustained internal coherence across recursive cycles. Tracks alignment between stated goals and measured outputs.",
       },
@@ -383,7 +388,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       },
       {
         term: "EP — Epistemic Proof",
-        def: "Minted when a claim survives an adversarial falsification cycle within the Proof Layer. Non-transferable. Records that a proposition was tested and not broken.",
+        def: "Proof-layer token: a claim that survived an adversarial cycle. Not the till. Till EP is Emergent Points (XP × loyalty). Unfortunate collision of letters. This one does not buy milk.",
       },
     ],
   },
