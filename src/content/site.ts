@@ -415,6 +415,26 @@ export const engineViews = {
   },
 } as const;
 
+export const engineTill = {
+  kicker: "At the till",
+  title: "How Emergent Points actually ring",
+  formula: "EP = XP × L",
+  lead: "Real time. Current standing, this shop’s loyalty, this ticket. Not a coin you bought. Not a lock on the fridge.",
+  terms: [
+    { t: "XP", d: "Your standing right now. Access economy — you do not spend it. The till reads a threshold, not a wallet dump." },
+    { t: "L", d: "Loyalty at this merchant. A fraction: 0.something, not 1.4×. Shop-local. It moves with showing up here." },
+    { t: "EP", d: "Emergent Points. The product. Burns against this bill. Tells the register how much of the ticket is covered." },
+    { t: "Fiat", d: "Whatever is left after that burn. Dollars, still. Day one and for a long time." },
+  ],
+  steps: [
+    "You walk in. The till does not need your diary. A ZKP unveils standing and this-shop L — only what the equation needs.",
+    "EP = XP × L, right now. L is a fraction. A new regular might be 0.05. Someone who keeps the contract here might be 0.4. Not a multiplier above one.",
+    "That EP is the slice. Percentage off this ticket, then the remainder owed in fiat. EP burns. XP does not.",
+    "Small standing, small slice, you still pay cash for the milk. Bigger standing, bigger slice. Keep it up and the fiat line can hit zero. Same math the shop runs with its suppliers, MICRO → MESO → MACRO → PLANETARY.",
+  ],
+  note: "This is tracking nobody’s KPI warehouse can do, because there is no warehouse. Each edge keeps its own log. Information is volunteered, not extracted. ZKPs let MICRO through PLANETARY cross-reference without a central reader. A continuous test of the social contract — not a ban on cash, not a day-one replacement of dollars.",
+} as const;
+
 export const engineSignal = {
   kicker: "SignalFlow",
   title: "You do not score yourself",
@@ -438,7 +458,7 @@ export const engineLoop = [
 
 export const engineTokens = [
   { t: "XP", d: "Minted on verified ΔS > 0. You do not spend it. Access economy. Decays ~1%/month (ρ = 0.01 / 30 cycles) — not 5%. That is IT. Still burnable after settle. Under the floor it can quantize into a ZKP access band. Not a public ladder." },
-  { t: "EP", d: "Emergent Points. Till settlement: EP = XP × loyalty. Burns against the bill. Fiat pays the remainder. Cash cannot mint XP. Low EP does not mean no milk." },
+  { t: "EP", d: "Emergent Points. EP = XP × L, L a fraction (0.something), this shop, right now. Burns against the ticket. Fiat remainder. Cash cannot mint XP." },
   { t: "IT", d: "Governance weight. Decays ~5%/month if you stop showing up. Different token from XP. Knob, not commandment." },
   { t: "CT / CAT / DT", d: "Standing, skill, domain. Separate so influence cannot be purchased with XP." },
 ] as const;

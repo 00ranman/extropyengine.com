@@ -368,7 +368,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "EP — Emergent Points",
         id: "emergent-points",
-        def: "Till settlement, not a coin. EP = XP × L (loyalty / standing at this shop). Burns at the point of sale against that bill. Fiat pays whatever is left. Parallel economy: groceries still take dollars on day one. The strict rule is no on-ramp the other way — cash cannot mint XP. Low EP does not lock the fridge. The discount starts small and grows with participation until the fiat line can hit zero. Same math merchant-to-supplier, up the MACRO chain. A continuous test of the social contract, not a ban on cash. Not entropy points. Not Epistemic Proof.",
+        def: "Till settlement, not a coin. EP = XP × L, in real time, at this shop. L is loyalty here — a fraction (0.something), not 1.4×. The product is the slice off this ticket. EP burns. Fiat pays the remainder. Parallel economy: groceries still take dollars. Cash cannot mint XP. Low EP does not lock the fridge. Discount grows with showing up until the fiat line can hit zero. Same math merchant-to-supplier, MICRO → PLANETARY. No central KPI warehouse: each edge keeps its log, ZKPs unveil only what the equation needs. A continuous test of the social contract. Not entropy points. Not Epistemic Proof.",
       },
       {
         term: "CT — Coherence Token",

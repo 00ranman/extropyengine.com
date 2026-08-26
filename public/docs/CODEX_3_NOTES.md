@@ -24,9 +24,11 @@ MACROs coordinate off MICROs. MICROs are subjective. People oversell. Numbers ca
 
 ## Emergent Points at the till (not a cash ban)
 
-Till **EP = XP × L**. Emergent Points, not entropy points, not Epistemic Proof.
+Till **EP = XP × L**, in real time, this shop. **L is a fraction (0.something), not 1.4×.** The product is the slice off this ticket. EP burns. Fiat remainder.
 
-They burn against **this** bill. Fiat pays the remainder. Parallel economy. Grocery still takes dollars on day one.
+No central KPI warehouse. Each edge keeps its log. ZKPs unveil standing + this-shop L only. MICRO → MESO → MACRO → PLANETARY can cross-reference without a central reader. Voluntary, not extracted.
+
+Emergent Points, not entropy points, not Epistemic Proof. Cash cannot mint XP. Low EP ≠ no milk.
 
 The strict rule is the other door: **cash cannot mint XP.** No on-ramp into standing. Low EP ≠ no milk.
 

@@ -164,7 +164,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "milk",
         q: "If I don’t have enough EP, can I still buy milk with cash?",
-        a: "Yes. Emergent Points are a discount on a fiat bill, not a lock on the fridge. EP = XP × loyalty. They burn against this sale. Dollars take the rest. Day one this is a parallel economy. A grocery store still rings cash. The strict rule is the other direction: you cannot buy XP with cash. Low standing means a small discount, not a denied gallon.",
+        a: "Yes. Emergent Points are a slice off a fiat bill, not a lock on the fridge. At this till, right now: EP = XP × L. L is loyalty here — a fraction, 0.something, not 1.4×. That product is the percentage off this ticket. EP burns. Dollars take the rest. Cash cannot mint XP. Low standing means a small discount, not a denied gallon.",
         also: [{ label: "Emergent Points", href: "/glossary", hash: "emergent-points" }],
       },
       {
