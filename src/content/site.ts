@@ -418,6 +418,13 @@ export const engineViews = {
   },
 } as const;
 
+export const engineGame = {
+  kicker: "Why this is not scary",
+  title: "It is a UI for the life you already live",
+  lead: "Treat the Codex as a design bible for an online multiplayer game that happens to run on top of the week you are already having. We are past paper. This is friends-and-family multiplayer. Worldwide when the mesh is. The internet is the WAN — you can log on that way — but the intended client is a low-end laptop, git clone, you are a node. Next laptop does the same. Nearby, you talk node to node. Farther, the internet introduces you. ZKPs are how the clients speak without dumping the save file on a company server.",
+  why: "That is why the confidence. It is a game. We already live inside unintended consequences. Throwing this ledger on the table is not a doomsday switch. The hurdle is not physics. The hurdle is a campaign: a big-brain object with a lot of parts, explained only as far as the seat you are in. Other people check it. Then more people talk. Then more people play. Why not play it on top of the life you are already living?",
+} as const;
+
 export const engineSignal = {
   kicker: "SignalFlow",
   title: "You do not score yourself",

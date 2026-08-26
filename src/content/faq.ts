@@ -25,7 +25,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "what",
         q: "What is the Extropy Engine?",
-        a: "An audit loop. Post work. Someone does it. You confirm. SignalFlow proposes a ΔS. XP mints if the reduction holds. The DAG keeps the receipts. Value is treated as verified entropy reduction across eight domains — a bits-equivalent proxy that is allowed to move when new data lands. Not a coin you buy. Not a church. Not a lab stamp.",
+        a: "An audit loop. Also: a multiplayer UI for the life you already live. Post work. Someone does it. You confirm. SignalFlow proposes a ΔS. XP mints if the reduction holds. The DAG keeps the receipts. The intended client is a laptop node, not a company server. Not a coin you buy. Not a church. Not a lab stamp.",
         also: [
           { label: "Engine", href: "/#engine" },
           { label: "Enter", href: "/start" },
@@ -36,6 +36,15 @@ export const faqSections: FaqSection[] = [
         q: "Is this a cryptocurrency? A religion? A theory of everything?",
         a: "No. XP is not spent and not purchased. Access economy. Decay and late burn can still kill standing XP. Failure conditions are published on purpose. A system that hides those is a religion. This one lists them.",
         also: [{ label: "Open problems", href: "/open-problems" }],
+      },
+      {
+        id: "game",
+        q: "This is untested. Why throw a ledger at the world?",
+        a: "Because it is a game overlay, not a doomsday switch. We already live inside unintended consequences. The Codex is the design bible. Git is the build. Hostinger organizes the ΔS. Spare-room laptops are the clients and the servers. Nearby they talk node to node; the internet is just the WAN for people who are not nearby. ZKPs are how the clients speak. The hurdle is a campaign — enough of the big object for the seat you are in — then other people check it, then more people play. Why not play it on top of the life you are already living?",
+        also: [
+          { label: "Engine — the game", href: "/#engine" },
+          { label: "UI for your life", href: "/glossary", hash: "ui-for-your-life" },
+        ],
       },
     ],
   },

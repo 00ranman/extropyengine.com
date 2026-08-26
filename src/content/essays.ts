@@ -291,8 +291,9 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
     heading: "Core Concepts",
     entries: [
       {
-        term: "Entropy",
-        def: "Disorder. Wasted energy. Lost signal. Unused potential. The measurable quantity of disorder in a given system at a given time. Not used as: a metaphor for chaos or a philosophical mood.",
+        term: "UI for your life",
+        id: "ui-for-your-life",
+        def: "The Engine as a multiplayer overlay on the week you are already having. Not a new planet. A client: low-end laptop, git clone, you are a node. Nearby, node to node. Farther, the internet introduces you. ZKPs instead of a company holding the save. Hostinger is the storefront. The Codex is the design bible. Confidence is not “this replaced physics in a lab.” It is “this is a game, and we already live in unintended consequences.”",
       },
       {
         term: "Extropy",

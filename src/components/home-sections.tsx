@@ -7,6 +7,7 @@ import {
   book,
   earlierEditions,
   engineDag,
+  engineGame,
   engineGit,
   engineLoop,
   engineMath,
@@ -328,6 +329,13 @@ export function EngineSection() {
         laptops can coordinate — the operation is not on the server. Archived experiments are off
         this page on purpose.
       </p>
+
+      <div className="mx-auto mb-12 max-w-5xl border border-primary/22 bg-primary/4 px-5 py-6">
+        <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">{engineGame.kicker}</p>
+        <h3 className="font-display mt-2 text-xl tracking-[0.04em]">{engineGame.title}</h3>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">{engineGame.lead}</p>
+        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-dim">{engineGame.why}</p>
+      </div>
 
       <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2">
         {(["consumer", "merchant"] as const).map((key) => {
