@@ -156,12 +156,6 @@ export const faqSections: FaqSection[] = [
         a: "No. Decentralized Fractal Autonomous Organization. Scale labels (NANO → PLANETARY) are suggested rule sets, not membership caps. Seven was a shorthand that leaked as a law. It is not. Same loop at every scale: post, do, confirm. Votes rewrite the room they are cast in. Only PLANETARY hits everybody, and that is supposed to be hard.",
         also: [{ label: "DFAO", href: "/dfao" }],
       },
-      {
-        id: "hoa",
-        q: "Can this replace an HOA?",
-        a: "They have the gavel. We have the scorebook. You register, jobs go on a list, neighbors sign them closed. That book is a ledger they can’t white-out — that’s the valuable part. Keep paying the old dues so they cannot lien you. Paper door: owners vote, lawyer, county. Attrition door: we already did the jobs, so they’re a costume. Paradox. You always have the second. Eggs are not a door.",
-        also: [{ label: "Replace the HOA", href: "/hoa" }],
-      },
     ],
   },
   {

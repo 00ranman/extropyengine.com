@@ -60,10 +60,6 @@ function Docs() {
         ))}
       </div>
       <p className="pt-2">
-        <Link to="/hoa" className="text-primary hover:underline">
-          Replace the HOA →
-        </Link>
-        {" · "}
         <Link to="/faq" className="text-primary hover:underline">
           FAQ →
         </Link>

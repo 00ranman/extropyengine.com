@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { EssayLayout } from "@/components/essay-layout";
 import { DFAO_NAME, dfaoPhases, dfaoScales } from "@/content/dfao";
 
@@ -100,12 +100,6 @@ function DfaoDoc() {
         there is supposed to be hard. Defaults (including a ~30-day first settle window) are
         starting numbers, not axioms. There may yet be a floor: some XP and some IT always burn.
         That would be an axiom. It is not written in as one yet.
-      </p>
-      <p>
-        Worked example — register, take the jobs, two doors:{" "}
-        <Link to="/hoa" className="text-primary hover:underline">
-          Get rid of the HOA →
-        </Link>
       </p>
       <p>
         Registry code lives in{" "}

@@ -13,7 +13,6 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as DfaoRouteImport } from './routes/dfao'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as GlossaryRouteImport } from './routes/glossary'
-import { Route as HoaRouteImport } from './routes/hoa'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as MvtRouteImport } from './routes/mvt'
 import { Route as OpenProblemsRouteImport } from './routes/open-problems'
@@ -49,11 +48,6 @@ const FaqRoute = FaqRouteImport.update({
 const GlossaryRoute = GlossaryRouteImport.update({
   id: '/glossary',
   path: '/glossary',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HoaRoute = HoaRouteImport.update({
-  id: '/hoa',
-  path: '/hoa',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LoginRoute = LoginRouteImport.update({
@@ -142,7 +136,6 @@ export interface FileRoutesByFullPath {
   '/dfao': typeof DfaoRoute
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
-  '/hoa': typeof HoaRoute
   '/login': typeof LoginRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
@@ -165,7 +158,6 @@ export interface FileRoutesByTo {
   '/dfao': typeof DfaoRoute
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
-  '/hoa': typeof HoaRoute
   '/login': typeof LoginRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
@@ -189,7 +181,6 @@ export interface FileRoutesById {
   '/dfao': typeof DfaoRoute
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
-  '/hoa': typeof HoaRoute
   '/login': typeof LoginRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
@@ -214,7 +205,6 @@ export interface FileRouteTypes {
     | '/dfao'
     | '/faq'
     | '/glossary'
-    | '/hoa'
     | '/login'
     | '/mvt'
     | '/open-problems'
@@ -237,7 +227,6 @@ export interface FileRouteTypes {
     | '/dfao'
     | '/faq'
     | '/glossary'
-    | '/hoa'
     | '/login'
     | '/mvt'
     | '/open-problems'
@@ -260,7 +249,6 @@ export interface FileRouteTypes {
     | '/dfao'
     | '/faq'
     | '/glossary'
-    | '/hoa'
     | '/login'
     | '/mvt'
     | '/open-problems'
@@ -284,7 +272,6 @@ export interface RootRouteChildren {
   DfaoRoute: typeof DfaoRoute
   FaqRoute: typeof FaqRoute
   GlossaryRoute: typeof GlossaryRoute
-  HoaRoute: typeof HoaRoute
   LoginRoute: typeof LoginRoute
   MvtRoute: typeof MvtRoute
   OpenProblemsRoute: typeof OpenProblemsRoute
@@ -331,13 +318,6 @@ declare module '@tanstack/react-router' {
       path: '/glossary'
       fullPath: '/glossary'
       preLoaderRoute: typeof GlossaryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/hoa': {
-      id: '/hoa'
-      path: '/hoa'
-      fullPath: '/hoa'
-      preLoaderRoute: typeof HoaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/login': {
@@ -460,7 +440,6 @@ const rootRouteChildren: RootRouteChildren = {
   DfaoRoute: DfaoRoute,
   FaqRoute: FaqRoute,
   GlossaryRoute: GlossaryRoute,
-  HoaRoute: HoaRoute,
   LoginRoute: LoginRoute,
   MvtRoute: MvtRoute,
   OpenProblemsRoute: OpenProblemsRoute,

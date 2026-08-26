@@ -31,7 +31,6 @@ export const primaryNav: readonly NavItem[] = [
       { label: "FAQ", href: "/faq" },
       { label: "Glossary", href: "/glossary" },
       { label: "DFAO", href: "/dfao" },
-      { label: "Get rid of the HOA", href: "/hoa" },
       { label: "Open problems", href: "/open-problems" },
       { label: "Proof layers", href: "/proof-layers" },
       { label: "Try it", href: "/mvt" },
@@ -541,11 +540,6 @@ export const socials = [
 ] as const;
 
 export const docsIndex = [
-  {
-    title: "Get rid of the HOA",
-    href: "/hoa",
-    note: "Register. Take the jobs. Paper door if the vote is there. Work door if it isn’t.",
-  },
   {
     title: "Codex 3.0 notes",
     href: "/docs/CODEX_3_NOTES.md",
