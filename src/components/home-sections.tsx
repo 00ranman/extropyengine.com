@@ -13,6 +13,7 @@ import {
   engineMath,
   engineNode,
   engineSignal,
+  engineStack,
   engineTokens,
   engineViews,
   papers,
@@ -324,11 +325,10 @@ export function EngineSection() {
     <section id="engine" className="border-t border-primary/12 px-[8vw] py-[90px] max-md:px-[6vw]">
       <span id="suite" className="sr-only" />
       <SectionTitle className="mb-3 text-center">How it runs</SectionTitle>
-      <p className="mx-auto mb-12 max-w-xl text-center text-[15px] leading-relaxed text-muted">
-        Not a pile of apps. LocalFlow is the errand face. SignalFlow is how you talk to the
-        protocol. A DAG under the floor. This site (Hostinger) just organizes the ΔS so spare-room
-        laptops can coordinate — the operation is not on the server. Archived experiments are off
-        this page on purpose.
+      <p className="mx-auto mb-12 max-w-2xl text-center text-[15px] leading-relaxed text-muted">
+        Not two apps. If it is still in the git, it is still the process. LocalFlow and SignalFlow
+        are faces and a claim-router. HomeFlow, quests, GrantFlow, identity, the kernel — same
+        loop. This site organizes the ΔS. Spare-room laptops run it.
       </p>
 
       <div className="mx-auto mb-12 max-w-5xl border border-primary/22 bg-primary/4 px-5 py-6">
@@ -339,7 +339,7 @@ export function EngineSection() {
       </div>
 
       <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2">
-        {(["consumer", "merchant"] as const).map((key) => {
+        {(["consumer", "house", "quests", "merchant"] as const).map((key) => {
           const view = engineViews[key];
           return (
             <div key={key} className="border border-primary/16 bg-surface/40 px-5 py-6">
@@ -368,7 +368,34 @@ export function EngineSection() {
         <Link to="/glossary" hash="emergent-points" className="text-primary hover:underline">
           Emergent Points →
         </Link>
+        <span className="text-faint"> · </span>
+        <a href="#stack" className="text-primary hover:underline">
+          Whole process →
+        </a>
       </p>
+
+      <div id="stack" className="mx-auto mt-10 max-w-5xl border border-primary/22 bg-primary/4 px-5 py-6">
+        <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">{engineStack.kicker}</p>
+        <h3 className="font-display mt-2 text-xl tracking-[0.04em]">{engineStack.title}</h3>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">{engineStack.lead}</p>
+        <div className="mt-6 grid gap-6 lg:grid-cols-3">
+          {engineStack.groups.map((g) => (
+            <div key={g.heading}>
+              <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">{g.heading}</p>
+              <ul className="mt-3 space-y-3">
+                {g.items.map((item) => (
+                  <li key={item.name} className="text-sm leading-relaxed">
+                    <a href={item.href} className="font-mono text-[12px] text-fg hover:text-primary" target="_blank" rel="noreferrer">
+                      {item.name}
+                    </a>
+                    <span className="text-muted"> — {item.d}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
 
       <div className="mx-auto mt-10 max-w-5xl border border-primary/22 bg-primary/4 px-5 py-6">
         <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">{engineSignal.kicker}</p>
@@ -515,8 +542,9 @@ export function EngineSection() {
         <h3 className="font-display mt-2 text-xl tracking-[0.04em]">What is code vs napkin</h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-dim">
           Kernel is MIT, TypeScript, Docker. Happy path is real. Adversarial path is the current
-          build. Older standalone repos were archived into the monorepo or retired. They are not
-          listed here.
+          build. The list above is the process. Older standalone repos were archived into this
+          monorepo or retired. Status tags below are honesty about how far each slice is, not a
+          permission to ignore it.
         </p>
         <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {engineGit.map((item) => (

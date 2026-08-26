@@ -407,6 +407,26 @@ export const engineViews = {
       "Uber, Lyft, DoorDash, Grubhub — one pile. Not the protocol. Confirmation is the receipt.",
     ],
   },
+  house: {
+    title: "What a house sees",
+    kicker: "HomeFlow",
+    lines: [
+      "The household is a DFAO. Chores, IoT, the building. Thermodynamic measurement of the rooms you actually live in.",
+      "Still the same loop: post, do, confirm. Not a separate religion. Not “the errand app but indoor.”",
+      "Sensors can hang evidence. They do not mint. Mint still wants a closed loop.",
+      "If it is in packages/homeflow, it is in the process. Silence on this page was a mistake, not a retirement.",
+    ],
+  },
+  quests: {
+    title: "What a quest is",
+    kicker: "Quest market",
+    lines: [
+      "Default grain: two to five minutes. Decomposition at the edge, not a priesthood.",
+      "Reward can escalate if it sits. Validation-neighborhoods take blind slices. Volunteer role, not a class of people.",
+      "Bigger work is a graph of small ones. Farming a 3-minute task is expensive because F exists.",
+      "packages/quest-market is the operational primitive. Still in git. Still the process.",
+    ],
+  },
   merchant: {
     title: "What a shop sees",
     kicker: "Emergent Points",
@@ -430,7 +450,7 @@ export const engineGame = {
 export const engineSignal = {
   kicker: "SignalFlow",
   title: "You do not score yourself",
-  lead: "LocalFlow is the errand face. SignalFlow is the protocol you actually talk to. Your assistant — ChatGPT, Claude, Gemini, or a model on your own box — plus your personal log. That is the UI.",
+  lead: "SignalFlow is one layer. It is not the Engine. LocalFlow is one face. It is not the Engine. The protocol you talk to is your assistant — ChatGPT, Claude, Gemini, or a model on your own box — plus your PSLL plus the network. That is how a claim gets packaged. Everything else in the git is still the process.",
   steps: [
     "You mow the lawn. You do not type in a number.",
     "SignalFlow reads the task, the time, your PSLL, and whatever evidence you attached — before/after photos live on the DAG.",
@@ -455,6 +475,61 @@ export const engineNode = {
     { t: "Looking", d: "A common person can walk the DAG. They cannot do it silently. A look is a vertex. Stalking-shaped bursts can slash. Tills still get yes/no." },
   ],
   today: "Neighborhood-app writes did:key on first boot (data/keys/node.pem). Handshake is HTTPS + signatures, not production P2P. ZKP circuits are Codex 3. Don't pretend the circuits already shipped.",
+} as const;
+
+const P = "https://github.com/00ranman/extropy-engine/tree/main/packages";
+
+export const engineStack = {
+  kicker: "If it's in the git, it's in the process",
+  title: "The Engine is the whole monorepo",
+  lead: "AIs keep collapsing this into LocalFlow plus SignalFlow. Those are two packages. The rest did not get deleted because we talked about errands last. Same loop everywhere: post, do, confirm, mint, maybe burn. Faces differ. The book does not.",
+  groups: [
+    {
+      heading: "Faces",
+      items: [
+        { name: "LocalFlow", d: "Errands. Rides, groceries, the car you don't have. Matchmaking. Silent DAG emission.", href: `${P}/localflow` },
+        { name: "HomeFlow", d: "Household / building. IoT, chores, rooms. Thermodynamic measurement of the place you live.", href: `${P}/homeflow` },
+        { name: "Quest market", d: "2–5 minute grain. Escalation if it sits. Default operational primitive.", href: `${P}/quest-market` },
+        { name: "GrantFlow", d: "Discovery (Grants.gov) plus proposer. Same loop, different input.", href: `${P}/grantflow-discovery` },
+        { name: "LevelUp Academy", d: "Adaptive learning. Skill progression. XP on entropy-reducing study, not a grade mill.", href: `${P}/levelup-academy` },
+        { name: "Extropialingo", d: "Language learning as loops. Still in git. Still the process.", href: `${P}/extropialingo` },
+        { name: "Neighborhood app", d: "MESO job board on a laptop. did:key on first boot.", href: `${P}/neighborhood-app` },
+        { name: "Ecosystem", d: "Skill DAG, XP oracle, merchant network, EP conversion.", href: `${P}/ecosystem` },
+      ],
+    },
+    {
+      heading: "Protocol",
+      items: [
+        { name: "SignalFlow", d: "Assistant + PSLL + routing. Packages the claim. Proposes ΔS. Not the whole Engine.", href: `${P}/signalflow` },
+        { name: "Validation neighborhoods", d: "Blind 1/10 slices. Volunteer role, not a validator class. Holochain-shaped routing, native code.", href: `${P}/validation-neighborhoods` },
+        { name: "Epistemology engine", d: "Mesh peer-review observability. The mesh reviews. This package witnesses it.", href: `${P}/epistemology-engine` },
+        { name: "Decomposition kit", d: "Split a claim at the edge. Personal AI job, not a central pipeline.", href: `${P}/decomposition-kit` },
+        { name: "PSLL-sync", d: "Personal Signed Local Log. Append-only, hash-chained, yours. Merkle-anchored to the DAG.", href: `${P}/psll-sync` },
+        { name: "Identity", d: "did:key on the box. VCs, nullifiers, ZKP wrapper. Not a custodian.", href: `${P}/identity` },
+        { name: "Credentials", d: "Cosmetic layer: badges, titles, seasons. Cannot steer mint.", href: `${P}/credentials` },
+        { name: "Node handshake", d: "Signed hello, capabilities, DAG replay. HTTPS + signatures today.", href: `${P}/node-handshake` },
+      ],
+    },
+    {
+      heading: "Kernel",
+      items: [
+        { name: "xp-formula", d: "Canonical mint. XP = R × F × ΔS × (w · E) × log(1/Tₛ). Reputation never enters it.", href: `${P}/xp-formula` },
+        { name: "xp-mint", d: "Mints when a loop closes with ΔS > 0. Enforces the criteria.", href: `${P}/xp-mint` },
+        { name: "loop-ledger", d: "Closed verification loops as the atomic unit of value.", href: `${P}/loop-ledger` },
+        { name: "dag-substrate", d: "Signed vertices, Lamport time, tip selection. The book.", href: `${P}/dag-substrate` },
+        { name: "token-economy", d: "XP, CT, CAT, IT, DT, EP. Separate so influence cannot be purchased with XP.", href: `${P}/token-economy` },
+        { name: "reputation", d: "Compressed evidence of past verification accuracy. Not a public ladder.", href: `${P}/reputation` },
+        { name: "governance", d: "Proposal lifecycle inside a DFAO. Votes rewrite the room they are cast in.", href: `${P}/governance` },
+        { name: "DFAO registry", d: "NANO → PLANETARY. Nested. Labels are suggestions, not fences.", href: `${P}/dfao-registry` },
+        { name: "contracts", d: "Shared types, event bus, DB helpers. If-then, not a president.", href: `${P}/contracts` },
+        { name: "bayesian", d: "Beta conjugate math. Portable. Used where the proxy needs a prior.", href: `${P}/bayesian` },
+        { name: "ethics", d: "Guardrails as middleware. Harm, autonomy, humility. Not a sermon overlay.", href: `${P}/ethics` },
+        { name: "temporal / Universal Times", d: "Decay clocks, seasons, hydrogen-anchored duration. Face on this site.", href: `${P}/temporal-service` },
+        { name: "api-gateway", d: "One door for the microservices. Not the network.", href: `${P}/api-gateway` },
+        { name: "academia-bridge", d: "Paper upload path. Receipts into the graph, not a priest.", href: `${P}/academia-bridge` },
+      ],
+    },
+  ],
 } as const;
 
 export const engineLoop = [
@@ -524,14 +599,20 @@ export const engineGit = [
   },
   {
     status: "dev" as const,
-    name: "LocalFlow",
-    note: "The errand face. Rides, food, groceries, the car you don’t have. Confirmation is the receipt. Density in a zone is still the remaining problem.",
-    href: "https://github.com/00ranman/extropy-engine/tree/main/packages/localflow",
+    name: "HomeFlow",
+    note: "Household / building DFAO. IoT, chores, rooms. Same loop. Still in git.",
+    href: "https://github.com/00ranman/extropy-engine/tree/main/packages/homeflow",
+  },
+  {
+    status: "dev" as const,
+    name: "Quest market",
+    note: "2–5 minute grain. Escalation. Default operational primitive. Still in git.",
+    href: "https://github.com/00ranman/extropy-engine/tree/main/packages/quest-market",
   },
   {
     status: "dev" as const,
     name: "Node handshake",
-    note: "Sandbox: VPS ↔ laptop. Signed hello, capabilities, DAG replay, heartbeat. HTTPS + signatures, not production P2P. Protocol: first boot writes did:key. Not wired in neighborhood-app yet.",
+    note: "Sandbox: VPS ↔ laptop. Signed hello, capabilities, DAG replay, heartbeat. HTTPS + signatures, not production P2P. did:key on first boot is wired in neighborhood-app.",
     href: "https://github.com/00ranman/extropy-engine/tree/main/packages/node-handshake",
   },
   {
