@@ -22,13 +22,19 @@ MACROs coordinate off MICROs. MICROs are subjective. People oversell. Numbers ca
 
 **Digital Autarky** — intelligence and identity at the edge. The network is a handshake and a DAG, not a supermind. The assistant you trust is the UI.
 
-## Emergent Points at the till (not a cash ban)
+## Emergent Points (not a cash ban, not a dollar map)
 
-Till **EP = XP × L**, in real time, this shop. **L is a fraction (0.something), not 1.4×.** The product is the slice off this ticket. EP burns. Fiat remainder.
+**EP = XP × L at purchase.** No EP = $ table. Do not invent one.
 
-No central KPI warehouse. Each edge keeps its log. ZKPs unveil standing + this-shop L only. MICRO → MESO → MACRO → PLANETARY can cross-reference without a central reader. Voluntary, not extracted.
+**L** is not a coupon and not 1.4×. Both edges estimate from the mesh: customer contribution, this shop’s local ΔS, the region, the domains in play. A fraction. Times standing XP.
 
-Emergent Points, not entropy points, not Epistemic Proof. Cash cannot mint XP. Low EP ≠ no milk.
+The number is an **agreed estimate** of how much of this exchange the network will settle. Both sides have to agree. Keep missing → shop changes parameters, or the customer is looking entropic (hits their own ΔS). Repeat-farming is **F**.
+
+Fiat still rings because dollars still exist. Cash cannot mint XP. Low EP ≠ no milk. Mom-and-pop first. Walmart last. You do not get full coverage from the get-go.
+
+This is not a pairwise coupling with a currency converter bolted on. The mesh is the instrument.
+
+Emergent Points, not entropy points, not Epistemic Proof.
 
 The strict rule is the other door: **cash cannot mint XP.** No on-ramp into standing. Low EP ≠ no milk.
 

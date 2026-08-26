@@ -368,7 +368,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "EP — Emergent Points",
         id: "emergent-points",
-        def: "Till settlement, not a coin. EP = XP × L, in real time, at this shop. L is loyalty here — a fraction (0.something), not 1.4×. The product is the slice off this ticket. EP burns. Fiat pays the remainder. Parallel economy: groceries still take dollars. Cash cannot mint XP. Low EP does not lock the fridge. Discount grows with showing up until the fiat line can hit zero. Same math merchant-to-supplier, MICRO → PLANETARY. No central KPI warehouse: each edge keeps its log, ZKPs unveil only what the equation needs. A continuous test of the social contract. Not entropy points. Not Epistemic Proof.",
+        def: "EP = XP × L at purchase. L is not a shop coupon and not 1.4×. Both edges — yours and the shop’s — ask SignalFlow what the mesh says: your contribution, this shop’s local ΔS, the region, the domains in play. That fraction times standing XP is Emergent Points. No map to dollars. There isn’t one. The number is an agreed estimate of how much of this exchange the network will settle. Both sides have to agree. Keep missing and the shop changes its parameters, or the customer is looking entropic — which hits their own ΔS. Repeat-farming is F. Fiat still rings because dollars still exist, not because EP equals this many dollars. Cash cannot mint XP. Mom-and-pop first. Walmart last. You do not get full coverage from the get-go. ZKPs, not a KPI warehouse. MICRO → PLANETARY. Not entropy points. Not Epistemic Proof.",
       },
       {
         term: "CT — Coherence Token",
@@ -388,7 +388,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       },
       {
         term: "EP — Epistemic Proof",
-        def: "Proof-layer token: a claim that survived an adversarial cycle. Not the till. Till EP is Emergent Points (XP × loyalty). Unfortunate collision of letters. This one does not buy milk.",
+        def: "Proof-layer token: a claim that survived an adversarial cycle. Not the shop token. Shop EP is Emergent Points (XP × L from the mesh). Unfortunate collision of letters. This one does not buy milk.",
       },
     ],
   },

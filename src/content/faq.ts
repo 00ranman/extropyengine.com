@@ -164,13 +164,13 @@ export const faqSections: FaqSection[] = [
       {
         id: "milk",
         q: "If I don’t have enough EP, can I still buy milk with cash?",
-        a: "Yes. Emergent Points are a slice off a fiat bill, not a lock on the fridge. At this till, right now: EP = XP × L. L is loyalty here — a fraction, 0.something, not 1.4×. That product is the percentage off this ticket. EP burns. Dollars take the rest. Cash cannot mint XP. Low standing means a small discount, not a denied gallon.",
+        a: "Yes. There is no EP-to-dollar table, so there is nothing to be short of in cash terms. EP = XP × L at purchase: a mesh estimate both edges have to agree on. Fiat still rings because dollars still exist. Low standing means the estimate covers less of the exchange, not that the fridge locks. Cash cannot mint XP.",
         also: [{ label: "Emergent Points", href: "/glossary", hash: "emergent-points" }],
       },
       {
         id: "on-ramp",
         q: "You said no fiat on-ramp. So this replaces money?",
-        a: "No. No on-ramp means cash cannot mint XP. It does not mean cash is banned at the shop. The discount starts small and grows with showing up. Enough standing, the fiat line can go to zero. That’s an attractor, not a forced conversion. Keep the other job or don’t. Merchants use the same math with their suppliers. When those distributors are their own MACROs, the discount can run the whole way up. A continuous test of the social contract — not a new priesthood of dollars.",
+        a: "No. No on-ramp means cash cannot mint XP. It does not mean cash is banned, and it does not mean EP converts to dollars. There is no conversion. L is estimated from the mesh at purchase; times XP; both edges agree. Mom-and-pop first. You work toward the estimate covering the exchange. Repeat-farming is F. Trying to extract looks entropic. Keep the other job or don’t.",
         also: [{ label: "Engine — shop view", href: "/#engine" }],
       },
     ],

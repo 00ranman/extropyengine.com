@@ -408,10 +408,10 @@ export const engineViews = {
     kicker: "Emergent Points",
     formula: "EP = XP × L",
     lines: [
-      "L is this shop’s loyalty — a fraction, 0.something, not 1.4×. Real time, current standing, this ticket.",
-      "That product is the slice off the bill. EP burns. Fiat takes the rest. A grocery store still rings dollars.",
-      "Cash cannot mint XP. Low EP is a small discount, not a locked fridge. Keep showing up and the fiat line can hit zero.",
-      "A ZKP unveils standing and this-shop L. No KPI warehouse. Same math with suppliers, MICRO → PLANETARY. Optional. Nobody is forced off their other job.",
+      "L is not a coupon. At purchase, both edges estimate from the mesh: your contribution, this shop’s local ΔS, the region, the domains in play. A fraction. 0.something.",
+      "EP = XP × L. No map to dollars. The number is an agreed estimate of how much of this exchange the network will settle. Both sides have to agree. Keep missing and the shop changes its parameters — or the customer is looking entropic.",
+      "Fiat still rings the rest because dollars still exist, not because EP equals this many dollars. Cash cannot mint XP. Mom-and-pop first. Walmart last.",
+      "Repeat-farming is F. You do not get full coverage from the get-go. By the time you do, you already live in the contract. ZKPs, not a KPI warehouse. MICRO → PLANETARY.",
     ],
   },
 } as const;
@@ -439,7 +439,7 @@ export const engineLoop = [
 
 export const engineTokens = [
   { t: "XP", d: "Minted on verified ΔS > 0. You do not spend it. Access economy. Decays ~1%/month (ρ = 0.01 / 30 cycles) — not 5%. That is IT. Still burnable after settle. Under the floor it can quantize into a ZKP access band. Not a public ladder." },
-  { t: "EP", d: "Emergent Points. EP = XP × L, L a fraction (0.something), this shop, right now. Burns against the ticket. Fiat remainder. Cash cannot mint XP." },
+  { t: "EP", d: "Emergent Points. EP = XP × L at purchase. L is a mesh estimate (0.something), not a coupon. No EP = $ map. Both edges agree or it is a problem. Fiat still exists. Cash cannot mint XP." },
   { t: "IT", d: "Governance weight. Decays ~5%/month if you stop showing up. Different token from XP. Knob, not commandment." },
   { t: "CT / CAT / DT", d: "Standing, skill, domain. Separate so influence cannot be purchased with XP." },
 ] as const;
