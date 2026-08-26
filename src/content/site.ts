@@ -31,7 +31,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "FAQ", href: "/faq" },
       { label: "Glossary", href: "/glossary" },
       { label: "DFAO", href: "/dfao" },
-      { label: "Replace the HOA", href: "/hoa" },
+      { label: "Do the HOA’s jobs", href: "/hoa" },
       { label: "Open problems", href: "/open-problems" },
       { label: "Proof layers", href: "/proof-layers" },
       { label: "Try it", href: "/mvt" },
@@ -542,9 +542,9 @@ export const socials = [
 
 export const docsIndex = [
   {
-    title: "Replace the HOA",
+    title: "Do the HOA’s jobs",
     href: "/hoa",
-    note: "Worked MESO example. Neighborhood DFAO alongside recorded covenants. Optional Wyoming DUNA / Texas nonprofit. Not legal advice.",
+    note: "Take over a neighborhood by doing the work: grass, lights, drainage, disputes. Smart contracts = if-then. Keep paying dues. Not legal advice.",
   },
   {
     title: "Codex 3.0 notes",

@@ -159,7 +159,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "hoa",
         q: "Can this replace an HOA?",
-        a: "It can make one irrelevant. Recorded CC&Rs still run with the land. Forming a DFAO — or a Wyoming DUNA, or a Texas nonprofit — does not dissolve them. Start SHADOW: post the common-area work, confirm it, keep paying dues. Chapter 209 is the rights you already have. Amendment is a supermajority in your declaration, recorded in the county. Eggs on a truck are how you become the entropy.",
+        a: "By doing their jobs. Grass, lights, drainage, disputes — post it, a neighbor does it, neighbors confirm. Smart contracts here just mean if-then: if it’s confirmed, it counts, no board meeting. Keep paying dues so they cannot lien you. Recorded neighborhood rules still stick to the house until owners vote the percentage in that document. Taking the work makes them a leftover bill. Eggs on a truck make you the problem.",
         also: [{ label: "Replace the HOA", href: "/hoa" }],
       },
     ],

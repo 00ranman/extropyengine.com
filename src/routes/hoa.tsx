@@ -1,17 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { EssayLayout } from "@/components/essay-layout";
-import { hoaClone, hoaFb, hoaNotLegal, hoaPage, hoaSteps } from "@/content/hoa";
+import { hoaClone, hoaFb, hoaJobs, hoaNotLegal, hoaPage, hoaSmart, hoaSteps } from "@/content/hoa";
 
 export const Route = createFileRoute("/hoa")({
   component: HoaPage,
   head: () => ({
     meta: [
-      { title: "Replace the HOA — Extropy Engine" },
+      { title: "Do the HOA’s jobs — Extropy Engine" },
       {
         name: "description",
         content:
-          "Worked example: start a neighborhood DFAO alongside a Texas HOA. Do the work. Keep paying dues. Make the association irrelevant. Optional Wyoming DUNA or Texas nonprofit wrapper. Not legal advice.",
+          "Take over a neighborhood by doing the HOA’s actual jobs: grass, lights, drainage, disputes. Neighbors confirm. Smart contracts are if-then rules. Keep paying dues until the paperwork catches up.",
       },
     ],
   }),
@@ -33,6 +33,22 @@ function HoaPage() {
     <EssayLayout backTo="/dfao" backLabel="DFAO" kicker={hoaPage.kicker} title={hoaPage.title}>
       <p>{hoaPage.lead}</p>
       <p className="border border-primary/20 bg-primary/5 px-4 py-3 text-sm">{hoaNotLegal}</p>
+
+      <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">Their jobs. We take them.</h2>
+      <dl className="space-y-4">
+        {hoaJobs.map((row) => (
+          <div key={row.job}>
+            <dt className="font-mono text-[12px] tracking-[0.08em] text-primary">{row.job}</dt>
+            <dd>{row.how}</dd>
+          </div>
+        ))}
+      </dl>
+
+      <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">{hoaSmart.title}</h2>
+      <p>{hoaSmart.lead}</p>
+      {hoaSmart.body.map((p) => (
+        <p key={p.slice(0, 40)}>{p}</p>
+      ))}
 
       {hoaSteps.map((s) => (
         <section key={s.n} className="space-y-2 pt-4">
@@ -60,14 +76,14 @@ function HoaPage() {
         ))}
       </ul>
       <p>
-        Scale table and phases:{" "}
+        Longer names for the structure:{" "}
         <Link to="/dfao" className="text-primary hover:underline">
           DFAO
         </Link>
-        . Same loop as everything else.
+        .
       </p>
 
-      <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">Drop this in the group</h2>
+      <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">Facebook post</h2>
       <pre className="overflow-x-auto whitespace-pre-wrap border border-primary/18 bg-surface/40 p-4 font-sans text-sm leading-relaxed text-fg">
         {hoaFb}
       </pre>

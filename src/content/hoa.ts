@@ -1,62 +1,84 @@
 export const hoaPage = {
-  title: "Replace the HOA",
-  kicker: "Worked example · MESO",
-  lead: "Everyone hates the association. Anonymous posts about egging a truck are how you become the entropy. The DFAO path is slower and it actually closes loops: mow the common, fix the light, mediate the fence, keep paying the assessment until the covenants are amended or the HOA is just the expensive duplicate.",
+  title: "Do the HOA’s jobs",
+  kicker: "Neighborhood · in English",
+  lead: "You already pay them. Then you still mow, still call about the light, still mediate the fence. The takeover is not a riot and it is not a new board with the same minutes. It is taking every job they are supposed to do, doing it, and having neighbors confirm it actually happened. When that is the thing that keeps the place running, the association is a leftover bill.",
 } as const;
 
 export const hoaNotLegal =
-  "This is a protocol example, not legal advice. Recorded CC&Rs run with the land in Texas. Forming a new org does not dissolve them. Talk to a Texas property attorney before anyone tries to amend a declaration.";
+  "Not legal advice. In Texas the written neighborhood rules (the declaration / CC&Rs) stick to the house until owners vote the percentage in that document and record it at the county. Starting a new group does not erase that. Keep paying dues so they cannot lien you. Talk to a Texas property lawyer before anyone tries to change the paperwork.";
+
+export const hoaJobs = [
+  { job: "Common grass / landscaping", how: "Post the mow. A neighbor or a crew takes it. Photos before and after. Neighbors confirm it is done. If it is not done, it does not count." },
+  { job: "Lights, gates, fountains", how: "Dead bulb is a job. Someone buys the part, puts it in, confirms. Same for a stuck gate. No waiting for the next board packet." },
+  { job: "Drainage / trash / bulk pickup", how: "The ditch, the pile, the dumpster that never got swapped. Post it. Do it. Confirm it." },
+  { job: "Pool / amenity open-and-close", how: "Whoever actually shows up. Hours on the door are a job, not a vibe." },
+  { job: "Neighbor disputes", how: "Fence, parking, noise. Mediate. Confirm both sides signed off. That is work. It is also the thing boards hide from." },
+  { job: "Vendors the board sits on", how: "If a neighbor can do it cheaper and it gets confirmed, the vendor theater dies of unemployment." },
+  { job: "What we do not grab yet", how: "Liens, foreclosure, architectural control written into the deed. Those stay with the recorded paperwork until a real vote changes it. Taking the jobs is not stealing the gavel." },
+] as const;
+
+export const hoaSmart = {
+  title: "Smart contracts, in English",
+  lead: "A smart contract is not a coin and it is not a personality. It is a rule that runs itself.",
+  body: [
+    "If the common is confirmed mowed, credit posts. If it is not confirmed, nothing posts. No “we’ll discuss it next quarter.” No treasurer who likes their cousin’s landscaper.",
+    "If two neighbors confirm a light is fixed, the job closes. If they don’t, it stays open. That is the whole trick.",
+    "The rule lives on a computer both sides can check. Changing the rule is a vote in this neighborhood group — not a silent board edit.",
+    "You do not need to understand Ethereum. You need to understand if-then. The software is how we stop arguing about whether the work happened.",
+  ],
+} as const;
 
 export const hoaSteps = [
   {
     n: "01",
-    title: "SHADOW. Do the work.",
-    body: "Post the actual jobs. Common-area mow. Dead light. Drainage. A neighbor who can do it takes it. You confirm. That is already a neighborhood DFAO. LocalFlow is the face. SignalFlow proposes ΔS. You do not type in a score. You do not wait for seven people or a lawyer.",
+    title: "Start doing the jobs this week.",
+    body: "Pick one: the common, a dead light, the ditch. Put it on a list. A neighbor takes it. You walk by and say yes, that is done — or no, it is not. That is the group. You do not wait for seven people, a lawyer, or a Wyoming filing.",
   },
   {
     n: "02",
-    title: "Keep paying the HOA.",
-    body: "Assessments in the declaration are still due. Parallel layer, same as fiat at the grocery. The Engine tracks the ΔS of the work. It does not magically void a recorded covenant. Skipping dues to “protest” just hands them a lien.",
+    title: "Keep paying the HOA bill.",
+    body: "Skip dues and they lien the house. We run next to the dollar, same as at the grocery. The new group tracks who actually did the work. It does not void the old bill overnight.",
   },
   {
     n: "03",
     title: "Use the rights you already have.",
-    body: "Texas Property Code Chapter 209: open meetings, elections, notice, a petition if the board skips the annual meeting. Read your declaration for the amendment percentage — often a supermajority of owners, sometimes lender consent, always recorded in the county. That vote is how covenants actually move. Not a Facebook thread.",
+    body: "Texas already makes them hold open meetings, run elections, and take a petition if they skip the annual meeting (Property Code Chapter 209). Read your neighborhood’s own documents for how many owners it takes to change the rules. That number is how the paperwork eventually moves. Not a Facebook pile-on.",
   },
   {
     n: "04",
-    title: "HYBRID when the loops are real.",
-    body: "Once people are closing work instead of just complaining, some decisions can bind inside the DFAO: which jobs get posted, how confirmation works, who runs a node. Still not a replacement for the declaration. The HOA remains the legal association until owners amend it.",
+    title: "When people trust the list, let the rules bind.",
+    body: "Which jobs get posted. How confirmation works. Who runs the little computer. Still not “we are the HOA.” We are the ones doing the jobs. The HOA is still the name on the county paper until owners change that paper.",
   },
   {
     n: "05",
-    title: "Optional legal wrapper.",
-    body: "Wyoming is the state with a statute, not Montana. DAO LLC (W.S. 17-31) is a for-profit LLC subtype. DUNA (2024) is the nonprofit association shape — closer to a neighborhood commons because members don’t take profit. Tennessee has a DO LLC. Vermont has BBLLCs. Texas has ordinary nonprofits, which a lot of neighborhoods should start with because you live here. A wrapper gives a bank account and limited liability. It does not kill CC&Rs. Foreign-qualify if you form out of state and operate in Texas. Lawyer. Registered agent. Not a weekend Discord.",
+    title: "Bank account later, if you need one.",
+    body: "Wyoming is the state with a DAO-style law — not Montana. A nonprofit version (DUNA) fits a neighborhood better than a for-profit LLC. A plain Texas nonprofit is often simpler because you live here. That is a checking account and some liability protection. It does not kill the old rules by itself. Lawyer. Not a weekend Discord.",
   },
   {
     n: "06",
-    title: "Make them irrelevant. Then, maybe, amend.",
-    body: "If the DFAO is the thing that actually reduces disorder, the HOA becomes a dues machine with no function. That’s the fungus path. If enough owners later vote the percentage in your declaration, you record an amendment or a termination. Dissolving the HOA corporation without touching the covenants is a well-known Texas mistake — the restrictions stay. If you never get the vote, you still did the work. The association can sit there collecting until it doesn’t matter.",
+    title: "They become irrelevant when they have no jobs left.",
+    body: "If we mow, light, drain, mediate, and open the amenity — and it is confirmed — they are a fee with no function. That is the takeover. If enough owners later vote the percentage in the documents, a lawyer records the change at the county. If they never vote, you still kept the place. They can keep sending invoices until it looks stupid.",
   },
 ] as const;
 
 export const hoaClone = {
-  title: "Stand up a node",
-  body: "Clone the kernel. Compose up. Handshake a laptop. That’s a NANO. Nest MICROs under a neighborhood MESO when a second crew appears. You do not need the Wyoming filing to close the first loop.",
+  title: "If you want the software",
+  body: "The neighborhood list can start on paper. When you want the if-then rules to run themselves, clone the kernel and start a node on a laptop or a cheap server. You do not need that to mow the first common.",
   href: "https://github.com/00ranman/extropy-engine",
   docs: [
-    { label: "Playbook (git)", href: "https://github.com/00ranman/extropy-engine/blob/main/docs/HOA_DFAO.md" },
+    { label: "Playbook", href: "https://github.com/00ranman/extropy-engine/blob/main/docs/HOA_DFAO.md" },
     { label: "Articles template", href: "https://github.com/00ranman/extropy-engine/blob/main/docs/articles/NEIGHBORHOOD_DFAO.md" },
-    { label: "Bylaws / knobs", href: "https://github.com/00ranman/extropy-engine/blob/main/docs/articles/BYLAWS.md" },
-    { label: "Node on a VPS", href: "https://github.com/00ranman/extropy-engine/blob/main/docs/VPS_NODE.md" },
+    { label: "Bylaws", href: "https://github.com/00ranman/extropy-engine/blob/main/docs/articles/BYLAWS.md" },
+    { label: "Run a node", href: "https://github.com/00ranman/extropy-engine/blob/main/docs/VPS_NODE.md" },
   ],
 } as const;
 
-export const hoaFb = `We're all paying an HOA most of us don't trust. Yelling in this thread doesn't mow the common or fix the light.
+export const hoaFb = `We're paying HOA dues and then still doing their jobs. Grass. Lights. The ditch. That's the complaint.
 
-There's a way to start a neighborhood DFAO — post the job, someone does it, you confirm — that runs alongside the dollar and the existing covenants until the association is the expensive duplicate.
+So we start doing the jobs. Someone in the neighborhood takes it. Neighbors confirm it actually got done. If it didn't, it doesn't count. The rules can be a smart contract — that's just "if the work is confirmed, it counts," no board meeting, no next quarter.
 
-You do not dissolve recorded CC&Rs by forming a new org. You make them irrelevant by doing the work. If enough owners later vote to amend the declaration, that's a lawyer-and-county step. Until then: keep paying dues, close loops, skip the anonymous vehicle stuff. That's how you become the thing you hate.
+Keep paying the HOA bill for now so they can't lien your house. When we're the ones keeping this place running, they're a leftover fee. Then a lawyer can look at the paperwork if enough owners want it gone.
 
-Plain English, Texas notes, how to stand up a node:
+Don't egg anyone's car. Mow the grass.
+
 https://extropyengine.com/hoa`;
