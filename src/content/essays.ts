@@ -372,7 +372,13 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       },
       {
         term: "Digital Autarky",
+        id: "digital-autarky",
         def: "Intelligence, identity, and local context stay at the edge. The network is a handshake, a claim schema, and a DAG — not a supermind. Company login means company tether. Own hardware is how you stay unknown. Edge intelligence unveils only the ZKP the equation needs.",
+      },
+      {
+        term: "Not a panopticon",
+        id: "not-a-panopticon",
+        def: "A panopticon is one tower that sees every diary. This is the opposite. PSLL on the box. ZKP at the till: yes or no. Looking writes a vertex. Silent fetch is forbidden. extropyengine.com is not the Engine and not a server for your log. If a show ended on 'surveillance state' after saying all of that, the close was a reading error.",
       },
       {
         term: "DID",

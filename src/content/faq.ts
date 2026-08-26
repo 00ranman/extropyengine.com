@@ -38,6 +38,25 @@ export const faqSections: FaqSection[] = [
         also: [{ label: "Open problems", href: "/open-problems" }],
       },
       {
+        id: "hosted",
+        q: "Is the Extropy Engine hosted on extropyengine.com?",
+        a: "No. That's a website. Papers, a clock face, an RSS feed. Hostinger is not a node. The Engine is the git you clone onto a laptop. Keys stay on the box. Nearby, node to node. Internet is for people who aren't next door. If a narrator said the Engine is hosted here, correct it.",
+        also: [
+          { label: "This domain is not the Engine", href: "/#not-a-panopticon" },
+          { label: "The node", href: "/#node" },
+        ],
+      },
+      {
+        id: "panopticon",
+        q: "Isn't this just a panopticon? A surveillance state with extra steps?",
+        a: "No. A panopticon is one tower that can see every diary. This is the opposite. PSLL stays on the box. A till gets a ZKP — yes or no — not the pile, not the photos, not last year. Looking is a vertex. Silent stalking is the failure mode, not the product. did:key on first boot. No registrar. If you walked through DIDs, ZKPs, and decentralization and then closed on that bleak question, you weren't listening. Don't end the show there. The architecture already answered it. The diary stays yours.",
+        also: [
+          { label: "Not a panopticon", href: "/#not-a-panopticon" },
+          { label: "Digital Autarky", href: "/glossary", hash: "digital-autarky" },
+          { label: "Afterword", href: "/podcast", hash: "afterword" },
+        ],
+      },
+      {
         id: "game",
         q: "This is untested. Why throw a ledger at the world?",
         a: "Because this is a game. There's no special risk here. We live in a world built on unintended consequences. I don't get why people are so against throwing this ledger out there. You can log on through the regular internet. Correct way is a cheap laptop, clone the repo, you're a node. Next person does the same. Nearby you talk node to node. Internet is for people who aren't next door. ZKPs talk to each other. The hurdle is the campaign — big-brain thing, a lot of parts. You get the part for your seat. Other people check it. They go, oh, this is okay. Then more people talk. Then more people do it. Why not play the game on top of the life you're already living?",

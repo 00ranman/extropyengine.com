@@ -12,6 +12,7 @@ import {
   engineLoop,
   engineMath,
   engineNode,
+  engineNotThat,
   engineSignal,
   engineStack,
   engineTokens,
@@ -326,9 +327,10 @@ export function EngineSection() {
       <span id="suite" className="sr-only" />
       <SectionTitle className="mb-3 text-center">How it runs</SectionTitle>
       <p className="mx-auto mb-12 max-w-2xl text-center text-[15px] leading-relaxed text-muted">
-        Not two apps. If it is still in the git, it is still the process. LocalFlow and SignalFlow
-        are faces and a claim-router. HomeFlow, quests, GrantFlow, identity, the kernel — same
-        loop. This site organizes the ΔS. Spare-room laptops run it.
+        Not two apps. Not a server in the sky. If it is still in the git, it is still the process.
+        LocalFlow and SignalFlow are faces and a claim-router. HomeFlow, quests, GrantFlow,
+        identity, the kernel — same loop. extropyengine.com is papers and a clock. The Engine runs
+        on spare-room laptops.
       </p>
 
       <div className="mx-auto mb-12 max-w-5xl border border-primary/22 bg-primary/4 px-5 py-6">
@@ -434,6 +436,22 @@ export function EngineSection() {
           <span className="text-faint"> · </span>
           <Link to="/glossary" hash="did" className="text-primary hover:underline">
             DID →
+          </Link>
+        </p>
+      </div>
+
+      <div id="not-a-panopticon" className="mx-auto mt-10 max-w-5xl border border-primary/22 bg-primary/4 px-5 py-6">
+        <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">{engineNotThat.kicker}</p>
+        <h3 className="font-display mt-2 text-xl tracking-[0.04em]">{engineNotThat.title}</h3>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">{engineNotThat.lead}</p>
+        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted">{engineNotThat.close}</p>
+        <p className="mt-4 font-mono text-[11px] tracking-[0.08em]">
+          <Link to="/faq" hash="panopticon" className="text-primary hover:underline">
+            Is this a panopticon? →
+          </Link>
+          <span className="text-faint"> · </span>
+          <Link to="/podcast" hash="afterword" className="text-primary hover:underline">
+            Afterword →
           </Link>
         </p>
       </div>

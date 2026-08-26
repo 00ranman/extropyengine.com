@@ -15,7 +15,7 @@ export const podcastMeta = {
   author: "Randall Gossett",
   email: "00ranman@gmail.com",
   description:
-    "Talk, field notes, and loops from Randall Gossett. Entropy reduction. Not a newsletter.",
+    "Talk, field notes, and loops from Randall Gossett. Entropy reduction. The website is not the Engine. If a deep dive closed on panopticon, that was a reading error.",
   language: "en-us",
   explicit: true,
   category: "Society & Culture",

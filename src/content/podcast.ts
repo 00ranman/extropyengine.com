@@ -5,7 +5,7 @@ export const podcast = {
   author: "Randall Gossett",
   tagline: "Talk. Field notes. Loops.",
   description:
-    "A channel for the stuff that doesn’t want to be a paper. Spotify and YouTube are live. Anyone else: take the RSS.",
+    "A channel for the stuff that doesn’t want to be a paper. Spotify and YouTube are live. Anyone else: take the RSS. This site is not the Engine. If a deep dive closed on panopticon, that was a reading error — afterword on this page.",
   feedPath: "/podcast/feed.xml",
   feedUrl,
   cover: "/podcast/cover.jpg",

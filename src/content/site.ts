@@ -443,7 +443,7 @@ export const engineViews = {
 export const engineGame = {
   kicker: "The game",
   title: "It's just a UI for your life",
-  lead: "Picture what's on paper as a game that's going worldwide. You can log on through the internet you already have. That's not the only way, and it's not the correct way. Correct way: a cheap laptop, clone the repo, you're a node. Somebody else does the same thing. Nearby, you talk node to node — you don't even have to go through the internet. The internet is there so you can reach people who aren't next door. ZKPs talk to each other. That's the client.",
+  lead: "Picture what's on paper as a game that's going worldwide. You can log on through the internet you already have. That's not the only way, and it's not the correct way. Correct way: a cheap laptop, clone the repo, you're a node. Somebody else does the same thing. Nearby, you talk node to node — you don't even have to go through the internet. The internet is there so you can reach people who aren't next door. ZKPs talk to each other. That's the client. This website is not that network.",
   why: "That's why I'm confident. This is a game. I keep getting pushback that it's untested, that it's a bad idea. There's no special risk here. We live in a world built on unintended consequences. I don't get why people are so against throwing this ledger out there. The hurdle is the campaign. It's a big-brain thing with a lot of parts. You don't need the whole object. You need the part for the seat you're in. Other people check it. They go, oh, this is okay. Then more people talk. Then more people do it. Why not play the game on top of the life you're already living?",
 } as const;
 
@@ -475,6 +475,14 @@ export const engineNode = {
     { t: "Looking", d: "A common person can walk the DAG. They cannot do it silently. A look is a vertex. Stalking-shaped bursts can slash. Tills still get yes/no." },
   ],
   today: "Neighborhood-app writes did:key on first boot (data/keys/node.pem). Handshake is HTTPS + signatures, not production P2P. ZKP circuits are Codex 3. Don't pretend the circuits already shipped.",
+} as const;
+
+export const engineNotThat = {
+  kicker: "Not a panopticon",
+  title: "This domain is not the Engine",
+  lead: "extropyengine.com is a website. Papers, a clock face, an RSS feed. Hostinger is not a node. The Engine is the git you clone onto a laptop. If a narrator said the Extropy Engine is hosted here, that was a slip. Correct it.",
+  close:
+    "A panopticon is one tower that can see every diary. This is the opposite. PSLL stays on the box. A till gets a ZKP — yes or no — not the pile, not the photos. Looking is a vertex. Silent stalking is the failure mode. did:key on first boot. Node to node on the LAN. Internet for people who aren't next door. If you talked through all of that and still ended on 'surveillance state,' you weren't listening. Don't close the show on that cheap question. The architecture already answered it. The diary stays yours.",
 } as const;
 
 const P = "https://github.com/00ranman/extropy-engine/tree/main/packages";
@@ -525,7 +533,7 @@ export const engineStack = {
         { name: "bayesian", d: "Beta conjugate math. Portable. Used where the proxy needs a prior.", href: `${P}/bayesian` },
         { name: "ethics", d: "Guardrails as middleware. Harm, autonomy, humility. Not a sermon overlay.", href: `${P}/ethics` },
         { name: "temporal / Universal Times", d: "Decay clocks, seasons, hydrogen-anchored duration. Face on this site.", href: `${P}/temporal-service` },
-        { name: "api-gateway", d: "One door for the microservices. Not the network.", href: `${P}/api-gateway` },
+        { name: "api-gateway", d: "One door for the microservices on YOUR node. Not a world server.", href: `${P}/api-gateway` },
         { name: "academia-bridge", d: "Paper upload path. Receipts into the graph, not a priest.", href: `${P}/academia-bridge` },
       ],
     },

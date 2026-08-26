@@ -130,14 +130,40 @@ function PodcastPage() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (window.location.hash !== "#subscribe") return;
-    document.getElementById("subscribe")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (window.location.hash !== "#subscribe" && window.location.hash !== "#afterword") return;
+    const id = window.location.hash.slice(1);
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   }, [episodes]);
 
   return (
     <EssayLayout backTo="/" backLabel="Home" kicker="RSS" title={podcast.title}>
       <p>{podcast.description}</p>
       <Subscribe />
+
+      <div id="afterword" className="mt-8 border border-primary/22 bg-primary/4 px-5 py-6">
+        <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">Afterword</p>
+        <h2 className="font-display mt-2 text-2xl tracking-[0.04em] text-fg">This is not a panopticon</h2>
+        <p className="mt-3">
+          If a deep dive dumped you on “isn’t this just a surveillance state,” that close was a
+          reading error. Stop there and you skipped the machine.
+        </p>
+        <p className="mt-3">
+          extropyengine.com is not the Engine. Papers. A clock face. This RSS feed. Hostinger is
+          not a node. The Engine is the git you clone onto a laptop. Keys stay on the box. First
+          boot writes a did:key. Nobody at this domain holds that.
+        </p>
+        <p className="mt-3">
+          A panopticon is one tower that can see every diary. This is the opposite. Your PSLL never
+          leaves the machine unless you unveil a proof. A till gets yes or no. Not the pile. Not
+          the photos. Looking at someone’s graph is allowed — and it writes a vertex. Silent
+          stalking is the failure mode, not the product.
+        </p>
+        <p className="mt-3">
+          DIDs. ZKPs. Node to node on the LAN. Internet for people who aren’t next door. If a show
+          walked through all of that and still ended bleak, it wasn’t listening. Don’t close there.
+          The diary stays yours.
+        </p>
+      </div>
 
       <h2 className="font-display pt-6 text-2xl tracking-[0.04em] text-fg">Library</h2>
       {episodes === null ? (
