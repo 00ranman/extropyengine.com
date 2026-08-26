@@ -156,6 +156,12 @@ export const faqSections: FaqSection[] = [
         a: "No. Decentralized Fractal Autonomous Organization. Scale labels (NANO → PLANETARY) are suggested rule sets, not membership caps. Seven was a shorthand that leaked as a law. It is not. Same loop at every scale: post, do, confirm. Votes rewrite the room they are cast in. Only PLANETARY hits everybody, and that is supposed to be hard.",
         also: [{ label: "DFAO", href: "/dfao" }],
       },
+      {
+        id: "hoa",
+        q: "Can this replace an HOA?",
+        a: "It can make one irrelevant. Recorded CC&Rs still run with the land. Forming a DFAO — or a Wyoming DUNA, or a Texas nonprofit — does not dissolve them. Start SHADOW: post the common-area work, confirm it, keep paying dues. Chapter 209 is the rights you already have. Amendment is a supermajority in your declaration, recorded in the county. Eggs on a truck are how you become the entropy.",
+        also: [{ label: "Replace the HOA", href: "/hoa" }],
+      },
     ],
   },
   {

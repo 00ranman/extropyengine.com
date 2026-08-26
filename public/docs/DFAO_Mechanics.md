@@ -58,5 +58,6 @@ Votes rewrite the DFAO they are cast in: settle window, decay rates, quorum. The
 - Registry: `packages/dfao-registry` in [extropy-engine](https://github.com/00ranman/extropy-engine)
 - Types: `packages/contracts/src/types.ts` — `DFAO`, `DFAOScale`, `DFAOStatus`, `DFAOGovernanceConfig`
 - Site: https://extropyengine.com/dfao
+- Worked example (HOA): https://extropyengine.com/hoa
 
 Implementation is incremental. The happy path loop is real. The org layer is specified and filling in.
