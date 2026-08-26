@@ -362,7 +362,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "Node",
         id: "node",
-        def: "A machine running the Engine. Keys stay on the box. LAN talks node to node. WAN is TLS plus a signed handshake. Hostinger is not a node. One captured node can lie about itself. It cannot silently rewrite a neighbor's DAG — other nodes check signatures and causal parents. Neighborhood-app today is a JSON book; it does not mint a DID yet.",
+        def: "A machine running the Engine. Keys stay on the box. First boot writes a W3C did:key (Ed25519) to disk — no registrar. LAN talks node to node. WAN is TLS plus a signed handshake. Hostinger is not a node. One captured node can lie about itself. It cannot silently rewrite a neighbor's DAG — other nodes check signatures and causal parents.",
       },
       {
         term: "Sybil",

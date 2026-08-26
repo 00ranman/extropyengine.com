@@ -454,7 +454,7 @@ export const engineNode = {
     { t: "Fake work", d: "Both edges have to agree. Evidence hangs on the vertex. Late burn still hits. Repeat-farming is F. A MICRO can puff a lawn. The DAG plus burn is how we live with that — not a speech about honesty." },
     { t: "Looking", d: "A common person can walk the DAG. They cannot do it silently. A look is a vertex. Stalking-shaped bursts can slash. Tills still get yes/no." },
   ],
-  today: "Neighborhood-app today is a JSON book on one machine. It does not mint a DID yet. Handshake is HTTPS + signatures, not production P2P. The protocol is: first boot writes did:key. Wire that. Don't pretend the box already did.",
+  today: "Neighborhood-app writes did:key on first boot (data/keys/node.pem). Handshake is HTTPS + signatures, not production P2P. ZKP circuits are Codex 3. Don't pretend the circuits already shipped.",
 } as const;
 
 export const engineLoop = [

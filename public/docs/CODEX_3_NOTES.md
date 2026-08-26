@@ -133,7 +133,7 @@ Keys stay on the box. Do not expose postgres/redis to the WAN. LAN: node to node
 
 Sybil: `did:key` is cheap on purpose. KYC is not the defense. Standing costs work. Unique-in-DFAO ZKP stops fifty votes from one person. F punishes farmed loops. LOOK is a vertex.
 
-Today: neighborhood-app is a JSON book, no DID mint. Handshake is HTTPS + signatures. Wire `did:key` on first boot. Circuits are 3.0. Don’t ship a story that the box already did it.
+Today: neighborhood-app writes `did:key` on first boot (`data/keys/node.pem`). Handshake is HTTPS + signatures. Circuits are 3.0.
 
 https://github.com/00ranman/extropy-engine/blob/main/docs/NODE_SECURITY.md
 
