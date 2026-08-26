@@ -3,6 +3,18 @@
   "feed": "/podcast/feed.xml",
   "episodes": [
     {
+      "src": "/podcast/2026-08-26-homelessness-is-a-signal-loss-crisis.mp3",
+      "bytes": 23777834,
+      "title": "Homelessness is a signal loss crisis",
+      "summary": "NotebookLM deep dive on And That. Homelessness is not a housing shortage — it is what happens when every feedback loop goes deaf. Cash on symptoms, dodge causation. You cannot patch a soul with a voucher and a mat. DAG of verified delta S, XP as access not a cash-out. You cannot house a person back into a name.",
+      "pubDate": "Wed, 26 Aug 2026 03:00:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 9,
+      "duration": "00:24:46",
+      "mime": "audio/mpeg"
+    },
+    {
       "src": "/podcast/2026-08-24-escaping-the-recursive-loop-of-human-control.mp3",
       "bytes": 14788682,
       "title": "Escaping the recursive loop of human control",

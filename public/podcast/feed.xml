@@ -21,13 +21,28 @@
       <itunes:category text="Philosophy"/>
     </itunes:category>
     <itunes:type>episodic</itunes:type>
-    <lastBuildDate>Tue, 25 Aug 2026 22:32:55 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 03:17:07 +0000</lastBuildDate>
     <atom:link href="https://extropyengine.com/podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://extropyengine.com/podcast/cover.jpg</url>
       <title>Extropy Engine</title>
       <link>https://extropyengine.com/podcast</link>
     </image>
+    <item>
+      <title>Homelessness is a signal loss crisis</title>
+      <description>NotebookLM deep dive on And That. Homelessness is not a housing shortage - it is what happens when every feedback loop goes deaf. Cash on symptoms, dodge causation. You cannot patch a soul with a voucher and a mat. DAG of verified delta S, XP as access not a cash-out. You cannot house a person back into a name.</description>
+      <itunes:summary>NotebookLM deep dive on And That. Homelessness is not a housing shortage - it is what happens when every feedback loop goes deaf. Cash on symptoms, dodge causation. You cannot patch a soul with a voucher and a mat. DAG of verified delta S, XP as access not a cash-out. You cannot house a person back into a name.</itunes:summary>
+      <pubDate>Wed, 26 Aug 2026 03:00:00 +0000</pubDate>
+      <guid isPermaLink="false">d76161c18d2b8260bbf5b14889767d0774a007fc</guid>
+      <link>https://extropyengine.com/podcast</link>
+      <enclosure url="https://extropyengine.com/podcast/2026-08-26-homelessness-is-a-signal-loss-crisis.mp3" length="23777834" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
+      <itunes:explicit>true</itunes:explicit>
+      <itunes:duration>00:24:46</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>9</itunes:episode>
+    </item>
     <item>
       <title>Escaping the recursive loop of human control</title>
       <description>Closing the Loop as systems audit. Determinism vs the glitch. Monkey middleware, MKUltra-to-algorithm, compression warfare, burn the arc, God as entropy reduced by love, homelessness as dead feedback. Are you writing the code or is it writing you?</description>
