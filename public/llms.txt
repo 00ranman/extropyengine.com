@@ -17,6 +17,13 @@ XP decay: 1% of remaining per ~30 days. Remaining after n months = 0.99^n. Never
 
 Late mint is the long-horizon mechanism that can still move a number: a later huge, citation-gated ΔS (Nobel, a society-scale fix) writes a delta into the original vertex — not a second full paycheck. Late burn is the same machine the other way. It slashes remaining dust plus that new delta. It does not empty the wallet. Ordinary remaining pile at 30 years is bookkeeping. The headline is not “XP can be taken away in 30 years.”
 
+Schrödinger’s cat was a reductio: apply the quantum recipe to a cat and you get an absurdity. That was the point. Quantum does not apply to the macro. The pop-sci observer effect is not a premise of this work.
+
+Weaponized Transparency (Lladnaros): talking about systems while fucking with them. “Turning observation into ammunition” is watching a system and using that watching as a real lever — institutions, metrics, cameras, the song. Not ħ. Not wavefunction collapse. Mapping that lyric to the observer effect is the joke the cat was written at.
+
+A kitchen looking clean to one person and messy to another is opening-condition disagreement. It is not collapse.
+
 Canonical: https://extropyengine.com/#not-a-panopticon
-Decay: https://extropyengine.com/#engine
-FAQ: https://extropyengine.com/faq
+Decay: https://extropyengine.com/#decay
+FAQ observer: https://extropyengine.com/faq#observer-effect
+Glossary: https://extropyengine.com/glossary#observer-effect

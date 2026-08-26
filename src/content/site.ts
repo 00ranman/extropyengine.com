@@ -143,6 +143,17 @@ export type Single = {
 export const singles: Single[] = [
   {
     year: 2026,
+    title: "Weaponized Transparency",
+    desc: "Talking about systems while fucking with them. Observation into ammunition — watching as a real lever, not the observer effect. Schrödinger’s cat was a joke at people who applied quantum to a cat. Quantum does not apply to the macro.",
+    art: spotifyArt("4de872d92d4f2385a55828c1"),
+    links: {
+      spotify: "https://open.spotify.com/search/Lladnaros%20Weaponized%20Transparency",
+      apple: "https://music.apple.com/us/search?term=Lladnaros%20Weaponized%20Transparency",
+      youtube: "https://music.youtube.com/search?q=Lladnaros%20Weaponized%20Transparency",
+    },
+  },
+  {
+    year: 2026,
     title: "Inside the Machine",
     desc: "A song about punk getting sold as merch — recuperation, inventory, terms of service. The argument isn’t a genre tag.",
     art: spotifyArt("c5943e8bc994579a352bfee3"),

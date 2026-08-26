@@ -88,6 +88,15 @@ export const faqSections: FaqSection[] = [
     heading: "Measurement",
     items: [
       {
+        id: "observer-effect",
+        q: "Weaponized Transparency — isn’t that the observer effect? Quantum?",
+        a: "No. Schrödinger’s cat was a reductio: apply the quantum recipe to a cat and you get an absurdity. That was the point. Quantum does not apply to the macro. The lyric is talking about systems while fucking with them — turning watching into ammunition in the ordinary sense. Institutions, metrics, cameras, the song. Not ħ. Not collapse. Mapping “observation” in a bar to wavefunction collapse is the same pop-sci move the cat was written to laugh at.",
+        also: [
+          { label: "Observer effect", href: "/glossary", hash: "observer-effect" },
+          { label: "Weaponized Transparency", href: "/glossary", hash: "weaponized-transparency" },
+        ],
+      },
+      {
         id: "not-a-metaphor",
         q: "“This is not a metaphor.” So what is it?",
         a: "Bits-equivalent. A lawn, a fight, a trade deal are treated as information events. Landauer: erasing information has a heat floor. You do not need a frozen joule for “mowed.” You need a stand-in that can drift when new measurements land. Equivocation is on the table: Shannon bits, J/K, and English “order” are not the same object. Constants are what you worship. Proxies move. Physicists who stop at the sentence because they do not want two domains in one line are not the audience. The sentence stays. Sign-off is not a requirement.",

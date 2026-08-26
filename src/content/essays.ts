@@ -278,7 +278,7 @@ export const essays: Record<string, Essay> = {
       { type: "h2", text: "Where This Can Fail" },
       {
         type: "p",
-        text: "The entropy-as-value thesis is falsifiable, and that's by design. If entropy reduction cannot be reliably measured across domains, the framework breaks. If local entropy reduction consistently produces global entropy increase (the air conditioning problem), the framework needs boundary conditions it doesn't yet have. If observer-dependence in measurement creates irreducible subjectivity, the physical grounding claim weakens. These are active research problems.",
+        text: "The entropy-as-value thesis is falsifiable, and that's by design. If entropy reduction cannot be reliably measured across domains, the framework breaks. If local entropy reduction consistently produces global entropy increase (the air conditioning problem), the framework needs boundary conditions it doesn't yet have. If kitchen-scale disagreement never converges on the DAG, the physical-grounding claim weakens. That disagreement is not the observer effect. These are active research problems.",
       },
     ],
   },
@@ -323,7 +323,18 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       },
       {
         term: "Observer",
-        def: "Any entity that measures or interacts with a system, acknowledging that observation changes the system.",
+        id: "observer",
+        def: "A person or instrument taking a measurement in the world you can trip over. Macro. Not a quantum role. Schrödinger’s cat was a reductio: apply the quantum recipe to a cat and you get an absurdity — that was the point. Quantum does not apply to the macro. A kitchen looking clean to one person and messy to another is disagreement about an opening condition, not wavefunction collapse.",
+      },
+      {
+        term: "Observer effect",
+        id: "observer-effect",
+        def: "Pop-sci: looking at a thing changes it, therefore quantum, therefore the song, therefore the Engine. That chain is a joke. Schrödinger wrote the cat to laugh at people who applied the quantum recipe at cat-scale. Quantum does not apply to the macro. Weaponized Transparency’s “turning observation into ammunition” is watching a system and using that watching as a real lever — institutions, metrics, cameras, the song itself — while talking about the system. Not ħ. Not collapse. Ammunition in the ordinary sense.",
+      },
+      {
+        term: "Weaponized Transparency",
+        id: "weaponized-transparency",
+        def: "A Lladnaros track. Talking about systems while fucking with them. Observation into ammunition: the watching is the lever. Macro, social, institutional. It is not the observer effect. It is not quantum mechanics. Schrödinger’s point still stands.",
       },
       {
         term: "Recursion",
@@ -572,8 +583,8 @@ export const openProblems: Problem[] = [
   {
     section: "Measurement",
     hardness: "HARD",
-    title: "Observer-Dependent Measurement",
-    body: "A kitchen looks clean to one person and disordered to another. That is the opening condition, not the attractor. The bet is a weighted eight-domain DAG: like-cases stack, ZKPs unveil only what the equation needs, and a number that keeps surviving without negative feedback moves the needle less. Landauer is the claimed conversion for social/cognitive events (information erased has a heat floor) into a bits-equivalent proxy — not a metaphor, and not a frozen joule for a quarrel. Unsolved: whether convergence of the graph is calibration of a physical quantity, or a folk taxonomy that got dense and stable. That unsolved is a research problem, not a reason to recant the sentence.",
+    title: "Opening-condition disagreement",
+    body: "A kitchen looks clean to one person and disordered to another. That is the opening condition, not the attractor, and it is not the observer effect. Schrödinger’s cat was a reductio against applying quantum recipes at cat-scale. Quantum does not apply to the macro. The bet here is a weighted eight-domain DAG: like-cases stack, ZKPs unveil only what the equation needs, and a number that keeps surviving without negative feedback moves the needle less. Landauer is the claimed conversion for social/cognitive events (information erased has a heat floor) into a bits-equivalent proxy — not a metaphor, and not a frozen joule for a quarrel. Unsolved: whether convergence of the graph is calibration of a physical quantity, or a folk taxonomy that got dense and stable. That unsolved is a research problem, not a reason to recant the sentence, and not a license to start a show with wavefunction collapse.",
   },
   {
     section: "Measurement",
@@ -733,7 +744,7 @@ export const proofLayers = [
       "Emergence follows formalizable patterns",
       "Coherence is measurable and predictive of system health",
       "Recursive self-auditing systems resist Goodharting better than static metrics",
-      "Observer-dependent measurement can be bounded sufficiently for practical coordination",
+      "DAG convergence can bound opening-condition disagreement enough for practical coordination",
     ],
   },
   {
@@ -743,7 +754,6 @@ export const proofLayers = [
     body: "Ideas that follow from the framework but are not formalized enough to test.",
     items: [
       "Glyphic emergence: symbolic encoding of entropy reduction patterns",
-      "Recursive physics: observer-dependent formalism applied to fundamental forces",
       "Consciousness as measurable entropy reduction at the neural level",
       "Civilization-scale coordination through entropy-anchored DAG governance",
       "Multi-planetary timekeeping anchored to hydrogen transition frequencies",
