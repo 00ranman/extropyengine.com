@@ -116,3 +116,21 @@ export const hoaGit = {
   preset: "https://github.com/00ranman/extropy-engine/tree/main/presets/hoa-meso",
   script: "https://github.com/00ranman/extropy-engine/blob/main/scripts/join-hoa-meso.sh",
 } as const;
+
+export const hoaFb = `We're paying dues and then still doing their jobs. That's the whole plot.
+
+One truck. One PDF. A teacher fined for a flowerbed the week school started. A senior hit with the same photo three times. $200 for a weed on a hydrant. That's not standards. That's a monopoly on the scorebook.
+
+So we keep our own book.
+
+Old laptop in the spare room. Download one thing (Docker — it's free). Paste one line. Name the neighborhood. That computer is now a node: a copy of the scorebook that the board does not admin. Next house does the same. Two copies is already a mesh. Every time the grass actually gets cut, neighbors sign it closed, and that page staples to the last one. Nobody can pull page three. That's the DAG. That's the valuable part. Their fine is a screenshot. Our book is the season.
+
+Grass. Lights. The ditch. Flowerbeds. Disputes. The jobs they invoice you for become work orders. Someone takes it. Neighbors sign it closed — or they don't, and it never counts. No 8:30 photo from the driver's seat. Proof you reduced the mess shows up as XP. Not a coupon. Not a crypto pitch. Standing for showing up.
+
+The inspector is unemployed. The gavel becomes an if-then: if the work is signed closed, it counts. That's a smart contract. A vending machine for a decision. No "we'll look at it next quarter."
+
+Keep writing the old dues check so they can't lien the house. That's just protecting the deed. We empty their job jar. When we're the ones keeping the place running, they're letterhead. That's how they go irrelevant even if a lawyer never files a thing. Paper later, if enough owners want the stamp. Function now.
+
+Don't egg the truck. Become a node.
+
+https://extropyengine.com/hoa`;

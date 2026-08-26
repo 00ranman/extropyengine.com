@@ -1,9 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import {
   hoaAfter,
   hoaCan,
   hoaDoors,
   hoaDownload,
+  hoaFb,
   hoaGit,
   hoaLine,
   hoaPage,
@@ -28,6 +30,13 @@ export const Route = createFileRoute("/hoa")({
 });
 
 function HoaPage() {
+  const [copied, setCopied] = useState(false);
+  async function copyBlurb() {
+    await navigator.clipboard.writeText(hoaFb);
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 2000);
+  }
+
   return (
     <EssayLayout backTo="/#engine" backLabel="Engine" kicker={hoaPage.kicker} title={hoaPage.title}>
       <p>{hoaPage.lead}</p>
@@ -137,6 +146,21 @@ function HoaPage() {
         </Link>
         .
       </p>
+
+      <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">The pitch</h2>
+      <p>For the group. Copy it. Don’t turn it into a whitepaper.</p>
+      <p>
+        <button
+          type="button"
+          onClick={() => void copyBlurb()}
+          className="border border-primary/40 bg-primary/10 px-4 py-2 font-mono text-xs tracking-[0.12em] text-primary"
+        >
+          {copied ? "Copied" : "Copy"}
+        </button>
+      </p>
+      <pre className="overflow-x-auto whitespace-pre-wrap border border-primary/18 bg-surface/40 p-4 font-mono text-xs leading-relaxed text-fg">
+        {hoaFb}
+      </pre>
     </EssayLayout>
   );
 }
