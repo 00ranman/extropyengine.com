@@ -324,7 +324,9 @@ export function EngineSection() {
       <SectionTitle className="mb-3 text-center">How it runs</SectionTitle>
       <p className="mx-auto mb-12 max-w-xl text-center text-[15px] leading-relaxed text-muted">
         Not a pile of apps. LocalFlow is the errand face. SignalFlow is how you talk to the
-        protocol. A DAG under the floor. Archived experiments are off this page on purpose.
+        protocol. A DAG under the floor. This site (Hostinger) just organizes the ΔS so spare-room
+        laptops can coordinate — the operation is not on the server. Archived experiments are off
+        this page on purpose.
       </p>
 
       <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2">

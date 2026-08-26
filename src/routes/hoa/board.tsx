@@ -159,8 +159,9 @@ function HoaBoard() {
       </p>
       <h1 className="font-display text-4xl tracking-[0.04em]">Job board + DAG</h1>
       <p className="text-sm text-dim">
-        Browser book for now — same loops as the Engine. On a node this face talks to localhost. Export the DAG so
-        anyone can audit. Name yourself. Post. Take. Sign closed.
+        This page is a face. Hostinger is not the book — it just organizes ΔS so spare-room laptops can
+        coordinate. Your name, jobs, and DAG live in this browser until a node is running; then the
+        laptop is the book. Export so anyone can audit.
       </p>
       <label className="block font-mono text-[11px] tracking-[0.12em] text-primary">
         YOUR NAME

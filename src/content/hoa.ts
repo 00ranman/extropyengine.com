@@ -1,7 +1,7 @@
 export const hoaPage = {
   title: "Neighborhood MESO",
   kicker: "Extropy Engine · Sunset Oaks",
-  lead: "This is the Extropy Engine. Sunset Oaks is the first MESO — the whole sub-development. Crews under it are MICROs. You download one thing, paste one line, name the street. Your laptop is a node. Jobs get posted, done, signed closed. The DAG is the book anyone can audit. The HOA keeps the letterhead until owners vote the paper. Function now.",
+  lead: "This is the Extropy Engine. Hostinger is just the sign on the door — it organizes ΔS into something you can actually run. The operation is decentralized: laptops in spare rooms, coordinating. Sunset Oaks is the first MESO. Crews under it are MICROs. The book is not on this server.",
 } as const;
 
 export const hoaDownload = [
@@ -75,7 +75,7 @@ export const hoaMeso = {
   lead: "One MESO for the whole sub. Crews under it are MICROs. You log your own work. The DAG is where those logs converge so anyone can audit the picture.",
   meso: [
     "Name: Sunset Oaks. Scale: MESO. Phase: SHADOW until the loops are boringly real.",
-    "The MESO holds the job list, the votes that stay in this room, and the book. It does not mow. Crews mow.",
+    "The MESO holds the job list, the votes that stay in this room, and the book. The book is on the laptops, not on Hostinger. Crews mow. The site just organizes the ΔS so those rooms can coordinate.",
     "Anyone who runs a node is on the MESO. You do not wait for a priesthood and you do not wait for seven people.",
   ],
   micros: [
@@ -162,7 +162,7 @@ Grass. Lights. The ditch. A community garden. Disputes. Work orders. Neighbors s
 
 The inspector is unemployed. The gavel becomes an if-then. Keep writing the old dues check so they can't lien the house. We empty their job jar. When we're keeping the place running, they're letterhead. Texas law: 67% of owners can amend the declaration. Function now. Paper when we have the count.
 
-Don't egg the truck. Become a node. Open the board:
+Don't egg the truck. Become a node. Hostinger is the sign. The laptops are the network.
 
 https://extropyengine.com/hoa
 https://extropyengine.com/hoa/board`;
