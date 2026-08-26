@@ -22,7 +22,7 @@ import { Route as ProofLayersRouteImport } from './routes/proof-layers'
 import { Route as SayRouteImport } from './routes/say'
 import { Route as UniversaltimesRouteImport } from './routes/universaltimes'
 import { Route as DocsIndexRouteImport } from './routes/docs/index'
-import { Route as HoaBoardRouteImport } from './routes/hoa/board'
+import { Route as HoaSunsetOaksRouteImport } from './routes/hoa/sunset-oaks'
 import { Route as PapersClosingTheLoopRouteImport } from './routes/papers/closing-the-loop'
 import { Route as PrintClosingTheLoopRouteImport } from './routes/print/closing-the-loop'
 import { Route as StartIndexRouteImport } from './routes/start/index'
@@ -97,9 +97,9 @@ const DocsIndexRoute = DocsIndexRouteImport.update({
   path: '/docs/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const HoaBoardRoute = HoaBoardRouteImport.update({
-  id: '/board',
-  path: '/board',
+const HoaSunsetOaksRoute = HoaSunsetOaksRouteImport.update({
+  id: '/sunset-oaks',
+  path: '/sunset-oaks',
   getParentRoute: () => HoaRoute,
 } as any)
 const PapersClosingTheLoopRoute = PapersClosingTheLoopRouteImport.update({
@@ -156,7 +156,7 @@ export interface FileRoutesByFullPath {
   '/proof-layers': typeof ProofLayersRoute
   '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
-  '/hoa/board': typeof HoaBoardRoute
+  '/hoa/sunset-oaks': typeof HoaSunsetOaksRoute
   '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
   '/print/closing-the-loop': typeof PrintClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
@@ -180,7 +180,7 @@ export interface FileRoutesByTo {
   '/proof-layers': typeof ProofLayersRoute
   '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
-  '/hoa/board': typeof HoaBoardRoute
+  '/hoa/sunset-oaks': typeof HoaSunsetOaksRoute
   '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
   '/print/closing-the-loop': typeof PrintClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
@@ -205,7 +205,7 @@ export interface FileRoutesById {
   '/proof-layers': typeof ProofLayersRoute
   '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
-  '/hoa/board': typeof HoaBoardRoute
+  '/hoa/sunset-oaks': typeof HoaSunsetOaksRoute
   '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
   '/print/closing-the-loop': typeof PrintClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
@@ -231,7 +231,7 @@ export interface FileRouteTypes {
     | '/proof-layers'
     | '/say'
     | '/universaltimes'
-    | '/hoa/board'
+    | '/hoa/sunset-oaks'
     | '/papers/closing-the-loop'
     | '/print/closing-the-loop'
     | '/start/ai'
@@ -255,7 +255,7 @@ export interface FileRouteTypes {
     | '/proof-layers'
     | '/say'
     | '/universaltimes'
-    | '/hoa/board'
+    | '/hoa/sunset-oaks'
     | '/papers/closing-the-loop'
     | '/print/closing-the-loop'
     | '/start/ai'
@@ -279,7 +279,7 @@ export interface FileRouteTypes {
     | '/proof-layers'
     | '/say'
     | '/universaltimes'
-    | '/hoa/board'
+    | '/hoa/sunset-oaks'
     | '/papers/closing-the-loop'
     | '/print/closing-the-loop'
     | '/start/ai'
@@ -408,11 +408,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/hoa/board': {
-      id: '/hoa/board'
-      path: '/board'
-      fullPath: '/hoa/board'
-      preLoaderRoute: typeof HoaBoardRouteImport
+    '/hoa/sunset-oaks': {
+      id: '/hoa/sunset-oaks'
+      path: '/sunset-oaks'
+      fullPath: '/hoa/sunset-oaks'
+      preLoaderRoute: typeof HoaSunsetOaksRouteImport
       parentRoute: typeof HoaRoute
     }
     '/papers/closing-the-loop': {
@@ -475,11 +475,11 @@ declare module '@tanstack/react-router' {
 }
 
 interface HoaRouteChildren {
-  HoaBoardRoute: typeof HoaBoardRoute
+  HoaSunsetOaksRoute: typeof HoaSunsetOaksRoute
 }
 
 const HoaRouteChildren: HoaRouteChildren = {
-  HoaBoardRoute: HoaBoardRoute,
+  HoaSunsetOaksRoute: HoaSunsetOaksRoute,
 }
 
 const HoaRouteWithChildren = HoaRoute._addFileChildren(HoaRouteChildren)

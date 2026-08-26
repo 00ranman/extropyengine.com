@@ -196,7 +196,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "start",
         q: "How do I actually start?",
-        a: "Clone the kernel. Compose up. Close a loop. Handshake a peer. Post work in a zone. That is already a DFAO. Neighborhood MESO: one script, the laptop is a node. NANO is one person. You do not wait for a priesthood and you do not wait for seven.",
+        a: "Clone the kernel. For the neighborhood app today: git clone, cd packages/neighborhood-app, node server.mjs, open localhost:4016. That's the job board on your machine. Full Engine: Docker Desktop, then the join script. Handshake a peer. You do not wait for a priesthood and you do not wait for seven.",
         also: [
           { label: "GitHub — extropy-engine", href: "https://github.com/00ranman/extropy-engine" },
           { label: "Neighborhood MESO", href: "/hoa" },

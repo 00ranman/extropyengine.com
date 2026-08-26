@@ -183,16 +183,19 @@ function EnginePanel({ onPick }: { onPick: () => void }) {
   const kids = engine?.children ?? [];
   const start = kids.filter((k) => k.href === "/#engine" || k.href.startsWith("/start"));
   const docs = kids.filter((k) => ["/faq", "/glossary", "/dfao"].includes(k.href));
+  const hoa = kids.filter((k) => k.href.startsWith("/hoa"));
   const more = kids.filter(
     (k) =>
       k.href !== "/#engine" &&
       !k.href.startsWith("/start") &&
-      !["/faq", "/glossary", "/dfao"].includes(k.href),
+      !["/faq", "/glossary", "/dfao"].includes(k.href) &&
+      !k.href.startsWith("/hoa"),
   );
   return (
-    <div className="mx-auto grid max-w-5xl grid-cols-3 gap-8 px-8 py-5 text-[11px] tracking-[0.14em] uppercase">
+    <div className="mx-auto grid max-w-5xl grid-cols-2 gap-8 px-8 py-5 text-[11px] tracking-[0.14em] uppercase lg:grid-cols-4">
       <EngineCol heading="Start" items={start} onPick={onPick} />
       <EngineCol heading="Read" items={docs} onPick={onPick} />
+      <EngineCol heading="HOA" items={hoa} onPick={onPick} />
       <EngineCol heading="More" items={more} onPick={onPick} />
     </div>
   );
