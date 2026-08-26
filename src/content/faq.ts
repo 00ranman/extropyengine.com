@@ -159,7 +159,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "hoa",
         q: "Can this replace an HOA?",
-        a: "You register, same as joining any neighborhood group. Jobs go on a list like a work order. Neighbors do them and sign them closed. Keep paying the old dues so they cannot lien you. Two doors: enough owners vote and a lawyer files it — that’s paper. Or you already did every job, so they’re a bill for a service nobody uses — that’s practice. The second door is never locked.",
+        a: "They have the gavel. We have the scorebook. You register, jobs go on a list, neighbors sign them closed. That book is a ledger they can’t white-out — that’s the valuable part. Keep paying the old dues so they cannot lien you. Paper door: owners vote, lawyer, county. Attrition door: we already did the jobs, so they’re a costume. Paradox. You always have the second. Eggs are not a door.",
         also: [{ label: "Replace the HOA", href: "/hoa" }],
       },
     ],

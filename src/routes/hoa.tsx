@@ -11,7 +11,7 @@ export const Route = createFileRoute("/hoa")({
       {
         name: "description",
         content:
-          "Register like you would for any neighborhood group. Take the HOA’s jobs. Work orders neighbors sign closed. Dissolve them on paper if the vote is there — in practice if it isn’t.",
+          "They have the gavel. We have the scorebook. Register, take the jobs, keep a ledger they can’t white-out. Paper if the vote is there. Attrition if it isn’t.",
       },
     ],
   }),
@@ -37,7 +37,7 @@ function HoaPage() {
       ))}
       <p className="border border-primary/20 bg-primary/5 px-4 py-3 text-sm">{hoaNotLegal}</p>
 
-      <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">Two doors. You always have the second.</h2>
+      <h2 className="font-display pt-4 text-2xl tracking-[0.04em] text-fg">Two doors. Paradox. Attrition.</h2>
       <dl className="space-y-4">
         {hoaDoors.map((d) => (
           <div key={d.title}>
