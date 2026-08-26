@@ -31,6 +31,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "FAQ", href: "/faq" },
       { label: "Glossary", href: "/glossary" },
       { label: "DFAO", href: "/dfao" },
+      { label: "Neighborhood MESO", href: "/hoa" },
       { label: "Open problems", href: "/open-problems" },
       { label: "Proof layers", href: "/proof-layers" },
       { label: "Try it", href: "/mvt" },
@@ -540,6 +541,11 @@ export const socials = [
 ] as const;
 
 export const docsIndex = [
+  {
+    title: "Neighborhood MESO",
+    href: "/hoa",
+    note: "HOA-shaped wrapper on the Engine. One command, you are a node. Jobs → confirm → XP.",
+  },
   {
     title: "Codex 3.0 notes",
     href: "/docs/CODEX_3_NOTES.md",

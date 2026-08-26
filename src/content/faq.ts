@@ -156,6 +156,12 @@ export const faqSections: FaqSection[] = [
         a: "No. Decentralized Fractal Autonomous Organization. Scale labels (NANO → PLANETARY) are suggested rule sets, not membership caps. Seven was a shorthand that leaked as a law. It is not. Same loop at every scale: post, do, confirm. Votes rewrite the room they are cast in. Only PLANETARY hits everybody, and that is supposed to be hard.",
         also: [{ label: "DFAO", href: "/dfao" }],
       },
+      {
+        id: "hoa-meso",
+        q: "Can a neighborhood run this like an HOA?",
+        a: "Yes — as a MESO wrapper, not a deed eraser. The Engine is the same. HOA jobs become LocalFlow loops. You install Docker once, run one script, the laptop is a node, the neighborhood DFAO starts SHADOW, confirmed work mints XP. Liens and architectural control stay on the recorded paper until that paper changes.",
+        also: [{ label: "Neighborhood MESO", href: "/hoa" }],
+      },
     ],
   },
   {
@@ -181,9 +187,10 @@ export const faqSections: FaqSection[] = [
       {
         id: "start",
         q: "How do I actually start?",
-        a: "Clone the kernel. Compose up. Close a loop. Handshake a peer. Post work in a zone. That is already a DFAO. NANO is one person. You do not wait for a priesthood and you do not wait for seven.",
+        a: "Clone the kernel. Compose up. Close a loop. Handshake a peer. Post work in a zone. That is already a DFAO. Neighborhood MESO: one script, the laptop is a node. NANO is one person. You do not wait for a priesthood and you do not wait for seven.",
         also: [
           { label: "GitHub — extropy-engine", href: "https://github.com/00ranman/extropy-engine" },
+          { label: "Neighborhood MESO", href: "/hoa" },
           { label: "DFAO", href: "/dfao" },
         ],
       },
