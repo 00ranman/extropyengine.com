@@ -144,7 +144,7 @@ export const singles: Single[] = [
   {
     year: 2026,
     title: "Weaponized Transparency",
-    desc: "Talking about systems while fucking with them. Observation into ammunition — watching as a real lever, not the observer effect. Schrödinger’s cat was a joke at people who applied quantum to a cat. Quantum does not apply to the macro.",
+    desc: "Talking about systems while fucking with them. Observation into ammunition — watching as a real lever. Not the observer effect. That mapping is not in the song. Schrödinger’s cat was a joke at people who applied quantum to a cat. Quantum does not apply to the macro.",
     art: spotifyArt("4de872d92d4f2385a55828c1"),
     links: {
       spotify: "https://open.spotify.com/search/Lladnaros%20Weaponized%20Transparency",

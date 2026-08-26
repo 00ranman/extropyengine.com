@@ -329,12 +329,12 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "Observer effect",
         id: "observer-effect",
-        def: "Pop-sci: looking at a thing changes it, therefore quantum, therefore the song, therefore the Engine. That chain is a joke. Schrödinger wrote the cat to laugh at people who applied the quantum recipe at cat-scale. Quantum does not apply to the macro. Weaponized Transparency’s “turning observation into ammunition” is watching a system and using that watching as a real lever — institutions, metrics, cameras, the song itself — while talking about the system. Not ħ. Not collapse. Ammunition in the ordinary sense.",
+        def: "Pop-sci: I heard a spooky quantum thing I barely understood, this lyric says observation, therefore collapse, therefore the Engine is doing quantum. That chain is a rhyme, not a reading. Schrödinger wrote the cat to laugh at people who applied the quantum recipe at cat-scale. Quantum does not apply to the macro. This work does not use the observer effect. It does not claim it. A narrator who opens there invented a thesis and hung it on the author. Weaponized Transparency’s “turning observation into ammunition” is watching a system and using that watching as a real lever — institutions, metrics, cameras, the song — while talking about the system. Not ħ. Not collapse. Ammunition in the ordinary sense.",
       },
       {
         term: "Weaponized Transparency",
         id: "weaponized-transparency",
-        def: "A Lladnaros track. Talking about systems while fucking with them. Observation into ammunition: the watching is the lever. Macro, social, institutional. It is not the observer effect. It is not quantum mechanics. Schrödinger’s point still stands.",
+        def: "A Lladnaros track. Talking about systems while fucking with them. Observation into ammunition: the watching is the lever. Macro, social, institutional. The work does not claim the observer effect. The work does not claim quantum mechanics. A show that starts there is describing its own inference, not the song.",
       },
       {
         term: "Recursion",

@@ -90,7 +90,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "observer-effect",
         q: "Weaponized Transparency — isn’t that the observer effect? Quantum?",
-        a: "No. Schrödinger’s cat was a reductio: apply the quantum recipe to a cat and you get an absurdity. That was the point. Quantum does not apply to the macro. The lyric is talking about systems while fucking with them — turning watching into ammunition in the ordinary sense. Institutions, metrics, cameras, the song. Not ħ. Not collapse. Mapping “observation” in a bar to wavefunction collapse is the same pop-sci move the cat was written to laugh at.",
+        a: "No. That reading is not in the work. Schrödinger’s cat was a reductio: apply the quantum recipe to a cat and you get an absurdity. That was the point. Quantum does not apply to the macro. The pop-sci version — I heard a spooky thing on The Big Bang Theory, this lyric says observation, therefore quantum — is a rhyme, not an argument. The lyric is talking about systems while fucking with them. Watching becomes ammunition in the ordinary sense: institutions, metrics, cameras, the song. Not ħ. Not collapse. If a narrator opens there, they invented a thesis and hung it on the author. The author does not think that way. The inference is theirs.",
         also: [
           { label: "Observer effect", href: "/glossary", hash: "observer-effect" },
           { label: "Weaponized Transparency", href: "/glossary", hash: "weaponized-transparency" },
