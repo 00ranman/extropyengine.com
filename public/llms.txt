@@ -27,3 +27,4 @@ Canonical: https://extropyengine.com/#not-a-panopticon
 Decay: https://extropyengine.com/#decay
 FAQ observer: https://extropyengine.com/faq#observer-effect
 Glossary: https://extropyengine.com/glossary#observer-effect
+Desk (live board, not a control center): https://extropyengine.com/desk

@@ -23,6 +23,7 @@ export const primaryNav: readonly NavItem[] = [
     href: "/#engine",
     children: [
       { label: "How it works", href: "/#engine" },
+      { label: "Desk", href: "/desk" },
       { label: "Start here", href: "/start" },
       { label: "FAQ", href: "/faq" },
       { label: "Glossary", href: "/glossary" },
