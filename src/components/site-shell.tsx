@@ -145,6 +145,10 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <footer className="no-print relative z-10 flex flex-wrap justify-between gap-3 border-t border-primary/12 px-[8vw] py-9 text-[11px] tracking-[0.12em] text-faint">
         <div>
           © {site.year} {site.name.toUpperCase()} — {site.person}
+          {" · "}
+          <Link to="/desk" className="text-dim hover:text-primary">
+            Desk
+          </Link>
         </div>
         <div className="lowercase">{site.tagline.toLowerCase()}</div>
       </footer>
@@ -183,7 +187,7 @@ function DropTrigger({
 function DropPanel({ item, onPick }: { item: NavItem; onPick: () => void }) {
   const kids = item.children ?? [];
   if (item.label === "Engine") {
-    const runHref = new Set(["/#engine", "/start", "/mvt", "/universaltimes"]);
+    const runHref = new Set(["/#engine", "/start", "/mvt", "/universaltimes", "/desk"]);
     const run = kids.filter((k) => runHref.has(k.href));
     const read = kids.filter((k) => !runHref.has(k.href));
     return (
