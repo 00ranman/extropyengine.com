@@ -22,7 +22,7 @@ MACROs coordinate off MICROs. MICROs are subjective. People oversell. Numbers ca
 
 **Digital Autarky** — intelligence and identity at the edge. The network is a handshake and a DAG, not a supermind. The assistant you trust is the UI.
 
-## Emergent Points (layer on fiat, not a dollar map)
+## Emergent Product (layer on fiat, not a dollar map)
 
 People still spend dollars. EP is a **top layer**: track the exchange, convert to a bits-equivalent proxy, fine-tune average ΔS for that situation / those domains until the proxy is less wrong. The layer exists to show why that ΔS should be worth more than the fiat-only reading.
 
@@ -32,7 +32,7 @@ A **vertex** settles some of the exchange. How much is an agreed estimate. Both 
 
 Fiat still rings the rest. Cash cannot mint XP. Low EP ≠ no milk. Mom-and-pop first. Walmart last.
 
-Not pairwise coupling plus a currency converter. The mesh is the instrument. Emergent Points, not entropy points, not Epistemic Proof.
+Not pairwise coupling plus a currency converter. The mesh is the instrument. Emergent Product, not entropy points, not Epistemic Proof.
 
 The strict rule is the other door: **cash cannot mint XP.** No on-ramp into standing. Low EP ≠ no milk.
 

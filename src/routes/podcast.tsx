@@ -130,7 +130,7 @@ function PodcastPage() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (window.location.hash !== "#subscribe" && window.location.hash !== "#afterword") return;
+    if (window.location.hash !== "#subscribe") return;
     const id = window.location.hash.slice(1);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   }, [episodes]);
@@ -139,26 +139,6 @@ function PodcastPage() {
     <EssayLayout backTo="/" backLabel="Home" kicker="RSS" title={podcast.title}>
       <p>{podcast.description}</p>
       <Subscribe />
-
-      <div id="afterword" className="mt-8 border border-primary/22 bg-primary/4 px-5 py-6">
-        <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">Afterword</p>
-        <h2 className="font-display mt-2 text-2xl tracking-[0.04em] text-fg">This is not a panopticon</h2>
-        <p className="mt-3">
-          extropyengine.com is a website. Papers. A clock face. This RSS feed. Hostinger is not a
-          node. The Engine is the git you clone onto a laptop. Keys stay on the box. First boot
-          writes a did:key. Nobody at this domain holds that.
-        </p>
-        <p className="mt-3">
-          A panopticon is one tower that can see every diary. A surveillance state is a central log
-          you cannot opt out of. This has neither. Your PSLL is a file on your disk. The network
-          sees a proof — yes or no — not the file, not the photos. Looking at someone’s graph
-          writes a vertex. A silent fetch is a detectable act. Node to node on the LAN. Internet
-          for people who aren’t next door.
-        </p>
-        <p className="mt-3">
-          That is a ledger you hold, not a camera pointed at you. The diary stays yours.
-        </p>
-      </div>
 
       <h2 className="font-display pt-6 text-2xl tracking-[0.04em] text-fg">Library</h2>
       {episodes === null ? (

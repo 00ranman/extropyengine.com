@@ -16,17 +16,24 @@ export type NavItem = NavLink & { children?: readonly NavLink[] };
 /** Top bar stays short. Engine is the protocol. HOA is its own door. */
 export const primaryNav: readonly NavItem[] = [
   { label: "Book", href: "/#book" },
-  { label: "Music", href: "/#music" },
+  {
+    label: "Music",
+    href: "/#music",
+    children: [
+      { label: "Albums & singles", href: "/#music" },
+      { label: "Lyrics", href: "/lyrics" },
+    ],
+  },
   { label: "Papers", href: "/#papers" },
   {
     label: "Engine",
     href: "/#engine",
     children: [
       { label: "How it works", href: "/#engine" },
-      { label: "Desk", href: "/desk" },
       { label: "Start here", href: "/start" },
       { label: "FAQ", href: "/faq" },
       { label: "Glossary", href: "/glossary" },
+      { label: "Tokens", href: "/#tokens" },
       { label: "DFAO", href: "/dfao" },
       { label: "Open problems", href: "/open-problems" },
       { label: "Proof layers", href: "/proof-layers" },
@@ -441,7 +448,7 @@ export const engineViews = {
   },
   merchant: {
     title: "What a shop sees",
-    kicker: "Emergent Points",
+    kicker: "Emergent Product",
     formula: "EP = XP × L",
     lines: [
       "You still spend dollars. This is a layer on top of that, not a replacement. It tracks the exchange, converts it to a bits-equivalent proxy, and fine-tunes the average ΔS for this kind of situation in these domains until the proxy is less wrong.",
@@ -578,10 +585,12 @@ export const engineDecay = {
 } as const;
 
 export const engineTokens = [
-  { t: "XP", d: "Minted on verified ΔS > 0. You do not spend it. Access economy. Decays ~1%/month (ρ = 0.01 / 30 cycles) — not 5%. That is IT. Still burnable after settle. Under the floor it can quantize into a ZKP access band. Not a public ladder." },
-  { t: "EP", d: "Emergent Points. Top layer on fiat, not a currency. EP = XP × L at purchase. L from the mesh (0.something). A vertex settles some of the exchange. No 1:1 to cash. Both edges agree." },
-  { t: "IT", d: "Governance weight. Decays ~5%/month if you stop showing up. Different token from XP. Knob, not commandment." },
-  { t: "CT / CAT / DT", d: "Standing, skill, domain. Separate so influence cannot be purchased with XP." },
+  { t: "XP", d: "The letters are XP. Not Extropy Points. Not a slogan for experience points. ΔS is the entropy reduction. XP is the proxy of that ΔS on the ledger, bits-equivalent, so like-cases can be compared. You do not spend it. Access economy. Decays ~1%/month of remaining." },
+  { t: "EP", d: "Emergent Product. At the till: EP = XP × L. L is a fraction from the mesh — standing, how often you actually patronize this place, local ΔS, domains in play. May discount the fiat ticket. Not a currency. L is not a frozen coupon table." },
+  { t: "CT", d: "Contribution Token. Standing in the community. Feeds L. Not purchased with XP." },
+  { t: "CAT", d: "Category. Skills. Closer to an NFT than a pile — are you qualified to do this, and at what level." },
+  { t: "IT", d: "Influence Token. Governance and demonstration work weights more. Obscure private labor still mints XP; it does not mint the same IT. Decays ~5%/month if you vanish. Not Insight Token." },
+  { t: "DT", d: "Optional. A separate instrument if a DFAO wants one. Do not confuse it with XP’s 0.99ⁿ leak — that leak is already on XP." },
 ] as const;
 
 export const engineMath = {

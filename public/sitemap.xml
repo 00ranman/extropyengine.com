@@ -7,6 +7,7 @@
   <url><loc>https://extropyengine.com/start/governance</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://extropyengine.com/start/physics</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://extropyengine.com/papers/closing-the-loop</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://extropyengine.com/lyrics</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://extropyengine.com/podcast</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://extropyengine.com/podcast/feed.xml</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://extropyengine.com/faq</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>

@@ -53,7 +53,6 @@ export const faqSections: FaqSection[] = [
         also: [
           { label: "Not a panopticon", href: "/#not-a-panopticon" },
           { label: "Digital Autarky", href: "/glossary", hash: "digital-autarky" },
-          { label: "Afterword", href: "/podcast", hash: "afterword" },
         ],
       },
       {
@@ -70,6 +69,35 @@ export const faqSections: FaqSection[] = [
   {
     heading: "The mint vs the slogan",
     items: [
+      {
+        id: "xp-name",
+        q: "XP means Extropy Points, right? Or experience points?",
+        a: "The letters are XP. That is the name. Not Extropy Points. Not a branded expansion of experience points. You can hear “experience points” in a 1:1 life-to-game translation. That is a rhyme, not the definition. ΔS is the entropy reduction. XP is the proxy of that ΔS on the ledger — bits-equivalent — so like-cases can be compared. Saying XP “is” entropy reduction skips the proxy.",
+        also: [
+          { label: "XP", href: "/glossary", hash: "xp" },
+          { label: "ΔS vs XP", href: "/glossary", hash: "delta-s-vs-xp" },
+        ],
+      },
+      {
+        id: "ep-name",
+        q: "EP is Emergent Points, right? Or Epistemic Proof?",
+        a: "Emergent Product. At the till: EP = XP × L. L is a fraction from standing, how often you actually patronize this place, local mesh, domains in play. May discount the fiat ticket. Not a currency. Not Epistemic Proof — that is a proof-layer token, letter collision, does not buy milk. “Points” oversold a punch-card. Product is the math: XP times L. The math of L is not frozen; it has been through iterations.",
+        also: [
+          { label: "Emergent Product", href: "/glossary", hash: "emergent-product" },
+          { label: "Tokens", href: "/#tokens" },
+        ],
+      },
+      {
+        id: "cat-ct-it",
+        q: "What are CAT, CT, and IT?",
+        a: "CAT is Category: skills. Closer to an NFT than a fungible pile — is this person qualified to do this, and at what level. CT is Contribution Token: standing, reputation that is not a vibe. Feeds L at the till. IT is Influence Token, not Insight Token. Governance and demonstration work weights more. Obscure private labor still mints XP; it does not mint the same IT unless influence is the job. Everyone has some say. People who work that domain accrue more. IT decays ~5%/month if you vanish.",
+        also: [
+          { label: "CAT", href: "/glossary", hash: "cat" },
+          { label: "CT", href: "/glossary", hash: "ct" },
+          { label: "IT", href: "/glossary", hash: "it" },
+          { label: "Tokens", href: "/#tokens" },
+        ],
+      },
       {
         id: "formula",
         q: "What is the actual XP formula?",
@@ -216,7 +244,7 @@ export const faqSections: FaqSection[] = [
         id: "milk",
         q: "If I don’t have enough EP, can I still buy milk with cash?",
         a: "Yes. You are still spending dollars. EP is a layer on top of that, not a lock and not a cash table. At purchase, both edges agree on a bits-equivalent estimate (EP = XP × L from the mesh). A vertex settles some of the exchange. The rest still rings in fiat. Low standing means the layer covers less, not that the fridge locks. Cash cannot mint XP.",
-        also: [{ label: "Emergent Points", href: "/glossary", hash: "emergent-points" }],
+        also: [{ label: "Emergent Product", href: "/glossary", hash: "emergent-product" }],
       },
       {
         id: "on-ramp",
@@ -255,6 +283,7 @@ export const faqSections: FaqSection[] = [
         a: "Book, papers, and the podcast are on this site. RSS is https://extropyengine.com/podcast/feed.xml. Spotify and YouTube listings exist. Apple still wants a one-time submit at Podcasts Connect — the feed is valid; their banner is not a feed error.",
         also: [
           { label: "Podcast", href: "/podcast" },
+          { label: "Lyrics", href: "/lyrics" },
           { label: "Closing the Loop", href: "/papers/closing-the-loop" },
           { label: "Glossary", href: "/glossary" },
         ],

@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { entryPaths } from "@/content/essays";
 import {
-  albums,
   artistLinks,
   book,
   earlierEditions,
@@ -19,10 +18,12 @@ import {
   engineTokens,
   engineViews,
   papers,
-  singles,
   socials,
   type Paper,
 } from "@/content/site";
+import { albumCards, singleCards, type CatalogSong } from "@/content/music";
+import { LyricsModal } from "@/components/lyrics-modal";
+import { getBed, isPlayingPath, toggleSrc } from "@/lib/audio-bed";
 import { Btn, SectionTitle, StatusPill } from "@/components/ui-bits";
 import { podcast } from "@/content/podcast";
 
@@ -110,36 +111,36 @@ export function BookHero() {
 }
 
 export function MusicSection() {
+  const [openLyrics, setOpenLyrics] = useState<{ title: string; lyrics?: string } | null>(null);
+  const [flipped, setFlipped] = useState<string | null>(null);
+
   return (
     <section id="music" className="border-t border-primary/12 px-[8vw] py-20">
       <SectionTitle className="mb-3">The Music</SectionTitle>
-      <p className="mb-12 max-w-xl text-[15px] text-muted">
+      <p className="mb-4 max-w-xl text-[15px] text-muted">
         Systems theory as a show: electronics, glitch, post-punk hop, circus when the tent goes up,
         ridiculous when it should be. One track argues with punk. The rest don’t stay in that lane.
         Three albums, one EP, and counting.
       </p>
+      <p className="mb-12 text-sm text-dim">
+        Hover a single for the one-line. Tracks on an album: flip the card. Lyrics open in a box —
+        they stay on this page.{" "}
+        <Link to="/lyrics" className="text-primary hover:underline">
+          Master list
+        </Link>{" "}
+        is the document to read if you’re going to talk about the songs. Don’t invent lyrics from a
+        title. Irrelevance (Is the Killshot) is the album track. It used to be filed as Evolution,
+        Not Revolution. Same song. The album is Unf*ck the World for a Dollar — not the book.
+      </p>
       <div className="mb-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
-        {albums.map((album) => (
-          <article
+        {albumCards.map((album) => (
+          <AlbumFlip
             key={album.title}
-            className="flex flex-col gap-3 border border-primary/12 bg-primary/2 p-[18px] transition-colors hover:border-primary/35"
-          >
-            <img
-              src={album.art}
-              alt={album.title}
-              className="aspect-square w-full self-center object-cover"
-              crossOrigin="anonymous"
-            />
-            <div className="mb-1 text-[11px] tracking-[0.3em] text-accent">
-              {album.year}
-              {album.kind === "ep" ? " · EP" : ""}
-            </div>
-            <h3 className="font-display text-lg tracking-[0.06em]">{album.title}</h3>
-            <p className="mb-2 text-xs text-dim">
-              {album.tracks} tracks · {album.blurb}
-            </p>
-            <MusicLinks links={album.links} />
-          </article>
+            album={album}
+            flipped={flipped === album.title}
+            onFlip={() => setFlipped((cur) => (cur === album.title ? null : album.title))}
+            onLyrics={(song) => setOpenLyrics({ title: song.title, lyrics: song.lyrics })}
+          />
         ))}
       </div>
 
@@ -150,7 +151,7 @@ export function MusicSection() {
         Standalone tracks. Hover for what each one is about.
       </p>
       <div className="mb-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {singles.map((track) => (
+        {singleCards.map((track) => (
           <article
             key={track.title}
             className="group relative flex flex-col overflow-hidden border border-primary/18 bg-[rgb(20_12_8_/_0.55)] transition-all duration-250 hover:-translate-y-0.5 hover:border-primary hover:shadow-[0_8px_24px_rgb(255_90_31_/_0.18)]"
@@ -168,6 +169,16 @@ export function MusicSection() {
                 {track.year} · SINGLE
               </div>
               <div className="font-display text-[15px] leading-tight">{track.title}</div>
+            </div>
+            <div className="mt-auto flex flex-wrap gap-1.5 border-t border-primary/10 p-2.5">
+              {track.src ? <PlayHere src={track.src} /> : null}
+              <button
+                type="button"
+                className="flex-1 border border-primary/25 py-1.5 text-center text-[10px] tracking-[0.1em] uppercase transition-all hover:border-primary hover:bg-primary hover:text-ink"
+                onClick={() => setOpenLyrics({ title: track.title, lyrics: track.lyrics })}
+              >
+                Lyrics
+              </button>
             </div>
             {track.links ? <MusicLinks links={track.links} /> : null}
           </article>
@@ -190,7 +201,104 @@ export function MusicSection() {
           Subscribe
         </Btn>
       </div>
+      {openLyrics ? (
+        <LyricsModal title={openLyrics.title} lyrics={openLyrics.lyrics} onClose={() => setOpenLyrics(null)} />
+      ) : null}
     </section>
+  );
+}
+
+function AlbumFlip({
+  album,
+  flipped,
+  onFlip,
+  onLyrics,
+}: {
+  album: (typeof albumCards)[number];
+  flipped: boolean;
+  onFlip: () => void;
+  onLyrics: (song: CatalogSong) => void;
+}) {
+  return (
+    <article className="flex flex-col border border-primary/12 bg-primary/2 p-[18px] transition-colors hover:border-primary/35">
+      <div className="relative aspect-square w-full overflow-hidden">
+        <img
+          src={album.art}
+          alt={album.title}
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity ${flipped ? "pointer-events-none opacity-0" : "opacity-100"}`}
+          crossOrigin="anonymous"
+        />
+        <div
+          className={`absolute inset-0 overflow-y-auto bg-bg/95 p-3 ${flipped ? "opacity-100" : "pointer-events-none opacity-0"}`}
+        >
+          <ol className="m-0 list-none space-y-2 p-0">
+            {album.songs.map((song) => (
+              <li key={song.slug} className="flex items-start gap-2 text-[12px] leading-snug">
+                <span className="w-5 shrink-0 font-mono text-[10px] text-dim">{song.n}</span>
+                <span className="min-w-0 flex-1 text-fg">{song.title}</span>
+                <span className="flex shrink-0 gap-1">
+                  {song.src ? <PlayHere src={song.src} tiny /> : null}
+                  <button
+                    type="button"
+                    className="font-mono text-[10px] tracking-[0.08em] text-primary uppercase hover:underline"
+                    onClick={() => onLyrics(song)}
+                  >
+                    Lyrics
+                  </button>
+                </span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+      <div className="mt-3 mb-1 text-[11px] tracking-[0.3em] text-accent">
+        {album.year}
+        {album.kind === "ep" ? " · EP" : ""}
+      </div>
+      <h3 className="font-display text-lg tracking-[0.06em]">{album.title}</h3>
+      <p className="mb-2 text-xs text-dim">
+        {album.songs.length} tracks · {album.blurb}
+      </p>
+      <button
+        type="button"
+        onClick={onFlip}
+        className="mb-2 border border-primary/35 py-1.5 font-mono text-[10px] tracking-[0.16em] text-primary uppercase hover:border-primary hover:bg-primary hover:text-ink"
+      >
+        {flipped ? "Cover" : "Tracks"}
+      </button>
+      <MusicLinks links={album.links} />
+    </article>
+  );
+}
+
+function PlayHere({ src, tiny }: { src: string; tiny?: boolean }) {
+  const [on, setOn] = useState(false);
+  useEffect(() => {
+    const el = getBed();
+    if (!el) return;
+    const sync = () => setOn(isPlayingPath(src));
+    sync();
+    el.addEventListener("play", sync);
+    el.addEventListener("pause", sync);
+    el.addEventListener("ended", sync);
+    return () => {
+      el.removeEventListener("play", sync);
+      el.removeEventListener("pause", sync);
+      el.removeEventListener("ended", sync);
+    };
+  }, [src]);
+  return (
+    <button
+      type="button"
+      className={
+        tiny
+          ? "play-here font-mono text-[10px] tracking-[0.08em] text-accent uppercase hover:underline"
+          : "play-here flex-1 border border-primary bg-primary/15 py-1.5 text-center text-[10px] tracking-[0.1em] text-primary uppercase hover:bg-primary hover:text-ink"
+      }
+      onClick={() => toggleSrc(src, false)}
+    >
+      {on ? "Pause" : tiny ? "Play" : "Play here"}
+    </button>
   );
 }
 
@@ -368,8 +476,8 @@ export function EngineSection() {
           Can I still pay cash for milk? →
         </Link>
         <span className="text-faint"> · </span>
-        <Link to="/glossary" hash="emergent-points" className="text-primary hover:underline">
-          Emergent Points →
+        <Link to="/glossary" hash="emergent-product" className="text-primary hover:underline">
+          Emergent Product →
         </Link>
         <span className="text-faint"> · </span>
         <a href="#stack" className="text-primary hover:underline">
@@ -451,8 +559,8 @@ export function EngineSection() {
             Is this a panopticon? →
           </Link>
           <span className="text-faint"> · </span>
-          <Link to="/podcast" hash="afterword" className="text-primary hover:underline">
-            Afterword →
+          <Link to="/glossary" hash="digital-autarky" className="text-primary hover:underline">
+            Digital Autarky →
           </Link>
         </p>
       </div>
@@ -492,13 +600,16 @@ export function EngineSection() {
             </p>
           ))}
         </div>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
-          {engineTokens.map((tok) => (
-            <div key={tok.t} className="flex gap-3 text-sm">
-              <span className="shrink-0 font-mono text-[11px] tracking-[0.16em] text-primary">{tok.t}</span>
-              <span className="text-muted">{tok.d}</span>
-            </div>
-          ))}
+        <div id="tokens" className="mt-6 scroll-mt-24">
+          <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">The tokens</p>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            {engineTokens.map((tok) => (
+              <div key={tok.t} className="flex gap-3 text-sm">
+                <span className="shrink-0 font-mono text-[11px] tracking-[0.16em] text-primary">{tok.t}</span>
+                <span className="text-muted">{tok.d}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 

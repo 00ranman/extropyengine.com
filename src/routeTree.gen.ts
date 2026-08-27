@@ -10,12 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as DeskRouteImport } from './routes/desk'
 import { Route as DfaoRouteImport } from './routes/dfao'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as GlossaryRouteImport } from './routes/glossary'
 import { Route as HoaRouteImport } from './routes/hoa'
 import { Route as LoginRouteImport } from './routes/login'
+import { Route as LyricsRouteImport } from './routes/lyrics'
 import { Route as MvtRouteImport } from './routes/mvt'
 import { Route as OpenProblemsRouteImport } from './routes/open-problems'
 import { Route as PodcastRouteImport } from './routes/podcast'
@@ -36,11 +36,6 @@ import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DeskRoute = DeskRouteImport.update({
-  id: '/desk',
-  path: '/desk',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DfaoRoute = DfaoRouteImport.update({
@@ -66,6 +61,11 @@ const HoaRoute = HoaRouteImport.update({
 const LoginRoute = LoginRouteImport.update({
   id: '/login',
   path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LyricsRoute = LyricsRouteImport.update({
+  id: '/lyrics',
+  path: '/lyrics',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MvtRoute = MvtRouteImport.update({
@@ -151,12 +151,12 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/desk': typeof DeskRoute
   '/dfao': typeof DfaoRoute
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
   '/hoa': typeof HoaRouteWithChildren
   '/login': typeof LoginRoute
+  '/lyrics': typeof LyricsRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
   '/podcast': typeof PodcastRoute
@@ -176,12 +176,12 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/desk': typeof DeskRoute
   '/dfao': typeof DfaoRoute
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
   '/hoa': typeof HoaRouteWithChildren
   '/login': typeof LoginRoute
+  '/lyrics': typeof LyricsRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
   '/podcast': typeof PodcastRoute
@@ -202,12 +202,12 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/desk': typeof DeskRoute
   '/dfao': typeof DfaoRoute
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
   '/hoa': typeof HoaRouteWithChildren
   '/login': typeof LoginRoute
+  '/lyrics': typeof LyricsRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
   '/podcast': typeof PodcastRoute
@@ -229,12 +229,12 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/desk'
     | '/dfao'
     | '/faq'
     | '/glossary'
     | '/hoa'
     | '/login'
+    | '/lyrics'
     | '/mvt'
     | '/open-problems'
     | '/podcast'
@@ -254,12 +254,12 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/desk'
     | '/dfao'
     | '/faq'
     | '/glossary'
     | '/hoa'
     | '/login'
+    | '/lyrics'
     | '/mvt'
     | '/open-problems'
     | '/podcast'
@@ -279,12 +279,12 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/desk'
     | '/dfao'
     | '/faq'
     | '/glossary'
     | '/hoa'
     | '/login'
+    | '/lyrics'
     | '/mvt'
     | '/open-problems'
     | '/podcast'
@@ -305,12 +305,12 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  DeskRoute: typeof DeskRoute
   DfaoRoute: typeof DfaoRoute
   FaqRoute: typeof FaqRoute
   GlossaryRoute: typeof GlossaryRoute
   HoaRoute: typeof HoaRouteWithChildren
   LoginRoute: typeof LoginRoute
+  LyricsRoute: typeof LyricsRoute
   MvtRoute: typeof MvtRoute
   OpenProblemsRoute: typeof OpenProblemsRoute
   PodcastRoute: typeof PodcastRoute
@@ -335,13 +335,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/desk': {
-      id: '/desk'
-      path: '/desk'
-      fullPath: '/desk'
-      preLoaderRoute: typeof DeskRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dfao': {
@@ -377,6 +370,13 @@ declare module '@tanstack/react-router' {
       path: '/login'
       fullPath: '/login'
       preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lyrics': {
+      id: '/lyrics'
+      path: '/lyrics'
+      fullPath: '/lyrics'
+      preLoaderRoute: typeof LyricsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mvt': {
@@ -506,12 +506,12 @@ const HoaRouteWithChildren = HoaRoute._addFileChildren(HoaRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  DeskRoute: DeskRoute,
   DfaoRoute: DfaoRoute,
   FaqRoute: FaqRoute,
   GlossaryRoute: GlossaryRoute,
   HoaRoute: HoaRouteWithChildren,
   LoginRoute: LoginRoute,
+  LyricsRoute: LyricsRoute,
   MvtRoute: MvtRoute,
   OpenProblemsRoute: OpenProblemsRoute,
   PodcastRoute: PodcastRoute,
@@ -531,12 +531,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}
