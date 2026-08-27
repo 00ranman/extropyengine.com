@@ -377,19 +377,24 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
         def: "Human-in-the-loop job: make the ledger navigable, factor new data, mark which slice of history should weight a new like-case. That work is entropy reduction. It mints XP. The graph feeding itself is the point.",
       },
       {
+        term: "ZKP",
+        id: "zkp",
+        def: "Zero-knowledge proof. You are not showing anyone the information. You are showing a chip that already answered the question. Tap a debit card: cashier never sees the PIN, store never sees the balance, terminal gets approved or declined. Age at the door: your phone scans the license on YOUR side; the till gets 21 or not — not the birthday, not the street, not the photo. The bar's book records that a check happened. Later lookers who want WHO write a vertex. The panopticon is the photocopy in a city cabinet. DID is the name. ZKP is what you show. Circuits Codex 3; today signatures.",
+      },
+      {
         term: "ZKP reputation",
         id: "zkp-reputation",
-        def: "Prove a predicate (access band, domain standing, clean-in-epoch, vote eligibility) without dumping a dossier on a till. Not hermit invisibility — looking at someone’s graph is allowed and is itself a DAG vertex. Silent stalking is the failure mode. Unmask still wants cause + a DFAO vote.",
+        def: "Prove a predicate (access band, domain standing, clean-in-epoch, vote eligibility) without dumping a dossier on a till. Chip, not photocopy. Not hermit invisibility — looking at someone’s graph is allowed and is itself a DAG vertex. Silent stalking is the failure mode. Unmask still wants cause + a DFAO vote.",
       },
       {
         term: "Digital Autarky",
         id: "digital-autarky",
-        def: "Intelligence, identity, and local context stay at the edge. The network is a handshake, a claim schema, and a DAG — not a supermind. Company login means company tether. Own hardware is how you stay unknown. Edge intelligence unveils only the ZKP the equation needs.",
+        def: "Intelligence, identity, and local context stay at the edge. The network is a handshake, a claim schema, and a DAG — not a supermind. Company login means company tether. Own hardware is how you stay unknown. Edge intelligence unveils only the ZKP the equation needs. Chip, not photocopy.",
       },
       {
         term: "Not a panopticon",
         id: "not-a-panopticon",
-        def: "A panopticon is one tower that sees every diary. A surveillance state is a central log you cannot opt out of. This has neither. PSLL is a file on your disk. The network sees a proof — yes or no — not the file. Looking writes a vertex. Silent fetch is a detectable act. extropyengine.com is a website, not a watchtower and not a host for the Engine.",
+        def: "A panopticon is one tower that sees every diary. A surveillance state is a central log you cannot opt out of. This has neither. PSLL is a file on your disk. The network sees a proof — yes or no — not the file. Chip, not photocopy. Looking writes a vertex. Silent fetch is a detectable act. extropyengine.com is a website, not a watchtower and not a host for the Engine.",
       },
       {
         term: "DID",

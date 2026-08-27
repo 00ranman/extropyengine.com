@@ -543,6 +543,10 @@ export function EngineSection() {
             How do I get a DID? →
           </Link>
           <span className="text-faint"> · </span>
+          <Link to="/" hash="zkp" className="text-primary hover:underline">
+            The chip, not the photocopy →
+          </Link>
+          <span className="text-faint"> · </span>
           <Link to="/glossary" hash="did" className="text-primary hover:underline">
             DID →
           </Link>
@@ -553,10 +557,41 @@ export function EngineSection() {
         <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">{engineNotThat.kicker}</p>
         <h3 className="font-display mt-2 text-xl tracking-[0.04em]">{engineNotThat.title}</h3>
         <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">{engineNotThat.lead}</p>
-        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted">{engineNotThat.close}</p>
+
+        <div id="zkp" className="scroll-mt-24 mt-8 border-t border-primary/18 pt-6">
+          <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">{engineNotThat.zkpKicker}</p>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">{engineNotThat.zkpLead}</p>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">{engineNotThat.chip}</p>
+          <p className="mt-6 font-mono text-[10px] tracking-[0.22em] text-primary uppercase">{engineNotThat.loopTitle}</p>
+          <ol className="mt-4 max-w-3xl space-y-3 text-sm leading-relaxed text-muted">
+            {engineNotThat.loop.map((p, i) => (
+              <li key={p.t} className="flex gap-3">
+                <span className="font-mono text-[11px] text-faint">{String(i + 1).padStart(2, "0")}</span>
+                <span>
+                  <span className="font-mono text-[11px] tracking-[0.14em] text-primary">{p.t}</span>
+                  <span className="text-faint"> — </span>
+                  {p.d}
+                </span>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-6 max-w-3xl border border-fg/12 bg-bg/40 px-4 py-3 text-sm leading-relaxed text-dim">
+            {engineNotThat.photocopy}
+          </p>
+        </div>
+
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted">{engineNotThat.close}</p>
         <p className="mt-4 font-mono text-[11px] tracking-[0.08em]">
           <Link to="/faq" hash="panopticon" className="text-primary hover:underline">
             Is this a panopticon? →
+          </Link>
+          <span className="text-faint"> · </span>
+          <Link to="/faq" hash="zkp" className="text-primary hover:underline">
+            What is a ZKP? →
+          </Link>
+          <span className="text-faint"> · </span>
+          <Link to="/glossary" hash="zkp" className="text-primary hover:underline">
+            ZKP →
           </Link>
           <span className="text-faint"> · </span>
           <Link to="/glossary" hash="digital-autarky" className="text-primary hover:underline">

@@ -49,10 +49,21 @@ export const faqSections: FaqSection[] = [
       {
         id: "panopticon",
         q: "Isn't this just a panopticon? A surveillance state with extra steps?",
-        a: "No. A panopticon is one tower that can see every diary. A surveillance state is a central log you cannot opt out of. This has neither. The PSLL is a file on your disk. The network sees a proof — yes or no — not the file, not the photos. Looking writes a vertex. A silent fetch is a detectable act. did:key on first boot, no registrar. Node to node on the LAN. That is a ledger you hold, not a camera pointed at you.",
+        a: "No. A panopticon is one tower that can see every diary. A surveillance state is a central log you cannot opt out of. This has neither. The PSLL is a file on your disk. The network sees a proof — yes or no — not the file, not the photos. Looking writes a vertex. A silent fetch is a detectable act. Chip, not photocopy. did:key on first boot, no registrar. Node to node on the LAN. That is a ledger you hold, not a camera pointed at you.",
         also: [
           { label: "Not a panopticon", href: "/#not-a-panopticon" },
+          { label: "The chip, not the photocopy", href: "/#zkp" },
           { label: "Digital Autarky", href: "/glossary", hash: "digital-autarky" },
+        ],
+      },
+      {
+        id: "zkp",
+        q: "Isn't a zero-knowledge proof just showing someone your ID?",
+        a: "That's the mix-up. Handing the bouncer the license is showing him the information — birthday, street, photo, name. He doesn't need any of that. He needs 21 or not. A ZKP is the chip in your debit card: you tap, the cashier never sees your PIN, the store never sees your balance, the terminal gets approved or declined. The secret never left the plastic. Same as a car key chip: the car does not get a copy of the key. It gets allowed, or it doesn't. Extra people close the loop: you hold the license, your phone scans on your side and answers one question, the till gets yes or no, the bar's book records that a check happened, and anyone who later wants WHO writes a look vertex when they go hunting. Chip vs photocopy. Circuits are Codex 3. Today the handshake is signatures. Same job, thinner proof.",
+        also: [
+          { label: "The chip, not the photocopy", href: "/#zkp" },
+          { label: "ZKP", href: "/glossary", hash: "zkp" },
+          { label: "DID", href: "/glossary", hash: "did" },
         ],
       },
       {
@@ -270,11 +281,12 @@ export const faqSections: FaqSection[] = [
       {
         id: "did",
         q: "How do I get a DID? And what stops a bad actor on my node?",
-        a: "You don't apply. The node writes a keypair on first boot. That's a did:key — W3C, no registrar, no company. Backup data/keys/node.pem. Lose it and you're a new node. ZKPs are what you show: band, confirmed this loop, unique in this room, not slashed. The till gets yes or no, not your diary. Keys stay on the box. Don't punch the database at the WAN. One captured node can lie about itself; it cannot silently rewrite a neighbor's DAG. Sybil: identity is cheap, standing is not. Unique-in-DFAO stops fifty votes from one person. Looking is a vertex. Today the handshake is signatures. Circuits are Codex 3.",
+        a: "You don't apply. The node writes a keypair on first boot. That's a did:key — W3C, no registrar, no company. Backup data/keys/node.pem. Lose it and you're a new node. ZKPs are what you show: band, confirmed this loop, unique in this room, not slashed. The till gets yes or no, not your diary. Chip, not photocopy. Keys stay on the box. Don't punch the database at the WAN. One captured node can lie about itself; it cannot silently rewrite a neighbor's DAG. Sybil: identity is cheap, standing is not. Unique-in-DFAO stops fifty votes from one person. Looking is a vertex. Today the handshake is signatures. Circuits are Codex 3.",
         also: [
           { label: "The node", href: "/#node" },
+          { label: "The chip, not the photocopy", href: "/#zkp" },
           { label: "DID", href: "/glossary", hash: "did" },
-          { label: "ZKP reputation", href: "/glossary", hash: "zkp-reputation" },
+          { label: "ZKP", href: "/glossary", hash: "zkp" },
         ],
       },
       {

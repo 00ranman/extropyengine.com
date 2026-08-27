@@ -485,7 +485,7 @@ export const engineNode = {
   title: "Keys stay on the box",
   lead: "Each laptop is an independent node. Hostinger is not the network. Security is: you hold the key, the mesh verifies signatures, and a bad actor cannot silently rewrite someone else's book.",
   did: "You do not apply for a DID. First boot writes a keypair on disk. The name is a did:key — W3C, from the public key, no registrar, no Microsoft, no Google. That is how you get one. Backup the file. Lose it and you are a new node. Standing does not teleport. did:web is optional if you want a domain on the document. Not required.",
-  zkp: "The DID is the name. A ZKP is what you show. Prove a predicate: this DID, band ≥ n, confirmed this loop, not slashed in this DFAO, unique in this room. The till gets yes or no. Not your diary. Not the XP pile. Circuits are Codex 3. Today the handshake is signatures. Same job, thinner proof.",
+  zkp: "The DID is the name. A ZKP is what you show — not the file. Chip, not photocopy. Prove a predicate: 21 or not, band ≥ n, confirmed this loop, not slashed, unique in this room. The till gets yes or no. Not your diary. Not the XP pile. Circuits are Codex 3. Today the handshake is signatures. Same job, thinner proof.",
   points: [
     { t: "On the box", d: "Keys, PSLL, postgres if you run the full stack — stay local. Do not punch the database at the WAN. You pull git. Nobody remote-admins you unless you handed them the key." },
     { t: "On the wire", d: "LAN talks node to node. WAN is TLS. Handshake is a signed hello plus capabilities. One captured node can lie about its own claims. It cannot quietly rewrite a neighbor's DAG. Other nodes check signatures and causal parents." },
@@ -500,6 +500,36 @@ export const engineNotThat = {
   kicker: "Not a panopticon",
   title: "This domain is not the Engine",
   lead: "extropyengine.com is a website. Papers, a clock face, an RSS feed. Hostinger is not a node. The Engine is the git you clone onto a laptop. Keys stay on that laptop.",
+  zkpKicker: "The chip, not the photocopy",
+  zkpLead:
+    "The bouncer analogy is fine until you picture handing him the license. That's showing him the information. Birthday, street, photo, name. He doesn't need any of that. He needs 21 or not. That's the whole trick. You are not showing anyone the file. You are showing a chip that already answered the question.",
+  chip:
+    "You already do this. Tap a debit card. The cashier never sees your PIN. The store never sees your balance. The chip on YOUR plastic talks to the terminal. Approved or declined. The secret never left the card. Same machine as the chip in a car key: the car does not get a copy of the key. It gets allowed, or it doesn't. That's a zero-knowledge proof wearing a Visa logo.",
+  loopTitle: "The door — five people, one predicate",
+  loop: [
+    {
+      t: "You",
+      d: "Hold the license. Diary stays in the pocket. Birthday, street, photo, name never leave your side.",
+    },
+    {
+      t: "Your phone",
+      d: "The chip. You scan on YOUR side. It looks locally. It does not upload the ID. It answers one question. Like the chip in the card: the secret never left the plastic.",
+    },
+    {
+      t: "The till",
+      d: "The bouncer's device. Asks: 21? Gets yes or no. Not the birthday. Not the street. Not the photo. Not a copy of the license.",
+    },
+    {
+      t: "The book",
+      d: "The DAG. Records that a check happened at this door. Not a photocopy. Not a cabinet of everyone who walked in.",
+    },
+    {
+      t: "Later lookers",
+      d: "Health inspector, a cop, a nosy neighbor, an AI hunting a bleak closer. They can see that checks happened. If they want WHO, that look writes a line. You find out someone went hunting. Silent peeking is a detectable act.",
+    },
+  ],
+  photocopy:
+    "The panopticon version of the same door: you hand over the wallet. They photocopy the license. They file it in a city cabinet. Anyone with a badge opens the drawer. You never know who looked. That's a surveillance state. This is the chip.",
   close:
     "A panopticon is one tower that can see every diary. A surveillance state is a central log you cannot opt out of. This has neither. The PSLL is a file on your disk. The network sees a proof — yes or no — not the file, not the photos, not last year. Looking at a graph writes a vertex; a silent fetch is a detectable act. did:key on first boot, no registrar. Node to node on the LAN. Internet for people who aren't next door. That is not a watchtower with extra vocabulary. Treating a ledger you hold as a camera pointed at you is the category error.",
 } as const;
@@ -623,7 +653,7 @@ export const engineDag = {
   lead: "The eight domains are a weighted vector, not eight sermons. A mediation and a mowed lawn do not share a constant. They share a DAG that gets denser. That is the claim. Overselling is the opening condition. Convergence is the bet.",
   points: [
     "Every closed loop hangs evidence and a provisional ΔS on a vertex with causal parents. Next time a similar fight, a similar lawn, the network has somewhere to look besides a vibe.",
-    "Edge intelligence unveils only the ZKP the equation needs. Nobody sits on the diary. Digital Autarky is how you get detail without a panopticon.",
+    "Edge intelligence unveils only the ZKP the equation needs — chip, not photocopy. Nobody sits on the diary. Digital Autarky is how you get detail without a panopticon.",
     "Landauer is the bridge, not a costume: information erased has a heat floor. Social and cognitive events are information events. Bits-equivalent is the stand-in — a proxy, not a worshipped constant. If later data contradicts it, it moves. Not a metaphor. Physicists who stop at that sentence are not the audience.",
     "A closed loop can still mint later. That is the long-horizon mechanism with weight: a later huge, cited ΔS — Nobel, a society-scale fix — writes a delta into the original vertex. Ordinary remaining pile at thirty years is ≈ 2.7% of that mint. Late burn of that dust is a mark on a vertex, not a sword. Settled is not sacred. The graph is allowed to catch up.",
     "Curating that graph is work. A DAG specialist who makes the ledger more navigable is reducing entropy and minting XP. Human in the loop is not a disclaimer. It is a job the protocol pays.",

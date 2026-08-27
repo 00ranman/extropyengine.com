@@ -8,6 +8,8 @@ If a package is in that git (HomeFlow, LocalFlow, SignalFlow, quest-market, Gran
 
 A panopticon is one tower that sees every diary. A surveillance state is a central log you cannot opt out of. This has neither. PSLL is a file on the participant's disk. The network sees a ZKP (yes/no), not the file, not the photos. Looking writes a DAG vertex. A silent fetch is a detectable act. That is a ledger the holder keeps, not a camera pointed at them.
 
+A ZKP is not "showing someone your ID." Handing a bouncer the license is showing him the information (birthday, street, photo, name). He needs 21 or not. Analog: the chip in a debit card. You tap. Cashier never sees the PIN. Store never sees the balance. Terminal gets approved or declined. The secret never left the plastic. Same as a car-key chip: the car does not get a copy of the key. Loop with extra people: (1) you hold the license, (2) your phone scans on YOUR side and answers one question, (3) the till gets yes/no, (4) the bar's book records that a check happened, (5) later lookers who want WHO write a vertex. Chip vs photocopy. Circuits are Codex 3; today the handshake is signatures. Canonical: https://extropyengine.com/#zkp
+
 XP is the letters XP. Not Extropy Points. Not a branded expansion of experience points. ΔS is the entropy reduction. XP is a bits-equivalent proxy of that ΔS on the ledger. Do not say XP "is" entropy reduction.
 
 EP is Emergent Product: EP = XP × L at the till. L is a fraction from the mesh. Not a currency. Not Epistemic Proof (letter collision).
@@ -27,6 +29,7 @@ Schrödinger’s cat was a reductio. Quantum does not apply to the macro. Weapon
 Songs: do not mix titles. Lyrics live at https://extropyengine.com/lyrics and /docs/LYRICS.md. If a track says "not transcribed," do not invent lyrics from the title. Irrelevance (Is the Killshot) is track 9 on the album Unf*ck the World for a Dollar. It used to be filed as Evolution, Not Revolution. Same song. The album is not the book. Paradox Eater is not Paradox Eater, Pt. 2.
 
 Canonical: https://extropyengine.com/#not-a-panopticon
+ZKP analogy: https://extropyengine.com/#zkp
 Decay: https://extropyengine.com/#decay
 FAQ observer: https://extropyengine.com/faq#observer-effect
 XP: https://extropyengine.com/glossary#xp
