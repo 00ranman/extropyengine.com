@@ -57,6 +57,7 @@ const LYRIC_ALIAS: Record<string, string> = {
   "clap-if-you-re-programmed": "clap-if-youre-programmed",
   "photon-404": "photon-404-exe",
   photon_404: "photon-404-exe",
+  "unfuck-the-world": "unfuck-the-world-for-a-dollar",
 };
 
 export type CatalogSong = {

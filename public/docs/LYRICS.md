@@ -719,7 +719,45 @@ Systemic collapse has just begun
 
 ### 6. Unf*ck the World (for a Dollar)
 
-Not transcribed. Do not invent lyrics from the title.
+Dollar dreams on cracked concrete broken promises ain't discreet
+Chains bindin' my wallet tight tell me how we'll make it right
+
+Unfuck the world for a dollar
+Sunday's sermon sips and hollers
+Laughin' at this credit nightmare
+Wake me up from Wall Street's pyre
+
+Mantras sold in megachurch light but the dark still eats your tithe
+Crypto sermons on a chain but ain't no messiah in the byte
+Concrete dreams in ad display dopamine just click and pray
+Mom's still rationin' her meds while they gamify decay
+They don't want your soul they lease it monthly bundled fully fleeced it
+Terms and service read like scripture but the devil co-wrote the thesis
+They sell despair on credit rolls market trauma monetize goals
+And every like you tap's a toll priced in blood and unpaid roles
+
+Unfuck the world for a dollar
+Sunday's sermon sips and hollers
+Laughin' at this credit nightmare
+Wake me up from Wall Street's pyre
+
+No gods came just glitchware prophets
+Preachin' debt from silicon coffins
+Holy war in terms of service
+Sign below your soul is worthless
+Algorithm's runnin' Sunday school bless the feed obey the rule
+Heaven's just a data pool gated by a pay-to-duel
+Hope got hacked and scaled as bait repackaged as your user state
+Scroll for peace subscribe for fate your cage got filters to decorate
+
+Unfuck the world for a dollar
+Voice memos turned into scholars
+Preachin' dreams through glitch distortion
+Loopin' pain as profit portion
+Burn the script rewrite the ledger
+Holy's dead long live the debtor
+We don't tithe we audit heaven
+XP-mintin' loops at eleven
 
 ### 7. Keys to Eden (The Web3 Botch)
 
