@@ -40,10 +40,21 @@ const LOCAL: Record<string, string> = {
 
 const LYRIC_ALIAS: Record<string, string> = {
   "and-that-s-how": "and-thats-how",
-  "what-is-god-really": "what-is-god",
+  "and-thats-how-how": "and-thats-how",
+  "what-is-god": "what-is-god-really",
   "no-ones-lying-and-thats-the-problem": "no-ones-lying",
   irrelevance: "irrelevance-is-the-killshot",
   "evolution-not-revolution": "irrelevance-is-the-killshot",
+  antihero: "anti-hero",
+  "blueprints-bullsh": "blueprints-bull-sh",
+  "postscarcity-blues": "post-scarcity-blues",
+  sublogic: "sub-logic",
+  s: "delta-s",
+  "say-the-fucking-thing": "say-the-f-g-thing",
+  "power-lunch-at-the-soup-kitchen-acousticish-version":
+    "power-lunch-at-the-soup-kitchen-acoustic-ish-version",
+  "version-000": "version-0-0-0",
+  "clap-if-you-re-programmed": "clap-if-youre-programmed",
 };
 
 export type CatalogSong = {

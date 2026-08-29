@@ -38,7 +38,7 @@ export function LyricsModal({
         <div className="flex items-start justify-between gap-3 border-b border-primary/15 px-4 py-3">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">Lyrics</p>
-            <h2 id="lyrics-title" className="font-display mt-1 text-xl tracking-[0.03em] text-fg">
+            <h2 id="lyrics-title" className="font-brand mt-1 text-xl tracking-[0.06em] text-fg uppercase">
               {title}
             </h2>
           </div>

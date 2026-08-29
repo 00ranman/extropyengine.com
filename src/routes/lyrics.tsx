@@ -1,5 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { EssayLayout } from "@/components/essay-layout";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useMemo, useState } from "react";
+import { SiteShell } from "@/components/site-shell";
+import { LyricsModal } from "@/components/lyrics-modal";
 import { albumCards, masterSongs, singleCards } from "@/content/music";
 
 export const Route = createFileRoute("/lyrics")({
@@ -17,62 +19,118 @@ export const Route = createFileRoute("/lyrics")({
 });
 
 function LyricsPage() {
+  const [open, setOpen] = useState<{ title: string; lyrics?: string } | null>(null);
+  const transcribed = useMemo(() => masterSongs.filter((s) => s.lyrics).length, []);
+
   return (
-    <EssayLayout backTo="/#music" backLabel="Music" kicker="Catalog" title="Lyrics">
-      <p>
-        This is the list. Album, then singles. If a track has lyrics below the title, those are the
-        lyrics. If it says not transcribed, do not invent them from the name. Mixing one song’s
-        argument with another song’s title is the failure mode that keeps showing up.
-      </p>
-      <p>
-        Irrelevance (Is the Killshot) is track 9 on Unf*ck the World for a Dollar. That is the
-        album, not the book. It used to circulate as Evolution, Not Revolution. Same recording.
-      </p>
-      <p>
-        <a href="/docs/LYRICS.md" className="text-primary hover:underline">
-          Plain markdown
-        </a>{" "}
-        if you want one file.
-      </p>
+    <SiteShell>
+      <article className="mx-auto max-w-5xl px-6 py-14 md:px-8 md:py-20">
+        <Link
+          to="/"
+          hash="music"
+          className="mb-8 inline-block font-mono text-[11px] tracking-[0.22em] text-dim uppercase transition-colors hover:text-primary"
+        >
+          ← Music
+        </Link>
+        <p className="mb-3 font-mono text-[11px] tracking-[0.28em] text-primary uppercase">Catalog</p>
+        <h1 className="font-brand mb-6 text-[clamp(32px,5vw,56px)] leading-none tracking-[0.08em] text-fg uppercase">
+          Lyrics
+        </h1>
+        <p className="mb-4 max-w-2xl font-mono text-[14px] leading-relaxed text-muted">
+          Album, then singles. Hover a tile. Open the box. If it says not transcribed, do not invent
+          them from the name. Mixing one song’s argument with another song’s title is the failure
+          mode.
+        </p>
+        <p className="mb-4 max-w-2xl font-mono text-[14px] leading-relaxed text-dim">
+          Irrelevance (Is the Killshot) is track 9 on Unf*ck the World for a Dollar. That is the
+          album, not the book. It used to circulate as Evolution, Not Revolution. Same recording.
+        </p>
+        <p className="mb-12 font-mono text-[12px] tracking-[0.08em] text-dim">
+          {transcribed}/{masterSongs.length} transcribed ·{" "}
+          <a href="/docs/LYRICS.md" className="text-primary hover:underline">
+            Plain markdown
+          </a>
+          {" · "}
+          <a
+            href="https://lyricsondemand.com/lladnaros"
+            className="text-primary hover:underline"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LyricsOnDemand
+          </a>
+        </p>
 
-      {albumCards.map((album) => (
-        <section key={album.title} className="mt-10">
-          <h2 className="font-display text-2xl tracking-[0.04em] text-fg">
-            {album.title}
-            <span className="ml-2 font-mono text-[11px] tracking-[0.16em] text-dim uppercase">
-              {album.year}
-              {album.kind === "ep" ? " · EP" : " · album"}
-            </span>
-          </h2>
-          {album.songs.map((s) => (
-            <SongBlock key={s.slug} n={s.n} title={s.title} lyrics={s.lyrics} />
-          ))}
-        </section>
-      ))}
-
-      <section className="mt-10">
-        <h2 className="font-display text-2xl tracking-[0.04em] text-fg">Singles</h2>
-        {singleCards.map((s) => (
-          <SongBlock key={s.slug} title={s.title} lyrics={s.lyrics} />
+        {albumCards.map((album) => (
+          <section key={album.title} className="mb-14">
+            <div className="mb-5 flex flex-wrap items-end justify-between gap-3 border-b border-fg/10 pb-3">
+              <h2 className="font-brand text-xl tracking-[0.08em] text-fg uppercase">{album.title}</h2>
+              <p className="font-mono text-[10px] tracking-[0.18em] text-dim uppercase">
+                {album.year}
+                {album.kind === "ep" ? " · EP" : " · album"} · {album.songs.length}
+              </p>
+            </div>
+            <div className="grid gap-px bg-fg/8 sm:grid-cols-2 lg:grid-cols-3">
+              {album.songs.map((s) => (
+                <SongTile
+                  key={s.slug}
+                  n={s.n}
+                  title={s.title}
+                  lyrics={s.lyrics}
+                  onOpen={() => setOpen({ title: s.title, lyrics: s.lyrics })}
+                />
+              ))}
+            </div>
+          </section>
         ))}
-      </section>
-      <p className="mt-8 text-sm text-dim">{masterSongs.length} titles on this page.</p>
-    </EssayLayout>
+
+        <section>
+          <div className="mb-5 flex flex-wrap items-end justify-between gap-3 border-b border-fg/10 pb-3">
+            <h2 className="font-brand text-xl tracking-[0.08em] text-fg uppercase">Singles</h2>
+            <p className="font-mono text-[10px] tracking-[0.18em] text-dim uppercase">{singleCards.length}</p>
+          </div>
+          <div className="grid gap-px bg-fg/8 sm:grid-cols-2 lg:grid-cols-3">
+            {singleCards.map((s) => (
+              <SongTile
+                key={s.slug}
+                title={s.title}
+                lyrics={s.lyrics}
+                onOpen={() => setOpen({ title: s.title, lyrics: s.lyrics })}
+              />
+            ))}
+          </div>
+        </section>
+      </article>
+      {open ? (
+        <LyricsModal title={open.title} lyrics={open.lyrics} onClose={() => setOpen(null)} />
+      ) : null}
+    </SiteShell>
   );
 }
 
-function SongBlock({ n, title, lyrics }: { n?: number; title: string; lyrics?: string }) {
+function SongTile({
+  n,
+  title,
+  lyrics,
+  onOpen,
+}: {
+  n?: number;
+  title: string;
+  lyrics?: string;
+  onOpen: () => void;
+}) {
   return (
-    <article className="mt-6 border-t border-fg/10 pt-4">
-      <h3 className="font-display text-lg text-fg">
-        {n ? <span className="mr-2 font-mono text-[11px] text-dim">{n}.</span> : null}
-        {title}
-      </h3>
-      {lyrics ? (
-        <pre className="mt-3 font-mono text-[13px] leading-relaxed whitespace-pre-wrap text-muted">{lyrics}</pre>
-      ) : (
-        <p className="mt-2 text-sm text-dim">Not transcribed on this site. Do not invent these lyrics.</p>
-      )}
-    </article>
+    <button
+      type="button"
+      onClick={onOpen}
+      className="glitch-tile flex min-h-24 flex-col items-start justify-between gap-3 bg-bg p-4 text-left"
+    >
+      <span className="font-mono text-[10px] tracking-[0.16em] text-dim uppercase">
+        {n ? String(n).padStart(2, "0") : "single"}
+        <span className="text-faint"> · </span>
+        {lyrics ? "lyrics" : "not transcribed"}
+      </span>
+      <span className="glitch-name text-[15px] leading-snug text-fg">{title}</span>
+    </button>
   );
 }

@@ -123,15 +123,14 @@ export function MusicSection() {
         ridiculous when it should be. One track argues with punk. The rest don’t stay in that lane.
         Three albums, one EP, and counting.
       </p>
-      <p className="mb-12 text-sm text-dim">
-        Hover a single for the one-line. Tracks on an album: flip the card. Lyrics open in a box —
-        they stay on this page.{" "}
+      <p className="mb-12 max-w-2xl text-sm leading-relaxed text-dim">
+        Hover a tile. Tracks on an album: flip it. Lyrics open here — they stay on this page.{" "}
         <Link to="/lyrics" className="text-primary hover:underline">
           Master list
-        </Link>{" "}
-        is the document to read if you’re going to talk about the songs. Don’t invent lyrics from a
-        title. Irrelevance (Is the Killshot) is the album track. It used to be filed as Evolution,
-        Not Revolution. Same song. The album is Unf*ck the World for a Dollar — not the book.
+        </Link>
+        . If a track still says not transcribed, do not invent it from the title. Irrelevance (Is
+        the Killshot) is the album track. It used to file as Evolution, Not Revolution. Same song.
+        The album is Unf*ck the World for a Dollar — not the book.
       </p>
       <div className="mb-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
         {albumCards.map((album) => (
@@ -145,40 +144,45 @@ export function MusicSection() {
         ))}
       </div>
 
-      <h3 className="font-display mb-2 text-center text-[clamp(20px,2.8vw,28px)] tracking-[0.06em] text-primary [text-shadow:0_0_16px_rgb(255_90_31_/_0.3)]">
+      <h3 className="font-brand mb-2 text-center text-[clamp(18px,2.4vw,26px)] tracking-[0.14em] text-fg uppercase">
         Singles
       </h3>
-      <p className="mb-8 text-center text-sm tracking-[0.05em] text-dim">
-        Standalone tracks. Hover for what each one is about.
+      <p className="mb-8 text-center font-mono text-[12px] tracking-[0.08em] text-dim">
+        Standalone tracks. Hover for the one-line.
       </p>
       <div className="mb-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {singleCards.map((track) => (
           <article
             key={track.title}
-            className="group relative flex flex-col overflow-hidden border border-primary/18 bg-[rgb(20_12_8_/_0.55)] transition-all duration-250 hover:-translate-y-0.5 hover:border-primary hover:shadow-[0_8px_24px_rgb(255_90_31_/_0.18)]"
+            className="glitch-tile group flex flex-col"
           >
-            <div
-              className="relative aspect-square bg-cover bg-center"
-              style={{ backgroundImage: `url(${track.art})` }}
-            >
-              <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-bg/92 p-5 text-center text-[13px] leading-snug text-fg opacity-0 transition-opacity duration-250 group-hover:opacity-100 group-focus-within:opacity-100">
-                {track.desc}
+            <div className="relative aspect-square overflow-hidden">
+              <img
+                src={track.art}
+                alt=""
+                className="glitch-art absolute inset-0"
+                crossOrigin="anonymous"
+              />
+              <span className="glitch-rgb" />
+              <span className="glitch-scan" />
+              <div className="pointer-events-none absolute inset-0 flex items-end bg-linear-to-t from-bg via-bg/20 to-transparent p-4 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100">
+                <p className="font-mono text-[12px] leading-snug text-fg">{track.desc}</p>
               </div>
             </div>
-            <div className="px-3.5 pt-3 pb-2">
-              <div className="mb-1 text-[11px] tracking-[0.2em] text-accent">
-                {track.year} · SINGLE
+            <div className="flex flex-1 flex-col gap-2 px-4 pt-4 pb-3">
+              <div className="font-mono text-[10px] tracking-[0.22em] text-dim uppercase">
+                {track.year} · single
               </div>
-              <div className="font-display text-[15px] leading-tight">{track.title}</div>
+              <div className="glitch-name text-[15px] leading-tight text-fg">{track.title}</div>
             </div>
-            <div className="mt-auto flex flex-wrap gap-1.5 border-t border-primary/10 p-2.5">
+            <div className="mt-auto flex gap-px border-t border-fg/10">
               {track.src ? <PlayHere src={track.src} /> : null}
               <button
                 type="button"
-                className="flex-1 border border-primary/25 py-1.5 text-center text-[10px] tracking-[0.1em] uppercase transition-all hover:border-primary hover:bg-primary hover:text-ink"
+                className="flex-1 py-2.5 text-center font-mono text-[10px] tracking-[0.14em] text-dim uppercase transition-colors hover:bg-primary hover:text-ink"
                 onClick={() => setOpenLyrics({ title: track.title, lyrics: track.lyrics })}
               >
-                Lyrics
+                {track.lyrics ? "Lyrics" : "No lyrics"}
               </button>
             </div>
             {track.links ? <MusicLinks links={track.links} /> : null}
@@ -221,30 +225,32 @@ function AlbumFlip({
   onLyrics: (song: CatalogSong) => void;
 }) {
   return (
-    <article className="flex flex-col border border-primary/12 bg-primary/2 p-[18px] transition-colors hover:border-primary/35">
+    <article className="glitch-tile flex flex-col">
       <div className="relative aspect-square w-full overflow-hidden">
         <img
           src={album.art}
           alt={album.title}
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity ${flipped ? "pointer-events-none opacity-0" : "opacity-100"}`}
+          className={`glitch-art absolute inset-0 ${flipped ? "pointer-events-none opacity-0" : "opacity-100"}`}
           crossOrigin="anonymous"
         />
+        <span className={`glitch-rgb ${flipped ? "hidden" : ""}`} />
+        <span className={`glitch-scan ${flipped ? "hidden" : ""}`} />
         <div
-          className={`absolute inset-0 overflow-y-auto bg-bg/95 p-3 ${flipped ? "opacity-100" : "pointer-events-none opacity-0"}`}
+          className={`absolute inset-0 overflow-y-auto bg-bg p-4 ${flipped ? "opacity-100" : "pointer-events-none opacity-0"}`}
         >
           <ol className="m-0 list-none space-y-2 p-0">
             {album.songs.map((song) => (
-              <li key={song.slug} className="flex items-start gap-2 text-[12px] leading-snug">
-                <span className="w-5 shrink-0 font-mono text-[10px] text-dim">{song.n}</span>
+              <li key={song.slug} className="flex items-start gap-2 font-mono text-[12px] leading-snug">
+                <span className="w-5 shrink-0 text-[10px] text-dim tabular-nums">{String(song.n).padStart(2, "0")}</span>
                 <span className="min-w-0 flex-1 text-fg">{song.title}</span>
-                <span className="flex shrink-0 gap-1">
+                <span className="flex shrink-0 gap-2">
                   {song.src ? <PlayHere src={song.src} tiny /> : null}
                   <button
                     type="button"
-                    className="font-mono text-[10px] tracking-[0.08em] text-primary uppercase hover:underline"
+                    className={`text-[10px] tracking-[0.1em] uppercase ${song.lyrics ? "text-primary hover:underline" : "text-faint"}`}
                     onClick={() => onLyrics(song)}
                   >
-                    Lyrics
+                    {song.lyrics ? "Lyrics" : "—"}
                   </button>
                 </span>
               </li>
@@ -252,18 +258,20 @@ function AlbumFlip({
           </ol>
         </div>
       </div>
-      <div className="mt-3 mb-1 text-[11px] tracking-[0.3em] text-accent">
-        {album.year}
-        {album.kind === "ep" ? " · EP" : ""}
+      <div className="flex flex-1 flex-col gap-2 px-4 pt-4 pb-3">
+        <div className="font-mono text-[10px] tracking-[0.22em] text-dim uppercase">
+          {album.year}
+          {album.kind === "ep" ? " · EP" : " · album"}
+          {" · "}
+          {album.songs.length} tracks
+        </div>
+        <h3 className="glitch-name text-[16px] leading-tight text-fg">{album.title}</h3>
+        <p className="font-mono text-[12px] leading-relaxed text-dim">{album.blurb}</p>
       </div>
-      <h3 className="font-display text-lg tracking-[0.06em]">{album.title}</h3>
-      <p className="mb-2 text-xs text-dim">
-        {album.songs.length} tracks · {album.blurb}
-      </p>
       <button
         type="button"
         onClick={onFlip}
-        className="mb-2 border border-primary/35 py-1.5 font-mono text-[10px] tracking-[0.16em] text-primary uppercase hover:border-primary hover:bg-primary hover:text-ink"
+        className="border-t border-fg/10 py-2.5 font-mono text-[10px] tracking-[0.16em] text-dim uppercase transition-colors hover:bg-primary hover:text-ink"
       >
         {flipped ? "Cover" : "Tracks"}
       </button>
@@ -294,7 +302,7 @@ function PlayHere({ src, tiny }: { src: string; tiny?: boolean }) {
       className={
         tiny
           ? "play-here font-mono text-[10px] tracking-[0.08em] text-accent uppercase hover:underline"
-          : "play-here flex-1 border border-primary bg-primary/15 py-1.5 text-center text-[10px] tracking-[0.1em] text-primary uppercase hover:bg-primary hover:text-ink"
+          : "play-here flex-1 py-2.5 text-center font-mono text-[10px] tracking-[0.14em] text-primary uppercase transition-colors hover:bg-primary hover:text-ink"
       }
       onClick={() => toggleSrc(src, false)}
     >
@@ -305,18 +313,18 @@ function PlayHere({ src, tiny }: { src: string; tiny?: boolean }) {
 
 function MusicLinks({ links }: { links: { spotify: string; apple: string; youtube: string } }) {
   return (
-    <div className="mt-auto flex gap-1.5 border-t border-primary/10 p-2.5">
+    <div className="flex gap-px border-t border-fg/10">
       {[
         ["Spotify", links.spotify],
         ["Apple", links.apple],
-        ["YT Music", links.youtube],
+        ["YT", links.youtube],
       ].map(([label, href]) => (
         <a
           key={label}
           href={href}
           target="_blank"
           rel="noreferrer"
-          className="flex-1 border border-primary/25 py-1.5 text-center text-[10px] tracking-[0.1em] uppercase transition-all hover:border-primary hover:bg-primary hover:text-ink"
+          className="flex-1 py-2.5 text-center font-mono text-[10px] tracking-[0.14em] text-dim uppercase transition-colors hover:bg-primary hover:text-ink"
         >
           {label}
         </a>
