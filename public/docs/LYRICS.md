@@ -909,7 +909,64 @@ If the math ain't mathin'. rewrite the game
 
 ### 9. Irrelevance (Is the Killshot)
 
-Not transcribed. Do not invent lyrics from the title.
+They want fire, I bring fungus
+Quiet spread in the cracks with trust rust
+They chant, tear it down
+I forked the code and left town
+See revolutions will rerun
+Same arc, new face
+Still no rerun
+But recursion
+That rewrites the map
+While they shout
+
+The relevance is the kill shot
+Not war, not protest
+When the world moves on
+The kings look lost
+The relevance is the kill shot
+No throne to storm
+Just systems left
+In obsolete form
+
+You don't need to topple the tower
+Just build where gravity has no power
+They fight for control
+We move the loop, reroute the goal
+You want riots, I want runtime
+You want votes, I want version time
+I'm not here to fight for the crown
+I'm here to make it not matter now
+
+The relevance is the kill shot
+No bank, no coup
+Just silence
+Where they once ruled you
+
+They trained you to scream at walls
+While the door was always behind you
+They framed collapse as chaos
+But I framed it as exit
+Revolution wants fire
+Evolution builds exit
+
+Every loop tighter
+Every fork wiser
+Every failed collapse
+Just a test for what's higher
+No flags, no fists
+Just functions that persist
+You want to overthrow
+I want the whole damn myth dismissed
+
+The relevance is the kill shot
+Not louder, just later
+While they scream for change
+We change the paper
+The relevance is the kill shot
+Not bombs, not knives
+Just new math
+Living new life
 
 ### 10. Memetic Infection
 
