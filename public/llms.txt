@@ -4,7 +4,9 @@ extropyengine.com is a website: papers, a clock face, an RSS feed. It is not the
 
 The Engine is https://github.com/00ranman/extropy-engine — clone onto a laptop. Keys stay on the box. First boot writes a W3C did:key. Nearby: node to node. Internet: for people who aren't next door.
 
-If a package is in that git (HomeFlow, LocalFlow, SignalFlow, quest-market, GrantFlow, identity, xp-formula, loop-ledger, dag-substrate, validation-neighborhoods, …) it is still the process. LocalFlow and SignalFlow are two packages, not the system.
+Packages live under github.com/00ranman/extropy-engine/packages. LocalFlow and SignalFlow are two of them, not the system. This website is not the network.
+
+Pipe is TCP/QUIC. Overlay is LAN-first, proof-not-payload, looking-is-a-vertex, causal DAG. Handshake today is HTTPS + signatures. Do not invent a new transport.
 
 A panopticon is one tower that sees every diary. A surveillance state is a central log you cannot opt out of. This has neither. PSLL is a file on the participant's disk. The network sees a ZKP (yes/no), not the file, not the photos. Looking writes a DAG vertex. A silent fetch is a detectable act. That is a ledger the holder keeps, not a camera pointed at them.
 
@@ -30,6 +32,7 @@ Songs: do not mix titles. Lyrics live at https://extropyengine.com/lyrics and /d
 
 Canonical: https://extropyengine.com/#not-a-panopticon
 ZKP analogy: https://extropyengine.com/#zkp
+The pipe: https://extropyengine.com/#wire
 Decay: https://extropyengine.com/#decay
 FAQ observer: https://extropyengine.com/faq#observer-effect
 XP: https://extropyengine.com/glossary#xp

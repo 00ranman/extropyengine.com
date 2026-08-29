@@ -17,6 +17,7 @@ import {
   engineStack,
   engineTokens,
   engineViews,
+  engineWire,
   papers,
   socials,
   type Paper,
@@ -436,9 +437,8 @@ export function EngineSection() {
       <span id="suite" className="sr-only" />
       <SectionTitle className="mb-3 text-center">How it runs</SectionTitle>
       <p className="mx-auto mb-12 max-w-2xl text-center text-[15px] leading-relaxed text-muted">
-        Not two apps. Not a server in the sky. If it is still in the git, it is still the process.
-        LocalFlow and SignalFlow are faces and a claim-router. HomeFlow, quests, GrantFlow,
-        identity, the kernel — same loop. extropyengine.com is papers and a clock. The Engine runs
+        Not two apps. Not a server in the sky. Faces: errands, house, quests, shops. SignalFlow
+        packages the claim. The kernel mints. This domain is papers and a clock. The Engine runs
         on spare-room laptops.
       </p>
 
@@ -481,7 +481,7 @@ export function EngineSection() {
         </Link>
         <span className="text-faint"> · </span>
         <a href="#stack" className="text-primary hover:underline">
-          Whole process →
+          The git →
         </a>
       </p>
 
@@ -547,8 +547,40 @@ export function EngineSection() {
             The chip, not the photocopy →
           </Link>
           <span className="text-faint"> · </span>
+          <Link to="/" hash="wire" className="text-primary hover:underline">
+            The pipe →
+          </Link>
+          <span className="text-faint"> · </span>
           <Link to="/glossary" hash="did" className="text-primary hover:underline">
             DID →
+          </Link>
+        </p>
+      </div>
+
+      <div id="wire" className="scroll-mt-24 mx-auto mt-10 max-w-5xl border border-primary/22 bg-primary/4 px-5 py-6">
+        <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">{engineWire.kicker}</p>
+        <h3 className="font-display mt-2 text-xl tracking-[0.04em]">{engineWire.title}</h3>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">{engineWire.lead}</p>
+        <ul className="mt-5 max-w-3xl space-y-3 text-sm leading-relaxed text-muted">
+          {engineWire.points.map((p) => (
+            <li key={p.t} className="flex gap-3">
+              <span className="shrink-0 font-mono text-[11px] tracking-[0.14em] text-primary">{p.t}</span>
+              <span>{p.d}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-5 max-w-3xl text-sm leading-relaxed text-dim">{engineWire.today}</p>
+        <p className="mt-4 font-mono text-[11px] tracking-[0.08em]">
+          <Link to="/faq" hash="wire" className="text-primary hover:underline">
+            TCP? Web3? →
+          </Link>
+          <span className="text-faint"> · </span>
+          <Link to="/glossary" hash="the-pipe" className="text-primary hover:underline">
+            The pipe →
+          </Link>
+          <span className="text-faint"> · </span>
+          <Link to="/glossary" hash="lan-first" className="text-primary hover:underline">
+            LAN-first →
           </Link>
         </p>
       </div>
@@ -721,12 +753,10 @@ export function EngineSection() {
 
       <div className="mx-auto mt-12 max-w-5xl">
         <p className="font-mono text-[10px] tracking-[0.24em] text-dim uppercase">On git, today</p>
-        <h3 className="font-display mt-2 text-xl tracking-[0.04em]">What is code vs napkin</h3>
+        <h3 className="font-display mt-2 text-xl tracking-[0.04em]">What's code</h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-dim">
-          Kernel is MIT, TypeScript, Docker. Happy path is real. Adversarial path is the current
-          build. The list above is the process. Older standalone repos were archived into this
-          monorepo or retired. Status tags below are honesty about how far each slice is, not a
-          permission to ignore it.
+          Kernel is MIT, TypeScript, Docker. Happy path closes. Handshake is two machines, signed.
+          Packages are skeletons. Contracts are the truth. Clone it.
         </p>
         <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {engineGit.map((item) => (

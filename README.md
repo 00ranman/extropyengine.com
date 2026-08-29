@@ -4,6 +4,12 @@ Personal site for **Randall Gossett** — music, writing, and systems theory.
 
 This remake keeps the original look (Cinzel + Space Mono, ember orange, fungus manifesto) but splits every piece of copy into data files so updates are a one-line edit instead of hunting through a 60KB HTML page.
 
+## Copy rules
+
+Public pages are the product. Author-asides ("silence was a mistake, not a retirement", "still in git, still the process") do not go on the website. Those live in [00ranman/extropy-engine](https://github.com/00ranman/extropy-engine) README.
+
+Name live packages under `extropy-engine/packages` only. Archived standalones (homeflow, signalflow, levelup-academy, xp-net, xp-dag-mesh, extropy-master-control-hub) are not products here.
+
 ## Update the site (this is the whole point)
 
 All public copy lives in two files:

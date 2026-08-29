@@ -293,7 +293,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "UI for your life",
         id: "ui-for-your-life",
-        def: "It's just a UI for your life. Picture the paper as a game that's going worldwide. You can log on through the internet you already have. Correct way: cheap laptop, clone the repo, you're a node. Nearby, node to node. Internet is for people who aren't next door. ZKPs talk to each other. That's why the confidence. This is a game. We live in a world built on unintended consequences. I don't get why people are so against throwing this ledger out there.",
+        def: "It's just a UI for your life. Picture the paper as a game that's going worldwide. Log on through the internet you already have. Correct way: cheap laptop, clone the repo, you're a node. Nearby, node to node. Internet is for people who aren't next door. ZKPs talk to each other. This is a game. Play it on the life you're already living.",
       },
       {
         term: "Extropy",
@@ -347,7 +347,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "HomeFlow",
         id: "homeflow",
-        def: "The household / building face. Chores, IoT, rooms. Thermodynamic measurement of the place you live. Same loop as LocalFlow. Still in packages/homeflow. Silence on the site was a mistake, not a retirement.",
+        def: "The household / building face. Chores, IoT, rooms. Thermodynamic measurement of the place you live. Same loop as LocalFlow.",
       },
       {
         term: "Quest market",
@@ -357,7 +357,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "GrantFlow",
         id: "grantflow",
-        def: "Grant discovery (Grants.gov) plus AI proposer. Same loop, different input. packages/grantflow-discovery and grantflow-proposer. Still the process.",
+        def: "Grant discovery (Grants.gov) plus AI proposer. Same loop, different input. packages/grantflow-discovery and grantflow-proposer.",
       },
       {
         term: "SignalFlow",
@@ -405,6 +405,16 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
         term: "Node",
         id: "node",
         def: "A machine running the Engine. Keys stay on the box. First boot writes a W3C did:key (Ed25519) to disk — no registrar. LAN talks node to node. WAN is TLS plus a signed handshake. Hostinger is not a node. One captured node can lie about itself. It cannot silently rewrite a neighbor's DAG — other nodes check signatures and causal parents.",
+      },
+      {
+        term: "The pipe",
+        id: "the-pipe",
+        def: "TCP or QUIC. Packets already move. Don't invent a new transport. Web3 reinvented discovery and gossip-as-truth. This overlay is different: LAN first, internet as exception, proof not payload, looking writes a vertex, causal DAG not a block lottery. Today: HTTPS + Ed25519 signed hello. libp2p + Noise later is still the pipe.",
+      },
+      {
+        term: "LAN-first",
+        id: "lan-first",
+        def: "Next door talks node to node. No DHT required for neighbors. The internet is there so you can reach people who aren't next door. Keys stay on the box.",
       },
       {
         term: "Sybil",

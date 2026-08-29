@@ -34,6 +34,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "FAQ", href: "/faq" },
       { label: "Glossary", href: "/glossary" },
       { label: "Tokens", href: "/#tokens" },
+      { label: "The pipe", href: "/#wire" },
       { label: "DFAO", href: "/dfao" },
       { label: "Open problems", href: "/open-problems" },
       { label: "Proof layers", href: "/proof-layers" },
@@ -431,9 +432,8 @@ export const engineViews = {
     kicker: "HomeFlow",
     lines: [
       "The household is a DFAO. Chores, IoT, the building. Thermodynamic measurement of the rooms you actually live in.",
-      "Still the same loop: post, do, confirm. Not a separate religion. Not “the errand app but indoor.”",
+      "Same loop: post, do, confirm. Not a separate religion. Not “the errand app but indoor.”",
       "Sensors can hang evidence. They do not mint. Mint still wants a closed loop.",
-      "If it is in packages/homeflow, it is in the process. Silence on this page was a mistake, not a retirement.",
     ],
   },
   quests: {
@@ -443,7 +443,6 @@ export const engineViews = {
       "Default grain: two to five minutes. Decomposition at the edge, not a priesthood.",
       "Reward can escalate if it sits. Validation-neighborhoods take blind slices. Volunteer role, not a class of people.",
       "Bigger work is a graph of small ones. Farming a 3-minute task is expensive because F exists.",
-      "packages/quest-market is the operational primitive. Still in git. Still the process.",
     ],
   },
   merchant: {
@@ -463,13 +462,13 @@ export const engineGame = {
   kicker: "The game",
   title: "It's just a UI for your life",
   lead: "Picture what's on paper as a game that's going worldwide. You can log on through the internet you already have. That's not the only way, and it's not the correct way. Correct way: a cheap laptop, clone the repo, you're a node. Somebody else does the same thing. Nearby, you talk node to node — you don't even have to go through the internet. The internet is there so you can reach people who aren't next door. ZKPs talk to each other. That's the client. This website is not that network.",
-  why: "That's why I'm confident. This is a game. I keep getting pushback that it's untested, that it's a bad idea. There's no special risk here. We live in a world built on unintended consequences. I don't get why people are so against throwing this ledger out there. The hurdle is the campaign. It's a big-brain thing with a lot of parts. You don't need the whole object. You need the part for the seat you're in. Other people check it. They go, oh, this is okay. Then more people talk. Then more people do it. Why not play the game on top of the life you're already living?",
+  why: "This is a game. The world already runs on unintended consequences. No special risk here. You don't need the whole object. You need the part for your seat. Other people check it. Then more people talk. Then more people do it. Play it on the life you're already living.",
 } as const;
 
 export const engineSignal = {
   kicker: "SignalFlow",
   title: "You do not score yourself",
-  lead: "SignalFlow is one layer. It is not the Engine. LocalFlow is one face. It is not the Engine. The protocol you talk to is your assistant — ChatGPT, Claude, Gemini, or a model on your own box — plus your PSLL plus the network. That is how a claim gets packaged. Everything else in the git is still the process.",
+  lead: "SignalFlow is one layer. It is not the Engine. LocalFlow is one face. It is not the Engine. The protocol you talk to is your assistant — ChatGPT, Claude, Gemini, or a model on your own box — plus your PSLL plus the network. That is how a claim gets packaged.",
   steps: [
     "You mow the lawn. You do not type in a number.",
     "SignalFlow reads the task, the time, your PSLL, and whatever evidence you attached — before/after photos live on the DAG.",
@@ -493,7 +492,21 @@ export const engineNode = {
     { t: "Fake work", d: "Both edges have to agree. Evidence hangs on the vertex. Late burn still hits. Repeat-farming is F. A MICRO can puff a lawn. The DAG plus burn is how we live with that — not a speech about honesty." },
     { t: "Looking", d: "A common person can walk the DAG. They cannot do it silently. A look is a vertex. Stalking-shaped bursts can slash. Tills still get yes/no." },
   ],
-  today: "Neighborhood-app writes did:key on first boot (data/keys/node.pem). Handshake is HTTPS + signatures, not production P2P. ZKP circuits are Codex 3. Don't pretend the circuits already shipped.",
+  today: "Neighborhood-app writes did:key on first boot. Handshake is HTTPS + signatures, not production P2P. ZKP circuits are Codex 3.",
+} as const;
+
+export const engineWire = {
+  kicker: "The pipe",
+  title: "TCP is fine. Gossip-as-truth is not.",
+  lead: "Don't invent ExtropyTCP. Packets already move. Web3 reinvented discovery, identity, and a global shout. That's not this pattern.",
+  points: [
+    { t: "Pipe", d: "TCP or QUIC. HTTPS today. libp2p + Noise later if it helps the handshake. Still a pipe. Not a new Layer 4." },
+    { t: "LAN first", d: "Next door talks node to node. No DHT for neighbors. The internet is for people who aren't next door." },
+    { t: "Proof", d: "ZKP on the wire. Diary on disk. The till gets yes or no. Not the file." },
+    { t: "Looking", d: "A fetch is a vertex. Silent GET is a detectable act. That's not HTTP's default. That's the overlay." },
+    { t: "Truth", d: "Causal DAG. Both edges agree. Not a lottery for a block. Not gossip as consensus." },
+  ],
+  today: "Sandbox handshake: HTTPS + Ed25519 signed JSON. Hello, capabilities, DAG replay, heartbeat. No DHT. No NAT magic.",
 } as const;
 
 export const engineNotThat = {
@@ -537,9 +550,9 @@ export const engineNotThat = {
 const P = "https://github.com/00ranman/extropy-engine/tree/main/packages";
 
 export const engineStack = {
-  kicker: "If it's in the git, it's in the process",
-  title: "The Engine is the whole monorepo",
-  lead: "LocalFlow and SignalFlow are two packages. HomeFlow, quests, GrantFlow, identity, the kernel did not get deleted because errands got talked about last. Same loop everywhere: post, do, confirm, mint, maybe burn. Faces differ. The book does not.",
+  kicker: "The git",
+  title: "One repo. That's the Engine.",
+  lead: "github.com/00ranman/extropy-engine. Faces on this page. SignalFlow packages the claim. The kernel mints. Same loop everywhere: post, do, confirm. Packages are skeletons. Contracts are the truth. Clone it.",
   groups: [
     {
       heading: "Faces",
@@ -549,7 +562,7 @@ export const engineStack = {
         { name: "Quest market", d: "2–5 minute grain. Escalation if it sits. Default operational primitive.", href: `${P}/quest-market` },
         { name: "GrantFlow", d: "Discovery (Grants.gov) plus proposer. Same loop, different input.", href: `${P}/grantflow-discovery` },
         { name: "LevelUp Academy", d: "Adaptive learning. Skill progression. XP on entropy-reducing study, not a grade mill.", href: `${P}/levelup-academy` },
-        { name: "Extropialingo", d: "Language learning as loops. Still in git. Still the process.", href: `${P}/extropialingo` },
+        { name: "Extropialingo", d: "Language learning as loops.", href: `${P}/extropialingo` },
         { name: "Neighborhood app", d: "MESO job board on a laptop. did:key on first boot.", href: `${P}/neighborhood-app` },
         { name: "Ecosystem", d: "Skill DAG, XP oracle, merchant network, EP conversion.", href: `${P}/ecosystem` },
       ],
@@ -670,26 +683,8 @@ export const engineGit = [
   },
   {
     status: "dev" as const,
-    name: "SignalFlow",
-    note: "The protocol you talk to. Your assistant + PSLL + the network. Routes work, packages claims, proposes provisional ΔS. Not LocalFlow.",
-    href: "https://github.com/00ranman/extropy-engine/tree/main/packages/signalflow",
-  },
-  {
-    status: "dev" as const,
-    name: "HomeFlow",
-    note: "Household / building DFAO. IoT, chores, rooms. Same loop. Still in git.",
-    href: "https://github.com/00ranman/extropy-engine/tree/main/packages/homeflow",
-  },
-  {
-    status: "dev" as const,
-    name: "Quest market",
-    note: "2–5 minute grain. Escalation. Default operational primitive. Still in git.",
-    href: "https://github.com/00ranman/extropy-engine/tree/main/packages/quest-market",
-  },
-  {
-    status: "dev" as const,
     name: "Node handshake",
-    note: "Sandbox: VPS ↔ laptop. Signed hello, capabilities, DAG replay, heartbeat. HTTPS + signatures, not production P2P. did:key on first boot is wired in neighborhood-app.",
+    note: "Two machines talk. Signed hello, capabilities, DAG replay, heartbeat. HTTPS + signatures today. Not production P2P.",
     href: "https://github.com/00ranman/extropy-engine/tree/main/packages/node-handshake",
   },
   {
@@ -700,14 +695,8 @@ export const engineGit = [
   },
   {
     status: "concept" as const,
-    name: "DFAO registry",
-    note: "Scale labels NANO → PLANETARY. Bands are suggestions, not fences. Fractal nesting. Implementation incremental.",
-    href: "https://github.com/00ranman/extropy-engine/tree/main/packages/dfao-registry",
-  },
-  {
-    status: "concept" as const,
     name: "Node kit",
-    note: "Intended product: plug-in node, PSLL, optional sensor. For-profit. Not a 501(c). Surplus after keeping the lights on goes into R&D and nodes, including where people actually need them. Not shipping.",
+    note: "Plug-in node, PSLL, optional sensor. For-profit. Not shipping. If you can clone, you do not need the box.",
     href: "https://github.com/00ranman/extropy-engine/blob/main/docs/VPS_NODE.md",
   },
 ] as const;

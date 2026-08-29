@@ -25,7 +25,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "what",
         q: "What is the Extropy Engine?",
-        a: "An audit loop. A UI for the life you're already living. Faces: LocalFlow, HomeFlow, quests, GrantFlow, shops. SignalFlow packages the claim. The kernel mints. If it is in the git, it is in the process. Cheap laptop, clone the repo, you're a node. Not a coin you buy. Not a church. Not two apps.",
+        a: "An audit loop. A UI for the life you're already living. Faces: LocalFlow, HomeFlow, quests, GrantFlow, shops. SignalFlow packages the claim. The kernel mints. Cheap laptop, clone the repo, you're a node. Not a coin you buy. Not a church. Not two apps.",
         also: [
           { label: "Engine", href: "/#engine" },
           { label: "Enter", href: "/start" },
@@ -69,7 +69,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "game",
         q: "This is untested. Why throw a ledger at the world?",
-        a: "Because this is a game. There's no special risk here. We live in a world built on unintended consequences. I don't get why people are so against throwing this ledger out there. You can log on through the regular internet. Correct way is a cheap laptop, clone the repo, you're a node. Next person does the same. Nearby you talk node to node. Internet is for people who aren't next door. ZKPs talk to each other. The hurdle is the campaign — big-brain thing, a lot of parts. You get the part for your seat. Other people check it. They go, oh, this is okay. Then more people talk. Then more people do it. Why not play the game on top of the life you're already living?",
+        a: "Because this is a game. The world already runs on unintended consequences. No special risk here. Log on through the internet you already have. Correct way: cheap laptop, clone the repo, you're a node. Next person does the same. Nearby you talk node to node. Internet is for people who aren't next door. ZKPs talk to each other. You get the part for your seat. Other people check it. Then more people talk. Then more people do it. Play it on the life you're already living.",
         also: [
           { label: "Engine — the game", href: "/#engine" },
           { label: "UI for your life", href: "/glossary", hash: "ui-for-your-life" },
@@ -228,9 +228,9 @@ export const faqSections: FaqSection[] = [
       {
         id: "flows",
         q: "So this is just LocalFlow and SignalFlow?",
-        a: "No. Those are two packages. HomeFlow is the household. Quest market is the 2–5 minute grain. GrantFlow is discovery plus proposer. Validation-neighborhoods take blind slices. Identity writes did:key. PSLL is the diary. xp-formula / xp-mint / loop-ledger / dag-substrate are the book. If it is still in github.com/00ranman/extropy-engine/packages, it is still the process. LocalFlow is errands. SignalFlow routes claims. Collapsing the Engine into those two is a reading error.",
+        a: "No. Those are two packages. HomeFlow is the household. Quest market is the 2–5 minute grain. GrantFlow is discovery plus proposer. Validation-neighborhoods take blind slices. Identity writes did:key. PSLL is the diary. xp-formula / xp-mint / loop-ledger / dag-substrate are the book. LocalFlow is errands. SignalFlow routes claims. Collapsing the Engine into those two is a reading error.",
         also: [
-          { label: "The whole process", href: "/#stack" },
+          { label: "The git", href: "/#stack" },
           { label: "GitHub — packages", href: "https://github.com/00ranman/extropy-engine/tree/main/packages" },
         ],
       },
@@ -287,6 +287,16 @@ export const faqSections: FaqSection[] = [
           { label: "The chip, not the photocopy", href: "/#zkp" },
           { label: "DID", href: "/glossary", hash: "did" },
           { label: "ZKP", href: "/glossary", hash: "zkp" },
+        ],
+      },
+      {
+        id: "wire",
+        q: "TCP? A new protocol? What does Web3 do here?",
+        a: "TCP and QUIC already move packets. Don't invent ExtropyTCP. Web3 (libp2p, gossipsub, DHTs) reinvented discovery and a global shout — gossip as truth. That's not this pattern. LAN first: next door talks node to node. Internet is for people who aren't next door. Keys on the box. Proof on the wire, not the diary. Looking writes a vertex. Causal DAG, both edges agree — not a lottery for a block. Today the handshake is HTTPS + signatures. libp2p + Noise later is still a pipe. The overlay is the thing.",
+        also: [
+          { label: "The pipe", href: "/#wire" },
+          { label: "The node", href: "/#node" },
+          { label: "LAN-first", href: "/glossary", hash: "lan-first" },
         ],
       },
       {
