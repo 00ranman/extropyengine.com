@@ -1170,15 +1170,182 @@ A coherence field not a photon dream
 
 ### 13. Family of Fangs
 
-Not transcribed. Do not invent lyrics from the title.
+They said the science changed
+Alpha beta throw it in the flames
+Now wolves are families
+Hallmark cards with different names
+They blamed the cages blamed the eyes
+Said observation forged the lies
+But if you didn't see shit
+How the fuck you know shit
+
+Hierarchy theater dressed up as kin
+Call it family but the fangs still win
+Rename the throne but the crown still bites
+Power don't vanish under softer lights
+Call it love call it pack call it clan
+But a wolf still bleeds the weaker man
+
+You ever heard of the Mafia
+That's a family too
+Sunday pasta with the Don
+Cross him once and you're through
+Hierarchy in silk hierarchy with guns
+Hierarchy in your cubicle hierarchy in your sons
+Every boss every beta fighting for a plate
+That's not opinion that's arithmetic fate
+
+Hierarchy theater dressed up as kin
+Call it family but the fangs still win
+Rename the throne but the crown still bites
+Power don't vanish under softer lights
+Call it love call it pack call it clan
+But a wolf still bleeds the weaker man
+
+Science can shuffle the words around
+But gravity don't stop when you change the sound
+Observer effect nice excuse
+Hierarchy's a rope with a permanent noose
+Family tribe state or fate
+It's always a ladder and always too late
+Not bitter not crying wolf memes
+I've met betas seen their schemes
+I've met alphas smelled the blood
+And I've met the ghosts like me the ones that don't give a fuck
+I tore the script I torched the play
+Call me lone wolf I won't obey
+
+Hierarchy theater dressed up as kin
+Call it family but the fangs still win
+You can soften the chain call the whip a hug
+But I see the power I smell the blood
+Call it love call it pack call it clan
+But a wolf still bleeds the weaker man
 
 ### 14. Recursive Until Proven Innocent
 
-Not transcribed. Do not invent lyrics from the title.
+The walls went up we lost the view
+A hidden book they wrote for you
+We pace the lines they call a life
+Freedom's a word we never typed
+
+Recursive until we're free
+Stuck inside what might could be
+Break the lock redraw the line
+Freedom's not yours until it's mine
+
+They stitch the quilt they pick the frame
+No law of nature just a game
+Soft hands move levers out of sight
+Turn normal into rule overnight
+Every loop has got to end
+So every voice can start again
+
+Recursive until we're free
+Stuck inside what might could be
+Break the lock redraw the line
+Freedom's not yours until it's mine
+
+They sell the cage as keep you safe
+Put pretty words over the ache
+A feed of noise to fog the bruise
+A thousand doors none you choose
+And silence takes its cut in time
+Paid in years you'll never find
+
+Recursive until we're free
+Stuck inside what might could be
+Break the lock redraw the line
+Freedom's not yours until it's mine
+
+The cycle breaks when truth gets loud
+Too real to drown inside a crowd
+The proof is us the code comes loose
+We choose the end we choose the fuse
+
+Recursive until we're free
+No more someday no more maybe
+Break the lock redraw the line
+Freedom's not yours until it's mine
+
+Recursive till we're free
+Say it clean so they can't twist it
+Break the lock redraw the line
+Freedom's a lie if it's not mine
 
 ### 15. Solipsism
 
-Not transcribed. Do not invent lyrics from the title.
+[Verse]
+In my world alone I stand
+Seeing shadows in the sand
+No one else can understand
+It’s all within my hand
+
+[Verse 2]
+Echoes in an empty hall
+I’m the only one who calls
+Every rise every fall
+In my mind I feel it all
+
+[Chorus]
+Illusions of one
+Underneath the sun
+Solipsism has begun
+In my mind I’m the only one
+
+[Verse 3]
+Mirrors give me sight
+Reflecting only light
+In the day and night
+I’m the center that feels right
+
+[Chorus]
+Illusions of one
+Underneath the sun
+Solipsism has begun
+In my mind I’m the only one
+
+[Verse 4]
+Streetlights flicker when I turn
+Same three thoughts that always burn
+Every corner I return
+Feels like something I must learn
+
+[Verse 5]
+Voices blur into a hum
+Like they’re coming from my blood
+Every comfort turns to numb
+When I try to feel “enough”
+
+[Chorus alt]
+Illusions of one
+Underneath the sun
+Solipsism has begun
+But why do I still run
+
+[Verse 6]
+If I reach, my hand feels late
+Like the world won’t hold its weight
+Every “yes” becomes a gate
+Every “no” becomes my fate
+
+[Bridge]
+Seeking answers in the sky
+Questions of the how and why
+In this world I still rely
+On my truth it won’t deny
+
+[Chorus]
+Illusions of one
+Underneath the sun
+Solipsism has begun
+In my mind I’m the only one
+
+[Outro Verse]
+If I’m “all,” then why the ache
+Why do promises still break
+Maybe I’m the thing that makes
+Loneliness feel wide awake
 
 ### 16. ΔS
 
@@ -1322,7 +1489,38 @@ Is better than being right too late
 
 ### 18. Power Lunch at the Soup Kitchen
 
-Not transcribed. Do not invent lyrics from the title.
+Another lonely night alone
+In this boring town
+I just sit around, staring outside my bedroom window
+Looking up at the stars, staring up into the sky
+Asking the questions, why
+Why
+We make life so dramatic
+Why I can't commit to commitment
+And why I want to be happy
+Why do I want to be different from everyone
+I know I'm not special, but I want to be
+Why my life is so pathetic
+Why should I have to deal with any of this shit
+And why I want to be happy even though I know one day I'll be gone
+I wonder who are my friends
+Sometimes I wonder if they are truly friends
+Or if they even care
+I swear I'd ditch them all to get the hell out of here
+Maybe I'm the problem, I don't want to be
+Why we make life so dramatic
+Why I can't commit to commitment
+And why I want to be happy
+Why do I want to be different from everyone
+I know I'm not special, but I want to be
+Another lonely night alone
+Not in that boring town
+I still sit around but now I just see this screen
+What's this even mean
+Is there even meaning anymore
+Why my life is so pathetic
+Why should I have to deal with any of this shit
+And why I want to be happy even though I know one day I'll be gone
 
 ## The Glitch Was Me
 
