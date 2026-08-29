@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { entryPaths } from "@/content/essays";
 import {
@@ -24,7 +24,7 @@ import {
 } from "@/content/site";
 import { albumCards, singleCards, type CatalogSong } from "@/content/music";
 import { LyricsModal } from "@/components/lyrics-modal";
-import { getBed, isPlayingPath, toggleSrc } from "@/lib/audio-bed";
+import { PlayHere } from "@/components/play-here";
 import { Btn, SectionTitle, StatusPill } from "@/components/ui-bits";
 import { podcast } from "@/content/podcast";
 
@@ -112,7 +112,7 @@ export function BookHero() {
 }
 
 export function MusicSection() {
-  const [openLyrics, setOpenLyrics] = useState<{ title: string; lyrics?: string } | null>(null);
+  const [openLyrics, setOpenLyrics] = useState<{ title: string; lyrics?: string; src?: string } | null>(null);
   const [flipped, setFlipped] = useState<string | null>(null);
 
   return (
@@ -139,7 +139,7 @@ export function MusicSection() {
             album={album}
             flipped={flipped === album.title}
             onFlip={() => setFlipped((cur) => (cur === album.title ? null : album.title))}
-            onLyrics={(song) => setOpenLyrics({ title: song.title, lyrics: song.lyrics })}
+            onLyrics={(song) => setOpenLyrics({ title: song.title, lyrics: song.lyrics, src: song.src })}
           />
         ))}
       </div>
@@ -180,7 +180,7 @@ export function MusicSection() {
               <button
                 type="button"
                 className="flex-1 py-2.5 text-center font-mono text-[10px] tracking-[0.14em] text-dim uppercase transition-colors hover:bg-primary hover:text-ink"
-                onClick={() => setOpenLyrics({ title: track.title, lyrics: track.lyrics })}
+                onClick={() => setOpenLyrics({ title: track.title, lyrics: track.lyrics, src: track.src })}
               >
                 {track.lyrics ? "Lyrics" : "No lyrics"}
               </button>
@@ -207,7 +207,12 @@ export function MusicSection() {
         </Btn>
       </div>
       {openLyrics ? (
-        <LyricsModal title={openLyrics.title} lyrics={openLyrics.lyrics} onClose={() => setOpenLyrics(null)} />
+        <LyricsModal
+          title={openLyrics.title}
+          lyrics={openLyrics.lyrics}
+          src={openLyrics.src}
+          onClose={() => setOpenLyrics(null)}
+        />
       ) : null}
     </section>
   );
@@ -277,37 +282,6 @@ function AlbumFlip({
       </button>
       <MusicLinks links={album.links} />
     </article>
-  );
-}
-
-function PlayHere({ src, tiny }: { src: string; tiny?: boolean }) {
-  const [on, setOn] = useState(false);
-  useEffect(() => {
-    const el = getBed();
-    if (!el) return;
-    const sync = () => setOn(isPlayingPath(src));
-    sync();
-    el.addEventListener("play", sync);
-    el.addEventListener("pause", sync);
-    el.addEventListener("ended", sync);
-    return () => {
-      el.removeEventListener("play", sync);
-      el.removeEventListener("pause", sync);
-      el.removeEventListener("ended", sync);
-    };
-  }, [src]);
-  return (
-    <button
-      type="button"
-      className={
-        tiny
-          ? "play-here font-mono text-[10px] tracking-[0.08em] text-accent uppercase hover:underline"
-          : "play-here flex-1 py-2.5 text-center font-mono text-[10px] tracking-[0.14em] text-primary uppercase transition-colors hover:bg-primary hover:text-ink"
-      }
-      onClick={() => toggleSrc(src, false)}
-    >
-      {on ? "Pause" : tiny ? "Play" : "Play here"}
-    </button>
   );
 }
 

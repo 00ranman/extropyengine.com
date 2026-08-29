@@ -18,6 +18,13 @@ Name them exactly:
   the-glitch-was-me.mp3
   civilizational-facepalm.mp3
   and-thats-how.mp3
+  vote.mp3
+  schrodingers-flex.mp3
+  weaponized-transparency.mp3
+  unrendered-sky.mp3
+  photon-404-exe.mp3
+  just-another-brick.mp3
+  power-lunch-at-the-soup-kitchen.mp3
 
 Do not upload through Hostinger's file manager. The next Git push overwrites public_html.
 GitHub web: repo → public/audio → Add file → Upload.

@@ -1,12 +1,15 @@
 import { useEffect } from "react";
+import { PlayHere } from "@/components/play-here";
 
 export function LyricsModal({
   title,
   lyrics,
+  src,
   onClose,
 }: {
   title: string;
   lyrics?: string;
+  src?: string;
   onClose: () => void;
 }) {
   useEffect(() => {
@@ -42,14 +45,17 @@ export function LyricsModal({
               {title}
             </h2>
           </div>
-          <button
-            type="button"
-            onClick={onClose}
-            className="font-mono text-lg text-dim hover:text-primary"
-            aria-label="Close"
-          >
-            ×
-          </button>
+          <div className="flex items-center gap-3">
+            {src ? <PlayHere src={src} tiny /> : null}
+            <button
+              type="button"
+              onClick={onClose}
+              className="font-mono text-lg text-dim hover:text-primary"
+              aria-label="Close"
+            >
+              ×
+            </button>
+          </div>
         </div>
         <div className="max-h-[min(68dvh,32rem)] overflow-y-auto px-4 py-4">
           {lyrics ? (

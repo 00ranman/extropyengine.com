@@ -36,6 +36,15 @@ const LOCAL: Record<string, string> = {
   "the-real-magic": "/audio/the-real-magic.mp3",
   "what-is-god": "/audio/what-is-god.mp3",
   "what-is-god-really": "/audio/what-is-god.mp3",
+  vote: "/audio/vote.mp3",
+  "schrodingers-flex": "/audio/schrodingers-flex.mp3",
+  "weaponized-transparency": "/audio/weaponized-transparency.mp3",
+  "unrendered-sky": "/audio/unrendered-sky.mp3",
+  "photon-404-exe": "/audio/photon-404-exe.mp3",
+  "photon-404": "/audio/photon-404-exe.mp3",
+  photon_404: "/audio/photon-404-exe.mp3",
+  "just-another-brick": "/audio/just-another-brick.mp3",
+  "power-lunch-at-the-soup-kitchen": "/audio/power-lunch-at-the-soup-kitchen.mp3",
 };
 
 const LYRIC_ALIAS: Record<string, string> = {

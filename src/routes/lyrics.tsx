@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { SiteShell } from "@/components/site-shell";
 import { LyricsModal } from "@/components/lyrics-modal";
+import { PlayHere } from "@/components/play-here";
 import { albumCards, masterSongs, singleCards } from "@/content/music";
 
 export const Route = createFileRoute("/lyrics")({
@@ -19,7 +20,7 @@ export const Route = createFileRoute("/lyrics")({
 });
 
 function LyricsPage() {
-  const [open, setOpen] = useState<{ title: string; lyrics?: string } | null>(null);
+  const [open, setOpen] = useState<{ title: string; lyrics?: string; src?: string } | null>(null);
   const transcribed = useMemo(() => masterSongs.filter((s) => s.lyrics).length, []);
 
   return (
@@ -77,7 +78,8 @@ function LyricsPage() {
                   n={s.n}
                   title={s.title}
                   lyrics={s.lyrics}
-                  onOpen={() => setOpen({ title: s.title, lyrics: s.lyrics })}
+                  src={s.src}
+                  onOpen={() => setOpen({ title: s.title, lyrics: s.lyrics, src: s.src })}
                 />
               ))}
             </div>
@@ -95,14 +97,15 @@ function LyricsPage() {
                 key={s.slug}
                 title={s.title}
                 lyrics={s.lyrics}
-                onOpen={() => setOpen({ title: s.title, lyrics: s.lyrics })}
+                src={s.src}
+                onOpen={() => setOpen({ title: s.title, lyrics: s.lyrics, src: s.src })}
               />
             ))}
           </div>
         </section>
       </article>
       {open ? (
-        <LyricsModal title={open.title} lyrics={open.lyrics} onClose={() => setOpen(null)} />
+        <LyricsModal title={open.title} lyrics={open.lyrics} src={open.src} onClose={() => setOpen(null)} />
       ) : null}
     </SiteShell>
   );
@@ -112,25 +115,28 @@ function SongTile({
   n,
   title,
   lyrics,
+  src,
   onOpen,
 }: {
   n?: number;
   title: string;
   lyrics?: string;
+  src?: string;
   onOpen: () => void;
 }) {
   return (
-    <button
-      type="button"
-      onClick={onOpen}
-      className="glitch-tile flex min-h-24 flex-col items-start justify-between gap-3 bg-bg p-4 text-left"
-    >
-      <span className="font-mono text-[10px] tracking-[0.16em] text-dim uppercase">
-        {n ? String(n).padStart(2, "0") : "single"}
-        <span className="text-faint"> · </span>
-        {lyrics ? "lyrics" : "not transcribed"}
-      </span>
-      <span className="glitch-name text-[15px] leading-snug text-fg">{title}</span>
-    </button>
+    <div className="glitch-tile flex min-h-24 flex-col items-start justify-between gap-3 bg-bg p-4 text-left">
+      <div className="flex w-full items-start justify-between gap-3">
+        <span className="font-mono text-[10px] tracking-[0.16em] text-dim uppercase">
+          {n ? String(n).padStart(2, "0") : "single"}
+          <span className="text-faint"> · </span>
+          {lyrics ? "lyrics" : "not transcribed"}
+        </span>
+        {src ? <PlayHere src={src} tiny /> : null}
+      </div>
+      <button type="button" onClick={onOpen} className="glitch-name text-left text-[15px] leading-snug text-fg">
+        {title}
+      </button>
+    </div>
   );
 }
