@@ -55,6 +55,8 @@ const LYRIC_ALIAS: Record<string, string> = {
     "power-lunch-at-the-soup-kitchen-acoustic-ish-version",
   "version-000": "version-0-0-0",
   "clap-if-you-re-programmed": "clap-if-youre-programmed",
+  "photon-404": "photon-404-exe",
+  photon_404: "photon-404-exe",
 };
 
 export type CatalogSong = {

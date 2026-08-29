@@ -175,7 +175,58 @@ Now let's make them blink first, make 'em flinch on the playback, rewind this ve
 
 ### 4. PHOTON_404.exe
 
-Not transcribed. Do not invent lyrics from the title.
+They said "name a theory that got replaced"
+With supernatural cope in a lab coat's face
+Well, quantum mechanics, take your seat
+You're just symptoms pretending you're complete
+Light's not a particle, never was one
+Can't observe a photon when it's having fun
+"Wave-particle duality"? That's comedy gold
+You made up a thing then said "behold!"
+
+Can't see it moving? Then it doesn't move
+Field coherence updates, nothing to prove
+Shadows don't run when your hand creates motion
+You're conflating the map with the actual ocean
+Fastest constant that nobody's seen?
+Red flag, debug your whole machine
+It's not traveling, it's state propagation
+Bounded interaction across correlation
+Observer effect got you confused and mystic?
+Nah, just feedback loops, nothing ballistic
+Poke the field, field pokes back
+Entropy shifts when the loop goes slack
+
+XP equals R times F times Delta S times (W dot E)
+Recursion, Feedback, Entropy, Weighted Emergence, see?
+Not acronyms for acronyms' sake
+Each term validated through systems that break
+And remake and cascade through phase space
+Every variable earned its place
+Check my Drive for the blueprints, son
+I built the math while you played with puns
+
+Probabilistic guessing in a tenure track suit
+Calling emergence "spooky" when you can't compute
+The route from your model to observable fact
+So you patch it with "consciousness" and call it abstract
+I'm not saying math is broken, I'm saying you're using
+The wrong coordinate system and it's confusing
+You're tracking symptoms while I map the cause
+Light's just delta between coherent laws
+Stop measuring racers that were never on track
+You're clocking update rates in the universe's stack
+Quantum describes what, XP shows why
+Your "particles" are just sampling artifacts, goodbye
+
+Not weird... just wrong
+Not mysterious... just long
+Overdue for a paradigm that actually fits
+Instead of supernatural placeholder bits
+Call me when your theory makes predictions
+Without infinite dimensional contradictions
+Till then I'll be here, tracking entropy flow
+Building truth engines while you run the same show
 
 ### 5. Just Another Brick
 
