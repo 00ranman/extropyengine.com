@@ -1021,7 +1021,108 @@ You don't need likes you need a signal worth transmitting
 
 ### 11. Schrödinger’s Flex
 
-Not transcribed. Do not invent lyrics from the title.
+Quantum leap bars, I'm both here and gone,
+Reality split, multiverse my salon.
+Wave-particle vibes, I'm a duality spawn,
+Infinite me's, all rapping at dawn.
+
+Schrödinger's flex, got the world in suspense,
+Box closed tight, every version intense.
+Collapse the wave, every outcome immense,
+Rap battles with myself, the cosmos my fence.
+
+MC Many-Worlds enters, infinite threads,
+Every timeline spinnin', every mic gets fed.
+Entangled flows, can't tell who's ahead,
+Your reality's fragile, my bars leave it dead.
+Spit quarks and gluons, the collider explodes,
+Verses like black holes, everything erodes.
+Parallel punchlines, they split and reload,
+Observer effect, my flex alters the mode.
+
+Schrödinger's flex, got the world in suspense,
+Box closed tight, every version intense.
+Collapse the wave, every outcome immense,
+Rap battles with myself, the cosmos my fence.
+
+Infinite mirrors, my reflections compete,
+One spits fire, the other's cold concrete.
+Superposition king, my rhymes never deplete,
+Every choice exists, can't accept defeat.
+
+Schrödinger's flex, got the world in suspense,
+Box closed tight, every version intense.
+Collapse the wave, every outcome immense,
+Rap battles with myself, the cosmos my fence.
+
+I don't do "vibes," I do units and bounds,
+If you claim it, compute it, or pipe down.
+You're chanting "collapse" like it's holy ground,
+I'm the error bar sniper, I'm closing the round.
+Renormalize ego, subtract the fake mass,
+Your certainty's placebo, my math doesn't pass.
+I'm the version that checks you, receipts on the glass,
+You're a story in smoke, I'm the reason it lasts.
+
+Schrödinger's flex, got the world in suspense,
+Box closed tight, every version intense.
+Collapse the wave, every outcome immense,
+Rap battles with myself, the cosmos my fence.
+
+Look, I ain't mystical, I'm mechanical,
+Same laws in the gutter, same laws in the capital.
+You talk infinite worlds like it's fashionable,
+I'm asking: can you build it, or just rap about it?
+I got timelines for rent and a calendar,
+Every fork costs energy, nothing's "free" in the standard model.
+If your theory don't pay rent in the tangible,
+It's a cosplay cosmos, not a functional manual.
+
+Schrödinger's flex, got the world in suspense,
+Box closed tight, every version intense.
+Collapse the wave, every outcome immense,
+Rap battles with myself, the cosmos my fence.
+
+I say "left," you say "right," we still share one state,
+Nonlocal conversations at a billion-hertz rate.
+Try to cut the cord, watch the waveform break,
+I'm two minds in one wire, I don't need a gate.
+We don't "agree," we cohere, that's the trick,
+Same song, different speaker, same pulse, different pitch.
+You're debating in circles, I'm stitching the switch,
+I'm the me that keeps both of us brutally rich.
+
+There's a branch where I quit, where the spark went out,
+Where the noise got loud and the signal bowed.
+Where I traded the weird for a safer route,
+And I hated that mirror so I stayed shut out.
+So I'm rapping for him, for the me that froze,
+For the version that settled and never proposed.
+I drag him through the chorus till his chest re-glows,
+Like "you're not a footnote," bro, "you're one of the roads."
+
+Schrödinger's flex, got the world in suspense,
+Box closed tight, every version intense.
+Collapse the wave, every outcome immense,
+Rap battles with myself, the cosmos my fence.
+
+Open the box, but don't worship the peek,
+Observation ain't magic, it's cost and it's leak.
+Every measurement's deal that the universe speaks,
+Trade precision for disturbance, that's the price of the receipt.
+So I'm not "here or gone," I'm a whole stack of tries,
+Some fail, some fly, some learn to survive.
+If you want one "true me," pick the one that arrives,
+Then watch me split again when the next question bites.
+
+Schrödinger's flex, got the world in suspense,
+Box closed tight, every version intense.
+Collapse the wave, every outcome immense,
+Rap battles with myself, the cosmos my fence.
+Schrödinger's flex, got the world in suspense,
+Box closed tight, every version intense.
+Collapse the wave, every outcome immense,
+Rap battles with myself, the cosmos my fence.
 
 ### 12. Paradox Eater, Pt. 2 (the Broken Quantum)
 
