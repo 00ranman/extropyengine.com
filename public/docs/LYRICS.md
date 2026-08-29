@@ -970,7 +970,54 @@ Living new life
 
 ### 10. Memetic Infection
 
-Not transcribed. Do not invent lyrics from the title.
+The feed is the virus and the algorithm's a syringe
+This ain't attention it's a feedback disease
+You're not vibing with content you're syncing with pleas
+Every scroll's a confession wrapped in performative pain
+A dopamine loop inside your membrane
+Fifteen minutes that phrase died screaming in a comment thread
+Now it's fifteen seconds of phantom dread
+You don't want fame you want persistence
+You want the phantom limb of existence
+We don't chase dreams anymore
+We chase metrics
+Your soul got rebranded as engagement logistics
+
+Memetic infection
+Synthetic connection
+You call it identity I call it detection
+Existential validation
+From strangers and simulations
+You're not a person
+You're a feedback approximation
+
+You were raised on clout calories
+Force-fed virality
+Programmed to believe that likes mean morality
+But tell me what's the half-life of relevance
+When your whole self is algorithmic negligence
+You think rebellion is a filter
+Think pain is a font
+Think dying young makes your playlists haunt
+They don't glorify your ghost
+They monetize your glitch
+Juice ain't a martyr he's a statistic-rich pitch
+This isn't culture this is trauma merchandised
+An echo chamber with sparkles
+And you call it a vibe
+You are the product
+You are the post
+And you still think you're in control
+Just because you wrote the caption
+
+Memetic infection
+Echo projection
+All your authenticity market correction
+Existential validation
+From mimicry and sedation
+You're not broken
+You're engineered fragmentation
+You don't need likes you need a signal worth transmitting
 
 ### 11. Schrödinger’s Flex
 
