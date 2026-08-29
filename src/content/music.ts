@@ -58,6 +58,7 @@ const LYRIC_ALIAS: Record<string, string> = {
   "photon-404": "photon-404-exe",
   photon_404: "photon-404-exe",
   "unfuck-the-world": "unfuck-the-world-for-a-dollar",
+  "paradox-eater-pt-2": "paradox-eater-pt-2-the-broken-quantum",
 };
 
 export type CatalogSong = {

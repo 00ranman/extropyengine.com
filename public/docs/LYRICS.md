@@ -1126,7 +1126,47 @@ Rap battles with myself, the cosmos my fence.
 
 ### 12. Paradox Eater, Pt. 2 (the Broken Quantum)
 
-Not transcribed. Do not invent lyrics from the title.
+They told me light was a bullet and a wave in disguise
+A ghost that walks two roads a liar with two eyes
+But I don't buy the fairytale I don't drink their wine
+If truth is contradiction then the map ain't aligned
+The double-slit is a circus a priest with sleight of hand
+Particles play saints until the crowd makes demands
+Peek through the curtain the miracle dies
+The math keeps repeating its own alibis
+
+I won't bow to paradox I won't worship the lie
+You can't sell me collapse when it's smoke in the sky
+Light don't travel it resolves in the scene
+A coherence field not a photon dream
+
+Entanglement's the gospel of spooky devotion
+Two twins split apart but still dance in slow motion
+Einstein said spooky Bohr said just believe
+But faith without reason is just make-believe
+The Copenhagen gospel says shut up and obey
+Don't ask what's real just calculate the play
+But if reality's forbidden then the church is the jail
+And the priests of uncertainty are selling betrayal
+
+I won't bow to paradox I won't worship the lie
+You can't sell me collapse when it's smoke in the sky
+Light don't travel it resolves in the scene
+A coherence field not a photon dream
+
+I see coherence ringing like strings through the void
+I see the artifacts the prophets deployed
+I see the twin arms of one hidden beast
+And the feast they call quantum was never a feast
+No dice in the sky no spooky disguise
+No collapse by decree no observer's eyes
+It's a field it's a weave it's a system complete
+Not a house made of paradox built to defeat
+
+I won't bow to paradox I won't worship the lie
+You can't sell me collapse when it's smoke in the sky
+Light don't travel it resolves in the scene
+A coherence field not a photon dream
 
 ### 13. Family of Fangs
 
