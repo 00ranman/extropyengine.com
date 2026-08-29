@@ -28,6 +28,7 @@ export const faqSections: FaqSection[] = [
         a: "An audit loop. A UI for the life you're already living. Faces: LocalFlow, HomeFlow, quests, GrantFlow, shops. SignalFlow packages the claim. The kernel mints. Cheap laptop, clone the repo, you're a node. Not a coin you buy. Not a church. Not two apps.",
         also: [
           { label: "Engine", href: "/#engine" },
+          { label: "Watch", href: "/#film" },
           { label: "Enter", href: "/start" },
         ],
       },

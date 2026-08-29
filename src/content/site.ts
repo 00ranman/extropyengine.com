@@ -30,6 +30,7 @@ export const primaryNav: readonly NavItem[] = [
     href: "/#engine",
     children: [
       { label: "How it works", href: "/#engine" },
+      { label: "Watch", href: "/#film" },
       { label: "Start here", href: "/start" },
       { label: "FAQ", href: "/faq" },
       { label: "Glossary", href: "/glossary" },
@@ -507,6 +508,15 @@ export const engineWire = {
     { t: "Truth", d: "Causal DAG. Both edges agree. Not a lottery for a block. Not gossip as consensus." },
   ],
   today: "Sandbox handshake: HTTPS + Ed25519 signed JSON. Hello, capabilities, DAG replay, heartbeat. No DHT. No NAT magic.",
+} as const;
+
+export const engineFilm = {
+  kicker: "The schematic",
+  title: "Entropy economics",
+  lead: "Seven minutes. Consensus vs coherence. The mint. The chip, not the photocopy. 0.99ⁿ. Watch it here. This is not a paper. Not a podcast.",
+  src: "/video/entropy-economics.mp4",
+  poster: "/video/entropy-economics.jpg",
+  duration: "7:13",
 } as const;
 
 export const engineNotThat = {

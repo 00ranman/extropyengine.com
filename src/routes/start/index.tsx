@@ -37,6 +37,9 @@ function StartHere() {
         ))}
       </div>
       <div className="flex flex-wrap gap-3 pt-4 text-[11px] tracking-[0.18em] uppercase">
+        <Link to="/" hash="film" className="text-dim hover:text-primary">
+          Watch
+        </Link>
         <Link to="/faq" className="text-dim hover:text-primary">
           FAQ
         </Link>

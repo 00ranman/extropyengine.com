@@ -7,6 +7,7 @@ import {
   earlierEditions,
   engineDag,
   engineDecay,
+  engineFilm,
   engineGame,
   engineGit,
   engineLoop,
@@ -423,6 +424,22 @@ export function EngineSection() {
         packages the claim. The kernel mints. This domain is papers and a clock. The Engine runs
         on spare-room laptops.
       </p>
+
+      <div id="film" className="scroll-mt-24 mx-auto mb-12 max-w-5xl border border-primary/22 bg-primary/4 px-5 py-6">
+        <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">{engineFilm.kicker}</p>
+        <h3 className="font-display mt-2 text-xl tracking-[0.04em]">{engineFilm.title}</h3>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">{engineFilm.lead}</p>
+        <video
+          className="mt-5 aspect-video w-full border border-fg/12 bg-bg"
+          controls
+          playsInline
+          preload="metadata"
+          poster={engineFilm.poster}
+        >
+          <source src={engineFilm.src} type="video/mp4" />
+        </video>
+        <p className="mt-3 font-mono text-[10px] tracking-[0.16em] text-dim uppercase">{engineFilm.duration}</p>
+      </div>
 
       <div className="mx-auto mb-12 max-w-5xl border border-primary/22 bg-primary/4 px-5 py-6">
         <p className="font-mono text-[10px] tracking-[0.24em] text-primary uppercase">{engineGame.kicker}</p>
