@@ -666,8 +666,9 @@ export function EngineSection() {
             </p>
           ))}
         </div>
-        <div id="tokens" className="mt-6 scroll-mt-24">
-          <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">The tokens</p>
+        <span id="tokens" />
+        <div id="ledger" className="mt-6 scroll-mt-24">
+          <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">Records and meters</p>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             {engineTokens.map((tok) => (
               <div key={tok.t} className="flex gap-3 text-sm">

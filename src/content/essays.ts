@@ -428,12 +428,22 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
     ],
   },
   {
-    heading: "The tokens",
+    heading: "Records and meters",
     entries: [
+      {
+        term: "Record",
+        id: "record",
+        def: "A unique signed vertex on the ledger. One of one. Closed loop, CAT stamp, lane claim, complaint, EP at the till. Same job as what people meant by non-fungible token, without the Ethereum mouth. Not a bag.",
+      },
+      {
+        term: "Meter / standing",
+        id: "meter",
+        def: "A number over records. XP remaining, L, IT weight, CT standing. Not a collectible. Not transferable. You do not hold “an XP.” You have standing that closed-loop records produced, and it leaks.",
+      },
       {
         term: "XP",
         id: "xp",
-        def: "The letters are XP. That is the name. Not Extropy Points. Not Experience Points as a brand. The obscurity is on purpose. In a 1:1 life-to-game translation you can hear “experience points.” That is a rhyme, not the definition. ΔS is the entropy reduction. XP is a measurable proxy to that ΔS, quantified on the ledger as bits-equivalent so other reductions run through the same trial can be compared. Minted on verified ΔS > 0. Cannot be purchased or transferred. You do not spend it — access economy. Decays ~1%/month of what is left (ρ = 0.01 / 30 cycles). That is a leak, not a verdict. Half-life ~69 months. It does not hit zero. Settled XP can still late-burn. Public boards, if any, are play.",
+        def: "Standing meter. The letters are XP. That is the name. Not Extropy Points. Not Experience Points as a brand. ΔS is the entropy reduction. XP is a measurable proxy to that ΔS on the ledger. Minted on verified ΔS > 0. Cannot be purchased or transferred. You do not spend it — access economy. Decays ~1%/month of what is left. Half-life ~69 months.",
       },
       {
         term: "ΔS is not XP",
@@ -443,32 +453,37 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "EP — Emergent Product",
         id: "emergent-product",
-        def: "What happens at the till, not a currency. People still spend dollars. Standing XP, how often you actually come here, this shop’s local ΔS, the region, the domains in play → L, a fraction, 0.something. EP = XP × L. That product may discount the fiat ticket. No 1:1 to cash. No coupon table. L is not frozen; it has been through iterations. Both edges have to accept the estimate. Cash cannot mint XP. Not entropy points. Not Epistemic Proof. “Points” oversold a punch-card. Product is the math: a product of XP and L.",
+        def: "Till spark. What happens at the register, not a currency. EP = XP × L. Born and burned in the same sale. May discount the fiat ticket. No 1:1 to cash. Cash cannot mint XP. Not entropy points. Not Epistemic Proof. Product is the math: a product of XP and L.",
       },
       {
-        term: "CT — Contribution Token",
+        term: "CT — contribution standing",
         id: "ct",
-        def: "Standing. What you have actually put into the community, reputation that is not a vibe. Feeds L at the till. Not purchased with XP. Separate so a pile of XP cannot buy the room.",
+        def: "Meter. What you have actually put into this door. Feeds L at the till. Not purchased with XP. Separate so a pile of XP cannot buy the room. Not a Contribution Token bag.",
       },
       {
         term: "CAT — Category",
         id: "cat",
-        def: "Skills. Closer to an NFT than a fungible pile. Each one is a little unique: is this person qualified to do this, and at what level. Not the same object as XP. A mowed lawn and a licensed mediation are not the same CAT.",
+        def: "Skill record. Unique. (DID, lane, level, settled count, issuer). Are you qualified to do this, and at what level. Peers already holding CAT in that lane sign. Patients do not mint it. Not a pile. Mentorship is not +0.1 CAT.",
       },
       {
-        term: "IT — Influence Token",
+        term: "IT — influence standing",
         id: "it",
-        def: "Not Insight Token. Weight for work that actually moves other people — governance, demonstration, the jobs where the loop is public. Obscure private labor still mints XP. It does not mint the same IT unless influence is the job. Everyone has some say. People who work that domain accrue more. Decays ~5%/month if you vanish. Knob.",
+        def: "Meter. Weight for work that actually moves other people — governance, demonstration. Not Insight Token. Obscure private labor still mints XP. It does not mint the same IT unless influence is the job. Decays ~5%/month if you vanish. Knob.",
       },
       {
-        term: "DT — Decay Token",
+        term: "Lane",
+        id: "lane",
+        def: "Skill specialization. Dentistry, folding, this till. CAT lives here. Claiming a lane is a signed vertex (DID, lane, time, issuer), contestable, not a dropdown. Do not call this “domain.” Domain is the eight entropy instruments — a protocol enum, not minted.",
+      },
+      {
+        term: "DT",
         id: "dt",
-        def: "If used, a negative-pressure mark. Do not confuse it with XP’s 0.99ⁿ leak. That leak is already on XP. DT is a separate instrument if a DFAO wants one. Knob, not a second religion.",
+        def: "Retired as a bag. Old copy said Domain Token or Decay Token. Expertise is CAT-per-lane. The leak is already on XP (0.99ⁿ). If the letter survives it is only as a unique lane-claim record — minted when a loop closed, not a Domain Coin.",
       },
       {
         term: "EP — Epistemic Proof",
         id: "epistemic-proof",
-        def: "Proof-layer token: a claim that survived an adversarial cycle. Unfortunate collision with Emergent Product. This one does not buy milk.",
+        def: "Proof-layer record: a claim that survived an adversarial cycle. Unfortunate collision with Emergent Product. This one does not buy milk.",
       },
     ],
   },

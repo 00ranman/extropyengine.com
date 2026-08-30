@@ -93,21 +93,21 @@ export const faqSections: FaqSection[] = [
       {
         id: "ep-name",
         q: "EP is Emergent Points, right? Or Epistemic Proof?",
-        a: "Emergent Product. At the till: EP = XP × L. L is a fraction from standing, how often you actually patronize this place, local mesh, domains in play. May discount the fiat ticket. Not a currency. Not Epistemic Proof — that is a proof-layer token, letter collision, does not buy milk. “Points” oversold a punch-card. Product is the math: XP times L. The math of L is not frozen; it has been through iterations.",
+        a: "Emergent Product. Till spark. At the register: EP = XP × L, then it burns. L is a fraction from standing, how often you actually patronize this place, local mesh, lanes in play. May discount the fiat ticket. Not a currency. Not Epistemic Proof — that is a proof-layer record, letter collision, does not buy milk. Product is the math: XP times L.",
         also: [
           { label: "Emergent Product", href: "/glossary", hash: "emergent-product" },
-          { label: "Tokens", href: "/#tokens" },
+          { label: "Ledger", href: "/#ledger" },
         ],
       },
       {
         id: "cat-ct-it",
         q: "What are CAT, CT, and IT?",
-        a: "CAT is Category: skills. Closer to an NFT than a fungible pile — is this person qualified to do this, and at what level. CT is Contribution Token: standing, reputation that is not a vibe. Feeds L at the till. IT is Influence Token, not Insight Token. Governance and demonstration work weights more. Obscure private labor still mints XP; it does not mint the same IT unless influence is the job. Everyone has some say. People who work that domain accrue more. IT decays ~5%/month if you vanish.",
+        a: "CAT is a skill record: unique, lane + level + issuer. Are you qualified to do this, and at what level. CT is contribution standing — a meter for this door. Feeds L at the till. IT is influence standing, not Insight Token. Governance and demonstration work weights more. Obscure private labor still mints XP; it does not mint the same IT unless influence is the job. IT decays ~5%/month if you vanish. None of these are bags.",
         also: [
           { label: "CAT", href: "/glossary", hash: "cat" },
           { label: "CT", href: "/glossary", hash: "ct" },
           { label: "IT", href: "/glossary", hash: "it" },
-          { label: "Tokens", href: "/#tokens" },
+          { label: "Ledger", href: "/#ledger" },
         ],
       },
       {

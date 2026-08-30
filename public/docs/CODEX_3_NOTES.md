@@ -137,6 +137,26 @@ Today: neighborhood-app writes `did:key` on first boot (`data/keys/node.pem`). H
 
 https://github.com/00ranman/extropy-engine/blob/main/docs/NODE_SECURITY.md
 
+## Records, meters, sparks — stop saying token (29 Aug 2026)
+
+Public copy. The crowd hears “token” and reaches for a bag. That is not this ledger.
+
+**Record** — unique signed vertex. One of one. Closed loop, CAT stamp, lane claim, complaint, EP at the till (written then burned).
+
+**Meter / standing** — a number over records. XP remaining, L, IT weight, CT standing. Not a collectible. Not transferable.
+
+**Till spark** — EP. Born and dead in the sale. `EP = XP × L`.
+
+**Domain** = the eight entropy instruments (enum). **Lane** = skill specialization. CAT lives on a lane. Do not use domain for both.
+
+CAT is a record: `(DID, lane, level, settled count, issuer)`. DT is not a bag. Old copy said Domain Token or Decay Token. Expertise is CAT-per-lane. The leak is already on XP. If the letter survives it is a unique lane-claim record, not a Domain Coin.
+
+Six was accretion, not physics. Kernel follow-up: kill `TokenType.DT` and CAT amount-mints in `packages/token-economy`.
+
+Canonical write-up: https://github.com/00ranman/extropy-engine/blob/main/docs/CODEX_3_NOTES.md
+
+---
+
 ## What 3.0 has to actually write
 
 Settle knob. XP decay next to IT decay. Late burn. SignalFlow as first-class. Claim path with evidence. MICRO overselling acknowledged. DAG as instrument. Burn-floor axiom yes/no. Box as for-profit intent. Access band as ZKP (display default off). Play boards opt-in, no power. Soulbound marks. Seasons ≠ diplomacy. Roles from showing up; votes for knobs. LOOK vertices; silent fetch forbidden. did:key on first boot. Unique-in-DFAO ZKP. Leave 2.1 alone until then.

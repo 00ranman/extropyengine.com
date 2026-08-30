@@ -34,7 +34,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "Start here", href: "/start" },
       { label: "FAQ", href: "/faq" },
       { label: "Glossary", href: "/glossary" },
-      { label: "Tokens", href: "/#tokens" },
+      { label: "Ledger", href: "/#ledger" },
       { label: "The pipe", href: "/#wire" },
       { label: "DFAO", href: "/dfao" },
       { label: "Open problems", href: "/open-problems" },
@@ -335,6 +335,11 @@ export type Paper = {
 
 export const papers: Paper[] = [
   {
+    tag: "Working lock · 29 Aug 2026",
+    title: "Working Formula Sheet",
+    href: "/docs/Extropy_Engine_Formula_Sheet.pdf",
+  },
+  {
     tag: "New · Music / Criticism",
     title: "Closing the Loop",
     href: "/papers/closing-the-loop",
@@ -597,7 +602,7 @@ export const engineStack = {
         { name: "xp-mint", d: "Mints when a loop closes with ΔS > 0. Enforces the criteria.", href: `${P}/xp-mint` },
         { name: "loop-ledger", d: "Closed verification loops as the atomic unit of value.", href: `${P}/loop-ledger` },
         { name: "dag-substrate", d: "Signed vertices, Lamport time, tip selection. The book.", href: `${P}/dag-substrate` },
-        { name: "token-economy", d: "XP, CT, CAT, IT, DT, EP. Separate so influence cannot be purchased with XP.", href: `${P}/token-economy` },
+        { name: "token-economy", d: "XP, CT, CAT, IT, EP. Records and meters. Influence cannot be purchased with XP. DT wallet slot is leftover.", href: `${P}/token-economy` },
         { name: "reputation", d: "Compressed evidence of past verification accuracy. Not a public ladder.", href: `${P}/reputation` },
         { name: "governance", d: "Proposal lifecycle inside a DFAO. Votes rewrite the room they are cast in.", href: `${P}/governance` },
         { name: "DFAO registry", d: "NANO → PLANETARY. Nested. Labels are suggestions, not fences.", href: `${P}/dfao-registry` },
@@ -638,12 +643,12 @@ export const engineDecay = {
 } as const;
 
 export const engineTokens = [
-  { t: "XP", d: "The letters are XP. Not Extropy Points. Not a slogan for experience points. ΔS is the entropy reduction. XP is the proxy of that ΔS on the ledger, bits-equivalent, so like-cases can be compared. You do not spend it. Access economy. Decays ~1%/month of remaining." },
-  { t: "EP", d: "Emergent Product. At the till: EP = XP × L. L is a fraction from the mesh — standing, how often you actually patronize this place, local ΔS, domains in play. May discount the fiat ticket. Not a currency. L is not a frozen coupon table." },
-  { t: "CT", d: "Contribution Token. Standing in the community. Feeds L. Not purchased with XP." },
-  { t: "CAT", d: "Category. Skills. Closer to an NFT than a pile — are you qualified to do this, and at what level." },
-  { t: "IT", d: "Influence Token. Governance and demonstration work weights more. Obscure private labor still mints XP; it does not mint the same IT. Decays ~5%/month if you vanish. Not Insight Token." },
-  { t: "DT", d: "Optional. A separate instrument if a DFAO wants one. Do not confuse it with XP’s 0.99ⁿ leak — that leak is already on XP." },
+  { t: "XP", d: "Standing meter. The letters are XP. ΔS is the reduction. XP is the proxy on the ledger. You do not spend it. Access economy. Decays ~1%/month of remaining." },
+  { t: "EP", d: "Till spark. Emergent Product. EP = XP × L at the register, then it burns. May discount the fiat ticket. Not a currency. Not a bag." },
+  { t: "CT", d: "Contribution standing. Meter for this door. Feeds L. Not purchased with XP." },
+  { t: "CAT", d: "Skill record. Unique. Lane + level + issuer. Are you qualified to do this, and at what level. Not a pile." },
+  { t: "IT", d: "Influence standing. Meter. Governance and demonstration weight more. Idle leak ~5%/month. Not Insight Token. Not a bag." },
+  { t: "Lane", d: "Skill specialization on a signed record. Not a Domain Coin. Domain (the eight instruments) is an enum. Claiming a lane is a vertex, not a dropdown." },
 ] as const;
 
 export const engineMath = {
@@ -725,6 +730,11 @@ export const socials = [
 
 export const docsIndex = [
   {
+    title: "Working Formula Sheet",
+    href: "/docs/Extropy_Engine_Formula_Sheet.pdf",
+    note: "Working lock 29 Aug 2026 — records, meters, till spark. Canonical letters.",
+  },
+  {
     title: "Neighborhood MESO",
     href: "/hoa",
     note: "HOA-shaped wrapper on the Engine. One command, you are a node. Jobs → confirm → XP.",
@@ -732,7 +742,7 @@ export const docsIndex = [
   {
     title: "Codex 3.0 notes",
     href: "/docs/CODEX_3_NOTES.md",
-    note: "Capture for the next Codex — XP decay vs IT, settle knob, late burn, DAG as instrument. 2.1 stays frozen.",
+    note: "Capture for the next Codex — records vs meters, CAT as skill record, DT is not a bag. 2.1 stays frozen.",
   },
   {
     title: "Extropy Codex v2.1",
