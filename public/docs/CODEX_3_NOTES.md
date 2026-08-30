@@ -16,7 +16,7 @@ MACROs coordinate off MICROs. MICROs are subjective. People oversell. Numbers ca
 
 **SignalFlow** — what you talk to. Assistant you trust (ChatGPT, Claude, Gemini, or a model on your own box) + PSLL + previous numbers + the network. Company login = company tether. Own hardware = unknown. A network-hosted model is a later idea.
 
-**Claim path:** mow the lawn → SignalFlow + LLM look at the task and duration → before/after on the DAG → provisional ΔS (if-then) → other side agrees → standing XP. You never put yourself in for a number.
+**Claim path:** mow the lawn — including **your own** — → SignalFlow + LLM look at the task and duration → before/after on the DAG → provisional ΔS (if-then) → other side agrees → standing XP. You never put yourself in for a number. A job is one face of a loop. It is not the box.
 
 **PSLL** — Personal Signed Local Log. Yours. Mesh gets receipts, not the diary.
 
@@ -154,6 +154,21 @@ CAT is a record: `(DID, lane, level, settled count, issuer)`. DT is not a bag. O
 Six was accretion, not physics. Kernel follow-up: kill `TokenType.DT` and CAT amount-mints in `packages/token-economy`.
 
 Canonical write-up: https://github.com/00ranman/extropy-engine/blob/main/docs/CODEX_3_NOTES.md
+
+---
+
+## Own lawn, rest, retirement (30 Aug 2026)
+
+The extractive picture: clock in, clock out, rest is a hole, only what you sold to someone else counted, retirement is unemployment with a cake.
+
+Kill that in 3.0.
+
+- **Own lawn.** The ΔS is the grass. HomeFlow can close it. Neighbor-mows-yours is two households. You-mow-yours is one house taking care of itself. Same physical reduction. You do not type a score. F still applies if it is every Saturday.
+- **No PTO token.** Standing already minted is what you live on while you rest. XP leak is ~1%/month of remaining, not a pink slip. Sick is not a clawback. Care is a loop for the person who shows up. Recovery can be biological ΔS if the loop closes.
+- **Buying is coupling, not a mint.** Patronage updates this-door CT / L. Cash cannot mint XP.
+- **Anything verifiable.** Self-report, sensor, claim, assistant — then the other side agrees. Work-for-a-boss is one input. Living was never inside that box.
+
+FAQ: `/faq#own-lawn` `/faq#retire` `/faq#pto` `/faq#not-a-job`
 
 ---
 

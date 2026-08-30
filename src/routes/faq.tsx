@@ -10,7 +10,7 @@ export const Route = createFileRoute("/faq")({
       {
         name: "description",
         content:
-          "Extropy Engine FAQ: XP formula vs irreducible floor, bits-equivalent, glass of water, late mint, decay, SignalFlow, DFAO. The attacks, answered.",
+          "Extropy Engine FAQ: XP formula, till spark, own lawn, retirement, rest, late mint, decay, SignalFlow, DFAO. The attacks, answered.",
       },
     ],
   }),

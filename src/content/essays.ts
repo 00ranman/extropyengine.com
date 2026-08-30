@@ -345,9 +345,14 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
         def: "The errand face. Rides, food, groceries, the car you don’t have — Uber, Lyft, DoorDash, Grubhub in one pile. Confirmation is the receipt. Not the protocol. Not the Engine. Remaining constraint is subscriber density in a zone.",
       },
       {
-        term: "HomeFlow",
-        id: "homeflow",
-        def: "The household / building face. Chores, IoT, rooms. Thermodynamic measurement of the place you live. Same loop as LocalFlow.",
+        term: "Own lawn",
+        id: "own-lawn",
+        def: "You mow your own grass. The ΔS is the lawn, not a wage sold to a neighbor. HomeFlow can close it. You do not type a score. F still applies if you do it every week. The extractive picture only counted work you sold. That box was the job’s.",
+      },
+      {
+        term: "Rest / retirement",
+        id: "rest",
+        def: "Not a hole. Standing already minted leaks slowly (~1%/month of remaining). Living still writes loops — house, care, recovery, a garden. No PTO token. Sick is not a clawback. Vacation is not theft from a boss. If you vanish from every loop including your own life, it fades like anyone else’s. That is the treadmill, not unemployment.",
       },
       {
         term: "Quest market",

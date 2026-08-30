@@ -15,7 +15,7 @@ export type FaqSection = {
 export const faqPage = {
   title: "FAQ",
   kicker: "The attacks, answered",
-  lead: "Glossary is the dictionary. This is the argument. Same questions keep showing up in debates — irreducible slogan, glass of water, untested, teacher-to-president, decay that never hits zero. If you came to grade a t-shirt, start here. If you came to run a loop, skip to the last section.",
+  lead: "Glossary is the dictionary. This is the argument. Same questions keep showing up in debates — irreducible slogan, glass of water, untested, teacher-to-president, decay that never hits zero, retirement as a hole. If you came to grade a t-shirt, start here. If you came to ask whether rest counts, skip to the own lawn. If you came to run a loop, skip to the last section.",
 } as const;
 
 export const faqSections: FaqSection[] = [
@@ -263,6 +263,49 @@ export const faqSections: FaqSection[] = [
         q: "You said no fiat on-ramp. So this replaces money?",
         a: "No. No on-ramp means cash cannot mint XP. People keep spending dollars. The Engine is a tracking layer: bits-equivalent proxies, fine-tuned as like-cases stack, so the ΔS of this kind of exchange gets less wrong. A vertex can settle some of the ticket. That is not EP = this many dollars. Mom-and-pop first. Repeat-farming is F. Keep the other job or don’t.",
         also: [{ label: "Engine — shop view", href: "/#engine" }],
+      },
+    ],
+  },
+  {
+    heading: "Retirement, rest, the own lawn",
+    items: [
+      {
+        id: "own-lawn",
+        q: "Do I only earn XP working a job, or helping a neighbor?",
+        a: "No. That’s the old clock. The mint is verified entropy reduction, not a wage. You mow your own lawn: the grass is shorter, the mess is less. HomeFlow can close that loop. Sensors can hang evidence. They do not mint. Someone in the household, or the mesh, still has to agree. You do not type in a score. You get the reduction of that lawn — the same physical ΔS a neighbor would have produced mowing it for you. The neighbor version is two households. Yours is one house taking care of itself. F still applies: mowing it every Saturday pays less than the first time. Cooking, putting a kid to bed, fixing the hinge, walking the dog, recovering from a fever if the loop can close — those are loops. A job is one way a loop shows up. It is not the box.",
+        also: [
+          { label: "HomeFlow", href: "/glossary", hash: "homeflow" },
+          { label: "XP", href: "/glossary", hash: "xp" },
+        ],
+      },
+      {
+        id: "retire",
+        q: "What if I retire? Or get sick? Or take a vacation? Do I starve when I stop “working”?",
+        a: "People rarely retire into a coma. They keep a house, a garden, grandkids, a body, a street. That still mints if it is real and the loop closes. Standing you already have does not vanish on a Friday. XP leaks ~1% of remaining per month — half still there at ~5.8 years. You live on that, plus whatever living still writes. Sick: you are not clawed for being sick. Care is a loop for the person who shows up. Vacation: rest is not a hole in a living system. Recovery is biological. A week that actually puts a life back together is not “unproductive.” You do not need a PTO token. The extractive picture accrued sick days because the job was the only meter and rest was a theft from it. Here the meter is the life. If you vanish from every loop including your own house, standing fades like anyone else’s. That is the treadmill, not a boss taking your days.",
+        also: [
+          { label: "XP decay", href: "/glossary", hash: "xp-decay" },
+          { label: "Rest / retirement", href: "/glossary", hash: "rest" },
+          { label: "0.99ⁿ", href: "/#decay" },
+        ],
+      },
+      {
+        id: "pto",
+        q: "So is there PTO? Sick days? A vacation balance?",
+        a: "Not as a separate pile you spend. PTO was a patch on a wage that stopped when you left the building. Here you already accrued the thing that matters: standing from loops that closed. You can live on it while you rest. It leaks slowly. You also keep coupling — buying at a door you belong to updates this-door CT, which feeds L next time. Cash still cannot mint XP. Showing up is not a paycheck. It is how this shop still knows you. If you want a written vacation ledger, you are asking for the old box back. The circle is: live, loops close, standing sits, till spark at the door, rest is still a life.",
+        also: [
+          { label: "CT", href: "/glossary", hash: "ct" },
+          { label: "Emergent Product", href: "/glossary", hash: "emergent-product" },
+          { label: "At the till", href: "/faq", hash: "milk" },
+        ],
+      },
+      {
+        id: "not-a-job",
+        q: "This still sounds like work-score capitalism with extra steps.",
+        a: "That’s the training. Clock in, clock out, rest is a hole, only what you sold to someone else counted. This measures anything you can self-report, have a sensor report, submit as a claim, or tell an assistant — then have verified. Not a vibe. Not a diary entry that prints money. SignalFlow proposes. The other side agrees. The box was the job’s. Living was never inside it. A decentralized mesh does not need you to pick one employer as the meaning of a year. Years stack. Pieces fall in. You were already mowing the lawn.",
+        also: [
+          { label: "SignalFlow", href: "/glossary", hash: "signalflow" },
+          { label: "UI for your life", href: "/glossary", hash: "ui-for-your-life" },
+        ],
       },
     ],
   },
