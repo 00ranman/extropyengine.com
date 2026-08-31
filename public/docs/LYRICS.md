@@ -3659,7 +3659,7 @@ No FICO, no halo — just the closes in the grid
 Passive audits running while you sell your coffee beans
 Customers think they're earning points, they're feeding truth machines
 
-C L is the speed of loop closure
+The t-shirt ain't the mint, I already told ya
 Delta S is the entropy, hold ya
 Every feedback loop I capture
 Brings the old world to rapture
