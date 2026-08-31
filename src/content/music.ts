@@ -47,6 +47,8 @@ const LOCAL: Record<string, string> = {
   "power-lunch-at-the-soup-kitchen": "/audio/power-lunch-at-the-soup-kitchen.mp3",
 };
 
+export const localAudioBySlug = LOCAL;
+
 const LYRIC_ALIAS: Record<string, string> = {
   "and-that-s-how": "and-thats-how",
   "and-thats-how-how": "and-thats-how",

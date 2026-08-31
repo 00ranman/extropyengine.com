@@ -1,8 +1,63 @@
+import { localAudioBySlug, masterSongs } from "@/content/music";
+
 export const BED_SRC = "/audio/irrelevance-is-the-killshot.mp3";
 export const BED_VOLUME = 0.18;
 const TIME_KEY = "ee-bed-t";
 const SRC_KEY = "ee-audio-src";
 const PAUSE_KEY = "ee-bed-paused";
+
+/** Paper order from Closing the Loop. Remainder of /audio follows catalog, then leftovers. */
+const PAPER_SLUGS = [
+  "kill-the-arc",
+  "no-filter-no-bs",
+  "no-ones-lying",
+  "inside-the-machine",
+  "cult-of-disagreement",
+  "syntax-sabotage",
+  "a-little-free",
+  "the-real-magic",
+  "what-is-god",
+  "blueprint",
+  "clap-if-youre-programmed",
+  "coordinates",
+  "the-glitch-was-me",
+  "civilizational-facepalm",
+  "and-thats-how",
+] as const;
+
+function uniq(paths: string[]) {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const p of paths) {
+    if (!p || seen.has(p)) continue;
+    seen.add(p);
+    out.push(p);
+  }
+  return out;
+}
+
+export function bedPlaylist() {
+  const paper = uniq(PAPER_SLUGS.map((slug) => localAudioBySlug[slug]).filter(Boolean));
+  const used = new Set<string>([BED_SRC, ...paper]);
+  const rest: string[] = [];
+  for (const s of masterSongs) {
+    if (s.src && !used.has(s.src)) {
+      rest.push(s.src);
+      used.add(s.src);
+    }
+  }
+  for (const src of uniq(Object.values(localAudioBySlug))) {
+    if (!used.has(src)) rest.push(src);
+  }
+  return [BED_SRC, ...paper.filter((p) => p !== BED_SRC), ...rest];
+}
+
+function nextSrc(current: string) {
+  const q = bedPlaylist();
+  const i = q.indexOf(current);
+  if (i === -1) return q[0] ?? BED_SRC;
+  return q[(i + 1) % q.length];
+}
 
 let audio: HTMLAudioElement | null = null;
 let fadedIn = false;
@@ -42,13 +97,6 @@ function saveTime() {
   sessionStorage.setItem(SRC_KEY, pathOf(audio));
 }
 
-function isBedPath(src: string) {
-  return (
-    src.endsWith("irrelevance-is-the-killshot.mp3") ||
-    src.endsWith("evolution-not-revolution.mp3")
-  );
-}
-
 function whenReady(el: HTMLAudioElement) {
   if (el.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) return Promise.resolve();
   return new Promise<void>((resolve, reject) => {
@@ -83,7 +131,7 @@ export function getBed() {
     audio.preload = "auto";
     audio.setAttribute("playsinline", "");
     audio.setAttribute("data-src", initial);
-    audio.loop = isBedPath(initial);
+    audio.loop = false;
     audio.volume = 0;
     const restore = () => {
       if (switching) return;
@@ -99,8 +147,8 @@ export function getBed() {
     audio.addEventListener("loadedmetadata", restore);
     audio.addEventListener("timeupdate", saveTime);
     audio.addEventListener("ended", () => {
-      if (!audio || switching || isBedPath(pathOf(audio))) return;
-      void playSrc(BED_SRC, true, { fadeMs: 800 });
+      if (!audio || switching || userPaused) return;
+      void playSrc(nextSrc(pathOf(audio)), false, { fadeMs: 800 });
     });
   }
   return audio;
@@ -154,6 +202,8 @@ export async function playSrc(
       await whenReady(el);
     } catch {
       switching = false;
+      const nxt = nextSrc(src);
+      if (nxt !== src) void playSrc(nxt, false, opts);
       return;
     }
     try {
