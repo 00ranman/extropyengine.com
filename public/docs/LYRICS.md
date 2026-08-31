@@ -910,46 +910,41 @@ If the math ain't mathin'. rewrite the game
 ### 9. Irrelevance (Is the Killshot)
 
 They want fire, I bring fungus
-Quiet spread in the cracks with trust rust
-They chant, tear it down
+Quiet spread in the cracks where trust rusts
+They chant tear it down
 I forked the code and left town
-See revolutions will rerun
-Same arc, new face
-Still no reroute
+See, revolution's a rerun
+Same arc, new face, still no reroute
 But recursion
-That rewrites the map
-While they shout
-
-Irrelevance is the kill shot
+That rewrites the map while they shout
+Irrelevance is the killshot
 Not war, not protest
 When the world moves on
 The kings look lost
-Irrelevance is the kill shot
+Irrelevance is the killshot
 No throne to storm
 Just systems left
 In obsolete form
-
 You don't need to topple the tower
 Just build where gravity has no power
 They fight for control
 We move the loop, reroute the goal
-You want riots, I want runtime
-You want votes, I want version time
+You want riots
+I want runtime
+You want votes
+I want versioned time
 I'm not here to fight for the crown
 I'm here to make it not matter now
-
-Irrelevance is the kill shot
-No bank, no coup
+Irrelevance is the killshot
+No bang, no coup
 Just silence
 Where they once ruled you
-
 They trained you to scream at walls
 While the door was always behind you
 They framed collapse as chaos
 But I framed it as exit
 Revolution wants fire
-Evolution builds exit
-
+Evolution builds exits
 Every loop tighter
 Every fork wiser
 Every failed collapse
@@ -958,15 +953,14 @@ No flags, no fists
 Just functions that persist
 You want to overthrow
 I want the whole damn myth dismissed
-
-Irrelevance is the kill shot
+Irrelevance is the killshot
 Not louder, just later
-While they scream for change
-We change the paper
-Irrelevance is the kill shot
+While they screamed for change
+We changed the paper
+Irrelevance is the killshot
 Not bombs, not knives
 Just new math
-Living new life
+Living new lives
 
 ### 10. Memetic Infection
 
