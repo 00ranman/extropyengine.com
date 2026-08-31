@@ -172,6 +172,45 @@ FAQ: `/faq#own-lawn` `/faq#retire` `/faq#pto` `/faq#not-a-job`
 
 ---
 
+## Slam window, three clocks, attacks (30 Aug 2026)
+
+Tₛ is **not** recency decay. The comment in `packages/xp-formula` that says “recency” is a lie. Kill it.
+
+```
+Tₛ = exp(−λ min(Δt, Δt_cap))
+log(1/Tₛ) = λ · clip(Δt, 0, Δt_cap)
+```
+
+Δt → 0 ⇒ Tₛ = 1 ⇒ log = 0 ⇒ XP = 0. Slam-shut. On purpose. Do **not** change this to `log(1 + 1/Tₛ)` so Tₛ=1 pays. That pays slam-bots.
+
+Δt_cap is a knob. Default: the action class’s expected duration (quest grain 2–5 min unless the class says otherwise). Unbounded λΔt is a stall-farm. Cap it.
+
+Three clocks. Do not mash:
+
+| Clock | Job |
+| --- | --- |
+| Tₛ | This loop’s elapsed time. Slam-shut at 0. Capped. |
+| F | Repeating the action class. |
+| 0.99ⁿ | Standing after settlement. ~1%/month of remaining. |
+
+Settle window is provisional → standing. IT ~5%/month is voice. Neither is Tₛ.
+
+Rarity-splitting 400 fake classes is a **DAG** job. The formula will not catch it.
+
+### Experiments to write as tests (not vibes)
+
+1. ΔS calibration — 100 identical tasks, error → correction → converge, or fail.
+2. Farming resistance — assume everyone manufactures XP. R/F/Tₛ/confirm/evidence/late burn.
+3. L as extraction machine — captured DFAO juices L. Economic attack.
+4. Late mint — citation-gated delta, not a second paycheck. Simulate 20-year discovery.
+5. (w · E) — does the vector improve predictions or become a vote.
+
+You do not need ΔS perfect. You need the error to get expensive.
+
+FAQ: `/faq#three-clocks` `/faq#explain` `/faq#l-farm`
+
+---
+
 ## What 3.0 has to actually write
 
 Settle knob. XP decay next to IT decay. Late burn. SignalFlow as first-class. Claim path with evidence. MICRO overselling acknowledged. DAG as instrument. Burn-floor axiom yes/no. Box as for-profit intent. Access band as ZKP (display default off). Play boards opt-in, no power. Soulbound marks. Seasons ≠ diplomacy. Roles from showing up; votes for knobs. LOOK vertices; silent fetch forbidden. did:key on first boot. Unique-in-DFAO ZKP. Leave 2.1 alone until then.

@@ -658,13 +658,13 @@ export const engineMath = {
   formula: "XP = R × F × ΔS × (w · E) × log(1/Tₛ)",
   floor:
     "Floor: XP ≥ ΔS / cₗ². Irreducible form — a compression of the mint above, same job as E = mc² next to the full energy-momentum relation. Not the theory. Not a new physics law. Glossary has the line.",
-  source: "packages/xp-formula — canonical v3.1.2. Reputation never enters this formula.",
+  source: "packages/xp-formula — canonical v3.1.2. Reputation never enters this formula. Tₛ is a slam window with a Δt cap; standing leak is 0.99ⁿ.",
   terms: [
     { t: "R", d: "Rarity. Scarcity / base difficulty of this action class. Property of the loop, not the person." },
     { t: "F", d: "Frequency-of-decay. Repeating the same class pays less. 1.0 the first time. Not falsifiability." },
     { t: "ΔS", d: "Verified entropy reduction. Must be > 0. This is the proxy we keep arguing about below." },
     { t: "w · E", d: "Weight vector dotted with the effort / domain vector. Lawn vs ride vs ozone. Also the glass of water: desert vs stream is a different coupled system, not a mood painted on an unchanged glass." },
-    { t: "Tₛ", d: "Timestamp decay in (0, 1]. log(1/Tₛ) stops farming by slamming loops shut." },
+    { t: "Tₛ", d: "Slam window, not recency. Tₛ = exp(−λ min(Δt, Δt_cap)). Instant close → log = 0 → XP = 0, on purpose. Cap Δt so stalling is not a mint. Standing leak is 0.99ⁿ, a different clock." },
   ],
   body: [
     "We are open to a constant for “mowing a lawn.” We do not expect one. “Lawn” and “mowed” are words. Words drift. Linguistic relativity is not a vibe; it is why freezing a number and calling it a constant is often an ontological sleight of hand. You did not find physics. You froze a description.",
@@ -732,7 +732,7 @@ export const docsIndex = [
   {
     title: "Working Formula Sheet",
     href: "/docs/Extropy_Engine_Formula_Sheet.pdf",
-    note: "Working lock 29 Aug 2026 — records, meters, till spark. Canonical letters.",
+    note: "Working lock — records, meters, till spark. Tₛ is the slam window, not recency. Three clocks.",
   },
   {
     title: "Neighborhood MESO",
@@ -742,7 +742,7 @@ export const docsIndex = [
   {
     title: "Codex 3.0 notes",
     href: "/docs/CODEX_3_NOTES.md",
-    note: "Capture for the next Codex — records vs meters, CAT as skill record, DT is not a bag. 2.1 stays frozen.",
+    note: "Capture for the next Codex — slam window, three clocks, L-farm, ΔS calibration. 2.1 stays frozen.",
   },
   {
     title: "Extropy Codex v2.1",

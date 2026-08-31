@@ -42,7 +42,7 @@ export function QuietPlayer() {
         toggleBed();
         setPlaying(isBedPlaying());
       }}
-      className="no-print fixed right-3 bottom-3 z-50 flex size-11 items-center justify-center border border-primary/25 bg-bg/90 text-sm text-primary backdrop-blur-md hover:border-primary/50"
+      className="no-print fixed right-3 bottom-3 z-50 flex size-14 items-center justify-center border border-primary/55 bg-bg/40 text-lg text-primary shadow-[0_0_14px_rgb(255_90_31_/_0.35)] backdrop-blur-sm [text-shadow:0_0_12px_rgb(255_90_31_/_0.8)] hover:border-primary hover:bg-bg/55 hover:shadow-[0_0_20px_rgb(255_90_31_/_0.5)]"
       aria-label={playing ? "Pause" : "Play"}
     >
       {playing ? "‖" : "▶"}

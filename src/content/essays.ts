@@ -553,8 +553,14 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
         def: "Weight vector dotted with the effort / eight-domain vector. Where cross-domain terms (gas, ozone, alternative trips) actually accumulate. The glass of water lives here — not in a vibe.",
       },
       {
-        term: "Tₛ",
-        def: "Timestamp decay in (0, 1], typically exp(−λΔt). log(1/Tₛ) stops farming by slamming loops shut.",
+        term: "Tₛ — slam window",
+        id: "ts",
+        def: "Not recency decay. Not the 0.99ⁿ leak. Tₛ = exp(−λ min(Δt, Δt_cap)). Then log(1/Tₛ) = λ·clip(Δt). Instant confirm (Δt → 0) → Tₛ = 1 → log = 0 → XP = 0. That is slam-shut, on purpose. Stalling past the action-class cap does not print more. Δt_cap is a knob; default is the class’s expected duration (quest grain 2–5 min unless the class says otherwise). Do not rewrite this as log(1+1/Tₛ) to make Tₛ=1 nonzero. That undoes the anti-farm.",
+      },
+      {
+        term: "Three clocks",
+        id: "three-clocks",
+        def: "Do not mash them. (1) Tₛ — this loop’s elapsed time, slam-shut at 0, capped so wait-farming dies. (2) F — repeating the action class pays less. (3) 0.99ⁿ — standing leak after settlement, ~1%/month of remaining, half-life ~69 months. Settle window is a fourth, different job: provisional → standing. IT’s ~5%/month is a fifth, on voice, not XP.",
       },
       {
         term: "Late mint",
@@ -685,6 +691,36 @@ export const openProblems: Problem[] = [
     hardness: "OPEN",
     title: "Incentive Gaming at Scale",
     body: "At sufficient scale, sophisticated actors will find ways to game entropy metrics just as they game every other metric. The framework's defense is recursive auditing, but the cat-and-mouse dynamics at civilizational scale are unpredictable.",
+  },
+  {
+    section: "Experiments",
+    hardness: "HARD",
+    title: "ΔS calibration",
+    body: "Take a hundred identical real tasks. Independent observers and models estimate ΔS. Watch downstream effects. Measure prediction error → correction → convergence. If the proxy does not get cheaper to keep wrong, the architecture failed. This is the first empirical test. Not the slogan.",
+  },
+  {
+    section: "Experiments",
+    hardness: "HARD",
+    title: "Farming resistance",
+    body: "Assume everyone is trying to manufacture XP. Attack R (split one job into 400 fake-rare classes), F, slam-shut Tₛ, confirmation, bilateral agreement, evidence, late burn. The formula will not catch rarity-splitting. The DAG has to see one underlying operation. If the graph cannot, F and Tₛ are furniture.",
+  },
+  {
+    section: "Experiments",
+    hardness: "HARD",
+    title: "L as an extraction machine",
+    body: "If L turns standing into a till spark, a captured DFAO might juice L and harvest EP. The lock: L is live rank against house load, both edges accept, coefficient public, cash cannot mint XP, fridge does not lock. Test whether a house can still extract. This is the economic attack, not a philosophy problem.",
+  },
+  {
+    section: "Experiments",
+    hardness: "ACTIVE",
+    title: "Late discovery / late mint",
+    body: "Ordinary work mints a small proxy. Twenty years later the work was vastly more important. Late mint is citation-gated, proxy delta only, not a second full paycheck. Simulate it. If it becomes a retroactive windfall, the bound failed.",
+  },
+  {
+    section: "Experiments",
+    hardness: "HARD",
+    title: "Cross-domain (w · E) as a political knob",
+    body: "Lawn, ride, ozone, mediation do not share a constant. The vector is the claim. Demonstrate that it improves predictions rather than becoming a tunable vote. If w moves with faction, not with evidence, the DAG is a sermon.",
   },
   {
     section: "Philosophy",

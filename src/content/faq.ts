@@ -15,7 +15,7 @@ export type FaqSection = {
 export const faqPage = {
   title: "FAQ",
   kicker: "The attacks, answered",
-  lead: "Glossary is the dictionary. This is the argument. Same questions keep showing up in debates — irreducible slogan, glass of water, untested, teacher-to-president, decay that never hits zero, retirement as a hole. If you came to grade a t-shirt, start here. If you came to ask whether rest counts, skip to the own lawn. If you came to run a loop, skip to the last section.",
+  lead: "Glossary is the dictionary. This is the argument. Same questions keep showing up in debates — irreducible slogan, glass of water, untested, teacher-to-president, decay that never hits zero, Tₛ=1, retirement as a hole. If you came to grade a t-shirt, start here. If you came to ask whether rest counts, skip to the own lawn. If you came to run a loop, skip to the last section.",
 } as const;
 
 export const faqSections: FaqSection[] = [
@@ -30,6 +30,16 @@ export const faqSections: FaqSection[] = [
           { label: "Engine", href: "/#engine" },
           { label: "Watch", href: "/#film" },
           { label: "Enter", href: "/start" },
+        ],
+      },
+      {
+        id: "explain",
+        q: "How do I explain this without saying entropy token?",
+        a: "Verified change in a system. Causal evidence on a DAG. Standing from that evidence. Standing is not money — it can change access. ΔS is the measurement proxy. XP is the global standing. CT and L are this door. EP is the till spark, born and burned in the sale. CAT is skill. IT is voice. Those last two stay off the mint so credentials and votes cannot be bought with XP. The hard test is not the slogan. It is whether the proxy’s error gets expensive. The fungus line stays the hook. This paragraph is the translation.",
+        also: [
+          { label: "Ledger", href: "/#ledger" },
+          { label: "Three clocks", href: "/glossary", hash: "three-clocks" },
+          { label: "Open problems", href: "/open-problems" },
         ],
       },
       {
@@ -113,8 +123,12 @@ export const faqSections: FaqSection[] = [
       {
         id: "formula",
         q: "What is the actual XP formula?",
-        a: "XP = R × F × ΔS × (w · E) × log(1/Tₛ). Canonical v3.1.2. Reputation never enters it. That is the thing that runs. R is rarity of the action class, F is frequency-of-decay, ΔS is verified reduction, w · E is the cross-domain vector, Tₛ stops slam-shut farming.",
-        also: [{ label: "The mint", href: "/glossary", hash: "xp-formula" }],
+        a: "XP = R × F × ΔS × (w · E) × log(1/Tₛ). Canonical v3.1.2. Reputation never enters it. Tₛ is the slam window: instant confirm pays 0. Δt is clipped to the action class so waiting is not a mint. F is repeats. 0.99ⁿ is standing after settlement. Three clocks.",
+        also: [
+          { label: "The mint", href: "/glossary", hash: "xp-formula" },
+          { label: "Tₛ", href: "/glossary", hash: "ts" },
+          { label: "Three clocks", href: "/glossary", hash: "three-clocks" },
+        ],
       },
       {
         id: "irreducible",
@@ -221,6 +235,16 @@ export const faqSections: FaqSection[] = [
         q: "Is the 30-day settle window a law?",
         a: "No. It was a starting number. Could be 5–40. Per-DFAO knob. Late burn has no expiry either way. 5%/month is IT, not XP. XP decay is ~1%/month of remaining.",
       },
+      {
+        id: "three-clocks",
+        q: "Tₛ = 1 makes XP = 0. Is the formula broken? Are F, Tₛ, and 0.99ⁿ the same clock?",
+        a: "Not broken. Tₛ = 1 means you slammed the loop shut (Δt ≈ 0). log(1/Tₛ) = 0 is the anti-farm, on purpose. People read “decay factor = 1” as “full payout.” That is how decay usually works. This term is elapsed time of this loop, Tₛ = exp(−λ min(Δt, Δt_cap)), so log(1/Tₛ) = λ·clip(Δt). Three clocks: Tₛ this loop, F repeating the class, 0.99ⁿ standing after it settles. Do not “fix” it with log(1+1/Tₛ). That pays slam-bots. Cap Δt so stalling does not print. Rarity-splitting 400 fake classes is a DAG job, not this term.",
+        also: [
+          { label: "Three clocks", href: "/glossary", hash: "three-clocks" },
+          { label: "Tₛ", href: "/glossary", hash: "ts" },
+          { label: "XP decay", href: "/glossary", hash: "xp-decay" },
+        ],
+      },
     ],
   },
   {
@@ -263,6 +287,15 @@ export const faqSections: FaqSection[] = [
         q: "You said no fiat on-ramp. So this replaces money?",
         a: "No. No on-ramp means cash cannot mint XP. People keep spending dollars. The Engine is a tracking layer: bits-equivalent proxies, fine-tuned as like-cases stack, so the ΔS of this kind of exchange gets less wrong. A vertex can settle some of the ticket. That is not EP = this many dollars. Mom-and-pop first. Repeat-farming is F. Keep the other job or don’t.",
         also: [{ label: "Engine — shop view", href: "/#engine" }],
+      },
+      {
+        id: "l-farm",
+        q: "Can a shop (or a DFAO) just crank L and extract XP?",
+        a: "That’s the economic attack. L is live rank against this house’s load, not a coupon the owner types. Both edges have to accept the estimate. House coefficient is public. Cash still rings the rest — L cannot lock the fridge. A DFAO that tries to become an XP till by juicing L is farming; F, contest, and late burn still apply. Unsolved experimentally: whether a captured house can still extract. That’s a test, not a vibe. See open problems.",
+        also: [
+          { label: "Emergent Product", href: "/glossary", hash: "emergent-product" },
+          { label: "Open problems", href: "/open-problems" },
+        ],
       },
     ],
   },
