@@ -920,11 +920,11 @@ But recursion
 That rewrites the map
 While they shout
 
-The relevance is the kill shot
+Irrelevance is the kill shot
 Not war, not protest
 When the world moves on
 The kings look lost
-The relevance is the kill shot
+Irrelevance is the kill shot
 No throne to storm
 Just systems left
 In obsolete form
@@ -938,7 +938,7 @@ You want votes, I want version time
 I'm not here to fight for the crown
 I'm here to make it not matter now
 
-The relevance is the kill shot
+Irrelevance is the kill shot
 No bank, no coup
 Just silence
 Where they once ruled you
@@ -959,11 +959,11 @@ Just functions that persist
 You want to overthrow
 I want the whole damn myth dismissed
 
-The relevance is the kill shot
+Irrelevance is the kill shot
 Not louder, just later
 While they scream for change
 We change the paper
-The relevance is the kill shot
+Irrelevance is the kill shot
 Not bombs, not knives
 Just new math
 Living new life
