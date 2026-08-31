@@ -35,13 +35,14 @@ export function NowPlayingTicker() {
     setReduce(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
     getBed();
     setSnap(bedSnapshot());
-    const unsub = subscribeBed(() => setSnap(bedSnapshot()));
-    const id = window.setInterval(() => setSnap(bedSnapshot()), 200);
-    return () => {
-      unsub();
-      window.clearInterval(id);
-    };
+    return subscribeBed(() => setSnap(bedSnapshot()));
   }, []);
+
+  useEffect(() => {
+    if (hidden || snap.paused) return;
+    const id = window.setInterval(() => setSnap(bedSnapshot()), 200);
+    return () => window.clearInterval(id);
+  }, [hidden, snap.paused]);
 
   useEffect(() => {
     const t = window.setTimeout(() => setHolding(false), HOLD_MS);
@@ -49,7 +50,10 @@ export function NowPlayingTicker() {
   }, []);
 
   useEffect(() => {
-    if (hidden || reduce) return;
+    if (hidden || reduce || snap.paused) {
+      setFlicker(false);
+      return;
+    }
     let t = 0;
     let on = false;
     const schedule = () => {
@@ -62,7 +66,7 @@ export function NowPlayingTicker() {
     };
     schedule();
     return () => window.clearTimeout(t);
-  }, [hidden, reduce]);
+  }, [hidden, reduce, snap.paused]);
 
   useEffect(() => {
     document.body.style.paddingBottom = hidden ? "" : "2.75rem";
@@ -79,7 +83,7 @@ export function NowPlayingTicker() {
   return (
     <div
       className="now-ticker no-print fixed right-0 bottom-0 left-0 z-40 flex items-center gap-2 overflow-hidden border-t border-primary py-2 pr-[4.75rem] pl-3 text-[13px] font-semibold text-fg"
-      data-glitch={flicker && !reduce ? "flicker" : "idle"}
+      data-glitch={flicker && !reduce && !snap.paused ? "flicker" : "idle"}
     >
       <div className="ticker-copy relative z-10 min-w-0 flex-1 overflow-hidden">
         {holding ? (
