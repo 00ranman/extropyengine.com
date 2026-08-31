@@ -3615,81 +3615,100 @@ You are the system being run
 
 ### 12. XP FRAMEWORK_ THE TAKEOVER
 
-They built surveillance I built coherence
-X P equals delta S over C L squared
-Physics don't lie physics don't lie
-Started with nodes in my basement M S P four thirty humming
+Started with nodes in my basement, M S P four thirty humming
 Harvest R F waves while these corporations slumming
-In your data in your habits they be mining for the gold
-I'm mining for the truth every loop that's closed is sold
-Built a trojan they can't see wrapped in loyalty disguise
-Just another rewards program watch the entropy demise
-Square charging two point six I'm at two flat plus a dime
-But beneath that merchant layer I'm encoding space and time
-They see tablets taking payments I see nodes that validate
-Every transaction's measuring if reality's more great
-Super caps charging off the air no batteries in my mesh
-While Zuckerberg sells eyeballs I'm selling physics fresh
-I flip the game flip the game X P
-Truth disguised as merchant pay Let's see
-They track your moves I track what's real
-Entropy reduction that's the deal
+In your data, in your habits, they mining for the gold
+I don't sell the loop — I mint it, then I hold
+
+Built a trojan they can't see, wrapped in loyalty disguise
+"Just another rewards program" — watch the entropy demise
+Square charging two point six, I'm at two flat plus a dime
+But beneath that merchant layer, I'm encoding space and time
+
+They see tablets taking payments, I see nodes that validate
+Every ring of the drawer asking chaos what it paid
+Super caps charging off the air, no batteries in my mesh
+While Zucker berg sells eyeballs, I'm selling physics fresh
+
+I flip the game, flip the game (X P!)
+Truth disguised as merchant pay (Let's see!)
+They track your moves, I track what's real
+Entropy reduction, that's the deal
 D A G nodes hidden in the P O S
-Coherence engine nothing less
-By the time they see what we've become
-The revolution's already won
-Meta pitch to C E Os I tell them straight what this is
-We're building truth detection wrapped in point of sale biz
-If they get it they're my allies conscious nodes in the net
-If they don't I pitch them comfort unconscious nodes I get
+Coherence engine, nothing less
+By the time they clock what we've become
+We already rang it up
+
+Meta pitch to C E Os, I tell them straight what this is
+"We're building truth detection wrapped in point of sale biz"
+If they get it, they're my allies, conscious nodes in the net
+If they don't, I pitch them comfort — still a till, still a threat
+
 Either way I'm building infrastructure they can't stop
 Every mom and pop I sign up is another truth shop
-Intel nucs in tier two pretending they're for analytics
+Intel nucs in tier two, pretending they're for analytics
 But really they're validators in my physics based statistics
-Three thousand for a titan node creator monetization
-Secret it's a You Tube killer through decentralization
-Storage mesh compute mesh payment mesh all one
-Asking got a loyalty program Revolution's begun
-Lora signals in the air validators everywhere
-Reputation scores ain't fico they're how much truth you share
+
+Three thousand for a titan node, "creator monetization"
+Secret: it's a YouTube killer through decentralization
+Storage mesh, compute mesh, the till is how it runs
+Asking "got a loyalty program?" Conversion's begun
+
+LoRa in the air, validators everywhere
+No FICO, no halo — just the closes in the grid
 Passive audits running while you sell your coffee beans
-Customers think they're earning points they're feeding truth machines
+Customers think they're earning points, they're feeding truth machines
+
 C L is the speed of loop closure
-Delta S is the entropy hold ya
+Delta S is the entropy, hold ya
 Every feedback loop I capture
 Brings the old world to rapture
 They thought data was the oil
 But coherence is the spoil
 Physics based consensus rising
 While their trust networks capsizing
-Tier one tablet five hundred dollars that's the entry drug
-N F C Q R codes looking friendly giving merchant hugs
+
+Tier one tablet, five hundred dollars — that's the entry drug
+N F C, Q R codes, looking friendly, giving merchant hugs
 But inside it's running entropy calculations on the low
-Retroactive validator waiting for the truth to show
-Power options P O E solar panels harvest from the air
-Off grid capable every van and truck becomes a lair
-Of truth detection no inspection passes every regulation
-Cause the front end's just rewards the back end's transformation
-I studied how they did it turned our purchases to profiles
-Flipped their blueprint inside out now truth travels for miles
-They built a pan opticon I built a coherence meter
-Every swipe's a physics test every tap makes truth sweeter
-N P shadow estimator sounds like business speak
-But it's tracking contradictions finding where the systems leak
-Merchant thinks they're getting efficiency scores for free
-They're actually debugging reality can't you see
-I flip the game flip the game X P
-Truth disguised as merchant pay Let's see
-They track your moves I track what's real
-Entropy reduction that's the deal
+Late mint sitting quiet, waiting for the proof to show
+
+Power options? P O E, solar panels, harvest from the air
+Off grid capable, every van and truck becomes a lair
+Of truth detection, no inspection, passes every regulation
+Cause the front end's just rewards, the back end's transformation
+
+I studied how they did it — turned our purchases to profiles
+Flipped their blueprint inside out, now truth travels for miles
+They built a pan opticon, I built a coherence meter
+Every swipe's a physics test, every tap makes truth sweeter
+
+Delta-S estimator sounds like business speak
+But it's tracking contradictions, finding where the systems leak
+Merchant thinks they're getting "efficiency scores" for free
+They're actually debugging reality, can't you see?
+
+I flip the game, flip the game (X P!)
+Truth disguised as merchant pay (Let's see!)
+They track your moves, I track what's real
+Entropy reduction, that's the deal
 D A G nodes hidden in the P O S
-Coherence engine nothing less
-By the time they see what we've become
-The revolution's already won
-Twenty thirty flip the switch suddenly they understand
+Coherence engine, nothing less
+By the time they clock what we've become
+We already rang it up
+
+Twenty thirty, flip the switch, suddenly they understand
 Every coffee shop's a node in the truth detecting band
-Wait our loyalty points are tokens for reality
-Too late X P framework is the new economy
+"Wait — those points we handed out just ate the register?"
+Too late — Extropy Engine is the new reality
+
+You can't argue with thermodynamics
+You can't negotiate with math
+The takeover doesn't ask permission
+It just processes your path
+X P equals delta S over C L squared
+The future's not prepared...
+The future's not prepared...
 
 ### 13. Entropy Map
 
