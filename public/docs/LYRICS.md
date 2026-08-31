@@ -3683,7 +3683,7 @@ Flipped their blueprint inside out, now truth travels for miles
 They built a pan opticon, I built a coherence meter
 Every swipe's a physics test, every tap makes truth sweeter
 
-Delta-S estimator sounds like business speak
+They wrap it in a KPI so it sounds unique
 But it's tracking contradictions, finding where the systems leak
 Merchant thinks they're getting "efficiency scores" for free
 They're actually debugging reality, can't you see?
