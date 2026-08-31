@@ -869,24 +869,3 @@ export function FollowSection() {
     </section>
   );
 }
-
-export function DocsBanner() {
-  const [hidden, setHidden] = useState(false);
-  if (hidden) return null;
-  return (
-    <div className="fixed right-0 bottom-0 left-0 z-40 border-t border-primary bg-ink px-3 py-2 text-center text-[13px] font-semibold text-fg">
-      CODEX 2.1
-      <a href="/docs" className="ml-1.5 text-primary hover:underline">
-        Read the docs →
-      </a>
-      <button
-        type="button"
-        className="float-right ml-3 text-dim hover:text-fg"
-        aria-label="Dismiss"
-        onClick={() => setHidden(true)}
-      >
-        ✕
-      </button>
-    </div>
-  );
-}

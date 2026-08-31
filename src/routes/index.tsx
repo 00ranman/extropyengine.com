@@ -2,7 +2,6 @@ import { createFileRoute, useRouterState } from "@tanstack/react-router";
 import { useEffect } from "react";
 import {
   BookHero,
-  DocsBanner,
   EnterStrip,
   FollowSection,
   Manifesto,
@@ -36,7 +35,6 @@ function Home() {
       <PapersSection />
       <EngineSection />
       <FollowSection />
-      <DocsBanner />
     </SiteShell>
   );
 }

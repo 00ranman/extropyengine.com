@@ -59,6 +59,29 @@ function nextSrc(current: string) {
   return q[(i + 1) % q.length];
 }
 
+const listeners = new Set<() => void>();
+
+function emitBed() {
+  for (const fn of listeners) fn();
+}
+
+export function subscribeBed(fn: () => void) {
+  listeners.add(fn);
+  return () => {
+    listeners.delete(fn);
+  };
+}
+
+export function bedSnapshot() {
+  const el = audio;
+  return {
+    src: el ? pathOf(el) : BED_SRC,
+    currentTime: el?.currentTime ?? 0,
+    duration: el && Number.isFinite(el.duration) ? el.duration : 0,
+    paused: !el || el.paused,
+  };
+}
+
 let audio: HTMLAudioElement | null = null;
 let fadedIn = false;
 let fadeGen = 0;
@@ -144,9 +167,15 @@ export function getBed() {
         /* ignore */
       }
     };
-    audio.addEventListener("loadedmetadata", restore);
+    audio.addEventListener("loadedmetadata", () => {
+      restore();
+      emitBed();
+    });
     audio.addEventListener("timeupdate", saveTime);
+    audio.addEventListener("play", emitBed);
+    audio.addEventListener("pause", emitBed);
     audio.addEventListener("ended", () => {
+      emitBed();
       if (!audio || switching || userPaused) return;
       void playSrc(nextSrc(pathOf(audio)), false, { fadeMs: 800 });
     });
@@ -202,6 +231,7 @@ export async function playSrc(
       await whenReady(el);
     } catch {
       switching = false;
+      emitBed();
       const nxt = nextSrc(src);
       if (nxt !== src) void playSrc(nxt, false, opts);
       return;
@@ -231,6 +261,7 @@ export async function playSrc(
     }
   }
   switching = false;
+  emitBed();
 }
 
 export function toggleSrc(src: string, loop = false) {

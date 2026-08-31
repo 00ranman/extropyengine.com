@@ -2,6 +2,7 @@ import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-r
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { QuietPlayer } from "@/components/quiet-player";
+import { NowPlayingTicker } from "@/components/now-playing-ticker";
 import { JsonLd } from "@/components/json-ld";
 import appCss from "../styles.css?url";
 
@@ -72,6 +73,7 @@ export const Route = createRootRoute({
           <Outlet />
         </AuthProvider>
         <QuietPlayer />
+        <NowPlayingTicker />
         <Scripts />
       </body>
     </html>

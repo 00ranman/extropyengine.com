@@ -202,3 +202,17 @@ export const masterSongs: { album: string; n?: number; title: string; kind: "alb
     src: s.src,
   })),
 ];
+
+export function catalogBySrc(src: string) {
+  const hit = masterSongs.find((s) => s.src === src);
+  if (hit) return hit;
+  const file = src.split("/").pop()?.replace(/\.(mp3|wav)$/i, "") ?? "";
+  const slug = file.replace(/_/g, "-");
+  return {
+    album: "Singles",
+    title: file.replace(/-/g, " "),
+    kind: "single" as const,
+    lyrics: lyricsBySlug[slug] || lyricsBySlug[LYRIC_ALIAS[slug] ?? ""],
+    src,
+  };
+}
