@@ -3622,8 +3622,8 @@ I don't sell the loop — I mint it, then I hold
 
 Built a trojan they can't see, wrapped in loyalty disguise
 "Just another rewards program" — watch the entropy demise
-Square charging two point six, I'm at two flat plus a dime
-But beneath that merchant layer, I'm encoding space and time
+Come through every week, your local starts to run
+Global times that door, then it burns until it's done
 
 They see tablets taking payments, I see nodes that validate
 Every swipe a physics check — did the entropy deflate
