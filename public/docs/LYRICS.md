@@ -3627,7 +3627,7 @@ But beneath that merchant layer, I'm encoding space and time
 
 They see tablets taking payments, I see nodes that validate
 Every swipe a physics check — did the entropy deflate
-Super caps charging off the air, no batteries in my mesh
+No harvest off the air. I overlay the mesh
 While Zucker berg sells eyeballs, I'm selling physics fresh
 
 I flip the game, flip the game (X P!)
