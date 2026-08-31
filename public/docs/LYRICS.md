@@ -3626,7 +3626,7 @@ Square charging two point six, I'm at two flat plus a dime
 But beneath that merchant layer, I'm encoding space and time
 
 They see tablets taking payments, I see nodes that validate
-Every ring of the drawer asking chaos what it paid
+Every swipe a physics check — did the entropy deflate
 Super caps charging off the air, no batteries in my mesh
 While Zucker berg sells eyeballs, I'm selling physics fresh
 
