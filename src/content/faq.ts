@@ -15,7 +15,7 @@ export type FaqSection = {
 export const faqPage = {
   title: "FAQ",
   kicker: "The attacks, answered",
-  lead: "Glossary is the dictionary. This is the argument. Same questions keep showing up in debates — irreducible slogan, glass of water, untested, teacher-to-president, decay that never hits zero, Tₛ=1, retirement as a hole. If you came to grade a t-shirt, start here. If you came to ask whether rest counts, skip to the own lawn. If you came to run a loop, skip to the last section.",
+  lead: "Glossary is the dictionary. This is the argument. Same questions keep showing up in debates — irreducible slogan, glass of water, untested, teacher-to-president, decay that never hits zero, Tₛ=1, retirement as a hole, new civilization. If you came to grade a t-shirt, start here. If you came to ask whether rest counts, skip to the own lawn. If you came to run a loop, skip to the last section.",
 } as const;
 
 export const faqSections: FaqSection[] = [
@@ -40,6 +40,26 @@ export const faqSections: FaqSection[] = [
           { label: "Ledger", href: "/#ledger" },
           { label: "Three clocks", href: "/glossary", hash: "three-clocks" },
           { label: "Open problems", href: "/open-problems" },
+        ],
+      },
+      {
+        id: "overlay",
+        q: "Do we have to start a new civilization for this to work?",
+        a: "No. You convert one that already exists. Overlay. Shops, licenses, neighborhoods, the job you already have, the handshake already on the wire. You do not wait for a sealed utopia. You put both-edges, contest, leak, and a DAG on infrastructure people already use. Checks on power that is already there. Greenfield is a fantasy of a clean page. This is a layer.",
+        also: [
+          { label: "Overlay", href: "/glossary", hash: "overlay" },
+          { label: "Neighborhood MESO", href: "/hoa" },
+          { label: "Enter", href: "/start" },
+        ],
+      },
+      {
+        id: "imported-cat",
+        q: "Does a doctor have to re-earn being a doctor in here?",
+        a: "No. The license is opening evidence: a CAT record, issuer = the old board, lane = the practice. Not XP. Not a throne. Once they are in, this graph is what continues — cases, teaching, loops they actually close. Retired weight that can issue new CATs and argue rarity in that lane is that DAG history, not the framed diploma. Same for electricians, teachers, welders. Doctor is one example. If the paper was a lie, contest and late burn still apply. The license gets them in the door. It does not give them the house.",
+        also: [
+          { label: "CAT", href: "/glossary", hash: "cat" },
+          { label: "Overlay", href: "/glossary", hash: "overlay" },
+          { label: "Lane", href: "/glossary", hash: "lane" },
         ],
       },
       {

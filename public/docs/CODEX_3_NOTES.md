@@ -211,6 +211,22 @@ FAQ: `/faq#three-clocks` `/faq#explain` `/faq#l-farm`
 
 ---
 
+## Overlay / imported CAT (30 Aug 2026)
+
+You do not start a new civilization. You convert one that exists.
+
+Overlay. Shops, licenses, neighborhoods, the handshake already on the wire. Both-edges, contest, leak, DAG go on top of infrastructure people already use. Greenfield is a fantasy of a clean page.
+
+An off-system credential (medical license, journeyman card, whatever the lane already recognizes) is **opening evidence** for a CAT record: issuer = the old board, lane = the practice. Not XP. Not IT. Not a throne.
+
+Once they are in, **this** graph is what continues. Retired weight that can issue new CATs and argue rarity in that lane is DAG history in here, not the framed diploma. If the paper was a lie, contest and late burn still apply. License is the door. It is not the house.
+
+Do not invent a bootstrap bag to hold this.
+
+FAQ: `/faq#overlay` `/faq#imported-cat`
+
+---
+
 ## What 3.0 has to actually write
 
-Settle knob. XP decay next to IT decay. Late burn. SignalFlow as first-class. Claim path with evidence. MICRO overselling acknowledged. DAG as instrument. Burn-floor axiom yes/no. Box as for-profit intent. Access band as ZKP (display default off). Play boards opt-in, no power. Soulbound marks. Seasons ≠ diplomacy. Roles from showing up; votes for knobs. LOOK vertices; silent fetch forbidden. did:key on first boot. Unique-in-DFAO ZKP. Leave 2.1 alone until then.
+Settle knob. XP decay next to IT decay. Late burn. SignalFlow as first-class. Claim path with evidence. MICRO overselling acknowledged. DAG as instrument. Burn-floor axiom yes/no. Box as for-profit intent. Access band as ZKP (display default off). Play boards opt-in, no power. Soulbound marks. Seasons ≠ diplomacy. Roles from showing up; votes for knobs. LOOK vertices; silent fetch forbidden. did:key on first boot. Unique-in-DFAO ZKP. Overlay not a new country; imported CAT is the door not the house. Leave 2.1 alone until then.

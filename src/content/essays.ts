@@ -468,7 +468,12 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "CAT — Category",
         id: "cat",
-        def: "Skill record. Unique. (DID, lane, level, settled count, issuer). Are you qualified to do this, and at what level. Peers already holding CAT in that lane sign. Patients do not mint it. Not a pile. Mentorship is not +0.1 CAT.",
+        def: "Skill record. Unique. (DID, lane, level, settled count, issuer). Are you qualified to do this, and at what level. Peers already holding CAT in that lane sign. Patients do not mint it. Not a pile. Mentorship is not +0.1 CAT. An off-system license can be opening evidence for a CAT record (issuer = the old board). That is the door, not the house.",
+      },
+      {
+        term: "Overlay",
+        id: "overlay",
+        def: "You convert an existing civilization. You do not found a new one. Shops, licenses, neighborhoods, the handshake already on the wire. The Engine is a layer: both-edges, contest, leak, DAG. Imported credentials are opening CAT records, contestable. After that, this graph is what continues.",
       },
       {
         term: "IT — influence standing",
