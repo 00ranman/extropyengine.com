@@ -3615,8 +3615,8 @@ You are the system being run
 
 ### 12. XP FRAMEWORK_ THE TAKEOVER
 
-Started with nodes in my basement, M S P four thirty humming
-Harvest R F waves while these corporations slumming
+Started with their hardware, that old drawer humming
+Ride the rails they laid while these corporations slumming
 In your data, in your habits, they mining for the gold
 I don't sell the loop — I mint it, then I hold
 
