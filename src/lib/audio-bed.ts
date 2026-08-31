@@ -36,26 +36,43 @@ function uniq(paths: string[]) {
   return out;
 }
 
+function fileKey(src: string) {
+  const raw = src.split("?")[0].split("#")[0];
+  try {
+    const path = raw.includes("://") ? new URL(raw).pathname : raw;
+    return (path.split("/").pop() || path).toLowerCase();
+  } catch {
+    return (raw.split("/").pop() || raw).toLowerCase();
+  }
+}
+
 export function bedPlaylist() {
   const paper = uniq(PAPER_SLUGS.map((slug) => localAudioBySlug[slug]).filter(Boolean));
-  const used = new Set<string>([BED_SRC, ...paper]);
+  const used = new Set<string>([BED_SRC, ...paper].map(fileKey));
   const rest: string[] = [];
   for (const s of masterSongs) {
-    if (s.src && !used.has(s.src)) {
+    if (s.src && !used.has(fileKey(s.src))) {
       rest.push(s.src);
-      used.add(s.src);
+      used.add(fileKey(s.src));
     }
   }
   for (const src of uniq(Object.values(localAudioBySlug))) {
-    if (!used.has(src)) rest.push(src);
+    if (!used.has(fileKey(src))) {
+      rest.push(src);
+      used.add(fileKey(src));
+    }
   }
-  return [BED_SRC, ...paper.filter((p) => p !== BED_SRC), ...rest];
+  return [BED_SRC, ...paper.filter((p) => fileKey(p) !== fileKey(BED_SRC)), ...rest];
 }
 
 function nextSrc(current: string) {
   const q = bedPlaylist();
-  const i = q.indexOf(current);
-  if (i === -1) return q[0] ?? BED_SRC;
+  const key = fileKey(current);
+  const i = q.findIndex((p) => fileKey(p) === key);
+  if (i === -1) {
+    if (key.includes("irrelevance")) return q[1] ?? q[0] ?? BED_SRC;
+    return q[0] ?? BED_SRC;
+  }
   return q[(i + 1) % q.length];
 }
 
@@ -86,6 +103,8 @@ let audio: HTMLAudioElement | null = null;
 let fadedIn = false;
 let fadeGen = 0;
 let switching = false;
+let pendingNext: string | null = null;
+let lastAdvanceAt = 0;
 export let userPaused = false;
 
 function fadeVolume(el: HTMLAudioElement, to: number, ms: number) {
@@ -120,6 +139,12 @@ function saveTime() {
   sessionStorage.setItem(SRC_KEY, pathOf(audio));
 }
 
+function atTrackEnd(el: HTMLAudioElement) {
+  if (el.ended) return true;
+  const d = el.duration;
+  return Number.isFinite(d) && d > 0 && el.currentTime >= d - 0.12;
+}
+
 function whenReady(el: HTMLAudioElement) {
   if (el.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) return Promise.resolve();
   return new Promise<void>((resolve, reject) => {
@@ -132,12 +157,30 @@ function whenReady(el: HTMLAudioElement) {
       reject(new Error("audio error"));
     };
     const drop = () => {
+      clearTimeout(t);
       el.removeEventListener("canplay", ok);
       el.removeEventListener("error", err);
     };
+    const t = window.setTimeout(() => {
+      drop();
+      if (el.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) resolve();
+      else reject(new Error("audio timeout"));
+    }, 8000);
     el.addEventListener("canplay", ok);
     el.addEventListener("error", err);
   });
+}
+
+function advance(from?: string) {
+  if (!audio || userPaused) return;
+  const now = Date.now();
+  if (now - lastAdvanceAt < 600) return;
+  lastAdvanceAt = now;
+  const current = from || pathOf(audio);
+  const nxt = nextSrc(current);
+  if (fileKey(nxt) === fileKey(current)) return;
+  pendingNext = nxt;
+  void playSrc(nxt, false, { fadeMs: 500 });
 }
 
 export function getBed() {
@@ -152,15 +195,15 @@ export function getBed() {
     }
     audio = new Audio(initial);
     audio.preload = "auto";
+    audio.loop = false;
     audio.setAttribute("playsinline", "");
     audio.setAttribute("data-src", initial);
-    audio.loop = false;
     audio.volume = 0;
     const restore = () => {
       if (switching) return;
       try {
         const t = Number(sessionStorage.getItem(TIME_KEY) || 0);
-        if (t > 0.5 && Number.isFinite(t) && t < (audio?.duration || 1e9)) {
+        if (t > 0.5 && Number.isFinite(t) && t < (audio?.duration || 1e9) - 0.4) {
           audio!.currentTime = t;
         }
       } catch {
@@ -171,22 +214,36 @@ export function getBed() {
       restore();
       emitBed();
     });
-    audio.addEventListener("timeupdate", saveTime);
+    audio.addEventListener("timeupdate", () => {
+      saveTime();
+      if (!audio || switching || userPaused) return;
+      if (atTrackEnd(audio)) advance();
+    });
     audio.addEventListener("play", emitBed);
     audio.addEventListener("pause", emitBed);
     audio.addEventListener("ended", () => {
       emitBed();
-      if (!audio || switching || userPaused) return;
-      void playSrc(nextSrc(pathOf(audio)), false, { fadeMs: 800 });
+      if (!audio || userPaused) return;
+      advance(pathOf(audio));
     });
   }
+  audio.loop = false;
   return audio;
 }
 
 export function startBed() {
-  if (userPaused || switching) return;
+  if (userPaused) return;
   const el = getBed();
-  if (!el || !el.paused) return;
+  if (!el) return;
+  if (pendingNext && fileKey(pathOf(el)) !== fileKey(pendingNext)) {
+    void playSrc(pendingNext, false, { fadeMs: 180 });
+    return;
+  }
+  if (atTrackEnd(el)) {
+    advance(pathOf(el));
+    return;
+  }
+  if (switching || !el.paused) return;
   void el.play().then(() => {
     if (fadedIn) {
       fadeVolume(el, BED_VOLUME, 120);
@@ -217,9 +274,9 @@ export async function playSrc(
   }
 
   const current = pathOf(el);
-  if (current !== src) {
+  if (fileKey(current) !== fileKey(src)) {
     el.pause();
-    el.loop = loop;
+    el.loop = false;
     el.src = src;
     el.setAttribute("data-src", src);
     try {
@@ -233,7 +290,10 @@ export async function playSrc(
       switching = false;
       emitBed();
       const nxt = nextSrc(src);
-      if (nxt !== src) void playSrc(nxt, false, opts);
+      if (fileKey(nxt) !== fileKey(src)) {
+        pendingNext = nxt;
+        void playSrc(nxt, false, opts);
+      }
       return;
     }
     try {
@@ -242,7 +302,14 @@ export async function playSrc(
       /* ignore */
     }
   } else {
-    el.loop = loop;
+    el.loop = false;
+    if (atTrackEnd(el)) {
+      try {
+        el.currentTime = 0;
+      } catch {
+        /* ignore */
+      }
+    }
   }
 
   const fadeMs = opts.fadeMs ?? 180;
@@ -251,13 +318,15 @@ export async function playSrc(
   try {
     await el.play();
     fadeVolume(el, BED_VOLUME, fadeMs);
+    pendingNext = null;
   } catch {
     try {
       await whenReady(el);
       await el.play();
       fadeVolume(el, BED_VOLUME, fadeMs);
+      pendingNext = null;
     } catch {
-      /* autoplay block */
+      pendingNext = src;
     }
   }
   switching = false;
@@ -267,7 +336,7 @@ export async function playSrc(
 export function toggleSrc(src: string, loop = false) {
   const el = getBed();
   if (!el) return;
-  if (!el.paused && pathOf(el) === src) {
+  if (!el.paused && fileKey(pathOf(el)) === fileKey(src)) {
     toggleBed();
     return;
   }
@@ -284,12 +353,21 @@ export function toggleBed() {
     } catch {
       /* ignore */
     }
+    if (pendingNext && fileKey(pathOf(el)) !== fileKey(pendingNext)) {
+      void playSrc(pendingNext, false, { fadeMs: 180 });
+      return;
+    }
+    if (atTrackEnd(el)) {
+      advance(pathOf(el));
+      return;
+    }
     void el.play().then(() => {
       fadeVolume(el, BED_VOLUME, fadedIn ? 180 : 1600);
       fadedIn = true;
     });
   } else {
     userPaused = true;
+    pendingNext = null;
     try {
       sessionStorage.setItem(PAUSE_KEY, "1");
     } catch {
@@ -308,5 +386,5 @@ export function isBedPlaying() {
 }
 
 export function isPlayingPath(src: string) {
-  return Boolean(audio && !audio.paused && pathOf(audio) === src);
+  return Boolean(audio && !audio.paused && fileKey(pathOf(audio)) === fileKey(src));
 }
