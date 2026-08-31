@@ -915,7 +915,7 @@ They chant, tear it down
 I forked the code and left town
 See revolutions will rerun
 Same arc, new face
-Still no rerun
+Still no reroute
 But recursion
 That rewrites the map
 While they shout

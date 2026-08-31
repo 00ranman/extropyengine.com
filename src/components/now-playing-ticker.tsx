@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { bedSnapshot, getBed, subscribeBed } from "@/lib/audio-bed";
 import { catalogBySrc } from "@/content/music";
@@ -13,41 +13,34 @@ function linesOf(raw?: string) {
     .filter((l) => l.length > 0);
 }
 
-function Dot() {
-  return <span className="mx-6 text-primary/70">·</span>;
-}
-
-function CrackGlass() {
-  return (
-    <svg className="ticker-cracks" viewBox="0 0 1200 48" preserveAspectRatio="none" aria-hidden>
-      <g fill="none" stroke="rgba(255,255,255,0.55)" strokeWidth="0.7" strokeLinejoin="miter">
-        <path d="M0 22 L80 18 L140 28 L210 8 L280 30 L360 14 L430 26 L520 6 L610 32 L700 12 L790 28 L880 10 L970 24 L1060 16 L1200 22" />
-        <path d="M210 8 L230 40 M360 14 L340 46 M520 6 L545 44 M700 12 L680 48 M880 10 L910 42" />
-        <path d="M140 28 L160 2 M430 26 L410 0 M610 32 L640 0 M790 28 L770 2" stroke="rgba(34,211,238,0.35)" />
-        <path d="M280 30 L300 0 M970 24 L990 46" stroke="rgba(255,90,31,0.4)" />
-      </g>
-    </svg>
-  );
+/** Map playback time to a lyric line. No official LRC for this catalog — lock to the file clock. */
+function lineAt(lines: string[], t: number, duration: number) {
+  if (!lines.length) return null;
+  const dur = duration > 1 ? duration : 180;
+  const intro = Math.min(8, dur * 0.07);
+  if (t < intro) return null;
+  const span = Math.max(1, dur - intro - Math.min(6, dur * 0.04));
+  const i = Math.min(lines.length - 1, Math.max(0, Math.floor(((t - intro) / span) * lines.length)));
+  return { text: lines[i], next: lines[i + 1] ?? "" };
 }
 
 export function NowPlayingTicker() {
   const [hidden, setHidden] = useState(false);
   const [holding, setHolding] = useState(true);
-  const [codexSlide, setCodexSlide] = useState(true);
   const [snap, setSnap] = useState(() => bedSnapshot());
   const [reduce, setReduce] = useState(false);
-  const [glitch, setGlitch] = useState<"idle" | "static" | "glass">("idle");
-  const trackRef = useRef<HTMLDivElement>(null);
-  const frameRef = useRef<HTMLDivElement>(null);
-  const xRef = useRef(0);
-  const rafRef = useRef(0);
-  const seenSrc = useRef<string | null>(null);
+  const [flicker, setFlicker] = useState(false);
 
   useEffect(() => {
     setReduce(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
     getBed();
     setSnap(bedSnapshot());
-    return subscribeBed(() => setSnap(bedSnapshot()));
+    const unsub = subscribeBed(() => setSnap(bedSnapshot()));
+    const id = window.setInterval(() => setSnap(bedSnapshot()), 200);
+    return () => {
+      unsub();
+      window.clearInterval(id);
+    };
   }, []);
 
   useEffect(() => {
@@ -58,69 +51,18 @@ export function NowPlayingTicker() {
   useEffect(() => {
     if (hidden || reduce) return;
     let t = 0;
-    let mode: "idle" | "static" | "glass" = "idle";
+    let on = false;
     const schedule = () => {
-      const wait =
-        mode === "idle"
-          ? 9000 + Math.random() * 13000
-          : mode === "static"
-            ? 320 + Math.random() * 480
-            : 1700 + Math.random() * 1900;
+      const wait = on ? 180 + Math.random() * 280 : 8000 + Math.random() * 14000;
       t = window.setTimeout(() => {
-        mode = mode === "idle" ? "static" : mode === "static" ? "glass" : "idle";
-        setGlitch(mode);
+        on = !on;
+        setFlicker(on);
         schedule();
       }, wait);
     };
     schedule();
     return () => window.clearTimeout(t);
   }, [hidden, reduce]);
-
-  const song = catalogBySrc(snap.src);
-  const lyrics = linesOf(song.lyrics);
-
-  useEffect(() => {
-    if (holding) return;
-    if (seenSrc.current === null) {
-      seenSrc.current = snap.src;
-      return;
-    }
-    if (seenSrc.current !== snap.src) {
-      seenSrc.current = snap.src;
-      setCodexSlide(false);
-    }
-  }, [holding, snap.src]);
-
-  useEffect(() => {
-    if (hidden || holding || reduce) return;
-
-    const track = trackRef.current;
-    const frame = frameRef.current;
-    if (!track || !frame) return;
-
-    xRef.current = 0;
-    track.style.transform = "translateX(0)";
-    let last = performance.now();
-
-    const step = (now: number) => {
-      const dt = Math.min(0.05, (now - last) / 1000);
-      last = now;
-      const el = getBed();
-      const remaining =
-        el && el.duration && Number.isFinite(el.duration)
-          ? Math.max(0.4, el.duration - el.currentTime)
-          : 180;
-      const distance = Math.max(1, track.scrollWidth - frame.clientWidth);
-      const leftPx = Math.max(0, distance - xRef.current);
-      const speed = leftPx / remaining;
-      xRef.current += speed * dt;
-      if (xRef.current > distance) xRef.current = distance;
-      track.style.transform = `translateX(${-xRef.current}px)`;
-      rafRef.current = requestAnimationFrame(step);
-    };
-    rafRef.current = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(rafRef.current);
-  }, [hidden, holding, reduce, snap.src, song.title, codexSlide]);
 
   useEffect(() => {
     document.body.style.paddingBottom = hidden ? "" : "2.75rem";
@@ -131,58 +73,36 @@ export function NowPlayingTicker() {
 
   if (hidden) return null;
 
+  const song = catalogBySrc(snap.src);
+  const lyric = holding ? null : lineAt(linesOf(song.lyrics), snap.currentTime, snap.duration);
+
   return (
     <div
       className="now-ticker no-print fixed right-0 bottom-0 left-0 z-40 flex items-center gap-2 overflow-hidden border-t border-primary py-2 pr-[4.75rem] pl-3 text-[13px] font-semibold text-fg"
-      data-glitch={reduce ? "idle" : glitch}
+      data-glitch={flicker && !reduce ? "flicker" : "idle"}
     >
-      <div className="ticker-fx ticker-static" aria-hidden />
-      <div className="ticker-fx ticker-glass" aria-hidden>
-        <CrackGlass />
-      </div>
-      <div ref={frameRef} className="ticker-copy relative z-10 min-w-0 flex-1 overflow-hidden">
-        {holding || reduce ? (
+      <div className="ticker-copy relative z-10 min-w-0 flex-1 overflow-hidden">
+        {holding ? (
           <p className="truncate text-center tracking-[0.14em]">
-            {holding ? (
-              <>
-                CODEX 2.1{" "}
-                <Link to="/docs" className="text-primary hover:underline">
-                  Read the docs →
-                </Link>
-              </>
-            ) : (
-              <>
-                <span className="font-display tracking-[0.08em] text-primary">{song.title}</span>
-                {song.album ? <span className="ml-3 font-mono text-[11px] tracking-[0.16em] text-accent uppercase">{song.album}</span> : null}
-              </>
-            )}
+            CODEX 2.1{" "}
+            <Link to="/docs" className="text-primary hover:underline">
+              Read the docs →
+            </Link>
+          </p>
+        ) : lyric ? (
+          <p className="truncate text-center">
+            <span className="font-mono text-[13px] font-normal tracking-[0.04em] text-fg">{lyric.text}</span>
+            {lyric.next ? (
+              <span className="ml-6 font-mono text-[12px] font-normal tracking-[0.04em] text-dim">{lyric.next}</span>
+            ) : null}
           </p>
         ) : (
-          <div ref={trackRef} className="flex w-max items-center whitespace-nowrap will-change-transform">
-            {codexSlide ? (
-              <span className="inline-flex w-[calc(100vw-6rem)] shrink-0 items-center justify-center tracking-[0.14em]">
-                CODEX 2.1{" "}
-                <Link to="/docs" className="ml-1.5 text-primary hover:underline">
-                  Read the docs →
-                </Link>
-              </span>
+          <p className="truncate text-center tracking-[0.14em]">
+            <span className="font-display tracking-[0.08em] text-primary">{song.title}</span>
+            {song.album ? (
+              <span className="ml-3 font-mono text-[11px] tracking-[0.16em] text-accent uppercase">{song.album}</span>
             ) : null}
-            <span className="inline-flex items-baseline px-8 font-display text-[15px] tracking-[0.08em] text-primary">
-              {song.title}
-              {song.album ? (
-                <span className="ml-3 font-mono text-[11px] font-normal tracking-[0.16em] text-accent uppercase">
-                  {song.album}
-                </span>
-              ) : null}
-            </span>
-            {lyrics.map((line, i) => (
-              <span key={`${i}-${line.slice(0, 24)}`} className="inline-flex items-center font-mono text-[12px] font-normal tracking-[0.04em] text-fg">
-                <Dot />
-                {line}
-              </span>
-            ))}
-            <span className="px-16 text-dim">·</span>
-          </div>
+          </p>
         )}
       </div>
       <Link to="/docs" className="ticker-copy relative z-10 hidden shrink-0 font-mono text-[10px] tracking-[0.14em] text-primary uppercase hover:underline sm:inline">
