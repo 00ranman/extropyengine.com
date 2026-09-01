@@ -1,0 +1,21 @@
+log(1/Tₛ) — The slam window, not a speed bonus
+
+What it is: the anti-farm term. Tₛ is the window the claim sits in before it slams shut. log(1/Tₛ) is large when the interval is tight and the verification actually happened inside it. Leave the window open forever and you can replay the same lawn until the meter is a joke.
+
+What it is not: a prize for filing faster. It is not "the firefighter who arrives in three minutes earns more XP than the one who arrives in three hours." Faster paperwork is not entropy reduction. That firefighter story was a misread and it taught the wrong physics. Settlement speed is a process fact. It is not a mint input.
+
+What it unfucks: farming. Repeat-close. The cron job that thinks a timestamp is a personality.
+
+There are three clocks. They are not the same clock.
+
+1. F — repetition of a class. Count. Not a calendar. First time in this fingerprint, F is 1. The hundredth time, F is smaller. Time gaps do not reset F.
+2. Tₛ — the slam window on this claim. Cap Δt. Slam. Zero if you miss it.
+3. 0.99ⁿ — standing decay after mint. About a percent a month. This is the "use it or it thins" clock. It is not Tₛ and it is not F.
+
+Fold them into one "time factor" and you will write a firefighter paragraph and then wonder why the formula sheet looks like a different religion.
+
+What prevents gaming: you cannot sit on an open claim and drip it. The window closes. Validators are not a throttle you get paid extra for rushing. Rush a fraud and the claim fails.
+
+Remove it and: whoever automates the close, wins forever.
+
+In the worked example below, Tₛ is the window, not "how fast the PR merged." If a number looks like a speed bonus, it is wrong.

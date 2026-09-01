@@ -1,0 +1,55 @@
+Appendix D: Records and Meters
+
+If you see GT, RT, DT-as-bag, TT, Γ, or "canonical six tokens," that text predates this lock. Burn it.
+
+RECORD — a unique signed vertex on the ledger. One of one.
+
+METER — a number over records. Not a wallet.
+
+XP — Experience (meter)
+What: global standing from verified entropy reduction.
+Formula: XP = R × F × ΔS × (w · E) × log(1/Tₛ). Physics floor still applies where a domain has one.
+Transferable: no. There is no transfer, so there is no transfer friction.
+Decay: yes. Roughly a percent a month if you stop.
+Acquired by: verified ΔS. Full stop.
+Spent on: nothing. XP is not spent.
+Does not include: reputation.
+
+L — Local coupling (meter)
+What: how much this door and this person actually couple, right now.
+Range: [0, 1]. Not ≥ 1. Not loop-closure speed. Not c_L.
+Traveler with no local close: near 0.
+
+CT — Contribution (local standing)
+What: standing inside a particular DFAO. This door.
+Not: a spendable token, gold coins, a currency, a rail.
+Not: C × F × ρ × Δ × E with reputation in the mint.
+
+EP — Emergent Product (expression)
+Formula: EP = XP × L.
+What happens: at the till, that product may discount the fiat ticket. Then it burns. It does not transfer. Cash can still ring. Clerk does not decide.
+Not: Emergence Points you carry to the next town. Not Epistemic Proof (unfortunate collision; proof-layer is a record, letter later).
+
+CAT — Capability (record)
+Portable skill stamp. Not a bag. Not transferable between people. Work happened, so the stamp doesn't evaporate. Import existing licenses as opening CATs. Contestable.
+
+IT — Influence (meter)
+Governance weight. Not a coin. Not purchasable. Inactivity decays it. Using your voice is not an arcade spend.
+
+DOMAIN — filter on records
+Minted claim. Timed. DID-tied. Not DT. DT is retired.
+
+TILL SPARK — record
+The till event. EP expressed and burned. Overlay on the drawer that is already there. No Square cut.
+
+CLOSED LOOP — record
+The claim that survived.
+
+Tₛ — slam window
+Anti-farm. Not a firefighter speed bonus.
+
+F — repetition of class
+Count. Not a calendar.
+
+c_L — slogan, not L
+The t-shirt is XP ≥ ΔS / c_L². Pedagogical floor. Not the mint. Not the local meter L.

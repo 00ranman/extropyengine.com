@@ -1,0 +1,92 @@
+Chapter 13: Records and Meters — Nothing You Can Bag
+
+What this unfucks: the token tic. The thing where every number becomes a bag you can hold, flip, and dump on a chart.
+
+If you've spent any time in crypto, the word token already gave you a facial tic. Keep it. That mouth means a balance. Fungible. Transferable. Number go up. A "non-fungible token" is a modifier that admits the thing wasn't a token in the first place.
+
+We are not minting six flavors of bag.
+
+Two words. We mean them.
+
+A record is a unique signed vertex on the ledger. One of one. CAT is a record. A domain claim is a record. A till spark is a record. A closed loop is a record. You don't have "some CAT." You have this CAT, minted then, for that skill, on that DID.
+
+A meter is a number over records. XP is global standing. L is local coupling at this door, in [0, 1]. IT is governance weight. Meters are not wallets. They don't transfer. They move when the records under them move.
+
+DT is retired. It was a sixth bag looking for a job. Domain is a filter on records — minted as a claim, contestable, tied to a DID and a time. Not a token you hold.
+
+If you saw an earlier draft with GT, RT, DT-as-bag, or a "canonical six," that draft is dead. Burn it.
+
+XP — standing, not a wallet
+
+XP is the output of the mint:
+
+XP = R × F × ΔS × (w · E) × log(1/Tₛ)
+
+R is rarity, not reputation. Reputation does not enter this formula. I will say that until the comment section dies of boredom.
+
+How you get it: reduce entropy. Submit a claim. Survive the Core Loop. The formula does the rest.
+
+How you do not get it: dollars, crypto, favors, Harvard, your dad, a loyalty punch-card.
+
+You do not spend XP. You do not transfer XP. There is no δ = 0.02 "friction" because there is no transfer. Friction on a door that doesn't exist is theology.
+
+Decay: about a percent a month if you stop closing loops. Standing is a live condition, not a trophy.
+
+XP is global. Every network you touch. It is not local gold.
+
+CT — this door, not gold coins
+
+CT is local contribution standing inside a particular DFAO. How much you actually showed up here.
+
+It is not a spendable currency. It is not gold coins. It is not what buys the coffee. The video-game analogy was cute and wrong. Spending gold does not map to this system, because nothing is spending.
+
+CT does not have a five-factor mint that smuggles reputation (ρ) back into purchasing power. That was the contamination we spent a year killing. Recognition (XP) and local standing (CT) and the till expression (EP) are separate on purpose. Put reputation in the money and you have FICO with extra steps.
+
+EP — the product, then it's gone
+
+At the till:
+
+EP = XP × L
+
+L is local coupling, a fraction in [0, 1]. Patronage density. Local ΔS. Carbon drag. DFAO nesting. It is not loop-closure speed. It is not "always ≥ 1 so we only ever amplify."
+
+A traveler with no close at this door has L near zero. Zero times a mountain of XP is no discount. Come through every week, the local starts to run. Global times that door. Then the product burns.
+
+It does not transfer. It does not ride a rail. Cash can still ring. The clerk does not decide. The computer tells them what the standing is worth on this ticket.
+
+That is not a transaction in the Square sense. Nothing moved accounts. Standing expressed. Expression gone. There is no processor cut, no two-flat-plus-a-dime, no weekly rake. That fee flex was an oversell from a draft that thought we were a payments company. We are not.
+
+IT — weight, not arcade tickets
+
+IT is governance influence. Derived from sustained contribution. You cannot buy it, inherit it, or swap it.
+
+It is not a coin you feed into the voting machine. Free governance is spam, so inactivity decays the weight. Using your voice is not "spending a token." Calling it a governance token was the old mouth. Stop.
+
+CAT — a stamp, not a stack
+
+CAT is a capability record. Portable across DFAOs. Not transferable between people. No decay on the fact that the work happened. Levels are receipts, not a shop.
+
+You cannot buy CAT. You can import an existing license as an opening CAT — overlay, not a new priesthood — and it is contestable. Doctors don't start at zero because we were too pure to notice the world already had credentials. They start with a record that says who issued it, when, and that it can be burned if it's a lie.
+
+Domain — a filter, not DT
+
+Who knows this territory? Not a bag called DT. A domain claim on the ledger. Minted. Timed. Tied to a DID. If you stop showing up, the standing in that filter drops. You cannot hang it on the wall and retire from the work.
+
+The stack
+
+physical / system change
+→ verified ΔS proxy
+→ causal evidence on the DAG
+→ XP standing (global)
+→ local interpretation (CT / L)
+→ economic expression (EP), then burn
+
+Meanwhile, off to the side, not in the mint:
+
+skill → CAT
+governance → IT
+domain → filter on records
+
+That separation is the product. Value, money, reputation, skill, and power do not collapse into one number.
+
+If someone hands you a slide that says six tokens, zero bullshit, they are holding a museum piece. Be polite. Then hand them this chapter.

@@ -1,0 +1,19 @@
+Misreading 6: “Token means bag, so we have six tokens”
+
+No. Token, in that mouth, is a balance. We have records and meters. CAT is a record. XP is a meter. EP is an expression that burns. DT is not a thing anymore.
+
+Misreading 7: “CT is the money, XP is the XP bar”
+
+No. CT is local standing at a door. The till expression is EP = XP × L, then burn. Nothing spends like gold coins.
+
+Misreading 8: “L is always at least 1, so EP only amplifies”
+
+No. L ∈ [0, 1]. A stranger with no local close gets near-zero. That is the point of a traveler chapter you will otherwise write by accident.
+
+Misreading 9: “Tₛ rewards speed”
+
+No. Tₛ is the slam window. Faster filing is not more ΔS. The firefighter paragraph was a misread.
+
+Misreading 10: “Reputation belongs in the mint”
+
+No. R is rarity. Reputation does not multiply XP. It does not mint CT. Routing may use a reliability record. Money may not.
