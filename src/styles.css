@@ -248,6 +248,38 @@
     1px 0 color-mix(in srgb, var(--color-accent) 40%, transparent);
 }
 
+.ticker-strip {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x proximity;
+  cursor: grab;
+  touch-action: pan-x;
+  white-space: nowrap;
+}
+
+.ticker-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.ticker-strip:active {
+  cursor: grabbing;
+}
+
+.ticker-line {
+  scroll-snap-align: center;
+  max-width: min(72vw, 34rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+.ticker-line:hover {
+  color: var(--color-fg);
+}
+
 @keyframes ticker-bar-flicker {
   0% {
     filter: contrast(1.06) brightness(1.05);
@@ -753,5 +785,3 @@
     page-break-after: avoid;
   }
 }
-
-

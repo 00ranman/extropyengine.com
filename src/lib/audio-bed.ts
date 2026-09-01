@@ -381,6 +381,20 @@ export function toggleBed() {
   }
 }
 
+export function seekBed(t: number) {
+  const el = getBed();
+  if (!el) return;
+  const d = Number.isFinite(el.duration) && el.duration > 0 ? el.duration : 0;
+  const next = Math.max(0, d > 0 ? Math.min(t, Math.max(0, d - 0.2)) : Math.max(0, t));
+  try {
+    el.currentTime = next;
+  } catch {
+    /* ignore */
+  }
+  saveTime();
+  emitBed();
+}
+
 export function isBedPlaying() {
   return Boolean(audio && !audio.paused);
 }
