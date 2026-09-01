@@ -25,6 +25,7 @@ import {
 } from "@/content/site";
 import { albumCards, singleCards, type CatalogSong } from "@/content/music";
 import { LyricsModal } from "@/components/lyrics-modal";
+import { WatchTapes } from "@/components/watch-tapes";
 import { PlayHere } from "@/components/play-here";
 import { Btn, SectionTitle, StatusPill } from "@/components/ui-bits";
 import { podcast } from "@/content/podcast";
@@ -438,7 +439,8 @@ export function EngineSection() {
         >
           <source src={engineFilm.src} type="video/mp4" />
         </video>
-        <p className="mt-3 font-mono text-[10px] tracking-[0.16em] text-dim uppercase">{engineFilm.duration}</p>
+        <p className="mt-3 font-mono text-[10px] tracking-[0.16em] text-dim uppercase">{engineFilm.duration} · hosted here</p>
+        <WatchTapes />
       </div>
 
       <div className="mx-auto mb-12 max-w-5xl border border-primary/22 bg-primary/4 px-5 py-6">
