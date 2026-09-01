@@ -33,7 +33,7 @@ export function WatchTapes() {
           <div className="mt-3 aspect-video w-full overflow-hidden border border-fg/12 bg-bg">
             <iframe
               className="h-full w-full"
-              src={`https://www.youtube-nocookie.com/embed/${tape.start}?list=${tape.list}&rel=0`}
+              src={`https://www.youtube-nocookie.com/embed/${tape.start}?list=${tape.list}&listType=playlist&rel=0`}
               title={tape.title}
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
