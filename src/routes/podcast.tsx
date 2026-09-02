@@ -73,8 +73,8 @@ function Subscribe() {
       </div>
       <p className="text-sm text-dim">
         RSS is the open feed. Point any client at it. Apple isn’t listed until they ingest the same
-        URL. The automated research dump is a second show:{" "}
-        <Link to="/podcast/log" className="text-primary hover:underline">
+        URL. The automated dump is its own show:{" "}
+        <Link to="/research-pod" className="text-primary hover:underline">
           Research Pod
         </Link>
         .

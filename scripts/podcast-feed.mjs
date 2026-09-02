@@ -39,7 +39,7 @@ export const researchLogMeta = {
   category: "Science",
   subcategory: "Physics",
   image: "/podcast-log/cover.jpg",
-  link: "/podcast/log",
+  link: "/research-pod",
   feedPath: "/podcast-log/feed.xml",
   dir: "public/podcast-log",
   publicPath: "/podcast-log",

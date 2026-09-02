@@ -198,6 +198,7 @@ export function MusicSection() {
           </Btn>
         ))}
         <Btn href="/podcast">Podcast RSS</Btn>
+        <Btn href="/research-pod">Research Pod</Btn>
         <Btn href={podcast.spotify} external>
           Spotify
         </Btn>

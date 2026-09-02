@@ -173,6 +173,7 @@ export default defineConfig(({ command, mode }) => {
               { path: "/papers/closing-the-loop" },
               { path: "/podcast" },
               { path: "/podcast/log" },
+              { path: "/research-pod" },
               { path: "/lyrics" },
               { path: "/faq" },
               { path: "/hoa" },

@@ -24,7 +24,7 @@ export const researchLog = {
   feedPath: "/podcast-log/feed.xml",
   feedUrl: researchLogFeedUrl,
   cover: "/podcast-log/cover.jpg",
-  page: "/podcast/log",
+  page: "/research-pod",
 } as const;
 
 export const subscribeApps = [

@@ -5,7 +5,7 @@ as a NEW show. It is not the talk-show feed.
 
   https://extropyengine.com/podcast-log/feed.xml
 
-Page: https://extropyengine.com/podcast/log
+Page: https://extropyengine.com/research-pod
 
 AUTOMATED. Not reviewed. Not edited. Not signed. Not the Codex.
 
