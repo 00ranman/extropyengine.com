@@ -6,7 +6,7 @@ import { getBed, isPlayingPath, toggleSrc } from "@/lib/audio-bed";
 
 export const Route = createFileRoute("/podcast/log")({
   head: () => ({
-    meta: [{ title: "Extropy Engine — Research Log" }],
+    meta: [{ title: "Extropy Engine — Research Pod" }],
     links: [
       {
         rel: "alternate",

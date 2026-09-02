@@ -59,7 +59,7 @@ export const Route = createRootRoute({
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
       { rel: "alternate", type: "application/rss+xml", title: "Extropy Engine", href: "/podcast/feed.xml" },
-      { rel: "alternate", type: "application/rss+xml", title: "Extropy Engine Research Log", href: "/podcast-log/feed.xml" },
+      { rel: "alternate", type: "application/rss+xml", title: "Extropy Engine Research Pod", href: "/podcast-log/feed.xml" },
     ],
   }),
   component: () => (

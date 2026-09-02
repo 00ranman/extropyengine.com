@@ -75,7 +75,7 @@ function Subscribe() {
         RSS is the open feed. Point any client at it. Apple isn’t listed until they ingest the same
         URL. The automated research dump is a second show:{" "}
         <Link to="/podcast/log" className="text-primary hover:underline">
-          Research Log
+          Research Pod
         </Link>
         .
       </p>

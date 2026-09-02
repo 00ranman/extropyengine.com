@@ -1,4 +1,4 @@
-Research Log audio lives here. Git deploy copies this folder to the site.
+Research Pod audio lives here. Git deploy copies this folder to the site.
 
 Submit this URL to Spotify / YouTube Podcasts / Apple Podcasts Connect
 as a NEW show. It is not the talk-show feed.
@@ -9,7 +9,8 @@ Page: https://extropyengine.com/podcast/log
 
 AUTOMATED. Not reviewed. Not edited. Not signed. Not the Codex.
 
-Inbox on Drive (My Drive root): folder "Research Log Podcast".
+Inbox on Drive (My Drive root): folder "Research Log Podcast"
+(folder name stayed put so the allowlist does not move).
 Only files dropped in that folder are candidates. MacBook downloads
 elsewhere are ignored.
 

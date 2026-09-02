@@ -56,7 +56,7 @@ export const primaryNav: readonly NavItem[] = [
     href: "/podcast",
     children: [
       { label: "Talk", href: "/podcast" },
-      { label: "Research Log", href: "/podcast/log" },
+      { label: "Research Pod", href: "/podcast/log" },
     ],
   },
   { label: "Connect", href: "/#follow" },
