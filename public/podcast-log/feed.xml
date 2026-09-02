@@ -21,13 +21,27 @@
       <itunes:category text="Physics"/>
     </itunes:category>
     <itunes:type>episodic</itunes:type>
-    <lastBuildDate>Wed, 2 Sep 2026 03:18:52 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 2 Sep 2026 03:48:16 +0000</lastBuildDate>
     <atom:link href="https://extropyengine.com/podcast-log/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://extropyengine.com/podcast-log/cover.jpg</url>
       <title>Extropy Engine Research Pod</title>
       <link>https://extropyengine.com/research-pod</link>
     </image>
-
+    <item>
+      <title>The Physical Weight of Objective Facts</title>
+      <description>AUTOMATED RESEARCH POD. Not reviewed. Not edited. Not signed. Not the Codex. NotebookLM audio overview of August 2026 preprints through an Extropy Engine lens: Churilov on the thermodynamic cost of erasing a public fact, observers as Boolean modems, Borel on subtime, causality as the thermodynamic arrow, and a lab-built atomic Otto engine. Adjacent papers do not prove the Engine. If this conflicts with the git or the book, those win.</description>
+      <itunes:summary>AUTOMATED RESEARCH POD. Not reviewed. Not edited. Not signed. Not the Codex. NotebookLM audio overview of August 2026 preprints through an Extropy Engine lens: Churilov on the thermodynamic cost of erasing a public fact, observers as Boolean modems, Borel on subtime, causality as the thermodynamic arrow, and a lab-built atomic Otto engine. Adjacent papers do not prove the Engine. If this conflicts with the git or the book, those win.</itunes:summary>
+      <pubDate>Wed, 2 Sep 2026 02:00:00 +0000</pubDate>
+      <guid isPermaLink="false">83156328c3d255e38c08cf1d7a0e8d126d73795b</guid>
+      <link>https://extropyengine.com/research-pod</link>
+      <enclosure url="https://extropyengine.com/podcast-log/2026-09-01-the-physical-weight-of-objective-facts.mp3" length="18301649" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast-log/cover.jpg"/>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:duration>00:32:29</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>1</itunes:episode>
+    </item>
   </channel>
 </rss>
