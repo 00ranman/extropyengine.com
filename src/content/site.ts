@@ -51,7 +51,14 @@ export const primaryNav: readonly NavItem[] = [
       { label: "Sunset Oaks", href: "/hoa/sunset-oaks" },
     ],
   },
-  { label: "Podcast", href: "/podcast" },
+  {
+    label: "Podcast",
+    href: "/podcast",
+    children: [
+      { label: "Talk", href: "/podcast" },
+      { label: "Research Log", href: "/podcast/log" },
+    ],
+  },
   { label: "Connect", href: "/#follow" },
 ] as const;
 

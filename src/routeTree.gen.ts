@@ -19,6 +19,7 @@ import { Route as LyricsRouteImport } from './routes/lyrics'
 import { Route as MvtRouteImport } from './routes/mvt'
 import { Route as OpenProblemsRouteImport } from './routes/open-problems'
 import { Route as PodcastRouteImport } from './routes/podcast'
+import { Route as PodcastLogRouteImport } from './routes/podcast.log'
 import { Route as ProofLayersRouteImport } from './routes/proof-layers'
 import { Route as SayRouteImport } from './routes/say'
 import { Route as UniversaltimesRouteImport } from './routes/universaltimes'
@@ -82,6 +83,11 @@ const PodcastRoute = PodcastRouteImport.update({
   id: '/podcast',
   path: '/podcast',
   getParentRoute: () => rootRouteImport,
+} as any)
+const PodcastLogRoute = PodcastLogRouteImport.update({
+  id: '/log',
+  path: '/log',
+  getParentRoute: () => PodcastRoute,
 } as any)
 const ProofLayersRoute = ProofLayersRouteImport.update({
   id: '/proof-layers',
@@ -159,7 +165,8 @@ export interface FileRoutesByFullPath {
   '/lyrics': typeof LyricsRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
-  '/podcast': typeof PodcastRoute
+  '/podcast': typeof PodcastRouteWithChildren
+  '/podcast/log': typeof PodcastLogRoute
   '/proof-layers': typeof ProofLayersRoute
   '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
@@ -184,7 +191,8 @@ export interface FileRoutesByTo {
   '/lyrics': typeof LyricsRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
-  '/podcast': typeof PodcastRoute
+  '/podcast': typeof PodcastRouteWithChildren
+  '/podcast/log': typeof PodcastLogRoute
   '/proof-layers': typeof ProofLayersRoute
   '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
@@ -210,7 +218,8 @@ export interface FileRoutesById {
   '/lyrics': typeof LyricsRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
-  '/podcast': typeof PodcastRoute
+  '/podcast': typeof PodcastRouteWithChildren
+  '/podcast/log': typeof PodcastLogRoute
   '/proof-layers': typeof ProofLayersRoute
   '/say': typeof SayRoute
   '/universaltimes': typeof UniversaltimesRoute
@@ -238,6 +247,7 @@ export interface FileRouteTypes {
     | '/mvt'
     | '/open-problems'
     | '/podcast'
+    | '/podcast/log'
     | '/proof-layers'
     | '/say'
     | '/universaltimes'
@@ -263,6 +273,7 @@ export interface FileRouteTypes {
     | '/mvt'
     | '/open-problems'
     | '/podcast'
+    | '/podcast/log'
     | '/proof-layers'
     | '/say'
     | '/universaltimes'
@@ -288,6 +299,7 @@ export interface FileRouteTypes {
     | '/mvt'
     | '/open-problems'
     | '/podcast'
+    | '/podcast/log'
     | '/proof-layers'
     | '/say'
     | '/universaltimes'
@@ -400,6 +412,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PodcastRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/podcast/log': {
+      id: '/podcast/log'
+      path: '/log'
+      fullPath: '/podcast/log'
+      preLoaderRoute: typeof PodcastLogRouteImport
+      parentRoute: typeof PodcastRoute
+    }
     '/proof-layers': {
       id: '/proof-layers'
       path: '/proof-layers'
@@ -504,6 +523,16 @@ const HoaRouteChildren: HoaRouteChildren = {
 
 const HoaRouteWithChildren = HoaRoute._addFileChildren(HoaRouteChildren)
 
+interface PodcastRouteChildren {
+  PodcastLogRoute: typeof PodcastLogRoute
+}
+
+const PodcastRouteChildren: PodcastRouteChildren = {
+  PodcastLogRoute: PodcastLogRoute,
+}
+
+const PodcastRouteWithChildren = PodcastRoute._addFileChildren(PodcastRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DfaoRoute: DfaoRoute,
@@ -514,7 +543,7 @@ const rootRouteChildren: RootRouteChildren = {
   LyricsRoute: LyricsRoute,
   MvtRoute: MvtRoute,
   OpenProblemsRoute: OpenProblemsRoute,
-  PodcastRoute: PodcastRoute,
+  PodcastRoute: PodcastRouteWithChildren,
   ProofLayersRoute: ProofLayersRoute,
   SayRoute: SayRoute,
   UniversaltimesRoute: UniversaltimesRoute,

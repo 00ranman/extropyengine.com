@@ -399,9 +399,10 @@ export const faqSections: FaqSection[] = [
       {
         id: "listen",
         q: "Where do I listen / read?",
-        a: "Book, papers, and the podcast are on this site. RSS is https://extropyengine.com/podcast/feed.xml. Spotify and YouTube listings exist. Apple still wants a one-time submit at Podcasts Connect — the feed is valid; their banner is not a feed error.",
+        a: "Book, papers, and two podcasts are on this site. Talk RSS: https://extropyengine.com/podcast/feed.xml. Research Log RSS (automated, unsigned, AI audio overviews): https://extropyengine.com/podcast-log/feed.xml. Spotify and YouTube listings exist for the talk show. Apple still wants a one-time submit at Podcasts Connect for each feed.",
         also: [
           { label: "Podcast", href: "/podcast" },
+          { label: "Research Log", href: "/podcast/log" },
           { label: "Lyrics", href: "/lyrics" },
           { label: "Closing the Loop", href: "/papers/closing-the-loop" },
           { label: "Glossary", href: "/glossary" },

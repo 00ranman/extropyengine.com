@@ -172,6 +172,7 @@ export default defineConfig(({ command, mode }) => {
               { path: "/start/physics" },
               { path: "/papers/closing-the-loop" },
               { path: "/podcast" },
+              { path: "/podcast/log" },
               { path: "/lyrics" },
               { path: "/faq" },
               { path: "/hoa" },

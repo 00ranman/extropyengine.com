@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { EssayLayout } from "@/components/essay-layout";
 import { podcast, subscribeApps } from "@/content/podcast";
 import { getBed, isPlayingPath, toggleSrc } from "@/lib/audio-bed";
@@ -73,7 +73,11 @@ function Subscribe() {
       </div>
       <p className="text-sm text-dim">
         RSS is the open feed. Point any client at it. Apple isn’t listed until they ingest the same
-        URL.
+        URL. The automated research dump is a second show:{" "}
+        <Link to="/podcast/log" className="text-primary hover:underline">
+          Research Log
+        </Link>
+        .
       </p>
     </div>
   );
