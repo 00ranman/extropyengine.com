@@ -143,10 +143,16 @@ function ResearchPodPage() {
         {episodes === null ? (
           <p className="mt-4 text-sm text-dim">Loading…</p>
         ) : episodes.length === 0 ? (
-          <p className="mt-4 text-sm text-muted">
-            Nothing on this shelf yet. Drop an M4A in the Drive folder Research Log Podcast. When it is
-            published, it shows here and in the RSS.
-          </p>
+          <div className="mt-5 space-y-3 border border-primary/20 px-4 py-5">
+            <p className="font-mono text-[10px] tracking-[0.2em] text-primary uppercase">In the inbox · not on the host yet</p>
+            <h3 className="font-display text-xl tracking-[0.03em] text-fg">
+              The Physical Weight of Objective Facts
+            </h3>
+            <p className="text-sm leading-relaxed text-muted">
+              The M4A is in the Drive folder. The site only plays files that are also on the host. Attach that
+              file in chat, or upload it to the repo folder public/podcast-log, and it lands on this list.
+            </p>
+          </div>
         ) : (
           <ul className="mt-5 space-y-4">
             {episodes.map((ep) => (
