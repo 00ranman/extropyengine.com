@@ -16,7 +16,7 @@ export type Essay = {
 
 export const startIntro = {
   title: "Enter",
-  lead: "You don't need to understand the whole system to use it. Four doors. Pick the one that matches the glitch. The framework meets you there.",
+  lead: "You don't need to understand the whole system to use it. Four doors. Pick the one that matches the glitch. The framework meets you there. It also does not need people to be good. Most systems fail because they do. This one only needs a local pocket that actually closes loops. Cash still works for everyone else.",
 };
 
 export const entryPaths = [
@@ -197,6 +197,10 @@ export const essays: Record<string, Essay> = {
       {
         type: "p",
         text: "This is not corruption. It is the default thermodynamic trajectory of any system without a feedback mechanism anchored to its original purpose.",
+      },
+      {
+        type: "p",
+        text: "It also does not require the people inside to become better people. Most civic machinery dies on that hope. People game meters. They puff lawns. They form cartels when the burn is cheap. The Engine is built for that, not against it. You do not need a moral majority. You need enough nodes in a place that both edges agree and late burn still hurts. A local threshold. Overlay. Cash still buys milk for everyone who never joins. Fungus, not fire.",
       },
       { type: "h2", text: "Why Feedback Loops Break" },
       {

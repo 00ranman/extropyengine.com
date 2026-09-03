@@ -53,6 +53,16 @@ export const faqSections: FaqSection[] = [
         ],
       },
       {
+        id: "people-suck",
+        q: "Why would this work if people suck?",
+        a: "It does not require people to be good. Most systems fail because they do. They try to teach virtue, or they hope the next cohort is nicer. People game what they can touch. This loop is built for that: both edges, late burn, decay, cash still buys milk. You do not need a moral majority. You need enough nodes in a place that closed loops outrun the puff. That is a local threshold, not a conversion of the species. Fungus, not fire. The rest of the street can ignore it.",
+        also: [
+          { label: "Overlay", href: "/glossary", hash: "overlay" },
+          { label: "Enter", href: "/start" },
+          { label: "Neighborhood MESO", href: "/hoa" },
+        ],
+      },
+      {
         id: "imported-cat",
         q: "Does a doctor have to re-earn being a doctor in here?",
         a: "No. The license is opening evidence: a CAT record, issuer = the old board, lane = the practice. Not XP. Not a throne. Once they are in, this graph is what continues — cases, teaching, loops they actually close. Retired weight that can issue new CATs and argue rarity in that lane is that DAG history, not the framed diploma. Same for electricians, teachers, welders. Doctor is one example. If the paper was a lie, contest and late burn still apply. The license gets them in the door. It does not give them the house.",
