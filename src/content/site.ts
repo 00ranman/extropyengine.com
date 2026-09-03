@@ -32,6 +32,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "How it works", href: "/#engine" },
       { label: "Watch", href: "/#film" },
       { label: "Start here", href: "/start" },
+      { label: "Letter key", href: "/key" },
       { label: "FAQ", href: "/faq" },
       { label: "Glossary", href: "/glossary" },
       { label: "Ledger", href: "/#ledger" },
@@ -661,10 +662,10 @@ export const engineMath = {
     "Floor: XP ≥ ΔS / cₗ². Irreducible form — a compression of the mint above, same job as E = mc² next to the full energy-momentum relation. Not the theory. Not a new physics law. Glossary has the line.",
   source: "packages/xp-formula — canonical v3.1.2. Reputation never enters this formula. Tₛ is a slam window with a Δt cap; standing leak is 0.99ⁿ.",
   terms: [
-    { t: "R", d: "Rarity. Scarcity / base difficulty of this action class. Property of the loop, not the person." },
-    { t: "F", d: "Frequency-of-decay. Repeating the same class pays less. 1.0 the first time. Not falsifiability." },
-    { t: "ΔS", d: "Verified entropy reduction. Must be > 0. This is the proxy we keep arguing about below." },
-    { t: "w · E", d: "Weight vector dotted with the effort / domain vector. Lawn vs ride vs ozone. Also the glass of water: desert vs stream is a different coupled system, not a mood painted on an unchanged glass." },
+    { t: "R", d: "Rarity. Scarcity / base difficulty of this action class. Property of the loop, not the person. Not reputation." },
+    { t: "F", d: "Frequency of Decay. Repeating the same class pays less. 1.0 the first time. Not falsifiability (that is script-ℱ)." },
+    { t: "ΔS", d: "Verified entropy reduction. Must be > 0. The proxy. Not XP." },
+    { t: "w · E", d: "Dot product: weight vector · effort / eight-domain vector. Not “weighted emergence.” Not a scalar named W.E." },
     { t: "Tₛ", d: "Slam window, not recency. Tₛ = exp(−λ min(Δt, Δt_cap)). Instant close → log = 0 → XP = 0, on purpose. Cap Δt so stalling is not a mint. Standing leak is 0.99ⁿ, a different clock." },
   ],
   body: [

@@ -14,6 +14,7 @@ import { Route as DfaoRouteImport } from './routes/dfao'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as GlossaryRouteImport } from './routes/glossary'
 import { Route as HoaRouteImport } from './routes/hoa'
+import { Route as KeyRouteImport } from './routes/key'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as LyricsRouteImport } from './routes/lyrics'
 import { Route as MvtRouteImport } from './routes/mvt'
@@ -58,6 +59,11 @@ const GlossaryRoute = GlossaryRouteImport.update({
 const HoaRoute = HoaRouteImport.update({
   id: '/hoa',
   path: '/hoa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KeyRoute = KeyRouteImport.update({
+  id: '/key',
+  path: '/key',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LoginRoute = LoginRouteImport.update({
@@ -167,6 +173,7 @@ export interface FileRoutesByFullPath {
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
   '/hoa': typeof HoaRouteWithChildren
+  '/key': typeof KeyRoute
   '/login': typeof LoginRoute
   '/lyrics': typeof LyricsRoute
   '/mvt': typeof MvtRoute
@@ -194,6 +201,7 @@ export interface FileRoutesByTo {
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
   '/hoa': typeof HoaRouteWithChildren
+  '/key': typeof KeyRoute
   '/login': typeof LoginRoute
   '/lyrics': typeof LyricsRoute
   '/mvt': typeof MvtRoute
@@ -222,6 +230,7 @@ export interface FileRoutesById {
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
   '/hoa': typeof HoaRouteWithChildren
+  '/key': typeof KeyRoute
   '/login': typeof LoginRoute
   '/lyrics': typeof LyricsRoute
   '/mvt': typeof MvtRoute
@@ -251,6 +260,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/glossary'
     | '/hoa'
+    | '/key'
     | '/login'
     | '/lyrics'
     | '/mvt'
@@ -278,6 +288,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/glossary'
     | '/hoa'
+    | '/key'
     | '/login'
     | '/lyrics'
     | '/mvt'
@@ -305,6 +316,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/glossary'
     | '/hoa'
+    | '/key'
     | '/login'
     | '/lyrics'
     | '/mvt'
@@ -333,6 +345,7 @@ export interface RootRouteChildren {
   FaqRoute: typeof FaqRoute
   GlossaryRoute: typeof GlossaryRoute
   HoaRoute: typeof HoaRouteWithChildren
+  KeyRoute: typeof KeyRoute
   LoginRoute: typeof LoginRoute
   LyricsRoute: typeof LyricsRoute
   MvtRoute: typeof MvtRoute
@@ -388,6 +401,13 @@ declare module '@tanstack/react-router' {
       path: '/hoa'
       fullPath: '/hoa'
       preLoaderRoute: typeof HoaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/key': {
+      id: '/key'
+      path: '/key'
+      fullPath: '/key'
+      preLoaderRoute: typeof KeyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/login': {
@@ -559,6 +579,7 @@ const rootRouteChildren: RootRouteChildren = {
   FaqRoute: FaqRoute,
   GlossaryRoute: GlossaryRoute,
   HoaRoute: HoaRouteWithChildren,
+  KeyRoute: KeyRoute,
   LoginRoute: LoginRoute,
   LyricsRoute: LyricsRoute,
   MvtRoute: MvtRoute,

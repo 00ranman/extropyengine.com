@@ -9,6 +9,7 @@ import {
   PapersSection,
   EngineSection,
 } from "@/components/home-sections";
+import { SymbolKeyStrip } from "@/components/symbol-key";
 import { SiteShell } from "@/components/site-shell";
 
 export const Route = createFileRoute("/")({ component: Home });
@@ -28,6 +29,7 @@ function Home() {
 
   return (
     <SiteShell>
+      <SymbolKeyStrip />
       <EnterStrip />
       <BookHero />
       <MusicSection />

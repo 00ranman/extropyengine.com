@@ -547,19 +547,28 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       },
       {
         term: "R — Rarity",
+        id: "r",
         def: "Action-class scarcity / base difficulty. Property of the loop, not the actor. Range [0.1, 10]. Not reputation.",
       },
       {
         term: "F — Frequency of Decay",
-        def: "Diminishing returns for repeating this action class. 1.0 the first time. F is not falsifiability.",
+        id: "f",
+        def: "Diminishing returns for repeating this action class. 1.0 the first time. F is not falsifiability. Falsifiability is script-ℱ.",
+      },
+      {
+        term: "ℱ — Falsifiability",
+        id: "script-f",
+        def: "Script-F. A claim that can fail in the open. Lose-conditions. Never write Latin F for this — Latin F is Frequency of Decay in the mint.",
       },
       {
         term: "ΔS",
-        def: "Verified entropy reduction. Must be strictly positive. A proxy we fine-tune as data arrives — not a promised constant for “mowing a lawn.” Words drift. The number should too, honestly.",
+        id: "delta-s",
+        def: "Verified entropy reduction. Must be strictly positive. A proxy we fine-tune as data arrives — not a promised constant for “mowing a lawn.” Words drift. The number should too, honestly. Not XP.",
       },
       {
         term: "w · E",
-        def: "Weight vector dotted with the effort / eight-domain vector. Where cross-domain terms (gas, ozone, alternative trips) actually accumulate. The glass of water lives here — not in a vibe.",
+        id: "w-dot-e",
+        def: "Dot product of the weight vector w with the effort / eight-domain vector E. Where cross-domain terms (gas, ozone, alternative trips) actually accumulate. The glass of water lives here. Not “weighted emergence.” Not a scalar named W.E. Not a ninth domain called Emergence.",
       },
       {
         term: "Tₛ — slam window",

@@ -161,6 +161,7 @@ export default defineConfig(({ command, mode }) => {
               { path: "/universaltimes" },
               { path: "/docs" },
               { path: "/glossary" },
+              { path: "/key" },
               { path: "/proof-layers" },
               { path: "/mvt" },
               { path: "/open-problems" },

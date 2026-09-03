@@ -33,6 +33,15 @@ export const faqSections: FaqSection[] = [
         ],
       },
       {
+        id: "letters",
+        q: "R, F, ΔS, w · E, Tₛ — what do the letters actually mean?",
+        a: "R is rarity of the action class, not reputation. F is Frequency of Decay (repeats pay less), not falsifiability — that is script-ℱ. ΔS is verified entropy reduction, not XP. w · E is the dot product of a weight vector and an effort / eight-domain vector, not “weighted emergence” and not a thing called W.E. Tₛ is the slam window for this loop: instant confirm pays 0. log(1/Tₛ) is that clock. 0.99ⁿ is a different clock. Full stop-sign: /key.",
+        also: [
+          { label: "Letter key", href: "/key" },
+          { label: "Mint formula", href: "/glossary", hash: "xp-formula" },
+        ],
+      },
+      {
         id: "explain",
         q: "How do I explain this without saying entropy token?",
         a: "Verified change in a system. Causal evidence on a DAG. Standing from that evidence. Standing is not money — it can change access. ΔS is the measurement proxy. XP is the global standing. CT and L are this door. EP is the till spark, born and burned in the sale. CAT is skill. IT is voice. Those last two stay off the mint so credentials and votes cannot be bought with XP. The hard test is not the slogan. It is whether the proxy’s error gets expensive. The fungus line stays the hook. This paragraph is the translation.",
