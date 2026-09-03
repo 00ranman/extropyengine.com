@@ -44,8 +44,8 @@ function Subscribe() {
     <div id="subscribe" className="space-y-4">
       <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">Listen</p>
       <p>
-        Spotify and YouTube are the live listings. Play here on this page, or take the RSS if your
-        app isn’t in that list yet.
+        Spotify, YouTube, and Apple Podcasts are live. Play here on this page, or take the RSS if
+        your app isn’t in that list yet.
       </p>
       <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
         {subscribeApps.map((app) => (
@@ -72,8 +72,8 @@ function Subscribe() {
         </button>
       </div>
       <p className="text-sm text-dim">
-        RSS is the open feed. Point any client at it. Apple isn’t listed until they ingest the same
-        URL. The automated dump is its own show:{" "}
+        RSS is the open feed. Point any client at it. Apple is on the same URL. The automated dump
+        is its own show:{" "}
         <Link to="/research-pod" className="text-primary hover:underline">
           Research Pod
         </Link>

@@ -205,6 +205,9 @@ export function MusicSection() {
         <Btn href={podcast.youtube} external>
           YouTube
         </Btn>
+        <Btn href={podcast.apple} external>
+          Apple Podcasts
+        </Btn>
         <Btn href="/podcast#subscribe" primary>
           Subscribe
         </Btn>
