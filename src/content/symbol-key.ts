@@ -60,8 +60,8 @@ export const symbolKey = {
       id: "xp",
       glyph: "XP",
       name: "Global standing",
-      is: "The letters are XP. Proxy of ΔS on the ledger after the mint. Every door can see that you have standing. You do not spend it. Access economy. Decays ~1%/month of remaining (0.99ⁿ).",
-      isNot: "Not “Extropy Points.” Not a cash bag. Not ΔS itself. Not L. Not CT.",
+      is: "The letters are XP. Proxy of ΔS on the ledger after the mint. Every door can see that you have standing. You do not spend it. Access economy. Decays ~1%/month of remaining (0.99ⁿ). How XP works is planetary. A DFAO does not rewrite the mint. Cash-out is a lose-condition. If they vote that in, they forked.",
+      isNot: "Not “Extropy Points.” Not a cash bag. Not ΔS itself. Not L. Not CT. Not Randall’s private ledger.",
     },
     {
       id: "script-f",
@@ -81,8 +81,8 @@ export const symbolKey = {
       id: "l",
       glyph: "L",
       name: "Literal standing at this till",
-      is: "First-class, like XP and CT. This moment, this DFAO, this store, this ticket. Mix of your CT here, how often you actually use this door, local mesh, lanes in play, and a public house coefficient the DFAO can tweak. Feeds EP. EP = XP × L, then EP burns.",
-      isNot: "Not Landauer’s constant. Not a lane. Not a coupon the owner types in secret. Not global XP.",
+      is: "First-class, like XP and CT. This moment, this DFAO, this store, this ticket. Are you a reliable node of demand here — regular groceries, a schedule the shop can order against — or a random spike that makes the stockroom guess. CT feeds it. The house owns a public slider: how hard the threshold is, how much of a ticket L is allowed to touch. That slider also writes upward: a house that is cheap or greedy shows in their own EP and in the next fractal’s CT. Habits (walk vs Hummer) can become modifiers later. Day one is not a carbon priesthood.",
+      isNot: "Not sweeping the floors for every shop. Not unpaid labor. Not Landauer’s constant. Not a secret coupon. Not global XP.",
     },
     {
       id: "ep",
@@ -95,8 +95,8 @@ export const symbolKey = {
       id: "ct",
       glyph: "CT",
       name: "Community standing",
-      is: "Meter for this door / this DFAO. What you have actually put into this community. Feeds L at the till. Not purchased with XP.",
-      isNot: "Not a coin. Not global XP. Not L itself.",
+      is: "Meter for this door / this DFAO. Showing up here. Buying here. Being a node this house can plan around. Feeds L at the till. Not purchased with XP. This DFAO can vote how CT is scored inside this room. That vote does not rewrite CT next door.",
+      isNot: "Not a coin. Not a job application. Not global XP. Not L itself.",
     },
     {
       id: "cat",

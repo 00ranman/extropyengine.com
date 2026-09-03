@@ -336,6 +336,24 @@ export const faqSections: FaqSection[] = [
           { label: "Open problems", href: "/open-problems" },
         ],
       },
+      {
+        id: "not-a-job",
+        q: "Do I have to work at every shop to get L?",
+        a: "No. CT and L are not mopping their floors. They are whether this door can count on you as a node of demand. Regular groceries. A pattern they can order stock against. Shopping five stores at random is allowed. It is just higher entropy for that house, so L here is worse. Do what you want. Habits (walk vs Hummer) can become modifiers later if that DFAO votes them in. Day one is not a carbon priesthood.",
+        also: [
+          { label: "L", href: "/glossary", hash: "l" },
+          { label: "CT", href: "/glossary", hash: "ct" },
+        ],
+      },
+      {
+        id: "who-turns-knobs",
+        q: "Who is allowed to change XP, CT, and L?",
+        a: "Different floors. L: the shop owns a public slider — threshold and how much of a ticket the layer may touch. That slider also writes into their own EP and the next fractal. CT: this DFAO can vote how CT is scored in this room. That vote does not rewrite CT next door. XP: how the mint works is planetary. Cash-out is a lose-condition. If a room votes cash-out, they forked. This is not Randall’s engine. He wrote the loop. Rooms run rooms.",
+        also: [
+          { label: "Letter key", href: "/key" },
+          { label: "Engine — shop view", href: "/#engine" },
+        ],
+      },
     ],
   },
   {

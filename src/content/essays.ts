@@ -467,12 +467,12 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "L — literal standing at this till",
         id: "l",
-        def: "First-class meter, same rank as XP and CT. This moment, this community, this store, this purchase. Mix of CT here, how often you actually use this door, local mesh, lanes in play, and a public house coefficient the DFAO can tweak. Feeds EP. Not Landauer. Not a secret coupon. Not global XP.",
+        def: "First-class meter, same rank as XP and CT. This moment, this community, this store, this purchase. Are you a reliable node of demand here, or a random spike. CT feeds it. The house owns a public slider: threshold and how much of a ticket L may touch. That slider writes upward into their own EP and the next fractal. Habits can become modifiers later. Not mopping their floors. Not Landauer. Not a secret coupon. Not global XP.",
       },
       {
         term: "CT — community standing",
         id: "ct",
-        def: "Meter for this DFAO / this door. What you have actually put into this community. Feeds L at the till. Not purchased with XP. Separate so a pile of global XP cannot buy the room. Not a Contribution Token bag. Not L itself.",
+        def: "Meter for this DFAO / this door. Showing up here. Buying here. Being a node this house can plan around. Feeds L at the till. Not purchased with XP. This DFAO can vote how CT is scored inside this room. That vote does not rewrite CT next door. Not a job application. Not a Contribution Token bag. Not L itself.",
       },
       {
         term: "CAT — Category",
