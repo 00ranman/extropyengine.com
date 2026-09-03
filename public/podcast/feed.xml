@@ -21,13 +21,32 @@
       <itunes:category text="Philosophy"/>
     </itunes:category>
     <itunes:type>episodic</itunes:type>
-    <lastBuildDate>Thu, 3 Sep 2026 02:54:21 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 3 Sep 2026 05:47:08 +0000</lastBuildDate>
     <atom:link href="https://extropyengine.com/podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://extropyengine.com/podcast/cover.jpg</url>
       <title>Extropy Engine</title>
       <link>https://extropyengine.com/podcast</link>
     </image>
+    <item>
+      <title>The software manual inside Schrödinger&apos;s Flex</title>
+      <description>Line-by-line on Schrödinger&apos;s Flex. The cat was a joke at people who scale quantum to a cat. Compute it or pipe down. Cosplay cosmos vs a functional manual. LocalFlow, DAG, did:key, XP = R × F × delta S × (w   E) × log(1/Tₛ). Then the branch where he quit.
+
+Lyric video: https://www.youtube.com/watch?v=2EZnlukCWfI</description>
+      <itunes:summary>Line-by-line on Schrödinger&apos;s Flex. The cat was a joke at people who scale quantum to a cat. Compute it or pipe down. Cosplay cosmos vs a functional manual. LocalFlow, DAG, did:key, XP = R × F × delta S × (w   E) × log(1/Tₛ). Then the branch where he quit.
+
+Lyric video: https://www.youtube.com/watch?v=2EZnlukCWfI</itunes:summary>
+      <pubDate>Thu, 3 Sep 2026 05:46:00 +0000</pubDate>
+      <guid isPermaLink="false">2820bdff6c6ab01bfc743cac9c190362b4eac723</guid>
+      <link>https://extropyengine.com/podcast</link>
+      <enclosure url="https://extropyengine.com/podcast/2026-09-03-the-software-manual-inside-schrodingers-flex.mp3" length="21387587" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
+      <itunes:explicit>true</itunes:explicit>
+      <itunes:duration>00:38:27</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>11</itunes:episode>
+    </item>
     <item>
       <title>How social consensus decays the universe</title>
       <description>Line-by-line on No Safe Word for Reality. Chip not photocopy. Syntax as cage. Divine as recursion with good PR. Looking writes a vertex. XP = R × F × delta S × (w   E) × log(1/Tₛ). Slam window. 0.99ⁿ. Late mint, late burn. The song is the field manual. The mint is the blade.
