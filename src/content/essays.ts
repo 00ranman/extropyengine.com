@@ -388,7 +388,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "ZKP",
         id: "zkp",
-        def: "Zero-knowledge proof. You are not showing anyone the information. You are showing a chip that already answered the question. Tap a debit card: cashier never sees the PIN, store never sees the balance, terminal gets approved or declined. Age at the door: your phone scans the license on YOUR side; the till gets 21 or not — not the birthday, not the street, not the photo. The bar's book records that a check happened. Later lookers who want WHO write a vertex. The panopticon is the photocopy in a city cabinet. DID is the name. ZKP is what you show. Circuits Codex 3; today signatures.",
+        def: "Zero-knowledge proof. You are not showing anyone the information. You are showing a chip that already answered the question. Tap a debit card: cashier never sees the PIN, store never sees the balance, terminal gets approved or declined. Age at the door: your phone scans the license on YOUR side; the till gets 21 or not — not the birthday, not the street, not the photo. The bar's book records that a check happened. Later lookers who want WHO write a vertex. The panopticon is the photocopy in a city cabinet. DID is the name. ZKP is what you show. Circuits are not in Codex v2.1. 2.1 is the current Codex. Today: signatures.",
       },
       {
         term: "ZKP reputation",
@@ -588,7 +588,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "Citation-gated credit",
         id: "citation-gated",
-        def: "The graph does not walk the light cone. Infinite downstream is a story about the universe, not a query the protocol runs. Late mint only fires if a new vertex exists that names causal parents and hangs evidence — the autobiography that cites the teacher, not a crawler assigning every butterfly. No citation, no edge, no XP. DAG curators keep that from becoming a hairball. How much of a later ΔS flows back how many hops is a knob for Codex 3.0, not a frozen fraction. Bound: asserted edges only, proxy delta only, confirm path still applies.",
+        def: "The graph does not walk the light cone. Infinite downstream is a story about the universe, not a query the protocol runs. Late mint only fires if a new vertex exists that names causal parents and hangs evidence — the autobiography that cites the teacher, not a crawler assigning every butterfly. No citation, no edge, no XP. DAG curators keep that from becoming a hairball. How much of a later ΔS flows back how many hops is not frozen in Codex v2.1. Bound: asserted edges only, proxy delta only, confirm path still applies.",
       },
       {
         term: "Late burn",

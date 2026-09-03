@@ -40,7 +40,7 @@ function DocLink({
 function Docs() {
   return (
     <EssayLayout backTo="/" backLabel="Extropy Engine" title="Docs">
-      <p>Codex v2.1 is the current specification. Companion papers sit underneath.</p>
+      <p>Codex v2.1 is the most recent signed Codex. Companion papers sit underneath. Capture notes are not a newer Codex.</p>
       <div className="space-y-3">
         {docsIndex.map((doc) => (
           <DocLink key={doc.href} href={doc.href} title={doc.title} note={doc.note} />

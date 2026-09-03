@@ -8,8 +8,9 @@ function Glossary() {
   return (
     <EssayLayout backTo="/start" backLabel="Enter" title="Glossary">
       <p>
-        Canonical against Extropy Codex v2.1. Operational definitions: how each term functions inside
-        the system. Where prior drafts disagree, Codex v2.1 is canonical. Letters first:{" "}
+        Canonical against Extropy Codex v2.1 — the most recent signed Codex. Operational definitions:
+        how each term functions inside the system. Where prior drafts disagree, Codex v2.1 is
+        canonical. Letters first:{" "}
         <Link to="/key" className="text-primary hover:underline">
           /key
         </Link>

@@ -492,7 +492,7 @@ export const engineNode = {
   title: "Keys stay on the box",
   lead: "Each laptop is an independent node. Hostinger is not the network. Security is: you hold the key, the mesh verifies signatures, and a bad actor cannot silently rewrite someone else's book.",
   did: "You do not apply for a DID. First boot writes a keypair on disk. The name is a did:key — W3C, from the public key, no registrar, no Microsoft, no Google. That is how you get one. Backup the file. Lose it and you are a new node. Standing does not teleport. did:web is optional if you want a domain on the document. Not required.",
-  zkp: "The DID is the name. A ZKP is what you show — not the file. Chip, not photocopy. Prove a predicate: 21 or not, band ≥ n, confirmed this loop, not slashed, unique in this room. The till gets yes or no. Not your diary. Not the XP pile. Circuits are Codex 3. Today the handshake is signatures. Same job, thinner proof.",
+  zkp: "The DID is the name. A ZKP is what you show — not the file. Chip, not photocopy. Prove a predicate: 21 or not, band ≥ n, confirmed this loop, not slashed, unique in this room. The till gets yes or no. Not your diary. Not the XP pile. ZKP circuits are not in Codex v2.1. 2.1 is the current Codex. Today the handshake is signatures. Same job, thinner proof later.",
   points: [
     { t: "On the box", d: "Keys, PSLL, postgres if you run the full stack — stay local. Do not punch the database at the WAN. You pull git. Nobody remote-admins you unless you handed them the key." },
     { t: "On the wire", d: "LAN talks node to node. WAN is TLS. Handshake is a signed hello plus capabilities. One captured node can lie about its own claims. It cannot quietly rewrite a neighbor's DAG. Other nodes check signatures and causal parents." },
@@ -500,7 +500,7 @@ export const engineNode = {
     { t: "Fake work", d: "Both edges have to agree. Evidence hangs on the vertex. Late burn still hits. Repeat-farming is F. A MICRO can puff a lawn. The DAG plus burn is how we live with that — not a speech about honesty." },
     { t: "Looking", d: "A common person can walk the DAG. They cannot do it silently. A look is a vertex. Stalking-shaped bursts can slash. Tills still get yes/no." },
   ],
-  today: "Neighborhood-app writes did:key on first boot. Handshake is HTTPS + signatures, not production P2P. ZKP circuits are Codex 3.",
+  today: "Neighborhood-app writes did:key on first boot. Handshake is HTTPS + signatures, not production P2P. ZKP circuits are not in Codex v2.1.",
 } as const;
 
 export const engineWire = {
@@ -732,6 +732,11 @@ export const socials = [
 
 export const docsIndex = [
   {
+    title: "Extropy Codex v2.1",
+    href: "/docs/Extropy_Codex_v2.1_Comprehensive.pdf",
+    note: "Most recent signed Codex. Comprehensive Edition — F = Frequency of Decay, script-F = Falsifiability. canonical-v3.12, protocol v0.2 (August 2026)",
+  },
+  {
     title: "Working Formula Sheet",
     href: "/docs/Extropy_Engine_Formula_Sheet.pdf",
     note: "Working lock — records, meters, till spark. Tₛ is the slam window, not recency. Three clocks.",
@@ -742,14 +747,9 @@ export const docsIndex = [
     note: "HOA-shaped wrapper on the Engine. One command, you are a node. Jobs → confirm → XP.",
   },
   {
-    title: "Codex 3.0 notes",
+    title: "Capture notes (not a Codex)",
     href: "/docs/CODEX_3_NOTES.md",
-    note: "Capture for the next Codex — slam window, three clocks, L-farm, ΔS calibration. 2.1 stays frozen.",
-  },
-  {
-    title: "Extropy Codex v2.1",
-    href: "/docs/Extropy_Codex_v2.1_Comprehensive.pdf",
-    note: "Comprehensive Edition — F = Frequency of Decay, script-F = Falsifiability. canonical-v3.12, protocol v0.2 (August 2026)",
+    note: "Unsigned working notes for a later edition. Not published. Not newer than 2.1. 2.1 is the current Codex.",
   },
   {
     title: "Universal Times v4.2",
