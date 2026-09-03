@@ -35,7 +35,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "letters",
         q: "R, F, ΔS, w · E, Tₛ — what do the letters actually mean?",
-        a: "R is rarity of the action class, not reputation. F is Frequency of Decay (repeats pay less), not falsifiability — that is script-ℱ. ΔS is verified entropy reduction, not XP. w · E is the dot product of a weight vector and an effort / eight-domain vector, not “weighted emergence” and not a thing called W.E. Tₛ is the slam window for this loop: instant confirm pays 0. log(1/Tₛ) is that clock. 0.99ⁿ is a different clock. Full stop-sign: /key.",
+        a: "R is rarity of the action class, not reputation. F is Frequency of Decay (repeats pay less), not falsifiability — that is script-ℱ. ΔS is verified entropy reduction, not XP. w · E is weighted emergence: the eight-domain weight vector dotted with this loop’s effort vector. That is the product inside the mint, which is why PHOTON 404 can say the English. It is not a fifth letter. Tₛ is the slam window for this loop: instant confirm pays 0. log(1/Tₛ) is that clock. 0.99ⁿ is a different clock. Full stop-sign: /key.",
         also: [
           { label: "Letter key", href: "/key" },
           { label: "Mint formula", href: "/glossary", hash: "xp-formula" },

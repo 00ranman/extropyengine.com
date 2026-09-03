@@ -2,7 +2,7 @@
 export const symbolKey = {
   title: "Letter key",
   kicker: "Do not remap these",
-  lead: "Same Latin letter gets reused in every field. Here is what this protocol means. Not reputation. Not falsifiability. Not “weighted emergence.” The most recent signed Codex is v2.1. Canonical mint in code is v3.1.2 in packages/xp-formula. If a chatbot invents a third reading, it is wrong.",
+  lead: "Same Latin letter gets reused in every field. Here is what this protocol means. Not reputation. Not falsifiability. The most recent signed Codex is v2.1. Canonical mint in code is v3.1.2 in packages/xp-formula. If a chatbot invents a third reading, it is wrong.",
   formula: "XP = R × F × ΔS × (w · E) × log(1/Tₛ)",
   mint: [
     {
@@ -29,9 +29,9 @@ export const symbolKey = {
     {
       id: "w-dot-e",
       glyph: "w · E",
-      name: "Weight vector · effort / domain vector",
-      is: "Dot product. w is the weight vector across the eight domains. E is the effort / domain vector for this loop (gas, ozone, alternative trip, lawn vs ride). Cross-domain terms live here. Written w · E, sometimes (w · E).",
-      isNot: "Not “weighted emergence.” Not a single scalar named W.E. Not a ninth domain called Emergence. Not “waited.”",
+      name: "Weighted emergence",
+      is: "The product itself. w is the weight vector across the eight domains. E is the effort / domain vector for this loop. w · E is those weights applied to that effort — emergence scored across weighted domains. Lawn vs ride vs ozone lives here. PHOTON 404 says the English. The mint writes the dot product. Same object.",
+      isNot: "Not a fifth letter sitting beside R, F, ΔS, and Tₛ. Not a bag named W.E. Not a ninth domain called Emergence.",
     },
     {
       id: "ts",

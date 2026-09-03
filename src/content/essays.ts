@@ -568,7 +568,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "w · E",
         id: "w-dot-e",
-        def: "Dot product of the weight vector w with the effort / eight-domain vector E. Where cross-domain terms (gas, ozone, alternative trips) actually accumulate. The glass of water lives here. Not “weighted emergence.” Not a scalar named W.E. Not a ninth domain called Emergence.",
+        def: "Weighted emergence. Dot product of the weight vector w with the effort / eight-domain vector E. Where cross-domain terms (gas, ozone, alternative trips) actually accumulate. The glass of water lives here. PHOTON 404 says the English for this product. It is not a fifth letter next to R, F, ΔS, and Tₛ.",
       },
       {
         term: "Tₛ — slam window",

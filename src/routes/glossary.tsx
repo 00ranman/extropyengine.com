@@ -14,8 +14,8 @@ function Glossary() {
         <Link to="/key" className="text-primary hover:underline">
           /key
         </Link>
-        . R is rarity. F is Frequency of Decay. ℱ is falsifiability. w · E is a dot product, not
-        weighted emergence.
+        . R is rarity. F is Frequency of Decay. ℱ is falsifiability. w · E is weighted emergence —
+        the product, not a fifth letter.
       </p>
       {glossarySections.map((section) => (
         <section key={section.heading} className="space-y-4 pt-4">

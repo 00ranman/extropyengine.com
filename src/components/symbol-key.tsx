@@ -36,7 +36,8 @@ export function SymbolKeyStrip() {
           ))}
         </dl>
         <p className="mt-4 text-[12px] text-dim">
-          ℱ is falsifiability. F is not. w · E is a dot product, not a product called weighted emergence.{" "}
+          ℱ is falsifiability. F is not. w · E is weighted emergence — the product, not a fifth
+          letter.{" "}
           <Link to="/key" className="text-primary hover:underline">
             Rest of the letters
           </Link>
@@ -80,6 +81,10 @@ export function SymbolKeyFull() {
         Glossary is the long dictionary. This page is the stop-sign for mixed letters.{" "}
         <Link to="/glossary" className="text-primary hover:underline">
           Glossary
+        </Link>
+        . The sung line lives on{" "}
+        <Link to="/lyrics" className="text-primary hover:underline">
+          PHOTON 404
         </Link>
         .
       </p>

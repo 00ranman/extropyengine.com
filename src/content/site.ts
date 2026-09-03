@@ -665,7 +665,7 @@ export const engineMath = {
     { t: "R", d: "Rarity. Scarcity / base difficulty of this action class. Property of the loop, not the person. Not reputation." },
     { t: "F", d: "Frequency of Decay. Repeating the same class pays less. 1.0 the first time. Not falsifiability (that is script-ℱ)." },
     { t: "ΔS", d: "Verified entropy reduction. Must be > 0. The proxy. Not XP." },
-    { t: "w · E", d: "Dot product: weight vector · effort / eight-domain vector. Not “weighted emergence.” Not a scalar named W.E." },
+    { t: "w · E", d: "Weighted emergence. Dot product of the eight-domain weight vector and this loop’s effort vector. The English is the song line. The mint is the product. Not a fifth letter." },
     { t: "Tₛ", d: "Slam window, not recency. Tₛ = exp(−λ min(Δt, Δt_cap)). Instant close → log = 0 → XP = 0, on purpose. Cap Δt so stalling is not a mint. Standing leak is 0.99ⁿ, a different clock." },
   ],
   body: [
