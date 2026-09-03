@@ -21,7 +21,7 @@
       <itunes:category text="Philosophy"/>
     </itunes:category>
     <itunes:type>episodic</itunes:type>
-    <lastBuildDate>Thu, 3 Sep 2026 02:52:11 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 3 Sep 2026 02:54:21 +0000</lastBuildDate>
     <atom:link href="https://extropyengine.com/podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://extropyengine.com/podcast/cover.jpg</url>
@@ -30,8 +30,12 @@
     </image>
     <item>
       <title>How social consensus decays the universe</title>
-      <description>Line-by-line on No Safe Word for Reality. Chip not photocopy. Syntax as cage. Divine as recursion with good PR. Looking writes a vertex. XP = R × F × delta S × (w   E) × log(1/Tₛ). Slam window. 0.99ⁿ. Late mint, late burn. The song is the field manual. The mint is the blade.</description>
-      <itunes:summary>Line-by-line on No Safe Word for Reality. Chip not photocopy. Syntax as cage. Divine as recursion with good PR. Looking writes a vertex. XP = R × F × delta S × (w   E) × log(1/Tₛ). Slam window. 0.99ⁿ. Late mint, late burn. The song is the field manual. The mint is the blade.</itunes:summary>
+      <description>Line-by-line on No Safe Word for Reality. Chip not photocopy. Syntax as cage. Divine as recursion with good PR. Looking writes a vertex. XP = R × F × delta S × (w   E) × log(1/Tₛ). Slam window. 0.99ⁿ. Late mint, late burn. The song is the field manual. The mint is the blade.
+
+Song: https://www.youtube.com/watch?v=spmLdhZIsmI</description>
+      <itunes:summary>Line-by-line on No Safe Word for Reality. Chip not photocopy. Syntax as cage. Divine as recursion with good PR. Looking writes a vertex. XP = R × F × delta S × (w   E) × log(1/Tₛ). Slam window. 0.99ⁿ. Late mint, late burn. The song is the field manual. The mint is the blade.
+
+Song: https://www.youtube.com/watch?v=spmLdhZIsmI</itunes:summary>
       <pubDate>Thu, 3 Sep 2026 02:50:00 +0000</pubDate>
       <guid isPermaLink="false">7f0c516a385b11c13ccffb71d175ebc9045d2a32</guid>
       <link>https://extropyengine.com/podcast</link>
