@@ -44,7 +44,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "explain",
         q: "How do I explain this without saying entropy token?",
-        a: "Verified change in a system. Causal evidence on a DAG. Standing from that evidence. Standing is not money — it can change access. ΔS is the measurement proxy. XP is the global standing. CT and L are this door. EP is the till spark, born and burned in the sale. CAT is skill. IT is voice. Those last two stay off the mint so credentials and votes cannot be bought with XP. The hard test is not the slogan. It is whether the proxy’s error gets expensive. The fungus line stays the hook. This paragraph is the translation.",
+        a: "Verified change in a system. Causal evidence on a DAG. Standing from that evidence. Standing is not money — it can change access. ΔS is the measurement proxy. XP is global standing. CT is community standing at this DFAO. L is literal standing at this till, this moment. EP is the till spark, born and burned in the sale: EP = XP × L. CAT is skill. IT is voice. Those last two stay off the mint so credentials and votes cannot be bought with XP. The hard test is not the slogan. It is whether the proxy’s error gets expensive. The fungus line stays the hook. This paragraph is the translation.",
         also: [
           { label: "Ledger", href: "/#ledger" },
           { label: "Three clocks", href: "/glossary", hash: "three-clocks" },
@@ -99,19 +99,19 @@ export const faqSections: FaqSection[] = [
       {
         id: "panopticon",
         q: "Isn't this just a panopticon? A surveillance state with extra steps?",
-        a: "No. A panopticon is one tower that can see every diary. A surveillance state is a central log you cannot opt out of. This has neither. The PSLL is a file on your disk. The network sees a proof — yes or no — not the file, not the photos. Looking writes a vertex. A silent fetch is a detectable act. Chip, not photocopy. did:key on first boot, no registrar. Node to node on the LAN. That is a ledger you hold, not a camera pointed at you.",
+        a: "No. A panopticon is one tower that can see every diary. A surveillance state is a central log you cannot opt out of. This has neither. The PSLL is a file on your disk. The network sees a proof — yes or no — not the file, not the photos. Looking writes a vertex. A silent fetch is a detectable act. did:key on first boot, no registrar. Node to node on the LAN. That is a ledger you hold, not a camera pointed at you.",
         also: [
           { label: "Not a panopticon", href: "/#not-a-panopticon" },
-          { label: "The chip, not the photocopy", href: "/#zkp" },
+          { label: "Yes or no at the door", href: "/#zkp" },,
           { label: "Digital Autarky", href: "/glossary", hash: "digital-autarky" },
         ],
       },
       {
         id: "zkp",
         q: "Isn't a zero-knowledge proof just showing someone your ID?",
-        a: "That's the mix-up. Handing the bouncer the license is showing him the information — birthday, street, photo, name. He doesn't need any of that. He needs 21 or not. A ZKP is the chip in your debit card: you tap, the cashier never sees your PIN, the store never sees your balance, the terminal gets approved or declined. The secret never left the plastic. Same as a car key chip: the car does not get a copy of the key. It gets allowed, or it doesn't. Extra people close the loop: you hold the license, your phone scans on your side and answers one question, the till gets yes or no, the bar's book records that a check happened, and anyone who later wants WHO writes a look vertex when they go hunting. Chip vs photocopy. ZKP circuits are not in Codex v2.1. 2.1 is the current Codex. Today the handshake is signatures.",
+        a: "That's the mix-up. Handing the bartender the license is showing him the information — birthday, street, photo, name. He doesn't need any of that. He needs 21 or not. Your phone looks at the license on YOUR side and answers one question. The till gets yes or no. The bar's book records that a check happened. Anyone who later wants WHO writes a look vertex. Do not write “chip versus photocopy.” That line is noise. ZKP circuits are not in Codex v2.1. 2.1 is the current Codex. Today the handshake is signatures.",
         also: [
-          { label: "The chip, not the photocopy", href: "/#zkp" },
+          { label: "Yes or no at the door", href: "/#zkp" },,
           { label: "ZKP", href: "/glossary", hash: "zkp" },
           { label: "DID", href: "/glossary", hash: "did" },
         ],
@@ -142,7 +142,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "ep-name",
         q: "EP is Emergent Points, right? Or Epistemic Proof?",
-        a: "Emergent Product. Till spark. At the register: EP = XP × L, then it burns. L is a fraction from standing, how often you actually patronize this place, local mesh, lanes in play. May discount the fiat ticket. Not a currency. Not Epistemic Proof — that is a proof-layer record, letter collision, does not buy milk. Product is the math: XP times L.",
+        a: "Emergent Product. Till spark. At the register: EP = XP × L, then it burns. L is first-class: this moment, this community, this store. CT feeds it. The house can tweak a public coefficient. Early mesh: a penny, maybe five cents off. Dense mesh: more of the fiat ticket can clear. Not a currency. Not Epistemic Proof — that is a proof-layer record, letter collision, does not buy milk. Product is the math: XP times L.",
         also: [
           { label: "Emergent Product", href: "/glossary", hash: "emergent-product" },
           { label: "Ledger", href: "/#ledger" },
@@ -151,7 +151,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "cat-ct-it",
         q: "What are CAT, CT, and IT?",
-        a: "CAT is a skill record: unique, lane + level + issuer. Are you qualified to do this, and at what level. CT is contribution standing — a meter for this door. Feeds L at the till. IT is influence standing, not Insight Token. Governance and demonstration work weights more. Obscure private labor still mints XP; it does not mint the same IT unless influence is the job. IT decays ~5%/month if you vanish. None of these are bags.",
+        a: "CAT is a skill record: unique, lane + level + issuer. Are you qualified to do this, and at what level. CT is community standing — a meter for this DFAO. Feeds L at the till. IT is influence standing, not Insight Token. Governance and demonstration work weights more. Obscure private labor still mints XP; it does not mint the same IT unless influence is the job. IT decays ~5%/month if you vanish. None of these are bags.",
         also: [
           { label: "CAT", href: "/glossary", hash: "cat" },
           { label: "CT", href: "/glossary", hash: "ct" },
@@ -330,7 +330,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "l-farm",
         q: "Can a shop (or a DFAO) just crank L and extract XP?",
-        a: "That’s the economic attack. L is live rank against this house’s load, not a coupon the owner types. Both edges have to accept the estimate. House coefficient is public. Cash still rings the rest — L cannot lock the fridge. A DFAO that tries to become an XP till by juicing L is farming; F, contest, and late burn still apply. Unsolved experimentally: whether a captured house can still extract. That’s a test, not a vibe. See open problems.",
+        a: "That’s the economic attack. L is live rank at this till against this house’s load, not a coupon the owner types. CT feeds it. House coefficient is public and both edges have to accept the estimate. Cash still rings the rest — L cannot lock the fridge. A DFAO that tries to become an XP till by juicing L is farming; F, contest, and late burn still apply. Unsolved experimentally: whether a captured house can still extract. That’s a test, not a vibe. See open problems.",
         also: [
           { label: "Emergent Product", href: "/glossary", hash: "emergent-product" },
           { label: "Open problems", href: "/open-problems" },
@@ -397,10 +397,10 @@ export const faqSections: FaqSection[] = [
       {
         id: "did",
         q: "How do I get a DID? And what stops a bad actor on my node?",
-        a: "You don't apply. The node writes a keypair on first boot. That's a did:key — W3C, no registrar, no company. Backup data/keys/node.pem. Lose it and you're a new node. ZKPs are what you show: band, confirmed this loop, unique in this room, not slashed. The till gets yes or no, not your diary. Chip, not photocopy. Keys stay on the box. Don't punch the database at the WAN. One captured node can lie about itself; it cannot silently rewrite a neighbor's DAG. Sybil: identity is cheap, standing is not. Unique-in-DFAO stops fifty votes from one person. Looking is a vertex. Today the handshake is signatures. ZKP circuits are not in Codex v2.1. 2.1 is the current Codex.",
+        a: "You don't apply. The node writes a keypair on first boot. That's a did:key — W3C, no registrar, no company. Backup data/keys/node.pem. Lose it and you're a new node. ZKPs are what you show: band, confirmed this loop, unique in this room, not slashed. The till gets yes or no, not your diary. Keys stay on the box. Don't punch the database at the WAN. One captured node can lie about itself; it cannot silently rewrite a neighbor's DAG. Sybil: identity is cheap, standing is not. Unique-in-DFAO stops fifty votes from one person. Looking is a vertex. Today the handshake is signatures. ZKP circuits are not in Codex v2.1. 2.1 is the current Codex.",
         also: [
           { label: "The node", href: "/#node" },
-          { label: "The chip, not the photocopy", href: "/#zkp" },
+          { label: "Yes or no at the door", href: "/#zkp" },,
           { label: "DID", href: "/glossary", hash: "did" },
           { label: "ZKP", href: "/glossary", hash: "zkp" },
         ],

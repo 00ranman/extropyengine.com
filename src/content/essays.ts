@@ -388,22 +388,22 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "ZKP",
         id: "zkp",
-        def: "Zero-knowledge proof. You are not showing anyone the information. You are showing a chip that already answered the question. Tap a debit card: cashier never sees the PIN, store never sees the balance, terminal gets approved or declined. Age at the door: your phone scans the license on YOUR side; the till gets 21 or not — not the birthday, not the street, not the photo. The bar's book records that a check happened. Later lookers who want WHO write a vertex. The panopticon is the photocopy in a city cabinet. DID is the name. ZKP is what you show. Circuits are not in Codex v2.1. 2.1 is the current Codex. Today: signatures.",
+        def: "Zero-knowledge proof. You are not showing anyone the file. The bartender asks one question: old enough, or not. Your phone looks at the license on YOUR side. The till gets yes or no — not the birthday, not the street, not the photo. The bar's book records that a check happened. Later lookers who want WHO write a vertex. Handing over the wallet is the panopticon. DID is the name. ZKP is what you show. Circuits are not in Codex v2.1. 2.1 is the current Codex. Today: signatures.",
       },
       {
         term: "ZKP reputation",
         id: "zkp-reputation",
-        def: "Prove a predicate (access band, domain standing, clean-in-epoch, vote eligibility) without dumping a dossier on a till. Chip, not photocopy. Not hermit invisibility — looking at someone’s graph is allowed and is itself a DAG vertex. Silent stalking is the failure mode. Unmask still wants cause + a DFAO vote.",
+        def: "Prove a predicate (access band, domain standing, clean-in-epoch, vote eligibility) without dumping a dossier on a till. Yes or no. Not hermit invisibility — looking at someone’s graph is allowed and is itself a DAG vertex. Silent stalking is the failure mode. Unmask still wants cause + a DFAO vote.",
       },
       {
         term: "Digital Autarky",
         id: "digital-autarky",
-        def: "Intelligence, identity, and local context stay at the edge. The network is a handshake, a claim schema, and a DAG — not a supermind. Company login means company tether. Own hardware is how you stay unknown. Edge intelligence unveils only the ZKP the equation needs. Chip, not photocopy.",
+        def: "Intelligence, identity, and local context stay at the edge. The network is a handshake, a claim schema, and a DAG — not a supermind. Company login means company tether. Own hardware is how you stay unknown. Edge intelligence unveils only the ZKP the equation needs.",
       },
       {
         term: "Not a panopticon",
         id: "not-a-panopticon",
-        def: "A panopticon is one tower that sees every diary. A surveillance state is a central log you cannot opt out of. This has neither. PSLL is a file on your disk. The network sees a proof — yes or no — not the file. Chip, not photocopy. Looking writes a vertex. Silent fetch is a detectable act. extropyengine.com is a website, not a watchtower and not a host for the Engine.",
+        def: "A panopticon is one tower that sees every diary. A surveillance state is a central log you cannot opt out of. This has neither. PSLL is a file on your disk. The network sees a proof — yes or no — not the file. Looking writes a vertex. Silent fetch is a detectable act. extropyengine.com is a website, not a watchtower and not a host for the Engine.",
       },
       {
         term: "DID",
@@ -452,7 +452,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "XP",
         id: "xp",
-        def: "Standing meter. The letters are XP. That is the name. Not Extropy Points. Not Experience Points as a brand. ΔS is the entropy reduction. XP is a measurable proxy to that ΔS on the ledger. Minted on verified ΔS > 0. Cannot be purchased or transferred. You do not spend it — access economy. Decays ~1%/month of what is left. Half-life ~69 months.",
+        def: "Standing meter. The letters are XP. That is the name. Not Extropy Points. Not Experience Points as a brand. Global standing: every door can see that closed loops survived. ΔS is the entropy reduction. XP is a measurable proxy to that ΔS on the ledger. Minted on verified ΔS > 0. Cannot be purchased or transferred. You do not spend it — access economy. Decays ~1%/month of what is left. Half-life ~69 months. Not L. Not CT.",
       },
       {
         term: "ΔS is not XP",
@@ -462,12 +462,17 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "EP — Emergent Product",
         id: "emergent-product",
-        def: "Till spark. What happens at the register, not a currency. EP = XP × L. Born and burned in the same sale. May discount the fiat ticket. No 1:1 to cash. Cash cannot mint XP. Not entropy points. Not Epistemic Proof. Product is the math: a product of XP and L.",
+        def: "Till spark. What happens at the register, not a currency. EP = XP × L. Born and burned in the same sale. Early mesh: a penny or a few cents off the fiat ticket. Dense mesh: more of the ticket can clear on standing. No 1:1 to cash. Cash cannot mint XP. Not entropy points. Not Epistemic Proof. Product is the math: a product of XP and L.",
       },
       {
-        term: "CT — contribution standing",
+        term: "L — literal standing at this till",
+        id: "l",
+        def: "First-class meter, same rank as XP and CT. This moment, this community, this store, this purchase. Mix of CT here, how often you actually use this door, local mesh, lanes in play, and a public house coefficient the DFAO can tweak. Feeds EP. Not Landauer. Not a secret coupon. Not global XP.",
+      },
+      {
+        term: "CT — community standing",
         id: "ct",
-        def: "Meter. What you have actually put into this door. Feeds L at the till. Not purchased with XP. Separate so a pile of XP cannot buy the room. Not a Contribution Token bag.",
+        def: "Meter for this DFAO / this door. What you have actually put into this community. Feeds L at the till. Not purchased with XP. Separate so a pile of global XP cannot buy the room. Not a Contribution Token bag. Not L itself.",
       },
       {
         term: "CAT — Category",

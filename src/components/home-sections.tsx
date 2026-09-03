@@ -549,7 +549,7 @@ export function EngineSection() {
           </Link>
           <span className="text-faint"> · </span>
           <Link to="/" hash="zkp" className="text-primary hover:underline">
-            The chip, not the photocopy →
+            Yes or no at the door →
           </Link>
           <span className="text-faint"> · </span>
           <Link to="/" hash="wire" className="text-primary hover:underline">

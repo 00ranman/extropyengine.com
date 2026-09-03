@@ -59,9 +59,9 @@ export const symbolKey = {
     {
       id: "xp",
       glyph: "XP",
-      name: "Standing meter",
-      is: "The letters are XP. Proxy of ΔS on the ledger after the mint. You do not spend it. Access economy. Decays ~1%/month of remaining (0.99ⁿ).",
-      isNot: "Not “Extropy Points.” Not a cash bag. Not ΔS itself.",
+      name: "Global standing",
+      is: "The letters are XP. Proxy of ΔS on the ledger after the mint. Every door can see that you have standing. You do not spend it. Access economy. Decays ~1%/month of remaining (0.99ⁿ).",
+      isNot: "Not “Extropy Points.” Not a cash bag. Not ΔS itself. Not L. Not CT.",
     },
     {
       id: "script-f",
@@ -80,23 +80,23 @@ export const symbolKey = {
     {
       id: "l",
       glyph: "L",
-      name: "Local coupling",
-      is: "Fraction at this door. Feeds the till. EP = XP × L, then EP burns.",
-      isNot: "Not Landauer’s constant. Not a lane.",
+      name: "Literal standing at this till",
+      is: "First-class, like XP and CT. This moment, this DFAO, this store, this ticket. Mix of your CT here, how often you actually use this door, local mesh, lanes in play, and a public house coefficient the DFAO can tweak. Feeds EP. EP = XP × L, then EP burns.",
+      isNot: "Not Landauer’s constant. Not a lane. Not a coupon the owner types in secret. Not global XP.",
     },
     {
       id: "ep",
       glyph: "EP",
       name: "Emergent Product",
-      is: "Till spark. Born and burned in the sale. May discount fiat. Not a bag.",
+      is: "Till spark. Born and burned in the sale. Early mesh: pennies off a fiat ticket. Dense mesh: can clear more of what you owe. Not a bag.",
       isNot: "Not Epistemic Proof. Letter collision. Proof-layer records do not buy milk.",
     },
     {
       id: "ct",
       glyph: "CT",
-      name: "Contribution standing",
-      is: "Meter for this door. Feeds L. Not purchased with XP.",
-      isNot: "Not a coin.",
+      name: "Community standing",
+      is: "Meter for this door / this DFAO. What you have actually put into this community. Feeds L at the till. Not purchased with XP.",
+      isNot: "Not a coin. Not global XP. Not L itself.",
     },
     {
       id: "cat",
