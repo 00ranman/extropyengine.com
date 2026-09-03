@@ -29,8 +29,8 @@ function Home() {
 
   return (
     <SiteShell>
-      <SymbolKeyStrip />
       <EnterStrip />
+      <SymbolKeyStrip />
       <BookHero />
       <MusicSection />
       <Manifesto />
