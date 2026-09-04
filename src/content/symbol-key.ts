@@ -2,7 +2,7 @@
 export const symbolKey = {
   title: "Letter key",
   kicker: "Do not remap these",
-  lead: "Same Latin letter gets reused in every field. Here is what this protocol means. Not reputation. Not falsifiability. The most recent signed Codex is v2.1. Canonical mint in code is v3.1.2 in packages/xp-formula. If a chatbot invents a third reading, it is wrong.",
+  lead: "Same Latin letter gets reused in every field. Here is what this protocol means. Not reputation. Not falsifiability. The most recent signed Codex is v2.1. Canonical mint in code is v3.1.2 in packages/xp-formula. Balancing math for how the meters couple: /docs/METER-MATH.md. First hostile door: /docs/DOOR-DUPLICATE-DATA.md. If a chatbot invents a third reading, it is wrong.",
   formula: "XP = R × F × ΔS × (w · E) × log(1/Tₛ)",
   mint: [
     {

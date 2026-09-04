@@ -82,6 +82,14 @@ export function SymbolKeyFull() {
         <Link to="/glossary" className="text-primary hover:underline">
           Glossary
         </Link>
+        . Coupling math:{" "}
+        <a href="/docs/METER-MATH.md" className="text-primary hover:underline">
+          meter math
+        </a>
+        . First door:{" "}
+        <a href="/docs/DOOR-DUPLICATE-DATA.md" className="text-primary hover:underline">
+          duplicate data
+        </a>
         . The sung line lives on{" "}
         <Link to="/lyrics" className="text-primary hover:underline">
           PHOTON 404
