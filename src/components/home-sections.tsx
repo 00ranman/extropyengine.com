@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { entryPaths } from "@/content/essays";
+import { DoorGrid } from "@/components/doors";
 import {
   artistLinks,
   book,
@@ -41,30 +41,21 @@ export function EnterStrip() {
           <div>
             <p className="text-[11px] tracking-[0.32em] text-primary uppercase">Enter</p>
             <h2 className="font-display mt-2 text-[clamp(22px,3vw,32px)] tracking-[0.04em] text-fg">
-              Four doors. Pick the glitch.
+              Six doors. Same building.
             </h2>
+            <p className="mt-2 max-w-xl text-[13px] leading-relaxed text-muted">
+              Pick the glitch that matches yours. The color on the next line is the next door.
+              You do not need the whole map.
+            </p>
           </div>
           <Link
             to="/start"
             className="text-[11px] tracking-[0.2em] text-dim uppercase hover:text-primary"
           >
-            All paths →
+            All doors →
           </Link>
         </div>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {entryPaths.map((path) => (
-            <Link
-              key={path.id}
-              to={path.href}
-              className="block border border-primary/18 bg-bg/40 p-4 transition-colors hover:border-primary"
-            >
-              <div className="mb-2 text-[10px] tracking-[0.24em] text-primary uppercase">
-                {path.id === "A" ? "Money" : path.id === "B" ? "AI" : path.id === "C" ? "Governance" : "Physics"}
-              </div>
-              <p className="font-display text-[15px] leading-snug text-fg">{path.title}</p>
-            </Link>
-          ))}
-        </div>
+        <DoorGrid compact />
       </div>
     </section>
   );

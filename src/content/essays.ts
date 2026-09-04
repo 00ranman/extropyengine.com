@@ -16,7 +16,7 @@ export type Essay = {
 
 export const startIntro = {
   title: "Enter",
-  lead: "You don't need to understand the whole system to use it. Four doors. Pick the one that matches the glitch. The framework meets you there. It also does not need people to be good. Most systems fail because they do. This one only needs a local pocket that actually closes loops. Cash still works for everyone else.",
+  lead: "You don't need the whole system. Six doors. Pick the glitch. The color on the next line is the next door. This overlay does not need people to be good. It needs a pocket that closes loops. Cash still works for everyone else.",
 };
 
 export const entryPaths = [
