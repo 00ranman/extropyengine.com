@@ -194,7 +194,7 @@ Rules so this stays an overlay:
 - ρ is not minted. It does not cash out. It does not become a ninth letter.
 - A house that lies about Σ is lying about its own books. Contest + late burn still apply.
 
-Early mesh: ρ ≈ pennies. Peak overlay: ρ climbs in pockets that actually close. Fiat obsolete is that curve in public, not a speech.
+Early mesh: ρ ≈ pennies. Peak overlay: ρ climbs in pockets that actually close. Fiat obsolete is that curve in public, not a speech. HUD: [/rho](/rho) — mycelium of the index, not a person.
 
 ## 8. CAT and IT (off the mint)
 
