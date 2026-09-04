@@ -4,6 +4,7 @@ import { SiteShell } from "@/components/site-shell";
 import { LyricsModal } from "@/components/lyrics-modal";
 import { PlayHere } from "@/components/play-here";
 import { albumCards, masterSongs, singleCards } from "@/content/music";
+import { catalogLock, jobForSlug } from "@/content/track-jobs";
 
 export const Route = createFileRoute("/lyrics")({
   head: () => ({
@@ -39,8 +40,7 @@ function LyricsPage() {
         </h1>
         <p className="mb-4 max-w-2xl font-mono text-[14px] leading-relaxed text-muted">
           Album, then singles. Hover a tile. Open the box. If it says not transcribed, do not invent
-          them from the name. Mixing one song’s argument with another song’s title is the failure
-          mode.
+          them from the name. {catalogLock}
         </p>
         <p className="mb-4 max-w-2xl font-mono text-[14px] leading-relaxed text-dim">
           Irrelevance (Is the Killshot) is track 9 on Unf*ck the World for a Dollar. That is the
@@ -77,6 +77,7 @@ function LyricsPage() {
                   key={s.slug}
                   n={s.n}
                   title={s.title}
+                  job={jobForSlug(s.slug)}
                   lyrics={s.lyrics}
                   src={s.src}
                   onOpen={() => setOpen({ title: s.title, lyrics: s.lyrics, src: s.src })}
@@ -96,6 +97,7 @@ function LyricsPage() {
               <SongTile
                 key={s.slug}
                 title={s.title}
+                job={jobForSlug(s.slug)}
                 lyrics={s.lyrics}
                 src={s.src}
                 onOpen={() => setOpen({ title: s.title, lyrics: s.lyrics, src: s.src })}
@@ -114,12 +116,14 @@ function LyricsPage() {
 function SongTile({
   n,
   title,
+  job,
   lyrics,
   src,
   onOpen,
 }: {
   n?: number;
   title: string;
+  job?: string;
   lyrics?: string;
   src?: string;
   onOpen: () => void;
@@ -137,6 +141,7 @@ function SongTile({
       <button type="button" onClick={onOpen} className="glitch-name text-left text-[15px] leading-snug text-fg">
         {title}
       </button>
+      {job ? <p className="font-mono text-[11px] leading-snug text-dim">{job}</p> : null}
     </div>
   );
 }

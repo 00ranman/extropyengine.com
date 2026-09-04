@@ -1,4 +1,5 @@
 import type { Track } from "@/content/closing-the-loop/types";
+import { jobForSlug, catalogLock } from "@/content/track-jobs";
 import { ListenLinks } from "./listen-links";
 import { LyricsBlock } from "./lyrics-block";
 import { PrintSheet } from "./print-sheet";
@@ -23,6 +24,9 @@ export function TrackAudit({ track }: { track: Track }) {
           <h3 className="font-display mt-2 text-[2rem] leading-[1.15] tracking-[0.02em] text-balance text-fg sm:text-[2.2rem]">
             {track.title}
           </h3>
+          <p className="mt-2 font-mono text-[11px] leading-relaxed text-primary">
+            This block is only {track.title}. {jobForSlug(track.slug) ?? track.thesis}. {catalogLock}
+          </p>
           <p className="mt-2 text-[15px] leading-relaxed text-pretty text-muted italic">
             {track.thesis}
           </p>
