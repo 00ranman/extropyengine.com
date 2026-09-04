@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://extropyengine.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://extropyengine.com/start</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://extropyengine.com/start/money</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://extropyengine.com/start/ai</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://extropyengine.com/start/governance</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://extropyengine.com/start/physics</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://extropyengine.com/papers/closing-the-loop</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://extropyengine.com/lyrics</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://extropyengine.com/podcast</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://extropyengine.com/podcast/feed.xml</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://extropyengine.com/faq</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://extropyengine.com/glossary</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://extropyengine.com/dfao</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://extropyengine.com/hoa</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://extropyengine.com/hoa/sunset-oaks</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://extropyengine.com/open-problems</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://extropyengine.com/proof-layers</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://extropyengine.com/mvt</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://extropyengine.com/docs</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://extropyengine.com/say</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

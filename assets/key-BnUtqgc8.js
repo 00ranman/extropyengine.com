@@ -1,0 +1,1 @@
+import{r as e}from"./useRouter-80ermfqe.js";import{i as t}from"./index-DJxV1D2m.js";import{t as n}from"./essay-layout-DeCeNV4P.js";import{t as r}from"./symbol-key-2LGAoOjm.js";var i=e();function a(){return(0,i.jsx)(n,{backTo:`/`,backLabel:`Extropy Engine`,kicker:t.kicker,title:t.title,children:(0,i.jsx)(r,{})})}export{a as component};
