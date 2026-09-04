@@ -30,8 +30,8 @@ function Home() {
   return (
     <SiteShell>
       <EnterStrip />
-      <SymbolKeyStrip />
       <BookHero />
+      <SymbolKeyStrip />
       <MusicSection />
       <Manifesto />
       <PapersSection />

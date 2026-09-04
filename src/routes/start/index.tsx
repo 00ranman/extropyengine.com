@@ -11,7 +11,7 @@ export const Route = createFileRoute("/start/")({
       {
         name: "description",
         content:
-          "Six doors into the Extropy Engine. Till, box, room, proxy, letters, clone. Pick the glitch that matches yours.",
+          "Six short ways into the Extropy Engine: shops, software, rooms, measurement, letters, run it.",
       },
     ],
   }),

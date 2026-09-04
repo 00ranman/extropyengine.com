@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { DoorGrid } from "@/components/doors";
+import { FrontDoor } from "@/components/doors";
 import {
   artistLinks,
   book,
@@ -34,28 +34,20 @@ export function EnterStrip() {
   return (
     <section
       id="enter"
-      className="border-b border-primary/15 bg-primary/4 px-[8vw] py-10 max-md:px-[6vw] max-md:py-8"
+      className="border-b border-primary/12 px-[8vw] py-12 max-md:px-[6vw] max-md:py-10"
     >
-      <div className="mx-auto max-w-5xl">
-        <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <p className="text-[11px] tracking-[0.32em] text-primary uppercase">Enter</p>
-            <h2 className="font-display mt-2 text-[clamp(22px,3vw,32px)] tracking-[0.04em] text-fg">
-              Six doors. Same building.
-            </h2>
-            <p className="mt-2 max-w-xl text-[13px] leading-relaxed text-muted">
-              Pick the glitch that matches yours. The color on the next line is the next door.
-              You do not need the whole map.
-            </p>
-          </div>
-          <Link
-            to="/start"
-            className="text-[11px] tracking-[0.2em] text-dim uppercase hover:text-primary"
-          >
-            All doors →
-          </Link>
+      <div className="mx-auto max-w-xl text-center">
+        <p className="text-[11px] tracking-[0.28em] text-primary uppercase">Extropy Engine</p>
+        <h2 className="font-display mt-2 text-[clamp(22px,3.4vw,34px)] tracking-[0.03em] text-fg">
+          A manual for a program that scores finished work
+        </h2>
+        <p className="mx-auto mt-3 max-w-md text-[14px] leading-relaxed text-muted">
+          Standing comes from a job both sides agree happened. You cannot sell that standing.
+          Cash still buys the groceries. Open the door for the short paths in.
+        </p>
+        <div className="mt-8">
+          <FrontDoor />
         </div>
-        <DoorGrid compact />
       </div>
     </section>
   );
