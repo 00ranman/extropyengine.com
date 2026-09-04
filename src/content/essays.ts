@@ -465,6 +465,11 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
         def: "Till spark. What happens at the register, not a currency. EP = XP × L. Born and burned in the same sale. Early mesh: a penny or a few cents off the fiat ticket. Dense mesh: more of the ticket can clear on standing. No 1:1 to cash. Cash cannot mint XP. Not entropy points. Not Epistemic Proof. Product is the math: a product of XP and L.",
       },
       {
+        term: "ρ — fiat residual",
+        id: "fiat-residual",
+        def: "Index, not a person. A till may publish window totals: accepted EP-touch versus fiat that still rang. ρ is the share the overlay touched. DFAOs can sum published door vertices. No who. Optional ZKP over the count. Not minted. Not a ninth letter. That curve is how irrelevant cash was in that window.",
+      },
+      {
         term: "L — literal standing at this till",
         id: "l",
         def: "First-class meter, same rank as XP and CT. This moment, this community, this store, this purchase. L is this-door CT against the house slider. Slider: how much of that CT may count, how much of the ticket the layer may touch. Recorded vertex. Optional auto from this till’s proofs and load; house can override. Domain bands may arrive as ZKPs to this door (yes/no or band ≥ n). Same question as whether loops are closing here. Not mopping floors. Not Landauer. Not global XP.",

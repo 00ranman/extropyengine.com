@@ -16,6 +16,7 @@ Do not remap letters. Do not add a ninth instrument.
 | H | House slider | No. Vertex when it moves. | This house. Optional auto from this till only. |
 | L | This-ticket standing | No | Computed at the till from CT and H. |
 | EP | Till spark | Dies in the sale | Derived. Not a bag. |
+| ρ | Fiat residual index | No | Sum of published till totals. Not a person. |
 | CAT | Skill record | Unique | Off the XP mint. |
 | IT | Governance meter | No | Off the XP mint. |
 | 0.99ⁿ | XP leak | — | Planetary knob. |
@@ -168,6 +169,32 @@ Born and burned in the same sale. No bag. No 1:1 table to dollars.
 Both edges accept a bits-equivalent estimate of how much of the fiat ticket this spark may touch. Early mesh: pennies. Dense mesh: more of the ticket. Fridge does not lock. Remainder rings in cash.
 
 Farming EP as if it were a treasury is structurally empty: no cash-out, burns here, H is the house’s vertex. Capture of H, burns of other people, and bloc IT are different holes.
+
+## 7b. Fiat residual (mesh index, not a person)
+
+EP already dies in the sale. What can live on the graph is a **till aggregate**, not a forehead.
+
+Each door may publish, on a clock it chooses, a vertex:
+
+\[
+\Sigma_{\mathrm{EP}},\quad \Sigma_{\$},\quad \rho = \frac{\Sigma_{\mathrm{EP}}^{\$}}{\Sigma_{\$} + \Sigma_{\mathrm{EP}}^{\$}}
+\]
+
+- Σ_EP — accepted sparks this window (bits-equivalent, then the dollar-touch both edges already agreed).
+- Σ_$ — fiat that still rang.
+- ρ — share of the ticket the overlay touched. 0 = cash only. 1 = the layer cleared the window.
+
+A DFAO can sum its doors. A wider mesh can sum published DFAO vertices. That sum is an **index of how irrelevant cash was in that window**, not a price of XP.
+
+Rules so this stays an overlay:
+
+- No who. No diary. The vertex is totals for a door and a window.
+- Optional ZKP: prove the totals came from N burned EP vertices without listing them.
+- Real-time means “this till, this hour,” not a planetary brain watching every pocket.
+- ρ is not minted. It does not cash out. It does not become a ninth letter.
+- A house that lies about Σ is lying about its own books. Contest + late burn still apply.
+
+Early mesh: ρ ≈ pennies. Peak overlay: ρ climbs in pockets that actually close. Fiat obsolete is that curve in public, not a speech.
 
 ## 8. CAT and IT (off the mint)
 
