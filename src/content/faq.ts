@@ -409,6 +409,29 @@ export const faqSections: FaqSection[] = [
     ],
   },
   {
+    heading: "Not its job",
+    items: [
+      {
+        id: "not-the-verdict",
+        q: "Does the Engine decide trials? Replace twelve jurors?",
+        a: "No. It can hold a public audit trail: claim, evidence, both edges, later burn if the story was theater. That is a better evidence graph than a two-week performance. It does not mint a verdict. Unanimous twelve is a captured metric — the scored thing is agreement. You can hate that model and still not put a gavel on XP. CAT stays off the mint. A diagnosis is a stamp, not a second physics.",
+        also: [
+          { label: "Letter key", href: "/key" },
+          { label: "Liquidity paper", href: "/papers/liquidity-and-decay" },
+        ],
+      },
+      {
+        id: "kids-disabled",
+        q: "Do kids get no XP? Is the system ruthless to disabled people?",
+        a: "No. That is NotebookLM fanfic. A child can have a did:key. A closed loop they actually did can mint. That can stand in for some allowance. They also do not carry adult bills; do not write a Black Mirror episode that forgets that. Someone with Down syndrome greeting at a door is a loop if that door says the loop closed. If they cannot close one, standing does not print. Care is not the mint’s job. A DFAO, a church, a desk can be the room that tracks volunteer loops and pays the care in cash and time. The Engine does not write a morality constitution for the weakest. The community can. Looking at a graph to hunt WHO still writes a vertex.",
+        also: [
+          { label: "DFAO", href: "/dfao" },
+          { label: "Instead", href: "/instead" },
+        ],
+      },
+    ],
+  },
+  {
     heading: "Run it",
     items: [
       {
