@@ -81,8 +81,8 @@ export const symbolKey = {
       id: "l",
       glyph: "L",
       name: "Literal standing at this till",
-      is: "First-class, like XP and CT. This moment, this DFAO, this store, this ticket. Are you a reliable node of demand here — regular groceries, a schedule the shop can order against — or a random spike that makes the stockroom guess. CT feeds it. The house owns a public slider: how hard the threshold is, how much of a ticket L is allowed to touch. That slider also writes upward: a house that is cheap or greedy shows in their own EP and in the next fractal’s CT. Habits (walk vs Hummer) can become modifiers later. Day one is not a carbon priesthood.",
-      isNot: "Not sweeping the floors for every shop. Not unpaid labor. Not Landauer’s constant. Not a secret coupon. Not global XP.",
+      is: "First-class, like XP and CT. This moment, this DFAO, this store, this ticket. Built at the door: this-door CT against the house slider. Regular demand here vs a random spike. The slider is the house saying how much of that CT may count, and how much of the ticket the layer may touch. Optional auto: the box can park the slider from this till’s own proofs and load — same move as a hand, writes a vertex, house can override or kill. Inputs may be domain bands (yes/no or band ≥ n per instrument) shown as ZKPs to this till, not a mesh broadcast. That is the same question as “are they closing loops here or only taking.” There is not a second citizen grade. Habits (walk vs Hummer) can become room modifiers later. Day one is not a carbon priesthood.",
+      isNot: "Not sweeping floors. Not Landauer. Not a secret coupon. Not global XP. Not a mesh-wide slacker scoreboard. Not eight public domain numbers on a forehead.",
     },
     {
       id: "ep",

@@ -330,7 +330,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "l-farm",
         q: "Can a shop (or a DFAO) just crank L and extract XP?",
-        a: "That’s the economic attack. L is live rank at this till against this house’s load, not a coupon the owner types. CT feeds it. House coefficient is public and both edges have to accept the estimate. Cash still rings the rest — L cannot lock the fridge. A DFAO that tries to become an XP till by juicing L is farming; F, contest, and late burn still apply. Unsolved experimentally: whether a captured house can still extract. That’s a test, not a vibe. See open problems.",
+        a: "That’s the economic attack. L is this-door CT against the house slider, not a coupon the owner types in secret. The slider is public and writes a vertex. Optional auto uses this till’s proofs and load, not other shops’ customers. Both edges still accept the estimate. Cash rings the rest — L cannot lock the fridge. A house that juices the slider to harvest standing is farming; F, contest, late burn, and the next fractal still apply. Unsolved experimentally: whether a captured house can still extract. That’s a test, not a vibe. See open problems.",
         also: [
           { label: "Emergent Product", href: "/glossary", hash: "emergent-product" },
           { label: "Open problems", href: "/open-problems" },
@@ -348,10 +348,19 @@ export const faqSections: FaqSection[] = [
       {
         id: "who-turns-knobs",
         q: "Who is allowed to change XP, CT, and L?",
-        a: "Different floors. L: the shop owns a public slider — threshold and how much of a ticket the layer may touch. That slider also writes into their own EP and the next fractal. CT: this DFAO can vote how CT is scored in this room. That vote does not rewrite CT next door. XP: how the mint works is planetary. Cash-out is a lose-condition. If a room votes cash-out, they forked. This is not Randall’s engine. He wrote the loop. Rooms run rooms.",
+        a: "Different floors. L: this-door CT against the house slider. Hand-set or optional auto from this till’s proofs. Writes a vertex. Override and kill stay with the house. That slider also writes into their own EP and the next fractal. CT: this DFAO can vote how CT is scored in this room. That vote does not rewrite CT next door. XP: how the mint works is planetary. Cash-out is a lose-condition. If a room votes cash-out, they forked. This is not Randall’s engine. He wrote the loop. Rooms run rooms.",
         also: [
           { label: "Letter key", href: "/key" },
           { label: "Engine — shop view", href: "/#engine" },
+        ],
+      },
+      {
+        id: "l-zkp",
+        q: "Does L mean the mesh grades whether I’m a slacker?",
+        a: "No second score. At this till you may show domain bands as ZKPs — yes or no, or band ≥ n — for the instruments that door asked about. Those bands plus this-door CT go against the house slider and become L for this ticket. The mesh does not get a forehead average. Auto-slider, if on, reads this till’s proofs and load. It does not fetch other shops. Looking at a graph to hunt WHO still writes a vertex.",
+        also: [
+          { label: "L", href: "/glossary", hash: "l" },
+          { label: "ZKP", href: "/glossary", hash: "zkp" },
         ],
       },
     ],

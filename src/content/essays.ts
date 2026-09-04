@@ -467,7 +467,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "L — literal standing at this till",
         id: "l",
-        def: "First-class meter, same rank as XP and CT. This moment, this community, this store, this purchase. Are you a reliable node of demand here, or a random spike. CT feeds it. The house owns a public slider: threshold and how much of a ticket L may touch. That slider writes upward into their own EP and the next fractal. Habits can become modifiers later. Not mopping their floors. Not Landauer. Not a secret coupon. Not global XP.",
+        def: "First-class meter, same rank as XP and CT. This moment, this community, this store, this purchase. L is this-door CT against the house slider. Slider: how much of that CT may count, how much of the ticket the layer may touch. Recorded vertex. Optional auto from this till’s proofs and load; house can override. Domain bands may arrive as ZKPs to this door (yes/no or band ≥ n). That is how the till sees whether loops are closing here. Not a mesh broadcast. Not a second slacker score. Not mopping floors. Not Landauer. Not global XP.",
       },
       {
         term: "CT — community standing",
