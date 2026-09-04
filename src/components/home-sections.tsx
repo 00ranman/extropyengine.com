@@ -39,11 +39,11 @@ export function EnterStrip() {
       <div className="mx-auto max-w-xl text-center">
         <p className="text-[11px] tracking-[0.28em] text-primary uppercase">Extropy Engine</p>
         <h2 className="font-display mt-2 text-[clamp(22px,3.4vw,34px)] tracking-[0.03em] text-fg">
-          A manual for a program that scores finished work
+          Start with the problem that is already yours
         </h2>
         <p className="mx-auto mt-3 max-w-md text-[14px] leading-relaxed text-muted">
-          Standing comes from a job both sides agree happened. You cannot sell that standing.
-          Cash still buys the groceries. Open the door for the short paths in.
+          Why pay systems fail. Why AI alignment fails. Why institutions drift. What we are
+          actually counting. One door. Four paths behind it.
         </p>
         <div className="mt-8">
           <FrontDoor />

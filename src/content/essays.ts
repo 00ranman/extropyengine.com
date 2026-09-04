@@ -15,8 +15,8 @@ export type Essay = {
 };
 
 export const startIntro = {
-  title: "Pick a door",
-  lead: "Six short explanations. Each one is a way in. You do not have to read all of them. Cash still works if you never open any of them.",
+  title: "Which problem is yours?",
+  lead: "Four paths. Same protocol. Open the one that matches the failure you already live with.",
 };
 
 export const entryPaths = [

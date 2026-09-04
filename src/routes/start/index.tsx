@@ -11,7 +11,7 @@ export const Route = createFileRoute("/start/")({
       {
         name: "description",
         content:
-          "Six short ways into the Extropy Engine: shops, software, rooms, measurement, letters, run it.",
+          "Why reward systems are broken. Why AI alignment fails. Why institutions drift. What if value is measurable.",
       },
     ],
   }),
