@@ -356,8 +356,8 @@ export const faqSections: FaqSection[] = [
       },
       {
         id: "l-zkp",
-        q: "Does L mean the mesh grades whether I’m a slacker?",
-        a: "No second score. At this till you may show domain bands as ZKPs — yes or no, or band ≥ n — for the instruments that door asked about. Those bands plus this-door CT go against the house slider and become L for this ticket. The mesh does not get a forehead average. Auto-slider, if on, reads this till’s proofs and load. It does not fetch other shops. Looking at a graph to hunt WHO still writes a vertex.",
+        q: "How do domain bands and the slider meet at the till?",
+        a: "You may show this door domain bands as ZKPs — yes or no, or band ≥ n — for the instruments that door asked about. Those bands plus this-door CT go against the house slider and become L for this ticket. Auto-slider, if on, reads this till’s proofs and load. Looking at a graph to hunt WHO still writes a vertex.",
         also: [
           { label: "L", href: "/glossary", hash: "l" },
           { label: "ZKP", href: "/glossary", hash: "zkp" },
