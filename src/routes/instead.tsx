@@ -41,7 +41,7 @@ function InsteadPage() {
       <p>
         Same tokenomics, different input. A carbon / kWh / leakage loop is posted with a declared
         boundary. Mapper M<sub>v</sub> turns the domain-native signal into ΔS. Unknown stays
-        unknown. If ΔS > 0 the signed mint fires: XP = R × F × ΔS × (w · E) × log(1/Tₛ). Standing
+        unknown. If ΔS is positive the signed mint fires: XP = R × F × ΔS × (w · E) × log(1/Tₛ). Standing
         leaks. It does not list. A till that asked for this instrument can take a ZKP band into β.
         L is this-door CT against H. EP = XP × L burns in <em>that</em> sale.
       </p>
