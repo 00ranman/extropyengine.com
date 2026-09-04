@@ -4,6 +4,8 @@ export type Door = {
   title: string;
   line: string;
   href: string;
+  body: string[];
+  next: { label: string; href: string }[];
 };
 
 export const doors: Door[] = [
@@ -11,28 +13,70 @@ export const doors: Door[] = [
     id: "money",
     label: "Money",
     title: "Why reward systems are broken",
-    line: "Points, likes, karma, salary, GDP — every metric you were handed can be gamed. This path is what happens if value is anchored to finished work both sides can check.",
-    href: "/start/money",
+    line: "Points, likes, salary, GDP — the number became the job. This path is the till: cash still works, standing from finished work can take pennies off a ticket, and you cannot sell that standing.",
+    href: "/start#money",
+    body: [
+      "Every metric you were handed can be gamed once it is the target. Likes measure attention. Salary measures hours. GDP measures transactions. None of those is “did the work actually close.”",
+      "Here the till still rings cash. If you are a regular at this door, community standing at this door plus a house slider become L on this ticket. EP = XP × L and it burns in that sale. Early on that is pennies. You cannot cash XP out. A shop that wants the layer off parks the slider at zero.",
+      "National debt and carbon markets are the same failure at a bigger desk: a certificate with no closed loop. Local desk first. Published totals of spark versus cash. Not a Treasury wipe. Not a tonne you sell.",
+    ],
+    next: [
+      { label: "How a shop uses it", href: "/#engine" },
+      { label: "What the letters mean", href: "/key" },
+      { label: "Instead of their markets", href: "/instead" },
+      { label: "Fiat residual HUD", href: "/rho" },
+    ],
   },
   {
     id: "ai",
     label: "AI",
     title: "Why current AI alignment fails",
-    line: "Alignment treats the model as the problem. The systems training it have no coherent definition of useful work. You cannot align to a broken compass.",
-    href: "/start/ai",
+    line: "You cannot align a model to “be good” if the scoreboard is engagement. This path is closed loops on your machine, not a control fantasy.",
+    href: "/start#ai",
+    body: [
+      "Most alignment talk treats the model as a beast to cage. The quieter failure is the compass: the systems training it reward engagement, not finished work.",
+      "Models sit at the edge. They package a claim. They do not become the ledger. The mint is classical tokenomics on the box. Keys stay on the box. This website is the manual, not the Engine.",
+      "If the estimate is wrong, the other edge can refuse it and later evidence can burn it. That is the alignment that can actually be tested.",
+    ],
+    next: [
+      { label: "Run the happy path", href: "/mvt" },
+      { label: "Letter key", href: "/key" },
+      { label: "Proof layers", href: "/proof-layers" },
+    ],
   },
   {
     id: "governance",
     label: "Governance",
     title: "Why institutions drift",
-    line: "Organizations end up optimizing for their own survival instead of the job they were built for. This path is the room-level fix, not a new country.",
-    href: "/start/governance",
+    line: "Rooms start optimizing for their own survival. This path is a DFAO: the room can vote local rules. It cannot rewrite global standing or cash it out.",
+    href: "/start#governance",
+    body: [
+      "Institutions drift because the metric of success becomes “still here.” Mission dies. The org stays.",
+      "A DFAO is a room. It can vote how community standing is scored inside that room. The house owns a public slider on this till. Smart contracts are rails so you do not hire an executive caste to babysit the meters. Looking at a graph to hunt WHO still writes a vertex.",
+      "XP mint rules are planetary. Cash-out is a lose-condition. If a room votes cash-out, they forked. That is not a new country. Cash still works next door.",
+    ],
+    next: [
+      { label: "DFAO", href: "/dfao" },
+      { label: "HOA example", href: "/hoa" },
+      { label: "Instead of their markets", href: "/instead" },
+    ],
   },
   {
     id: "physics",
     label: "Measurement",
-    title: "What if value is measurable?",
-    line: "Not a vibe. Not a vote. Not a market price. This path is the claim that useful work is a drop in disorder you can put evidence under — and argue with later.",
-    href: "/start/physics",
+    title: "What if the useful part is measurable?",
+    line: "Not a vibe and not a market price. A claim with a boundary, an estimate, and a way to burn it later if the estimate was theater.",
+    href: "/start#physics",
+    body: [
+      "ΔS is an estimate of disorder reduced on one job, converted so different jobs can sit on one graph. The mapper is versioned and attached to the claim. Unknown leakage stays unknown. It does not default to zero so the mint can fire.",
+      "That is not SI social heat. It is not a carbon credit. Same tokenomics: mint standing, leak it, maybe show a band at a door, spark burns on the ticket.",
+      "The first hostile door to prove is duplicate data — cheap to attack, easy to fake. If that door cannot survive, do not add a forest.",
+    ],
+    next: [
+      { label: "Letter key", href: "/key" },
+      { label: "Meter math", href: "/docs/METER-MATH.md" },
+      { label: "Duplicate-data door", href: "/docs/DOOR-DUPLICATE-DATA.md" },
+      { label: "Instead of their markets", href: "/instead" },
+    ],
   },
 ];

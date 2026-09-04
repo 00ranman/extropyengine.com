@@ -16,7 +16,7 @@ export type Essay = {
 
 export const startIntro = {
   title: "Which problem is yours?",
-  lead: "Four paths. Same protocol. Open the one that matches the failure you already live with.",
+  lead: "Four updated paths. Each one is a short briefing, then links into the live pages — shops, letters, DFAO, the box — so you do not get stuck on an old essay.",
 };
 
 export const entryPaths = [

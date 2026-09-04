@@ -1,9 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { EssayPage } from "@/components/essay-layout";
-import { essays } from "@/content/essays";
+import { createFileRoute, Navigate } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/start/money")({ component: Page });
-
-function Page() {
-  return <EssayPage essay={essays.money} />;
-}
+export const Route = createFileRoute("/start/money")({
+  component: () => <Navigate to="/start" hash="money" />,
+});
