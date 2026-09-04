@@ -23,6 +23,14 @@ function InsteadPage() {
         Treasury. Tokenomics here means how the meters couple. A token as a bag is a lose-condition.
         The spark is EP. It dies when the ticket dies.
       </p>
+      <p>
+        If the output of verification can be sold, verification becomes a mint for that sale. That
+        is why liquidity corrupts the claim. Paper:{" "}
+        <Link to="/papers/liquidity-and-decay" className="text-primary hover:underline">
+          Liquidity corrupts verification
+        </Link>
+        .
+      </p>
 
       <h2 className="font-display pt-4 text-2xl text-fg">How the box is actually split</h2>
       <p>
