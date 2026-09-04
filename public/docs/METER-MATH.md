@@ -1,10 +1,19 @@
 # Meter math
 
-Unsigned working spec for the balancing acts. Not asset tokenomics. Nothing here cashes out.
+Unsigned working spec for the **tokenomics of the meters**. Not bags. Nothing here cashes out.
+
+**House rule, first line:** we do not play their markets. No offset registry. No transferable tonne. No Extropy credit listed next to Verra. If a room lists a spark as a commodity, they forked.
 
 Signed Codex is still v2.1. Canonical mint in code is `packages/xp-formula` v3.1.2. If this page and the letter key disagree, the [letter key](/key) wins on names. This page wins on how the meters couple.
 
 Do not remap letters. Do not add a ninth instrument.
+
+## Words
+
+- **Tokenomics** here means how XP, CT, H, L, EP, CAT, IT, leaks, and gates couple. Balancing acts.
+- **Token** as a bag you transfer or cash out is a lose-condition.
+- **Spark** is EP: born and burned in the sale.
+- A chatbot that hears “tokenomics” and writes Uniswap is wrong.
 
 ## What kind of object
 
@@ -196,6 +205,25 @@ Rules so this stays an overlay:
 
 Early mesh: ρ ≈ pennies. Peak overlay: ρ climbs in pockets that actually close. Fiat obsolete is that curve in public, not a speech. HUD: [/rho](/rho) — mycelium of the index, not a person.
 
+## 7c. Carbon as a door, not a credit
+
+Same tokenomics. Different domain-native input. Still not their game.
+
+What they sell: a bag labelled 1 tCO₂e that you transfer and retire for a claim.
+
+What this overlay does:
+
+1. A carbon / kWh / leakage loop is posted with a declared boundary.
+2. Mapper M_v turns the domain-native signal into ΔS. Unknown leakage stays unknown.
+3. Signed mint if ΔS > 0: XP = R × F × ΔS × (w · E) × log(1/Tₛ).
+4. That standing leaks. It does not list on a registry.
+5. At a till that asked for this instrument, a ZKP band can sit in β and move L.
+6. EP = XP × L still burns in that sale. The spark is the better version of the “credit.” It dies when the ticket dies.
+
+No secondary market in tonnes. No net-zero sticker bought off someone else’s forest. Theater gets a late-burn edge. F still hits plant/unplant farms.
+
+A DFAO may vote a carbon band into its door. Room modifier. Not Article 6.
+
 ## 8. CAT and IT (off the mint)
 
 **CAT** — unique record: DID, lane, level, issuer. Are you qualified. Not a pile. Not bought with XP.
@@ -215,6 +243,7 @@ Early mesh: ρ ≈ pennies. Peak overlay: ρ climbs in pockets that actually clo
 - Mapper that silently mutates history.
 - Rights / consent used as a haircut instead of a gate.
 - Display of a mesh-wide forehead average of a person.
+- Playing their carbon market: issuing a transferable tCO₂e, selling it, or calling EP an offset.
 
 A DFAO can fork. It does not get to call the fork Codex v2.1.
 
