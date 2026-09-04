@@ -49,7 +49,7 @@ export const doors: Door[] = [
     title: "ΔS is a proxy",
     line: "Bits-equivalent, versioned mapper, leakage on the claim. Not SI social heat.",
     href: "/start/physics",
-    next: { label: "Meter math", href: "/docs/METER-MATH.md" },
+    next: { label: "Instead", href: "/instead" },
   },
   {
     id: "letters",

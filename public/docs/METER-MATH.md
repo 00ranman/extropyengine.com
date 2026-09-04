@@ -224,6 +224,8 @@ No secondary market in tonnes. No net-zero sticker bought off someone else’s f
 
 A DFAO may vote a carbon band into its door. Room modifier. Not Article 6.
 
+Public page: [/instead](/instead) — carbon spark and local desks, not their markets.
+
 ## 8. CAT and IT (off the mint)
 
 **CAT** — unique record: DID, lane, level, issuer. Are you qualified. Not a pile. Not bought with XP.
