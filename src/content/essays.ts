@@ -477,7 +477,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "CT — community standing",
         id: "ct",
-        def: "Meter for this DFAO / this door. Showing up here. Buying here. Being a node this house can plan around. Feeds L at the till. Not purchased with XP. This DFAO can vote how CT is scored inside this room. That vote does not rewrite CT next door. Not a job application. Not a Contribution Token bag. Not L itself.",
+        def: "Community standing on web W — DFAOs that still share base CT one-to-one. Usefulness to that web, posted-task mint, reputation density ρ_W. Not one register’s punch card. Not purchased with XP. Wrap without money: discounted κ. Cash-wrap: κ = 0. Reputation stays in CT and out of the XP mint.",
       },
       {
         term: "CAT — Category",

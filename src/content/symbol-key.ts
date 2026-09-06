@@ -81,7 +81,7 @@ export const symbolKey = {
       id: "l",
       glyph: "L",
       name: "Literal standing at this till",
-      is: "First-class, like XP and CT. This moment, this DFAO, this store, this ticket. Built at the door: this-door CT against the house slider. Regular demand here vs a random spike. The slider is the house saying how much of that CT may count, and how much of the ticket the layer may touch. Optional auto: the box can park the slider from this till’s own proofs and load — same move as a hand, writes a vertex, house can override or kill. Domain bands (yes/no or band ≥ n per instrument) may be shown as ZKPs to this till. Same question as whether loops are closing here. Habits (walk vs Hummer) can become room modifiers later if that DFAO votes them in.",
+      is: "First-class, like XP and CT. This ticket. L = clip(H · κ · CT_W · β, 0, 1). CT_W is community-web standing, not one register. H is this house, default 0.5. κ is whether this door still speaks base CT. β is bands shown here. Same question as whether loops are closing in this web.",
       isNot: "Not sweeping floors. Not Landauer. Not a secret coupon. Not global XP. Not a mesh broadcast of the diary.",
     },
     {
@@ -95,7 +95,7 @@ export const symbolKey = {
       id: "ct",
       glyph: "CT",
       name: "Community standing",
-      is: "Meter for this door / this DFAO. Showing up here. Buying here. Being a node this house can plan around. Feeds L at the till. Not purchased with XP. This DFAO can vote how CT is scored inside this room. That vote does not rewrite CT next door.",
+      is: "Community standing on web W — the DFAOs that still read base CT one-to-one. Usefulness to that web, not only one till. Reputation density ρ_W belongs here. It does not belong in the XP mint. A DFAO posts tasks and mints CT when they close. Wrap without money: κ in (0,1). Cash-wrap: κ = 0, left the compatible web. Still not a bag.",
       isNot: "Not a coin. Not a job application. Not global XP. Not L itself.",
     },
     {

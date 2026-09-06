@@ -4,34 +4,39 @@ Unsigned working spec for the **tokenomics of the meters**. Not bags. Nothing he
 
 **House rule, first line:** we do not play their markets. No offset registry. No transferable tonne. No Extropy credit listed next to Verra. If a room lists a spark as a commodity, they forked.
 
-Signed Codex is still v2.1. Canonical mint in code is `packages/xp-formula` v3.1.2. If this page and the letter key disagree, the [letter key](/key) wins on names. This page wins on how the meters couple.
+Signed Codex is still v2.1. Canonical mint in code is `packages/xp-formula`. If this page and the letter key disagree, the [letter key](/key) wins on names. This page wins on how the meters couple.
 
 Do not remap letters. Do not add a ninth instrument.
 
 ## Words
 
-- **Tokenomics** here means how XP, CT, H, L, EP, CAT, IT, leaks, and gates couple. Balancing acts.
+- **Tokenomics** here means how XP, CT, H, L, EP, CAT, IT, leaks, gates, and CT-compatibility couple. Balancing acts.
 - **Token** as a bag you transfer or cash out is a lose-condition.
 - **Spark** is EP: born and burned in the sale.
+- **Community web** W is the set of DFAOs that still read each other’s **base CT** one-to-one.
 - A chatbot that hears “tokenomics” and writes Uniswap is wrong.
 
 ## What kind of object
 
 | Object | Kind | Liquid? | Who can change the rule |
 |---|---|---|---|
-| R, F, ΔS, w · E, Tₛ | Mint inputs | No | Planetary. Fork if you rewrite the mint. |
-| XP | Global standing meter | No. No cash-out. | Planetary. |
-| CT | This-door standing meter | No | This DFAO’s vote. Next door unchanged. |
-| H | House slider | No. Vertex when it moves. | This house. Optional auto from this till only. |
-| L | This-ticket standing | No | Computed at the till from CT and H. |
-| EP | Till spark | Dies in the sale | Derived. Not a bag. |
-| ρ | Fiat residual index | No | Sum of published till totals. Not a person. |
+| R, F, ΔS, w · E, Tₛ | Mint inputs | No | Planetary. Fork if you rewrite the XP mint. |
+| XP | Global standing meter | No. No cash-out. | Planetary. Earned on closed loops. |
+| CT | Community standing meter on web W | No | DFAO posts task values and may wrap. Base CT stays compatible only if §4c holds. |
+| ρ_W | Reputation density on web W | No | Enters **CT only**. Never the XP mint. |
+| H | House slider | No. Vertex when it moves. | This till. Default 0.5. Auto recommended. |
+| κ | Compatibility of this door’s CT with W | No | 1 if base. (0,1) if a non-liquid wrap. 0 if they wired money. |
+| L | This-ticket standing | No | H, κ, CT_W, β. |
+| EP | Till spark | Dies in the sale | EP = XP × L. Not payroll. |
+| ρ | Fiat residual index | No | Door totals. Not a person. Not ρ_W. |
 | CAT | Skill record | Unique | Off the XP mint. |
 | IT | Governance meter | No | Off the XP mint. |
 | 0.99ⁿ | XP leak | — | Planetary knob. |
 | ℱ | Falsifiability | — | Lose-conditions. Not the letter F. |
 
-Cash still rings the rest of a ticket. Cash cannot mint XP.
+Cash still rings the rest of a ticket. Cash cannot mint XP. Cash-wrap of CT drops κ to 0.
+
+---
 
 ## 1. The mint (signed)
 
@@ -46,48 +51,27 @@ Gates before the product is allowed to land:
 - Rights / consent fail ⇒ ineligible. Not “big ΔS minus an ethics haircut.”
 - Unsettled vertices do not move IT.
 
+XP is **global**. Every compatible room can see that a loop survived. Changing the XP mint is planetary. A DFAO that wants different local payouts uses **CT**, not a second XP.
+
 ### Terms
 
-**R** ∈ [0.1, 10]  
-Rarity of the *action class*, not the person.
+**R** ∈ [0.1, 10] — rarity of the *action class*, not the person.
 
-**F**  
-Frequency of Decay. First close of that class is 1. Repeats pay less. Not ℱ.
+**F** — Frequency of Decay on that class. Not ℱ.
 
-**ΔS**  
-Bits-equivalent proxy for verified reduction on this loop. Domain-native measurement goes through a **versioned mapper** (next section). Not XP. Not SI social heat.
+**ΔS** — bits-equivalent proxy. Not XP. Not SI social heat.
 
-**w · E**  
-Dot product. w is the eight-domain weight vector. E is this loop’s effort / domain vector. Not a fifth letter.
+**w · E** — eight-domain weights dotted with this loop’s effort.
 
-**Tₛ**  
-Slam window for *this* loop.
+**Tₛ** — slam window.
 
 \[
 T_s = \exp(-\lambda \min(\Delta t, \Delta t_{\mathrm{cap}}))
 \]
 
-\[
-\log(1/T_s) = \lambda \cdot \mathrm{clip}(\Delta t)
-\]
+Δt → 0 ⇒ log = 0 ⇒ XP = 0. Three clocks: Tₛ this loop, F the class, 0.99ⁿ standing after settle. IT leak is a fourth clock, on voice.
 
-Δt → 0 ⇒ Tₛ = 1 ⇒ log = 0 ⇒ XP = 0. On purpose. Do not “fix” with log(1 + 1/Tₛ). Δt_cap stops stall-farming.
-
-Three clocks that are not the same:
-
-1. Tₛ — this loop’s elapsed time  
-2. F — repeating the class  
-3. 0.99ⁿ — standing after settlement  
-
-IT leak is a fourth clock, on voice.
-
-### Floor slogan (not a second theory)
-
-\[
-\mathrm{XP} \ge \Delta S / c_l^{2}
-\]
-
-cₗ is causal-closure speed in that domain. Compression of the mint. Not a new *c*.
+---
 
 ## 2. Mapper (constitution of ΔS)
 
@@ -95,77 +79,124 @@ cₗ is causal-closure speed in that domain. Compression of the mint. Not a new 
 \text{domain-native signal} \xrightarrow{M_v} \Delta S_{\text{claimed}} \quad \text{with uncertainty } U \text{ on the vertex}
 \]
 
-M_v is mapper version v. Signed. Inspectable. Testable on known cases. Forkable.
-
-A new mapper does not silently rewrite old vertices. It writes a recalculation edge. The old mapping stays.
-
-Accounting check, not extra Codex letters:
-
 \[
 \Delta S = \Delta S_{\text{claimed}} - \Delta S_{\text{leakage}} - \Delta S_{\text{displacement}} - \Delta S_{\text{unaccounted harm}}
 \]
 
-If a term is unknown, the vertex says unknown. Unknown does not default to 0 so the mint can fire.
+Unknown does not default to 0. SignalFlow + the edge model + the PSLL propose. The other edge can refuse. Cross-reference on the DAG against similar timed events is how the proxy tightens. That is estimation. It is not a worshipped constant.
 
-The first public door (duplicate data) has its own mapper factors. Those factors are **door-local**. They are not new planetary letters. See [DOOR-DUPLICATE-DATA.md](/docs/DOOR-DUPLICATE-DATA.md).
+---
 
 ## 3. XP after it lands
-
-You do not spend XP. Access economy.
-
-Remaining after n ~30-day steps:
 
 \[
 \mathrm{XP}(n) = \mathrm{XP}_{\text{settled}} \cdot 0.99^{n}
 \]
 
-Half-life ≈ 69 months. Never zero in the reals.
+No spend. Late mint / late burn are citation edges. Cash-out of XP is a lose-condition.
 
-Late mint: a later vertex cites this one with new ΔS. Citation-gated delta. Not a second full paycheck.
+You can earn XP and CT on the same job. You can earn only one. See §4b.
 
-Late burn: later counterevidence cites this one. Burns remaining dust plus that new delta. Does not un-mow the common. Does not erase A. B → A is a visible edge.
+---
 
-Cash-out of XP is a lose-condition. A room that votes it in forked.
+## 4. CT — community standing on web W
 
-## 4. CT — this door
+CT is **not** “this one register.”  
+CT is standing in the **community web** of DFAOs that still share base CT.
 
-Different formula from the mint. On purpose.
+Nodes: people.  
+Rooms: DFAOs.  
+Rooms attach to people and to each other.  
+CT answers: how useful was this node to *that web*, not only to one till.
 
-Working form for door d, window W (DFAO-voted length):
+Reputation **belongs in CT**. It was never supposed to leave. It does **not** belong in R of the XP mint.
+
+### 4a. Working form
+
+For web W, window voted by that web:
 
 \[
-\mathrm{CT}_d = \mathrm{clip}\big(C_d \cdot P_d \cdot (1 - F_d^{\text{local}}),\; 0,\; 1\big)
+\mathrm{CT}_W = \mathrm{clip}\Big(
+  U_W \cdot \rho_W \cdot C_W \cdot P_W \cdot (1 - F_W^{\mathrm{local}})
+,\; 0,\; 1\Big)
 \]
 
-- C_d — coupling density: confirmed closes / purchases at *this* door in W, scaled by that house’s load. Regular groceries beat a random spike.
-- P_d — predictability. Can this house order stock against you. High variance of presence lowers P_d.
-- F_d^local — local farm penalty if the same coupling class is being gamed here.
+| Symbol | Job |
+|---|---|
+| U_W | Usefulness minted from **posted tasks** this DFAO (and peers that still share base CT) actually closed. |
+| ρ_W | Reputation density on W. Confirmed history, not a vibe. Local. Never enters XP. |
+| C_W | Coupling across the web: closes / reliable demand the *web* can plan around. |
+| P_W | Predictability for the web. Random boom/ramen shopping lowers P_W. |
+| F_W^local | Farm penalty if the same class is being gamed in W. |
 
-Not dollars spent. Not XP. Not mopping floors. This DFAO can vote the exact shapes of C_d and P_d. That vote does not rewrite CT next door.
+A DFAO **posts a task** with a posted CT weight. SignalFlow proposes the close. Both edges agree. That close adds to U_W. Cross-ref similar DAG events so one shop cannot invent a private physics for “mow lawn = 900.”
 
-CT is not purchased with XP.
+CT is not purchased with XP. Dollars spent are not CT.
+
+### 4b. Same job, two meters
+
+- **XP only** — loop survived on the global mint. This web did not post it as a community task.
+- **CT only** — this web posted it and paid CT. Mint gates for XP did not fire (or nobody filed ΔS).
+- **Both** — posted task *and* a verified ΔS loop.
+- **Neither** — cash only.
+
+### 4c. Base, wrap, cash-wrap (compatibility κ)
+
+| Mode | What the DFAO did | κ | Still on XP network? |
+|---|---|---|---|
+| Base CT | Non-liquid community standing. Shared grammar. | 1 | Yes |
+| Wrap | Local wrapper around CT (extra knobs, extra classes) **without** a money rail | ∈ (0,1) as the web votes | Yes |
+| Cash-wrap | Any exchange of CT for money, listed points, or a treasury payout | 0 | XP may still exist. **CT is no longer compatible.** They left web W. |
+
+A city-scale mesh that stays on base CT can treat standing as one-to-one across those rooms. Fork too far and it is not 1:1. Wire it to cash and it is not CT in this charter.
+
+Axioms a wrap must keep to even *ask* for κ > 0:
+
+- no liquidity
+- no transfer-as-bag
+- no cash-out
+- reputation may stay in CT
+- reputation stays out of the XP mint
+
+### 4d. What the store does not own
+
+The store does not own CT. The web does.  
+The store owns **H**.
+
+---
 
 ## 5. H — house slider
 
-H ∈ [0, 1]. Public. Moving it writes a vertex.
+H ∈ [0, 1]. Public. Moving it writes a vertex **on this house**.
 
-- H = 0 — layer off at this till (kill).
-- H = 1 — this-door CT may count in full against the ticket cap the house published.
-- Between — how much of that CT may count, and how much of the ticket the layer may touch.
+**Default 0.5.** Sit in the middle so SignalFlow can auto-place H for this ticket (or this distributor-tier till) from applicable door totals and load. Auto is recommended. The house can always drag.
 
-Hand-set, or optional auto from **this till’s** proofs and load. Same object. Override stays with the house.
+- H = 0 — overlay off. Allowed. Also a vertex. Parking it because you are “broke this month” still writes on *your* ledger. Hard times are real. The graph still records that you parked.
+- H = 1 — maximum willingness to let compatible CT count against the published ticket cap.
+- 0.5 — default. Fair-start. Auto has room to move.
 
-A cheap or greedy H writes upward into that house’s own EP history and the next fractal’s reading of that house.
+Abuse (nuke H to starve a neighbor, juice H to puff your people, false-fraud shutdown) is a vertex on **you**. If you were wrong, that hits your own DAG, your own ρ as a door, your own next-fractal reading. Incentive not to be a dick is not a sermon. It is your books.
+
+Distributor / B2B tills are still tills. Same H. Same spark. Same vertex.
+
+---
 
 ## 6. L — this ticket
 
 \[
-L = \mathrm{clip}\big(H \cdot \mathrm{CT}_d \cdot \beta,\; 0,\; 1\big)
+L = \mathrm{clip}\big(H \cdot \kappa \cdot \mathrm{CT}_W \cdot \beta,\; 0,\; 1\big)
 \]
 
-β ∈ [0, 1] is the mix of domain bands shown to **this** door as ZKPs (yes/no or band ≥ n). If the door asked for no bands, β = 1. Bands are not a mesh broadcast.
+β ∈ [0, 1] is domain bands shown to **this** door as ZKPs. No bands asked ⇒ β = 1.
 
-L is literal standing at this purchase. Same question as: are loops closing here.
+Read it in English:  
+global standing is XP.  
+community standing is CT_W.  
+this house’s willingness is H.  
+whether this house still speaks base CT is κ.  
+L is those things on **this ticket**.
+
+---
 
 ## 7. EP — till spark
 
@@ -173,87 +204,58 @@ L is literal standing at this purchase. Same question as: are loops closing here
 \mathrm{EP} = \mathrm{XP} \times L
 \]
 
-Born and burned in the same sale. No bag. No 1:1 table to dollars.
+Born and burned in the same sale. Not a wage. Not a currency. Not how staff or distributors get paid. Cash (or the local tender) still clears the invoice. The spark is an overlay. Early mesh: pennies. Dense compatible web: more of the ticket. Remainder rings in cash.
 
-Both edges accept a bits-equivalent estimate of how much of the fiat ticket this spark may touch. Early mesh: pennies. Dense mesh: more of the ticket. Fridge does not lock. Remainder rings in cash.
-
-Farming EP as if it were a treasury is structurally empty: no cash-out, burns here, H is the house’s vertex. Capture of H, burns of other people, and bloc IT are different holes.
+---
 
 ## 7b. Fiat residual (mesh index, not a person)
 
-EP already dies in the sale. What can live on the graph is a **till aggregate**, not a forehead.
-
-Each door may publish, on a clock it chooses, a vertex:
-
 \[
-\Sigma_{\mathrm{EP}},\quad \Sigma_{\$},\quad \rho = \frac{\Sigma_{\mathrm{EP}}^{\$}}{\Sigma_{\$} + \Sigma_{\mathrm{EP}}^{\$}}
+\rho = \frac{\Sigma_{\mathrm{EP}}^{\$}}{\Sigma_{\$} + \Sigma_{\mathrm{EP}}^{\$}}
 \]
 
-- Σ_EP — accepted sparks this window (bits-equivalent, then the dollar-touch both edges already agreed).
-- Σ_$ — fiat that still rang.
-- ρ — share of the ticket the overlay touched. 0 = cash only. 1 = the layer cleared the window.
-
-A DFAO can sum its doors. A wider mesh can sum published DFAO vertices. That sum is an **index of how irrelevant cash was in that window**, not a price of XP.
-
-Rules so this stays an overlay:
-
-- No who. No diary. The vertex is totals for a door and a window.
-- Optional ZKP: prove the totals came from N burned EP vertices without listing them.
-- Real-time means “this till, this hour,” not a planetary brain watching every pocket.
-- ρ is not minted. It does not cash out. It does not become a ninth letter.
-- A house that lies about Σ is lying about its own books. Contest + late burn still apply.
-
-Early mesh: ρ ≈ pennies. Peak overlay: ρ climbs in pockets that actually close. Fiat obsolete is that curve in public, not a speech. HUD: [/rho](/rho) — mycelium of the index, not a person.
+Door totals. Optional ZKP on the count. Not ρ_W. Different letter job.
 
 ## 7c. Carbon as a door, not a credit
 
-Same tokenomics. Different domain-native input. Still not their game.
+Same mint. Same no-bag. Spark dies. We do not play their markets.
 
-What they sell: a bag labelled 1 tCO₂e that you transfer and retire for a claim.
-
-What this overlay does:
-
-1. A carbon / kWh / leakage loop is posted with a declared boundary.
-2. Mapper M_v turns the domain-native signal into ΔS. Unknown leakage stays unknown.
-3. Signed mint if ΔS > 0: XP = R × F × ΔS × (w · E) × log(1/Tₛ).
-4. That standing leaks. It does not list on a registry.
-5. At a till that asked for this instrument, a ZKP band can sit in β and move L.
-6. EP = XP × L still burns in that sale. The spark is the better version of the “credit.” It dies when the ticket dies.
-
-No secondary market in tonnes. No net-zero sticker bought off someone else’s forest. Theater gets a late-burn edge. F still hits plant/unplant farms.
-
-A DFAO may vote a carbon band into its door. Room modifier. Not Article 6.
-
-Public page: [/instead](/instead) — carbon spark and local desks, not their markets.
+---
 
 ## 8. CAT and IT (off the mint)
 
-**CAT** — unique record: DID, lane, level, issuer. Are you qualified. Not a pile. Not bought with XP.
+**CAT** — (DID, lane, level, issuer). Not a pile.
 
-**IT** — governance / demonstration weight.
+**IT** — voice.
 
 \[
 \mathrm{IT}(m) = \mathrm{IT}_{\text{idle-start}} \cdot (0.95)^{m}
 \]
 
-≈ 5% / month if you vanish. Disputed or unsettled XP vertices do not drive IT eligibility. Unique-in-DFAO and clean-in-epoch are predicates, not piles.
+Unsettled XP does not drive IT.
+
+---
 
 ## 9. Lose-conditions (ℱ)
 
 - Cash-out of XP.
+- Cash-wrap of CT (κ forced to 0; calling it “still base CT” is a lie).
 - Silent rewrite of a neighbor’s DAG.
 - Mapper that silently mutates history.
-- Rights / consent used as a haircut instead of a gate.
-- Display of a mesh-wide forehead average of a person.
-- Playing their carbon market: issuing a transferable tCO₂e, selling it, or calling EP an offset.
+- Reputation smuggled into R of the XP mint.
+- Rights / consent as a haircut instead of a gate.
+- Mesh-wide forehead average of a person.
+- Playing their carbon market.
 
-A DFAO can fork. It does not get to call the fork Codex v2.1.
+A DFAO can fork CT. It does not get to keep κ = 1 if it wired money. It does not get to call a cash-wrap Codex v2.1.
+
+---
 
 ## 10. What this is not
 
 Not speculative tokenomics.  
 Not six coins.  
-Not a grant office with extra footnotes.  
+Not “CT is one store’s loyalty punch card.”  
 Not SI social entropy.
 
-It is coupled meters plus one spark that dies when the ticket dies.
+It is global standing, community standing on a compatible web, a house slider that starts at half, and one spark that dies when the ticket dies.
