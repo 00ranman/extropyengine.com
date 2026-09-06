@@ -346,6 +346,11 @@ export const papers: Paper[] = [
     href: "/charter",
   },
   {
+    tag: "Meters · 6 Sep 2026",
+    title: "Meter Math (PDF)",
+    href: "/docs/Meter_Math.pdf",
+  },
+  {
     tag: "Working paper · 4 Sep 2026",
     title: "Liquidity Corrupts Verification",
     href: "/papers/liquidity-and-decay",
