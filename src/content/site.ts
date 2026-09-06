@@ -35,6 +35,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "Letter key", href: "/key" },
       { label: "Fiat residual", href: "/rho" },
       { label: "Instead", href: "/instead" },
+      { label: "Charter", href: "/charter" },
       { label: "Liquidity paper", href: "/papers/liquidity-and-decay" },
       { label: "FAQ", href: "/faq" },
       { label: "Glossary", href: "/glossary" },
@@ -339,6 +340,11 @@ export type Paper = {
 };
 
 export const papers: Paper[] = [
+  {
+    tag: "Charter · 6 Sep 2026",
+    title: "Distributed Charter",
+    href: "/charter",
+  },
   {
     tag: "Working paper · 4 Sep 2026",
     title: "Liquidity Corrupts Verification",
