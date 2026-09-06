@@ -1,49 +1,94 @@
-# Distributed Charter
+# Distributed Charter of the Extropy Engine
 
-**Extropy Engine — how the meters couple when rooms actually use them**  
-Randall Gossett · 6 September 2026  
-Not Codex v2.1. Not a mandate. Not articles of incorporation for a company.  
-A follow-along of the causal chain. Letters stay as on https://extropyengine.com/key
+Randall Gossett  
+6 September 2026  
+Working document. Not Codex Version 2.1. Not a corporate filing. Not a verdict.
 
-If a later mesh is better, people will go there. Fork. The lose-conditions below are the only things this mesh treats as load-bearing. Everything else is a starting mapper.
+This is the follow-along: every coupling from a job in the world to a spark on a ticket, and from a pocket of rooms to a mesh other rooms can copy or leave.
 
----
-
-## 0. What this is
-
-A charter for a *distributed* overlay: many rooms, one mint grammar, no bag.
-
-It is written so a person can walk the chain:
-
-work happens → a claim is packaged at the edge → both edges can refuse → a vertex lands on a DAG → ΔS is a proxy, not the territory → XP may mint globally → CT may move at this door → the house slider H and CT make L on this ticket → EP = XP × L burns in that sale → cash still rings → later evidence can burn the vertex → standing leaks anyway.
-
-Staff are not “paid in EP.” Distributors are not paid in EP. Cash (or whatever tender that room already uses) still clears the ticket. The spark is an overlay on that tender. Long-term it can *look* like the overlay did the paying, because ρ climbed. That is a result, not a payroll code.
+If you only wanted slogans, stop. The point of this file is the chain.
 
 ---
 
-## 1. Lose-conditions (the only stone)
+## A. What kind of document this is
 
-1. **No liquidity of standing.** XP, CT, CAT, IT, EP are not listed, not swapped, not cashed out.
-2. **No transfer of the meters as bags.** You cannot send Alice’s XP to Bob. CT at Sam’s Club does not walk to the laundromat.
-3. **No frozen constant as the territory.** ΔS is a map. Mappers version. Unknown leakage stays unknown. A better estimate later is a vertex, not a scandal.
-4. **No ninth instrument** to park an awkward case.
-5. **No Engine verdict, cage, or gurney.** Graph is evidence. Rooms own law and care.
+A company files articles so a state knows who owns the shares. This overlay is not a company and standing is not a share.
 
-If a fork adds an order book or a sinking fund in XP, they left this mesh.
+A Codex freezes letters. Codex v2.1 already did that. This charter does not replace it.
 
----
+This charter is the **process document**: how rooms, models, contracts, meters, and people actually interact if anyone uses the thing. It is written so a critic can walk the chain instead of quoting two sentences from a reply.
 
-## 2. Two computers, one overlay
-
-**Classical computation** runs the tokenomics: mint, clip, leak, burn, sliders, gates. If-then. Checkable.
-
-**Models at the edge** package claims: what happened, how long, what evidence, a proposed ΔS. They do not become the ledger. A human looking at a graph to hunt WHO still writes a vertex.
-
-Smart contracts are rails so you do not hire an executive caste to babysit the coupling. They are not a priesthood.
+It is also a **fork license in plain language**. Someone else can orchestrate a different proxy, different letters, different rooms. The only stone in this mesh is listed in §C. If their mesh measures better and strangers can still close, people should go there.
 
 ---
 
-## 3. Letters and clocks
+## B. The sentence the whole file unpacks
+
+A person or a room does work.  
+An edge packager turns that work into a **claim** with a boundary, evidence pointers, and a proposed ΔS.  
+The other edge can refuse.  
+If both edges hold, a **vertex** lands on a causal DAG.  
+If the signed mint rules fire, **XP** may move as global standing.  
+If this door tracks showing-up, **CT** may move as standing *here*.  
+At a till that turned the overlay on, the house slider **H** and this-door **CT** make **L** on that ticket.  
+**EP = XP × L** is born and burned in that sale.  
+Cash, or whatever tender that country already uses, still prints on the receipt.  
+Later evidence can attach and **burn** status without erasing history.  
+Standing **leaks** even when nobody fights.  
+None of those meters list on an exchange.
+
+That is the Engine as a process. Everything below is that paragraph with the screws visible.
+
+---
+
+## C. Lose-conditions
+
+These are the only clauses this mesh treats as load-bearing.
+
+1. **No liquidity of standing.** You cannot sell XP, CT, CAT, IT, or EP. A token as a bag is a lose-condition.
+2. **No transfer function between doors.** Sam’s Club CT does not pay the laundromat. Alice cannot wire Bob her XP.
+3. **No frozen constant as the territory.** ΔS is a bits-equivalent *proxy*. Mappers version. Unknown leakage stays unknown. Recalibration is a vertex, not a scandal.
+4. **No ninth instrument** to park an awkward case. Boundary, uncertainty, harm, and leakage ride on the claim.
+5. **No Engine gavel.** The graph can hold evidence. It does not mint guilty, execute, or write a morality constitution for children, the sick, or the broke.
+6. **No treasury that reimburses a till in dollars.** The house eats its own discount. That is why collusion at Alice’s register is Alice lighting her own inventory.
+
+A fork that adds an order book or a sinking fund in XP has left this mesh even if it keeps the logo.
+
+---
+
+## D. Two computers
+
+**Classical computation** runs the coupling: clip, log, leak, burn, unique-in-DFAO, slam window, slider bounds. If-then. You can audit the function. `packages/xp-formula` is that box.
+
+**Models at the edge** interpret messy human work into a claim packet: what happened, how long, which evidence, which mapper version, a proposed ΔS. They are packagers. They are not oracles of the universe and they are not the ledger. A human looking at a graph to hunt WHO still writes a vertex.
+
+**Smart contracts** are rails so you do not hire an executive caste to babysit the coupling. They do not get to be a priesthood. If a contract starts issuing a bag, it violated §C.
+
+**Personal Signed Local Log (PSLL).** Append-only, hash-chained, yours. SignalFlow reads it. The mesh gets receipts, not the diary. Digital Autarky means intelligence, identity, and local context stay at the edge. The network is a handshake, a claim schema, and a DAG.
+
+---
+
+## E. Faces of the same overlay
+
+People keep assigning SignalFlow’s job to LocalFlow. Stop.
+
+**LocalFlow** is an errand face. Post the thing you cannot do because you have no car. Someone nearby does it. You confirm. Confirmation is a receipt. Users never have to say XP.
+
+**HomeFlow** is the household face. Inventory, recurring chores, the toilet paper problem. Same mint grammar. Different skin.
+
+**GrantFlow / quests** are posted work with a settle knob.
+
+**SignalFlow** is the protocol mouth. You talk to it. It talks to the model you trust, your PSLL, prior numbers, and the network. You do not type “this is worth 12 XP.”
+
+**The till** is where EP exists for one ticket and then dies.
+
+**The desk** is where a MACRO publishes ρ = overlay-touch / (cash + overlay-touch). A HUD. Not a person-score.
+
+---
+
+## F. Letters, ranges, clocks
+
+Do not remap. Public key: https://extropyengine.com/key
 
 ```
 XP_mint = R × F × ΔS × (w · E) × log(1/Tₛ)
@@ -51,165 +96,245 @@ Tₛ      = exp(−λ min(Δt, Δt_cap))
 XP(n)   = XP_settled · 0.99ⁿ
 L       = clip(H · CT_d · β, 0, 1)
 EP      = XP × L
-IT(m)   = IT_start · (0.95)^m
+IT(m)   = IT_start · (0.95)^m     # idle months, order of magnitude
 ```
 
-| Object | Scale | Job |
-|---|---|---|
-| ΔS | This loop | Bits-equivalent proxy inside a declared boundary. Not XP. |
-| R | Action class | Rarity of *this kind of job* in this room’s table. Not reputation. |
-| F | Action class | Repeats of this class pay less. |
-| Tₛ | This loop | Slam window. Instant close → log = 0 → XP = 0. |
-| w · E | This loop | Eight-domain weights dotted with this effort. |
-| XP | Global standing | Every door can see that closed loops survived. Leaks. |
-| CT | This door | Does this room know you as a reliable node of demand or work *here*. |
-| H | This till | House slider. 0 parks the overlay. Auto is allowed. |
-| β | This till | Optional band (ZKP / mapper). Default 1. |
-| L | This ticket | Standing on *this* sale. |
-| EP | This ticket | Spark. Dies when the ticket dies. |
-| CAT | Lane | Skill record. Off the mint. |
-| IT | Room / mesh | Voice. Off the mint. Idle leak. |
-| ρ | Door / desk index | overlay-touch / (cash + overlay-touch). HUD. Not a person. |
+**R — rarity of the action class.** Property of the *kind of job* on this room’s class table. First time this class closes in this room is not the same as the thousandth identical lawn. Range roughly [0.1, 10]. Not reputation. Not a room name. If the class table is empty, that door does not mint.
 
-Three clocks. Do not mash them: slam (Tₛ), class repeat (F), standing leak (0.99ⁿ).
+**F — Frequency of Decay.** Repeats of this class pull F down. Not fidelity. Not script-ℱ.
 
----
+**ΔS — bits-equivalent proxy.** Domain-native signal goes through mapper M_v into a number that can sit on one graph with other domains. Not XP. Not joules-per-kelvin of “society.” If leakage was not measured, it does not default to zero so the mint can fire.
 
-## 4. Follow one job
+**w · E — weighted emergence.** Eight-domain weight vector dotted with this loop’s effort vector. Cognitive, code, social, economic, thermodynamic, informational, governance, temporal. Digital air is near-zero here.
 
-1. Something happens in the world. A lawn. A patch. A delivery. A duplicate merge. A volunteer shift at a care DFAO.
-2. You do not type a score. SignalFlow plus the model you trust plus the personal log propose a claim: boundary, evidence pointers, a provisional ΔS, mapper version M_v.
-3. Unknown stays unknown. If you did not measure leakage, you do not invent a zero so the mint can fire.
-4. The other edge can refuse. If-then.
-5. A vertex is appended with causal parents. That is the ledger. Immutability here means *history is not erased*. Status can still change. Late burn writes a new edge. It does not delete the old vertex.
-6. If ΔS > 0 under the signed mint rules, XP may mint. Provisional first. Settle is a knob, not immortality.
-7. If this door tracks community standing for *this* class of showing-up, CT at this door may move. That is a different meter.
-8. Months later XP leaked even if nobody burned it.
-9. At a till that asked for the overlay, H and CT_d and β make L. EP = XP × L. The receipt still has a cash line. EP burns. The house ate the discount. The protocol did not wire the house dollars.
+**Tₛ — slam window.** Instant confirm ⇒ Tₛ = 1 ⇒ log(1/Tₛ) = 0 ⇒ XP = 0. Cap so stalling past the expected duration does not print. This is *not* the standing leak.
 
-That is the whole magic. Network effects are many rooms doing that until ρ is visible.
+**XP — global standing.** Survived closed loops. Non-transferable. Leaks. Visible as a passport *of standing*, not as money.
+
+**CT — this-door standing.** Can this room plan around you. Non-transferable. Does not buy XP.
+
+**H — house slider.** 0 parks the overlay. 1 is maximum willingness to let L move. Auto mode may *propose* H from published door totals (waste, no-shows, margin). Auto must not require a person-level forehead. House can override.
+
+**β — optional door-local band.** ZKP or mapper band. Default 1.
+
+**L — this ticket.** clip(H · CT_d · β, 0, 1).
+
+**EP — till spark.** XP × L. Born and burned in that sale. Not a wage. Not a currency. Not stored value you take home.
+
+**CAT — skill record.** (DID, lane, level, issuer). Off the mint.
+
+**IT — governance weight.** Off the mint. Idle leak on the order of 5%/month so a captured vote pile dies if it stops working.
+
+**ρ — index, not a person.** Overlay-touch over cash-plus-overlay-touch at a door or desk. Mycelium HUD. Not a moral rank.
+
+Three clocks: slam (Tₛ), class repeat (F), standing leak (0.99ⁿ). A fourth idle leak lives on IT. Do not mash them.
 
 ---
 
-## 5. When XP, when CT, when both
+## G. Follow one job, slowly
 
-They are not two names for one pile.
+### G1. Something happens
 
-**XP only**  
-A loop that is globally visible standing and is *not* this door’s demand-or-work meter. Example: you closed a duplicate-data door on the public mesh. The shop you buy coffee from did not ask for that class as CT. You gained XP. At that coffee till, CT_d is whatever you already were as a regular, or zero.
+A lawn is mowed. A cooler is repaired. A duplicate row is merged. A Tuesday grocery run happens. A volunteer plates food at a care DFAO. A patch lands. None of these are XP yet.
 
-**CT only**  
-Showing up as a node this door can plan around, without a global ΔS mint. Example: you buy groceries here every Tuesday. The house may score that as CT even if no one filed a “entropy paper” on the trip. Cheap, door-local, F still eats games. If they try to mint global XP for “I walked in,” R and ΔS should refuse or go near zero.
+### G2. Claim packaging
 
-**Both**  
-The same body of work is a closed global loop *and* this door’s standing. Example: you repaired the walk-in cooler. Boundary, evidence, other edge, ΔS → XP. The store also marks you as a reliable node *here* → CT_d up. Next ticket, L can move.
+SignalFlow plus the model you trust plus the PSLL propose:
 
-**Neither**  
-Cash only. H = 0, or no claim, or ΔS not positive, or the other edge refused.
+- declared boundary (what is in, what is out)
+- evidence pointers (photos, logs, receipts, diffs)
+- mapper version M_v
+- proposed ΔS
+- action class (for R and F)
+- elapsed time (for Tₛ)
+- domain weights for w · E
 
-Rule of thumb: XP answers “did a loop survive on the mesh.” CT answers “does *this* room treat you as part of its plan.” L answers “what happens on *this* ticket.” EP is not a wage.
+You still do not type a score.
 
----
+### G3. The other edge
 
-## 6. The till (why it is not payroll)
+If-then. The other party can refuse. A shop can refuse a “I was here” as a ΔS mint. A merge reviewer can refuse a fake duplicate. Silence through a settle window is a knob a DFAO votes. It is not immortality.
 
-Emergent product, in English, is “how much of this ticket the overlay touched.” It is not a currency. The legal tender on the ticket is still whatever that country already uses.
+### G4. Vertex
 
-A video that says “they pay staff in EP” is wrong as mechanics and accidentally right as a long ρ story. Staff still get wages in cash if that is the labor law of the room. Separately, a cook who closes real loops can have XP. Separately, a cook who shows up here can have CT here. At the employee cafeteria till, a spark might knock pennies off *that* ticket. That is not payroll. Mixing them is how you get a security.
+The accepted packet becomes a vertex with causal parents. Immutability means **the history is not deleted**. Status can change. A later vertex can mark BURNED. Downstream standing derived from a burned close is supposed to move. If it does not, the implementation is wrong.
 
-H on auto: the engine can propose a slider from published door totals (waste, no-shows, margin) without reading a diary. The house can override. Auto is a default, not a panopticon. If auto requires a person-level scoreboard, turn it off. Totals only.
+### G5. Mint gates
 
----
+Preconditions in code today: ΔS > 0, Tₛ in (0, 1], w and E same length. Instant slam still produces XP = 0 even if ΔS looks pretty.
 
-## 7. Ledger, vertices, convergence
+Provisional first. Confirmed or burned on settle. Late burn has no expiry.
 
-Every claim is a vertex. Parents are prior vertices this claim depends on. That is the DAG.
+### G6. CT may also move
 
-**Checkable** means: mapper version on the vertex, evidence pointers, who signed, what ΔS was proposed, whether the other edge agreed, whether a later vertex burned it.
+Only if this door tracks that class as community standing. Repairing the cooler is both: global loop and this-door node. Buying milk every Tuesday may be CT-only. Publishing a mesh mapper attack case may be XP-only at a coffee till that never asked for that class.
 
-**Not checkable:** a vibe that “the community feels aligned.”
+### G7. Time passes
 
-Convergence is not majority vibes. It is: independent closes of similar classes start proposing similar ΔS, leakage terms show up instead of staying hidden, stranger closes are not worse than insider closes after you control for evidence quality. If insiders mint and strangers cannot, name capture and fix the door.
+XP(n) = XP_settled · 0.99ⁿ even if nobody sued. Idle standing dies. That is demurrage, not a moral lesson.
 
-A cartel that burns someone they hate is still possible. That is a room problem. Deleting the honeypot does not delete spite. It deletes the reason to fake a tonne for exit liquidity.
+### G8. A ticket
 
----
+You stand at a till that set H > 0. The till asks for a yes/no band, not your diary. L = clip(H · CT_d · β, 0, 1). EP = XP × L. The receipt still has a cash line. EP burns. The house’s margin absorbed the discount. No protocol check is written to the house in dollars.
 
-## 8. DFAO all the way down
-
-A DFAO is a room that can vote local rules (CT formula, H policy, which classes exist) and cannot vote cash-out or rewrite the XP mint.
-
-- MICRO: a shop, a kitchen, a patrol, a classroom.
-- MESO: a strip, a base, a district.
-- MACRO: a firm, a city desk, a service.
-- PLANETARY: mint grammar and lose-conditions.
-
-Everything-is-a-DFAO does not mean everything is a DAO with a token. It means every room that wants the overlay publishes its slider and its class table.
-
-**Individual.** DID on the box. Loops you close. Standing leaks if you vanish.
-
-**Firm.** Tills publish ρ. Staff wages stay wages. Vendor loops are claims. The firm that lies about Σ_$ is lying about its books.
-
-**Military / large hierarchy.** You can track closed maintenance, logistics, training loops the same way a shop tracks a cooler. You do not put ROE or targeting on the mint. A unit DFAO that scores “we filed the form” will Goodhart the form. Same as any other captured class.
-
-**Care / church / nonprofit.** Volunteer loops mint. The person being fed is not required to mint to deserve food. That room spends cash and time. The Engine does not write their morality. It will track the loops if they ask.
+If CT_d is 0 because you have never been a node *here*, L is 0 unless H is being used as a joke. Charlie does not fund Alice’s puff.
 
 ---
 
-## 9. Law-shaped design (not legal advice)
+## H. XP only, CT only, both, neither
 
-This is how the overlay is *aimed* at existing tests. A court can still surprise you. Hire counsel before you tell a payroll it is a spark.
+This is the distinction videos keep flattening.
 
-**United States / Howey-ish reading we are designing against.**  
-A security story usually needs an investment of money in a common enterprise with profits from the efforts of others, plus a transferable thing you can dump. We do not sell XP. We do not list EP. EP dies in the sale. Cash is still the tender. Standing is not a share of a treasury.
+**XP only.** A closed loop the mesh will treat as standing, at a door that does not count that class as CT. You patched a public duplicate-data door. You buy coffee. Coffee CT is your Tuesday habit or nothing. The patch is XP. The coffee spark uses whatever CT this café already had for you.
 
-That does not make the IRS vanish. If a till knocks money off a ticket, that discount is still *economic*. Wages are still wages. Tax on a cancelled dollar of grocery bill is a fact pattern for a lawyer, not a letter in the Codex. Do not tell people EP is tax-free income.
+**CT only.** This room can plan around you and nobody filed a global ΔS packet, or the packet failed the mint gates. Regular grocery demand is the example. Highly entropic random shopping is the counter-example: the house cannot plan, so CT should not climb just because cash moved.
 
-**Other countries.** Some will treat any points program as stored value. Some will treat non-transferable standing as nothing. Some will ban the overlay because they ban anything that looks like private money. Edge sovereignty means the shop in that country parks H at 0 and keeps cash. The mesh does not need that shop.
+**Both.** Same body of work is a verified loop and this door’s standing. Staff maintenance, a posted LocalFlow errand confirmed both ways, a supplier that hits the order window every week *and* can show the loop.
 
-**Not a currency** is a design claim: no unit you hold and pass. If a government says it is money anyway, that is their stamp. You still do not add an order book to “make it easier.”
+**Neither.** H = 0. Other edge refused. ΔS not positive. Slam. Unknown leakage blocked the mint. Cash only.
 
----
-
-## 10. Bootstrap and the low threshold
-
-This overlay does not need a planetary majority.
-
-It needs **pockets** where both edges of a real door close loops: one shop, one desk, one HOA, one care room. Inside a pocket, CT and H and EP can move without the next city agreeing. XP is global *in name* but worthless at a till that never turned H on.
-
-Network effects here are not “everyone must hold the bag so the bag pumps.” They are: the next shop can see that standing exists, a regular is already a node of demand, a mapper for a class already has attack cases. Copying a door is cheaper than inventing measurement from scratch.
-
-Why a small fraction of a population can make the rest feel inevitable:
-
-- Cash still works for holdouts. No conversion event.
-- A pocket that saves waste (orders, no-shows, duplicate work) has a ρ you can point at without a sermon.
-- Adjacent doors free-ride on published mappers.
-- Forks compete. If someone else’s mesh measures better, people leave. That is allowed.
-- You do not need everyone good. You need more than zero rooms that close honest loops.
-
-Star-threshold talk in the book is that pocket math, not a census.
-
-National media and ratings are a different Goodhart. Ignore them as a bootstrap plan.
+EP is never “the pay.” EP is the overlay on a tender that already existed.
 
 ---
 
-## 11. Why this shape and not a constant
+## I. What “they pay staff in EP” gets wrong
 
-Someone else can pick different letters. Someone else can pair-report and recalibrate without calling it ΔS. The load-bearing idea is: **do not freeze a number and worship it; keep a graph of estimates; couple whatever you emit to decay and a local burn so it cannot be sold.**
+A generated film said shops pay staff and distributors in EP. As mechanics that is false.
 
-If their graph converges faster and strangers can still close, their mesh should win. This charter is one starting orchestration: edge models package, classical logic mints, rooms own sliders, no bag.
+Labor law still sees wages in legal tender. A distributor invoice still wants dollars or the local equivalent. The Engine does not replace payroll.
 
-The holy-fuck at the end of the chain is not that Randall invented the only physics. It is that we already had if-then machines and we kept selling stamps.
+What *can* happen on the same people:
+
+- Wages in cash (legal).
+- XP if they closed real loops (standing).
+- CT if this door can plan around them (local).
+- A spark on *their own tickets* at tills that opted in (pennies off groceries, employee cafeteria, whatever H allows).
+
+Long-run ρ can make it *feel* like the overlay is doing more of the clearing. That is an index climbing. It is not “EP is the paycheck.” Mixing those sentences is how a regulator hears a security or a wage-theft story.
+
+Distributors: same split. Pay the invoice in tender. If that firm is a reliable node, CT and XP can exist *in addition*. Do not write “we settled the freight bill in sparks.”
 
 ---
 
-## 12. What to attack
+## J. Ledger, checkability, convergence
 
-Publish one door. Mapper version. Boundary. Attack cases. Stranger close rate. Late burn that actually moves status.
+**Vertex.** Claim + mapper version + evidence pointers + signatures + parents.
 
-If that fails, do not add a letter. Fix the door.
+**Checkable.** You can open the vertex and see why a number was proposed, who agreed, which M_v, what was inside the boundary. You can attach a later contradiction.
 
-Site: https://extropyengine.com/charter  
-Key: https://extropyengine.com/key  
-Math: https://extropyengine.com/docs/METER-MATH.md  
-Kernel: https://github.com/00ranman/extropy-engine
+**Not checkable.** “The community feels this is aligned.” “Twelve people were told to agree.” “A registry stamped a tonne.”
+
+**Convergence.** Independent closes of the same class start proposing similar ΔS. Leakage terms appear instead of staying hidden. After you control for evidence quality, a stranger’s close rate is not systematically worse than an insider’s. If it is, that door is captured. Name it.
+
+**Spite burns.** A mesh can still coordinate to burn someone they hate. Deleting the honeypot deletes the *extractive* reason to fake a close. It does not delete hatred. That is a room problem, not a missing letter.
+
+**Looking writes a vertex.** WHO is visible on the graph. That is the anti-panopticon rule for the overlay: the till gets a band, not a diary; the people who stare still leave a mark.
+
+---
+
+## K. DFAO scales
+
+A DFAO is a room that can vote *local* knobs and cannot vote cash-out or rewrite the XP mint.
+
+- **MICRO** — shop, kitchen, patrol, classroom, household.
+- **MESO** — strip, base, district, HOA cluster.
+- **MACRO** — firm, city desk, agency, large service.
+- **PLANETARY** — mint grammar and §C.
+
+Parent bounds stop a child room from minting infinite local glory that the parent must treat as physics.
+
+**Individual.** did:key on the box. Loops you close. Kids can have a DID. A closed chore can mint. They still do not carry rent. Parent bounds exist so a household cannot print a child into a pile. Do not put a public forehead on a minor.
+
+**Firm.** Wages stay wages. Tills publish ρ if they want the HUD. Vendor reliability can be CT. Lying about cash that still rang is still lying about books.
+
+**Military / large hierarchy.** Maintenance, logistics, training-as-closed-loop can use the same grammar. Rules of engagement and targeting do not. “We filed the form” as a class will Goodhart the form.
+
+**Care, church, nonprofit.** Volunteer loops mint. The person receiving care does not have to mint to be fed. That room spends cash and time. Planetary text does not write their morality.
+
+**State desk.** Can publish waste vs overlay-touch. Cannot delete Treasuries with a function. Debt is coupons and legislatures. ρ is a HUD.
+
+---
+
+## L. Network effects and the low threshold
+
+This is not “everyone must hold the bag so the bag pumps.”
+
+A pocket is enough: one shop and its regulars, one HOA, one care room, one duplicate-data door with published attacks. Inside the pocket, CT, H, and EP can move without the next city agreeing. XP exists globally as standing and is *worthless at a till that parked H*.
+
+Why a small slice of a population can make the rest feel inevitable:
+
+1. Holdouts still use cash. No conversion holiday.
+2. A pocket that actually reduces waste produces a ρ you can point at.
+3. The next door copies a mapper instead of inventing measurement.
+4. Regulars are already demand nodes. Adjacent shops want that predictability.
+5. Forks compete. Better measurement wins people. Allowed.
+6. You do not need saints. You need more than zero rooms that close honest loops and will not list a bag.
+
+Star-threshold language in the book is this pocket math. It is not a claim that 10% of Earth must sign a EULA next quarter. National ratings are a different Goodhart and a bad bootstrap plan.
+
+---
+
+## M. Law-shaped design (not counsel)
+
+**Howey-shaped aim (US).** Classic story: money in, common enterprise, profits from others, a thing you can dump. This overlay does not sell XP, does not list EP, burns the spark, keeps cash as tender, and gives the house the cost of its own discount. That is the design. A court can still surprise you.
+
+**IRS / tax.** A cancelled dollar on a grocery ticket is still economic. Wages are wages. Do not tell anyone EP is tax-free income. File facts with a lawyer.
+
+**Stored value / e-money (EU and others).** Some regimes treat leftover points as money. EP is designed to have no leftover. If a country still stamps it as money, that shop parks H.
+
+**Other states.** Some will ignore non-transferable standing. Some will ban anything that looks like private money. Edge sovereignty: park the slider. The mesh does not invade.
+
+**Not a currency** is a design sentence: no unit you hold and pass. If a government calls it money anyway, you still do not add an order book to “make it clearer.”
+
+Hire counsel before payroll copy mentions sparks.
+
+---
+
+## N. Bootstrap sequence that does not require a founder caste
+
+1. Publish the letters and the lose-conditions.
+2. Ship one hostile door (duplicate data is the cheap one) with mapper, boundary, attack cases, stranger-close metric.
+3. Let a MICRO till turn H on for real tickets of pennies.
+4. Publish ρ for that door without a person forehead.
+5. Copy the door, do not copy a church.
+6. Talk. Clone. No one has to wait for Randall.
+
+Randall can sell a box at cost as a DFAO like any other shop. That is a service, not ownership of the mint.
+
+---
+
+## O. What stays unfrozen
+
+Action-class tables. Exact CT formula inside a door. Settle window length. Auto-H policy. Which models sit at the edge. How a care DFAO spends cash. Whether a town wants a prosecutor-shaped room (evidence graph) separate from a cage.
+
+Someone else can pair-report, recalibrate, and never say ΔS. If their graph is more attackable and strangers can close, their mesh should win.
+
+The holy-fuck at the end of the chain is not that this is the only physics. It is that if-then machines already existed and we kept selling stamps: credits, verdicts, likes, tonnes, gold-against-the-dollar.
+
+---
+
+## P. What to attack first
+
+Do not add a letter. Attack a door.
+
+- Mapper version on the vertex.
+- Boundary language.
+- Known attack cases (deletion theater, puff, slam, repeat farm).
+- Who may contest.
+- Late evidence path.
+- Stranger close rate vs insider, evidence-controlled.
+- Whether EP can exist without a cash line on the same ticket (it must not).
+
+If that holds for duplicate data, a real patch, and one metered till, the charter is no longer a speech.
+
+---
+
+## Q. Pointers
+
+Letter key: https://extropyengine.com/key  
+Meter math: https://extropyengine.com/docs/METER-MATH.md  
+Liquidity paper: https://extropyengine.com/papers/liquidity-and-decay  
+Instead of their markets: https://extropyengine.com/instead  
+Kernel formula: https://github.com/00ranman/extropy-engine/tree/main/packages/xp-formula  
+This file: https://extropyengine.com/docs/DISTRIBUTED_CHARTER.md  
+PDF: https://extropyengine.com/docs/Distributed_Charter.pdf
