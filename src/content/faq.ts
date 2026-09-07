@@ -223,7 +223,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "untested",
         q: "Cute and internally consistent. Hasn’t been tested.",
-        a: "For an audit system that exists to keep auditing, that sentence is a catch-22. You cannot show the forest before you plant it. “No websites, so nobody will use a network” is the same move. The composition is what only running it tests. Demanding the composition already be certified before the loop is allowed to exist is how you guarantee it never exists. Pieces (Landauer, DAGs, ZKPs, decay, slash) have been beaten to death in other machines. Two nodes exchanging a packet is the garage. A Nature stamp on a civilization that hasn’t been switched on is the wall.",
+        a: "For an audit system that exists to keep auditing, that sentence is a catch-22. You cannot show the forest before you plant it. Pieces have been beaten to death in other machines. Two nodes exchanging a packet is the garage. As of 7 Sep 2026 the public list is 16 live gaps — 12 open, 4 specified but untested — not the old 65-item engineering inventory.",
         also: [{ label: "Open problems", href: "/open-problems" }],
       },
       {

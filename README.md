@@ -17,7 +17,8 @@ All public copy lives in two files:
 | File | What you change |
 | --- | --- |
 | [`src/content/site.ts`](src/content/site.ts) | Book links, albums, singles, papers, app suite, socials, nav |
-| [`src/content/essays.ts`](src/content/essays.ts) | Start Here paths, glossary, open problems, MVT exercises, proof layers |
+| [`src/content/open-gaps.ts`](src/content/open-gaps.ts) | Public open problems (16 live, 7 Sep 2026) |
+| [`src/content/essays.ts`](src/content/essays.ts) | Start Here paths, glossary, MVT exercises, proof layers |
 
 ### Add a single
 

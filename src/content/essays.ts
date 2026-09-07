@@ -653,6 +653,7 @@ export type Problem = {
   body: string;
 };
 
+/** @deprecated Public list is src/content/open-gaps.ts. Kept so old imports do not explode. */
 export const openProblems: Problem[] = [
   {
     section: "Measurement",
