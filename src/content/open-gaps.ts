@@ -1,0 +1,136 @@
+export type GapStatus = "closed" | "narrowed" | "open";
+
+export type Gap = {
+  status: GapStatus;
+  section: string;
+  title: string;
+  body: string;
+};
+
+/** Design-closed. Do not keep asking them as if the spec is empty. */
+export const closedGaps: Gap[] = [
+  {
+    status: "closed",
+    section: "Closed as the wrong question",
+    title: "CT lockup / six bags",
+    body: "CT is the community meter on a web, not a lockup coin. Same readout at grocery and laundry if they stayed on the language. There is no transfer rail to optimize.",
+  },
+  {
+    status: "closed",
+    section: "Closed as the wrong question",
+    title: "Who validates the first validators?",
+    body: "That was a priesthood question. Work is posted. Someone nearby does it. Both edges sign. Density is what remains, not a founding caste.",
+  },
+  {
+    status: "closed",
+    section: "Closed as the wrong question",
+    title: "One universal entropy unit for every domain",
+    body: "There is no ESF that adds farming to mediation in SI units. Each door publishes a mapper. ΔS is a bits-equivalent proxy inside that boundary. Unknown leakage stays unknown.",
+  },
+];
+
+export const liveGaps: Gap[] = [
+  {
+    status: "open",
+    section: "Has to happen in the world",
+    title: "First live till",
+    body: "No shop is running H_cap, S, and a dying spark on real tickets. Until that door exists, every other gap is a story. Publish one hostile spec and attack it.",
+  },
+  {
+    status: "open",
+    section: "Has to happen in the world",
+    title: "ΔS calibration on one class",
+    body: "A hundred identical tasks. Independent estimates. Prediction error has to get expensive. If it does not, the proxy is a sermon.",
+  },
+  {
+    status: "open",
+    section: "Has to happen in the world",
+    title: "Farming the class",
+    body: "Split one job into four hundred fake-rare classes. The formula will not catch that. The DAG has to see one operation. Untested.",
+  },
+  {
+    status: "narrowed",
+    section: "Meters that now have a shape",
+    title: "House juicing the spark",
+    body: "Used to be one mashed H. Now H_cap is the week (inbound cash), S is you at this house, β is the proof. Official skins hide raw XP. Still untested whether a captured house can extract.",
+  },
+  {
+    status: "narrowed",
+    section: "Meters that now have a shape",
+    title: "Leaked XP zeroing a local regular",
+    body: "EP = XP · L + λ · L. λ default 0.15, published by the web. Design closed. Whether 0.15 is the right floor is not.",
+  },
+  {
+    status: "open",
+    section: "Meters that now have a shape",
+    title: "Town-club CT",
+    body: "Shared CT_W is the feature. A whole strip can overpay posted tasks together. Stranger-close is the rule. Useless if the strangers are the club.",
+  },
+  {
+    status: "open",
+    section: "Meters that now have a shape",
+    title: "Company CAT as a leash",
+    body: "On-duty β is how a trucker sparks like a local. Issuer can revoke. Spite revoke is a vertex on the issuer. Still a labor-capture surface.",
+  },
+  {
+    status: "narrowed",
+    section: "Cash and desks",
+    title: "XP versus the dollar",
+    body: "Parallel system. Cash is the remainder and the honesty check. Spark is not a wage. Law-shaped away from a Howey bag. Not a live tax ruling.",
+  },
+  {
+    status: "open",
+    section: "Cash and desks",
+    title: "Import floor",
+    body: "A strip can underprice Tuesday milk. Fuel, rent, and Shenzhen still want dollars. The overlay does not print a plant.",
+  },
+  {
+    status: "open",
+    section: "Cash and desks",
+    title: "H_cap that saves the shop too late",
+    body: "Four-week cash auto can still bounce the truck if the podcast week printed too much overlay first.",
+  },
+  {
+    status: "open",
+    section: "Rooms",
+    title: "Thin graph",
+    body: "How few people before a posted task just sits. Escalation text exists. Density does not.",
+  },
+  {
+    status: "narrowed",
+    section: "Rooms",
+    title: "MICRO puff into MACRO gospel",
+    body: "Late burn, F, stranger-close, looking writes a vertex. Still unproven that a dense graph is calibration and not a popular story.",
+  },
+  {
+    status: "open",
+    section: "Rooms",
+    title: "Contracts that freeze last quarter",
+    body: "Smart contracts eat the decision-caste on named cases. If only a desk can amend the case, you rebuilt management in code.",
+  },
+  {
+    status: "open",
+    section: "Still research",
+    title: "Opening-condition fights",
+    body: "A kitchen looks clean to one person and filthy to another. Convergence of like-cases is the bet. Not proven.",
+  },
+  {
+    status: "open",
+    section: "Still research",
+    title: "Net entropy across a boundary",
+    body: "Cool room, hot planet. Leakage has to sit on the claim. Easy to leave off.",
+  },
+  {
+    status: "open",
+    section: "Still research",
+    title: "w · E as a faction knob",
+    body: "If domain weights move with a clique and not with evidence, the DAG is a sermon.",
+  },
+];
+
+export const gapCounts = {
+  closed: closedGaps.length,
+  live: liveGaps.length,
+  open: liveGaps.filter((g) => g.status === "open").length,
+  narrowed: liveGaps.filter((g) => g.status === "narrowed").length,
+};
