@@ -26,13 +26,27 @@ export const primaryNav: readonly NavItem[] = [
   },
   { label: "Papers", href: "/#papers" },
   {
+    label: "Tokenomics",
+    href: "/tokenomics",
+    children: [
+      { label: "Meters", href: "/tokenomics" },
+      { label: "XP — world", href: "/key#xp" },
+      { label: "CT — community", href: "/key#ct" },
+      { label: "IT — gavel", href: "/tokenomics/it" },
+      { label: "EP — spark", href: "/key#ep" },
+      { label: "CAT — skill", href: "/key#cat" },
+      { label: "Letter key", href: "/key" },
+      { label: "Defaults", href: "/docs/DEFAULTS.md" },
+    ],
+  },
+  {
     label: "Engine",
     href: "/#engine",
     children: [
       { label: "How it works", href: "/#engine" },
       { label: "Watch", href: "/#film" },
       { label: "Start here", href: "/start" },
-      { label: "IT", href: "/it" },
+      { label: "Letter key", href: "/key" },
       { label: "Fiat residual", href: "/rho" },
       { label: "Smart contracts", href: "/smart-contracts" },
       { label: "Charter", href: "/charter" },
@@ -351,9 +365,9 @@ export const papers: Paper[] = [
     href: "/docs/Meter_Math.pdf",
   },
   {
-    tag: "Smart contracts",
-    title: "Smart contracts. Not the JPEG.",
-    href: "/smart-contracts",
+    tag: "Tokenomics",
+    title: "Meters, not bags",
+    href: "/tokenomics",
   },
   {
     tag: "Defaults · 7 Sep 2026",

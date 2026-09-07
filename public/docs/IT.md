@@ -1,6 +1,6 @@
 # IT — the gavel that rots
 
-https://extropyengine.com/it
+https://extropyengine.com/tokenomics/it
 
 IT is governance weight. Not Insight Token. Not a bag. Off the XP mint. You cannot buy it with cash. You cannot buy it with XP. You cannot send it to a friend.
 
