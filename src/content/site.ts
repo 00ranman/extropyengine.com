@@ -894,3 +894,58 @@ export const earlierDocs = [
     note: "Pre-v4.2 dual-system timekeeping paper",
   },
 ] as const;
+
+export const docsPages = [
+  { title: "Start", href: "/start", note: "Four doors in." },
+  { title: "Tokenomics", href: "/tokenomics", note: "The five meters." },
+  { title: "Smart contracts", href: "/smart-contracts", note: "Named cases. Not crypto." },
+  { title: "Instead", href: "/instead", note: "Not their markets." },
+  { title: "Charter", href: "/charter", note: "Distributed Charter." },
+  { title: "Fiat residual / ρ", href: "/rho", note: "Overlay-touch over cash." },
+  { title: "DFAO", href: "/dfao", note: "Rooms. MICRO to PLANETARY." },
+  { title: "Open problems", href: "/open-problems", note: "16 live gaps." },
+  { title: "FAQ", href: "/faq", note: "The usual mix-ups." },
+  { title: "Glossary", href: "/glossary", note: "Long dictionary." },
+  { title: "Proof layers", href: "/proof-layers", note: "What a close is made of." },
+  { title: "Neighborhood MESO", href: "/hoa", note: "HOA wrapper." },
+  { title: "Sunset Oaks", href: "/hoa/sunset-oaks", note: "One neighborhood preset." },
+  { title: "Try it", href: "/mvt", note: "Minimum viable till." },
+  { title: "Universal Times", href: "/universaltimes", note: "Hydrogen clock." },
+] as const;
+
+export const docsFiles = [
+  { title: "DEFAULTS.md", href: "/docs/DEFAULTS.md", note: "Numbers. Who may change them." },
+  { title: "IT.md", href: "/docs/IT.md", note: "This-proposal standing." },
+  { title: "METER-MATH.md", href: "/docs/METER-MATH.md", note: "L, EP, leaks, H_cap." },
+  { title: "SMART-CONTRACTS.md", href: "/docs/SMART-CONTRACTS.md", note: "If-then on a vertex." },
+  { title: "IF-THEN.md", href: "/docs/IF-THEN.md", note: "Same logic, file name." },
+  { title: "DISTRIBUTED_CHARTER.md", href: "/docs/DISTRIBUTED_CHARTER.md", note: "Charter source." },
+  { title: "DFAO_Mechanics.md", href: "/docs/DFAO_Mechanics.md", note: "How a room votes knobs." },
+  { title: "DOOR-DUPLICATE-DATA.md", href: "/docs/DOOR-DUPLICATE-DATA.md", note: "First hostile door." },
+  { title: "LAW-SHAPED.md", href: "/docs/LAW-SHAPED.md", note: "Aimed off a Howey bag." },
+  { title: "Liquidity_Corrupts_Verification.md", href: "/docs/Liquidity_Corrupts_Verification.md", note: "Why a pool kills the close." },
+  { title: "WORLD_LINE.md", href: "/docs/WORLD_LINE.md", note: "Meters, routes, twenty years." },
+  { title: "RECEIPTS-NOT-FACTIONS.md", href: "/docs/RECEIPTS-NOT-FACTIONS.md", note: "Graph over club." },
+  { title: "CODEX_3_NOTES.md", href: "/docs/CODEX_3_NOTES.md", note: "Unsigned capture notes. Not a newer Codex." },
+  { title: "TITLE-LOCK.md", href: "/docs/TITLE-LOCK.md", note: "Do not swap song titles." },
+  { title: "TRACK-JOBS.md", href: "/docs/TRACK-JOBS.md", note: "What each track is for." },
+  { title: "LYRICS.md", href: "/docs/LYRICS.md", note: "Lyric dump. Not protocol." },
+] as const;
+
+export const docsPapers = [
+  { title: "Liquidity Corrupts Verification", href: "/papers/liquidity-and-decay", note: "Working paper." },
+  { title: "Closing the Loop", href: "/papers/closing-the-loop", note: "Music as closed loops." },
+  { title: "Meter Math (PDF)", href: "/docs/Meter_Math.pdf", note: "Printable meters." },
+  { title: "Distributed Charter (PDF)", href: "/docs/Distributed_Charter.pdf", note: "Printable charter." },
+  { title: "Law Shaped (PDF)", href: "/docs/Law_Shaped.pdf", note: "Printable law-shaped note." },
+  { title: "Working Formula Sheet", href: "/docs/Extropy_Engine_Formula_Sheet.pdf", note: "Working lock. If this fights the letter key, the key wins." },
+  { title: "When the Signal Eats the Source", href: "/docs/When_the_Signal_Eats_the_Source.pdf", note: "Epistemology." },
+  { title: "DAG Architecture Breakdown", href: "/docs/DAG_Architecture_Breakdown.pdf", note: "Graph notes." },
+  { title: "Emergence-First GUT", href: "/docs/An_Emergence_First_Grand_Unified_Theory_v2_referenced.pdf", note: "GUT paper." },
+  { title: "Universal Times v4.2", href: "/docs/Universal_Times_v4.2.pdf", note: "Hydrogen-anchored time." },
+  { title: "Closing the Loop (PDF)", href: "/docs/Closing_the_Loop.pdf", note: "Printable essay." },
+  { title: "Unf*ck the World (PDF)", href: "/docs/Unfuck_The_World_For_A_Dollar.pdf", note: "The book. Appendix may lag the key." },
+  { title: "Unf*ck the World (HTML)", href: "/docs/unfuck-the-world.html", note: "Same book in the browser." },
+  { title: "Unf*ck the World (EPUB)", href: "/docs/Unfuck_The_World_For_A_Dollar.epub", note: "Same book." },
+] as const;
+
