@@ -21,7 +21,7 @@
       <itunes:category text="Philosophy"/>
     </itunes:category>
     <itunes:type>episodic</itunes:type>
-    <lastBuildDate>Mon, 7 Sep 2026 05:17:21 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 7 Sep 2026 05:24:42 +0000</lastBuildDate>
     <atom:link href="https://extropyengine.com/podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://extropyengine.com/podcast/cover.jpg</url>
@@ -29,13 +29,13 @@
       <link>https://extropyengine.com/podcast</link>
     </image>
     <item>
-      <title>The atomic clock set by the sun</title>
+      <title>Same chassis, different oil</title>
       <description>Two-voice cut on the Engine. One side: synthesis - music as field guide, rarity and frequency of decay, slam window, standing leak. The other: delta S as a negotiated chore wearing physics clothes, edge collusion, late burn as sociology. Reputation stays out of the XP mint. CT is a different meter. Oil in a rusted chassis vs a different scale.</description>
       <itunes:summary>Two-voice cut on the Engine. One side: synthesis - music as field guide, rarity and frequency of decay, slam window, standing leak. The other: delta S as a negotiated chore wearing physics clothes, edge collusion, late burn as sociology. Reputation stays out of the XP mint. CT is a different meter. Oil in a rusted chassis vs a different scale.</itunes:summary>
       <pubDate>Mon, 7 Sep 2026 05:16:00 +0000</pubDate>
-      <guid isPermaLink="false">0e352bb5412375ee49608a540a1d3b2379bc1b2d</guid>
+      <guid isPermaLink="false">94a4bf068d52814d70c26cd32890d96bf53d1fbf</guid>
       <link>https://extropyengine.com/podcast</link>
-      <enclosure url="https://extropyengine.com/podcast/2026-09-07-the-atomic-clock-set-by-the-sun.mp3" length="13251344" type="audio/mpeg"/>
+      <enclosure url="https://extropyengine.com/podcast/2026-09-07-same-chassis-different-oil.mp3" length="13251344" type="audio/mpeg"/>
       <itunes:author>Randall Gossett</itunes:author>
       <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
       <itunes:explicit>true</itunes:explicit>
