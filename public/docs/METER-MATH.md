@@ -142,13 +142,26 @@ CT is not purchased with XP. Dollars spent are not CT.
 
 ### 4c. Base, wrap, cash-wrap (compatibility κ)
 
+Same CT at the laundromat and the grocery **if those rooms stayed on the same web**. That is the default. Not a metaphor. κ = 1 means the standing is readable one-to-one at both tills.
+
+They can fork. A wrapper makes it *their* CT. Then it is not the same capacity unless the other room **joins that wrap** on purpose.
+
 | Mode | What the DFAO did | κ | Still on XP network? |
 |---|---|---|---|
 | Base CT | Non-liquid community standing. Shared grammar. | 1 | Yes |
-| Wrap | Local wrapper around CT (extra knobs, extra classes) **without** a money rail | ∈ (0,1) as the web votes | Yes |
-| Cash-wrap | Any exchange of CT for money, listed points, or a treasury payout | 0 | XP may still exist. **CT is no longer compatible.** They left web W. |
+| Wrap | Local wrapper (extra knobs, extra classes) **without** a money rail | ∈ (0,1) until another room votes to treat it as 1 | Yes |
+| Join | Two or more DFAOs agree “we read your wrap as ours” so staff and regulars can shop across rooms | κ they publish | Yes |
+| Cash-wrap | Any exchange of CT for money, listed points, or a treasury payout | 0 | XP may still exist. **CT left web W.** |
 
-A city-scale mesh that stays on base CT can treat standing as one-to-one across those rooms. Fork too far and it is not 1:1. Wire it to cash and it is not CT in this charter.
+A city-scale mesh on base CT is already a cooperative: grocery CT is laundromat CT. No extra deal required.
+
+If one room wraps, the other rooms do **not** silently inherit it. They can:
+
+- stay on base and treat the wrapper at discounted κ
+- vote to **join** that wrap (a published vertex: we want our people to shop there, we accept their knobs)
+- leave
+
+That join is a deal between DFAOs. It is how cooperatives form without a central brand. Staff at A shopping at B only works if A and B said so on the graph.
 
 Axioms a wrap must keep to even *ask* for κ > 0:
 
@@ -158,10 +171,20 @@ Axioms a wrap must keep to even *ask* for κ > 0:
 - reputation may stay in CT
 - reputation stays out of the XP mint
 
+### 4e. Self-policing
+
+CT polices itself because the web can see the vertices.
+
+- A house that parks H at 0 to starve neighbors, or juiced H to puff its people, wrote that on **its** ledger. Other rooms in W can refuse a join, drop κ, or leave.
+- A posted task that pays fantasy CT gets cross-ref’d against similar DAG events. Peer rooms do not have to accept U_W that looks like theater.
+- False-fraud shutdowns that do not hold get cited back. Being a dick is expensive *here*, not after a regulator shows up.
+- Cash-wrap is auto-exile from W. No committee required. κ = 0.
+
+Nobody has to be good. They have to stay compatible if they want the shared standing. Compatibility is the police.
+
 ### 4d. What the store does not own
 
-The store does not own CT. The web does.  
-The store owns **H**.
+The store does not own CT. The web does. The store owns H.
 
 ---
 

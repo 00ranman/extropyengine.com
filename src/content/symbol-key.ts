@@ -95,7 +95,7 @@ export const symbolKey = {
       id: "ct",
       glyph: "CT",
       name: "Community standing",
-      is: "Community standing on web W — the DFAOs that still read base CT one-to-one. Usefulness to that web, not only one till. Reputation density ρ_W belongs here. It does not belong in the XP mint. A DFAO posts tasks and mints CT when they close. Wrap without money: κ in (0,1). Cash-wrap: κ = 0, left the compatible web. Still not a bag.",
+      is: "Community standing on web W — DFAOs that still read base CT one-to-one. Same CT at the grocery and the laundromat until someone wraps. Join is a published deal so staff can shop across rooms. Reputation density ρ_W belongs here, not in the XP mint. Cash-wrap: κ = 0. Self-policing: abuse of H or fantasy task weights are vertices the rest of the web can refuse.",
       isNot: "Not a coin. Not a job application. Not global XP. Not L itself.",
     },
     {
