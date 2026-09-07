@@ -351,6 +351,11 @@ export const papers: Paper[] = [
     href: "/docs/Meter_Math.pdf",
   },
   {
+    tag: "Law-shaped · 6 Sep 2026",
+    title: "Howey, tax, states, other desks",
+    href: "/docs/LAW-SHAPED.md",
+  },
+  {
     tag: "Working paper · 4 Sep 2026",
     title: "Liquidity Corrupts Verification",
     href: "/papers/liquidity-and-decay",
