@@ -231,6 +231,13 @@ L is those things on **this ticket**.
 
 Born and burned in the same sale. Not a wage. Not a currency. Not how staff or distributors get paid. Cash (or the local tender) still clears the invoice. The spark is an overlay. Early mesh: pennies. Dense compatible web: more of the ticket. Remainder rings in cash.
 
+This is also the first door that already exists in the wild: **employee discount** and **loyalty punch cards**.
+
+- Employee discount today: a house slider plus “you work here.” That is H plus CT_W (and maybe a band). EP is that math without a special side ledger. Staff still get wages in tender. The discount is the spark on *their ticket*, same formula as a regular who is a node of demand.
+- Loyalty program today: a bag of points you farm and sometimes sell. That is the lose-condition. CT_W + L + a dying EP is the replacement: standing in the web, this till’s H, spark dies. No second currency in the drawer.
+
+A shop can turn H on tomorrow and stop running a separate punch-card database. That is the parallel system eating one desk first. Payroll stays payroll.
+
 ---
 
 ## 7b. Fiat residual (mesh index, not a person)
