@@ -116,7 +116,7 @@ export const symbolKey = {
       id: "ct",
       glyph: "CT",
       name: "Community standing",
-      is: "Community standing on web W — DFAOs that still read base CT one-to-one. Same CT at the grocery and the laundromat until someone wraps. Leaks 0.97ⁿ (~3% of remaining per ~30 days). Transfer-burn is gone; this leak is that burn. ρ_W lives here, not in the XP mint.",
+      is: "Community standing on web W — DFAOs that still read base CT one-to-one. Same CT at the grocery and the laundromat until someone wraps. Idle leak 0.99ⁿ (~1%), same keep as XP. A close, till spark, or posted task on W resets the clock. Does not travel to the next town.",
       isNot: "Not a coin. Not a job application. Not global XP. Not L itself.",
     },
     {
@@ -137,7 +137,7 @@ export const symbolKey = {
       id: "leak",
       glyph: "0.99ⁿ",
       name: "Standing leak",
-      is: "Three clocks, not one. XP 0.99ⁿ (~1%, half-life ~69 months). CT 0.97ⁿ (~3%, half-life ~23 months). IT 0.95ⁿ (~5%, half-life ~13.5 months). Remaining × keep^n. Never zero in the reals.",
+      is: "Three clocks. XP 0.99ⁿ (~1%, half-life ~69 months). CT 0.99ⁿ idle on that web (same keep; activity resets n). IT 0.95ⁿ (~5% idle, half-life ~13.5 months). Remaining × keep^n. Never zero in the reals.",
       isNot: "Not Tₛ. Not F.",
     },
   ],

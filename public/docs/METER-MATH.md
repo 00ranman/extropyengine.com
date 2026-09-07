@@ -41,7 +41,7 @@ Defaults and change rules, before a live till: [/docs/DEFAULTS.md](/docs/DEFAULT
 | CAT | Skill record | Unique | Off the XP mint. |
 | IT | Governance meter | No | Off the XP mint. |
 | 0.99ⁿ | XP leak | — | ~1%/month remaining. Planetary. |
-| 0.97ⁿ | CT leak | — | ~3%/month remaining. Replaces transfer-burn. Web W. |
+| 0.99ⁿ | CT leak | — | Idle on web W. Same keep as XP. Activity resets n. Does not travel. |
 | 0.95ⁿ | IT leak | — | ~5%/month remaining, idle. Gavel clock. |
 | ℱ | Falsifiability | — | Lose-conditions. Not the letter F. |
 
@@ -80,7 +80,7 @@ XP is **global**. Every compatible room can see that a loop survived. Changing t
 T_s = \exp(-\lambda \min(\Delta t, \Delta t_{\mathrm{cap}}))
 \]
 
-Δt → 0 ⇒ log = 0 ⇒ XP = 0. Three mint clocks: Tₛ this loop, F the class, standing leaks after settle. XP 0.99ⁿ, CT 0.97ⁿ, IT 0.95ⁿ.
+Δt → 0 ⇒ log = 0 ⇒ XP = 0. Standing leaks after settle. XP 0.99ⁿ. CT 0.99ⁿ idle on that web. IT 0.95ⁿ idle.
 
 ---
 

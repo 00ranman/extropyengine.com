@@ -24,9 +24,9 @@ function ItPage() {
       <h2 className="font-display pt-4 text-2xl text-fg">Why 5%</h2>
       <p>
         XP leaks ~1% of remaining per month. World standing should last if you keep closing loops.
-        CT leaks ~3%. Transfer-burn is gone; that leak is the burn. IT leaks ~5% while idle. A seat
-        that does not show up should empty before a year and a half. Half-life about 13.5 months at
-        0.95ⁿ.
+        CT idle-leaks at ~1%, same keep as XP. Activity on that web resets the clock. IT leaks ~5%
+        while idle. A seat that does not show up should empty before a year and a half. Half-life
+        about 13.5 months at 0.95ⁿ.
       </p>
       <p>Remaining after n months: IT × 0.95ⁿ. Idle means no voice-bearing close in the period.</p>
       <h2 className="font-display pt-4 text-2xl text-fg">How it moves</h2>

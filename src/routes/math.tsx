@@ -86,8 +86,8 @@ function MathPage() {
         Three leaks
       </h2>
       <p>
-        XP 0.99ⁿ (~1%, half-life ~69 months). CT 0.97ⁿ (~3%, ~23 months). IT 0.95ⁿ (~5%, ~13.5
-        months idle). Remaining times keep to the n. Never zero in the reals.
+        XP 0.99ⁿ (~1%, half-life ~69 months). CT 0.99ⁿ while idle on that web — same keep; a close
+        or a till spark resets n. IT 0.95ⁿ (~5%, ~13.5 months idle).
       </p>
       <p>
         <Link to="/key" className="text-primary hover:underline">
