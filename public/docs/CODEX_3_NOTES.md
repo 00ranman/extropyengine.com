@@ -151,7 +151,8 @@ Public copy. The crowd hears “token” and reaches for a bag. That is not this
 
 CAT is a record: `(DID, lane, level, settled count, issuer)`. DT is not a bag. Old copy said Domain Token or Decay Token. Expertise is CAT-per-lane. The leak is already on XP. If the letter survives it is a unique lane-claim record, not a Domain Coin.
 
-Six was accretion, not physics. Kernel follow-up: kill `TokenType.DT` and CAT amount-mints in `packages/token-economy`.
+Six was accretion, not physics. Codex 3.0 count is **five meters** (XP, CT, IT, EP, CAT). L and the rest are math — https://extropyengine.com/math. Kernel follow-up: kill `TokenType.DT` and CAT amount-mints in `packages/token-economy`.
+
 
 Canonical write-up: https://github.com/00ranman/extropy-engine/blob/main/docs/CODEX_3_NOTES.md
 

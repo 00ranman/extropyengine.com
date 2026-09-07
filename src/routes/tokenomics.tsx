@@ -27,9 +27,9 @@ function TokenomicsHub() {
   return (
     <EssayLayout backTo="/" backLabel="Extropy Engine" kicker="Tokenomics" title="Meters, not bags">
       <p>
-        Tokenomics here means how the meters couple. Not an exchange. Nothing lists. You cannot
-        send standing to a friend. You cannot cash it out. If you came from crypto, that is the
-        disclaimer. Then read the letters.
+        Tokenomics here means how the five meters couple. XP, CT, IT, EP, CAT. Not six. Not an
+        exchange. Nothing lists. You cannot send standing to a friend. You cannot cash it out. If
+        you came from crypto, that is the disclaimer. Then read the letters.
       </p>
       <ul className="list-none space-y-3 p-0">
         {meters.map((m) => (

@@ -18,8 +18,9 @@ function MathPage() {
   return (
     <EssayLayout backTo="/tokenomics" backLabel="Tokenomics" kicker="Math" title="The other letters">
       <p>
-        Tokens are XP, CT, IT, EP, CAT. Everything below is how those numbers are born, clipped, or
-        leaked. Not a fifth bag.
+        Tokens are five: XP, CT, IT, EP, CAT. Everything below is how those numbers are born,
+        clipped, or leaked. Honorary mentions. Not a sixth bag.
+
       </p>
 
       <h2 className="font-display pt-4 text-2xl text-fg">The mint</h2>
