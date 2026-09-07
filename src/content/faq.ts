@@ -325,7 +325,7 @@ export const faqSections: FaqSection[] = [
         id: "if-then",
         q: "Isn’t a smart contract just crypto?",
         a: "Smart contracts. Not crypto. No exchange. No JPEG. No transfer of standing. The listed-chain version is dumb because the ‘then’ is move a bag. Here the then is mint, park H_cap, flip β, print a remainder. Tokenomics without a pool. That is the brag. Break it.",
-        also: [{ label: "If this, then that", href: "/if-then" }],
+        also: [{ label: "Smart contracts", href: "/smart-contracts" }],
       },
         q: "You said no fiat on-ramp. So this replaces money?",
         a: "No. No on-ramp means cash cannot mint XP. People keep spending dollars. The Engine is a tracking layer: bits-equivalent proxies, fine-tuned as like-cases stack, so the ΔS of this kind of exchange gets less wrong. A vertex can settle some of the ticket. That is not EP = this many dollars. Mom-and-pop first. Repeat-farming is F. Keep the other job or don’t.",

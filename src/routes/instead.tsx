@@ -42,7 +42,7 @@ function InsteadPage() {
         Edge keeps sovereignty. The till owns H_cap and S. The web owns CT_W. Named cases
         (“smart contracts” if you can hear the words) are rails so you do not hire an executive
         caste to babysit the coupling.{" "}
-        <Link to="/if-then" className="text-primary hover:underline">
+        <Link to="/smart-contracts" className="text-primary hover:underline">
           If this, then that
         </Link>
         . Classical computation runs mint, leaks, sliders, burns. Models package a claim. They do

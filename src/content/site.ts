@@ -34,7 +34,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "Start here", href: "/start" },
       { label: "Letter key", href: "/key" },
       { label: "Fiat residual", href: "/rho" },
-      { label: "Smart contracts", href: "/if-then" },
+      { label: "Smart contracts", href: "/smart-contracts" },
       { label: "Charter", href: "/charter" },
       { label: "Liquidity paper", href: "/papers/liquidity-and-decay" },
       { label: "FAQ", href: "/faq" },
@@ -351,9 +351,9 @@ export const papers: Paper[] = [
     href: "/docs/Meter_Math.pdf",
   },
   {
-    tag: "If-then",
+    tag: "Smart contracts",
     title: "Smart contracts. Not the JPEG.",
-    href: "/if-then",
+    href: "/smart-contracts",
   },
   {
     tag: "Defaults · 7 Sep 2026",
