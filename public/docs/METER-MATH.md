@@ -2,7 +2,9 @@
 
 Unsigned working spec for the **tokenomics of the meters**. Not bags. Nothing here cashes out.
 
-**House rule, first line:** we do not play their markets. No offset registry. No transferable tonne. No Extropy credit listed next to Verra. If a room lists a spark as a commodity, they forked.
+**House rule, first line:** we do not play their markets. This is a **parallel system**. It runs *alongside* cash, firms, desks, and law until those rooms use the overlay enough that cash is only a remainder. Money is the balancer and the check while the DAG is still learning. When the graph can carry the score, ρ climbs. Absorption is that curve. Not a coup date.
+
+No offset registry. No transferable tonne. No Extropy credit listed next to Verra. If a room lists a spark as a commodity, they forked.
 
 Signed Codex is still v2.1. Canonical mint in code is `packages/xp-formula`. If this page and the letter key disagree, the [letter key](/key) wins on names. This page wins on how the meters couple.
 
@@ -34,7 +36,7 @@ Do not remap letters. Do not add a ninth instrument.
 | 0.99ⁿ | XP leak | — | Planetary knob. |
 | ℱ | Falsifiability | — | Lose-conditions. Not the letter F. |
 
-Cash still rings the rest of a ticket. Cash cannot mint XP. Cash-wrap of CT drops κ to 0.
+Cash still rings the rest of a ticket. Cash cannot mint XP. Cash is the training wheels and the audit: the DAG is learning against a tender that already exists. Cash-wrap of CT drops κ to 0. That is trying to *become* money instead of running beside it.
 
 ---
 

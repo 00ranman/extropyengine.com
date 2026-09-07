@@ -24,6 +24,11 @@ function InsteadPage() {
         The spark is EP. It dies when the ticket dies.
       </p>
       <p>
+        Parallel system. It runs alongside cash and the desks that already exist. Money is the
+        balancer while the DAG is still learning. Absorption is ρ climbing, not a date someone
+        announces.
+      </p>
+      <p>
         If the output of verification can be sold, verification becomes a mint for that sale. That
         is why liquidity corrupts the claim. Paper:{" "}
         <Link to="/papers/liquidity-and-decay" className="text-primary hover:underline">
