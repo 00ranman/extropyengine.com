@@ -183,6 +183,7 @@ export default defineConfig(({ command, mode }) => {
               { path: "/tokenomics" },
               { path: "/tokenomics/it" },
               { path: "/math" },
+              { path: "/defaults" },
               { path: "/instead" },
               { path: "/charter" },
               { path: "/rho" },

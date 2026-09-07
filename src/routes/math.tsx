@@ -94,8 +94,20 @@ function MathPage() {
           Letter key
         </Link>
         {" · "}
-        <a href="/docs/DEFAULTS.md" className="text-primary hover:underline">
+        <Link to="/defaults" className="text-primary hover:underline">
           Defaults
+        </Link>
+        {" · "}
+        <Link to="/tokenomics/it" className="text-primary hover:underline">
+          IT
+        </Link>
+        {" · "}
+        <a href="/docs/DEFAULTS.md" className="text-primary hover:underline">
+          DEFAULTS.md
+        </a>
+        {" · "}
+        <a href="/docs/IT.md" className="text-primary hover:underline">
+          IT.md
         </a>
         {" · "}
         <a href="/docs/METER-MATH.md" className="text-primary hover:underline">

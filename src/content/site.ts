@@ -33,6 +33,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "XP", href: "/key#xp" },
       { label: "CT", href: "/key#ct" },
       { label: "IT", href: "/tokenomics/it" },
+      { label: "Defaults", href: "/defaults" },
       { label: "EP", href: "/key#ep" },
       { label: "CAT", href: "/key#cat" },
     ],
@@ -50,6 +51,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "L this ticket", href: "/key#l" },
       { label: "H_cap / S / β", href: "/math#house" },
       { label: "Leaks", href: "/math#leaks" },
+      { label: "Defaults", href: "/defaults" },
       { label: "Letter key", href: "/key" },
     ],
   },
@@ -61,6 +63,9 @@ export const primaryNav: readonly NavItem[] = [
       { label: "Watch", href: "/#film" },
       { label: "Start here", href: "/start" },
       { label: "Letter key", href: "/key" },
+      { label: "Defaults", href: "/defaults" },
+      { label: "IT", href: "/tokenomics/it" },
+      { label: "Docs", href: "/docs" },
       { label: "Fiat residual", href: "/rho" },
       { label: "Smart contracts", href: "/smart-contracts" },
       { label: "Charter", href: "/charter" },
@@ -386,7 +391,7 @@ export const papers: Paper[] = [
   {
     tag: "Defaults · 7 Sep 2026",
     title: "H_cap, λ, β — numbers and who may change them",
-    href: "/docs/DEFAULTS.md",
+    href: "/defaults",
   },
   {
     tag: "World line · 7 Sep 2026",
@@ -795,6 +800,26 @@ export const socials = [
 ] as const;
 
 export const docsIndex = [
+  {
+    title: "Defaults",
+    href: "/defaults",
+    note: "The live numbers. H_cap, λ, β, leaks, who may change them. Also /docs/DEFAULTS.md for scrapers.",
+  },
+  {
+    title: "IT — this proposal",
+    href: "/tokenomics/it",
+    note: "clip(H_gov · S_gov · κ · CT_W · β_gov). Burns in the tally. Also /docs/IT.md.",
+  },
+  {
+    title: "Meter math",
+    href: "/math",
+    note: "The other letters. Also /docs/METER-MATH.md.",
+  },
+  {
+    title: "Letter key",
+    href: "/key",
+    note: "Stop remapping R, F, ΔS, L, EP.",
+  },
   {
     title: "Extropy Codex v2.1",
     href: "/docs/Extropy_Codex_v2.1_Comprehensive.pdf",

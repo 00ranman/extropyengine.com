@@ -53,6 +53,20 @@ function TokenomicsHub() {
         </Link>
         , not tokens.
       </p>
+      <p>
+        Published knobs:{" "}
+        <Link to="/defaults" className="text-primary hover:underline">
+          Defaults
+        </Link>
+        {" · "}
+        <Link to="/tokenomics/it" className="text-primary hover:underline">
+          IT
+        </Link>
+        {" · "}
+        <Link to="/docs" className="text-primary hover:underline">
+          Docs
+        </Link>
+      </p>
     </EssayLayout>
   );
 }
