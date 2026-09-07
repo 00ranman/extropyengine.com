@@ -1,9 +1,13 @@
 /** One job per title. Other pages should use the job, not the title. */
 export const trackJobs: Record<string, string> = {
+  "fake-slop":
+    "Dismissal-word: slop as a tag instead of a flaw. First line: You're doing that thing where words replace reality again. Not the bus-with-no-driver song.",
+  "procedural-ghostride":
+    "Incentives with no driver. First line: Welcome to the bus with no driver. Not Fake Slop. Not an AI-music argument.",
   "weaponized-transparency":
-    "Talking about systems while messing with them. Observation as a social lever. Not punk history. Not quantum collapse.",
+    "Talking about systems while messing with them. First line: They want systems / I give them ecosystems. NDA into a beat drop. Not punk history. Not Inside the Machine. Not quantum collapse.",
   "inside-the-machine":
-    "Punk recuperation: joke to sermon, success as the thing that gets managed. Not the transparency track.",
+    "Punk recuperation: joke to sermon. First line: Timeline says punk was always left wing. Green Day, Dookie, Rage Against the Machine as rage inside the machine. Not Weaponized Transparency.",
   "syntax-sabotage":
     "Speech as protocol. Language that will not sit still. Not the punk-history track.",
   "no-ones-lying":

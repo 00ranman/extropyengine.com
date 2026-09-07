@@ -160,7 +160,7 @@ export const singles: Single[] = [
   {
     year: 2026,
     title: "Weaponized Transparency",
-    desc: "Talking about systems while fucking with them. Observation into ammunition — watching as a real lever. Not the observer effect. That mapping is not in the song. Schrödinger’s cat was a joke at people who applied quantum to a cat. Quantum does not apply to the macro.",
+    desc: "First line: They want systems / I give them ecosystems. NDA into a beat drop. Talking about systems while fucking with them. Not Inside the Machine. Not punk. Not the observer effect.",
     art: spotifyArt("4de872d92d4f2385a55828c1"),
     links: {
       spotify: "https://open.spotify.com/search/Lladnaros%20Weaponized%20Transparency",
@@ -171,7 +171,7 @@ export const singles: Single[] = [
   {
     year: 2026,
     title: "Inside the Machine",
-    desc: "A song about punk getting sold as merch — recuperation, inventory, terms of service. The argument isn’t a genre tag.",
+    desc: "First line: Timeline says punk was always left wing. Punk sold as merch — recuperation, Dookie, inventory. Not Weaponized Transparency.",
     art: spotifyArt("c5943e8bc994579a352bfee3"),
     links: {
       spotify: "https://open.spotify.com/search/Lladnaros%20Inside%20the%20Machine",
@@ -182,7 +182,7 @@ export const singles: Single[] = [
   {
     year: 2026,
     title: "Fake Slop",
-    desc: "Clowning the people who dismiss AI music without listening. The medium isn't the message — the message is.",
+    desc: "First line: You're doing that thing where words replace reality again. If it's slop, where's the slop? Not Procedural Ghostride. Not the bus.",
     art: spotifyArt("b1cf7b7204dd0a6e4f7f8ff8"),
     links: {
       spotify: "https://open.spotify.com/search/Lladnaros%20Fake%20Slop",
@@ -193,7 +193,7 @@ export const singles: Single[] = [
   {
     year: 2025,
     title: "Procedural Ghostride",
-    desc: "There's no conspiracy. It's just incentives running the show with no driver. That's the scary part.",
+    desc: "First line: Welcome to the bus with no driver. Incentives, no conspiracy. Not Fake Slop.",
     art: spotifyArt("fd4a3cbf66778ccbae490ea0"),
     links: {
       spotify: "https://open.spotify.com/search/Lladnaros%20Procedural%20Ghostride",
