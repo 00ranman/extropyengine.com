@@ -179,6 +179,10 @@ export default defineConfig(({ command, mode }) => {
               { path: "/faq" },
               { path: "/hoa" },
               { path: "/dfao" },
+              { path: "/smart-contracts" },
+              { path: "/instead" },
+              { path: "/charter" },
+              { path: "/rho" },
             ],
           }
         : {},
