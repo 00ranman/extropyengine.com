@@ -151,11 +151,11 @@ export const faqSections: FaqSection[] = [
       {
         id: "cat-ct-it",
         q: "What are CAT, CT, and IT?",
-        a: "CAT is a skill record: unique, lane + level + issuer. Are you qualified to do this, and at what level. CT is community standing — a meter for this DFAO. Feeds L at the till. IT is influence standing, not Insight Token. Governance and demonstration work weights more. Obscure private labor still mints XP; it does not mint the same IT unless influence is the job. IT decays ~5%/month if you vanish. None of these are bags.",
+        a: "CAT is a skill record: lane + level + issuer. Feeds β when on-duty. CT is community standing on the web — same number at compatible tills — and leaks ~3%/month (0.97ⁿ) because transfer-burn is gone. IT is governance weight. You cannot buy it with XP. Idle leak ~5%/month (0.95ⁿ). A vote uses remaining IT; it does not spend it. None of these are bags.",
         also: [
           { label: "CAT", href: "/glossary", hash: "cat" },
           { label: "CT", href: "/glossary", hash: "ct" },
-          { label: "IT", href: "/glossary", hash: "it" },
+          { label: "IT", href: "/it" },
           { label: "Ledger", href: "/#ledger" },
         ],
       },

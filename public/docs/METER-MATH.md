@@ -40,7 +40,9 @@ Defaults and change rules, before a live till: [/docs/DEFAULTS.md](/docs/DEFAULT
 | ρ | Fiat residual index | No | Door totals. Not a person. Not ρ_W. |
 | CAT | Skill record | Unique | Off the XP mint. |
 | IT | Governance meter | No | Off the XP mint. |
-| 0.99ⁿ | XP leak | — | Planetary knob. |
+| 0.99ⁿ | XP leak | — | ~1%/month remaining. Planetary. |
+| 0.97ⁿ | CT leak | — | ~3%/month remaining. Replaces transfer-burn. Web W. |
+| 0.95ⁿ | IT leak | — | ~5%/month remaining, idle. Gavel clock. |
 | ℱ | Falsifiability | — | Lose-conditions. Not the letter F. |
 
 Cash still rings the rest of a ticket. Cash cannot mint XP. Cash is the training wheels and the audit: the DAG is learning against a tender that already exists. Cash-wrap of CT drops κ to 0. That is trying to *become* money instead of running beside it.
@@ -78,7 +80,7 @@ XP is **global**. Every compatible room can see that a loop survived. Changing t
 T_s = \exp(-\lambda \min(\Delta t, \Delta t_{\mathrm{cap}}))
 \]
 
-Δt → 0 ⇒ log = 0 ⇒ XP = 0. Three clocks: Tₛ this loop, F the class, 0.99ⁿ standing after settle. IT leak is a fourth clock, on voice.
+Δt → 0 ⇒ log = 0 ⇒ XP = 0. Three mint clocks: Tₛ this loop, F the class, standing leaks after settle. XP 0.99ⁿ, CT 0.97ⁿ, IT 0.95ⁿ.
 
 ---
 

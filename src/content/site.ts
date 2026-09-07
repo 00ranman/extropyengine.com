@@ -32,7 +32,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "How it works", href: "/#engine" },
       { label: "Watch", href: "/#film" },
       { label: "Start here", href: "/start" },
-      { label: "Letter key", href: "/key" },
+      { label: "IT", href: "/it" },
       { label: "Fiat residual", href: "/rho" },
       { label: "Smart contracts", href: "/smart-contracts" },
       { label: "Charter", href: "/charter" },
