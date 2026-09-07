@@ -69,8 +69,44 @@ function SmartContractsPage() {
         decision on a named case is what gets eaten. Challenge that. Publish a door. Try to make
         the contract print a bag. If it does, I was wrong in public.
       </p>
+      <h2 className="font-display pt-4 text-2xl text-fg">How a smart contract actually runs</h2>
       <p>
-        Defaults:{" "}
+        Not “the blockchain moved your coins.” A published case looks at signed records and does the
+        next thing. If the inputs are not there, it does not run. A person handles that, then you
+        write the case so next time it does.
+      </p>
+      <p>
+        <strong>Work.</strong> Someone mows, restocks, merges duplicates, buys Tuesday milk. A
+        claim gets packaged. The other side signs or says no. Only then may world standing (XP) or
+        community standing (CT) move. That is a smart contract: both sides agreed, standing may
+        change.
+      </p>
+      <p>
+        <strong>The register.</strong> Cash still rings. The till reads world standing, community
+        standing, this shop’s cap this week, how this shop knows you, and any on-duty proof. It
+        prints two extra lines: how much cash it took, how much overlay touched. The spark dies
+        when the ticket dies. That is a smart contract. Your grocery spark does not pay the truck.
+        The truck is its own ticket later.
+      </p>
+      <p>
+        <strong>The week.</strong> If four weeks of cash-in versus cash-out say the inbound bill is
+        still heavy, the shop’s cap steps down for everyone in line. That is a smart contract.
+      </p>
+      <p>
+        <strong>The badge.</strong> If a trucker’s skill record says they are on this run, the diner
+        and the hotel treat them like a local for that ticket. When the run ends, the badge goes
+        dark. That is a smart contract. Still the same community language. Not a new coin.
+      </p>
+      <p>
+        What never runs: send standing to a friend, cash it out, have a protocol treasury pay the
+        shop back, carry a milk spark up the supply chain. Those are not features we forgot.
+      </p>
+      <p>
+        Plain file:{" "}
+        <a href="/docs/SMART-CONTRACTS.md" className="text-primary hover:underline">
+          SMART-CONTRACTS.md
+        </a>
+        . Defaults:{" "}
         <a href="/docs/DEFAULTS.md" className="text-primary hover:underline">
           the numbers
         </a>
