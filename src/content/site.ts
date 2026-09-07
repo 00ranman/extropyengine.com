@@ -351,9 +351,9 @@ export const papers: Paper[] = [
     href: "/docs/Meter_Math.pdf",
   },
   {
-    tag: "Law-shaped · 6 Sep 2026",
-    title: "Howey, tax, states, other desks",
-    href: "/docs/LAW-SHAPED.md",
+    tag: "World line · 7 Sep 2026",
+    title: "Meters, routes, twenty years",
+    href: "/docs/WORLD_LINE.md",
   },
   {
     tag: "Working paper · 4 Sep 2026",
