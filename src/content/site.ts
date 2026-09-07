@@ -34,7 +34,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "Start here", href: "/start" },
       { label: "Letter key", href: "/key" },
       { label: "Fiat residual", href: "/rho" },
-      { label: "If-then", href: "/if-then" },
+      { label: "Smart contracts", href: "/if-then" },
       { label: "Charter", href: "/charter" },
       { label: "Liquidity paper", href: "/papers/liquidity-and-decay" },
       { label: "FAQ", href: "/faq" },
@@ -352,7 +352,7 @@ export const papers: Paper[] = [
   },
   {
     tag: "If-then",
-    title: "Named cases without a pool",
+    title: "Smart contracts. Not the JPEG.",
     href: "/if-then",
   },
   {

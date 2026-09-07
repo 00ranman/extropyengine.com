@@ -324,7 +324,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "if-then",
         q: "Isn’t a smart contract just crypto?",
-        a: "The useful object is if-then: a named case that runs when both edges signed. Reorder. Park H_cap. Turn β on. The listed-chain version hamstrings that because the ‘then’ is usually move a bag. Here the then is not a transfer. Standing does not list. EP dies on the ticket.",
+        a: "Smart contracts. Not crypto. No exchange. No JPEG. No transfer of standing. The listed-chain version is dumb because the ‘then’ is move a bag. Here the then is mint, park H_cap, flip β, print a remainder. Tokenomics without a pool. That is the brag. Break it.",
         also: [{ label: "If this, then that", href: "/if-then" }],
       },
         q: "You said no fiat on-ramp. So this replaces money?",
