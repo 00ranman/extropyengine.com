@@ -18,7 +18,7 @@ export const Route = createFileRoute("/tokenomics")({
 const meters = [
   { href: "/key#xp", letter: "XP", name: "World standing", leak: "Leaks 0.99ⁿ. Does not cash out." },
   { href: "/key#ct", letter: "CT", name: "Community standing", leak: "Same number at compatible tills. Idle leak 0.99ⁿ. Stays on that web." },
-  { href: "/tokenomics/it", letter: "IT", name: "This-proposal standing", leak: "clip(H_gov · S_gov · κ · CT · β_gov). Burns in the tally." },
+  { href: "/key#it", letter: "IT", name: "This-proposal standing", leak: "clip(H_gov · S_gov · κ · CT · β_gov). Burns in the tally." },
   { href: "/key#ep", letter: "EP", name: "Till spark", leak: "Born and burned on that ticket." },
   { href: "/key#cat", letter: "CAT", name: "Skill record", leak: "Feeds β when on-duty. Off the mint." },
 ] as const;
@@ -59,7 +59,7 @@ function TokenomicsHub() {
           Defaults
         </Link>
         {" · "}
-        <Link to="/tokenomics/it" className="text-primary hover:underline">
+        <Link to="/key" hash="it" className="text-primary hover:underline">
           IT
         </Link>
         {" · "}

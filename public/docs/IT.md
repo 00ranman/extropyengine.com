@@ -1,6 +1,6 @@
 # IT — this proposal, then it burns
 
-https://extropyengine.com/tokenomics/it
+https://extropyengine.com/key#it
 
 IT is not a pile. It is this-proposal standing. Same shape as L. Born when a case is open. Burned in the tally. The receipt is the vertex.
 

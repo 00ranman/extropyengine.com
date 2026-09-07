@@ -32,7 +32,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "The five", href: "/tokenomics" },
       { label: "XP", href: "/key#xp" },
       { label: "CT", href: "/key#ct" },
-      { label: "IT", href: "/tokenomics/it" },
+      { label: "IT", href: "/key#it" },
       { label: "Defaults", href: "/defaults" },
       { label: "EP", href: "/key#ep" },
       { label: "CAT", href: "/key#cat" },
@@ -64,7 +64,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "Start here", href: "/start" },
       { label: "Letter key", href: "/key" },
       { label: "Defaults", href: "/defaults" },
-      { label: "IT", href: "/tokenomics/it" },
+      { label: "IT", href: "/key#it" },
       { label: "Docs", href: "/docs" },
       { label: "Fiat residual", href: "/rho" },
       { label: "Smart contracts", href: "/smart-contracts" },
@@ -807,7 +807,7 @@ export const docsIndex = [
   },
   {
     title: "IT — this proposal",
-    href: "/tokenomics/it",
+    href: "/key#it",
     note: "clip(H_gov · S_gov · κ · CT_W · β_gov). Burns in the tally. Also /docs/IT.md.",
   },
   {

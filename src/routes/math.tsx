@@ -98,7 +98,7 @@ function MathPage() {
           Defaults
         </Link>
         {" · "}
-        <Link to="/tokenomics/it" className="text-primary hover:underline">
+        <Link to="/key" hash="it" className="text-primary hover:underline">
           IT
         </Link>
         {" · "}

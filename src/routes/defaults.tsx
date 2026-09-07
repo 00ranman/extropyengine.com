@@ -38,8 +38,8 @@ function DefaultsPage() {
       <p>
         H_gov default 1. 0 = one DID, one nullifier. S_gov = 1 if you are in the room. Party to the
         dispute: 0. Full write-up:{" "}
-        <Link to="/tokenomics/it" className="text-primary hover:underline">
-          IT
+        <Link to="/key" hash="it" className="text-primary hover:underline">
+          letter key
         </Link>
         .
       </p>

@@ -155,7 +155,7 @@ export const faqSections: FaqSection[] = [
         also: [
           { label: "CAT", href: "/glossary", hash: "cat" },
           { label: "CT", href: "/glossary", hash: "ct" },
-          { label: "IT", href: "/tokenomics/it" },
+          { label: "IT", href: "/key#it" },
           { label: "Ledger", href: "/#ledger" },
         ],
       },
