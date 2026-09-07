@@ -16,12 +16,11 @@ export const Route = createFileRoute("/tokenomics")({
 });
 
 const meters = [
-  { href: "/key#xp", letter: "XP", name: "World standing", leak: "0.99ⁿ · ~1%" },
-  { href: "/key#ct", letter: "CT", name: "Community standing", leak: "0.97ⁿ · ~3%" },
-  { href: "/tokenomics/it", letter: "IT", name: "Governance weight", leak: "0.95ⁿ · ~5% idle" },
-  { href: "/key#ep", letter: "EP", name: "Till spark", leak: "Dies on the ticket" },
-  { href: "/key#cat", letter: "CAT", name: "Skill record", leak: "Off the mint" },
-  { href: "/key#l", letter: "L", name: "This ticket", leak: "H_cap · S · κ · CT · β" },
+  { href: "/key#xp", letter: "XP", name: "World standing", leak: "Leaks 0.99ⁿ. Does not cash out." },
+  { href: "/key#ct", letter: "CT", name: "Community standing", leak: "Same number at compatible tills. Leaks 0.97ⁿ." },
+  { href: "/tokenomics/it", letter: "IT", name: "Governance weight", leak: "Idle leak 0.95ⁿ. You cannot buy it with XP." },
+  { href: "/key#ep", letter: "EP", name: "Till spark", leak: "Born and burned on that ticket." },
+  { href: "/key#cat", letter: "CAT", name: "Skill record", leak: "Feeds β when on-duty. Off the mint." },
 ] as const;
 
 function TokenomicsHub() {
@@ -44,15 +43,15 @@ function TokenomicsHub() {
         ))}
       </ul>
       <p>
-        Full names:{" "}
+        Full names live on the{" "}
         <Link to="/key" className="text-primary hover:underline">
           letter key
         </Link>
-        . Defaults:{" "}
-        <a href="/docs/DEFAULTS.md" className="text-primary hover:underline">
-          DEFAULTS.md
-        </a>
-        .
+        . The other letters — R, F, ΔS, the sliders, the leaks — are{" "}
+        <Link to="/math" className="text-primary hover:underline">
+          math
+        </Link>
+        , not tokens.
       </p>
     </EssayLayout>
   );

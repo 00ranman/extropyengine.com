@@ -182,6 +182,7 @@ export default defineConfig(({ command, mode }) => {
               { path: "/smart-contracts" },
               { path: "/tokenomics" },
               { path: "/tokenomics/it" },
+              { path: "/math" },
               { path: "/instead" },
               { path: "/charter" },
               { path: "/rho" },
