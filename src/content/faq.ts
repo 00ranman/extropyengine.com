@@ -330,7 +330,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "l-farm",
         q: "Can a shop (or a DFAO) just crank L and extract XP?",
-        a: "That’s the economic attack. L is this-door CT against the house slider, not a coupon the owner types in secret. The slider is public and writes a vertex. Optional auto uses this till’s proofs and load, not other shops’ customers. Both edges still accept the estimate. Cash rings the rest — L cannot lock the fridge. A house that juices the slider to harvest standing is farming; F, contest, late burn, and the next fractal still apply. Unsolved experimentally: whether a captured house can still extract. That’s a test, not a vibe. See open problems.",
+        a: "That’s the economic attack. L is community CT against the house slider. Same CT at every compatible till. The slider is the only control this house has. It is public and writes a vertex. Optional auto uses this till’s load and inbound need. Both edges still accept the estimate. Cash rings the rest. A house that juices the slider to harvest standing is farming; F, contest, late burn still apply.",
         also: [
           { label: "Emergent Product", href: "/glossary", hash: "emergent-product" },
           { label: "Open problems", href: "/open-problems" },
@@ -339,7 +339,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "not-a-job",
         q: "Do I have to work at every shop to get L?",
-        a: "No. CT and L are not mopping their floors. They are whether this door can count on you as a node of demand. Regular groceries. A pattern they can order stock against. Shopping five stores at random is allowed. It is just higher entropy for that house, so L here is worse. Do what you want. Habits (walk vs Hummer) can become modifiers later if that DFAO votes them in. Day one is not a carbon priesthood.",
+        a: "No. CT is community standing on the web. L is how hard this house lets that standing hit the ticket. Regular groceries can move CT_W. Shopping five stores at random is allowed. It is just worse coupling for the web. Do what you want.",
         also: [
           { label: "L", href: "/glossary", hash: "l" },
           { label: "CT", href: "/glossary", hash: "ct" },
@@ -348,7 +348,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "who-turns-knobs",
         q: "Who is allowed to change XP, CT, and L?",
-        a: "Different floors. L: this-door CT against the house slider. Hand-set or optional auto from this till’s proofs. Writes a vertex. Override and kill stay with the house. That slider also writes into their own EP and the next fractal. CT: this DFAO can vote how CT is scored in this room. That vote does not rewrite CT next door. XP: how the mint works is planetary. Cash-out is a lose-condition. If a room votes cash-out, they forked. This is not Randall’s engine. He wrote the loop. Rooms run rooms.",
+        a: "Different floors. L: H × κ × CT_W × β on this ticket. H belongs to the house. CT_W is the same community meter at every compatible till. A wrap that breaks the rules, or another mesh, is the only way the laundromat does not read the grocery’s CT. XP mint is planetary. Cash-out is a lose-condition.",
         also: [
           { label: "Letter key", href: "/key" },
           { label: "Engine — shop view", href: "/#engine" },
@@ -357,7 +357,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "l-zkp",
         q: "How do domain bands and the slider meet at the till?",
-        a: "You may show this door domain bands as ZKPs — yes or no, or band ≥ n — for the instruments that door asked about. Those bands plus this-door CT go against the house slider and become L for this ticket. Auto-slider, if on, reads this till’s proofs and load. Looking at a graph to hunt WHO still writes a vertex.",
+        a: "You may show this door domain bands as ZKPs. Those bands plus CT_W go against H and become L for this ticket. Auto-H reads this till’s load. Looking at a graph to hunt WHO still writes a vertex.",
         also: [
           { label: "L", href: "/glossary", hash: "l" },
           { label: "ZKP", href: "/glossary", hash: "zkp" },
@@ -390,7 +390,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "pto",
         q: "So is there PTO? Sick days? A vacation balance?",
-        a: "Not as a separate pile you spend. PTO was a patch on a wage that stopped when you left the building. Here you already accrued the thing that matters: standing from loops that closed. You can live on it while you rest. It leaks slowly. You also keep coupling — buying at a door you belong to updates this-door CT, which feeds L next time. Cash still cannot mint XP. Showing up is not a paycheck. It is how this shop still knows you. If you want a written vacation ledger, you are asking for the old box back. The circle is: live, loops close, standing sits, till spark at the door, rest is still a life.",
+        a: "Not as a separate pile you spend. Standing from loops that closed is what you already accrued. Buying at a compatible door can move CT_W. That same CT_W is what the next compatible till reads. Cash still cannot mint XP.",
         also: [
           { label: "CT", href: "/glossary", hash: "ct" },
           { label: "Emergent Product", href: "/glossary", hash: "emergent-product" },

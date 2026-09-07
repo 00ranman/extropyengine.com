@@ -29,8 +29,8 @@ An edge packager turns that work into a **claim** with a boundary, evidence poin
 The other edge can refuse.  
 If both edges hold, a **vertex** lands on a causal DAG.  
 If the signed mint rules fire, **XP** may move as global standing.  
-If this door tracks showing-up, **CT** may move as standing *here*.  
-At a till that turned the overlay on, the house slider **H** and this-door **CT** make **L** on that ticket.  
+If this web tracks showing-up, **CT_W** may move as community standing.  
+At a till that turned the overlay on, the house slider **H** and that same **CT_W** make **L** on that ticket.  
 **EP = XP × L** is born and burned in that sale.  
 Cash, or whatever tender that country already uses, still prints on the receipt.  
 Later evidence can attach and **burn** status without erasing history.  
@@ -46,7 +46,7 @@ That is the Engine as a process. Everything below is that paragraph with the scr
 These are the only clauses this mesh treats as load-bearing.
 
 1. **No liquidity of standing.** You cannot sell XP, CT, CAT, IT, or EP. A token as a bag is a lose-condition.
-2. **No transfer function between doors.** Sam’s Club CT does not pay the laundromat. Alice cannot wire Bob her XP.
+2. **No transfer of standing as an object you pass.** Alice cannot wire Bob her XP. CT_W is the same readout at every compatible till. The laundromat does not get a different CT unless it left the language.
 3. **No frozen constant as the territory.** ΔS is a bits-equivalent *proxy*. Mappers version. Unknown leakage stays unknown. Recalibration is a vertex, not a scandal.
 4. **No ninth instrument** to park an awkward case. Boundary, uncertainty, harm, and leakage ride on the claim.
 5. **No Engine gavel.** The graph can hold evidence. It does not mint guilty, execute, or write a morality constitution for children, the sick, or the broke.
@@ -94,7 +94,7 @@ Do not remap. Public key: https://extropyengine.com/key
 XP_mint = R × F × ΔS × (w · E) × log(1/Tₛ)
 Tₛ      = exp(−λ min(Δt, Δt_cap))
 XP(n)   = XP_settled · 0.99ⁿ
-L       = clip(H · CT_d · β, 0, 1)
+L       = clip(H · κ · CT_W · β, 0, 1)
 EP      = XP × L
 IT(m)   = IT_start · (0.95)^m     # idle months, order of magnitude
 ```
@@ -111,13 +111,13 @@ IT(m)   = IT_start · (0.95)^m     # idle months, order of magnitude
 
 **XP — global standing.** Survived closed loops. Non-transferable. Leaks. Visible as a passport *of standing*, not as money.
 
-**CT — this-door standing.** Can this room plan around you. Non-transferable. Does not buy XP.
+**CT — community standing on web W.** Same number at grocery and laundromat if they still speak base CT. The door does not own this. The door owns H.
 
 **H — house slider.** 0 parks the overlay. 1 is maximum willingness to let L move. Auto mode may *propose* H from published door totals (waste, no-shows, margin). Auto must not require a person-level forehead. House can override.
 
 **β — optional door-local band.** ZKP or mapper band. Default 1.
 
-**L — this ticket.** clip(H · CT_d · β, 0, 1).
+**L — this ticket.** clip(H · κ · CT_W · β, 0, 1).
 
 **EP — till spark.** XP × L. Born and burned in that sale. Not a wage. Not a currency. Not stored value you take home.
 
@@ -175,9 +175,9 @@ XP(n) = XP_settled · 0.99ⁿ even if nobody sued. Idle standing dies. That is d
 
 ### G8. A ticket
 
-You stand at a till that set H > 0. The till asks for a yes/no band, not your diary. L = clip(H · CT_d · β, 0, 1). EP = XP × L. The receipt still has a cash line. EP burns. The house’s margin absorbed the discount. No protocol check is written to the house in dollars.
+You stand at a till that set H > 0. The till asks for a yes/no band, not your diary. L = clip(H · κ · CT_W · β, 0, 1). EP = XP × L. The receipt still has a cash line. EP burns. The house’s margin absorbed the discount. No protocol check is written to the house in dollars.
 
-If CT_d is 0 because you have never been a node *here*, L is 0 unless H is being used as a joke. Charlie does not fund Alice’s puff.
+If κ is 0 they left the language. If H is 0 the house parked the overlay. Charlie does not set Oak’s slider.
 
 ---
 

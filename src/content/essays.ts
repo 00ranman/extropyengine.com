@@ -472,7 +472,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "L — literal standing at this till",
         id: "l",
-        def: "First-class meter, same rank as XP and CT. This moment, this community, this store, this purchase. L is this-door CT against the house slider. Slider: how much of that CT may count, how much of the ticket the layer may touch. Recorded vertex. Optional auto from this till’s proofs and load; house can override. Domain bands may arrive as ZKPs to this door (yes/no or band ≥ n). Same question as whether loops are closing here. Not mopping floors. Not Landauer. Not global XP.",
+        def: "First-class meter, same rank as XP and CT. This ticket. L = clip(H · κ · CT_W · β, 0, 1). CT_W is the community meter — same at every compatible till. H is the only knob this house has over how much of that CT hits the spark. Default 0.5. Auto allowed. Not mopping floors. Not global XP.",
       },
       {
         term: "CT — community standing",

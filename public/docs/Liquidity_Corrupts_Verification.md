@@ -19,7 +19,7 @@ If the output of verification can be sold, verification becomes a mint for that 
 - w · E — weighted emergence (eight-domain weights dotted with this loop’s effort).
 - Tₛ — slam window for this loop.
 - XP — global standing after the mint. Leaks. Does not cash out.
-- CT — standing at this door.
+- CT — community standing on web W. Same readout at every compatible till.
 - H — house slider.
 - L — this ticket.
 - EP — XP × L. Born and burned in the sale.
@@ -32,7 +32,7 @@ Tₛ = exp(−λ min(Δt, Δt_cap)). Instant close ⇒ log = 0 ⇒ XP = 0.
 
 XP(n) = XP_settled · 0.99ⁿ
 
-L = clip(H · CT_d · β, 0, 1)
+L = clip(H · κ · CT_W · β, 0, 1)
 
 EP = XP × L
 

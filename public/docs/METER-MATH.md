@@ -2,6 +2,8 @@
 
 Unsigned working spec for the **tokenomics of the meters**. Not bags. Nothing here cashes out.
 
+**CT is the community meter.** Same number at the grocery and the laundromat if both rooms still speak base CT. The door does not own CT. The door owns H. The only way standing does not read across those tills is another mesh or a wrap that broke the rules.
+
 **House rule, first line:** we do not play their markets. This is a **parallel system**. It runs *alongside* cash, firms, desks, and law until those rooms use the overlay enough that cash is only a remainder. Money is the balancer and the check while the DAG is still learning. When the graph can carry the score, ρ climbs. Absorption is that curve. Not a coup date.
 
 No offset registry. No transferable tonne. No Extropy credit listed next to Verra. If a room lists a spark as a commodity, they forked.

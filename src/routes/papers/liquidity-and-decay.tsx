@@ -66,7 +66,7 @@ function Paper() {
           </p>
           <p>
             Tₛ = exp(−λ min(Δt, Δt_cap)). Instant close ⇒ log(1/Tₛ) = 0 ⇒ XP = 0. Repeats pull F
-            down. Standing after settlement: XP(n) = XP_settled · 0.99ⁿ. L = clip(H · CT_d · β, 0, 1).
+            down. Standing after settlement: XP(n) = XP_settled · 0.99ⁿ. L = clip(H · κ · CT_W · β, 0, 1).
             EP = XP × L.
           </p>
           <p>

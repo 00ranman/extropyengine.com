@@ -44,7 +44,9 @@ function CharterPage() {
       <p>
         Work in the world. Edge packager writes a claim (boundary, evidence, mapper version,
         proposed ΔS). Other edge can refuse. Vertex on a causal DAG. XP may move as global
-        standing. CT may move as standing at this door. H and CT make L on this ticket. EP = XP × L
+        standing. CT_W is community standing on the web. Same readout at grocery and laundry if they
+        never left the language. H is the only control the door has over that standing on this
+        ticket. EP = XP × L
         burns in that sale. Cash still prints. Later evidence can burn status without erasing
         history. Standing leaks. None of it lists.
       </p>

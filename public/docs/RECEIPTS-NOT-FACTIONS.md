@@ -20,7 +20,7 @@ You do not represent a slice. You represent a door.
 1. A loop is posted.
 2. Someone does it.
 3. The other edge confirms.
-4. Standing moves. XP is global and does not cash out. CT is this room. L is this till, this ticket. EP = XP × L and burns.
+4. Standing moves. XP is global. CT_W is the community meter — same at every compatible till. H is the only door control. L is this ticket. EP = XP × L and burns.
 5. Cash still rings the rest.
 6. Looking at the book writes a line.
 

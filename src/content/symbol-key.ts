@@ -2,7 +2,7 @@
 export const symbolKey = {
   title: "Letter key",
   kicker: "Do not remap these",
-  lead: "Same Latin letter gets reused in every field. Here is what this protocol means. Parallel system: cash still clears; the overlay learns on the DAG until the score can carry more of the ticket. Not reputation. Not falsifiability. Signed Codex v2.1. Meter coupling: /docs/METER-MATH.md. If a chatbot invents a third reading, it is wrong.",
+  lead: "Same Latin letter gets reused in every field. CT is the community meter. Same CT at every compatible till. The door only owns H. A wrap that breaks the rules, or another mesh, is the only way the laundromat does not read the grocery. Parallel system: cash still clears. Signed Codex v2.1. Meter coupling: /docs/METER-MATH.md.",
   formula: "XP = R × F × ΔS × (w · E) × log(1/Tₛ)",
   mint: [
     {
