@@ -26,7 +26,7 @@ MACROs coordinate off MICROs. MICROs are subjective. People oversell. Numbers ca
 
 People still spend dollars. EP is a **top layer**: track the exchange, convert to a bits-equivalent proxy, fine-tune average ΔS for that situation / those domains until the proxy is less wrong. The layer exists to show why that ΔS should be worth more than the fiat-only reading.
 
-**EP = XP × L at purchase.** L from the mesh (customer, shop local ΔS, region, domains) — a fraction, not a coupon, not 1.4×. No 1:1 to cash. Do not invent a table.
+**EP = XP · L + λ · L at purchase.**
 
 A **vertex** settles some of the exchange. How much is an agreed estimate. Both edges have to accept. Keep missing → shop changes parameters, or the customer is looking entropic. Repeat-farming is **F**.
 
@@ -145,7 +145,7 @@ Public copy. The crowd hears “token” and reaches for a bag. That is not this
 
 **Meter / standing** — a number over records. XP remaining, L, IT weight, CT standing. Not a collectible. Not transferable.
 
-**Till spark** — EP. Born and dead in the sale. `EP = XP × L`.
+**Till spark** — EP. Born and dead in the sale. `EP = XP · L + λ · L`.
 
 **Domain** = the eight entropy instruments (enum). **Lane** = skill specialization. CAT lives on a lane. Do not use domain for both.
 

@@ -65,10 +65,17 @@ export const symbolKey = {
     },
     {
       id: "h",
-      glyph: "H",
-      name: "House slider",
-      is: "This house, this person, this ticket. Default 0.5. Auto recommended. The only knob the door has over how hard CT_W hits the spark. Can move because this till already knows you, or because a CAT / on-duty proof / card the house already trusts fired an if-then. Off the job, that proof is dark. Does not wrap CT. Does not mint XP.",
-      isNot: "Not a second community token. Not a wrap. Not wages.",
+      glyph: "H_cap",
+      name: "House cap this week",
+      is: "This till this week. Inbound dollars. Same for the line. 0 parks the overlay. Default 0.5. Not the person-meter. That is S.",
+      isNot: "Not S. Not CT. Not a wrap. Not wages.",
+    },
+    {
+      id: "s",
+      glyph: "S",
+      name: "This person at this house",
+      is: "Door-personal standing. Auto from this till’s history. Fake-proof and spite cut S on a short clock.",
+      isNot: "Not H_cap. Not CT_W. Not XP.",
     },
     {
       id: "script-f",
@@ -88,7 +95,7 @@ export const symbolKey = {
       id: "l",
       glyph: "L",
       name: "Literal standing at this till",
-      is: "This ticket. L = clip(H · κ · CT_W · β, 0, 1). Three factors: XP is the world; CT_W is the town web (ρ_W lives there); H is this house, this person — and a verified CAT/job proof can move H without wrapping CT. Cash is the early honesty check: a dishonest till eats dollars.",
+      is: "This ticket. L = clip(H_cap · S · κ · CT_W · β, 0, 1). EP = XP · L + λ · L. World / town web / this house this person / this proof. CAT feeds β. Official skins show cash and the remainder.",
       isNot: "Not sweeping floors. Not Landauer. Not a secret coupon. Not global XP. Not a mesh broadcast of the diary.",
     },
     {
@@ -109,7 +116,7 @@ export const symbolKey = {
       id: "cat",
       glyph: "CAT",
       name: "Skill record",
-      is: "Unique. Lane + level + issuer. Off the XP mint. A house can take a CAT (or any on-duty proof it already trusts) as a reason to move H for this ticket — trucker on this run, hotel and diner on the same language, discount as if they were local. If-then. Off the clock, the proof is dark unless the perk says otherwise. That is not a CT wrap. CT_W stays the community meter.",
+      is: "Unique. Lane + level + issuer. Off the XP mint. Feeds β this ticket when on-duty. Issuer attests. DID holds the record. Spite revoke is on the issuer. Not a CT wrap.",
       isNot: "Not a pile of points.",
     },
     {

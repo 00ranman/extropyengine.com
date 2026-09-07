@@ -66,8 +66,8 @@ function Paper() {
           </p>
           <p>
             Tₛ = exp(−λ min(Δt, Δt_cap)). Instant close ⇒ log(1/Tₛ) = 0 ⇒ XP = 0. Repeats pull F
-            down. Standing after settlement: XP(n) = XP_settled · 0.99ⁿ. L = clip(H · κ · CT_W · β, 0, 1).
-            EP = XP × L.
+            down. Standing after settlement: XP(n) = XP_settled · 0.99ⁿ. L = clip(H_cap · S · κ · CT_W · β, 0, 1).
+            EP = XP · L + λ · L.
           </p>
           <p>
             ΔS is not the asset. A versioned mapper M_v turns a domain-native signal into a

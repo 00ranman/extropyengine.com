@@ -462,7 +462,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "EP — Emergent Product",
         id: "emergent-product",
-        def: "Till spark. What happens at the register, not a currency. EP = XP × L. Born and burned in the same sale. Early mesh: a penny or a few cents off the fiat ticket. Dense mesh: more of the ticket can clear on standing. No 1:1 to cash. Cash cannot mint XP. Not entropy points. Not Epistemic Proof. Product is the math: a product of XP and L.",
+        def: "Till spark. EP = XP · L + λ · L. Born and burned in the sale. λ keeps leaked XP from erasing a real local L. Clip to the list.",
       },
       {
         term: "ρ — fiat residual",
@@ -472,7 +472,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "L — literal standing at this till",
         id: "l",
-        def: "First-class meter, same rank as XP and CT. This ticket. L = clip(H · κ · CT_W · β, 0, 1). CT_W is the community meter — same at every compatible till. H is the only knob this house has over how much of that CT hits the spark. Default 0.5. Auto allowed. Not mopping floors. Not global XP.",
+        def: "This ticket. L = clip(H_cap · S · κ · CT_W · β, 0, 1). EP = XP · L + λ · L.",
       },
       {
         term: "CT — community standing",

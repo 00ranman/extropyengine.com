@@ -44,7 +44,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "explain",
         q: "How do I explain this without saying entropy token?",
-        a: "Verified change in a system. Causal evidence on a DAG. Standing from that evidence. Standing is not money — it can change access. ΔS is the measurement proxy. XP is global standing. CT is community standing at this DFAO. L is literal standing at this till, this moment. EP is the till spark, born and burned in the sale: EP = XP × L. CAT is skill. IT is voice. Those last two stay off the mint so credentials and votes cannot be bought with XP. The hard test is not the slogan. It is whether the proxy’s error gets expensive. The fungus line stays the hook. This paragraph is the translation.",
+        a: "Verified change in a system. Causal evidence on a DAG. ΔS is the proxy. XP is world standing. CT_W is the town web. H_cap is this till this week. S is you here. β is CAT or on-duty. L = clip(H_cap · S · κ · CT_W · β, 0, 1). EP = XP · L + λ · L.",
         also: [
           { label: "Ledger", href: "/#ledger" },
           { label: "Three clocks", href: "/glossary", hash: "three-clocks" },
@@ -142,7 +142,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "ep-name",
         q: "EP is Emergent Points, right? Or Epistemic Proof?",
-        a: "Emergent Product. Till spark. At the register: EP = XP × L, then it burns. L is first-class: this moment, this community, this store. CT feeds it. The house can tweak a public coefficient. Early mesh: a penny, maybe five cents off. Dense mesh: more of the fiat ticket can clear. Not a currency. Not Epistemic Proof — that is a proof-layer record, letter collision, does not buy milk. Product is the math: XP times L.",
+        a: "Emergent Product. Till spark. EP = XP · L + λ · L, then it burns. L = clip(H_cap · S · κ · CT_W · β, 0, 1).",
         also: [
           { label: "Emergent Product", href: "/glossary", hash: "emergent-product" },
           { label: "Ledger", href: "/#ledger" },
@@ -318,7 +318,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "milk",
         q: "If I don’t have enough EP, can I still buy milk with cash?",
-        a: "Yes. You are still spending dollars. EP is a layer on top of that, not a lock and not a cash table. At purchase, both edges agree on a bits-equivalent estimate (EP = XP × L from the mesh). A vertex settles some of the exchange. The rest still rings in fiat. Low standing means the layer covers less, not that the fridge locks. Cash cannot mint XP.",
+        a: "Yes. You are still spending dollars. EP = XP · L + λ · L. The rest rings in cash. The fridge does not lock.",
         also: [{ label: "Emergent Product", href: "/glossary", hash: "emergent-product" }],
       },
       {
@@ -348,7 +348,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "who-turns-knobs",
         q: "Who is allowed to change XP, CT, and L?",
-        a: "Different floors. L: H × κ × CT_W × β on this ticket. H belongs to the house. CT_W is the same community meter at every compatible till. A wrap that breaks the rules, or another mesh, is the only way the laundromat does not read the grocery’s CT. XP mint is planetary. Cash-out is a lose-condition.",
+        a: "Different floors. L = clip(H_cap · S · κ · CT_W · β, 0, 1). CT_W is the same community meter at every compatible till. H_cap is the week. S is you here. A wrap that broke the rules, or another mesh, is the only way the laundromat does not read the grocery.",
         also: [
           { label: "Letter key", href: "/key" },
           { label: "Engine — shop view", href: "/#engine" },

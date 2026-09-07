@@ -17,7 +17,7 @@ export const doors: Door[] = [
     href: "/start#money",
     body: [
       "Every metric you were handed can be gamed once it is the target. Likes measure attention. Salary measures hours. GDP measures transactions. None of those is “did the work actually close.”",
-      "Here the till still rings cash. Community standing is CT_W — the same meter at every compatible door. This house only slides H. L = clip(H · κ · CT_W · β, 0, 1). EP = XP × L and it burns in that sale. Early on that is pennies. Park H at zero to turn the layer off.",
+      "Here the till still rings cash. CT_W is the community meter at every compatible door. H_cap is this till this week. S is you here. β is a CAT or on-duty proof. L = clip(H_cap · S · κ · CT_W · β, 0, 1). EP = XP · L + λ · L and burns.",
       "National debt and carbon markets are the same failure at a bigger desk: a certificate with no closed loop. Local desk first. Published totals of spark versus cash. Not a Treasury wipe. Not a tonne you sell.",
     ],
     next: [

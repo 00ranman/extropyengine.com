@@ -32,7 +32,8 @@ Tₛ = exp(−λ min(Δt, Δt_cap)). Instant close ⇒ log = 0 ⇒ XP = 0.
 
 XP(n) = XP_settled · 0.99ⁿ
 
-L = clip(H · κ · CT_W · β, 0, 1)
+L = clip(H_cap · S · κ · CT_W · β, 0, 1)
+EP = XP · L + λ · L
 
 EP = XP × L
 

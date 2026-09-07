@@ -27,8 +27,8 @@ XP_mint = R × F × ΔS × (w · E) × log(1/Tₛ)
 Tₛ      = exp(−λ min(Δt, Δt_cap))
 XP(n)   = XP_settled · 0.99ⁿ
 CT_W    = clip(U_W · ρ_W · C_W · P_W · (1 − F_local), 0, 1)
-L       = clip(H · κ · CT_W · β, 0, 1)
-EP      = XP × L
+L       = clip(H_cap · S · κ · CT_W · β, 0, 1)
+EP      = XP · L + λ · L
 ```
 
 R — rarity of this action class. Not fame.  
@@ -50,7 +50,7 @@ Clocks: slam, class repeat, standing leak. Separate.
 
 ## 3. One job
 
-Work happens. Packager proposes a claim. Other edge can refuse. Vertex with parents. History stays. Later burn is a new edge. XP may mint. CT_W may move. Leak happens anyway. Till: L, then EP = XP × L, cash line prints, house ate the touch, spark gone.
+Work happens. Packager proposes a claim. Other edge can refuse. Vertex with parents. History stays. Later burn is a new edge. XP may mint. CT_W may move. Leak happens anyway. Till: L, then EP = XP · L + λ · L, cash line prints, house ate the touch, spark gone.
 
 XP only — mesh loop, this web did not post it as community standing.  
 CT only — this web can plan you; mint gates did not fire.  

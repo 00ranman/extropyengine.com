@@ -31,7 +31,7 @@ If both edges hold, a **vertex** lands on a causal DAG.
 If the signed mint rules fire, **XP** may move as global standing.  
 If this web tracks showing-up, **CT_W** may move as community standing.  
 At a till that turned the overlay on, the house slider **H** and that same **CT_W** make **L** on that ticket.  
-**EP = XP × L** is born and burned in that sale.  
+**EP = XP · L + λ · L** is born and burned in that sale.  
 Cash, or whatever tender that country already uses, still prints on the receipt.  
 Later evidence can attach and **burn** status without erasing history.  
 Standing **leaks** even when nobody fights.  
@@ -94,7 +94,8 @@ Do not remap. Public key: https://extropyengine.com/key
 XP_mint = R × F × ΔS × (w · E) × log(1/Tₛ)
 Tₛ      = exp(−λ min(Δt, Δt_cap))
 XP(n)   = XP_settled · 0.99ⁿ
-L       = clip(H · κ · CT_W · β, 0, 1)
+L       = clip(H_cap · S · κ · CT_W · β, 0, 1)
+EP      = XP · L + λ · L
 EP      = XP × L
 IT(m)   = IT_start · (0.95)^m     # idle months, order of magnitude
 ```
@@ -117,7 +118,7 @@ IT(m)   = IT_start · (0.95)^m     # idle months, order of magnitude
 
 **β — optional door-local band.** ZKP or mapper band. Default 1.
 
-**L — this ticket.** clip(H · κ · CT_W · β, 0, 1).
+**L — this ticket.** clip(H_cap · S · κ · CT_W · β, 0, 1).
 
 **EP — till spark.** XP × L. Born and burned in that sale. Not a wage. Not a currency. Not stored value you take home.
 
@@ -175,7 +176,7 @@ XP(n) = XP_settled · 0.99ⁿ even if nobody sued. Idle standing dies. That is d
 
 ### G8. A ticket
 
-You stand at a till that set H > 0. The till asks for a yes/no band, not your diary. L = clip(H · κ · CT_W · β, 0, 1). EP = XP × L. The receipt still has a cash line. EP burns. The house’s margin absorbed the discount. No protocol check is written to the house in dollars.
+You stand at a till that set H_cap > 0. L = clip(H_cap · S · κ · CT_W · β, 0, 1). EP = XP · L + λ · L.
 
 If κ is 0 they left the language. If H is 0 the house parked the overlay. Charlie does not set Oak’s slider.
 

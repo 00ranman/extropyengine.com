@@ -56,7 +56,7 @@ function InsteadPage() {
         boundary. Mapper M<sub>v</sub> turns the domain-native signal into ΔS. Unknown stays
         unknown. If ΔS is positive the signed mint fires: XP = R × F × ΔS × (w · E) × log(1/Tₛ). Standing
         leaks. It does not list. A till that asked for this instrument can take a ZKP band into β.
-        L is CT_W against H. Same community standing at every compatible till. The house only slides H. EP = XP × L burns in <em>that</em> sale.
+        L = clip(H_cap · S · κ · CT_W · β, 0, 1). EP = XP · L + λ · L burns in <em>that</em> sale.
       </p>
       <p>
         That spark is the better version of the job the credit pretends to do. Theater gets a late

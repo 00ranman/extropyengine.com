@@ -20,7 +20,7 @@ You do not represent a slice. You represent a door.
 1. A loop is posted.
 2. Someone does it.
 3. The other edge confirms.
-4. Standing moves. XP is global. CT_W is the community meter — same at every compatible till. H is the only door control. L is this ticket. EP = XP × L and burns.
+4. Standing moves. XP is global. CT_W is the community meter. H_cap is the week. S is you here. EP = XP · L + λ · L and burns. Official skins show cash and the remainder.
 5. Cash still rings the rest.
 6. Looking at the book writes a line.
 
