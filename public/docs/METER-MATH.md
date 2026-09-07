@@ -10,7 +10,7 @@ No offset registry. No transferable tonne. No Extropy credit listed next to Verr
 
 Signed Codex is still v2.1. Canonical mint in code is `packages/xp-formula`. If this page and the letter key disagree, the [letter key](/key) wins on names. This page wins on how the meters couple.
 
-Do not remap letters. Do not add a ninth instrument.
+Defaults and change rules, before a live till: [/docs/DEFAULTS.md](/docs/DEFAULTS.md).
 
 ## Words
 

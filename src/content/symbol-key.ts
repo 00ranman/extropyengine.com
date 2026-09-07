@@ -64,17 +64,24 @@ export const symbolKey = {
       isNot: "Not “Extropy Points.” Not a cash bag. Not ΔS itself. Not L. Not CT. Not Randall’s private ledger.",
     },
     {
+      id: "lambda-floor",
+      glyph: "λ",
+      name: "Local floor",
+      is: "Default 0.15. EP = XP · L + λ · L. Web W publishes one number. 30 days notice to change.",
+      isNot: "Not the slam-window λ inside Tₛ.",
+    },
+    {
       id: "h",
       glyph: "H_cap",
       name: "House cap this week",
-      is: "This till this week. Inbound dollars. Same for the line. 0 parks the overlay. Default 0.5. Not the person-meter. That is S.",
+      is: "This till this week. Default 0.5. Auto: clip(0.5 × cash_in_4w / cash_out_4w, 0, 1). Same for the line. Park to 0 is immediate. Manual override is a vertex.",
       isNot: "Not S. Not CT. Not a wrap. Not wages.",
     },
     {
       id: "s",
       glyph: "S",
       name: "This person at this house",
-      is: "Door-personal standing. Auto from this till’s history. Fake-proof and spite cut S on a short clock.",
+      is: "Door-personal standing. Default 1 until this door has history. Fake-proof and spite cut S for 14 days.",
       isNot: "Not H_cap. Not CT_W. Not XP.",
     },
     {
