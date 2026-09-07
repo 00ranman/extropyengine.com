@@ -26,7 +26,9 @@ function SmartContractsPage() {
       </p>
       <p>
         I took the object they wasted and wired it to work that already closed. Tokenomics without a
-        pool. That is the trick. That is what I am bragging about. Break it if you can.
+        pool. The logic inside is if-then — classical logic, checkable. The name of the thing is
+        still smart contracts. That is the trick. That is what I am bragging about. Break it if you
+        can.
       </p>
 
       <h2 className="font-display pt-4 text-2xl text-fg">What the contract actually does</h2>
