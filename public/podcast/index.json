@@ -3,6 +3,18 @@
   "feed": "/podcast/feed.xml",
   "episodes": [
     {
+      "src": "/podcast/2026-09-07-the-atomic-clock-set-by-the-sun.mp3",
+      "bytes": 13251344,
+      "title": "The atomic clock set by the sun",
+      "summary": "Two-voice cut on the Engine. One side: synthesis — music as field guide, rarity and frequency of decay, slam window, standing leak. The other: ΔS as a negotiated chore wearing physics clothes, edge collusion, late burn as sociology. Reputation stays out of the XP mint. CT is a different meter. Oil in a rusted chassis vs a different scale.",
+      "pubDate": "Mon, 7 Sep 2026 05:16:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 12,
+      "duration": "00:21:21",
+      "mime": "audio/mpeg"
+    },
+    {
       "src": "/podcast/2026-09-03-the-software-manual-inside-schrodingers-flex.mp3",
       "bytes": 21387587,
       "title": "The software manual inside Schrödinger’s Flex",
