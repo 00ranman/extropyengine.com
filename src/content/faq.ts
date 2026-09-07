@@ -151,7 +151,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "cat-ct-it",
         q: "What are CAT, CT, and IT?",
-        a: "CAT is a skill record: lane + level + issuer. Feeds β when on-duty. CT is community standing on the web — same number at compatible tills — idle leak ~1% (0.99ⁿ), same keep as XP. Activity on that web resets the clock. CT does not travel. IT is governance weight. You cannot buy it with XP. Idle leak ~5%/month (0.95ⁿ). A vote uses remaining IT; it does not spend it. None of these are bags.",
+        a: "CAT is a skill record: lane + level + issuer. Feeds β when on-duty. CT is community standing on the web — same number at compatible tills — idle leak ~1% (0.99ⁿ). Activity on that web resets the clock. CT does not travel. IT is this-proposal standing, clip(H_gov · S_gov · κ · CT_W · β_gov, 0, 1), burned in the tally. Not a pile. None of these are bags.",
         also: [
           { label: "CAT", href: "/glossary", hash: "cat" },
           { label: "CT", href: "/glossary", hash: "ct" },

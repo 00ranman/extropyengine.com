@@ -42,7 +42,7 @@ Defaults and change rules, before a live till: [/docs/DEFAULTS.md](/docs/DEFAULT
 | IT | Governance meter | No | Off the XP mint. |
 | 0.99ⁿ | XP leak | — | ~1%/month remaining. Planetary. |
 | 0.99ⁿ | CT leak | — | Idle on web W. Same keep as XP. Activity resets n. Does not travel. |
-| 0.95ⁿ | IT leak | — | ~5%/month remaining, idle. Gavel clock. |
+| IT | This proposal | Burns | clip(H_gov · S_gov · κ · CT_W · β_gov, 0, 1) |
 | ℱ | Falsifiability | — | Lose-conditions. Not the letter F. |
 
 Cash still rings the rest of a ticket. Cash cannot mint XP. Cash is the training wheels and the audit: the DAG is learning against a tender that already exists. Cash-wrap of CT drops κ to 0. That is trying to *become* money instead of running beside it.

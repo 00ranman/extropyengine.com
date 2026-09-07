@@ -7,7 +7,7 @@ export const Route = createFileRoute("/tokenomics/it")({
       { title: "IT — Extropy Engine" },
       {
         name: "description",
-        content: "IT is governance weight. 5% idle leak. Not a bag. You cannot buy it with XP.",
+        content: "IT is this-proposal standing. Clip to 1. Burns in the tally. Not XP times a gavel.",
       },
     ],
   }),
@@ -16,45 +16,44 @@ export const Route = createFileRoute("/tokenomics/it")({
 
 function ItPage() {
   return (
-    <EssayLayout backTo="/tokenomics" backLabel="Tokenomics" kicker="IT" title="The gavel that rots">
+    <EssayLayout backTo="/tokenomics" backLabel="Tokenomics" kicker="IT" title="This proposal, then it burns">
       <p>
-        IT is governance weight. Not Insight Token. Not a bag. Off the XP mint. You cannot buy it
-        with cash. You cannot buy it with XP. You cannot send it to a friend.
+        IT is not a pile you sit on. It is this-proposal standing. Same shape as L at the till. Born
+        when a case is open. Burned in the tally. You cannot buy it with cash or with XP.
       </p>
-      <h2 className="font-display pt-4 text-2xl text-fg">Why 5%</h2>
-      <p>
-        XP leaks ~1% of remaining per month. World standing should last if you keep closing loops.
-        CT idle-leaks at ~1%, same keep as XP. Activity on that web resets the clock. IT leaks ~5%
-        while idle. A seat that does not show up should empty before a year and a half. Half-life
-        about 13.5 months at 0.95ⁿ.
-      </p>
-      <p>Remaining after n months: IT × 0.95ⁿ. Idle means no voice-bearing close in the period.</p>
-      <h2 className="font-display pt-4 text-2xl text-fg">How it moves</h2>
-      <p>
-        A room publishes which loops are voice-bearing: contesting a puff, teaching a mapper,
-        looking at a graph (that writes a vertex), closing a governance case. Those closes mint IT.
-        Unsettled claims do not. A vote uses remaining IT as weight. It does not spend IT. Leak is
-        the only spend.
+      <p className="font-mono text-[14px] text-primary">
+        IT = clip(H_gov · S_gov · κ · CT_W · β_gov, 0, 1)
       </p>
       <p>
-        Planetary grammar and cash-out are not IT votes. A shop cannot vote the XP mint slower. A
-        room may not publish an IT leak gentler than 0.96 without a fork.
+        Not XP · G. That would let world standing buy extra gavels. Clip to 1 means twenty years
+        here and two years here can both sit at full voice. Extra years do not mint extra votes.
       </p>
-      <h2 className="font-display pt-4 text-2xl text-fg">What it is for</h2>
+      <h2 className="font-display pt-4 text-2xl text-fg">Why not 5% on a bag</h2>
+      <p>
+        A leaked pile is still a pile. Half a gavel after a quiet year is still a gavel. Live CT
+        already idle-leaks at 1%. That is the anti-fossil clock. Governance work mints XP and can
+        move CT. It does not mint a second meter.
+      </p>
+      <h2 className="font-display pt-4 text-2xl text-fg">The knobs</h2>
+      <p>
+        H_gov — how hard standing counts. Default 1. Park to 0 and it is one DID, one nullifier.
+        S_gov — you in this room. 0 if you are not. Party to the dispute: 0. β_gov — the lane this
+        case asked for. Tourists do not vote a city rule unless a signed case says so.
+      </p>
       <p>
         Named cases still run without a meeting. That is{" "}
         <Link to="/smart-contracts" className="text-primary hover:underline">
           smart contracts
         </Link>
-        . IT is the weight when the case is not named yet.
+        . IT is the unnamed case. Planetary grammar is not an IT vote.
       </p>
       <p>
         <a href="/docs/IT.md" className="text-primary hover:underline">
           IT.md
         </a>
         {" · "}
-        <Link to="/key" className="text-primary hover:underline">
-          Letter key
+        <Link to="/math" className="text-primary hover:underline">
+          Math
         </Link>
       </p>
     </EssayLayout>
