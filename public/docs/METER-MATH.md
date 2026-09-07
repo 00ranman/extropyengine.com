@@ -190,6 +190,17 @@ Nobody has to be good. They have to stay compatible if they want the shared stan
 
 The store does not own CT. The web does. The store owns H.
 
+### 4f. Visiting proofs (CAT, on-duty, cards you already have)
+
+Stay on base CT. Do not wrap.
+
+A house can lift **H for this ticket** when a proof it already trusts fires: CAT lane+issuer, an on-duty bit, a card, a contract between this fleet and this diner. If-then. Trucker on this run, hotel and restaurant on the same language, spark as if they were local. Off the clock, the bit is dark unless the perk says on.
+
+That is how a route becomes a web without a new community token. CT_W is still the town meter. The visitor did not mint Oak’s CT by eating in Oak. Oak moved H because the job proof verified.
+
+Cash is the early honesty check. A till that sparks on fake proofs eats dollars until the graph cites it.
+
+
 ---
 
 ## 5. H — house slider

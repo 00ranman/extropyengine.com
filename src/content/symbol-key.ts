@@ -64,6 +64,13 @@ export const symbolKey = {
       isNot: "Not “Extropy Points.” Not a cash bag. Not ΔS itself. Not L. Not CT. Not Randall’s private ledger.",
     },
     {
+      id: "h",
+      glyph: "H",
+      name: "House slider",
+      is: "This house, this person, this ticket. Default 0.5. Auto recommended. The only knob the door has over how hard CT_W hits the spark. Can move because this till already knows you, or because a CAT / on-duty proof / card the house already trusts fired an if-then. Off the job, that proof is dark. Does not wrap CT. Does not mint XP.",
+      isNot: "Not a second community token. Not a wrap. Not wages.",
+    },
+    {
       id: "script-f",
       glyph: "ℱ",
       name: "Falsifiability",
@@ -81,7 +88,7 @@ export const symbolKey = {
       id: "l",
       glyph: "L",
       name: "Literal standing at this till",
-      is: "First-class, like XP and CT. This ticket. L = clip(H · κ · CT_W · β, 0, 1). CT_W is community-web standing, not one register. H is this house, default 0.5. κ is whether this door still speaks base CT. β is bands shown here. Same question as whether loops are closing in this web.",
+      is: "This ticket. L = clip(H · κ · CT_W · β, 0, 1). Three factors: XP is the world; CT_W is the town web (ρ_W lives there); H is this house, this person — and a verified CAT/job proof can move H without wrapping CT. Cash is the early honesty check: a dishonest till eats dollars.",
       isNot: "Not sweeping floors. Not Landauer. Not a secret coupon. Not global XP. Not a mesh broadcast of the diary.",
     },
     {
@@ -102,7 +109,7 @@ export const symbolKey = {
       id: "cat",
       glyph: "CAT",
       name: "Skill record",
-      is: "Unique. Lane + level + issuer. Off the XP mint.",
+      is: "Unique. Lane + level + issuer. Off the XP mint. A house can take a CAT (or any on-duty proof it already trusts) as a reason to move H for this ticket — trucker on this run, hotel and diner on the same language, discount as if they were local. If-then. Off the clock, the proof is dark unless the perk says otherwise. That is not a CT wrap. CT_W stays the community meter.",
       isNot: "Not a pile of points.",
     },
     {
