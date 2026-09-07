@@ -124,7 +124,7 @@ IT(m)   = IT_start · (0.95)^m     # idle months, order of magnitude
 
 **CAT — skill record.** (DID, lane, level, issuer). Off the mint.
 
-**IT — governance weight.** Off the mint. Idle leak on the order of 5%/month so a captured vote pile dies if it stops working.
+**IT — this-proposal standing.** IT = clip(H_gov · S_gov · κ · CT_W · β_gov, 0, 1). Burns in the tally. No pile. Not XP · G.
 
 **ρ — index, not a person.** Overlay-touch over cash-plus-overlay-touch at a door or desk. Mycelium HUD. Not a moral rank.
 

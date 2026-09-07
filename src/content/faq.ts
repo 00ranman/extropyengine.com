@@ -272,7 +272,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "thirty",
         q: "Is the 30-day settle window a law?",
-        a: "No. It was a starting number. Could be 5–40. Per-DFAO knob. Late burn has no expiry either way. 5%/month is IT, not XP. XP decay is ~1%/month of remaining.",
+        a: "No. It was a starting number. Could be 5–40. Per-DFAO knob. Late burn has no expiry either way. IT is not a 5%/month pile. XP decay is ~1%/month of remaining. CT idle-leaks on the same keep.",
       },
       {
         id: "three-clocks",

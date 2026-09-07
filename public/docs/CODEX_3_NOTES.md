@@ -40,14 +40,14 @@ Discount starts small, grows with participation, can hit a zero fiat line. Same 
 
 ## Two clocks of death
 
-5%/month is **IT**, not XP.
+IT is not a 5%/month pile. That line is dead.
 
 | Thing | Job | Default (knob) |
 | --- | --- | --- |
 | Settle window | Provisional → standing | ~30 days was a throw. Could be 5–40. Per-DFAO. |
 | Late burn | Standing can still die | No expiry. Thirty years later is still allowed. |
 | XP decay | Pile shrinks with no dispute | ρ = 0.01 / 30 cycles (~1%/month **of remaining**, multiplicative). Half-life ~69 months. Never hits 0; floor → access band. Knob. Not late burn. |
-| IT decay | Weight bleeds if you vanish | ~5%/month. IT holders can vote it down in their DFAO. |
+| IT | This-proposal standing | clip(H_gov · S_gov · κ · CT_W · β_gov, 0, 1). Burns in the tally. |
 
 Possible axiom, not written: some XP and some IT always burn.
 
@@ -103,7 +103,7 @@ Soulbound marks (Nobel-shaped): display, don’t vote, don’t mint. If it gets 
 
 Seasons stay accounting + optional skins. The diplomacy-season idea is probably a bad one — people play the season instead of the task. Don’t wipe XP.
 
-Roles: you keep showing up where you’re depended on. Trust occupies the seat. IT decay empties it if you vanish. Votes remain for knobs, not for a seasonal election.
+Roles: you keep showing up where you’re depended on. Trust occupies the seat. Live CT idle-leaks if you vanish. IT is recomputed each proposal. Votes remain for knobs, not for a seasonal election.
 
 Immersion test: still worth doing if the cosmetics are off? If no, it’s extracting.
 
@@ -194,7 +194,7 @@ Three clocks. Do not mash:
 | F | Repeating the action class. |
 | 0.99ⁿ | Standing after settlement. ~1%/month of remaining. |
 
-Settle window is provisional → standing. IT ~5%/month is voice. Neither is Tₛ.
+Settle window is provisional → standing. IT is this-proposal standing, not a leak clock. Neither is Tₛ.
 
 Rarity-splitting 400 fake classes is a **DAG** job. The formula will not catch it.
 
@@ -230,4 +230,4 @@ FAQ: `/faq#overlay` `/faq#imported-cat`
 
 ## What 3.0 has to actually write
 
-Settle knob. XP decay next to IT decay. Late burn. SignalFlow as first-class. Claim path with evidence. MICRO overselling acknowledged. DAG as instrument. Burn-floor axiom yes/no. Box as for-profit intent. Access band as ZKP (display default off). Play boards opt-in, no power. Soulbound marks. Seasons ≠ diplomacy. Roles from showing up; votes for knobs. LOOK vertices; silent fetch forbidden. did:key on first boot. Unique-in-DFAO ZKP. Overlay not a new country; imported CAT is the door not the house. Leave 2.1 alone until then.
+Settle knob. XP decay next to CT idle leak. IT is this-proposal standing. Late burn. SignalFlow as first-class. Claim path with evidence. MICRO overselling acknowledged. DAG as instrument. Burn-floor axiom yes/no. Box as for-profit intent. Access band as ZKP (display default off). Play boards opt-in, no power. Soulbound marks. Seasons ≠ diplomacy. Roles from showing up; votes for knobs. LOOK vertices; silent fetch forbidden. did:key on first boot. Unique-in-DFAO ZKP. Overlay not a new country; imported CAT is the door not the house. Leave 2.1 alone until then.

@@ -490,9 +490,9 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
         def: "You convert an existing civilization. You do not found a new one. Shops, licenses, neighborhoods, the handshake already on the wire. The Engine is a layer: both-edges, contest, leak, DAG. Imported credentials are opening CAT records, contestable. After that, this graph is what continues.",
       },
       {
-        term: "IT — influence standing",
+        term: "IT — this-proposal standing",
         id: "it",
-        def: "Meter. Weight for work that actually moves other people — governance, demonstration. Not Insight Token. Obscure private labor still mints XP. It does not mint the same IT unless influence is the job. Decays ~5%/month if you vanish. Knob.",
+        def: "IT = clip(H_gov · S_gov · κ · CT_W · β_gov, 0, 1). Burns in the tally. Not a pile. Governance work mints XP and can move CT. It does not mint a second meter. Not Insight Token.",
       },
       {
         term: "Lane",
@@ -588,7 +588,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "Three clocks",
         id: "three-clocks",
-        def: "Do not mash them. (1) Tₛ — this loop’s elapsed time, slam-shut at 0, capped so wait-farming dies. (2) F — repeating the action class pays less. (3) 0.99ⁿ — standing leak after settlement, ~1%/month of remaining, half-life ~69 months. Settle window is a fourth, different job: provisional → standing. IT’s ~5%/month is a fifth, on voice, not XP.",
+        def: "Do not mash them. (1) Tₛ — this loop’s elapsed time, slam-shut at 0. (2) F — repeating the action class pays less. (3) 0.99ⁿ — XP standing leak after settlement. CT idle-leaks on the same keep on that web. IT is not a leak clock. It is recomputed each proposal.",
       },
       {
         term: "Late mint",

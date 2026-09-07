@@ -80,7 +80,7 @@ XP is **global**. Every compatible room can see that a loop survived. Changing t
 T_s = \exp(-\lambda \min(\Delta t, \Delta t_{\mathrm{cap}}))
 \]
 
-Δt → 0 ⇒ log = 0 ⇒ XP = 0. Standing leaks after settle. XP 0.99ⁿ. CT 0.99ⁿ idle on that web. IT 0.95ⁿ idle.
+Δt → 0 ⇒ log = 0 ⇒ XP = 0. Standing leaks after settle. XP 0.99ⁿ. CT 0.99ⁿ idle on that web. IT is recomputed each proposal.
 
 ---
 

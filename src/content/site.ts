@@ -713,7 +713,7 @@ export const engineTokens = [
   { t: "L", d: "clip(H_cap · S · κ · CT_W · β, 0, 1)." },
   { t: "EP", d: "Till spark. EP = XP · L + λ · L, then it burns." },
   { t: "CAT", d: "Skill record. Unique. Lane + level + issuer. Are you qualified to do this, and at what level. Not a pile." },
-  { t: "IT", d: "Influence standing. Meter. Governance and demonstration weight more. Idle leak ~5%/month. Not Insight Token. Not a bag." },
+  { t: "IT", d: "This-proposal standing. clip(H_gov · S_gov · κ · CT_W · β_gov, 0, 1). Burns in the tally. Not a pile. Not Insight Token." },
   { t: "Lane", d: "Skill specialization on a signed record. Not a Domain Coin. Domain (the eight instruments) is an enum. Claiming a lane is a vertex, not a dropdown." },
 ] as const;
 
