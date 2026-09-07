@@ -43,8 +43,11 @@ function LyricsPage() {
           them from the name. {catalogLock}
         </p>
         <p className="mb-4 max-w-2xl font-mono text-[14px] leading-relaxed text-dim">
-          Irrelevance (Is the Killshot) is track 9 on Unf*ck the World for a Dollar. That is the
-          album, not the book. It used to circulate as Evolution, Not Revolution. Same recording.
+          Title lock: Weaponized Transparency is not Inside the Machine. Fake Slop is not
+          Procedural Ghostride. Quote the first line or do not use the title.{" "}
+          <a href="/docs/TITLE-LOCK.md" className="text-primary hover:underline">
+            TITLE-LOCK.md
+          </a>
         </p>
         <p className="mb-12 font-mono text-[12px] tracking-[0.08em] text-dim">
           {transcribed}/{masterSongs.length} transcribed ·{" "}

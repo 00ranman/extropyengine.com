@@ -351,9 +351,19 @@ export const papers: Paper[] = [
     href: "/docs/Meter_Math.pdf",
   },
   {
+    tag: "Title lock",
+    title: "Do not swap these four songs",
+    href: "/docs/TITLE-LOCK.md",
+  },
+  {
     tag: "Defaults · 7 Sep 2026",
     title: "H_cap, λ, β — numbers and who may change them",
     href: "/docs/DEFAULTS.md",
+  },
+  {
+    tag: "World line · 7 Sep 2026",
+    title: "Meters, routes, twenty years",
+    href: "/docs/WORLD_LINE.md",
   },
   {
     tag: "Working paper · 4 Sep 2026",
