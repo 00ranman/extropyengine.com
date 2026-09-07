@@ -39,11 +39,14 @@ function InsteadPage() {
 
       <h2 className="font-display pt-4 text-2xl text-fg">How the box is actually split</h2>
       <p>
-        Edge keeps sovereignty. The till, the MICRO, the desk — that room owns H, that DFAO owns how
-        CT is scored <em>here</em>. Smart contracts are rails so you do not hire an executive caste
-        to babysit the coupling. Classical computation runs the tokenomics: mint, leaks, sliders,
-        burns. Models sit at the edge. They interpret and package a claim. They do not become the
-        ledger. Looking at a graph to hunt WHO still writes a vertex.
+        Edge keeps sovereignty. The till owns H_cap and S. The web owns CT_W. Named cases
+        (“smart contracts” if you can hear the words) are rails so you do not hire an executive
+        caste to babysit the coupling.{" "}
+        <Link to="/if-then" className="text-primary hover:underline">
+          If this, then that
+        </Link>
+        . Classical computation runs mint, leaks, sliders, burns. Models package a claim. They do
+        not become the ledger. Looking at a graph to hunt WHO still writes a vertex.
       </p>
 
       <h2 className="font-display pt-4 text-2xl text-fg">Instead of a carbon credit</h2>

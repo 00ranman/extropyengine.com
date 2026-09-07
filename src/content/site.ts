@@ -34,7 +34,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "Start here", href: "/start" },
       { label: "Letter key", href: "/key" },
       { label: "Fiat residual", href: "/rho" },
-      { label: "Instead", href: "/instead" },
+      { label: "If-then", href: "/if-then" },
       { label: "Charter", href: "/charter" },
       { label: "Liquidity paper", href: "/papers/liquidity-and-decay" },
       { label: "FAQ", href: "/faq" },
@@ -351,9 +351,9 @@ export const papers: Paper[] = [
     href: "/docs/Meter_Math.pdf",
   },
   {
-    tag: "Title lock",
-    title: "Do not swap these four songs",
-    href: "/docs/TITLE-LOCK.md",
+    tag: "If-then",
+    title: "Named cases without a pool",
+    href: "/if-then",
   },
   {
     tag: "Defaults · 7 Sep 2026",

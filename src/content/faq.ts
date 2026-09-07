@@ -322,7 +322,11 @@ export const faqSections: FaqSection[] = [
         also: [{ label: "Emergent Product", href: "/glossary", hash: "emergent-product" }],
       },
       {
-        id: "on-ramp",
+        id: "if-then",
+        q: "Isn’t a smart contract just crypto?",
+        a: "The useful object is if-then: a named case that runs when both edges signed. Reorder. Park H_cap. Turn β on. The listed-chain version hamstrings that because the ‘then’ is usually move a bag. Here the then is not a transfer. Standing does not list. EP dies on the ticket.",
+        also: [{ label: "If this, then that", href: "/if-then" }],
+      },
         q: "You said no fiat on-ramp. So this replaces money?",
         a: "No. No on-ramp means cash cannot mint XP. People keep spending dollars. The Engine is a tracking layer: bits-equivalent proxies, fine-tuned as like-cases stack, so the ΔS of this kind of exchange gets less wrong. A vertex can settle some of the ticket. That is not EP = this many dollars. Mom-and-pop first. Repeat-farming is F. Keep the other job or don’t.",
         also: [{ label: "Engine — shop view", href: "/#engine" }],
