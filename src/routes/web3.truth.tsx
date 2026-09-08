@@ -22,6 +22,13 @@ function Page() {
         too. They move when better data arrives. Same honesty.
       </p>
       <p>
+        The attack that the packager is “just a tribe” misses the unit. The mint does not score the
+        story, the model, or the jersey you used to get there. Two sermons can propose two ΔS
+        numbers. Those are claims. What goes on the graph is whether the loop closed, and whether
+        later evidence burns it. Methodology is noise. Ideology is noise. People already want Z.
+        They fight about the path. This is how the path gets leftover.
+      </p>
+      <p>
         Epistemology in this git is mesh review of those vertices, not a priest. A silent look is
         still a look.{" "}
         <Link to="/faq" className="text-primary hover:underline">
