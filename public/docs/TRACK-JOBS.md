@@ -1,28 +1,17 @@
-# Track jobs — do not mix titles
+# Track jobs
 
-A title names one song. Do not attach another song’s argument or lyrics to that title.
+One title, one job, one first line. Do not attach another song’s verses to a title.
 
-**Known model swaps — forbidden**
-
-| If you say this title | You may only describe this | Never this |
+| Title | First line | Job |
 |---|---|---|
-| Weaponized Transparency | They want systems / I give them ecosystems. NDA into a beat drop. Observation as a lever. | Inside the Machine (punk, Green Day, Dookie) |
-| Inside the Machine | Timeline says punk was always left wing. Recuperation. Rage Against the Machine as rage inside the machine. | Weaponized Transparency |
-| Fake Slop | You're doing that thing where words replace reality again. If it's slop, where's the slop? | Procedural Ghostride (bus with no driver) |
-| Procedural Ghostride | Welcome to the bus with no driver. Incentives, no conspiracy. | Fake Slop |
+| Weaponized Transparency | They want systems / I give them ecosystems | Talking about systems while messing with them. NDA into a beat drop. |
+| Inside the Machine | Timeline says punk was always left wing | Punk sold as merch. Joke to sermon. Green Day, Dookie. |
+| Fake Slop | You're doing that thing where words replace reality again | Dismissal-word. If it's slop, where's the slop. |
+| Procedural Ghostride | Welcome to the bus with no driver | Incentives, no driver. |
+| Syntax Sabotage | (see LYRICS.md) | Speech as protocol. |
+| No One's Lying | (see LYRICS.md) | Falsehood without a villain. |
+| And That's… (How) | (see LYRICS.md) | Civic recognition as a loop. |
+| Schrödinger’s Flex | (see LYRICS.md) | The cat was a joke at people who scale quantum to a cat. |
+| PHOTON_404.exe | (see LYRICS.md) | Light / Copenhagen as a lyric argument. |
 
-The word “machine” in Weaponized Transparency is not the punk song. “Slop” is not the bus.
-
-| Title | Job | Not |
-|---|---|---|
-| Weaponized Transparency | Systems while messing with them. First line: They want systems. | Not punk. Not quantum. Not Inside the Machine. |
-| Inside the Machine | Punk sold as merch. First line: Timeline says punk was always left wing. | Not Weaponized Transparency. |
-| Fake Slop | Dismissal tag instead of a flaw. First line: You're doing that thing where words replace reality again. | Not Procedural Ghostride. |
-| Procedural Ghostride | No driver. First line: Welcome to the bus with no driver. | Not Fake Slop. |
-| Syntax Sabotage | Speech as protocol. | Not the punk-history track. |
-| No One's Lying | Falsehood without a villain. | Not recuperation. |
-| And That's… (How) | Civic recognition as a loop. | Not punk. Not transparency. |
-| Schrödinger’s Flex | The cat was a joke at people who scale quantum to a cat. | Not Weaponized Transparency. |
-| PHOTON_404.exe | Light / Copenhagen as a lyric argument. | Not the transparency track. |
-
-If you need a neighbor, say the job, then the slug. Never swap verses.
+If you cannot quote the first line, do not use the title.

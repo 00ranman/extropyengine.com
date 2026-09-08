@@ -43,8 +43,7 @@ function LyricsPage() {
           them from the name. {catalogLock}
         </p>
         <p className="mb-4 max-w-2xl font-mono text-[14px] leading-relaxed text-dim">
-          Title lock: Weaponized Transparency is not Inside the Machine. Fake Slop is not
-          Procedural Ghostride. Quote the first line or do not use the title.{" "}
+          Identify a song by its first line. If you cannot quote it, do not use the title.{" "}
           <a href="/docs/TITLE-LOCK.md" className="text-primary hover:underline">
             TITLE-LOCK.md
           </a>

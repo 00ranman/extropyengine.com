@@ -1,28 +1,30 @@
 # Title lock
 
-A title is one song. Quote the first line before you describe it. If you cannot quote it, do not use the title.
+A title is one song. Quote that song’s first line before you describe it. If you cannot quote it, do not use the title. Do not mention another title in the same sentence.
 
-## Forbidden swaps
+## Weaponized Transparency
 
-### Weaponized Transparency
 First line: They want systems / I give them ecosystems.
-Also in this song: NDA into a beat drop.
-Not Inside the Machine. The word “machine” here is not the punk song.
+Also in this song: NDA into a beat drop. Layer one / layer two / layer three. Observation into ammunition.
+Job: talking about systems while messing with them.
 
-### Inside the Machine
+## Inside the Machine
+
 First line: Timeline says punk was always left wing.
-Also in this song: Green Day, Dookie, Rage Against the Machine as rage inside the machine.
-Not Weaponized Transparency.
+Also in this song: Green Day. Dookie. You can't win at punk.
+Job: punk sold as merch. Joke to sermon.
 
-### Fake Slop
+## Fake Slop
+
 First line: You're doing that thing where words replace reality again.
 Also in this song: If it's slop, where's the slop?
-Not Procedural Ghostride. Not a bus.
+Job: slop as a tag instead of a flaw.
 
-### Procedural Ghostride
+## Procedural Ghostride
+
 First line: Welcome to the bus with no driver.
 Also in this song: Nobody's running the ruse.
-Not Fake Slop. Not an AI-music argument.
+Job: incentives with no driver.
 
-Full jobs: /docs/TRACK-JOBS.md
-Lyrics: /docs/LYRICS.md — only after this file.
+Lyrics: /docs/LYRICS.md
+Jobs: /docs/TRACK-JOBS.md

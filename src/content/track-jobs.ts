@@ -1,33 +1,24 @@
-/** One job per title. Other pages should use the job, not the title. */
+/** One job per title. Identify by first line. Never name a neighbor title here. */
 export const trackJobs: Record<string, string> = {
   "fake-slop":
-    "Dismissal-word: slop as a tag instead of a flaw. First line: You're doing that thing where words replace reality again. Not the bus-with-no-driver song.",
+    "Dismissal-word: slop as a tag instead of a flaw. First line: You're doing that thing where words replace reality again.",
   "procedural-ghostride":
-    "Incentives with no driver. First line: Welcome to the bus with no driver. Not Fake Slop. Not an AI-music argument.",
+    "Incentives with no driver. First line: Welcome to the bus with no driver.",
   "weaponized-transparency":
-    "Talking about systems while messing with them. First line: They want systems / I give them ecosystems. NDA into a beat drop. Not punk history. Not Inside the Machine. Not quantum collapse.",
+    "Talking about systems while messing with them. First line: They want systems / I give them ecosystems. NDA into a beat drop.",
   "inside-the-machine":
-    "Punk recuperation: joke to sermon. First line: Timeline says punk was always left wing. Green Day, Dookie, Rage Against the Machine as rage inside the machine. Not Weaponized Transparency.",
-  "syntax-sabotage":
-    "Speech as protocol. Language that will not sit still. Not the punk-history track.",
-  "no-ones-lying":
-    "Falsehood without a villain. Feedback seal. Not recuperation. Not civic recognition.",
-  "and-thats-how":
-    "Civic recognition as a loop. Not punk. Not the transparency track.",
+    "Punk recuperation: joke to sermon. First line: Timeline says punk was always left wing. Green Day, Dookie.",
+  "syntax-sabotage": "Speech as protocol. Language that will not sit still.",
+  "no-ones-lying": "Falsehood without a villain. Feedback seal.",
+  "and-thats-how": "Civic recognition as a loop.",
   "schrodingers-flex":
-    "The cat was a joke at people who scale quantum to a cat. Compute or pipe down. Not Weaponized Transparency.",
-  "photon-404-exe":
-    "Light and Copenhagen as a lyric argument. Weighted emergence in the English. Not the transparency track.",
-  "unrendered-sky":
-    "Off-camera life against a cropped feed. Not the systems-layer track.",
-  "blueprint":
-    "Build the loop, not the slogan. Not Inside the Machine.",
-  "kill-the-arc":
-    "Refuse the three-act neatness. Not the punk track.",
-  "the-glitch-was-me":
-    "The speaker is the error the system named. Not Weaponized Transparency.",
-  "clap-if-youre-programmed":
-    "Applause as a trained reflex. Not the transparency track.",
+    "The cat was a joke at people who scale quantum to a cat. Compute or pipe down.",
+  "photon-404-exe": "Light and Copenhagen as a lyric argument. Weighted emergence in the English.",
+  "unrendered-sky": "Off-camera life against a cropped feed.",
+  "blueprint": "Build the loop, not the slogan.",
+  "kill-the-arc": "Refuse the three-act neatness.",
+  "the-glitch-was-me": "The speaker is the error the system named.",
+  "clap-if-youre-programmed": "Applause as a trained reflex.",
 };
 
 export function jobForSlug(slug: string) {
@@ -35,4 +26,4 @@ export function jobForSlug(slug: string) {
 }
 
 export const catalogLock =
-  "A title names one song. Do not attach another song’s argument to that title. If you need a neighbor track, say the job, then the slug. Never swap lyrics.";
+  "A title names one song. Identify it by its first line. If you cannot quote the first line, do not use the title.";

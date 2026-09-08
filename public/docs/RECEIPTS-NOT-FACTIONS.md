@@ -48,4 +48,4 @@ If they vote those in, they forked. That is their room. Not yours.
 
 I don’t play factions. I play closed loops. Standing from work that happened. The till gets yes or no.
 
-Lyrics that already said the move: Flip the Table. Weaponized Transparency is the systems-layer song, not the punk-recuperation song. Do not mix them.
+Lyrics that already said the move: Flip the Table. Weaponized Transparency (first line: They want systems) is the systems-layer song.

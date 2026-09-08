@@ -112,7 +112,7 @@ Follow the seam where their language lies
 There's a quiet revolt in the unrendered sky
 
 ### 3. Weaponized Transparency
-TITLE LOCK. First line: They want systems / I give them ecosystems. Not Inside the Machine.
+TITLE LOCK. First line of this song: They want systems / I give them ecosystems.
 
 They want systems
 I give them ecosystems
@@ -3788,7 +3788,7 @@ Because let's be real words are weird
 ## Singles
 
 ### Weaponized Transparency
-TITLE LOCK. First line: They want systems / I give them ecosystems. Not Inside the Machine.
+TITLE LOCK. First line of this song: They want systems / I give them ecosystems.
 
 They want systems
 I give them ecosystems
@@ -3851,7 +3851,7 @@ You're already in it
 Now let's make them blink first, make 'em flinch on the playback, rewind this verse and recognize the x-ray in the rhythm, the chorus in the crosshairs
 
 ### Inside the Machine
-TITLE LOCK. First line: Timeline says punk was always left wing. Not Weaponized Transparency.
+TITLE LOCK. First line of this song: Timeline says punk was always left wing.
 
 Timeline says punk was always left wing
 Like that settles it
@@ -3933,7 +3933,7 @@ And now rebellion comes pre-installed
 With terms of service
 
 ### Fake Slop
-TITLE LOCK. First line: You're doing that thing where words replace reality again. Not Procedural Ghostride.
+TITLE LOCK. First line of this song: You're doing that thing where words replace reality again.
 
 You're doing that thing where words replace reality again.
 "AI did it." "Not yours." "Slop." "Cheater."
@@ -3994,7 +3994,7 @@ Touch the work. name the flaw.
 Or stop pretending your labels are analysis.
 
 ### Procedural Ghostride
-TITLE LOCK. First line: Welcome to the bus with no driver. Not Fake Slop.
+TITLE LOCK. First line of this song: Welcome to the bus with no driver.
 
 Welcome to the bus with no driver
 You thought it was The Matrix?
