@@ -187,6 +187,12 @@ export default defineConfig(({ command, mode }) => {
               { path: "/instead" },
               { path: "/charter" },
               { path: "/rho" },
+              { path: "/web3" },
+              { path: "/web3/node" },
+              { path: "/web3/loop" },
+              { path: "/web3/identity" },
+              { path: "/web3/governance" },
+              { path: "/web3/truth" },
             ],
           }
         : {},

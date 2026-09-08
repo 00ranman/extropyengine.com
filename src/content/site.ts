@@ -24,7 +24,18 @@ export const primaryNav: readonly NavItem[] = [
       { label: "Lyrics", href: "/lyrics" },
     ],
   },
-  { label: "Papers", href: "/#papers" },
+  {
+    label: "Web3",
+    href: "/web3",
+    children: [
+      { label: "Why this is better", href: "/web3" },
+      { label: "Clone a node", href: "/web3/node" },
+      { label: "The loop", href: "/web3/loop" },
+      { label: "Identity", href: "/web3/identity" },
+      { label: "Governance", href: "/web3/governance" },
+      { label: "Truth engine", href: "/web3/truth" },
+    ],
+  },
   {
     label: "Tokenomics",
     href: "/tokenomics",
@@ -653,6 +664,7 @@ export const engineStack = {
       heading: "Protocol",
       items: [
         { name: "SignalFlow", d: "Assistant + PSLL + routing. Packages the claim. Proposes ΔS. Not the whole Engine.", href: `${P}/signalflow` },
+        { name: "Mesh", d: "Web3 as promised. Two boxes, signed loops, no bag. node packages/mesh/demo.mjs", href: `${P}/mesh` },
         { name: "Validation neighborhoods", d: "Blind 1/10 slices. Volunteer role, not a validator class. Holochain-shaped routing, native code.", href: `${P}/validation-neighborhoods` },
         { name: "Epistemology engine", d: "Mesh peer-review observability. The mesh reviews. This package witnesses it.", href: `${P}/epistemology-engine` },
         { name: "Decomposition kit", d: "Split a claim at the edge. Personal AI job, not a central pipeline.", href: `${P}/decomposition-kit` },
@@ -915,6 +927,7 @@ export const docsPages = [
   { title: "Neighborhood MESO", href: "/hoa", note: "HOA wrapper." },
   { title: "Sunset Oaks", href: "/hoa/sunset-oaks", note: "One neighborhood preset." },
   { title: "Try it", href: "/mvt", note: "Minimum viable till." },
+  { title: "Web3 as promised", href: "/web3", note: "Two boxes. Signed loops. Why the last round was stupid." },
   { title: "Universal Times", href: "/universaltimes", note: "Hydrogen clock." },
 ] as const;
 
@@ -922,6 +935,7 @@ export const docsFiles = [
   { title: "DEFAULTS.md", href: "/docs/DEFAULTS.md", note: "Numbers. Who may change them." },
   { title: "IT.md", href: "/docs/IT.md", note: "This-proposal standing." },
   { title: "CAT-LANES.md", href: "/docs/CAT-LANES.md", note: "No academy product. Overlay an issuer. Import a hash." },
+  { title: "WEB3.md", href: "/docs/WEB3.md", note: "Why the last round failed. Clone two boxes." },
   { title: "METER-MATH.md", href: "/docs/METER-MATH.md", note: "L, EP, leaks, H_cap." },
   { title: "SMART-CONTRACTS.md", href: "/docs/SMART-CONTRACTS.md", note: "If-then on a vertex." },
   { title: "IF-THEN.md", href: "/docs/IF-THEN.md", note: "Same logic, file name." },
