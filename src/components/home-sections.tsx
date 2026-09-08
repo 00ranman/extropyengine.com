@@ -407,6 +407,11 @@ export function EngineSection() {
     <section id="engine" className="border-t border-primary/12 px-[8vw] py-[90px] max-md:px-[6vw]">
       <span id="suite" className="sr-only" />
       <SectionTitle className="mb-3 text-center">How it runs</SectionTitle>
+      <p className="mx-auto mb-6 max-w-2xl text-center text-[15px] leading-relaxed text-muted">
+        Order has a price: you show up, both edges sign, the spark dies in the sale, standing does
+        not leave your hand as cash. People want the surplus without that. This is the machine that
+        refuses to pay them anyway.
+      </p>
       <p className="mx-auto mb-12 max-w-2xl text-center text-[15px] leading-relaxed text-muted">
         Not two apps. Not a server in the sky. Faces: errands, house, quests, shops. SignalFlow
         packages the claim. The kernel mints. This domain is papers and a clock. The Engine runs
