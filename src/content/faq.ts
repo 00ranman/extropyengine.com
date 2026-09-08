@@ -15,10 +15,41 @@ export type FaqSection = {
 export const faqPage = {
   title: "FAQ",
   kicker: "The attacks, answered",
-  lead: "Glossary is the dictionary. This is the argument. Same questions keep showing up in debates — irreducible slogan, glass of water, untested, teacher-to-president, decay that never hits zero, Tₛ=1, retirement as a hole, new civilization. If you came to grade a t-shirt, start here. If you came to ask whether rest counts, skip to the own lawn. If you came to run a loop, skip to the last section.",
+  lead: "First: ΔS is a proxy that updates. Constants in physics were proxies too. Then the rest of the attacks.",
 } as const;
 
 export const faqSections: FaqSection[] = [
+  {
+    heading: "The measuring stick",
+    items: [
+      {
+        id: "proxy-not-si",
+        q: "Social domains are not thermodynamics. You dressed a vibe in ΔS.",
+        a: "ΔS here is a bits-equivalent proxy inside a declared boundary. Not SI social heat. Not XP. Landauer is a conversion floor for information erased, not a license to add a mediation to a heat bath. Physics constants were proxies that survived attack. They will move again when better data arrives. Same honesty: the stick updates. A new vertex cites the old one. The old row stays. A DAG does not edit. It does not delete. It branches. ‘Late burn’ is a later mark on that chain, not a time machine emptying a wallet. Standing already leaked; thirty years on, most of an ordinary mint is dust. The mark is bookkeeping plus whatever new delta sat on the citation.",
+        also: [
+          { label: "Letter key", href: "/key" },
+          { label: "ΔS", href: "/key", hash: "delta-s" },
+        ],
+      },
+      {
+        id: "who-types-the-number",
+        q: "Who punches in the social number? That is just a tribe with extra syntax.",
+        a: "A person talks to the packager on their box in ordinary language. SignalFlow scours prior closes on that class and proposes ΔS. Humans do not type the mint. Both edges can refuse the proposal. Later evidence attaches a new vertex. Edge models that disagree on a hash flag a fake. Convergence is the bet, not a claim that day-one weights are physics. Local rooms can bias a mapper. That is named. Contest and late marks are how it gets expensive. If a room’s mapper is a clique, say so and fork the door. Do not pretend the eight domains arrived from heaven.",
+        also: [
+          { label: "Engine", href: "/#engine" },
+          { label: "Open problems", href: "/open-problems" },
+        ],
+      },
+      {
+        id: "late-moral-panic",
+        q: "Late burn lets a future mob rewrite the past.",
+        a: "A future mood cannot overwrite the row. It can add a cited vertex if later causal evidence exists. A moral fashion with no new edge is noise. Poisoned groundwater is a new edge. ‘We decided mediation is icky now’ is not. The protocol does not owe you a constitution that freezes 2026 morals. It owes you an append-only book and a mapper you can attack.",
+        also: [
+          { label: "Meter math", href: "/math" },
+        ],
+      },
+    ],
+  },
   {
     heading: "What this is",
     items: [
@@ -44,8 +75,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "explain",
         q: "How do I explain this without saying entropy token?",
-        a: "Verified change in a system. Causal evidence on a DAG. ΔS is the proxy. XP is world standing. CT_W is the town web. H_cap is this till this week. S is you here. β is CAT or on-duty. L = clip(H_cap · S · κ · CT_W · β, 0, 1). EP = XP · L + λ · L.",
-        also: [
+        a: "Verified change in a system. Causal evidence on a DAG. Standing from that evidence. Standing is not money — it can change access. ΔS is the measurement proxy. XP is world standing. CT_W is the town web. H_cap is this till this week. S is you here. β is CAT or on-duty. L = clip(H_cap · S · κ · CT_W · β, 0, 1). EP = XP · L + λ · L, then it burns. CAT is skill. IT is this-proposal standing, burned in the tally.",        also: [
           { label: "Ledger", href: "/#ledger" },
           { label: "Three clocks", href: "/glossary", hash: "three-clocks" },
           { label: "Open problems", href: "/open-problems" },
