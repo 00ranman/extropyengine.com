@@ -193,6 +193,7 @@ export default defineConfig(({ command, mode }) => {
               { path: "/web3/identity" },
               { path: "/web3/governance" },
               { path: "/web3/truth" },
+              { path: "/build" },
             ],
           }
         : {},

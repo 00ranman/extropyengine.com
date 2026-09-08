@@ -30,6 +30,38 @@ import { PlayHere } from "@/components/play-here";
 import { Btn, SectionTitle, StatusPill } from "@/components/ui-bits";
 import { podcast } from "@/content/podcast";
 
+export function CallToArms() {
+  return (
+    <section
+      id="build"
+      className="border-b border-primary/12 px-[8vw] py-14 max-md:px-[6vw] max-md:py-10"
+    >
+      <div className="mx-auto max-w-2xl text-center">
+        <p className="text-[11px] tracking-[0.28em] text-primary uppercase">Call</p>
+        <h2 className="font-display mt-2 text-[clamp(26px,4vw,42px)] tracking-[0.03em] text-fg">
+          The git is the network
+        </h2>
+        <p className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-muted">
+          This site is a shop window. Hostinger is not a node. The ledger is the repo. Clone it.
+          Two boxes can already countersign a loop. Building the missing pieces — first till,
+          first hostile door, mappers, density — is posted work. Both edges sign. That is the
+          mint path. You do not wait for a company to hire you onto a product that is already
+          open source.
+        </p>
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <Btn href="/build" primary>
+            What's needed
+          </Btn>
+          <Btn href="https://github.com/00ranman/extropy-engine" external>
+            Clone the git
+          </Btn>
+          <Btn href="/web3/node">Two boxes today</Btn>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function EnterStrip() {
   return (
     <section

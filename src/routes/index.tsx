@@ -2,6 +2,7 @@ import { createFileRoute, useRouterState } from "@tanstack/react-router";
 import { useEffect } from "react";
 import {
   BookHero,
+  CallToArms,
   EnterStrip,
   FollowSection,
   Manifesto,
@@ -29,6 +30,7 @@ function Home() {
 
   return (
     <SiteShell>
+      <CallToArms />
       <EnterStrip />
       <BookHero />
       <SymbolKeyStrip />

@@ -15,6 +15,17 @@ export type NavItem = NavLink & { children?: readonly NavLink[] };
 
 /** Top bar stays short. Engine is the protocol. HOA is its own door. */
 export const primaryNav: readonly NavItem[] = [
+  {
+    label: "Build",
+    href: "/build",
+    children: [
+      { label: "Call", href: "/#build" },
+      { label: "What's needed", href: "/build" },
+      { label: "Clone a node", href: "/web3/node" },
+      { label: "The loop", href: "/web3/loop" },
+      { label: "Open problems", href: "/open-problems" },
+    ],
+  },
   { label: "Book", href: "/#book" },
   {
     label: "Music",
@@ -913,6 +924,7 @@ export const earlierDocs = [
 ] as const;
 
 export const docsPages = [
+  { title: "Build", href: "/build", note: "The git is the network. Clone it. Close a loop." },
   { title: "Start", href: "/start", note: "Four doors in." },
   { title: "Tokenomics", href: "/tokenomics", note: "The five meters." },
   { title: "Smart contracts", href: "/smart-contracts", note: "Named cases. Not crypto." },
