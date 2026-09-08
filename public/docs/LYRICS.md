@@ -3850,6 +3850,13 @@ Welcome to the meta-layer
 You're already in it
 Now let's make them blink first, make 'em flinch on the playback, rewind this verse and recognize the x-ray in the rhythm, the chorus in the crosshairs
 
+
+---
+# END OF SONG: Weaponized Transparency
+# NEXT SONG IS A DIFFERENT RECORDING
+---
+
+
 ### Inside the Machine
 TITLE LOCK. First line of this song: Timeline says punk was always left wing.
 
@@ -3992,6 +3999,13 @@ Just confidence with no contact.
 Same standard every time:
 Touch the work. name the flaw.
 Or stop pretending your labels are analysis.
+
+
+---
+# END OF SONG: Fake Slop
+# NEXT SONG IS A DIFFERENT RECORDING
+---
+
 
 ### Procedural Ghostride
 TITLE LOCK. First line of this song: Welcome to the bus with no driver.

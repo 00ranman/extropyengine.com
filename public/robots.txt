@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Language-model / Notebook sources (song fingerprints, do not mix titles):
+# https://extropyengine.com/llms-music.txt
+# https://extropyengine.com/llms.txt
+# https://extropyengine.com/docs/LYRICS.md
+
 Sitemap: https://extropyengine.com/sitemap.xml

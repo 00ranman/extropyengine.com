@@ -947,7 +947,8 @@ export const docsFiles = [
   { title: "WORLD_LINE.md", href: "/docs/WORLD_LINE.md", note: "Meters, routes, twenty years." },
   { title: "RECEIPTS-NOT-FACTIONS.md", href: "/docs/RECEIPTS-NOT-FACTIONS.md", note: "Graph over club." },
   { title: "CODEX_3_NOTES.md", href: "/docs/CODEX_3_NOTES.md", note: "Unsigned capture notes. Not a newer Codex." },
-  { title: "TITLE-LOCK.md", href: "/docs/TITLE-LOCK.md", note: "Do not swap song titles." },
+  { title: "TITLE-LOCK.md", href: "/docs/TITLE-LOCK.md", note: "Identify a song by first line." },
+  { title: "llms-music.txt", href: "/llms-music.txt", note: "Scraper fingerprints. One block per song." },
   { title: "TRACK-JOBS.md", href: "/docs/TRACK-JOBS.md", note: "What each track is for." },
   { title: "LYRICS.md", href: "/docs/LYRICS.md", note: "Lyric dump. Not protocol." },
 ] as const;
