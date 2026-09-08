@@ -18,12 +18,12 @@ export const doors: Door[] = [
     body: [
       "Every metric you were handed can be gamed once it is the target. Likes measure attention. Salary measures hours. GDP measures transactions. None of those is “did the work actually close.”",
       "Here the till still rings cash. CT_W is the community meter at every compatible door. H_cap is this till this week. S is you here. β is a CAT or on-duty proof. L = clip(H_cap · S · κ · CT_W · β, 0, 1). EP = XP · L + λ · L and burns.",
-      "National debt and carbon markets are the same failure at a bigger desk: a certificate with no closed loop. Local desk first. Published totals of spark versus cash. Not a Treasury wipe. Not a tonne you sell.",
+      "National debt and carbon markets fail the same way: a certificate with no closed loop. This closes the loop. Local desk first. Published spark versus cash. The path of the books improves because theater costs more than the work.",
     ],
     next: [
       { label: "How a shop uses it", href: "/#engine" },
       { label: "What the letters mean", href: "/key" },
-      { label: "Instead of their markets", href: "/instead" },
+      { label: "Carbon and debt", href: "/instead" },
       { label: "Fiat residual HUD", href: "/rho" },
     ],
   },
@@ -58,7 +58,7 @@ export const doors: Door[] = [
     next: [
       { label: "DFAO", href: "/dfao" },
       { label: "HOA example", href: "/hoa" },
-      { label: "Instead of their markets", href: "/instead" },
+      { label: "Carbon and debt", href: "/instead" },
     ],
   },
   {
@@ -76,7 +76,7 @@ export const doors: Door[] = [
       { label: "Letter key", href: "/key" },
       { label: "Meter math", href: "/docs/METER-MATH.md" },
       { label: "Duplicate-data door", href: "/docs/DOOR-DUPLICATE-DATA.md" },
-      { label: "Instead of their markets", href: "/instead" },
+      { label: "Carbon and debt", href: "/instead" },
     ],
   },
 ];

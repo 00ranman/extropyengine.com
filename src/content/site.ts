@@ -899,7 +899,7 @@ export const docsPages = [
   { title: "Start", href: "/start", note: "Four doors in." },
   { title: "Tokenomics", href: "/tokenomics", note: "The five meters." },
   { title: "Smart contracts", href: "/smart-contracts", note: "Named cases. Not crypto." },
-  { title: "Instead", href: "/instead", note: "Not their markets." },
+  { title: "Carbon, debt, coordination", href: "/instead", note: "This does those jobs better." },
   { title: "Charter", href: "/charter", note: "Distributed Charter." },
   { title: "Fiat residual / ρ", href: "/rho", note: "Overlay-touch over cash." },
   { title: "DFAO", href: "/dfao", note: "Rooms. MICRO to PLANETARY." },

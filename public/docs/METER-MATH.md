@@ -4,7 +4,7 @@ Unsigned working spec for the **tokenomics of the meters**. Not bags. Nothing he
 
 **CT is the community meter.** Same number at the grocery and the laundromat if both rooms still speak base CT. The door does not own CT. The door owns H. The only way standing does not read across those tills is another mesh or a wrap that broke the rules.
 
-**House rule, first line:** we do not play their markets. This is a **parallel system**. It runs *alongside* cash, firms, desks, and law until those rooms use the overlay enough that cash is only a remainder. Money is the balancer and the check while the DAG is still learning. When the graph can carry the score, ρ climbs. Absorption is that curve. Not a coup date.
+**House rule, first line:** this is better books for the same jobs. Carbon, debt, coordination. Parallel to cash until ρ climbs. Money is the check while the DAG is learning. Absorption is that curve.
 
 No offset registry. No transferable tonne. No Extropy credit listed next to Verra. If a room lists a spark as a commodity, they forked.
 
@@ -253,7 +253,7 @@ Door totals. Optional ZKP on the count. Not ρ_W. Different letter job.
 
 ## 7c. Carbon as a door, not a credit
 
-Same mint. Same no-bag. Spark dies. We do not play their markets.
+Same mint. Same no-bag. Spark dies. That is how carbon and debt get a real close.
 
 ---
 

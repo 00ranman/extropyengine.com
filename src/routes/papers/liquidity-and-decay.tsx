@@ -123,8 +123,8 @@ function Paper() {
           </p>
           <p>
             Carbon as a door uses the same mint. It does not list a tonne. Debt as a desk publishes
-            spark versus cash that still rang. It does not delete Treasuries. We do not play their
-            markets.
+            spark versus cash that still rang. It does not delete Treasuries. It changes the path
+            because less cash is spent on theater.
           </p>
 
           <h2 className="font-display pt-2 text-2xl text-fg">What would count as a result</h2>

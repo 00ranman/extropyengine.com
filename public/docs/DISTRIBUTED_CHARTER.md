@@ -335,7 +335,7 @@ If that holds for duplicate data, a real patch, and one metered till, the charte
 Letter key: https://extropyengine.com/key  
 Meter math: https://extropyengine.com/docs/METER-MATH.md  
 Liquidity paper: https://extropyengine.com/papers/liquidity-and-decay  
-Instead of their markets: https://extropyengine.com/instead  
+Carbon, debt, coordination: https://extropyengine.com/instead  
 Kernel formula: https://github.com/00ranman/extropy-engine/tree/main/packages/xp-formula  
 This file: https://extropyengine.com/docs/DISTRIBUTED_CHARTER.md  
 PDF: https://extropyengine.com/docs/Distributed_Charter.pdf
