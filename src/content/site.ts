@@ -643,13 +643,10 @@ export const engineStack = {
       heading: "Faces",
       items: [
         { name: "LocalFlow", d: "Errands. Rides, groceries, the car you don't have. Matchmaking. Silent DAG emission.", href: `${P}/localflow` },
-        { name: "HomeFlow", d: "Household / building. IoT, chores, rooms. Thermodynamic measurement of the place you live.", href: `${P}/homeflow` },
-        { name: "Quest market", d: "2–5 minute grain. Escalation if it sits. Default operational primitive.", href: `${P}/quest-market` },
-        { name: "GrantFlow", d: "Discovery (Grants.gov) plus proposer. Same loop, different input.", href: `${P}/grantflow-discovery` },
-        { name: "LevelUp Academy", d: "Adaptive learning. Skill progression. XP on entropy-reducing study, not a grade mill.", href: `${P}/levelup-academy` },
-        { name: "Extropialingo", d: "Language learning as loops.", href: `${P}/extropialingo` },
+        { name: "HomeFlow", d: "Household / building. IoT, chores, rooms.", href: `${P}/homeflow` },
+        { name: "Quest market", d: "2–5 minute grain. Escalation if it sits.", href: `${P}/quest-market` },
+        { name: "GrantFlow", d: "Discovery plus proposer. Same loop, different input.", href: `${P}/grantflow-discovery` },
         { name: "Neighborhood app", d: "MESO job board on a laptop. did:key on first boot.", href: `${P}/neighborhood-app` },
-        { name: "Ecosystem", d: "Skill DAG, XP oracle, merchant network, EP conversion.", href: `${P}/ecosystem` },
       ],
     },
     {
@@ -682,6 +679,14 @@ export const engineStack = {
         { name: "temporal / Universal Times", d: "Decay clocks, seasons, hydrogen-anchored duration. Face on this site.", href: `${P}/temporal-service` },
         { name: "api-gateway", d: "One door for the microservices on YOUR node. Not a world server.", href: `${P}/api-gateway` },
         { name: "academia-bridge", d: "Paper upload path. Receipts into the graph, not a priest.", href: `${P}/academia-bridge` },
+      ],
+    },
+    {
+      heading: "Held / leftover",
+      items: [
+        { name: "levelup-academy", d: "Held. Not a product. School is CAT + issuer on a lane. Overlay Chess.com / a district. Import a hash, not a two-way pipe.", href: "/docs/CAT-LANES.md" },
+        { name: "extropialingo", d: "Held. Language is a lane, not an app brand.", href: `${P}/extropialingo` },
+        { name: "ecosystem", d: "Held sketch. Skill DAG belongs on CAT. No EP conversion bag.", href: `${P}/ecosystem` },
       ],
     },
   ],
@@ -916,6 +921,7 @@ export const docsPages = [
 export const docsFiles = [
   { title: "DEFAULTS.md", href: "/docs/DEFAULTS.md", note: "Numbers. Who may change them." },
   { title: "IT.md", href: "/docs/IT.md", note: "This-proposal standing." },
+  { title: "CAT-LANES.md", href: "/docs/CAT-LANES.md", note: "No academy product. Overlay an issuer. Import a hash." },
   { title: "METER-MATH.md", href: "/docs/METER-MATH.md", note: "L, EP, leaks, H_cap." },
   { title: "SMART-CONTRACTS.md", href: "/docs/SMART-CONTRACTS.md", note: "If-then on a vertex." },
   { title: "IF-THEN.md", href: "/docs/IF-THEN.md", note: "Same logic, file name." },

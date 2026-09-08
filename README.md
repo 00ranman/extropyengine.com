@@ -8,7 +8,8 @@ This remake keeps the original look (Cinzel + Space Mono, ember orange, fungus m
 
 Public pages are the product. Author-asides ("silence was a mistake, not a retirement", "still in git, still the process") do not go on the website. Those live in [00ranman/extropy-engine](https://github.com/00ranman/extropy-engine) README.
 
-Name live packages under `extropy-engine/packages` only. Archived standalones (homeflow, signalflow, levelup-academy, xp-net, xp-dag-mesh, extropy-master-control-hub) are not products here.
+Name live packages under `extropy-engine/packages` only. Held: levelup-academy, extropialingo, ecosystem sketches. Archived standalones (homeflow, signalflow, xp-net, xp-dag-mesh, extropy-master-control-hub) are not products here. School is CAT + issuer, not an academy brand.
+
 
 ## Update the site (this is the whole point)
 

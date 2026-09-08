@@ -823,7 +823,7 @@ export const proofLayers = [
       "LocalFlow — errand matchmaking (packages/localflow)",
       "Quest market — 2–5 min grain (packages/quest-market)",
       "GrantFlow — discovery + proposer",
-      "LevelUp Academy — adaptive learning",
+      "LevelUp Academy — held. CAT + issuer. Not a school brand.",
       "Extropialingo — language loops",
       "SignalFlow — claim routing, not the whole Engine",
       "Identity / did:key — first boot on the box",
