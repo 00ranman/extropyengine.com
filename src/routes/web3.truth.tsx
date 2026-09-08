@@ -29,6 +29,11 @@ function Page() {
         They fight about the path. This is how the path gets leftover.
       </p>
       <p>
+        That is not a war on stories. Tell them. Keep the art. Build a room with a joke. The
+        story is not the ruler. Do not mint a jersey. The close is what happened. The story is
+        what you said about it. Mix those and you recapture the metric.
+      </p>
+      <p>
         Epistemology in this git is mesh review of those vertices, not a priest. A silent look is
         still a look.{" "}
         <Link to="/faq" className="text-primary hover:underline">

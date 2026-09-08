@@ -50,6 +50,15 @@ export const faqSections: FaqSection[] = [
         ],
       },
       {
+        id: "stories-stay",
+        q: "Humans are storytellers. You can't kill the story.",
+        a: "Nobody is killing the story. Tell it. Share it. Build a room with it. Songs, sermons, jokes — keep them. The rule is: the story is not the ruler. Do not put narrative on the measuring stick. Do not mint a jersey. The close is what happened. The story is what you said about it. Mix those and you recapture the metric. Separate them and you can still talk.",
+        also: [
+          { label: "Truth engine", href: "/web3/truth" },
+          { label: "Not the jersey", href: "/faq", hash: "not-the-story" },
+        ],
+      },
+      {
         id: "late-moral-panic",
         q: "Late burn lets a future mob rewrite the past.",
         a: "A future mood cannot overwrite the row. It can add a cited vertex if later causal evidence exists. A moral fashion with no new edge is noise. Poisoned groundwater is a new edge. ‘We decided mediation is icky now’ is not. The protocol does not owe you a constitution that freezes 2026 morals. It owes you an append-only book and a mapper you can attack.",
