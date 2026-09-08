@@ -48,6 +48,15 @@ export const faqSections: FaqSection[] = [
           { label: "Meter math", href: "/math" },
         ],
       },
+      {
+        id: "xp-small",
+        q: "If standing takes ~30 years to go to dust, won't whales own the till?",
+        a: "Only if each loop mints a fat number. Leak is ~1% of remaining per month. Steady pile ≈ monthly inflow ÷ 0.01. Ten fat lawns a month becomes a pile that still moves a life a decade later. So an ordinary MICRO close targets 0.01–1 XP, not 100. F already taxes repeats. Slam-shut mints zero. At the drawer, EP cannot exceed this ticket times H_cap. XP is not dollars. IT does not use XP at all.",
+        also: [
+          { label: "Defaults", href: "/defaults" },
+          { label: "Letter key", href: "/key" },
+        ],
+      },
     ],
   },
   {

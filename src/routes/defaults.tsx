@@ -26,7 +26,7 @@ function DefaultsPage() {
         .
       </p>
       <h2 className="font-display pt-4 text-2xl text-fg">Planetary (fork to change)</h2>
-      <p>XP mint shape. XP leak 0.99ⁿ. CT idle leak 0.99ⁿ on that web. Cash-out of standing: forbidden.</p>
+      <p>XP mint shape. XP leak 0.99ⁿ. CT idle leak 0.99ⁿ on that web. Cash-out of standing: forbidden. Ordinary MICRO close targets 0.01–1 XP. EP this sale cannot exceed line × H_cap.</p>
       <h2 className="font-display pt-4 text-2xl text-fg">Web W</h2>
       <p>λ = 0.15. 30 days notice. β allow-list: CAT on-duty, asked domain band, signed if-then between two rooms. House may only narrow.</p>
       <h2 className="font-display pt-4 text-2xl text-fg">This house</h2>
