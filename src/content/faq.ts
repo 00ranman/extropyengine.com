@@ -57,15 +57,6 @@ export const faqSections: FaqSection[] = [
           { label: "Letter key", href: "/key" },
         ],
       },
-      {
-        id: "lawn-vs-surgery",
-        q: "How is a lawn and a heart surgery not two castes?",
-        a: "Same mint shape, different mapper, same band. SignalFlow does not type a caste number. It walks prior closes on that class inside that boundary and proposes ΔS. R is rarity of this action class, not ‘doctor.’ F taxes the 400th identical elective in that hospital the same way it taxes the 400th lawn. CAT gates who may close the surgery door. It does not multiply the mint. World XP can stay uneven — a specialist who closes hard loops every week will hold a larger pile. That pile is not a class at the grocery: EP cannot exceed this ticket × H_cap, λ still floors a thin XP with a real local L, CT_W and S are this strip, IT ignores XP. Catch-up that matters is showing up on this web, not chasing a surgeon’s number for a decade. A public XP leaderboard is how you mint a caste. Do not ship one.",
-        also: [
-          { label: "Defaults", href: "/defaults" },
-          { label: "CAT lanes", href: "/docs/CAT-LANES.md" },
-        ],
-      },
     ],
   },
   {
