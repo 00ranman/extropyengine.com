@@ -67,6 +67,8 @@ function BuildPage() {
       </p>
       <p>
         Do not farm a bag. There isn’t one. Close something that happened. If it leaked, burn it.
+        The wait was never a vendor. It was people cloning the repo and doing the work.
+
       </p>
     </EssayLayout>
   );

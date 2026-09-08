@@ -45,8 +45,8 @@ export function CallToArms() {
           This site is a shop window. Hostinger is not a node. The ledger is the repo. Clone it.
           Two boxes can already countersign a loop. Building the missing pieces — first till,
           first hostile door, mappers, density — is posted work. Both edges sign. That is the
-          mint path. You do not wait for a company to hire you onto a product that is already
-          open source.
+          mint path. Nobody is hiring you onto this. The git is already the job. That was always
+          the move. Start cloning.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Btn href="/build" primary>
