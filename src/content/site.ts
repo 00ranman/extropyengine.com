@@ -571,7 +571,7 @@ export const engineSignal = {
   steps: [
     "You mow the lawn. You do not type in a number.",
     "SignalFlow reads the task, the time, your PSLL, and whatever evidence you attached — before/after photos live on the DAG.",
-    "It proposes a provisional ΔS with the model you already trust. If-then. The other side has to agree.",
+    "It proposes a provisional ΔS with the model you already trust. If-then. Lookers attach later, in parts. Not one stamp.",
     "If it holds, it settles into standing XP. If someone contests — later, even years later — it can still burn.",
   ],
   privacy:
@@ -677,7 +677,7 @@ export const engineStack = {
       items: [
         { name: "SignalFlow", d: "Assistant + PSLL + routing. Packages the claim. Proposes ΔS. Not the whole Engine.", href: `${P}/signalflow` },
         { name: "Mesh", d: "Web3 as promised. Two boxes, signed loops, no bag. node packages/mesh/demo.mjs", href: `${P}/mesh` },
-        { name: "Validation neighborhoods", d: "Blind 1/10 slices. Volunteer role, not a validator class. Holochain-shaped routing, native code.", href: `${P}/validation-neighborhoods` },
+        { name: "Validation neighborhoods", d: "Blind slices of a claim, not a whole stamp. Volunteer task, not a validator class. Parts can be looked at 3–10 times, later.", href: `${P}/validation-neighborhoods` },
         { name: "Epistemology engine", d: "Mesh peer-review observability. The mesh reviews. This package witnesses it.", href: `${P}/epistemology-engine` },
         { name: "Decomposition kit", d: "Split a claim at the edge. Personal AI job, not a central pipeline.", href: `${P}/decomposition-kit` },
         { name: "PSLL-sync", d: "Personal Signed Local Log. Append-only, hash-chained, yours. Merkle-anchored to the DAG.", href: `${P}/psll-sync` },

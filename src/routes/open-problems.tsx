@@ -36,7 +36,7 @@ function OpenProblems() {
         <div className="text-[10px] tracking-[0.28em] text-primary uppercase">Current answer</div>
         <h2 className="font-display text-2xl tracking-[0.04em] text-fg">SignalFlow is the protocol mouth</h2>
         <p>
-          It proposes ΔS from the model you trust plus evidence. The other side has to agree.
+          It proposes ΔS from the model you trust plus evidence. Lookers attach later, in parts.
           Smart contracts run the named case after that. Models do not become the ledger.
         </p>
       </section>

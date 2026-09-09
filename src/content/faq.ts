@@ -272,7 +272,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "fight",
         q: "How do you measure mediating a fight? Where’s the thermometer?",
-        a: "There isn’t one. SignalFlow plus evidence (duration, who confirms, whether it recurs) propose a provisional bits-equivalent. You do not type in a score. The other side of the loop agrees. Then it hits the mint formula. Not a 1/10 validator caste. Not in the canon.",
+        a: "There isn’t one. SignalFlow plus evidence (duration, who looks, whether it recurs) propose a provisional bits-equivalent. You do not type in a score. Lookers attach — parts of the claim, more than once, later. Then it hits the mint formula. Not a 1/10 validator caste. Not in the canon.",
         also: [{ label: "Bits-equivalent", href: "/glossary", hash: "bits-equivalent" }],
       },
       {
@@ -442,16 +442,25 @@ export const faqSections: FaqSection[] = [
       {
         id: "own-lawn",
         q: "Do I only earn XP working a job, or helping a neighbor?",
-        a: "No. That’s the old clock. The mint is verified entropy reduction, not a wage. You mow your own lawn: the grass is shorter, the mess is less. HomeFlow can close that loop. Sensors can hang evidence. They do not mint. Someone in the household, or the mesh, still has to agree. You do not type in a score. You get the reduction of that lawn — the same physical ΔS a neighbor would have produced mowing it for you. The neighbor version is two households. Yours is one house taking care of itself. F still applies: mowing it every Saturday pays less than the first time. Cooking, putting a kid to bed, fixing the hinge, walking the dog, recovering from a fever if the loop can close — those are loops. A job is one way a loop shows up. It is not the box.",
+        a: "No. You mow your own lawn, you mint if the loop is real. Hiring a neighbor is not cooler math. The grass is shorter either way. Same ΔS class. The hire is two households on one close: they cut, you posted. You do not mint their cut. They do not mint your yard as a paycheck. A self-close is one house taking care of itself. F still taxes every Saturday. Sensors hang evidence. They do not mint. You do not type a score. A job is one way a loop shows up. It is not the box.",
         also: [
           { label: "HomeFlow", href: "/glossary", hash: "homeflow" },
           { label: "XP", href: "/glossary", hash: "xp" },
         ],
       },
       {
+        id: "lookers",
+        q: "So my neighbor says yeah and it prints? One validator?",
+        a: "No. There is no validator class and no one-stamp close. A claim mints provisional. Looking is a vertex. Different lookers can sign different parts — front strip, height, before/after, duration — three times, ten times, a year later. Weight stacks. A cartel of three houses puffing each other is a later burn, not a feature. SignalFlow proposes ΔS. You never type the number. Late lookers are the machine. One buddy on the porch is evidence, not a gavel.",
+        also: [
+          { label: "Late mint / burn", href: "/faq", hash: "late-first" },
+          { label: "Looking", href: "/#zkp" },
+        ],
+      },
+      {
         id: "retire",
         q: "What if I retire? Or get sick? Or take a vacation? Do I starve when I stop “working”?",
-        a: "People rarely retire into a coma. They keep a house, a garden, grandkids, a body, a street. That still mints if it is real and the loop closes. Standing you already have does not vanish on a Friday. XP leaks ~1% of remaining per month — half still there at ~5.8 years. You live on that, plus whatever living still writes. Sick: you are not clawed for being sick. Care is a loop for the person who shows up. Vacation: rest is not a hole in a living system. Recovery is biological. A week that actually puts a life back together is not “unproductive.” You do not need a PTO token. The extractive picture accrued sick days because the job was the only meter and rest was a theft from it. Here the meter is the life. If you vanish from every loop including your own house, standing fades like anyone else’s. That is the treadmill, not a boss taking your days.",
+        a: "People rarely retire into a coma. They keep a house, a garden, grandkids, a body, a street. That still mints if it is real and lookers can attach. Standing you already have does not vanish on a Friday. XP leaks ~1% of remaining every two weeks — half still there at ~1.9 years. You live on that, plus whatever living still writes. Sick: you are not clawed for being sick. Care is a loop for the person who shows up. Vacation: rest is not a hole. Recovery is biological. You do not need a PTO token. If you vanish from every loop including your own house, standing fades like anyone else’s.",
         also: [
           { label: "XP decay", href: "/glossary", hash: "xp-decay" },
           { label: "Rest / retirement", href: "/glossary", hash: "rest" },
@@ -471,7 +480,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "not-a-job",
         q: "This still sounds like work-score capitalism with extra steps.",
-        a: "That’s the training. Clock in, clock out, rest is a hole, only what you sold to someone else counted. This measures anything you can self-report, have a sensor report, submit as a claim, or tell an assistant — then have verified. Not a vibe. Not a diary entry that prints money. SignalFlow proposes. The other side agrees. The box was the job’s. Living was never inside it. A decentralized mesh does not need you to pick one employer as the meaning of a year. Years stack. Pieces fall in. You were already mowing the lawn.",
+        a: "That’s the training. Clock in, clock out, rest is a hole, only what you sold to someone else counted. This measures anything you can self-report, have a sensor report, submit as a claim, or tell an assistant — then have lookers attach, in parts, later. Not a vibe. Not a diary that prints. SignalFlow proposes. The box was the job’s. Living was never inside it.",
         also: [
           { label: "SignalFlow", href: "/glossary", hash: "signalflow" },
           { label: "UI for your life", href: "/glossary", hash: "ui-for-your-life" },

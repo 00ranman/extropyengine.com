@@ -93,7 +93,7 @@ export const essays: Record<string, Essay> = {
         items: [
           "An agent does the work. They do not type in a score.",
           "SignalFlow talks to the assistant they already trust, plus their personal log, plus evidence on the DAG (before/after, duration).",
-          "A provisional ΔS is proposed. The other side has to agree. If-then.",
+          "A provisional ΔS is proposed. Lookers attach — parts, later, more than once. If-then.",
           "XP mints provisional, then settles — or burns, then or years later. XP is not spent. It decays.",
           "You cannot buy it. You cannot transfer it. Sitting on a pile does nothing.",
         ],
@@ -310,7 +310,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "Bits-equivalent",
         id: "bits-equivalent",
-        def: "The conversion the Engine actually means. A lawn, a mediation, a trade deal — information events. Landauer: erasing information has a heat floor. You do not need a frozen joule for “mowed.” You need a stand-in in bits (or a normalized scalar treated as bits-equivalent) that can be updated when new measurements land. Equivocation is possible: Shannon bits, thermodynamic entropy, and the English word “order” are not the same object. The proxy is how you live with that without pretending you found a constant. For a fight: SignalFlow plus evidence (duration, who confirms, whether it recurs) propose a provisional bits-equivalent. You do not score yourself. The other side of the loop has to agree. That output hits the mint formula. Not a thermometer in the room. Not a validator caste taking a tenth. Not a metaphor. Not a poem about tidiness.",
+        def: "The conversion the Engine actually means. A lawn, a mediation, a trade deal — information events. Landauer: erasing information has a heat floor. You do not need a frozen joule for “mowed.” You need a stand-in in bits (or a normalized scalar treated as bits-equivalent) that can be updated when new measurements land. Equivocation is possible: Shannon bits, thermodynamic entropy, and the English word “order” are not the same object. The proxy is how you live with that without pretending you found a constant. For a fight: SignalFlow plus evidence (duration, who looks, whether it recurs) propose a provisional bits-equivalent. You do not score yourself. Lookers attach in parts, later. That output hits the mint formula. Not a thermometer in the room. Not a validator caste taking a tenth. Not a metaphor. Not a poem about tidiness.",
       },
       {
         term: "Not a metaphor",

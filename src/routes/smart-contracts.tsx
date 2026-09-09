@@ -77,7 +77,7 @@ function SmartContractsPage() {
       </p>
       <p>
         <strong>Work.</strong> Someone mows, restocks, merges duplicates, buys Tuesday milk. A
-        claim gets packaged. The other side signs or says no. Only then may world standing (XP) or
+        claim gets packaged. Lookers attach — maybe now, maybe in pieces, maybe next season. Only then may world standing (XP) or
         community standing (CT) move. That is a smart contract: both sides agreed, standing may
         change.
       </p>
