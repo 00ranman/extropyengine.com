@@ -2,7 +2,8 @@
 export const HF = 1_420_405_751.768;
 export const BB_SEC = 4.350639312e17;
 
-/** System 1 — Solar Clock. Coordinates in the local day. Not durations. */
+/** System 1 — Solar Clock. Coordinates in the local day. Not durations.
+ * daySec is this rock's mean solar day. Earth default 86 400. Mars divides Mars. */
 export const SOLAR = {
   daySec: 86_400,
   ticksPerDay: 100_000,
@@ -32,14 +33,18 @@ export const DUR_UNITS = [
 export const DUR_NAMES = DUR_UNITS.map((u) => u.name);
 export const DUR_EXP = DUR_UNITS.map((u) => u.exp);
 
-export const CAL = { dpm: 40, m10l: 6, m10n: 5, cyc: 5 };
+/** Solar calendar: 5-day weeks. 73 weeks = 365 days. Leap is week 74, one day. No months. */
+export const CAL = {
+  week: 5,
+  weeks: 73,
+} as const;
 
 export function isLeap(y: number) {
   return (y % 4 === 0 && y % 100 !== 0) || y % 400 === 0;
 }
 
 export function daysInYear(y: number) {
-  return CAL.dpm * 9 + (isLeap(y) ? CAL.m10l : CAL.m10n);
+  return CAL.weeks * CAL.week + (isLeap(y) ? 1 : 0);
 }
 
 export function dayOfYear(d: Date) {
@@ -47,18 +52,29 @@ export function dayOfYear(d: Date) {
   return Math.floor((d.getTime() - jan1.getTime()) / 86_400_000) + 1;
 }
 
-export function utDate(doy: number, y: number) {
-  let r = doy;
-  for (let m = 1; m <= 10; m++) {
-    const md = m <= 9 ? CAL.dpm : isLeap(y) ? CAL.m10l : CAL.m10n;
-    if (r <= md) return { month: m, day: r };
-    r -= md;
-  }
-  return { month: 10, day: 1 };
+export type UtStamp = {
+  week: number;
+  day: number;
+  doy: number;
+};
+
+export function utDate(doy: number, y: number): UtStamp {
+  const week = Math.ceil(doy / CAL.week);
+  const day = ((doy - 1) % CAL.week) + 1;
+  return { week, day, doy };
+}
+
+export function weeksInYear(y: number) {
+  return isLeap(y) ? CAL.weeks + 1 : CAL.weeks;
+}
+
+export function daysInWeek(week: number, y: number) {
+  if (week <= CAL.weeks) return CAL.week;
+  return isLeap(y) ? 1 : 0;
 }
 
 export function cycleDay(d: Date) {
-  return ((dayOfYear(d) - 1) % CAL.cyc) + 1;
+  return ((dayOfYear(d) - 1) % CAL.week) + 1;
 }
 
 export type DurationTick = {
@@ -172,10 +188,8 @@ function sayPulses(n: number) {
   return "a wave";
 }
 
-export function doyFromUt(month: number, day: number, year: number) {
-  let n = day;
-  for (let m = 1; m < month; m++) n += m <= 9 ? CAL.dpm : isLeap(year) ? CAL.m10l : CAL.m10n;
-  return n;
+export function doyFromUt(week: number, day: number) {
+  return (week - 1) * CAL.week + day;
 }
 
 const J2000_MS = Date.UTC(2000, 0, 1, 12, 0, 0);
@@ -200,7 +214,7 @@ export type OrbitMark = {
   name: string;
   short: string;
   doy: number;
-  month: number;
+  week: number;
   day: number;
 };
 
@@ -210,7 +224,7 @@ function lonForwardContains(from: number, to: number, target: number) {
   return off <= span || off === 0;
 }
 
-/** Four actual orbit events this Gregorian year. Not month-starts. Local civil day. */
+/** Four actual orbit events this Gregorian year. Not week-starts. Local civil day. */
 export function orbitMarksForYear(year: number): OrbitMark[] {
   const out: OrbitMark[] = [];
   for (const spec of ORBIT_MARKS) {
@@ -226,15 +240,22 @@ export function orbitMarksForYear(year: number): OrbitMark[] {
     }
     if (!hitDoy) continue;
     const ut = utDate(hitDoy, year);
-    out.push({ lon: spec.lon, name: spec.name, short: spec.short, doy: hitDoy, month: ut.month, day: ut.day });
+    out.push({
+      lon: spec.lon,
+      name: spec.name,
+      short: spec.short,
+      doy: hitDoy,
+      week: ut.week,
+      day: ut.day,
+    });
   }
   return out;
 }
 
-/** Civil marks. Not seasons. Pockets, leftover, start of the overlay year. */
-export const HOLIDAYS: Record<number, Record<number, string>> = {
-  1: { 1: "New Cycle" },
-  9: { 40: "Year End" },
-};
+/** Civil marks. Week 1 day 1. Last day of the year. Not seasons. */
+export const HOLIDAYS = {
+  newCycle: { week: 1, day: 1, label: "New Cycle" },
+  yearEnd: { label: "Year End" },
+} as const;
 
 export const UT_DAY_NAMES = ["Tue", "Wed", "Fri", "Sat", "Sun"] as const;

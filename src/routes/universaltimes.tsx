@@ -8,23 +8,25 @@ import {
   HOLIDAYS,
   UT_DAY_NAMES,
   dayOfYear,
+  daysInWeek,
+  daysInYear,
   durationNow,
   formatQuant,
   formatSpan,
-  isLeap,
   orbitMarksForYear,
   pad2,
   quantsSinceBB,
   solarLat,
   unitSeconds,
   utDate,
+  weeksInYear,
 } from "@/lib/timekeeping";
 
 export const Route = createFileRoute("/universaltimes")({ component: UniversalTimes });
 
 function UniversalTimes() {
-  const [calMonth, setCalMonth] = useState(() =>
-    utDate(dayOfYear(new Date()), new Date().getFullYear()).month,
+  const [calWeek, setCalWeek] = useState(() =>
+    utDate(dayOfYear(new Date()), new Date().getFullYear()).week,
   );
   const [today, setToday] = useState(() => {
     const n = new Date();
@@ -77,9 +79,11 @@ function UniversalTimes() {
           <h1 className="font-display text-[clamp(32px,5vw,52px)] tracking-[0.08em]">Universal Times</h1>
           <p className="mt-2 text-xs tracking-[0.2em] text-accent uppercase">v4.2 · hydrogen-anchored · three systems</p>
           <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-muted">
-            Base-10 face. Ten loops in a local day. Three solar hands — Loop, Arc, Tick — tell you
-            where you are. Gold pips are duration: Pulse (~70 s) on the outer gold ring, Tide
-            (~2 hr) on the inner one. Same length on every planet. Hours are not on this scale.
+            Base-10 face. Ten loops in the <em>local</em> day — this rock’s spin, cut in ten. Earth
+            ticks are ~0.864 s because Earth’s day is 86 400 s. Mars divides a Martian day. Three
+            solar hands — Loop, Arc, Tick — tell you where you are. Gold pips are duration: Pulse
+            (~70 s) on the outer gold ring, Tide (~2 hr) on the inner one. Same length on every
+            planet. Hours are not on this scale.
           </p>
 
           <UtClock />
@@ -110,12 +114,17 @@ function UniversalTimes() {
             <h2 className="font-display text-xl tracking-[0.06em]">System 1 · Solar Clock</h2>
             <p className="mt-2 max-w-xl text-sm leading-relaxed text-dim">
               Answers “what time is it here?” t:L:AA:TT. Loop 0 is the start of the local day. Loop 5
-              is midday. Tick ≈ 0.864 s on Earth. Do not say “in 3 arcs” — arcs are coordinates.
+              is midday. A tick is 1/100 000 of this planet’s mean solar day — not an Earth second
+              wearing a hat. Do not say “in 3 arcs” — arcs are coordinates.
             </p>
             <ScaleRow
               tone="fg"
               keys={["Loop", "Arc", "Tick"]}
-              spans={{ Loop: "10 / day · ~2.4 hr", Arc: "100 / loop · 86.4 s", Tick: "100 / arc · 0.864 s" }}
+              spans={{
+                Loop: "10 / local day",
+                Arc: "100 / loop",
+                Tick: "100 / arc · Earth ~0.864 s",
+              }}
               register={(n, el) => {
                 digits.current[n] = el;
               }}
@@ -236,32 +245,32 @@ function UniversalTimes() {
             <div>
               <h2 className="font-display text-xl tracking-[0.06em]">Solar calendar</h2>
               <p className="mt-1 max-w-xl text-sm leading-relaxed text-dim">
-                This star. This spin. Optional overlay on Gregorian {year}. Nine 40-day pockets
-                (same tick as the Engine), then Genesis: 5 days, 6 on leap — the leftover because
-                365 is not 360. Months are civil. They are not seasons. The 5-day week is social,
-                not a constant.
+                This star. Weeks only. A week is 5 days (social). Week 1 through week 73 = 365
+                days. Leap year: week 74, one day. No months. No extra named chunk. Seasons are the
+                four orbit marks. The Engine leaks standing every two weeks. Auto H still reads
+                eight weeks of till cash.
               </p>
             </div>
             <div className="font-mono text-xs tracking-[0.12em] text-accent">
-              Month {today.month} · Day {today.day}
+              Week {today.week} · Day {today.day}
             </div>
           </div>
           <OrbitLegend year={year} />
-          <div className="mb-4 grid grid-cols-5 gap-1 sm:grid-cols-10">
-            {Array.from({ length: 10 }, (_, i) => i + 1).map((m) => (
+          <div className="mb-4 grid grid-cols-8 gap-1 sm:grid-cols-12">
+            {Array.from({ length: weeksInYear(year) }, (_, i) => i + 1).map((w) => (
               <button
-                key={m}
+                key={w}
                 type="button"
-                onClick={() => setCalMonth(m)}
+                onClick={() => setCalWeek(w)}
                 className={`px-1 py-1.5 font-mono text-[11px] ${
-                  m === calMonth ? "bg-accent/15 font-bold text-accent" : "text-dim hover:text-fg"
+                  w === calWeek ? "bg-accent/15 font-bold text-accent" : "text-dim hover:text-fg"
                 }`}
               >
-                {m <= 9 ? `M${m}` : "Genesis"}
+                {w}
               </button>
             ))}
           </div>
-          <CalendarGrid year={year} month={calMonth} today={today} />
+          <CalendarGrid year={year} week={calWeek} today={today} />
         </section>
 
         <div className="mx-auto mt-10 flex max-w-3xl flex-wrap gap-4 text-[11px] tracking-[0.18em] uppercase">
@@ -325,8 +334,8 @@ function OrbitLegend({ year }: { year: number }) {
       {marks.map((m) => (
         <li key={m.lon}>
           <span className="text-primary">{m.name}</span>
-          {" · "}
-          M{m.month === 10 ? "Genesis" : m.month} day {m.day}
+          {" · week "}
+          {m.week} day {m.day}
           <span className="text-dim"> (day {m.doy})</span>
         </li>
       ))}
@@ -336,32 +345,23 @@ function OrbitLegend({ year }: { year: number }) {
 
 function CalendarGrid({
   year,
-  month,
+  week,
   today,
 }: {
   year: number;
-  month: number;
-  today: { month: number; day: number };
+  week: number;
+  today: { week: number; day: number };
 }) {
-  const md = month <= 9 ? CAL.dpm : isLeap(year) ? CAL.m10l : CAL.m10n;
-  const weeks = Math.ceil(md / CAL.cyc);
-  const orbit = orbitMarksForYear(year).filter((m) => m.month === month);
-  let day = 1;
-  const rows: number[][] = [];
-  for (let w = 0; w < weeks; w++) {
-    const row: number[] = [];
-    for (let d = 0; d < CAL.cyc; d++) {
-      row.push(day <= md ? day : 0);
-      day += 1;
-    }
-    rows.push(row);
-  }
+  const days = daysInWeek(week, year);
+  const startDoy = (week - 1) * CAL.week + 1;
+  const lastDoy = daysInYear(year);
+  const orbit = orbitMarksForYear(year).filter((m) => m.week === week);
 
   return (
     <table className="w-full border-collapse font-mono text-sm">
       <thead>
         <tr>
-          {UT_DAY_NAMES.map((n) => (
+          {UT_DAY_NAMES.slice(0, Math.max(days, 1)).map((n) => (
             <th key={n} className="border-b border-accent/15 px-1 py-2 text-center font-normal text-accent">
               {n}
             </th>
@@ -369,36 +369,39 @@ function CalendarGrid({
         </tr>
       </thead>
       <tbody>
-        {rows.map((row, i) => (
-          <tr key={i}>
-            {row.map((d, j) => {
-              if (!d) return <td key={j} />;
-              const isToday = month === today.month && d === today.day;
-              const hol = HOLIDAYS[month]?.[d];
-              const mark = orbit.find((m) => m.day === d);
-              const label = mark?.short ?? hol;
-              const title = mark ? `${mark.name} · day ${mark.doy}` : hol;
-              return (
-                <td
-                  key={j}
-                  title={title}
-                  className={`px-1 py-2.5 text-center ${
-                    isToday
-                      ? "bg-accent/20 font-bold text-accent"
-                      : mark
-                        ? "text-primary"
-                        : hol
-                          ? "text-fg"
-                          : "text-muted"
-                  }`}
-                >
-                  {d}
-                  {label ? <span className="mt-0.5 block text-[10px] tracking-wider">{label}</span> : null}
-                </td>
-              );
-            })}
-          </tr>
-        ))}
+        <tr>
+          {Array.from({ length: days }, (_, i) => i + 1).map((d) => {
+            const doy = startDoy + d - 1;
+            const isToday = week === today.week && d === today.day;
+            const mark = orbit.find((m) => m.day === d);
+            const hol =
+              week === HOLIDAYS.newCycle.week && d === HOLIDAYS.newCycle.day
+                ? HOLIDAYS.newCycle.label
+                : doy === lastDoy
+                  ? HOLIDAYS.yearEnd.label
+                  : undefined;
+            const label = mark?.short ?? hol;
+            const title = mark ? `${mark.name} · day ${mark.doy}` : hol;
+            return (
+              <td
+                key={d}
+                title={title}
+                className={`px-1 py-2.5 text-center ${
+                  isToday
+                    ? "bg-accent/20 font-bold text-accent"
+                    : mark
+                      ? "text-primary"
+                      : hol
+                        ? "text-fg"
+                        : "text-muted"
+                }`}
+              >
+                {d}
+                {label ? <span className="mt-0.5 block text-[10px] tracking-wider">{label}</span> : null}
+              </td>
+            );
+          })}
+        </tr>
       </tbody>
     </table>
   );

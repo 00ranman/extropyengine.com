@@ -69,7 +69,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "xp-small",
         q: "If standing takes ~30 years to go to dust, won't whales own the till?",
-        a: "Only if each loop mints a fat number. Leak is ~1% of remaining per 40-day pocket. Steady pile ≈ pocket inflow ÷ 0.01. Ten fat lawns a pocket becomes a pile that still moves a life a decade later. So an ordinary MICRO close targets 0.01–1 XP, not 100. F already taxes repeats. Slam-shut mints zero. At the drawer, EP cannot exceed this ticket times H_cap. XP is not dollars. IT does not use XP at all.",
+        a: "Only if each loop mints a fat number. Leak is ~1% of remaining every two weeks. Steady pile ≈ two-week inflow ÷ 0.01. Ten fat lawns a fortnight becomes a pile that still moves a couple of years later. So an ordinary MICRO close targets 0.01–1 XP, not 100. F already taxes repeats. Slam-shut mints zero. At the drawer, EP cannot exceed this ticket times H_cap. XP is not dollars. IT does not use XP at all.",
         also: [
           { label: "Defaults", href: "/defaults" },
           { label: "Letter key", href: "/key" },
@@ -216,7 +216,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "cat-ct-it",
         q: "What are CAT, CT, and IT?",
-        a: "CAT is a skill record: lane + level + issuer. Feeds β when on-duty. CT is community standing on the web — same number at compatible tills — idle leak ~1% per pocket (0.99ⁿ). Activity on that web resets the clock. CT does not travel. IT is this-proposal standing, clip(H_gov · S_gov · κ · CT_W · β_gov, 0, 1), burned in the tally. Not a pile. None of these are bags.",
+        a: "CAT is a skill record: lane + level + issuer. Feeds β when on-duty. CT is community standing on the web — same number at compatible tills — idle leak ~1% every two weeks (0.99ⁿ). Activity on that web resets the clock. CT does not travel. IT is this-proposal standing, clip(H_gov · S_gov · κ · CT_W · β_gov, 0, 1), burned in the tally. Not a pile. None of these are bags.",
         also: [
           { label: "CAT", href: "/glossary", hash: "cat" },
           { label: "CT", href: "/glossary", hash: "ct" },
@@ -315,7 +315,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "burn",
         q: "If the president is later a disaster, can the teacher’s XP be destroyed?",
-        a: "Late mint first. Same machine both ways. A later huge ΔS — Nobel, a society-scale fix — can still write a citation-gated delta into the original vertex. That is when decades later still has weight. Late burn of later-revealed harm is the other direction. It slashes remaining dust plus that new delta. It does not empty the wallet. Ordinary XP thirty years on is ≈ 6.4% of the original mint (0.99ⁿ, n ≈ 274 pockets). Clawing a lawn from 1996 is bookkeeping. Treating “it can take your XP away in 30 years” as the headline, without the mint direction and without the curve, skips the logistics.",
+        a: "Late mint first. Same machine both ways. A later huge ΔS — Nobel, a society-scale fix — can still write a citation-gated delta into the original vertex. That is when decades later still has weight. Late burn of later-revealed harm is the other direction. It slashes remaining dust plus that new delta. It does not empty the wallet. Ordinary XP five years on is ≈ 16% of the original mint. A decade is dust. Clawing a lawn from 1996 is bookkeeping. Treating “it can take your XP away in 30 years” as the headline, without the mint direction and without the curve, skips the logistics.",
         also: [
           { label: "Late mint", href: "/glossary", hash: "late-mint" },
           { label: "Late burn", href: "/glossary", hash: "late-burn" },
@@ -324,20 +324,20 @@ export const faqSections: FaqSection[] = [
       },
       {
         id: "decay",
-        q: "1% every 40 days — so it lasts forever?",
-        a: "No. 1% of what is left, each 40-day pocket. Remaining after n idle pockets is 0.99ⁿ. Half-life ≈ 69 pockets (~7.6 years, half still there). ~1 year ≈ 91%. ~8 years ≈ 48%. ~20 years ≈ 16%. ~30 years ≈ 6.4% — dust. It never hits zero in the reals. Counting 40,000 days is the wrong arithmetic. Decay is a leak. Late mint is the long-horizon mechanism that can still move a number, and only for a later huge, cited ΔS. Late burn of ordinary remaining pile is a mark on a vertex, not a sword.",
+        q: "1% every two weeks — so it lasts forever?",
+        a: "No. 1% of what is left, each two weeks. Remaining after n idle two-week ticks is 0.99ⁿ. Half-life ≈ 69 ticks (~1.9 years, half still there). ~1 year ≈ 69%. ~5 years ≈ 16%. ~8 years ≈ 5%. A decade is dust. It never hits zero in the reals. Counting 20,000 days is the wrong arithmetic. Decay is a leak. Late mint is the long-horizon mechanism that can still move a number, and only for a later huge, cited ΔS. Late burn of ordinary remaining pile is a mark on a vertex, not a sword.",
         also: [{ label: "XP decay", href: "/glossary", hash: "xp-decay" }, { label: "0.99ⁿ", href: "/#decay" }],
       },
       {
         id: "clawback",
         q: "If most of it already leaked, do you claw the old XP back?",
-        a: "No. You don’t collect what decay already ate. You mark the vertex BURNED and slash remaining dust. At 30 years that remaining is ≈ 6.4% of the original mint. The DAG does not forget. The wallet does not get a 1996-shaped hole.",
+        a: "No. You don’t collect what decay already ate. You mark the vertex BURNED and slash remaining dust. At ten years that remaining is already dust. The DAG does not forget. The wallet does not get a 1996-shaped hole.",
         also: [{ label: "Late burn", href: "/glossary", hash: "late-burn" }],
       },
       {
         id: "thirty",
         q: "Is the 30-day settle window a law?",
-        a: "No. It was a starting number. One pocket (40 days) is the default now. Per-DFAO knob. Late burn has no expiry either way. IT is not a leak pile. XP decay is ~1%/pocket of remaining. CT idle-leaks on the same keep.",
+        a: "No. It was a starting number. Eight weeks is the settle-window default now. Per-DFAO knob. Late burn has no expiry either way. IT is not a leak pile. XP decay is ~1% every two weeks of remaining. CT idle-leaks on the same keep.",
       },
       {
         id: "three-clocks",
@@ -401,7 +401,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "l-farm",
         q: "Can a shop (or a DFAO) just crank L and extract XP?",
-        a: "That’s the economic attack. L is community CT against this till’s Auto H_cap. Same CT at every compatible till. There is no slider. H_cap comes from this door’s signed cash after a 40-day training pocket (remainder 0 until then). Both edges still accept the estimate. Cash rings the rest. A house that wants no overlay unplugs the node.",
+        a: "That’s the economic attack. L is community CT against this till’s Auto H_cap. Same CT at every compatible till. There is no slider. H_cap comes from this door’s signed cash after eight weeks of training (remainder 0 until then). Both edges still accept the estimate. Cash rings the rest. A house that wants no overlay unplugs the node.",
         also: [
           { label: "Emergent Product", href: "/glossary", hash: "emergent-product" },
           { label: "Open problems", href: "/open-problems" },

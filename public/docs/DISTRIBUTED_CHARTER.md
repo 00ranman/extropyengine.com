@@ -114,7 +114,7 @@ IT(m)   = IT_start · (0.95)^m     # idle months, order of magnitude
 
 **CT — community standing on web W.** Same number at grocery and laundromat if they still speak base CT. The door does not own this. The door owns H.
 
-**H_cap — this till this pocket.** Auto from signed cash. Training pocket: remainder 0 until 40 days of signed tickets. Then clip(0.5 × cash_in / cash_out, 0, 1). No slider. No Off on the register. Unplug is Off. Auto must not require a person-level forehead.
+**H_cap — this till this window.** Auto from signed cash. Training: remainder 0 until eight weeks of signed tickets. Then clip(0.5 × cash_in / cash_out, 0, 1). No slider. No Off on the register. Unplug is Off. Auto must not require a person-level forehead.
 
 **β — optional door-local band.** ZKP or mapper band. Default 1.
 
@@ -128,7 +128,7 @@ IT(m)   = IT_start · (0.95)^m     # idle months, order of magnitude
 
 **ρ — index, not a person.** Overlay-touch over cash-plus-overlay-touch at a door or desk. Mycelium HUD. Not a moral rank.
 
-Three clocks: slam (Tₛ), class repeat (F), standing leak (0.99ⁿ, n = idle 40-day pockets). IT is not a leak clock. Do not mash them.
+Three clocks: slam (Tₛ), class repeat (F), standing leak (0.99ⁿ, n = idle two-week counts). IT is not a leak clock. Do not mash them.
 
 ---
 

@@ -40,7 +40,7 @@ Defaults and change rules, before a live till: [/docs/DEFAULTS.md](/docs/DEFAULT
 | ρ | Fiat residual index | No | Door totals. Not a person. Not ρ_W. |
 | CAT | Skill record | Unique | Off the XP mint. |
 | IT | Governance meter | No | Off the XP mint. |
-| 0.99ⁿ | XP leak | — | ~1%/pocket remaining. Planetary. n = idle 40-day pockets. |
+| 0.99ⁿ | XP leak | — | ~1% every two weeks remaining. Planetary. n = idle two-week counts. |
 | 0.99ⁿ | CT leak | — | Idle on web W. Same keep as XP. Activity resets n. Does not travel. |
 | IT | This proposal | Burns | clip(H_gov · S_gov · κ · CT_W · β_gov, 0, 1) |
 | ℱ | Falsifiability | — | Lose-conditions. Not the letter F. |
@@ -182,7 +182,7 @@ Cash is the early honesty check. When ρ is high the remainder is small and the 
 
 ## 5. H_cap and S
 
-H_cap ∈ [0, 1]. This till this pocket. Auto from this door’s signed cash. Training: remainder 0 until 40 days of signed tickets. Then clip(0.5 × cash_in / cash_out, 0, 1). No slider. No Off on the register. Unplug is Off.
+H_cap ∈ [0, 1]. This till this window. Auto from this door’s signed cash. Training: remainder 0 until eight weeks of signed tickets. Then clip(0.5 × cash_in / cash_out, 0, 1). No slider. No Off on the register. Unplug is Off.
 
 S ∈ [0, 1]. This person at this house. Auto from this door’s history. Spite and fake-proofs cut S on a short clock.
 
