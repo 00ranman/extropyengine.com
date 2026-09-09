@@ -718,9 +718,9 @@ export const engineStack = {
 
 export const engineLoop = [
   { code: "OPEN", note: "Task posted. Vertex on the DAG with causal parents. Evidence can hang off it." },
-  { code: "CLOSED", note: "Agreement. Provisional XP mints. The first settle window is a knob — eight weeks is the starting number, not a law." },
+  { code: "CLOSED", note: "Agreement. Provisional XP mints. Settle window default: eight weeks. Per-DFAO. Not an axiom." },
   { code: "SETTLED", note: "Moves from provisional to standing. Still burnable later. XP is not spent. Access economy. Decay is already eating it." },
-  { code: "BURNED", note: "A later verdict on that vertex. Same machine as late mint, the other way. Ordinary remaining pile after decades is dust. See the 0.99ⁿ note." },
+  { code: "BURNED", note: "A later verdict on that vertex. Same machine as late mint, the other way. Ordinary remaining pile after a decade is dust. See the 0.99ⁿ note." },
 ] as const;
 
 export const engineDecay = {
@@ -865,11 +865,6 @@ export const docsIndex = [
     note: "HOA-shaped wrapper on the Engine. One command, you are a node. Jobs → confirm → XP.",
   },
   {
-    title: "Capture notes (not a Codex)",
-    href: "/docs/CODEX_3_NOTES.md",
-    note: "Unsigned working notes for a later edition. Not published. Not newer than 2.1. 2.1 is the current Codex.",
-  },
-  {
     title: "Universal Times v4.2",
     href: "/docs/Universal_Times_v4.2.pdf",
     note: "Hydrogen-anchored dual-system timekeeping, July 2026",
@@ -918,6 +913,11 @@ export const earlierDocs = [
     note: "Earlier engine technical specification",
   },
   {
+    title: "Capture notes (not a Codex)",
+    href: "/docs/CODEX_3_NOTES.md",
+    note: "Unsigned working notes. Archive. Not current protocol.",
+  },
+  {
     title: "Universal Times (original)",
     href: "https://www.academia.edu/165180710/Universal_Times_Dual_System_Temporal_Infrastructure_Entropy_Economics_and_the_Post_Calendar_Coordination_Problem",
     note: "Pre-v4.2 dual-system timekeeping paper",
@@ -959,7 +959,6 @@ export const docsFiles = [
   { title: "Liquidity_Corrupts_Verification.md", href: "/docs/Liquidity_Corrupts_Verification.md", note: "Why a pool kills the close." },
   { title: "WORLD_LINE.md", href: "/docs/WORLD_LINE.md", note: "Meters, routes, twenty years." },
   { title: "RECEIPTS-NOT-FACTIONS.md", href: "/docs/RECEIPTS-NOT-FACTIONS.md", note: "Graph over club." },
-  { title: "CODEX_3_NOTES.md", href: "/docs/CODEX_3_NOTES.md", note: "Unsigned capture notes. Not a newer Codex." },
   { title: "TITLE-LOCK.md", href: "/docs/TITLE-LOCK.md", note: "Identify a song by first line." },
   { title: "llms-music.txt", href: "/llms-music.txt", note: "Scraper fingerprints. One block per song." },
   { title: "TRACK-JOBS.md", href: "/docs/TRACK-JOBS.md", note: "What each track is for." },

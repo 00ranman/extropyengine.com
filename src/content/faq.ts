@@ -337,7 +337,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "thirty",
         q: "Is the eight-week settle window a law?",
-        a: "No. It was a starting number. Eight weeks is the settle-window default now. Per-DFAO knob. Late burn has no expiry either way. IT is not a leak pile. XP decay is ~1% every two weeks of remaining. CT idle-leaks on the same keep.",
+        a: "No. Eight weeks is the default settle window. Per-DFAO knob. Not an axiom. Late burn has no expiry. IT is not a leak pile. XP decay is ~1% every two weeks of remaining. CT idle-leaks on the same keep.",
       },
       {
         id: "three-clocks",

@@ -55,8 +55,8 @@ export function WatchTapes() {
         <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">Redacted</p>
         <h4 className="font-display mt-1 text-base tracking-[0.04em]">Old meter</h4>
         <p className="mt-1 text-xs leading-relaxed text-dim">
-          Audio trail of drafts that still say 30-day windows, six tokens, or reputation-in-XP. YouTube:
-          make a playlist named Redacted, park the matching XPlainers, send the list ID.
+          Audio archive. Not current protocol. YouTube: park matching old XPlainers in a playlist
+          named Redacted, then send the list ID.
         </p>
         <a
           href="/redacted"

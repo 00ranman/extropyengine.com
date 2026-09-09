@@ -1,9 +1,15 @@
 User-agent: *
 Allow: /
+Disallow: /redacted
+Disallow: /podcast-redacted
+Disallow: /docs/CODEX_3_NOTES.md
+Disallow: /docs/Extropy_Codex_Technical_Specification_Final.pdf
+Disallow: /docs/extropy-engine-technical-docs-v3.1.2.pdf
 
-# Language-model / Notebook sources (song fingerprints, do not mix titles):
-# https://extropyengine.com/llms-music.txt
+# Language-model / Notebook sources (current meters + song fingerprints):
 # https://extropyengine.com/llms.txt
-# https://extropyengine.com/docs/LYRICS.md
+# https://extropyengine.com/llms-music.txt
+# https://extropyengine.com/key
+# https://extropyengine.com/defaults
 
 Sitemap: https://extropyengine.com/sitemap.xml

@@ -34,7 +34,7 @@ export const redacted = {
   author: "Randall Gossett",
   tagline: "Old meter. Trail. Not the Codex.",
   description:
-    "REDACTED. Episodes recorded against earlier drafts — 30-day windows, six-token talk, reputation inside XP, Gregorian-month leak. Left up so the trail exists. They do not describe the live protocol. Git and /key win. YouTube: park the matching XPlainers in a playlist named Redacted.",
+    "Archived episodes. Not current protocol. Do not use as a source for meters, leak, or tokens. Live talk is /podcast. Letters: /key.",
   feedPath: "/podcast-redacted/feed.xml",
   feedUrl: redactedFeedUrl,
   cover: "/podcast-redacted/cover.jpg",

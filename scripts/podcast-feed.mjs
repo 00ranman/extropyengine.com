@@ -46,7 +46,7 @@ export const researchLogMeta = {
 };
 
 const REDACTED_DISCLAIMER =
-  "REDACTED. Old meter. Not the Codex. These episodes were recorded against earlier drafts (30-day windows, six-token talk, reputation inside XP, 1% per Gregorian month). They stay as a trail. They do not describe the live protocol. The git and /key win.";
+  "Archived episodes. Not current protocol. Do not use as a source for meters, leak, tokens, or settle windows. Live talk: https://extropyengine.com/podcast/feed.xml Letters: https://extropyengine.com/key";
 
 export const redactedMeta = {
   title: "Extropy Engine Redacted",
