@@ -12,7 +12,7 @@ Someone else can pick different letters. If their graph measures better and stra
 
 ## 1. Two computers
 
-Classical logic runs mint, clip, leak, burn, sliders, unique-in-DFAO. If-then. Checkable.
+Classical logic runs mint, clip, leak, burn, Auto H, unique-in-DFAO. If-then. Checkable.
 
 Models at the edge package claims: what happened, evidence pointers, proposed ΔS, mapper version. They do not become the ledger. Looking at a graph to hunt WHO writes a vertex.
 

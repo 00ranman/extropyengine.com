@@ -17,7 +17,7 @@ export const doors: Door[] = [
     href: "/start#money",
     body: [
       "Every metric you were handed can be gamed once it is the target. Likes measure attention. Salary measures hours. GDP measures transactions. None of those is “did the work actually close.”",
-      "Here the till still rings cash. CT_W is the community meter at every compatible door. H_cap is this till this week. S is you here. β is a CAT or on-duty proof. L = clip(H_cap · S · κ · CT_W · β, 0, 1). EP = XP · L + λ · L and burns.",
+      "Here the till still rings cash. CT_W is the community meter at every compatible door. H_cap is this till this pocket, Auto from signed cash. S is you here. β is a CAT or on-duty proof. L = clip(H_cap · S · κ · CT_W · β, 0, 1). EP = XP · L + λ · L and burns.",
       "National debt and carbon markets fail the same way: a certificate with no closed loop. This closes the loop. Local desk first. Published spark versus cash. The path of the books improves because theater costs more than the work.",
     ],
     next: [
@@ -52,7 +52,7 @@ export const doors: Door[] = [
     href: "/start#governance",
     body: [
       "Institutions drift because the metric of success becomes “still here.” Mission dies. The org stays.",
-      "A DFAO is a room. It can vote how community standing is scored inside that room. The house owns a public slider on this till. Smart contracts are rails so you do not hire an executive caste to babysit the meters. Looking at a graph to hunt WHO still writes a vertex.",
+      "A DFAO is a room. It can vote how community standing is scored inside that room. H_cap is Auto from this till’s signed cash. No slider on the register. Smart contracts are rails so you do not hire an executive caste to babysit the meters. Looking at a graph to hunt WHO still writes a vertex.",
       "XP mint rules are planetary. Cash-out is a lose-condition. If a room votes cash-out, they forked. That is not a new country. Cash still works next door.",
     ],
     next: [

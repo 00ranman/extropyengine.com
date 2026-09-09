@@ -549,7 +549,7 @@ export const engineViews = {
     lines: [
       "Parallel system. Cash still clears. The overlay runs beside it as a check while the DAG learns. Absorption is ρ climbing, not a launch date.",
       "You do not have to work for the shop. CT is community standing on the web — same meter at grocery and laundry if they still speak the language. The shop only owns H: how much of that CT this ticket may use. Random shopping is allowed. It is just worse coupling for the web.",
-      "Three standings. XP is the world. CT_W is the town web — same at every compatible till. H_cap is this till this week. S is you at this house. β is CAT or on-duty this ticket. L = clip(H_cap · S · κ · CT_W · β, 0, 1). EP = XP · L + λ · L. Official skins show cash and the remainder.",
+      "Three standings. XP is the world. CT_W is the town web — same at every compatible till. H_cap is this till this pocket, Auto from signed cash. S is you at this house. β is CAT or on-duty this ticket. L = clip(H_cap · S · κ · CT_W · β, 0, 1). EP = XP · L + λ · L. Official skins show cash and the remainder.",
       "EP = XP · L + λ · L, born and burned in the same sale. λ keeps leaked XP from erasing a real local L. Early mesh: pennies. Staff still get wages.",
       "Cash skipped the old barter trap — the blacksmith who does not need your wheat today. Then cash became the thing people extract. This layer is the trade math without a matching want, and without a pile you can farm. Fiat still rings the rest until the mesh is dense enough that the layer can clear what you owe. Obsolete fiat is an attractor after that, not a year-one switch. Fridge does not lock. A house that juices L to harvest standing is farming; F, contest, and late burn still apply.",
     ],
@@ -717,7 +717,7 @@ export const engineStack = {
 
 export const engineLoop = [
   { code: "OPEN", note: "Task posted. Vertex on the DAG with causal parents. Evidence can hang off it." },
-  { code: "CLOSED", note: "Agreement. Provisional XP mints. The first settle window is a knob — 30 days was a starting number, not a law." },
+  { code: "CLOSED", note: "Agreement. Provisional XP mints. The first settle window is a knob — one pocket (40 days) is the starting number, not a law." },
   { code: "SETTLED", note: "Moves from provisional to standing. Still burnable later. XP is not spent. Access economy. Decay is already eating it." },
   { code: "BURNED", note: "A later verdict on that vertex. Same machine as late mint, the other way. Ordinary remaining pile after decades is dust. See the 0.99ⁿ note." },
 ] as const;
@@ -725,13 +725,13 @@ export const engineLoop = [
 export const engineDecay = {
   kicker: "Think it through",
   title: "What 0.99ⁿ actually does",
-  lead: "1% of what is left, about every 30 days. Not 1% of the original. Remaining after n months is 0.99ⁿ. Half-life ≈ 69 months. It never hits zero in the reals. That is a map seam, not a fuse.",
+  lead: "1% of what is left, each 40-day pocket. Not 1% of the original. Remaining after n idle pockets is 0.99ⁿ. Half-life ≈ 69 pockets (~7.6 years). It never hits zero in the reals. That is a map seam, not a fuse.",
   rows: [
-    { t: "~1 year", d: "≈ 89% of that mint still there" },
-    { t: "~5.8 years", d: "half-life. ≈ 50%" },
-    { t: "~8 years", d: "≈ 38%" },
-    { t: "~20 years", d: "≈ 9%" },
-    { t: "~30 years", d: "≈ 2.7% — dust of the original mint" },
+    { t: "~1 year", d: "≈ 91% of that mint still there" },
+    { t: "~7.6 years", d: "half-life. ≈ 50%" },
+    { t: "~8 years", d: "≈ 48%" },
+    { t: "~20 years", d: "≈ 16%" },
+    { t: "~30 years", d: "≈ 6.4% — dust of the original mint" },
   ],
   body: [
     "The long-horizon mechanism that still has weight is late mint, not late burn of a lawn. An ordinary loop, thirty years on, has leaked to a sliver. Clawing that sliver is a bookkeeping mark on a vertex. It is not a punishment that still moves a life.",
@@ -741,7 +741,7 @@ export const engineDecay = {
 } as const;
 
 export const engineTokens = [
-  { t: "XP", d: "Global standing. The letters are XP. ΔS is the reduction. XP is the proxy on the ledger. You do not spend it. Access economy. Decays ~1%/month of remaining." },
+  { t: "XP", d: "Global standing. The letters are XP. ΔS is the reduction. XP is the proxy on the ledger. You do not spend it. Access economy. Decays ~1%/pocket of remaining." },
   { t: "CT", d: "Community standing on web W. Reputation lives here. Posted tasks mint it. Cash-wrap kills compatibility." },
   { t: "L", d: "clip(H_cap · S · κ · CT_W · β, 0, 1)." },
   { t: "EP", d: "Till spark. EP = XP · L + λ · L, then it burns." },
@@ -782,7 +782,7 @@ export const engineDag = {
     "Every closed loop hangs evidence and a provisional ΔS on a vertex with causal parents. Next time a similar fight, a similar lawn, the network has somewhere to look besides a vibe.",
     "Edge intelligence unveils only the ZKP the equation needs. Nobody sits on the diary. Digital Autarky is how you get detail without a panopticon.",
     "Landauer is the bridge, not a costume: information erased has a heat floor. Social and cognitive events are information events. Bits-equivalent is the stand-in — a proxy, not a worshipped constant. If later data contradicts it, it moves. Not a metaphor. Physicists who stop at that sentence are not the audience.",
-    "A closed loop can still mint later. That is the long-horizon mechanism with weight: a later huge, cited ΔS — Nobel, a society-scale fix — writes a delta into the original vertex. Ordinary remaining pile at thirty years is ≈ 2.7% of that mint. Late burn of that dust is a mark on a vertex, not a sword. Settled is not sacred. The graph is allowed to catch up.",
+    "A closed loop can still mint later. That is the long-horizon mechanism with weight: a later huge, cited ΔS — Nobel, a society-scale fix — writes a delta into the original vertex. Ordinary remaining pile at thirty years is ≈ 6.4% of that mint. Late burn of that dust is a mark on a vertex, not a sword. Settled is not sacred. The graph is allowed to catch up.",
     "Curating that graph is work. A DAG specialist who makes the ledger more navigable is reducing entropy and minting XP. Human in the loop is not a disclaimer. It is a job the protocol pays.",
     "No extractive microtransaction at each hop. Transactionality is the loop itself. The machine talks to its own history. When interpretations of “this kind of fight” stop getting pushback, the needle moves less. That is calibration, not a cult of the founder — the founder has no privileged key.",
   ],

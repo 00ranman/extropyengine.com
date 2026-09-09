@@ -30,7 +30,7 @@ The other edge can refuse.
 If both edges hold, a **vertex** lands on a causal DAG.  
 If the signed mint rules fire, **XP** may move as global standing.  
 If this web tracks showing-up, **CT_W** may move as community standing.  
-At a till that turned the overlay on, the house slider **H** and that same **CT_W** make **L** on that ticket.  
+At a till running the overlay, **H_cap** (Auto from this door’s signed cash) and that same **CT_W** make **L** on that ticket.  
 **EP = XP · L + λ · L** is born and burned in that sale.  
 Cash, or whatever tender that country already uses, still prints on the receipt.  
 Later evidence can attach and **burn** status without erasing history.  
@@ -58,7 +58,7 @@ A fork that adds an order book or a sinking fund in XP has left this mesh even i
 
 ## D. Two computers
 
-**Classical computation** runs the coupling: clip, log, leak, burn, unique-in-DFAO, slam window, slider bounds. If-then. You can audit the function. `packages/xp-formula` is that box.
+**Classical computation** runs the coupling: clip, log, leak, burn, unique-in-DFAO, slam window, Auto H. If-then. You can audit the function. `packages/xp-formula` is that box.
 
 **Models at the edge** interpret messy human work into a claim packet: what happened, how long, which evidence, which mapper version, a proposed ΔS. They are packagers. They are not oracles of the universe and they are not the ledger. A human looking at a graph to hunt WHO still writes a vertex.
 
@@ -114,7 +114,7 @@ IT(m)   = IT_start · (0.95)^m     # idle months, order of magnitude
 
 **CT — community standing on web W.** Same number at grocery and laundromat if they still speak base CT. The door does not own this. The door owns H.
 
-**H — house slider.** 0 parks the overlay. 1 is maximum willingness to let L move. Auto mode may *propose* H from published door totals (waste, no-shows, margin). Auto must not require a person-level forehead. House can override.
+**H_cap — this till this pocket.** Auto from signed cash. Training pocket: remainder 0 until 40 days of signed tickets. Then clip(0.5 × cash_in / cash_out, 0, 1). No slider. No Off on the register. Unplug is Off. Auto must not require a person-level forehead.
 
 **β — optional door-local band.** ZKP or mapper band. Default 1.
 
@@ -128,7 +128,7 @@ IT(m)   = IT_start · (0.95)^m     # idle months, order of magnitude
 
 **ρ — index, not a person.** Overlay-touch over cash-plus-overlay-touch at a door or desk. Mycelium HUD. Not a moral rank.
 
-Three clocks: slam (Tₛ), class repeat (F), standing leak (0.99ⁿ). A fourth idle leak lives on IT. Do not mash them.
+Three clocks: slam (Tₛ), class repeat (F), standing leak (0.99ⁿ, n = idle 40-day pockets). IT is not a leak clock. Do not mash them.
 
 ---
 
@@ -178,7 +178,7 @@ XP(n) = XP_settled · 0.99ⁿ even if nobody sued. Idle standing dies. That is d
 
 You stand at a till that set H_cap > 0. L = clip(H_cap · S · κ · CT_W · β, 0, 1). EP = XP · L + λ · L.
 
-If κ is 0 they left the language. If H is 0 the house parked the overlay. Charlie does not set Oak’s slider.
+If κ is 0 they left the language. If they unplugged, there is no overlay. Charlie does not set Oak’s H.
 
 ---
 
@@ -283,7 +283,7 @@ Star-threshold language in the book is this pocket math. It is not a claim that 
 
 **Stored value / e-money (EU and others).** Some regimes treat leftover points as money. EP is designed to have no leftover. If a country still stamps it as money, that shop parks H.
 
-**Other states.** Some will ignore non-transferable standing. Some will ban anything that looks like private money. Edge sovereignty: park the slider. The mesh does not invade.
+**Other states.** Some will ignore non-transferable standing. Some will ban anything that looks like private money. Edge sovereignty: unplug. The mesh does not invade.
 
 **Not a currency** is a design sentence: no unit you hold and pass. If a government calls it money anyway, you still do not add an order book to “make it clearer.”
 

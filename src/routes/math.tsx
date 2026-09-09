@@ -7,7 +7,7 @@ export const Route = createFileRoute("/math")({
       { title: "Math — Extropy Engine" },
       {
         name: "description",
-        content: "The letters that are not tokens. Mint formula, house sliders, three leaks.",
+        content: "The letters that are not tokens. Mint formula, Auto H, three leaks.",
       },
     ],
   }),
@@ -69,7 +69,7 @@ function MathPage() {
         EP = XP · L + λ · L
       </p>
       <ul className="list-none space-y-2 p-0">
-        <li>H_cap — this till this week. Default 0.5. Auto from four-week cash.</li>
+        <li>H_cap — this till this pocket. Auto from signed cash. Training remainder 0 for 40 days.</li>
         <li>S — you at this house.</li>
         <li>κ — 1 on the language. 0 if they left it.</li>
         <li>β — CAT / on-duty this ticket.</li>
@@ -86,7 +86,7 @@ function MathPage() {
         Three leaks
       </h2>
       <p>
-        XP 0.99ⁿ. CT 0.99ⁿ idle on that web. IT is not a leak clock. It is recomputed each proposal
+        XP 0.99ⁿ. CT 0.99ⁿ idle on that web. n is idle 40-day pockets. IT is not a leak clock. It is recomputed each proposal
         and burned in the tally.
       </p>
       <p>

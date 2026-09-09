@@ -44,7 +44,7 @@ function CharterPage() {
       <p>
         Work in the world. Edge packager writes a claim (boundary, evidence, mapper version,
         proposed ΔS). Other edge can refuse. Vertex on a causal DAG. XP may move as global
-        standing. CT_W is the community meter. H_cap is this till this week. S is you here.
+        standing. CT_W is the community meter. H_cap is this till this pocket, Auto from signed cash. S is you here.
         β is CAT or on-duty. EP = XP · L + λ · L
         burns in that sale. Cash still prints. Later evidence can burn status without erasing
         history. Standing leaks. None of it lists.

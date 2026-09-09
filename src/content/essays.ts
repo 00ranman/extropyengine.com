@@ -356,7 +356,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "Rest / retirement",
         id: "rest",
-        def: "Not a hole. Standing already minted leaks slowly (~1%/month of remaining). Living still writes loops — house, care, recovery, a garden. No PTO token. Sick is not a clawback. Vacation is not theft from a boss. If you vanish from every loop including your own life, it fades like anyone else’s. That is the treadmill, not unemployment.",
+        def: "Not a hole. Standing already minted leaks slowly (~1%/pocket of remaining). Living still writes loops — house, care, recovery, a garden. No PTO token. Sick is not a clawback. Vacation is not theft from a boss. If you vanish from every loop including your own life, it fades like anyone else’s. That is the treadmill, not unemployment.",
       },
       {
         term: "Quest market",
@@ -452,7 +452,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "XP",
         id: "xp",
-        def: "Standing meter. The letters are XP. That is the name. Not Extropy Points. Not Experience Points as a brand. Global standing: every door can see that closed loops survived. ΔS is the entropy reduction. XP is a measurable proxy to that ΔS on the ledger. Minted on verified ΔS > 0. Cannot be purchased or transferred. You do not spend it — access economy. Decays ~1%/month of what is left. Half-life ~69 months. Not L. Not CT.",
+        def: "Standing meter. The letters are XP. That is the name. Not Extropy Points. Not Experience Points as a brand. Global standing: every door can see that closed loops survived. ΔS is the entropy reduction. XP is a measurable proxy to that ΔS on the ledger. Minted on verified ΔS > 0. Cannot be purchased or transferred. You do not spend it — access economy. Decays ~1%/pocket of what is left. Half-life ~69 pockets (~7.6 years). Not L. Not CT.",
       },
       {
         term: "ΔS is not XP",
@@ -603,12 +603,12 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "Late burn",
         id: "late-burn",
-        def: "Same machine as late mint, the other direction. A later-revealed harm, cited, can mark the vertex BURNED and slash remaining dust plus any new delta that sat on that citation. Scope is the vertex and citation-gated children, not the whole wallet. You do not claw back what decay already ate. Ordinary remaining pile at 30 years is ≈ 2.7% of that mint — bookkeeping, not a sword over a lawn. False late-burn can burn the accuser. A ratchet that only adds is a church.",
+        def: "Same machine as late mint, the other direction. A later-revealed harm, cited, can mark the vertex BURNED and slash remaining dust plus any new delta that sat on that citation. Scope is the vertex and citation-gated children, not the whole wallet. You do not claw back what decay already ate. Ordinary remaining pile at 30 years is ≈ 6.4% of that mint — bookkeeping, not a sword over a lawn. False late-burn can burn the accuser. A ratchet that only adds is a church.",
       },
       {
         term: "XP decay",
         id: "xp-decay",
-        def: "Treadmill, not a court. ρ ≈ 1% of the remaining pile per ~30 days (knob). Remaining after n months: 0.99ⁿ. Half-life ≈ 69 months (~50%). ~1 year ≈ 89%. ~8 years ≈ 38%. ~20 years ≈ 9%. ~30 years ≈ 2.7%. Never zero in the reals — map seam, not a fuse. Dust floor on a machine. You keep minting or the pile fades. Late mint is the decades-later mechanism that can still move a number (huge cited ΔS). Late burn of ordinary remaining dust is not a headline.",
+        def: "Treadmill, not a court. ~1% of the remaining pile per 40-day pocket. Remaining after n idle pockets: 0.99ⁿ. Half-life ≈ 69 pockets (~7.6 years, ~50%). ~1 year ≈ 91%. ~8 years ≈ 48%. ~20 years ≈ 16%. ~30 years ≈ 6.4%. Never zero in the reals — map seam, not a fuse. Dust floor on a machine. You keep minting or the pile fades. Late mint is the decades-later mechanism that can still move a number (huge cited ΔS). Late burn of ordinary remaining dust is not a headline.",
       },
       {
         term: "The glass of water",

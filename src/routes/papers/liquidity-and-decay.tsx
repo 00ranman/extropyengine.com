@@ -58,7 +58,7 @@ function Paper() {
             on repeats, not fidelity. ΔS is a bits-equivalent proxy for verified reduction inside a
             declared boundary, not XP. w · E is weighted emergence across eight domains. Tₛ is the
             slam window for this loop. XP is global standing after the mint. CT is standing at this
-            door. H is the house slider. L is this ticket. EP is XP × L and dies when the ticket
+            door. H_cap is Auto from this till. L is this ticket. EP is XP × L and dies when the ticket
             dies. CAT and IT stay off the mint.
           </p>
           <p className="font-mono text-[13px] text-fg">
@@ -105,7 +105,7 @@ function Paper() {
           <p>
             Two-person puff at Alice’s shop: EP discounts Alice’s own ticket. The Engine does not
             reimburse her in dollars. Take that XP to Charlie: CT at Charlie’s door is zero unless
-            work happened there, so L is zero unless Charlie’s slider is a joke. Charlie eats his
+            work happened there, so L is zero unless Oak’s Auto H is a joke. Charlie eats his
             own H.
           </p>
           <p>

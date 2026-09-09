@@ -61,9 +61,9 @@ IT is not a 5%/month pile. That line is dead.
 
 | Thing | Job | Default (knob) |
 | --- | --- | --- |
-| Settle window | Provisional → standing | ~30 days was a throw. Could be 5–40. Per-DFAO. |
+| Settle window | Provisional → standing | One pocket (40 days) is the starting number. Per-DFAO. |
 | Late burn | Standing can still die | No expiry. Thirty years later is still allowed. |
-| XP decay | Pile shrinks with no dispute | ρ = 0.01 / 30 cycles (~1%/month **of remaining**, multiplicative). Half-life ~69 months. Never hits 0; floor → access band. Knob. Not late burn. |
+| XP decay | Pile shrinks with no dispute | 0.99 per 40-day pocket (~1% of remaining). Half-life ~69 pockets (~7.6 years). Never hits 0; floor → access band. Knob. Not late burn. |
 | IT | This-proposal standing | clip(H_gov · S_gov · κ · CT_W · β_gov, 0, 1). Burns in the tally. |
 
 Possible axiom, not written: some XP and some IT always burn.
@@ -90,7 +90,7 @@ Landauer is the claimed conversion, not a costume: information erased has a heat
 
 2. **Symmetric burn.** Yes. Late mint and late burn are the same machine. Disaster-president can burn the teacher’s earlier XP if the new evidence holds. No expiry. A ratchet that only adds is a church. False late-burn is a claim; it can burn the accuser. Whether burn should be *harder* than mint (griefing) is a knob, not an axiom yet.
 
-   Decay ≠ burn. 1%/month of remaining never hits zero in the reals (0.99^n). That’s a map seam, not a fuse. On a machine: dust floor → access band. Late burn after most of the pile has leaked does **not** claw back the 99% that’s gone. It marks the vertex BURNED, slashes remaining dust, drops a band that sat on that mint. Scope: that vertex + citation-gated children, not the person’s whole wallet.
+   Decay ≠ burn. 1%/pocket of remaining never hits zero in the reals (0.99^n, n = idle 40-day pockets). That’s a map seam, not a fuse. On a machine: dust floor → access band. Late burn after most of the pile has leaked does **not** claw back the 99% that’s gone. It marks the vertex BURNED, slashes remaining dust, drops a band that sat on that mint. Scope: that vertex + citation-gated children, not the person’s whole wallet.
 
 3. **Bits-equivalent for a fight.** Not a thermometer. Not a 1/10 validator caste — that is not in the canon. SignalFlow + PSLL + evidence propose a provisional bits-equivalent (uncertainty collapsed, duration, recurrence, who confirms). Other side of the loop agrees. Domain-native terms → bits-equivalent proxy → mint formula. You never type in your own score.
 
@@ -182,7 +182,7 @@ The extractive picture: clock in, clock out, rest is a hole, only what you sold 
 Kill that in 3.0.
 
 - **Own lawn.** The ΔS is the grass. HomeFlow can close it. Neighbor-mows-yours is two households. You-mow-yours is one house taking care of itself. Same physical reduction. You do not type a score. F still applies if it is every Saturday.
-- **No PTO token.** Standing already minted is what you live on while you rest. XP leak is ~1%/month of remaining, not a pink slip. Sick is not a clawback. Care is a loop for the person who shows up. Recovery can be biological ΔS if the loop closes.
+- **No PTO token.** Standing already minted is what you live on while you rest. XP leak is ~1%/pocket of remaining, not a pink slip. Sick is not a clawback. Care is a loop for the person who shows up. Recovery can be biological ΔS if the loop closes.
 - **Buying is coupling, not a mint.** Patronage can move CT_W. Cash cannot mint XP. The till only chooses H.
 - **Anything verifiable.** Self-report, sensor, claim, assistant — then the other side agrees. Work-for-a-boss is one input. Living was never inside that box.
 
@@ -209,7 +209,7 @@ Three clocks. Do not mash:
 | --- | --- |
 | Tₛ | This loop’s elapsed time. Slam-shut at 0. Capped. |
 | F | Repeating the action class. |
-| 0.99ⁿ | Standing after settlement. ~1%/month of remaining. |
+| 0.99ⁿ | Standing after settlement. ~1%/pocket of remaining. n = idle 40-day pockets. |
 
 Settle window is provisional → standing. IT is this-proposal standing, not a leak clock. Neither is Tₛ.
 

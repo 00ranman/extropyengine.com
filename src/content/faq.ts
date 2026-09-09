@@ -69,7 +69,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "xp-small",
         q: "If standing takes ~30 years to go to dust, won't whales own the till?",
-        a: "Only if each loop mints a fat number. Leak is ~1% of remaining per month. Steady pile ≈ monthly inflow ÷ 0.01. Ten fat lawns a month becomes a pile that still moves a life a decade later. So an ordinary MICRO close targets 0.01–1 XP, not 100. F already taxes repeats. Slam-shut mints zero. At the drawer, EP cannot exceed this ticket times H_cap. XP is not dollars. IT does not use XP at all.",
+        a: "Only if each loop mints a fat number. Leak is ~1% of remaining per 40-day pocket. Steady pile ≈ pocket inflow ÷ 0.01. Ten fat lawns a pocket becomes a pile that still moves a life a decade later. So an ordinary MICRO close targets 0.01–1 XP, not 100. F already taxes repeats. Slam-shut mints zero. At the drawer, EP cannot exceed this ticket times H_cap. XP is not dollars. IT does not use XP at all.",
         also: [
           { label: "Defaults", href: "/defaults" },
           { label: "Letter key", href: "/key" },
@@ -102,7 +102,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "explain",
         q: "How do I explain this without saying entropy token?",
-        a: "Verified change in a system. Causal evidence on a DAG. Standing from that evidence. Standing is not money — it can change access. ΔS is the measurement proxy. XP is world standing. CT_W is the town web. H_cap is this till this week. S is you here. β is CAT or on-duty. L = clip(H_cap · S · κ · CT_W · β, 0, 1). EP = XP · L + λ · L, then it burns. CAT is skill. IT is this-proposal standing, burned in the tally.",        also: [
+        a: "Verified change in a system. Causal evidence on a DAG. Standing from that evidence. Standing is not money — it can change access. ΔS is the measurement proxy. XP is world standing. CT_W is the town web. H_cap is this till this pocket, Auto from signed cash. S is you here. β is CAT or on-duty. L = clip(H_cap · S · κ · CT_W · β, 0, 1). EP = XP · L + λ · L, then it burns. CAT is skill. IT is this-proposal standing, burned in the tally.",        also: [
           { label: "Ledger", href: "/#ledger" },
           { label: "Three clocks", href: "/glossary", hash: "three-clocks" },
           { label: "Open problems", href: "/open-problems" },
@@ -216,7 +216,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "cat-ct-it",
         q: "What are CAT, CT, and IT?",
-        a: "CAT is a skill record: lane + level + issuer. Feeds β when on-duty. CT is community standing on the web — same number at compatible tills — idle leak ~1% (0.99ⁿ). Activity on that web resets the clock. CT does not travel. IT is this-proposal standing, clip(H_gov · S_gov · κ · CT_W · β_gov, 0, 1), burned in the tally. Not a pile. None of these are bags.",
+        a: "CAT is a skill record: lane + level + issuer. Feeds β when on-duty. CT is community standing on the web — same number at compatible tills — idle leak ~1% per pocket (0.99ⁿ). Activity on that web resets the clock. CT does not travel. IT is this-proposal standing, clip(H_gov · S_gov · κ · CT_W · β_gov, 0, 1), burned in the tally. Not a pile. None of these are bags.",
         also: [
           { label: "CAT", href: "/glossary", hash: "cat" },
           { label: "CT", href: "/glossary", hash: "ct" },
@@ -315,7 +315,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "burn",
         q: "If the president is later a disaster, can the teacher’s XP be destroyed?",
-        a: "Late mint first. Same machine both ways. A later huge ΔS — Nobel, a society-scale fix — can still write a citation-gated delta into the original vertex. That is when decades later still has weight. Late burn of later-revealed harm is the other direction. It slashes remaining dust plus that new delta. It does not empty the wallet. Ordinary XP thirty years on is ≈ 2.7% of the original mint (0.99³⁶⁰). Clawing a lawn from 1996 is bookkeeping. Treating “it can take your XP away in 30 years” as the headline, without the mint direction and without the curve, skips the logistics.",
+        a: "Late mint first. Same machine both ways. A later huge ΔS — Nobel, a society-scale fix — can still write a citation-gated delta into the original vertex. That is when decades later still has weight. Late burn of later-revealed harm is the other direction. It slashes remaining dust plus that new delta. It does not empty the wallet. Ordinary XP thirty years on is ≈ 6.4% of the original mint (0.99ⁿ, n ≈ 274 pockets). Clawing a lawn from 1996 is bookkeeping. Treating “it can take your XP away in 30 years” as the headline, without the mint direction and without the curve, skips the logistics.",
         also: [
           { label: "Late mint", href: "/glossary", hash: "late-mint" },
           { label: "Late burn", href: "/glossary", hash: "late-burn" },
@@ -324,20 +324,20 @@ export const faqSections: FaqSection[] = [
       },
       {
         id: "decay",
-        q: "1% every 30 days — so it lasts 30,000 days?",
-        a: "No. 1% of what is left, each ~30 days. Remaining after n months is 0.99ⁿ. Half-life ≈ 69 months (~5.8 years, half still there). ~8 years ≈ 38%. ~20 years ≈ 9%. ~30 years ≈ 2.7% — dust. It never hits zero in the reals. 30,000 days is the wrong arithmetic. Decay is a leak. Late mint is the long-horizon mechanism that can still move a number, and only for a later huge, cited ΔS. Late burn of ordinary remaining pile is a mark on a vertex, not a sword.",
+        q: "1% every 40 days — so it lasts forever?",
+        a: "No. 1% of what is left, each 40-day pocket. Remaining after n idle pockets is 0.99ⁿ. Half-life ≈ 69 pockets (~7.6 years, half still there). ~1 year ≈ 91%. ~8 years ≈ 48%. ~20 years ≈ 16%. ~30 years ≈ 6.4% — dust. It never hits zero in the reals. Counting 40,000 days is the wrong arithmetic. Decay is a leak. Late mint is the long-horizon mechanism that can still move a number, and only for a later huge, cited ΔS. Late burn of ordinary remaining pile is a mark on a vertex, not a sword.",
         also: [{ label: "XP decay", href: "/glossary", hash: "xp-decay" }, { label: "0.99ⁿ", href: "/#decay" }],
       },
       {
         id: "clawback",
         q: "If most of it already leaked, do you claw the old XP back?",
-        a: "No. You don’t collect what decay already ate. You mark the vertex BURNED and slash remaining dust. At 30 years that remaining is ≈ 2.7% of the original mint. The DAG does not forget. The wallet does not get a 1996-shaped hole.",
+        a: "No. You don’t collect what decay already ate. You mark the vertex BURNED and slash remaining dust. At 30 years that remaining is ≈ 6.4% of the original mint. The DAG does not forget. The wallet does not get a 1996-shaped hole.",
         also: [{ label: "Late burn", href: "/glossary", hash: "late-burn" }],
       },
       {
         id: "thirty",
         q: "Is the 30-day settle window a law?",
-        a: "No. It was a starting number. Could be 5–40. Per-DFAO knob. Late burn has no expiry either way. IT is not a 5%/month pile. XP decay is ~1%/month of remaining. CT idle-leaks on the same keep.",
+        a: "No. It was a starting number. One pocket (40 days) is the default now. Per-DFAO knob. Late burn has no expiry either way. IT is not a leak pile. XP decay is ~1%/pocket of remaining. CT idle-leaks on the same keep.",
       },
       {
         id: "three-clocks",
@@ -389,7 +389,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "if-then",
         q: "Isn’t a smart contract just crypto?",
-        a: "Smart contracts. Not crypto. No exchange. No JPEG. No transfer of standing. The listed-chain version is dumb because the ‘then’ is move a bag. Here the then is mint, park H_cap, flip β, print a remainder. Tokenomics without a pool. That is the brag. Break it.",
+        a: "Smart contracts. Not crypto. No exchange. No JPEG. No transfer of standing. The listed-chain version is dumb because the ‘then’ is move a bag. Here the then is mint, Auto H_cap from this till, flip β, print a remainder. Tokenomics without a pool. That is the brag. Break it.",
         also: [{ label: "Smart contracts", href: "/smart-contracts" }],
       },
       {
@@ -401,7 +401,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "l-farm",
         q: "Can a shop (or a DFAO) just crank L and extract XP?",
-        a: "That’s the economic attack. L is community CT against the house slider. Same CT at every compatible till. The slider is the only control this house has. It is public and writes a vertex. Optional auto uses this till’s load and inbound need. Both edges still accept the estimate. Cash rings the rest. A house that juices the slider to harvest standing is farming; F, contest, late burn still apply.",
+        a: "That’s the economic attack. L is community CT against this till’s Auto H_cap. Same CT at every compatible till. There is no slider. H_cap comes from this door’s signed cash after a 40-day training pocket (remainder 0 until then). Both edges still accept the estimate. Cash rings the rest. A house that wants no overlay unplugs the node.",
         also: [
           { label: "Emergent Product", href: "/glossary", hash: "emergent-product" },
           { label: "Open problems", href: "/open-problems" },
@@ -419,7 +419,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "who-turns-knobs",
         q: "Who is allowed to change XP, CT, and L?",
-        a: "Different floors. L = clip(H_cap · S · κ · CT_W · β, 0, 1). CT_W is the same community meter at every compatible till. H_cap is the week. S is you here. A wrap that broke the rules, or another mesh, is the only way the laundromat does not read the grocery.",
+        a: "Different floors. L = clip(H_cap · S · κ · CT_W · β, 0, 1). CT_W is the same community meter at every compatible till. H_cap is Auto this pocket. S is you here. A wrap that broke the rules, or another mesh, is the only way the laundromat does not read the grocery.",
         also: [
           { label: "Letter key", href: "/key" },
           { label: "Engine — shop view", href: "/#engine" },
@@ -427,8 +427,8 @@ export const faqSections: FaqSection[] = [
       },
       {
         id: "l-zkp",
-        q: "How do domain bands and the slider meet at the till?",
-        a: "You may show this door domain bands as ZKPs. Those bands plus CT_W go against H and become L for this ticket. Auto-H reads this till’s load. Looking at a graph to hunt WHO still writes a vertex.",
+        q: "How do domain bands meet Auto H at the till?",
+        a: "You may show this door domain bands as ZKPs. Those bands plus CT_W go against Auto H_cap and become L for this ticket. H reads this till’s signed cash after the training pocket. Looking at a graph to hunt WHO still writes a vertex.",
         also: [
           { label: "L", href: "/glossary", hash: "l" },
           { label: "ZKP", href: "/glossary", hash: "zkp" },

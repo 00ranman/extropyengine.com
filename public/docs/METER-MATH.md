@@ -16,7 +16,7 @@ Defaults and change rules, before a live till: [/docs/DEFAULTS.md](/docs/DEFAULT
 
 - **Tokenomics** here means how XP, CT, H, L, EP, CAT, IT, leaks, gates, and CT-compatibility couple. Balancing acts.
 - **Token** as a bag you transfer or cash out is a lose-condition.
-- **H_cap** — this till this week. Inbound dollars. Same for the line.
+- **H_cap** — this till this pocket. Auto from signed cash. Training remainder 0.
 - **S** — this person at this house. Fake-proof and spite land here on a short clock.
 - **β** — CAT / on-duty / card this ticket. Off the clock, drop it. Not a CT wrap.
 - **Community web** W is the set of DFAOs that still read each other’s **base CT** one-to-one.
@@ -30,7 +30,7 @@ Defaults and change rules, before a live till: [/docs/DEFAULTS.md](/docs/DEFAULT
 | XP | Global standing meter | No. No cash-out. | Planetary. Earned on closed loops. |
 | CT | Community standing meter on web W | No | DFAO posts task values and may wrap. Base CT stays compatible only if §4c holds. |
 | ρ_W | Reputation density on web W | No | Enters **CT only**. Never the XP mint. |
-| H_cap | House cap this week | No. Vertex. | This till. Inbound cash. Same for the line. |
+| H_cap | House cap this pocket | No. Auto. | This till’s signed cash. Training remainder 0. |
 | S | This person at this house | No | Auto from this door’s history. Short teeth. |
 | κ | Compatibility with W | No | 1 if base. 0 if they left the language. |
 | β | Proofs this ticket | No | CAT / on-duty. Not a wrap. |
@@ -40,7 +40,7 @@ Defaults and change rules, before a live till: [/docs/DEFAULTS.md](/docs/DEFAULT
 | ρ | Fiat residual index | No | Door totals. Not a person. Not ρ_W. |
 | CAT | Skill record | Unique | Off the XP mint. |
 | IT | Governance meter | No | Off the XP mint. |
-| 0.99ⁿ | XP leak | — | ~1%/month remaining. Planetary. |
+| 0.99ⁿ | XP leak | — | ~1%/pocket remaining. Planetary. n = idle 40-day pockets. |
 | 0.99ⁿ | CT leak | — | Idle on web W. Same keep as XP. Activity resets n. Does not travel. |
 | IT | This proposal | Burns | clip(H_gov · S_gov · κ · CT_W · β_gov, 0, 1) |
 | ℱ | Falsifiability | — | Lose-conditions. Not the letter F. |
@@ -182,7 +182,7 @@ Cash is the early honesty check. When ρ is high the remainder is small and the 
 
 ## 5. H_cap and S
 
-H_cap ∈ [0, 1]. This till this week. Same for everyone in line. Inbound dollars live here. Default 0.5. 0 parks the overlay.
+H_cap ∈ [0, 1]. This till this pocket. Auto from this door’s signed cash. Training: remainder 0 until 40 days of signed tickets. Then clip(0.5 × cash_in / cash_out, 0, 1). No slider. No Off on the register. Unplug is Off.
 
 S ∈ [0, 1]. This person at this house. Auto from this door’s history. Spite and fake-proofs cut S on a short clock.
 
@@ -194,7 +194,7 @@ L = clip(H_cap · S · κ · CT_W · β, 0, 1)
 
 XP is the world.  
 CT_W is the town web.  
-H_cap is whether this house is open this week.  
+H_cap is whether this house can carry remainder this pocket.  
 S is whether they know you here.  
 β is the proof on this ticket.  
 κ is whether they still speak the language.
@@ -227,13 +227,13 @@ Same mint. Same no-bag. Spark dies. That is how carbon and debt get a real close
 
 **CAT** — (DID, lane, level, issuer). Not a pile.
 
-**IT** — voice.
+**IT** — voice this proposal.
 
 \[
-\mathrm{IT}(m) = \mathrm{IT}_{\text{idle-start}} \cdot (0.95)^{m}
+\mathrm{IT} = \mathrm{clip}(H_{\mathrm{gov}} \cdot S_{\mathrm{gov}} \cdot \kappa \cdot CT_W \cdot \beta_{\mathrm{gov}},\, 0,\, 1)
 \]
 
-Unsettled XP does not drive IT.
+Burns in the tally. No pile. Unsettled XP does not drive IT.
 
 ---
 
@@ -259,4 +259,4 @@ Not six coins.
 Not “CT is one store’s loyalty punch card.”  
 Not SI social entropy.
 
-It is global standing, community standing on a compatible web, a house slider that starts at half, and one spark that dies when the ticket dies.
+It is global standing, community standing on a compatible web, Auto H from this till, and one spark that dies when the ticket dies.

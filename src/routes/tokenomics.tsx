@@ -47,7 +47,7 @@ function TokenomicsHub() {
         <Link to="/key" className="text-primary hover:underline">
           letter key
         </Link>
-        . The other letters — R, F, ΔS, the sliders, the leaks — are{" "}
+        . The other letters — R, F, ΔS, Auto H, the leaks — are{" "}
         <Link to="/math" className="text-primary hover:underline">
           math
         </Link>
