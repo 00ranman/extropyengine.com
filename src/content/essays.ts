@@ -593,7 +593,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "Late mint",
         id: "late-mint",
-        def: "A closed loop is not the last word. The long-horizon mechanism that still has weight is this one: later domains converge, a new vertex cites the old one, a huge ΔS shows up — Nobel, a society-scale fix — and the original vertex can mint a delta. Not a second full paycheck. Ordinary work thirty years on has already leaked to dust on the 0.99ⁿ curve; that is not the story. Citation-gated. Settled is not sacred.",
+        def: "A closed loop is not the last word. The long-horizon mechanism that still has weight is this one: later domains converge, a new vertex cites the old one, a huge ΔS shows up — Nobel, a society-scale fix — and that citation mints a delta *now*. Not a second full paycheck. Not back-pay with 30 years of leak already applied. Ordinary work a decade on is already dust on the 0.99ⁿ curve; that is not the story. Citation-gated. Settled is not sacred.",
       },
       {
         term: "Citation-gated credit",

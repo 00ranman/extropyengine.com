@@ -734,8 +734,8 @@ export const engineDecay = {
     { t: "~10 years", d: "dust of the original mint" },
   ],
   body: [
-    "The long-horizon mechanism that still has weight is late mint, not late burn of a lawn. An ordinary loop, thirty years on, has leaked to a sliver. Clawing that sliver is a bookkeeping mark on a vertex. It is not a punishment that still moves a life.",
-    "Late mint is the same machine going the other way: new evidence, citation-gated, a later huge ΔS — a student who becomes a Nobel, someone who actually fixes a broken piece of the world — can still write a delta into the original vertex. That is when thirty years later still matters. You get the delta of the proxy, not a second full paycheck, and only along asserted edges.",
+    "The long-horizon mechanism that still has weight is late mint, not late burn of a lawn. An ordinary loop, a decade on, is dust. Clawing that dust is a bookkeeping mark on a vertex. It is not a punishment that still moves a life.",
+    "Late mint is the same machine going the other way: new evidence, citation-gated, a later huge ΔS — a student who becomes a Nobel, someone who actually fixes a broken piece of the world — writes a delta *now*. n = 0 on that delta. That is when thirty years later still matters. You get the delta of the proxy, not a second full paycheck, and only along asserted edges.",
     "Late burn of that same later-revealed harm is the symmetric case. It slashes remaining dust plus whatever new delta sat on that citation. It is not a time machine emptying the wallet. It does not reach back and un-mow the common. Treating “XP can be taken away in 30 years” as the headline, without the mint direction and without the 0.99ⁿ curve, is not the logistics.",
   ],
 } as const;

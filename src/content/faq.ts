@@ -25,7 +25,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "proxy-not-si",
         q: "Social domains are not thermodynamics. You dressed a vibe in ΔS.",
-        a: "ΔS here is a bits-equivalent proxy inside a declared boundary. Not SI social heat. Not XP. Landauer is a conversion floor for information erased, not a license to add a mediation to a heat bath. Physics constants were proxies that survived attack. They will move again when better data arrives. Same honesty: the stick updates. A new vertex cites the old one. The old row stays. A DAG does not edit. It does not delete. It branches. ‘Late burn’ is a later mark on that chain, not a time machine emptying a wallet. Standing already leaked; thirty years on, most of an ordinary mint is dust. The mark is bookkeeping plus whatever new delta sat on the citation.",
+        a: "ΔS here is a bits-equivalent proxy inside a declared boundary. Not SI social heat. Not XP. Landauer is a conversion floor for information erased, not a license to add a mediation to a heat bath. Physics constants were proxies that survived attack. They will move again when better data arrives. Same honesty: the stick updates. A new vertex cites the old one. The old row stays. A DAG does not edit. It does not delete. It branches. ‘Late burn’ is a later mark on that chain, not a time machine emptying a wallet. Standing already leaked; a decade on, an ordinary mint is dust. The mark is bookkeeping plus whatever new delta sat on the citation.",
         also: [
           { label: "Letter key", href: "/key" },
           { label: "ΔS", href: "/key", hash: "delta-s" },
@@ -68,7 +68,7 @@ export const faqSections: FaqSection[] = [
       },
       {
         id: "xp-small",
-        q: "If standing takes ~30 years to go to dust, won't whales own the till?",
+        q: "If standing takes years to go to dust, won't whales own the till?",
         a: "Only if each loop mints a fat number. Leak is ~1% of remaining every two weeks. Steady pile ≈ two-week inflow ÷ 0.01. Ten fat lawns a fortnight becomes a pile that still moves a couple of years later. So an ordinary MICRO close targets 0.01–1 XP, not 100. F already taxes repeats. Slam-shut mints zero. At the drawer, EP cannot exceed this ticket times H_cap. XP is not dollars. IT does not use XP at all.",
         also: [
           { label: "Defaults", href: "/defaults" },
@@ -315,7 +315,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "burn",
         q: "If the president is later a disaster, can the teacher’s XP be destroyed?",
-        a: "Late mint first. Same machine both ways. A later huge ΔS — Nobel, a society-scale fix — can still write a citation-gated delta into the original vertex. That is when decades later still has weight. Late burn of later-revealed harm is the other direction. It slashes remaining dust plus that new delta. It does not empty the wallet. Ordinary XP five years on is ≈ 16% of the original mint. A decade is dust. Clawing a lawn from 1996 is bookkeeping. Treating “it can take your XP away in 30 years” as the headline, without the mint direction and without the curve, skips the logistics.",
+        a: "Late mint first. Same machine both ways. A later huge ΔS — Nobel, a society-scale fix — writes a citation-gated delta *now*. n starts at 0 on that delta. You do not inflate a 1996 pile and then leak it. Ordinary remaining standing is half gone in ~1.9 years and dust in a decade. That is when decades later still has weight: the new cited delta, not the old dust. Late burn slashes remaining plus children, and marks the chain. Treating “it can take your XP away in 30 years” as the headline skips the logistics.",
         also: [
           { label: "Late mint", href: "/glossary", hash: "late-mint" },
           { label: "Late burn", href: "/glossary", hash: "late-burn" },
