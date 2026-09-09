@@ -247,8 +247,8 @@ function UniversalTimes() {
               <p className="mt-1 max-w-xl text-sm leading-relaxed text-dim">
                 This star. Weeks only. A week is 5 days (social). Week 1 through week 73 = 365
                 days. Leap year: week 74, one day. No months. No extra named chunk. Seasons are the
-                four orbit marks. The Engine leaks standing every two weeks. Auto H still reads
-                eight weeks of till cash.
+                four orbit marks. The Engine leaks standing every 10 days. Auto H still reads
+                40 days of till cash.
               </p>
             </div>
             <div className="font-mono text-xs tracking-[0.12em] text-accent">

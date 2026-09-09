@@ -60,7 +60,7 @@ export const symbolKey = {
       id: "xp",
       glyph: "XP",
       name: "Global standing",
-      is: "The letters are XP. Proxy of ΔS on the ledger after the mint. Every door can see that you have standing. You do not spend it. Access economy. Decays ~1% of remaining every two weeks (0.99ⁿ). How XP works is planetary. A DFAO does not rewrite the mint. Cash-out is a lose-condition. If they vote that in, they forked.",
+      is: "The letters are XP. Proxy of ΔS on the ledger after the mint. Every door can see that you have standing. You do not spend it. Access economy. Decays ~1% of remaining every 10 days (0.99ⁿ). How XP works is planetary. A DFAO does not rewrite the mint. Cash-out is a lose-condition. If they vote that in, they forked.",
       isNot: "Not “Extropy Points.” Not a cash bag. Not ΔS itself. Not L. Not CT. Not Randall’s private ledger.",
     },
     {
@@ -74,7 +74,7 @@ export const symbolKey = {
       id: "h",
       glyph: "H_cap",
       name: "House cap this pocket",
-      is: "This till this window. Auto from this door’s signed cash. Training: remainder 0 until eight weeks of signed tickets. Then clip(0.5 × cash_in / cash_out, 0, 1). No slider. No Off on the register. Unplug is Off.",
+      is: "This till this window. Auto from this door’s signed cash. Training: remainder 0 until 40 days of signed tickets. Then clip(0.5 × cash_in / cash_out, 0, 1). No slider. No Off on the register. Unplug is Off.",
       isNot: "Not S. Not CT. Not a wrap. Not wages. Not a cashier toy.",
     },
     {
@@ -116,7 +116,7 @@ export const symbolKey = {
       id: "ct",
       glyph: "CT",
       name: "Community standing",
-      is: "Community standing on web W — DFAOs that still read base CT one-to-one. Same CT at the grocery and the laundromat until someone wraps. Idle leak 0.99ⁿ (~1% every two weeks), same keep as XP. A close, till spark, or posted task on W resets the clock. Does not travel to the next town.",
+      is: "Community standing on web W — DFAOs that still read base CT one-to-one. Same CT at the grocery and the laundromat until someone wraps. Idle leak 0.99ⁿ (~1% every 10 days), same keep as XP. A close, till spark, or posted task on W resets the clock. Does not travel to the next town.",
       isNot: "Not a coin. Not a job application. Not global XP. Not L itself.",
     },
     {
@@ -137,7 +137,7 @@ export const symbolKey = {
       id: "leak",
       glyph: "0.99ⁿ",
       name: "Standing leak",
-      is: "Two standing clocks plus a gavel that is not a clock. XP 0.99ⁿ. CT 0.99ⁿ idle on that web. n is idle two-week counts. IT is recomputed each proposal and burned in the tally.",
+      is: "Two standing clocks plus a gavel that is not a clock. XP 0.99ⁿ. CT 0.99ⁿ idle on that web. n is idle 10-day counts. IT is recomputed each proposal and burned in the tally.",
       isNot: "Not Tₛ. Not F.",
     },
   ],

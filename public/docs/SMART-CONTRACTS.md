@@ -14,7 +14,7 @@ Not “the blockchain moved your coins.” A published case looks at signed reco
 
 **The register.** Cash still rings. The till reads world standing, community standing, this shop’s cap this week, how this shop knows you, and any on-duty proof. It prints cash collected and overlay touch. The spark dies when the ticket dies. Your grocery spark does not pay the truck. The truck is its own ticket later.
 
-**The till window.** If eight weeks of cash-in versus cash-out say the inbound bill is still heavy, the shop’s cap steps down for everyone in line. New till: remainder 0 until that window fills.
+**The till window.** If 40 days of cash-in versus cash-out say the inbound bill is still heavy, the shop’s cap steps down for everyone in line. New till: remainder 0 until that window fills.
 
 **The badge.** If a trucker’s skill record says they are on this run, the diner and the hotel treat them like a local for that ticket. When the run ends, the badge goes dark. Same community language. Not a new coin.
 

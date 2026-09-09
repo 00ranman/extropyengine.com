@@ -51,7 +51,7 @@ Same confirmation loop at every scale. What scales:
 
 Post work. Someone does it. You confirm. That is already a DFAO. LocalFlow is the errand face so nobody has to say “protocol.” SignalFlow is how the ΔS gets proposed — you do not type in a score. One person is NANO. A crew is MICRO. When the crew grows a second crew, you nest. You do not wait for a priesthood, and you do not wait until you have exactly seven.
 
-Votes rewrite the DFAO they are cast in: settle window, decay rates, quorum. They do not rewrite the mesh. PLANETARY is the only room that hits everyone, and getting a vote through there is supposed to be hard. Defaults (eight-week settle window among them) are knobs, not axioms. There may yet be a floor: some XP and some IT always burn. That would be an axiom. It is not written in as one yet.
+Votes rewrite the DFAO they are cast in: settle window, decay rates, quorum. They do not rewrite the mesh. PLANETARY is the only room that hits everyone, and getting a vote through there is supposed to be hard. Defaults (40-day settle window among them) are knobs, not axioms. There may yet be a floor: some XP and some IT always burn. That would be an axiom. It is not written in as one yet.
 
 ## Source
 

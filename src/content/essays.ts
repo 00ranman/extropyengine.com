@@ -452,7 +452,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "XP",
         id: "xp",
-        def: "Standing meter. The letters are XP. That is the name. Not Extropy Points. Not Experience Points as a brand. Global standing: every door can see that closed loops survived. ΔS is the entropy reduction. XP is a measurable proxy to that ΔS on the ledger. Minted on verified ΔS > 0. Cannot be purchased or transferred. You do not spend it — access economy. Decays ~1% every two weeks of what is left. Half-life ~1.9 years. Not L. Not CT.",
+        def: "Standing meter. The letters are XP. That is the name. Not Extropy Points. Not Experience Points as a brand. Global standing: every door can see that closed loops survived. ΔS is the entropy reduction. XP is a measurable proxy to that ΔS on the ledger. Minted on verified ΔS > 0. Cannot be purchased or transferred. You do not spend it — access economy. Decays ~1% every 10 days of what is left. Half-life ~1.9 years. Not L. Not CT.",
       },
       {
         term: "ΔS is not XP",
@@ -608,7 +608,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "XP decay",
         id: "xp-decay",
-        def: "Treadmill, not a court. ~1% of the remaining pile every two weeks. Remaining after n idle two-week ticks: 0.99ⁿ. Half-life ≈ 69 ticks (~1.9 years, ~50%). ~1 year ≈ 69%. ~5 years ≈ 16%. ~8 years ≈ 5%. A decade is dust. Never zero in the reals — map seam, not a fuse. Dust floor on a machine. You keep minting or the pile fades. Late mint is the decades-later mechanism that can still move a number (huge cited ΔS). Late burn of ordinary remaining dust is not a headline.",
+        def: "Treadmill, not a court. ~1% of the remaining pile every 10 days. Remaining after n idle 10-day ticks: 0.99ⁿ. Half-life ≈ 69 ticks (~1.9 years, ~50%). ~1 year ≈ 69%. ~5 years ≈ 16%. ~8 years ≈ 5%. A decade is dust. Never zero in the reals — map seam, not a fuse. Dust floor on a machine. You keep minting or the pile fades. Late mint is the decades-later mechanism that can still move a number (huge cited ΔS). Late burn of ordinary remaining dust is not a headline.",
       },
       {
         term: "The glass of water",

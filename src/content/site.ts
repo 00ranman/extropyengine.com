@@ -718,7 +718,7 @@ export const engineStack = {
 
 export const engineLoop = [
   { code: "OPEN", note: "Task posted. Vertex on the DAG with causal parents. Evidence can hang off it." },
-  { code: "CLOSED", note: "Agreement. Provisional XP mints. Settle window default: eight weeks. Per-DFAO. Not an axiom." },
+  { code: "CLOSED", note: "Agreement. Provisional XP mints. Settle window default: 40 days. Per-DFAO. Not an axiom." },
   { code: "SETTLED", note: "Moves from provisional to standing. Still burnable later. XP is not spent. Access economy. Decay is already eating it." },
   { code: "BURNED", note: "A later verdict on that vertex. Same machine as late mint, the other way. Ordinary remaining pile after a decade is dust. See the 0.99ⁿ note." },
 ] as const;
@@ -726,7 +726,7 @@ export const engineLoop = [
 export const engineDecay = {
   kicker: "Think it through",
   title: "What 0.99ⁿ actually does",
-  lead: "1% of what is left, every two weeks. Not 1% of the original. Remaining after n idle two-week ticks is 0.99ⁿ. Half-life ≈ 69 ticks (~1.9 years). It never hits zero in the reals. That is a map seam, not a fuse.",
+  lead: "1% of what is left, every 10 days. Not 1% of the original. Remaining after n idle 10-day ticks is 0.99ⁿ. Half-life ≈ 69 ticks (~1.9 years). It never hits zero in the reals. That is a map seam, not a fuse.",
   rows: [
     { t: "~1 year", d: "≈ 69% of that mint still there" },
     { t: "~1.9 years", d: "half-life. ≈ 50%" },
@@ -742,7 +742,7 @@ export const engineDecay = {
 } as const;
 
 export const engineTokens = [
-  { t: "XP", d: "Global standing. The letters are XP. ΔS is the reduction. XP is the proxy on the ledger. You do not spend it. Access economy. Decays ~1% every two weeks of remaining." },
+  { t: "XP", d: "Global standing. The letters are XP. ΔS is the reduction. XP is the proxy on the ledger. You do not spend it. Access economy. Decays ~1% every 10 days of remaining." },
   { t: "CT", d: "Community standing on web W. Reputation lives here. Posted tasks mint it. Cash-wrap kills compatibility." },
   { t: "L", d: "clip(H_cap · S · κ · CT_W · β, 0, 1)." },
   { t: "EP", d: "Till spark. EP = XP · L + λ · L, then it burns." },

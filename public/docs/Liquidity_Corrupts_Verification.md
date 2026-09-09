@@ -20,7 +20,7 @@ If the output of verification can be sold, verification becomes a mint for that 
 - Tₛ — slam window for this loop.
 - XP — global standing after the mint. Leaks. Does not cash out.
 - CT — community standing on web W. Same readout at every compatible till.
-- H_cap — Auto from this till’s signed cash. Training remainder 0 for eight weeks.
+- H_cap — Auto from this till’s signed cash. Training remainder 0 for 40 days.
 - L — this ticket.
 - EP — XP × L. Born and burned in the sale.
 

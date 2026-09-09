@@ -69,7 +69,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "xp-small",
         q: "If standing takes years to go to dust, won't whales own the till?",
-        a: "Only if each loop mints a fat number. Leak is ~1% of remaining every two weeks. Steady pile ≈ two-week inflow ÷ 0.01. Ten fat lawns a fortnight becomes a pile that still moves a couple of years later. So an ordinary MICRO close targets 0.01–1 XP, not 100. F already taxes repeats. Slam-shut mints zero. At the drawer, EP cannot exceed this ticket times H_cap. XP is not dollars. IT does not use XP at all.",
+        a: "Only if each loop mints a fat number. Leak is ~1% of remaining every 10 days. Steady pile ≈ 10-day inflow ÷ 0.01. Ten fat lawns in 10 days becomes a pile that still moves a couple of years later. So an ordinary MICRO close targets 0.01–1 XP, not 100. F already taxes repeats. Slam-shut mints zero. At the drawer, EP cannot exceed this ticket times H_cap. XP is not dollars. IT does not use XP at all.",
         also: [
           { label: "Defaults", href: "/defaults" },
           { label: "Letter key", href: "/key" },
@@ -216,7 +216,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "cat-ct-it",
         q: "What are CAT, CT, and IT?",
-        a: "CAT is a skill record: lane + level + issuer. Feeds β when on-duty. CT is community standing on the web — same number at compatible tills — idle leak ~1% every two weeks (0.99ⁿ). Activity on that web resets the clock. CT does not travel. IT is this-proposal standing, clip(H_gov · S_gov · κ · CT_W · β_gov, 0, 1), burned in the tally. Not a pile. None of these are bags.",
+        a: "CAT is a skill record: lane + level + issuer. Feeds β when on-duty. CT is community standing on the web — same number at compatible tills — idle leak ~1% every 10 days (0.99ⁿ). Activity on that web resets the clock. CT does not travel. IT is this-proposal standing, clip(H_gov · S_gov · κ · CT_W · β_gov, 0, 1), burned in the tally. Not a pile. None of these are bags.",
         also: [
           { label: "CAT", href: "/glossary", hash: "cat" },
           { label: "CT", href: "/glossary", hash: "ct" },
@@ -324,8 +324,8 @@ export const faqSections: FaqSection[] = [
       },
       {
         id: "decay",
-        q: "1% every two weeks — so it lasts forever?",
-        a: "No. 1% of what is left, each two weeks. Remaining after n idle two-week ticks is 0.99ⁿ. Half-life ≈ 69 ticks (~1.9 years, half still there). ~1 year ≈ 69%. ~5 years ≈ 16%. ~8 years ≈ 5%. A decade is dust. It never hits zero in the reals. Counting 20,000 days is the wrong arithmetic. Decay is a leak. Late mint is the long-horizon mechanism that can still move a number, and only for a later huge, cited ΔS. Late burn of ordinary remaining pile is a mark on a vertex, not a sword.",
+        q: "1% every 10 days — so it lasts forever?",
+        a: "No. 1% of what is left, each 10 days. Remaining after n idle 10-day ticks is 0.99ⁿ. Half-life ≈ 69 ticks (~1.9 years, half still there). ~1 year ≈ 69%. ~5 years ≈ 16%. ~8 years ≈ 5%. A decade is dust. It never hits zero in the reals. Counting 20,000 days is the wrong arithmetic. Decay is a leak. Late mint is the long-horizon mechanism that can still move a number, and only for a later huge, cited ΔS. Late burn of ordinary remaining pile is a mark on a vertex, not a sword.",
         also: [{ label: "XP decay", href: "/glossary", hash: "xp-decay" }, { label: "0.99ⁿ", href: "/#decay" }],
       },
       {
@@ -336,8 +336,8 @@ export const faqSections: FaqSection[] = [
       },
       {
         id: "thirty",
-        q: "Is the eight-week settle window a law?",
-        a: "No. Eight weeks is the default settle window. Per-DFAO knob. Not an axiom. Late burn has no expiry. IT is not a leak pile. XP decay is ~1% every two weeks of remaining. CT idle-leaks on the same keep.",
+        q: "Is the 40-day settle window a law?",
+        a: "No. 40 days is the default settle window. Per-DFAO knob. Not an axiom. Late burn has no expiry. IT is not a leak pile. XP decay is ~1% every 10 days of remaining. CT idle-leaks on the same keep.",
       },
       {
         id: "three-clocks",
@@ -401,7 +401,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "l-farm",
         q: "Can a shop (or a DFAO) just crank L and extract XP?",
-        a: "That’s the economic attack. L is community CT against this till’s Auto H_cap. Same CT at every compatible till. There is no slider. H_cap comes from this door’s signed cash after eight weeks of training (remainder 0 until then). Both edges still accept the estimate. Cash rings the rest. A house that wants no overlay unplugs the node.",
+        a: "That’s the economic attack. L is community CT against this till’s Auto H_cap. Same CT at every compatible till. There is no slider. H_cap comes from this door’s signed cash after 40 days of training (remainder 0 until then). Both edges still accept the estimate. Cash rings the rest. A house that wants no overlay unplugs the node.",
         also: [
           { label: "Emergent Product", href: "/glossary", hash: "emergent-product" },
           { label: "Open problems", href: "/open-problems" },
@@ -460,7 +460,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "retire",
         q: "What if I retire? Or get sick? Or take a vacation? Do I starve when I stop “working”?",
-        a: "People rarely retire into a coma. They keep a house, a garden, grandkids, a body, a street. That still mints if it is real and lookers can attach. Standing you already have does not vanish on a Friday. XP leaks ~1% of remaining every two weeks — half still there at ~1.9 years. You live on that, plus whatever living still writes. Sick: you are not clawed for being sick. Care is a loop for the person who shows up. Vacation: rest is not a hole. Recovery is biological. You do not need a PTO token. If you vanish from every loop including your own house, standing fades like anyone else’s.",
+        a: "People rarely retire into a coma. They keep a house, a garden, grandkids, a body, a street. That still mints if it is real and lookers can attach. Standing you already have does not vanish on a Friday. XP leaks ~1% of remaining every 10 days — half still there at ~1.9 years. You live on that, plus whatever living still writes. Sick: you are not clawed for being sick. Care is a loop for the person who shows up. Vacation: rest is not a hole. Recovery is biological. You do not need a PTO token. If you vanish from every loop including your own house, standing fades like anyone else’s.",
         also: [
           { label: "XP decay", href: "/glossary", hash: "xp-decay" },
           { label: "Rest / retirement", href: "/glossary", hash: "rest" },

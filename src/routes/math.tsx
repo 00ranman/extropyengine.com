@@ -69,7 +69,7 @@ function MathPage() {
         EP = XP · L + λ · L
       </p>
       <ul className="list-none space-y-2 p-0">
-        <li>H_cap — this till this window. Auto from signed cash. Training remainder 0 for eight weeks.</li>
+        <li>H_cap — this till this window. Auto from signed cash. Training remainder 0 for 40 days.</li>
         <li>S — you at this house.</li>
         <li>κ — 1 on the language. 0 if they left it.</li>
         <li>β — CAT / on-duty this ticket.</li>
@@ -86,7 +86,7 @@ function MathPage() {
         Three leaks
       </h2>
       <p>
-        XP 0.99ⁿ. CT 0.99ⁿ idle on that web. n is idle two-week counts. IT is not a leak clock. It is recomputed each proposal
+        XP 0.99ⁿ. CT 0.99ⁿ idle on that web. n is idle 10-day counts. IT is not a leak clock. It is recomputed each proposal
         and burned in the tally.
       </p>
       <p>
