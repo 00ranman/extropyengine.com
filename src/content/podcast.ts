@@ -1,5 +1,6 @@
 const feedUrl = "https://extropyengine.com/podcast/feed.xml";
 const researchLogFeedUrl = "https://extropyengine.com/podcast-log/feed.xml";
+const redactedFeedUrl = "https://extropyengine.com/podcast-redacted/feed.xml";
 
 export const podcast = {
   title: "Extropy Engine",
@@ -26,6 +27,18 @@ export const researchLog = {
   feedUrl: researchLogFeedUrl,
   cover: "/podcast-log/cover.jpg",
   page: "/research-pod",
+} as const;
+
+export const redacted = {
+  title: "Extropy Engine Redacted",
+  author: "Randall Gossett",
+  tagline: "Old meter. Trail. Not the Codex.",
+  description:
+    "REDACTED. Episodes recorded against earlier drafts — 30-day windows, six-token talk, reputation inside XP, Gregorian-month leak. Left up so the trail exists. They do not describe the live protocol. Git and /key win. YouTube: park the matching XPlainers in a playlist named Redacted.",
+  feedPath: "/podcast-redacted/feed.xml",
+  feedUrl: redactedFeedUrl,
+  cover: "/podcast-redacted/cover.jpg",
+  page: "/redacted",
 } as const;
 
 export const subscribeApps = [

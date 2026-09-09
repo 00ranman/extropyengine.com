@@ -17,7 +17,7 @@ export function WatchTapes() {
     {
       kicker: "XPlainers",
       title: "XPlainers",
-      lead: "The arguments, said out loud.",
+      lead: "The arguments, said out loud. Move old-meter cuts to Redacted.",
       list: "PLDvyw8u2wal1AnvXoTCL8StWzLdKzR8d_",
       start: "0t2VR9HFXzA",
     },
@@ -51,6 +51,20 @@ export function WatchTapes() {
           </a>
         </div>
       ))}
+      <div>
+        <p className="font-mono text-[10px] tracking-[0.22em] text-primary uppercase">Redacted</p>
+        <h4 className="font-display mt-1 text-base tracking-[0.04em]">Old meter</h4>
+        <p className="mt-1 text-xs leading-relaxed text-dim">
+          Audio trail of drafts that still say 30-day windows, six tokens, or reputation-in-XP. YouTube:
+          make a playlist named Redacted, park the matching XPlainers, send the list ID.
+        </p>
+        <a
+          href="/redacted"
+          className="mt-3 inline-block border border-primary/35 px-4 py-6 font-mono text-[12px] tracking-[0.16em] text-primary uppercase hover:border-primary"
+        >
+          Open /redacted →
+        </a>
+      </div>
     </div>
   );
 }

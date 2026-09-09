@@ -45,7 +45,26 @@ export const researchLogMeta = {
   publicPath: "/podcast-log",
 };
 
-const SHOWS = [podcastMeta, researchLogMeta];
+const REDACTED_DISCLAIMER =
+  "REDACTED. Old meter. Not the Codex. These episodes were recorded against earlier drafts (30-day windows, six-token talk, reputation inside XP, 1% per Gregorian month). They stay as a trail. They do not describe the live protocol. The git and /key win.";
+
+export const redactedMeta = {
+  title: "Extropy Engine Redacted",
+  author: "Randall Gossett",
+  email: "00ranman@gmail.com",
+  description: REDACTED_DISCLAIMER,
+  language: "en-us",
+  explicit: true,
+  category: "Society & Culture",
+  subcategory: "Philosophy",
+  image: "/podcast-redacted/cover.jpg",
+  link: "/redacted",
+  feedPath: "/podcast-redacted/feed.xml",
+  dir: "public/podcast-redacted",
+  publicPath: "/podcast-redacted",
+};
+
+const SHOWS = [podcastMeta, researchLogMeta, redactedMeta];
 
 function origin() {
   const host = process.env.VITE_PUBLIC_HOSTNAME || "extropyengine.com";
@@ -246,7 +265,12 @@ export function writeShowFeed(show) {
       {
         title: show.title,
         feed: show.feedPath,
-        disclaimer: show === researchLogMeta ? RESEARCH_DISCLAIMER : undefined,
+        disclaimer:
+          show === researchLogMeta
+            ? RESEARCH_DISCLAIMER
+            : show === redactedMeta
+              ? REDACTED_DISCLAIMER
+              : undefined,
         episodes: episodes.map(({ file, pubMs, guid, url, ...rest }) => rest),
       },
       null,

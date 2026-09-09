@@ -336,7 +336,7 @@ export const faqSections: FaqSection[] = [
       },
       {
         id: "thirty",
-        q: "Is the 30-day settle window a law?",
+        q: "Is the eight-week settle window a law?",
         a: "No. It was a starting number. Eight weeks is the settle-window default now. Per-DFAO knob. Late burn has no expiry either way. IT is not a leak pile. XP decay is ~1% every two weeks of remaining. CT idle-leaks on the same keep.",
       },
       {
@@ -539,7 +539,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "listen",
         q: "Where do I listen / read?",
-        a: "Book, papers, and two podcasts are on this site. Talk RSS: https://extropyengine.com/podcast/feed.xml. Research Pod RSS (automated, unsigned, AI audio overviews): https://extropyengine.com/podcast-log/feed.xml. Spotify, YouTube, and Apple Podcasts listings exist for the talk show.",
+        a: "Book, papers, and two live podcasts are on this site. Talk RSS: https://extropyengine.com/podcast/feed.xml. Research Pod RSS (automated, unsigned, AI audio overviews): https://extropyengine.com/podcast-log/feed.xml. Old-meter drafts: https://extropyengine.com/podcast-redacted/feed.xml — trail, not the Codex. Spotify, YouTube, and Apple listings exist for the talk show.",
         also: [
           { label: "Podcast", href: "/podcast" },
           { label: "Research Pod", href: "/research-pod" },

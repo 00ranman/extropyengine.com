@@ -97,7 +97,7 @@ function DfaoDoc() {
       <p>
         Votes rewrite the DFAO they are cast in: settle window, decay rates, quorum. They do not
         rewrite the mesh. PLANETARY is the only room that hits everyone, and getting a vote through
-        there is supposed to be hard. Defaults (including a ~30-day first settle window) are
+        there is supposed to be hard. Defaults (including an eight-week first settle window) are
         starting numbers, not axioms. There may yet be a floor: some XP and some IT always burn.
         That would be an axiom. It is not written in as one yet.
       </p>

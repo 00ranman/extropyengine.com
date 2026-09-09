@@ -10,35 +10,69 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BuildRouteImport } from './routes/build'
+import { Route as CharterRouteImport } from './routes/charter'
+import { Route as DefaultsRouteImport } from './routes/defaults'
 import { Route as DfaoRouteImport } from './routes/dfao'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as GlossaryRouteImport } from './routes/glossary'
 import { Route as HoaRouteImport } from './routes/hoa'
+import { Route as IfThenRouteImport } from './routes/if-then'
+import { Route as InsteadRouteImport } from './routes/instead'
+import { Route as ItRouteImport } from './routes/it'
 import { Route as KeyRouteImport } from './routes/key'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as LyricsRouteImport } from './routes/lyrics'
+import { Route as MathRouteImport } from './routes/math'
 import { Route as MvtRouteImport } from './routes/mvt'
 import { Route as OpenProblemsRouteImport } from './routes/open-problems'
 import { Route as PodcastRouteImport } from './routes/podcast'
-import { Route as ResearchPodRouteImport } from './routes/research-pod'
-import { Route as PodcastLogRouteImport } from './routes/podcast.log'
 import { Route as ProofLayersRouteImport } from './routes/proof-layers'
+import { Route as RedactedRouteImport } from './routes/redacted'
+import { Route as ResearchPodRouteImport } from './routes/research-pod'
+import { Route as RhoRouteImport } from './routes/rho'
 import { Route as SayRouteImport } from './routes/say'
+import { Route as SmartContractsRouteImport } from './routes/smart-contracts'
+import { Route as TokenomicsRouteImport } from './routes/tokenomics'
 import { Route as UniversaltimesRouteImport } from './routes/universaltimes'
+import { Route as Web3RouteImport } from './routes/web3'
 import { Route as DocsIndexRouteImport } from './routes/docs/index'
 import { Route as HoaSunsetOaksRouteImport } from './routes/hoa.sunset-oaks'
 import { Route as PapersClosingTheLoopRouteImport } from './routes/papers/closing-the-loop'
+import { Route as PapersLiquidityAndDecayRouteImport } from './routes/papers/liquidity-and-decay'
+import { Route as PodcastLogRouteImport } from './routes/podcast.log'
 import { Route as PrintClosingTheLoopRouteImport } from './routes/print/closing-the-loop'
 import { Route as StartIndexRouteImport } from './routes/start/index'
 import { Route as StartAiRouteImport } from './routes/start/ai'
 import { Route as StartGovernanceRouteImport } from './routes/start/governance'
 import { Route as StartMoneyRouteImport } from './routes/start/money'
 import { Route as StartPhysicsRouteImport } from './routes/start/physics'
+import { Route as TokenomicsItRouteImport } from './routes/tokenomics.it'
+import { Route as Web3GovernanceRouteImport } from './routes/web3.governance'
+import { Route as Web3IdentityRouteImport } from './routes/web3.identity'
+import { Route as Web3LoopRouteImport } from './routes/web3.loop'
+import { Route as Web3NodeRouteImport } from './routes/web3.node'
+import { Route as Web3TruthRouteImport } from './routes/web3.truth'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuildRoute = BuildRouteImport.update({
+  id: '/build',
+  path: '/build',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CharterRoute = CharterRouteImport.update({
+  id: '/charter',
+  path: '/charter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DefaultsRoute = DefaultsRouteImport.update({
+  id: '/defaults',
+  path: '/defaults',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DfaoRoute = DfaoRouteImport.update({
@@ -61,6 +95,21 @@ const HoaRoute = HoaRouteImport.update({
   path: '/hoa',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IfThenRoute = IfThenRouteImport.update({
+  id: '/if-then',
+  path: '/if-then',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsteadRoute = InsteadRouteImport.update({
+  id: '/instead',
+  path: '/instead',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ItRoute = ItRouteImport.update({
+  id: '/it',
+  path: '/it',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KeyRoute = KeyRouteImport.update({
   id: '/key',
   path: '/key',
@@ -74,6 +123,11 @@ const LoginRoute = LoginRouteImport.update({
 const LyricsRoute = LyricsRouteImport.update({
   id: '/lyrics',
   path: '/lyrics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MathRoute = MathRouteImport.update({
+  id: '/math',
+  path: '/math',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MvtRoute = MvtRouteImport.update({
@@ -91,14 +145,14 @@ const PodcastRoute = PodcastRouteImport.update({
   path: '/podcast',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PodcastLogRoute = PodcastLogRouteImport.update({
-  id: '/log',
-  path: '/log',
-  getParentRoute: () => PodcastRoute,
-} as any)
 const ProofLayersRoute = ProofLayersRouteImport.update({
   id: '/proof-layers',
   path: '/proof-layers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RedactedRoute = RedactedRouteImport.update({
+  id: '/redacted',
+  path: '/redacted',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ResearchPodRoute = ResearchPodRouteImport.update({
@@ -106,14 +160,34 @@ const ResearchPodRoute = ResearchPodRouteImport.update({
   path: '/research-pod',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RhoRoute = RhoRouteImport.update({
+  id: '/rho',
+  path: '/rho',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SayRoute = SayRouteImport.update({
   id: '/say',
   path: '/say',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SmartContractsRoute = SmartContractsRouteImport.update({
+  id: '/smart-contracts',
+  path: '/smart-contracts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TokenomicsRoute = TokenomicsRouteImport.update({
+  id: '/tokenomics',
+  path: '/tokenomics',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const UniversaltimesRoute = UniversaltimesRouteImport.update({
   id: '/universaltimes',
   path: '/universaltimes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Web3Route = Web3RouteImport.update({
+  id: '/web3',
+  path: '/web3',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DocsIndexRoute = DocsIndexRouteImport.update({
@@ -130,6 +204,16 @@ const PapersClosingTheLoopRoute = PapersClosingTheLoopRouteImport.update({
   id: '/papers/closing-the-loop',
   path: '/papers/closing-the-loop',
   getParentRoute: () => rootRouteImport,
+} as any)
+const PapersLiquidityAndDecayRoute = PapersLiquidityAndDecayRouteImport.update({
+  id: '/papers/liquidity-and-decay',
+  path: '/papers/liquidity-and-decay',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PodcastLogRoute = PodcastLogRouteImport.update({
+  id: '/log',
+  path: '/log',
+  getParentRoute: () => PodcastRoute,
 } as any)
 const PrintClosingTheLoopRoute = PrintClosingTheLoopRouteImport.update({
   id: '/print/closing-the-loop',
@@ -161,6 +245,36 @@ const StartPhysicsRoute = StartPhysicsRouteImport.update({
   path: '/start/physics',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TokenomicsItRoute = TokenomicsItRouteImport.update({
+  id: '/it',
+  path: '/it',
+  getParentRoute: () => TokenomicsRoute,
+} as any)
+const Web3GovernanceRoute = Web3GovernanceRouteImport.update({
+  id: '/governance',
+  path: '/governance',
+  getParentRoute: () => Web3Route,
+} as any)
+const Web3IdentityRoute = Web3IdentityRouteImport.update({
+  id: '/identity',
+  path: '/identity',
+  getParentRoute: () => Web3Route,
+} as any)
+const Web3LoopRoute = Web3LoopRouteImport.update({
+  id: '/loop',
+  path: '/loop',
+  getParentRoute: () => Web3Route,
+} as any)
+const Web3NodeRoute = Web3NodeRouteImport.update({
+  id: '/node',
+  path: '/node',
+  getParentRoute: () => Web3Route,
+} as any)
+const Web3TruthRoute = Web3TruthRouteImport.update({
+  id: '/truth',
+  path: '/truth',
+  getParentRoute: () => Web3Route,
+} as any)
 const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   id: '/api/auth/$',
   path: '/api/auth/$',
@@ -169,56 +283,94 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/build': typeof BuildRoute
+  '/charter': typeof CharterRoute
+  '/defaults': typeof DefaultsRoute
   '/dfao': typeof DfaoRoute
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
   '/hoa': typeof HoaRouteWithChildren
+  '/if-then': typeof IfThenRoute
+  '/instead': typeof InsteadRoute
+  '/it': typeof ItRoute
   '/key': typeof KeyRoute
   '/login': typeof LoginRoute
   '/lyrics': typeof LyricsRoute
+  '/math': typeof MathRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
   '/podcast': typeof PodcastRouteWithChildren
-  '/podcast/log': typeof PodcastLogRoute
-  '/research-pod': typeof ResearchPodRoute
   '/proof-layers': typeof ProofLayersRoute
+  '/redacted': typeof RedactedRoute
+  '/research-pod': typeof ResearchPodRoute
+  '/rho': typeof RhoRoute
   '/say': typeof SayRoute
+  '/smart-contracts': typeof SmartContractsRoute
+  '/tokenomics': typeof TokenomicsRouteWithChildren
   '/universaltimes': typeof UniversaltimesRoute
+  '/web3': typeof Web3RouteWithChildren
   '/hoa/sunset-oaks': typeof HoaSunsetOaksRoute
   '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
+  '/papers/liquidity-and-decay': typeof PapersLiquidityAndDecayRoute
+  '/podcast/log': typeof PodcastLogRoute
   '/print/closing-the-loop': typeof PrintClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
   '/start/governance': typeof StartGovernanceRoute
   '/start/money': typeof StartMoneyRoute
   '/start/physics': typeof StartPhysicsRoute
+  '/tokenomics/it': typeof TokenomicsItRoute
+  '/web3/governance': typeof Web3GovernanceRoute
+  '/web3/identity': typeof Web3IdentityRoute
+  '/web3/loop': typeof Web3LoopRoute
+  '/web3/node': typeof Web3NodeRoute
+  '/web3/truth': typeof Web3TruthRoute
   '/docs/': typeof DocsIndexRoute
   '/start/': typeof StartIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/build': typeof BuildRoute
+  '/charter': typeof CharterRoute
+  '/defaults': typeof DefaultsRoute
   '/dfao': typeof DfaoRoute
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
   '/hoa': typeof HoaRouteWithChildren
+  '/if-then': typeof IfThenRoute
+  '/instead': typeof InsteadRoute
+  '/it': typeof ItRoute
   '/key': typeof KeyRoute
   '/login': typeof LoginRoute
   '/lyrics': typeof LyricsRoute
+  '/math': typeof MathRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
   '/podcast': typeof PodcastRouteWithChildren
-  '/podcast/log': typeof PodcastLogRoute
-  '/research-pod': typeof ResearchPodRoute
   '/proof-layers': typeof ProofLayersRoute
+  '/redacted': typeof RedactedRoute
+  '/research-pod': typeof ResearchPodRoute
+  '/rho': typeof RhoRoute
   '/say': typeof SayRoute
+  '/smart-contracts': typeof SmartContractsRoute
+  '/tokenomics': typeof TokenomicsRouteWithChildren
   '/universaltimes': typeof UniversaltimesRoute
+  '/web3': typeof Web3RouteWithChildren
   '/hoa/sunset-oaks': typeof HoaSunsetOaksRoute
   '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
+  '/papers/liquidity-and-decay': typeof PapersLiquidityAndDecayRoute
+  '/podcast/log': typeof PodcastLogRoute
   '/print/closing-the-loop': typeof PrintClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
   '/start/governance': typeof StartGovernanceRoute
   '/start/money': typeof StartMoneyRoute
   '/start/physics': typeof StartPhysicsRoute
+  '/tokenomics/it': typeof TokenomicsItRoute
+  '/web3/governance': typeof Web3GovernanceRoute
+  '/web3/identity': typeof Web3IdentityRoute
+  '/web3/loop': typeof Web3LoopRoute
+  '/web3/node': typeof Web3NodeRoute
+  '/web3/truth': typeof Web3TruthRoute
   '/docs': typeof DocsIndexRoute
   '/start': typeof StartIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
@@ -226,28 +378,47 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/build': typeof BuildRoute
+  '/charter': typeof CharterRoute
+  '/defaults': typeof DefaultsRoute
   '/dfao': typeof DfaoRoute
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
   '/hoa': typeof HoaRouteWithChildren
+  '/if-then': typeof IfThenRoute
+  '/instead': typeof InsteadRoute
+  '/it': typeof ItRoute
   '/key': typeof KeyRoute
   '/login': typeof LoginRoute
   '/lyrics': typeof LyricsRoute
+  '/math': typeof MathRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
   '/podcast': typeof PodcastRouteWithChildren
-  '/podcast/log': typeof PodcastLogRoute
-  '/research-pod': typeof ResearchPodRoute
   '/proof-layers': typeof ProofLayersRoute
+  '/redacted': typeof RedactedRoute
+  '/research-pod': typeof ResearchPodRoute
+  '/rho': typeof RhoRoute
   '/say': typeof SayRoute
+  '/smart-contracts': typeof SmartContractsRoute
+  '/tokenomics': typeof TokenomicsRouteWithChildren
   '/universaltimes': typeof UniversaltimesRoute
+  '/web3': typeof Web3RouteWithChildren
   '/hoa/sunset-oaks': typeof HoaSunsetOaksRoute
   '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
+  '/papers/liquidity-and-decay': typeof PapersLiquidityAndDecayRoute
+  '/podcast/log': typeof PodcastLogRoute
   '/print/closing-the-loop': typeof PrintClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
   '/start/governance': typeof StartGovernanceRoute
   '/start/money': typeof StartMoneyRoute
   '/start/physics': typeof StartPhysicsRoute
+  '/tokenomics/it': typeof TokenomicsItRoute
+  '/web3/governance': typeof Web3GovernanceRoute
+  '/web3/identity': typeof Web3IdentityRoute
+  '/web3/loop': typeof Web3LoopRoute
+  '/web3/node': typeof Web3NodeRoute
+  '/web3/truth': typeof Web3TruthRoute
   '/docs/': typeof DocsIndexRoute
   '/start/': typeof StartIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
@@ -256,84 +427,141 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/build'
+    | '/charter'
+    | '/defaults'
     | '/dfao'
     | '/faq'
     | '/glossary'
     | '/hoa'
+    | '/if-then'
+    | '/instead'
+    | '/it'
     | '/key'
     | '/login'
     | '/lyrics'
+    | '/math'
     | '/mvt'
     | '/open-problems'
     | '/podcast'
-    | '/podcast/log'
-    | '/research-pod'
     | '/proof-layers'
+    | '/redacted'
+    | '/research-pod'
+    | '/rho'
     | '/say'
+    | '/smart-contracts'
+    | '/tokenomics'
     | '/universaltimes'
+    | '/web3'
     | '/hoa/sunset-oaks'
     | '/papers/closing-the-loop'
+    | '/papers/liquidity-and-decay'
+    | '/podcast/log'
     | '/print/closing-the-loop'
     | '/start/ai'
     | '/start/governance'
     | '/start/money'
     | '/start/physics'
+    | '/tokenomics/it'
+    | '/web3/governance'
+    | '/web3/identity'
+    | '/web3/loop'
+    | '/web3/node'
+    | '/web3/truth'
     | '/docs/'
     | '/start/'
     | '/api/auth/$'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/build'
+    | '/charter'
+    | '/defaults'
     | '/dfao'
     | '/faq'
     | '/glossary'
     | '/hoa'
+    | '/if-then'
+    | '/instead'
+    | '/it'
     | '/key'
     | '/login'
     | '/lyrics'
+    | '/math'
     | '/mvt'
     | '/open-problems'
     | '/podcast'
-    | '/podcast/log'
-    | '/research-pod'
     | '/proof-layers'
+    | '/redacted'
+    | '/research-pod'
+    | '/rho'
     | '/say'
+    | '/smart-contracts'
+    | '/tokenomics'
     | '/universaltimes'
+    | '/web3'
     | '/hoa/sunset-oaks'
     | '/papers/closing-the-loop'
+    | '/papers/liquidity-and-decay'
+    | '/podcast/log'
     | '/print/closing-the-loop'
     | '/start/ai'
     | '/start/governance'
     | '/start/money'
     | '/start/physics'
+    | '/tokenomics/it'
+    | '/web3/governance'
+    | '/web3/identity'
+    | '/web3/loop'
+    | '/web3/node'
+    | '/web3/truth'
     | '/docs'
     | '/start'
     | '/api/auth/$'
   id:
     | '__root__'
     | '/'
+    | '/build'
+    | '/charter'
+    | '/defaults'
     | '/dfao'
     | '/faq'
     | '/glossary'
     | '/hoa'
+    | '/if-then'
+    | '/instead'
+    | '/it'
     | '/key'
     | '/login'
     | '/lyrics'
+    | '/math'
     | '/mvt'
     | '/open-problems'
     | '/podcast'
-    | '/podcast/log'
-    | '/research-pod'
     | '/proof-layers'
+    | '/redacted'
+    | '/research-pod'
+    | '/rho'
     | '/say'
+    | '/smart-contracts'
+    | '/tokenomics'
     | '/universaltimes'
+    | '/web3'
     | '/hoa/sunset-oaks'
     | '/papers/closing-the-loop'
+    | '/papers/liquidity-and-decay'
+    | '/podcast/log'
     | '/print/closing-the-loop'
     | '/start/ai'
     | '/start/governance'
     | '/start/money'
     | '/start/physics'
+    | '/tokenomics/it'
+    | '/web3/governance'
+    | '/web3/identity'
+    | '/web3/loop'
+    | '/web3/node'
+    | '/web3/truth'
     | '/docs/'
     | '/start/'
     | '/api/auth/$'
@@ -341,21 +569,34 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BuildRoute: typeof BuildRoute
+  CharterRoute: typeof CharterRoute
+  DefaultsRoute: typeof DefaultsRoute
   DfaoRoute: typeof DfaoRoute
   FaqRoute: typeof FaqRoute
   GlossaryRoute: typeof GlossaryRoute
   HoaRoute: typeof HoaRouteWithChildren
+  IfThenRoute: typeof IfThenRoute
+  InsteadRoute: typeof InsteadRoute
+  ItRoute: typeof ItRoute
   KeyRoute: typeof KeyRoute
   LoginRoute: typeof LoginRoute
   LyricsRoute: typeof LyricsRoute
+  MathRoute: typeof MathRoute
   MvtRoute: typeof MvtRoute
   OpenProblemsRoute: typeof OpenProblemsRoute
-  PodcastRoute: typeof PodcastRoute
-  ResearchPodRoute: typeof ResearchPodRoute
+  PodcastRoute: typeof PodcastRouteWithChildren
   ProofLayersRoute: typeof ProofLayersRoute
+  RedactedRoute: typeof RedactedRoute
+  ResearchPodRoute: typeof ResearchPodRoute
+  RhoRoute: typeof RhoRoute
   SayRoute: typeof SayRoute
+  SmartContractsRoute: typeof SmartContractsRoute
+  TokenomicsRoute: typeof TokenomicsRouteWithChildren
   UniversaltimesRoute: typeof UniversaltimesRoute
+  Web3Route: typeof Web3RouteWithChildren
   PapersClosingTheLoopRoute: typeof PapersClosingTheLoopRoute
+  PapersLiquidityAndDecayRoute: typeof PapersLiquidityAndDecayRoute
   PrintClosingTheLoopRoute: typeof PrintClosingTheLoopRoute
   StartAiRoute: typeof StartAiRoute
   StartGovernanceRoute: typeof StartGovernanceRoute
@@ -373,6 +614,27 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/build': {
+      id: '/build'
+      path: '/build'
+      fullPath: '/build'
+      preLoaderRoute: typeof BuildRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/charter': {
+      id: '/charter'
+      path: '/charter'
+      fullPath: '/charter'
+      preLoaderRoute: typeof CharterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/defaults': {
+      id: '/defaults'
+      path: '/defaults'
+      fullPath: '/defaults'
+      preLoaderRoute: typeof DefaultsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dfao': {
@@ -403,6 +665,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HoaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/if-then': {
+      id: '/if-then'
+      path: '/if-then'
+      fullPath: '/if-then'
+      preLoaderRoute: typeof IfThenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/instead': {
+      id: '/instead'
+      path: '/instead'
+      fullPath: '/instead'
+      preLoaderRoute: typeof InsteadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/it': {
+      id: '/it'
+      path: '/it'
+      fullPath: '/it'
+      preLoaderRoute: typeof ItRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/key': {
       id: '/key'
       path: '/key'
@@ -422,6 +705,13 @@ declare module '@tanstack/react-router' {
       path: '/lyrics'
       fullPath: '/lyrics'
       preLoaderRoute: typeof LyricsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/math': {
+      id: '/math'
+      path: '/math'
+      fullPath: '/math'
+      preLoaderRoute: typeof MathRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mvt': {
@@ -445,12 +735,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PodcastRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/podcast/log': {
-      id: '/podcast/log'
-      path: '/log'
-      fullPath: '/podcast/log'
-      preLoaderRoute: typeof PodcastLogRouteImport
-      parentRoute: typeof PodcastRoute
+    '/proof-layers': {
+      id: '/proof-layers'
+      path: '/proof-layers'
+      fullPath: '/proof-layers'
+      preLoaderRoute: typeof ProofLayersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/redacted': {
+      id: '/redacted'
+      path: '/redacted'
+      fullPath: '/redacted'
+      preLoaderRoute: typeof RedactedRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/research-pod': {
       id: '/research-pod'
@@ -459,11 +756,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ResearchPodRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/proof-layers': {
-      id: '/proof-layers'
-      path: '/proof-layers'
-      fullPath: '/proof-layers'
-      preLoaderRoute: typeof ProofLayersRouteImport
+    '/rho': {
+      id: '/rho'
+      path: '/rho'
+      fullPath: '/rho'
+      preLoaderRoute: typeof RhoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/say': {
@@ -473,11 +770,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SayRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/smart-contracts': {
+      id: '/smart-contracts'
+      path: '/smart-contracts'
+      fullPath: '/smart-contracts'
+      preLoaderRoute: typeof SmartContractsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tokenomics': {
+      id: '/tokenomics'
+      path: '/tokenomics'
+      fullPath: '/tokenomics'
+      preLoaderRoute: typeof TokenomicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/universaltimes': {
       id: '/universaltimes'
       path: '/universaltimes'
       fullPath: '/universaltimes'
       preLoaderRoute: typeof UniversaltimesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/web3': {
+      id: '/web3'
+      path: '/web3'
+      fullPath: '/web3'
+      preLoaderRoute: typeof Web3RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/docs/': {
@@ -500,6 +818,20 @@ declare module '@tanstack/react-router' {
       fullPath: '/papers/closing-the-loop'
       preLoaderRoute: typeof PapersClosingTheLoopRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/papers/liquidity-and-decay': {
+      id: '/papers/liquidity-and-decay'
+      path: '/papers/liquidity-and-decay'
+      fullPath: '/papers/liquidity-and-decay'
+      preLoaderRoute: typeof PapersLiquidityAndDecayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/podcast/log': {
+      id: '/podcast/log'
+      path: '/log'
+      fullPath: '/podcast/log'
+      preLoaderRoute: typeof PodcastLogRouteImport
+      parentRoute: typeof PodcastRoute
     }
     '/print/closing-the-loop': {
       id: '/print/closing-the-loop'
@@ -543,6 +875,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof StartPhysicsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tokenomics/it': {
+      id: '/tokenomics/it'
+      path: '/it'
+      fullPath: '/tokenomics/it'
+      preLoaderRoute: typeof TokenomicsItRouteImport
+      parentRoute: typeof TokenomicsRoute
+    }
+    '/web3/governance': {
+      id: '/web3/governance'
+      path: '/governance'
+      fullPath: '/web3/governance'
+      preLoaderRoute: typeof Web3GovernanceRouteImport
+      parentRoute: typeof Web3Route
+    }
+    '/web3/identity': {
+      id: '/web3/identity'
+      path: '/identity'
+      fullPath: '/web3/identity'
+      preLoaderRoute: typeof Web3IdentityRouteImport
+      parentRoute: typeof Web3Route
+    }
+    '/web3/loop': {
+      id: '/web3/loop'
+      path: '/loop'
+      fullPath: '/web3/loop'
+      preLoaderRoute: typeof Web3LoopRouteImport
+      parentRoute: typeof Web3Route
+    }
+    '/web3/node': {
+      id: '/web3/node'
+      path: '/node'
+      fullPath: '/web3/node'
+      preLoaderRoute: typeof Web3NodeRouteImport
+      parentRoute: typeof Web3Route
+    }
+    '/web3/truth': {
+      id: '/web3/truth'
+      path: '/truth'
+      fullPath: '/web3/truth'
+      preLoaderRoute: typeof Web3TruthRouteImport
+      parentRoute: typeof Web3Route
+    }
     '/api/auth/$': {
       id: '/api/auth/$'
       path: '/api/auth/$'
@@ -571,25 +945,69 @@ const PodcastRouteChildren: PodcastRouteChildren = {
   PodcastLogRoute: PodcastLogRoute,
 }
 
-const PodcastRouteWithChildren = PodcastRoute._addFileChildren(PodcastRouteChildren)
+const PodcastRouteWithChildren =
+  PodcastRoute._addFileChildren(PodcastRouteChildren)
+
+interface TokenomicsRouteChildren {
+  TokenomicsItRoute: typeof TokenomicsItRoute
+}
+
+const TokenomicsRouteChildren: TokenomicsRouteChildren = {
+  TokenomicsItRoute: TokenomicsItRoute,
+}
+
+const TokenomicsRouteWithChildren = TokenomicsRoute._addFileChildren(
+  TokenomicsRouteChildren,
+)
+
+interface Web3RouteChildren {
+  Web3GovernanceRoute: typeof Web3GovernanceRoute
+  Web3IdentityRoute: typeof Web3IdentityRoute
+  Web3LoopRoute: typeof Web3LoopRoute
+  Web3NodeRoute: typeof Web3NodeRoute
+  Web3TruthRoute: typeof Web3TruthRoute
+}
+
+const Web3RouteChildren: Web3RouteChildren = {
+  Web3GovernanceRoute: Web3GovernanceRoute,
+  Web3IdentityRoute: Web3IdentityRoute,
+  Web3LoopRoute: Web3LoopRoute,
+  Web3NodeRoute: Web3NodeRoute,
+  Web3TruthRoute: Web3TruthRoute,
+}
+
+const Web3RouteWithChildren = Web3Route._addFileChildren(Web3RouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BuildRoute: BuildRoute,
+  CharterRoute: CharterRoute,
+  DefaultsRoute: DefaultsRoute,
   DfaoRoute: DfaoRoute,
   FaqRoute: FaqRoute,
   GlossaryRoute: GlossaryRoute,
   HoaRoute: HoaRouteWithChildren,
+  IfThenRoute: IfThenRoute,
+  InsteadRoute: InsteadRoute,
+  ItRoute: ItRoute,
   KeyRoute: KeyRoute,
   LoginRoute: LoginRoute,
   LyricsRoute: LyricsRoute,
+  MathRoute: MathRoute,
   MvtRoute: MvtRoute,
   OpenProblemsRoute: OpenProblemsRoute,
   PodcastRoute: PodcastRouteWithChildren,
-  ResearchPodRoute: ResearchPodRoute,
   ProofLayersRoute: ProofLayersRoute,
+  RedactedRoute: RedactedRoute,
+  ResearchPodRoute: ResearchPodRoute,
+  RhoRoute: RhoRoute,
   SayRoute: SayRoute,
+  SmartContractsRoute: SmartContractsRoute,
+  TokenomicsRoute: TokenomicsRouteWithChildren,
   UniversaltimesRoute: UniversaltimesRoute,
+  Web3Route: Web3RouteWithChildren,
   PapersClosingTheLoopRoute: PapersClosingTheLoopRoute,
+  PapersLiquidityAndDecayRoute: PapersLiquidityAndDecayRoute,
   PrintClosingTheLoopRoute: PrintClosingTheLoopRoute,
   StartAiRoute: StartAiRoute,
   StartGovernanceRoute: StartGovernanceRoute,

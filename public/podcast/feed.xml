@@ -21,7 +21,7 @@
       <itunes:category text="Philosophy"/>
     </itunes:category>
     <itunes:type>episodic</itunes:type>
-    <lastBuildDate>Mon, 7 Sep 2026 05:24:42 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 9 Sep 2026 04:40:05 +0000</lastBuildDate>
     <atom:link href="https://extropyengine.com/podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://extropyengine.com/podcast/cover.jpg</url>
@@ -127,81 +127,6 @@ Song: https://www.youtube.com/watch?v=spmLdhZIsmI</itunes:summary>
       <itunes:duration>00:43:05</itunes:duration>
       <itunes:season>1</itunes:season>
       <itunes:episode>7</itunes:episode>
-    </item>
-    <item>
-      <title>Can thermodynamic entropy replace economic value?</title>
-      <description>Landauer, six-token split, W E as hidden politics, glass of water in the desert, R as rarity not reputation, 30-day window, corporate capture via fiat-paid validators, 63 gaps. Physics as gold standard vs subjective utility.</description>
-      <itunes:summary>Landauer, six-token split, W E as hidden politics, glass of water in the desert, R as rarity not reputation, 30-day window, corporate capture via fiat-paid validators, 63 gaps. Physics as gold standard vs subjective utility.</itunes:summary>
-      <pubDate>Fri, 21 Aug 2026 16:00:00 +0000</pubDate>
-      <guid isPermaLink="false">ee8e80823f14036ec67f6f5ef3a0629b7881cc14</guid>
-      <link>https://extropyengine.com/podcast</link>
-      <enclosure url="https://extropyengine.com/podcast/2026-08-24-can-thermodynamic-entropy-replace-economic-value.mp3" length="14277727" type="audio/mpeg"/>
-      <itunes:author>Randall Gossett</itunes:author>
-      <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:duration>00:19:50</itunes:duration>
-      <itunes:season>1</itunes:season>
-      <itunes:episode>5</itunes:episode>
-    </item>
-    <item>
-      <title>Replacing financial extraction with entropy reduction</title>
-      <description>Why price selects for toll booths. XP from delta S × reputation × falsifiability. DFAO as layer-zero, DAG vs chain, two-person minimum, clap/convergence vertex, blind SignalFlow routing, sensors as evidence not mint, HomeFlow hides the math.</description>
-      <itunes:summary>Why price selects for toll booths. XP from delta S × reputation × falsifiability. DFAO as layer-zero, DAG vs chain, two-person minimum, clap/convergence vertex, blind SignalFlow routing, sensors as evidence not mint, HomeFlow hides the math.</itunes:summary>
-      <pubDate>Thu, 20 Aug 2026 16:00:00 +0000</pubDate>
-      <guid isPermaLink="false">60331309d702c7ea93d979a36388d255673c2c16</guid>
-      <link>https://extropyengine.com/podcast</link>
-      <enclosure url="https://extropyengine.com/podcast/2026-08-24-replacing-financial-extraction-with-entropy-reduction.mp3" length="26897377" type="audio/mpeg"/>
-      <itunes:author>Randall Gossett</itunes:author>
-      <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:duration>00:37:21</itunes:duration>
-      <itunes:season>1</itunes:season>
-      <itunes:episode>4</itunes:episode>
-    </item>
-    <item>
-      <title>Thermodynamic governance and the Extropy Engine</title>
-      <description>Genius vs crank on v3.1. delta S as value vs Goodhart. Digital autarky, SIIR, Maya the lawyer, echo-chamber DFAOs, swarm obscuration, waste as latent coherence, God as emergent entropy reduction. Both sides grant the mechanics; they split on the soul.</description>
-      <itunes:summary>Genius vs crank on v3.1. delta S as value vs Goodhart. Digital autarky, SIIR, Maya the lawyer, echo-chamber DFAOs, swarm obscuration, waste as latent coherence, God as emergent entropy reduction. Both sides grant the mechanics; they split on the soul.</itunes:summary>
-      <pubDate>Wed, 19 Aug 2026 16:00:00 +0000</pubDate>
-      <guid isPermaLink="false">fb12b2db0a35068283fb9c56e50197de9fa911fe</guid>
-      <link>https://extropyengine.com/podcast</link>
-      <enclosure url="https://extropyengine.com/podcast/2026-08-24-thermodynamic-governance-and-the-extropy-engine.mp3" length="15177384" type="audio/mpeg"/>
-      <itunes:author>Randall Gossett</itunes:author>
-      <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:duration>00:21:05</itunes:duration>
-      <itunes:season>1</itunes:season>
-      <itunes:episode>3</itunes:episode>
-    </item>
-    <item>
-      <title>Replacing politics with thermodynamics</title>
-      <description>NotebookLM pitch of the Extropy Engine as a civilizational OS: consensus as the bug, XP as delta S over causal-loop speed, SignalFlow as invisible validation, Extropian speech, Universal Times, reputation decay, adversarial convergence, DFAO. Blueprint, not manifesto.</description>
-      <itunes:summary>NotebookLM pitch of the Extropy Engine as a civilizational OS: consensus as the bug, XP as delta S over causal-loop speed, SignalFlow as invisible validation, Extropian speech, Universal Times, reputation decay, adversarial convergence, DFAO. Blueprint, not manifesto.</itunes:summary>
-      <pubDate>Tue, 18 Aug 2026 16:00:00 +0000</pubDate>
-      <guid isPermaLink="false">7073e3cf5190cb1714801bdc75974a2db8603604</guid>
-      <link>https://extropyengine.com/podcast</link>
-      <enclosure url="https://extropyengine.com/podcast/2026-08-24-replacing-politics-with-thermodynamics.mp3" length="19674102" type="audio/mpeg"/>
-      <itunes:author>Randall Gossett</itunes:author>
-      <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:duration>00:27:19</itunes:duration>
-      <itunes:season>1</itunes:season>
-      <itunes:episode>2</itunes:episode>
-    </item>
-    <item>
-      <title>Mapping human interactions to entropy reduction</title>
-      <description>A NotebookLM debate on the Extropy Engine. Is mapping human work onto verified delta S - via a local DAG, no fiat on-ramp, and a proxy that gets less wrong as the graph fills - a rigorous answer to broken rewards, or a category error that measures the exhaust of a ride instead of the reason for it? Codex v2.1, the mint formula, LocalFlow, DFAO scale, standing unbundled from XP.</description>
-      <itunes:summary>A NotebookLM debate on the Extropy Engine. Is mapping human work onto verified delta S - via a local DAG, no fiat on-ramp, and a proxy that gets less wrong as the graph fills - a rigorous answer to broken rewards, or a category error that measures the exhaust of a ride instead of the reason for it? Codex v2.1, the mint formula, LocalFlow, DFAO scale, standing unbundled from XP.</itunes:summary>
-      <pubDate>Mon, 17 Aug 2026 16:00:00 +0000</pubDate>
-      <guid isPermaLink="false">87e40d8f16156df511a56f94720ecb5069c6ea36</guid>
-      <link>https://extropyengine.com/podcast</link>
-      <enclosure url="https://extropyengine.com/podcast/2026-08-24-mapping-human-interactions-to-entropy-reduction.mp3" length="15763258" type="audio/mpeg"/>
-      <itunes:author>Randall Gossett</itunes:author>
-      <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:duration>00:21:54</itunes:duration>
-      <itunes:season>1</itunes:season>
-      <itunes:episode>1</itunes:episode>
     </item>
   </channel>
 </rss>

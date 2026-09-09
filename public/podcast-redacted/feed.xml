@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Extropy Engine Redacted</title>
+    <link>https://extropyengine.com/redacted</link>
+    <language>en-us</language>
+    <copyright>&#169; 2026 Randall Gossett</copyright>
+    <description>REDACTED. Old meter. Not the Codex. These episodes were recorded against earlier drafts (30-day windows, six-token talk, reputation inside XP, 1% per Gregorian month). They stay as a trail. They do not describe the live protocol. The git and /key win.</description>
+    <itunes:author>Randall Gossett</itunes:author>
+    <itunes:summary>REDACTED. Old meter. Not the Codex. These episodes were recorded against earlier drafts (30-day windows, six-token talk, reputation inside XP, 1% per Gregorian month). They stay as a trail. They do not describe the live protocol. The git and /key win.</itunes:summary>
+    <itunes:explicit>true</itunes:explicit>
+    <itunes:owner>
+      <itunes:name>Randall Gossett</itunes:name>
+      <itunes:email>00ranman@gmail.com</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://extropyengine.com/podcast-redacted/cover.jpg"/>
+    <itunes:category text="Society &amp; Culture">
+      <itunes:category text="Philosophy"/>
+    </itunes:category>
+    <itunes:type>episodic</itunes:type>
+    <lastBuildDate>Wed, 9 Sep 2026 04:40:05 +0000</lastBuildDate>
+    <atom:link href="https://extropyengine.com/podcast-redacted/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://extropyengine.com/podcast-redacted/cover.jpg</url>
+      <title>Extropy Engine Redacted</title>
+      <link>https://extropyengine.com/redacted</link>
+    </image>
+    <item>
+      <title>Can thermodynamic entropy replace economic value?</title>
+      <description>REDACTED. Old meter. Not the Codex. Landauer, six-token split, W E as hidden politics, glass of water in the desert, R as rarity not reputation, 30-day window, corporate capture via fiat-paid validators, 63 gaps. Physics as gold standard vs subjective utility.</description>
+      <itunes:summary>REDACTED. Old meter. Not the Codex. Landauer, six-token split, W E as hidden politics, glass of water in the desert, R as rarity not reputation, 30-day window, corporate capture via fiat-paid validators, 63 gaps. Physics as gold standard vs subjective utility.</itunes:summary>
+      <pubDate>Fri, 21 Aug 2026 16:00:00 +0000</pubDate>
+      <guid isPermaLink="false">c102c80e4e124b968687e3e8ff00d3bd4cee7344</guid>
+      <link>https://extropyengine.com/redacted</link>
+      <enclosure url="https://extropyengine.com/podcast-redacted/2026-08-24-can-thermodynamic-entropy-replace-economic-value.mp3" length="14277727" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast-redacted/cover.jpg"/>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:duration>00:19:50</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>5</itunes:episode>
+    </item>
+    <item>
+      <title>Replacing financial extraction with entropy reduction</title>
+      <description>REDACTED. Old meter. Not the Codex. Why price selects for toll booths. XP from delta S × reputation × falsifiability. DFAO as layer-zero, DAG vs chain, two-person minimum, clap/convergence vertex, blind SignalFlow routing, sensors as evidence not mint, HomeFlow hides the math.</description>
+      <itunes:summary>REDACTED. Old meter. Not the Codex. Why price selects for toll booths. XP from delta S × reputation × falsifiability. DFAO as layer-zero, DAG vs chain, two-person minimum, clap/convergence vertex, blind SignalFlow routing, sensors as evidence not mint, HomeFlow hides the math.</itunes:summary>
+      <pubDate>Thu, 20 Aug 2026 16:00:00 +0000</pubDate>
+      <guid isPermaLink="false">5559fb521cd0a2e3004b4fe2d2e790f778d6f359</guid>
+      <link>https://extropyengine.com/redacted</link>
+      <enclosure url="https://extropyengine.com/podcast-redacted/2026-08-24-replacing-financial-extraction-with-entropy-reduction.mp3" length="26897377" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast-redacted/cover.jpg"/>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:duration>00:37:21</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>4</itunes:episode>
+    </item>
+    <item>
+      <title>Thermodynamic governance and the Extropy Engine</title>
+      <description>REDACTED. Old meter. Not the Codex. Genius vs crank on v3.1. delta S as value vs Goodhart. Digital autarky, SIIR, Maya the lawyer, echo-chamber DFAOs, swarm obscuration, waste as latent coherence, God as emergent entropy reduction. Both sides grant the mechanics; they split on the soul.</description>
+      <itunes:summary>REDACTED. Old meter. Not the Codex. Genius vs crank on v3.1. delta S as value vs Goodhart. Digital autarky, SIIR, Maya the lawyer, echo-chamber DFAOs, swarm obscuration, waste as latent coherence, God as emergent entropy reduction. Both sides grant the mechanics; they split on the soul.</itunes:summary>
+      <pubDate>Wed, 19 Aug 2026 16:00:00 +0000</pubDate>
+      <guid isPermaLink="false">c7003c9af9dcea2ea3e8c3f28087ca7972d802a1</guid>
+      <link>https://extropyengine.com/redacted</link>
+      <enclosure url="https://extropyengine.com/podcast-redacted/2026-08-24-thermodynamic-governance-and-the-extropy-engine.mp3" length="15177384" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast-redacted/cover.jpg"/>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:duration>00:21:05</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>3</itunes:episode>
+    </item>
+    <item>
+      <title>Replacing politics with thermodynamics</title>
+      <description>REDACTED. Old meter. Not the Codex. NotebookLM pitch of the Extropy Engine as a civilizational OS: consensus as the bug, XP as delta S over causal-loop speed, SignalFlow as invisible validation, Extropian speech, Universal Times, reputation decay, adversarial convergence, DFAO. Blueprint, not manifesto.</description>
+      <itunes:summary>REDACTED. Old meter. Not the Codex. NotebookLM pitch of the Extropy Engine as a civilizational OS: consensus as the bug, XP as delta S over causal-loop speed, SignalFlow as invisible validation, Extropian speech, Universal Times, reputation decay, adversarial convergence, DFAO. Blueprint, not manifesto.</itunes:summary>
+      <pubDate>Tue, 18 Aug 2026 16:00:00 +0000</pubDate>
+      <guid isPermaLink="false">0399e0feed3ea69b539c9035e878f739be587799</guid>
+      <link>https://extropyengine.com/redacted</link>
+      <enclosure url="https://extropyengine.com/podcast-redacted/2026-08-24-replacing-politics-with-thermodynamics.mp3" length="19674102" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast-redacted/cover.jpg"/>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:duration>00:27:19</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>2</itunes:episode>
+    </item>
+    <item>
+      <title>Mapping human interactions to entropy reduction</title>
+      <description>REDACTED. Old meter. Not the Codex. A NotebookLM debate on the Extropy Engine. Is mapping human work onto verified delta S - via a local DAG, no fiat on-ramp, and a proxy that gets less wrong as the graph fills - a rigorous answer to broken rewards, or a category error that measures the exhaust of a ride instead of the reason for it? Codex v2.1, the mint formula, LocalFlow, DFAO scale, standing unbundled from XP.</description>
+      <itunes:summary>REDACTED. Old meter. Not the Codex. A NotebookLM debate on the Extropy Engine. Is mapping human work onto verified delta S - via a local DAG, no fiat on-ramp, and a proxy that gets less wrong as the graph fills - a rigorous answer to broken rewards, or a category error that measures the exhaust of a ride instead of the reason for it? Codex v2.1, the mint formula, LocalFlow, DFAO scale, standing unbundled from XP.</itunes:summary>
+      <pubDate>Mon, 17 Aug 2026 16:00:00 +0000</pubDate>
+      <guid isPermaLink="false">6b5e7c7751472fa26dbe32e4757382238a4dfe59</guid>
+      <link>https://extropyengine.com/redacted</link>
+      <enclosure url="https://extropyengine.com/podcast-redacted/2026-08-24-mapping-human-interactions-to-entropy-reduction.mp3" length="15763258" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast-redacted/cover.jpg"/>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:duration>00:21:54</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>1</itunes:episode>
+    </item>
+  </channel>
+</rss>

@@ -77,6 +77,10 @@ function Subscribe() {
         <Link to="/research-pod" className="text-primary hover:underline">
           Research Pod
         </Link>
+        . Old drafts sit on{" "}
+        <Link to="/redacted" className="text-primary hover:underline">
+          Redacted
+        </Link>
         .
       </p>
     </div>

@@ -113,6 +113,7 @@ export const primaryNav: readonly NavItem[] = [
   },
   { label: "Podcast", href: "/podcast" },
   { label: "Research Pod", href: "/research-pod" },
+  { label: "Redacted", href: "/redacted" },
   { label: "Connect", href: "/#follow" },
 ] as const;
 

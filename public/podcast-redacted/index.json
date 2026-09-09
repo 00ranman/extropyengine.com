@@ -1,0 +1,67 @@
+{
+  "title": "Extropy Engine Redacted",
+  "feed": "/podcast-redacted/feed.xml",
+  "disclaimer": "REDACTED. Old meter. Not the Codex. These episodes were recorded against earlier drafts (30-day windows, six-token talk, reputation inside XP, 1% per Gregorian month). They stay as a trail. They do not describe the live protocol. The git and /key win.",
+  "episodes": [
+    {
+      "src": "/podcast-redacted/2026-08-24-can-thermodynamic-entropy-replace-economic-value.mp3",
+      "bytes": 14277727,
+      "title": "Can thermodynamic entropy replace economic value?",
+      "summary": "REDACTED. Old meter. Not the Codex. Landauer, six-token split, W·E as hidden politics, glass of water in the desert, R as rarity not reputation, 30-day window, corporate capture via fiat-paid validators, 63 gaps. Physics as gold standard vs subjective utility.",
+      "pubDate": "Fri, 21 Aug 2026 16:00:00 +0000",
+      "explicit": false,
+      "season": 1,
+      "episode": 5,
+      "duration": "00:19:50",
+      "mime": "audio/mpeg"
+    },
+    {
+      "src": "/podcast-redacted/2026-08-24-replacing-financial-extraction-with-entropy-reduction.mp3",
+      "bytes": 26897377,
+      "title": "Replacing financial extraction with entropy reduction",
+      "summary": "REDACTED. Old meter. Not the Codex. Why price selects for toll booths. XP from ΔS × reputation × falsifiability. DFAO as layer-zero, DAG vs chain, two-person minimum, clap/convergence vertex, blind SignalFlow routing, sensors as evidence not mint, HomeFlow hides the math.",
+      "pubDate": "Thu, 20 Aug 2026 16:00:00 +0000",
+      "explicit": false,
+      "season": 1,
+      "episode": 4,
+      "duration": "00:37:21",
+      "mime": "audio/mpeg"
+    },
+    {
+      "src": "/podcast-redacted/2026-08-24-thermodynamic-governance-and-the-extropy-engine.mp3",
+      "bytes": 15177384,
+      "title": "Thermodynamic governance and the Extropy Engine",
+      "summary": "REDACTED. Old meter. Not the Codex. Genius vs crank on v3.1. ΔS as value vs Goodhart. Digital autarky, SIIR, Maya the lawyer, echo-chamber DFAOs, swarm obscuration, waste as latent coherence, God as emergent entropy reduction. Both sides grant the mechanics; they split on the soul.",
+      "pubDate": "Wed, 19 Aug 2026 16:00:00 +0000",
+      "explicit": false,
+      "season": 1,
+      "episode": 3,
+      "duration": "00:21:05",
+      "mime": "audio/mpeg"
+    },
+    {
+      "src": "/podcast-redacted/2026-08-24-replacing-politics-with-thermodynamics.mp3",
+      "bytes": 19674102,
+      "title": "Replacing politics with thermodynamics",
+      "summary": "REDACTED. Old meter. Not the Codex. NotebookLM pitch of the Extropy Engine as a civilizational OS: consensus as the bug, XP as ΔS over causal-loop speed, SignalFlow as invisible validation, Extropian speech, Universal Times, reputation decay, adversarial convergence, DFAO. Blueprint, not manifesto.",
+      "pubDate": "Tue, 18 Aug 2026 16:00:00 +0000",
+      "explicit": false,
+      "season": 1,
+      "episode": 2,
+      "duration": "00:27:19",
+      "mime": "audio/mpeg"
+    },
+    {
+      "src": "/podcast-redacted/2026-08-24-mapping-human-interactions-to-entropy-reduction.mp3",
+      "bytes": 15763258,
+      "title": "Mapping human interactions to entropy reduction",
+      "summary": "REDACTED. Old meter. Not the Codex. A NotebookLM debate on the Extropy Engine. Is mapping human work onto verified ΔS — via a local DAG, no fiat on-ramp, and a proxy that gets less wrong as the graph fills — a rigorous answer to broken rewards, or a category error that measures the exhaust of a ride instead of the reason for it? Codex v2.1, the mint formula, LocalFlow, DFAO scale, standing unbundled from XP.",
+      "pubDate": "Mon, 17 Aug 2026 16:00:00 +0000",
+      "explicit": false,
+      "season": 1,
+      "episode": 1,
+      "duration": "00:21:54",
+      "mime": "audio/mpeg"
+    }
+  ]
+}
