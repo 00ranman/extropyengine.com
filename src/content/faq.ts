@@ -119,6 +119,14 @@ export const faqSections: FaqSection[] = [
         ],
       },
       {
+        id: "not-the-wrap-episode",
+        q: "Won't someone fork CT, wrap it for cash, list it, and get paid?",
+        a: "That is fail-closed in the background. It is not the plot. Anyone can fork a file. If they wire standing to money they left the language. κ hits 0. There is no buyer for a meter that does not transfer. A clerk listing CT is not a market. Do not spend the episode on a rogue grocery. The story is the close: both edges, evidence, a later vertex if it leaked.",
+        also: [
+          { label: "Meter math", href: "/math" },
+        ],
+      },
+      {
         id: "people-suck",
         q: "Why would this work if people suck?",
         a: "It does not require people to be good. Most systems fail because they do. They try to teach virtue, or they hope the next cohort is nicer. People game what they can touch. This loop is built for that: both edges, late burn, decay, cash still buys milk. You do not need a moral majority. You need enough nodes in a place that closed loops outrun the puff. That is a local threshold, not a conversion of the species. Fungus, not fire. The rest of the street can ignore it.",

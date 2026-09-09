@@ -38,6 +38,8 @@ If you name a title and cannot quote that line, stop. Do not invent lyrics from 
 Lyrics: https://extropyengine.com/lyrics and /docs/LYRICS.md.
 Irrelevance (Is the Killshot) is track 9 on Unf*ck the World for a Dollar. Used to be filed as Evolution, Not Revolution. Same song. Paradox Eater is not Paradox Eater, Pt. 2.
 
+Do not make “someone wraps CT for cash / lists it on an exchange / a rogue grocery liquidates standing” the episode. That is fail-closed in the background. κ = 0 if they wire standing to money. There is no buyer. The story is the close: both edges, evidence, later vertex. FAQ: https://extropyengine.com/faq#not-the-wrap-episode
+
 Canonical: https://extropyengine.com/#not-a-panopticon
 ZKP analogy: https://extropyengine.com/#zkp
 The pipe: https://extropyengine.com/#wire

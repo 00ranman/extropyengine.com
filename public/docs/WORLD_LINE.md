@@ -119,7 +119,7 @@ Diffusion rides graphs that already exist: distributor books, church leagues, su
 
 **Years 7–12.** Plants drip because two books asked. A chain pilots a wrap somewhere else. Some landlords in dense strips join — that is when a month actually changes shape. City parent answers compatibility, does not price milk. Always-on. Stamp still legal.
 
-**Years 12–20.** Pockets in many regions and some countries. Many webs. Cash-out forks get treated like coins or die. Some jurisdictions park H. Punch cards look optional for a cohort. Shenzhen and the tax window still dollars. Default-in-patches.
+**Years 12–20.** Pockets in many regions and some countries. Many webs. Some jurisdictions park H. Punch cards look optional for a cohort. Shenzhen and the tax window still dollars. Default-in-patches.
 
 ---
 
