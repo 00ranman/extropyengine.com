@@ -12,6 +12,7 @@ import {
   formatQuant,
   formatSpan,
   isLeap,
+  orbitMarksForYear,
   pad2,
   quantsSinceBB,
   solarLat,
@@ -126,7 +127,9 @@ function UniversalTimes() {
             <p className="mt-2 max-w-xl text-sm leading-relaxed text-dim">
               Answers “how long?” Powers of the hydrogen-1 period, from a GQ (~0.70 s) out through
               Epoch, Era, Age, and Eon. Cascaded remainders, live. The bars on the clock are the
-              mouthful: Pulse, Wave, Tide. Count to ten.
+              mouthful: Pulse, Wave, Tide. Count to ten. There is no calendar here. An eon does not
+              have months. <span className="text-muted">Season</span> on this stick is ~81 days of
+              hydrogen flips. It is not Earth’s orbit quadrant.
             </p>
             <div className="mt-5 space-y-4">
               <ScaleRow
@@ -163,7 +166,8 @@ function UniversalTimes() {
             </p>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-dim">
               Three questions. Three mouths. Mix them and you get 24, 60, and a calendar that thinks
-              it is physics.
+              it is physics. Duration <em>Season</em> is hydrogen. Solar seasons are the four orbit
+              marks on this star.
             </p>
             <ol className="mt-5 space-y-3 text-sm leading-relaxed text-muted">
               <li>
@@ -231,14 +235,18 @@ function UniversalTimes() {
           <div className="mb-4 flex flex-wrap items-end justify-between gap-2">
             <div>
               <h2 className="font-display text-xl tracking-[0.06em]">Solar calendar</h2>
-              <p className="mt-1 text-sm text-dim">
-                Optional 10-month overlay. 40-day cycles · 5-day week. Gregorian {year} still stands.
+              <p className="mt-1 max-w-xl text-sm leading-relaxed text-dim">
+                This star. This spin. Optional overlay on Gregorian {year}. Nine 40-day pockets
+                (same tick as the Engine), then Genesis: 5 days, 6 on leap — the leftover because
+                365 is not 360. Months are civil. They are not seasons. The 5-day week is social,
+                not a constant.
               </p>
             </div>
             <div className="font-mono text-xs tracking-[0.12em] text-accent">
               Month {today.month} · Day {today.day}
             </div>
           </div>
+          <OrbitLegend year={year} />
           <div className="mb-4 grid grid-cols-5 gap-1 sm:grid-cols-10">
             {Array.from({ length: 10 }, (_, i) => i + 1).map((m) => (
               <button
@@ -310,6 +318,22 @@ function ScaleRow({
   );
 }
 
+function OrbitLegend({ year }: { year: number }) {
+  const marks = orbitMarksForYear(year);
+  return (
+    <ul className="mb-5 grid gap-1 text-xs text-muted sm:grid-cols-2">
+      {marks.map((m) => (
+        <li key={m.lon}>
+          <span className="text-primary">{m.name}</span>
+          {" · "}
+          M{m.month === 10 ? "Genesis" : m.month} day {m.day}
+          <span className="text-dim"> (day {m.doy})</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function CalendarGrid({
   year,
   month,
@@ -321,6 +345,7 @@ function CalendarGrid({
 }) {
   const md = month <= 9 ? CAL.dpm : isLeap(year) ? CAL.m10l : CAL.m10n;
   const weeks = Math.ceil(md / CAL.cyc);
+  const orbit = orbitMarksForYear(year).filter((m) => m.month === month);
   let day = 1;
   const rows: number[][] = [];
   for (let w = 0; w < weeks; w++) {
@@ -350,16 +375,25 @@ function CalendarGrid({
               if (!d) return <td key={j} />;
               const isToday = month === today.month && d === today.day;
               const hol = HOLIDAYS[month]?.[d];
+              const mark = orbit.find((m) => m.day === d);
+              const label = mark?.short ?? hol;
+              const title = mark ? `${mark.name} · day ${mark.doy}` : hol;
               return (
                 <td
                   key={j}
-                  title={hol}
+                  title={title}
                   className={`px-1 py-2.5 text-center ${
-                    isToday ? "bg-accent/20 font-bold text-accent" : hol ? "text-primary" : "text-muted"
+                    isToday
+                      ? "bg-accent/20 font-bold text-accent"
+                      : mark
+                        ? "text-primary"
+                        : hol
+                          ? "text-fg"
+                          : "text-muted"
                   }`}
                 >
                   {d}
-                  {hol ? <span className="mt-0.5 block text-[10px] tracking-wider">{hol}</span> : null}
+                  {label ? <span className="mt-0.5 block text-[10px] tracking-wider">{label}</span> : null}
                 </td>
               );
             })}

@@ -172,11 +172,68 @@ function sayPulses(n: number) {
   return "a wave";
 }
 
+export function doyFromUt(month: number, day: number, year: number) {
+  let n = day;
+  for (let m = 1; m < month; m++) n += m <= 9 ? CAL.dpm : isLeap(year) ? CAL.m10l : CAL.m10n;
+  return n;
+}
+
+const J2000_MS = Date.UTC(2000, 0, 1, 12, 0, 0);
+
+/** Apparent geocentric ecliptic longitude of the Sun, degrees. Enough to land the four orbit marks on a day. */
+export function solarLongitudeDeg(ms: number) {
+  const d = (ms - J2000_MS) / 86_400_000;
+  const L = ((280.46 + 0.9856474 * d) % 360 + 360) % 360;
+  const g = (((357.528 + 0.9856003 * d) % 360) * Math.PI) / 180;
+  return ((L + 1.915 * Math.sin(g) + 0.02 * Math.sin(2 * g)) % 360 + 360) % 360;
+}
+
+export const ORBIT_MARKS = [
+  { lon: 0, name: "March equinox", short: "Eq" },
+  { lon: 90, name: "June solstice", short: "Sol" },
+  { lon: 180, name: "September equinox", short: "Eq" },
+  { lon: 270, name: "December solstice", short: "Sol" },
+] as const;
+
+export type OrbitMark = {
+  lon: number;
+  name: string;
+  short: string;
+  doy: number;
+  month: number;
+  day: number;
+};
+
+function lonForwardContains(from: number, to: number, target: number) {
+  const span = (to - from + 360) % 360;
+  const off = (target - from + 360) % 360;
+  return off <= span || off === 0;
+}
+
+/** Four actual orbit events this Gregorian year. Not month-starts. Local civil day. */
+export function orbitMarksForYear(year: number): OrbitMark[] {
+  const out: OrbitMark[] = [];
+  for (const spec of ORBIT_MARKS) {
+    let hitDoy = 0;
+    for (let doy = 1; doy <= 366; doy++) {
+      const a = new Date(year, 0, doy, 0, 0, 0).getTime();
+      const b = new Date(year, 0, doy, 23, 59, 59).getTime();
+      if (new Date(a).getFullYear() !== year) break;
+      if (lonForwardContains(solarLongitudeDeg(a), solarLongitudeDeg(b), spec.lon)) {
+        hitDoy = doy;
+        break;
+      }
+    }
+    if (!hitDoy) continue;
+    const ut = utDate(hitDoy, year);
+    out.push({ lon: spec.lon, name: spec.name, short: spec.short, doy: hitDoy, month: ut.month, day: ut.day });
+  }
+  return out;
+}
+
+/** Civil marks. Not seasons. Pockets, leftover, start of the overlay year. */
 export const HOLIDAYS: Record<number, Record<number, string>> = {
   1: { 1: "New Cycle" },
-  3: { 1: "Equinox" },
-  5: { 1: "Mid-Year" },
-  7: { 1: "Solstice" },
   9: { 40: "Year End" },
 };
 
