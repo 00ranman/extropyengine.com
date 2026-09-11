@@ -27,6 +27,13 @@ function MathPage() {
       <p className="font-mono text-[14px] text-primary">
         XP = R × F × ΔS × (w · E) × log(1/Tₛ)
       </p>
+      <p>
+        Engineering spec{" "}
+        <a href="/docs/extropy-engine-technical-docs-v3.5.pdf" className="text-primary hover:underline">
+          v3.5
+        </a>
+        . Mint stamp in code is still canonical-v3.1.2.
+      </p>
       <ul className="list-none space-y-2 p-0">
         <li>
           <Link to="/key" hash="r" className="text-primary hover:underline">

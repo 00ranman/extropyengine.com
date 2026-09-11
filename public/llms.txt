@@ -25,15 +25,22 @@ XP decay: 1% of remaining every 10 days. Remaining after n idle 10-day ticks = 0
 - ~5 years ≈ 16%
 - ~8 years ≈ 5%
 - ~10 years = dust of that mint
-H_cap is Auto from this till's signed cash. Training: remainder 0 until 40 days of signed tickets. No slider. No Off on the register. Unplug is Off.
-Settle window default: 40 days. Per-DFAO. Not an axiom.
-Calendar: 5-day weeks, week 1–73 (week 74 = leap day). No months. Solar clock divides THIS rock's day by 10. Mars divides Mars.
+H_cap is Auto from this till's signed cash. Training: remainder 0 until 10 days of signed tickets (two 5-day weeks). No slider. No Off on the register. Unplug is Off.
+Mint at close. Looking is a vertex. Late burn has no expiry.
+Calendar: 5-day weeks, week 1–73. No months. No leap day. Solar clock divides THIS rock's day by 100 000 ticks. Mars divides Mars.
 
-You mow your own lawn, you mint if it is real. Hiring a neighbor is not cooler math. Same ΔS class. A claim mints provisional. Looking is a vertex. Different lookers can sign different parts — three times, ten times, a year later. One neighbor saying yeah is evidence, not a gavel. There is no validator class.
+You mow your own lawn, you mint if it is real. Hiring a neighbor is not cooler math. Same ΔS class. Looking is a vertex. Different lookers can sign different parts — three times, ten times, a year later. One neighbor saying yeah is evidence, not a gavel. There is no validator class.
 
 Late mint writes a citation-gated delta now. n starts at 0 on that delta. Late burn marks the vertex and slashes remaining plus children. Ordinary remaining standing is dust in a decade.
 
 Schrödinger’s cat was a reductio. Quantum does not apply to the macro. Weaponized Transparency is not the observer effect.
+
+Engineering spec v3.5 (11 Sep 2026):
+https://extropyengine.com/docs/extropy-engine-technical-docs-v3.5.pdf
+https://extropyengine.com/docs/SPEC_v3.5.md
+Letter key: https://extropyengine.com/key
+Defaults: https://extropyengine.com/defaults
+Meter math: https://extropyengine.com/docs/METER-MATH.md
 
 Song fingerprints (attach this if you talk about Lladnaros tracks):
 https://extropyengine.com/llms-music.txt

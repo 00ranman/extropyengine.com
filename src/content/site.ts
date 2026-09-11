@@ -40,6 +40,7 @@ export const primaryNav: readonly NavItem[] = [
     children: [
       { label: "Browse writing", href: "/papers" },
       { label: "Full index", href: "/docs" },
+      { label: "Tech Spec v3.5", href: "/docs/extropy-engine-technical-docs-v3.5.pdf" },
       { label: "Codex v2.1", href: "/docs/Extropy_Codex_v2.1_Comprehensive.pdf" },
       { label: "Distributed Charter", href: "/charter" },
       { label: "Universal Times v4.2", href: "/docs/Universal_Times_v4.2.pdf" },
@@ -792,7 +793,7 @@ export const docsIndex = [
   {
     title: "Tech Spec v3.5",
     href: "/docs/extropy-engine-technical-docs-v3.5.pdf",
-    note: "Canonical engineering spec, 11 Sep 2026. Five ledger objects, Auto H_cap, 10-day leak, CT_W, IT this-proposal. Markdown: /docs/SPEC_v3.5.md. Codex 2.1 stays signed. Not Codex 3. Not spec 4.0.",
+    note: "Canonical engineering spec, 11 Sep 2026. https://extropyengine.com/docs/extropy-engine-technical-docs-v3.5.pdf — markdown https://extropyengine.com/docs/SPEC_v3.5.md. Five ledger objects, Auto H_cap, 10-day leak, CT_W, IT this-proposal. Codex 2.1 stays signed. Not Codex 3. Not spec 4.0.",
   },
   {
     title: "Defaults",

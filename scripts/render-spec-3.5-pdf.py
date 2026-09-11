@@ -25,6 +25,10 @@ CODE_BG = (16, 14, 12)
 ROW = (22, 18, 14)
 TH = (255, 90, 31)
 
+SITE = "https://extropyengine.com"
+SPEC_MD = f"{SITE}/docs/SPEC_v3.5.md"
+SPEC_PDF = f"{SITE}/docs/extropy-engine-technical-docs-v3.5.pdf"
+KEY = f"{SITE}/key"
 LEFT = 20
 RIGHT = 196
 WIDTH = 176
@@ -67,10 +71,9 @@ class SpecPDF(FPDF):
         self.set_xy(LEFT, 9)
         self.set_font("Mono", "", 7.5)
         self.set_text_color(*DIM)
-        self.cell(WIDTH - 22, 5, "EXTROPY ENGINE  ·  TECHNICAL SPECIFICATION v3.5")
+        self.cell(WIDTH - 22, 5, "EXTROPY ENGINE  ·  TECHNICAL SPECIFICATION v3.5", link=SITE)
         self.set_text_color(*ORANGE)
-        self.cell(22, 5, "v3.5", align="R")
-        # Explicit: body always starts below the header band.
+        self.cell(22, 5, "v3.5", align="R", link=SPEC_PDF)
         self.set_y(TOP)
 
     def footer(self):
@@ -80,7 +83,7 @@ class SpecPDF(FPDF):
         self.set_font("Mono", "", 7.5)
         self.set_text_color(*DIM)
         self.set_x(LEFT)
-        self.cell(WIDTH - 16, 5, "extropyengine.com/docs/SPEC_v3.5.md")
+        self.cell(WIDTH - 16, 5, "extropyengine.com", link=SITE)
         self.set_text_color(*CYAN)
         self.cell(16, 5, str(self.page_no()), align="R")
 
@@ -241,10 +244,15 @@ def main() -> None:
         "Mint at close. Looking is a vertex. Late burn has no expiry.",
     )
 
-    pdf.set_xy(LEFT, 252)
+    pdf.set_xy(LEFT, 244)
     pdf.set_font("Mono", "", 8)
+    pdf.set_text_color(*CYAN)
+    pdf.cell(0, 5, "extropyengine.com", link=SITE, new_x="LMARGIN", new_y="NEXT")
+    pdf.set_x(LEFT)
     pdf.set_text_color(*DIM)
-    pdf.cell(0, 5, "extropyengine.com/docs/SPEC_v3.5.md")
+    pdf.cell(52, 5, "spec pdf", link=SPEC_PDF)
+    pdf.cell(58, 5, "markdown", link=SPEC_MD)
+    pdf.cell(40, 5, "letter key", link=KEY)
 
     pdf.cover = False
     pdf.add_page()

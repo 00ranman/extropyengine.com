@@ -19,5 +19,8 @@
   <url><loc>https://extropyengine.com/proof-layers</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://extropyengine.com/mvt</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://extropyengine.com/docs</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://extropyengine.com/docs/extropy-engine-technical-docs-v3.5.pdf</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://extropyengine.com/docs/SPEC_v3.5.md</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://extropyengine.com/key</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://extropyengine.com/say</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

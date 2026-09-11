@@ -227,11 +227,12 @@ export const faqSections: FaqSection[] = [
       {
         id: "formula",
         q: "What is the actual XP formula?",
-        a: "XP = R × F × ΔS × (w · E) × log(1/Tₛ). Canonical v3.1.2. Reputation never enters it. Tₛ is the slam window: instant confirm pays 0. Δt is clipped to the action class so waiting is not a mint. F is repeats. 0.99ⁿ is standing after settlement. Three clocks.",
+        a: "XP = R × F × ΔS × (w · E) × log(1/Tₛ). Engineering spec v3.5. Mint stamp in code is still canonical-v3.1.2. Reputation never enters it. Tₛ is the slam window: instant confirm pays 0. Δt is clipped to the action class so waiting is not a mint. F is repeats. 0.99ⁿ is standing after close. Three clocks.",
         also: [
           { label: "The mint", href: "/glossary", hash: "xp-formula" },
           { label: "Tₛ", href: "/glossary", hash: "ts" },
           { label: "Three clocks", href: "/glossary", hash: "three-clocks" },
+          { label: "Tech Spec v3.5", href: "https://extropyengine.com/docs/extropy-engine-technical-docs-v3.5.pdf" },
         ],
       },
       {
