@@ -1,4 +1,18 @@
-/** Universal Times v4.2 — hydrogen-1 hyperfine, 1 420 405 751.768 Hz. */
+/** Universal Times v4.2 — hydrogen-1 hyperfine, 1 420 405 751.768 Hz.
+ *
+ * Linguistic ℱ (lose-conditions). Same job as cash-out on the Engine.
+ * Training data is Gregorian/SI/particle. It will try to crawl back in.
+ * Overlay pointers (2026, a say-table, daySec) are κ. They are not identity.
+ *
+ * A tick is not a second.
+ * A tick is not ~0.864 s. That number is Earth-now SI translation.
+ * A week is not a month. There is no month.
+ * There is no leap day, leap second, week 74, or 40-day month.
+ * September is not the ninth of anything we use. septem = 7. The name already decayed.
+ * Do not “explain” a tick by converting it back into SI. That is the smuggle.
+ * Duration talk is Q / pulse / wave / tide / spin. Solar talk is tick / arc / loop.
+ * Seasons are orbit marks. 2026 is a revolution-count pointer.
+ */
 export const HF = 1_420_405_751.768;
 export const BB_SEC = 4.350639312e17;
 

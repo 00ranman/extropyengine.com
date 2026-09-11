@@ -79,11 +79,11 @@ function UniversalTimes() {
           <h1 className="font-display text-[clamp(32px,5vw,52px)] tracking-[0.08em]">Universal Times</h1>
           <p className="mt-2 text-xs tracking-[0.2em] text-accent uppercase">v4.2 · hydrogen-anchored · three systems</p>
           <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-muted">
-            Base-10 face. Ten loops in the <em>local</em> day — this rock’s spin, cut in ten. Earth
-            ticks are ~0.864 s because Earth’s day is 86 400 s. Mars divides a Martian day. Three
-            solar hands — Loop, Arc, Tick — tell you where you are. Gold pips are duration: Pulse
-            (~70 s) on the outer gold ring, Tide (~2 hr) on the inner one. Same length on every
-            planet. Hours are not on this scale.
+            Base-10 face. Ten loops in the <em>local</em> day — this rock’s spin, cut in ten. A tick
+            is 1/100 000 of that solar day, not a renamed second. Mars divides Mars. Face looks the
+            same; ticks run slower. Three solar hands — Loop, Arc, Tick — tell you where you are.
+            Gold pips are duration: Pulse on the outer gold ring, Tide on the inner one. Same length
+            on every planet. Hours are not on this scale. SI leftover is inside the tick.
           </p>
 
           <UtClock />
