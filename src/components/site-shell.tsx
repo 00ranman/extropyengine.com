@@ -183,7 +183,7 @@ function DropTrigger({
 function DropPanel({ item, onPick }: { item: NavItem; onPick: () => void }) {
   const kids = item.children ?? [];
   if (item.label === "Engine") {
-    const runHref = new Set(["/#engine", "/start", "/mvt", "/universaltimes"]);
+    const runHref = new Set(["/how-it-runs", "/start", "/mvt", "/universaltimes", "/build"]);
     const run = kids.filter((k) => runHref.has(k.href));
     const read = kids.filter((k) => !runHref.has(k.href));
     return (

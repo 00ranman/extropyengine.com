@@ -23,6 +23,9 @@ import { Route as ItRouteImport } from './routes/it'
 import { Route as KeyRouteImport } from './routes/key'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as LyricsRouteImport } from './routes/lyrics'
+import { Route as MusicRouteImport } from './routes/music'
+import { Route as BookRouteImport } from './routes/book'
+import { Route as HowItRunsRouteImport } from './routes/how-it-runs'
 import { Route as MathRouteImport } from './routes/math'
 import { Route as MvtRouteImport } from './routes/mvt'
 import { Route as OpenProblemsRouteImport } from './routes/open-problems'
@@ -37,6 +40,7 @@ import { Route as TokenomicsRouteImport } from './routes/tokenomics'
 import { Route as UniversaltimesRouteImport } from './routes/universaltimes'
 import { Route as Web3RouteImport } from './routes/web3'
 import { Route as DocsIndexRouteImport } from './routes/docs/index'
+import { Route as PapersIndexRouteImport } from './routes/papers/index'
 import { Route as HoaSunsetOaksRouteImport } from './routes/hoa.sunset-oaks'
 import { Route as PapersClosingTheLoopRouteImport } from './routes/papers/closing-the-loop'
 import { Route as PapersLiquidityAndDecayRouteImport } from './routes/papers/liquidity-and-decay'
@@ -125,6 +129,21 @@ const LyricsRoute = LyricsRouteImport.update({
   path: '/lyrics',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MusicRoute = MusicRouteImport.update({
+  id: '/music',
+  path: '/music',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookRoute = BookRouteImport.update({
+  id: '/book',
+  path: '/book',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowItRunsRoute = HowItRunsRouteImport.update({
+  id: '/how-it-runs',
+  path: '/how-it-runs',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MathRoute = MathRouteImport.update({
   id: '/math',
   path: '/math',
@@ -193,6 +212,11 @@ const Web3Route = Web3RouteImport.update({
 const DocsIndexRoute = DocsIndexRouteImport.update({
   id: '/docs/',
   path: '/docs/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PapersIndexRoute = PapersIndexRouteImport.update({
+  id: '/papers/',
+  path: '/papers/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HoaSunsetOaksRoute = HoaSunsetOaksRouteImport.update({
@@ -296,6 +320,9 @@ export interface FileRoutesByFullPath {
   '/key': typeof KeyRoute
   '/login': typeof LoginRoute
   '/lyrics': typeof LyricsRoute
+  '/music': typeof MusicRoute
+  '/book': typeof BookRoute
+  '/how-it-runs': typeof HowItRunsRoute
   '/math': typeof MathRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
@@ -325,6 +352,7 @@ export interface FileRoutesByFullPath {
   '/web3/node': typeof Web3NodeRoute
   '/web3/truth': typeof Web3TruthRoute
   '/docs/': typeof DocsIndexRoute
+  '/papers/': typeof PapersIndexRoute
   '/start/': typeof StartIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
 }
@@ -343,6 +371,9 @@ export interface FileRoutesByTo {
   '/key': typeof KeyRoute
   '/login': typeof LoginRoute
   '/lyrics': typeof LyricsRoute
+  '/music': typeof MusicRoute
+  '/book': typeof BookRoute
+  '/how-it-runs': typeof HowItRunsRoute
   '/math': typeof MathRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
@@ -372,6 +403,7 @@ export interface FileRoutesByTo {
   '/web3/node': typeof Web3NodeRoute
   '/web3/truth': typeof Web3TruthRoute
   '/docs': typeof DocsIndexRoute
+  '/papers': typeof PapersIndexRoute
   '/start': typeof StartIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
 }
@@ -391,6 +423,9 @@ export interface FileRoutesById {
   '/key': typeof KeyRoute
   '/login': typeof LoginRoute
   '/lyrics': typeof LyricsRoute
+  '/music': typeof MusicRoute
+  '/book': typeof BookRoute
+  '/how-it-runs': typeof HowItRunsRoute
   '/math': typeof MathRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
@@ -420,6 +455,7 @@ export interface FileRoutesById {
   '/web3/node': typeof Web3NodeRoute
   '/web3/truth': typeof Web3TruthRoute
   '/docs/': typeof DocsIndexRoute
+  '/papers/': typeof PapersIndexRoute
   '/start/': typeof StartIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
 }
@@ -440,6 +476,12 @@ export interface FileRouteTypes {
     | '/key'
     | '/login'
     | '/lyrics'
+    | '/music'
+    | '/book'
+    | '/how-it-runs'
+    | '/music'
+    | '/book'
+    | '/how-it-runs'
     | '/math'
     | '/mvt'
     | '/open-problems'
@@ -469,6 +511,7 @@ export interface FileRouteTypes {
     | '/web3/node'
     | '/web3/truth'
     | '/docs/'
+    | '/papers/'
     | '/start/'
     | '/api/auth/$'
   fileRoutesByTo: FileRoutesByTo
@@ -487,6 +530,12 @@ export interface FileRouteTypes {
     | '/key'
     | '/login'
     | '/lyrics'
+    | '/music'
+    | '/book'
+    | '/how-it-runs'
+    | '/music'
+    | '/book'
+    | '/how-it-runs'
     | '/math'
     | '/mvt'
     | '/open-problems'
@@ -516,6 +565,7 @@ export interface FileRouteTypes {
     | '/web3/node'
     | '/web3/truth'
     | '/docs'
+    | '/papers'
     | '/start'
     | '/api/auth/$'
   id:
@@ -534,6 +584,12 @@ export interface FileRouteTypes {
     | '/key'
     | '/login'
     | '/lyrics'
+    | '/music'
+    | '/book'
+    | '/how-it-runs'
+    | '/music'
+    | '/book'
+    | '/how-it-runs'
     | '/math'
     | '/mvt'
     | '/open-problems'
@@ -563,6 +619,7 @@ export interface FileRouteTypes {
     | '/web3/node'
     | '/web3/truth'
     | '/docs/'
+    | '/papers/'
     | '/start/'
     | '/api/auth/$'
   fileRoutesById: FileRoutesById
@@ -582,6 +639,9 @@ export interface RootRouteChildren {
   KeyRoute: typeof KeyRoute
   LoginRoute: typeof LoginRoute
   LyricsRoute: typeof LyricsRoute
+  MusicRoute: typeof MusicRoute
+  BookRoute: typeof BookRoute
+  HowItRunsRoute: typeof HowItRunsRoute
   MathRoute: typeof MathRoute
   MvtRoute: typeof MvtRoute
   OpenProblemsRoute: typeof OpenProblemsRoute
@@ -603,6 +663,7 @@ export interface RootRouteChildren {
   StartMoneyRoute: typeof StartMoneyRoute
   StartPhysicsRoute: typeof StartPhysicsRoute
   DocsIndexRoute: typeof DocsIndexRoute
+  PapersIndexRoute: typeof PapersIndexRoute
   StartIndexRoute: typeof StartIndexRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
 }
@@ -705,6 +766,27 @@ declare module '@tanstack/react-router' {
       path: '/lyrics'
       fullPath: '/lyrics'
       preLoaderRoute: typeof LyricsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/music': {
+      id: '/music'
+      path: '/music'
+      fullPath: '/music'
+      preLoaderRoute: typeof MusicRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book': {
+      id: '/book'
+      path: '/book'
+      fullPath: '/book'
+      preLoaderRoute: typeof BookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-it-runs': {
+      id: '/how-it-runs'
+      path: '/how-it-runs'
+      fullPath: '/how-it-runs'
+      preLoaderRoute: typeof HowItRunsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/math': {
@@ -993,6 +1075,9 @@ const rootRouteChildren: RootRouteChildren = {
   KeyRoute: KeyRoute,
   LoginRoute: LoginRoute,
   LyricsRoute: LyricsRoute,
+  MusicRoute: MusicRoute,
+  BookRoute: BookRoute,
+  HowItRunsRoute: HowItRunsRoute,
   MathRoute: MathRoute,
   MvtRoute: MvtRoute,
   OpenProblemsRoute: OpenProblemsRoute,
@@ -1014,6 +1099,7 @@ const rootRouteChildren: RootRouteChildren = {
   StartMoneyRoute: StartMoneyRoute,
   StartPhysicsRoute: StartPhysicsRoute,
   DocsIndexRoute: DocsIndexRoute,
+  PapersIndexRoute: PapersIndexRoute,
   StartIndexRoute: StartIndexRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
 }
