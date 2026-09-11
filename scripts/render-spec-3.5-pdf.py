@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Post-punk spec PDF. Dark paper, orange/cyan, no pink, no header rule through type."""
+"""Post-punk spec PDF. White paper for academia. Orange + teal spots. No pink."""
 from __future__ import annotations
 
 import re
@@ -12,17 +12,18 @@ MD = ROOT / "public/docs/SPEC_v3.5.md"
 OUT = ROOT / "public/docs/extropy-engine-technical-docs-v3.5.pdf"
 FONTS = Path(__file__).resolve().parent / "fonts"
 
-# Site palette. Primary is orange. Accent is cyan. No pink. No purple.
-BG = (6, 6, 6)
-INK = (243, 236, 225)
-MUTED = (168, 158, 142)
-DIM = (96, 90, 84)
+# Inverted paper, brand spots kept. Orange stays orange. Cyan stays cyan.
+# Naive invert of orange is teal; naive invert of live-green is pink. Don't.
+BG = (255, 255, 255)
+INK = (18, 16, 14)
+MUTED = (90, 84, 76)
+DIM = (130, 124, 116)
 ORANGE = (255, 90, 31)
-CYAN = (34, 211, 238)
-LIVE = (127, 255, 176)
-SURFACE = (20, 12, 8)
-CODE_BG = (16, 14, 12)
-ROW = (22, 18, 14)
+CYAN = (14, 148, 156)
+LIVE = (14, 148, 156)
+SURFACE = (247, 244, 238)
+CODE_BG = (244, 241, 234)
+ROW = (247, 244, 238)
 TH = (255, 90, 31)
 
 SITE = "https://extropyengine.com"
@@ -164,13 +165,7 @@ def glitch_word(pdf: SpecPDF, text: str, x: float, y: float, size: float) -> Non
 
 
 def scanlines(pdf: SpecPDF, y0: float, y1: float) -> None:
-    pdf.set_draw_color(255, 90, 31)
-    pdf.set_line_width(0.08)
-    y = y0
-    while y < y1:
-        pdf.set_draw_color(255, 90, 31)
-        pdf.line(0, y, pdf.w, y)
-        y += 2.15
+    return
 
 
 def main() -> None:
