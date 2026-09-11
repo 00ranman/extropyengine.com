@@ -114,8 +114,9 @@ function UniversalTimes() {
             <h2 className="font-display text-xl tracking-[0.06em]">System 1 · Solar Clock</h2>
             <p className="mt-2 max-w-xl text-sm leading-relaxed text-dim">
               Answers “what time is it here?” t:L:AA:TT. Loop 0 is the start of the local day. Loop 5
-              is midday. A tick is 1/100 000 of this planet’s mean solar day — not an Earth second
-              wearing a hat. Do not say “in 3 arcs” — arcs are coordinates.
+              is midday. A tick is 1/100 000 of this planet’s solar day — whole globe, same length.
+              It eats the SI leftover past 24 h. Not a second. Do not say “in 3 arcs” and do not say
+              “it’ll take a tick.” Arcs and ticks are coordinates.
             </p>
             <ScaleRow
               tone="fg"
@@ -123,7 +124,7 @@ function UniversalTimes() {
               spans={{
                 Loop: "10 / local day",
                 Arc: "100 / loop",
-                Tick: "100 / arc · Earth ~0.864 s",
+                Tick: "100 / arc · 1/100 000 of this solar day",
               }}
               register={(n, el) => {
                 digits.current[n] = el;
@@ -135,9 +136,11 @@ function UniversalTimes() {
             <h2 className="font-display text-xl tracking-[0.06em]">System 2 · Universal Duration</h2>
             <p className="mt-2 max-w-xl text-sm leading-relaxed text-dim">
               Answers “how long?” Powers of the hydrogen-1 period, from a GQ (~0.70 s) out through
-              Epoch, Era, Age, and Eon. Cascaded remainders, live. The bars on the clock are the
-              mouthful: Pulse, Wave, Tide. Count to ten. There is no calendar here. An eon does not
-              have months. <span className="text-muted">Season</span> on this stick is ~81 days of
+              Epoch, Era, Age, and Eon. Cascaded remainders, live. Same length on Mars. Same length
+              in the Kuiper belt. Near a large gravity well the local rate shifts — asterisk the
+              reading on the DAG, don’t rewrite the stick. The bars on the clock are the mouthful:
+              Pulse, Wave, Tide. Count to ten. There is no calendar here. An eon does not have
+              months. <span className="text-muted">Season</span> on this stick is ~81 days of
               hydrogen flips. It is not Earth’s orbit quadrant.
             </p>
             <div className="mt-5 space-y-4">
@@ -171,7 +174,9 @@ function UniversalTimes() {
               Hours are a costume. They are Earth’s spin wearing a duration hat. Ask a Martian for
               “three hours” and you have already lied — their day is a different length, so their
               hour is too. A pulse is 10<sup>11</sup> hydrogen flips. That does not care which rock
-              you are standing on.
+              you are standing on. The solar face looks the same on every planet; the ticks run
+              faster or slower with that planet’s spin. Generation on generation of both hands —
+              quant and tick — until “half a tide” is as boring as “an hour.”
             </p>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-dim">
               Three questions. Three mouths. Mix them and you get 24, 60, and a calendar that thinks
@@ -185,8 +190,9 @@ function UniversalTimes() {
                 Coordinates. A place on the face.
               </li>
               <li>
-                <span className="text-fg">How long will this take?</span> Duration. “About 3 waves.”
-                A length. Same length in the Kuiper belt.
+                <span className="text-fg">How long will this take?</span> Duration. “Half a tide.”
+                “A spin.” A length. Same length in the Kuiper belt. You can still say tomorrow for
+                the next local solar day. Don’t say hour. Don’t say it’ll take a tick.
               </li>
               <li>
                 <span className="text-fg">When exactly?</span> Quant accumulator. Machines. You
@@ -208,6 +214,7 @@ function UniversalTimes() {
                     ["Give me 3 pulses.", "~3.5 min", "“a couple minutes”"],
                     ["Half a wave.", "~6 min", "“give me five”"],
                     ["That ran 3 waves.", "~35 min", "“half an hour”"],
+                    ["Half a tide.", "~1 hr", "“an hour”"],
                     ["I need a tide.", "~2 hr", "“a couple hours”"],
                     ["Back in a spin.", "~20 hr", "“tomorrow-ish”"],
                     ["2 currents.", "~16 days", "“two weeks”"],
@@ -245,10 +252,12 @@ function UniversalTimes() {
             <div>
               <h2 className="font-display text-xl tracking-[0.06em]">Solar calendar</h2>
               <p className="mt-1 max-w-xl text-sm leading-relaxed text-dim">
-                This star. Weeks only. A week is 5 days (social). Week 1 through week 73 = 365
-                days. Leap year: week 74, one day. No months. No extra named chunk. No week 75.
-                Seasons are the four orbit marks. The Engine leaks standing every 10 days. Auto H
-                reads 10 days of till cash. Same number. Different job.
+                This star. Weeks only. A week is 5 solar days. Week 1 through week 73. No months.
+                No leap day. No week 74. 100 000 ticks already ate the fraction past 24 h SI.
+                Seasons are the four orbit marks — solar position, not intercalation. 2026 is a
+                pointer to the inherited revolution count so a bank still parses. DST is a political
+                shift of the face; the definition follows the sun. The Engine leaks standing every
+                10 days. Auto H reads 10 days of till cash. Same number. Different job.
               </p>
             </div>
             <div className="font-mono text-xs tracking-[0.12em] text-accent">

@@ -78,7 +78,7 @@ function copyFor(key: string, live: Live): TipCopy | null {
       return {
         title: "Tick",
         value: `${pad2(Math.floor(live.tick))}.${live.tenths}`,
-        note: "100 per arc · ~0.864 s on Earth. Closest thing to a second here.",
+        note: "100 per arc. 1/100 000 of this planet’s solar day. Coordinate. Don’t say it’ll take a tick.",
       };
     case "pulse":
       return {
@@ -90,7 +90,7 @@ function copyFor(key: string, live: Live): TipCopy | null {
       return {
         title: "Tide",
         value: live.tide.toFixed(3).replace(/^0/, "") || ".000",
-        note: "Duration. ~2 hours. Ten waves. Ten of these is a spin.",
+        note: "Duration. ~2 hours. Ten waves. Ten of these is a spin. Half a tide is the hour analog. Same on Mars.",
       };
     case "season":
       return {
@@ -102,7 +102,7 @@ function copyFor(key: string, live: Live): TipCopy | null {
       return {
         title: "Quant",
         value: live.quant,
-        note: "Estimated H-1 periods since cosmological t:0. Universal.",
+        note: "Estimated H-1 periods since cosmological t:0. Universal. Say Q. Near a gravity well, asterisk the reading.",
       };
     case "cycle":
       return {

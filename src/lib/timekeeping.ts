@@ -3,7 +3,11 @@ export const HF = 1_420_405_751.768;
 export const BB_SEC = 4.350639312e17;
 
 /** System 1 — Solar Clock. Coordinates in the local day. Not durations.
- * daySec is this rock's mean solar day. Earth default 86 400. Mars divides Mars. */
+ * A tick is 1/100 000 of THIS planet's solar day. Same length everywhere on
+ * that rock. The SI leftover past 24 h (leap seconds, 86400.002, rotation
+ * drift) is inside the tick. There is no leap second. daySec is an Earth-now
+ * translation for machines that still count SI, not the definition.
+ * Mars divides a Martian solar day. Face looks the same. Ticks run slower. */
 export const SOLAR = {
   daySec: 86_400,
   ticksPerDay: 100_000,
@@ -33,18 +37,17 @@ export const DUR_UNITS = [
 export const DUR_NAMES = DUR_UNITS.map((u) => u.name);
 export const DUR_EXP = DUR_UNITS.map((u) => u.exp);
 
-/** Solar calendar: 5-day weeks. 73 weeks = 365 days. Leap is week 74, one day. No months. */
+/** Solar calendar: 5-day weeks. 73 weeks. No months. No leap day.
+ * 100 000 ticks already ate the fraction past 24 h SI. Seasons are orbit
+ * marks (solar longitude), not intercalation. 2026 is a pointer to the
+ * inherited revolution count, not physics. */
 export const CAL = {
   week: 5,
   weeks: 73,
 } as const;
 
-export function isLeap(y: number) {
-  return (y % 4 === 0 && y % 100 !== 0) || y % 400 === 0;
-}
-
-export function daysInYear(y: number) {
-  return CAL.weeks * CAL.week + (isLeap(y) ? 1 : 0);
+export function daysInYear(_y?: number) {
+  return CAL.weeks * CAL.week;
 }
 
 export function dayOfYear(d: Date) {
@@ -58,19 +61,20 @@ export type UtStamp = {
   doy: number;
 };
 
-export function utDate(doy: number, y: number): UtStamp {
-  const week = Math.ceil(doy / CAL.week);
-  const day = ((doy - 1) % CAL.week) + 1;
-  return { week, day, doy };
+export function utDate(doy: number, _y?: number): UtStamp {
+  const span = CAL.weeks * CAL.week;
+  const clamped = Math.min(Math.max(doy, 1), span);
+  const week = Math.ceil(clamped / CAL.week);
+  const day = ((clamped - 1) % CAL.week) + 1;
+  return { week, day, doy: clamped };
 }
 
-export function weeksInYear(y: number) {
-  return isLeap(y) ? CAL.weeks + 1 : CAL.weeks;
+export function weeksInYear(_y?: number) {
+  return CAL.weeks;
 }
 
-export function daysInWeek(week: number, y: number) {
-  if (week <= CAL.weeks) return CAL.week;
-  return isLeap(y) ? 1 : 0;
+export function daysInWeek(_week?: number, _y?: number) {
+  return CAL.week;
 }
 
 export function cycleDay(d: Date) {
