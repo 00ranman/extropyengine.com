@@ -1,16 +1,16 @@
 import { createFileRoute, useRouterState } from "@tanstack/react-router";
 import { useEffect } from "react";
 import {
-  BookHero,
-  CallToArms,
-  EnterStrip,
-  FollowSection,
-  Manifesto,
-  MusicSection,
-  PapersSection,
-  EngineSection,
-} from "@/components/home-sections";
-import { SymbolKeyStrip } from "@/components/symbol-key";
+  ClosingBeat,
+  FourFaces,
+  LoopStrip,
+  MathTeaser,
+  ProofClone,
+  ShelfStrip,
+  ShopHero,
+  WhyDoors,
+} from "@/components/home-shop";
+import { FollowSection } from "@/components/home-sections";
 import { SiteShell } from "@/components/site-shell";
 
 export const Route = createFileRoute("/")({ component: Home });
@@ -30,14 +30,14 @@ function Home() {
 
   return (
     <SiteShell>
-      <CallToArms />
-      <EnterStrip />
-      <BookHero />
-      <SymbolKeyStrip />
-      <MusicSection />
-      <Manifesto />
-      <PapersSection />
-      <EngineSection />
+      <ShopHero />
+      <LoopStrip />
+      <FourFaces />
+      <WhyDoors />
+      <ProofClone />
+      <MathTeaser />
+      <ShelfStrip />
+      <ClosingBeat />
       <FollowSection />
     </SiteShell>
   );
