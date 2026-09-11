@@ -4,7 +4,7 @@ export const site = {
   palindrome: "Sorandall",
   wordmarkLeft: "Extropy",
   wordmarkRight: "Engine",
-  tagline: "They want fire. I bring fungus.",
+  tagline: "Standing from closed loops.",
   description:
     "Extropy Engine — protocol, papers, and systems work by Randall Gossett. A free book, three studio albums, and research on entropy reduction and emergence-first governance.",
   year: 2026,
