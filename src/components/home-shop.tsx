@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { FrontDoor } from "@/components/doors";
-import { book, engineStack, engineViews, papers, site } from "@/content/site";
+import { book, engineViews, papers } from "@/content/site";
 import { Btn, SectionTitle } from "@/components/ui-bits";
 
 export function ShopHero() {
@@ -9,11 +9,11 @@ export function ShopHero() {
       <div className="mx-auto max-w-2xl text-center">
         <p className="text-[11px] tracking-[0.28em] text-primary uppercase">Extropy Engine</p>
         <h1 className="font-display mt-3 text-[clamp(28px,5vw,52px)] leading-[1.1] tracking-[0.03em] text-fg">
-          {site.tagline}
+          Standing from closed loops
         </h1>
         <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-muted">
-          This site is a shop window. Hostinger is not a node. The Engine is the git. Two boxes can
-          already countersign a loop.
+          Verified work. Both edges sign. XP you can’t cash out. Two boxes can already countersign
+          a loop — clone the repo and you’re in it.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Btn href="#clone" primary>
@@ -116,12 +116,14 @@ export function ProofClone() {
         <div>
           <p className="text-[11px] tracking-[0.28em] text-primary uppercase">Proof</p>
           <h2 className="font-display mt-2 text-[clamp(24px,3.5vw,36px)] tracking-[0.03em] text-fg">
-            {engineStack.title}
+            One repo. That’s the Engine.
           </h2>
-          <p className="mt-4 text-[15px] leading-relaxed text-muted">{engineStack.lead}</p>
+          <p className="mt-4 text-[15px] leading-relaxed text-muted">
+            SignalFlow packages the claim. The kernel mints. Same loop everywhere: post, do,
+            confirm. Packages are skeletons. Contracts are the truth.
+          </p>
           <p className="mt-4 text-[15px] leading-relaxed text-dim">
-            Nobody is hiring you onto this. The git is already the job. Packages are skeletons.
-            Contracts are the truth. Clone it.
+            Nobody is hiring you onto this. The git is already the job. Clone it.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Btn href="https://github.com/00ranman/extropy-engine" primary external>
