@@ -335,11 +335,6 @@ export const faqSections: FaqSection[] = [
         also: [{ label: "Late burn", href: "/glossary", hash: "late-burn" }],
       },
       {
-        id: "thirty",
-        q: "Is there a settle window? A 40-day verification?",
-        a: "No. That was leftover from when settle meant final. Close mints. Leak starts. Late burn has no expiry. Looking is a vertex. A silence timer is not a looker. H_cap still reads 10 days of this till’s signed cash (two 5-day weeks of books). That is cash, not a check that the lawn got mowed. No months. No 30. No 40. Weeks are 5 days. IT is not a leak pile. XP decay is ~1% every 10 days of remaining.",
-      },
-      {
         id: "three-clocks",
         q: "Tₛ = 1 makes XP = 0. Is the formula broken? Are F, Tₛ, and 0.99ⁿ the same clock?",
         a: "Not broken. Tₛ = 1 means you slammed the loop shut (Δt ≈ 0). log(1/Tₛ) = 0 is the anti-farm, on purpose. People read “decay factor = 1” as “full payout.” That is how decay usually works. This term is elapsed time of this loop, Tₛ = exp(−λ min(Δt, Δt_cap)), so log(1/Tₛ) = λ·clip(Δt). Three clocks: Tₛ this loop, F repeating the class, 0.99ⁿ standing after close. Do not “fix” it with log(1+1/Tₛ). That pays slam-bots. Cap Δt so stalling does not print. Rarity-splitting 400 fake classes is a DAG job, not this term.",
