@@ -29,6 +29,9 @@ MONO = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 LEFT = 18
 RIGHT = 192
 WIDTH = 174
+TOP = 26
+BOTTOM = 20
+HEADER_RULE_Y = 17
 
 
 def clean(s: str) -> str:
@@ -40,38 +43,47 @@ def clean(s: str) -> str:
     s = s.replace("\\Delta", "Δ").replace("\\rho", "ρ").replace("\\kappa", "κ")
     s = s.replace("\\beta", "β").replace("\\lambda", "λ")
     s = s.replace("\\clip", "clip").replace("\\min", "min").replace("\\log", "log")
-    s = s.replace("^{n}", "n").replace("_{W}", "_W").replace("_{s}", "s")
-    s = s.replace("Tₛ", "Ts").replace("ℱ", "F")
-    s = s.replace("—", "-").replace("–", "-").replace("'", "'").replace("'", "'")
-    s = s.replace(""", '"').replace(""", '"')
+    s = s.replace("^{n}", "ⁿ").replace("_{W}", "_W").replace("_{s}", "ₛ")
+    s = s.replace("\\,", "")
     s = re.sub(r"\\[a-zA-Z]+", "", s)
     s = s.replace("{", "").replace("}", "")
     return re.sub(r"\s+", " ", s).strip()
 
 
 class SpecPDF(FPDF):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.cover = True
+
     def header(self):
-        if self.page_no() == 1:
+        self.set_fill_color(*PAPER)
+        self.rect(0, 0, self.w, self.h, "F")
+        if self.cover:
             return
-        self.set_y(12)
+        self.set_xy(LEFT, 10)
         self.set_font("Sans", "", 8)
         self.set_text_color(*MUTED)
-        self.cell(0, 6, "EXTROPY ENGINE  ·  TECHNICAL SPECIFICATION v3.5", align="L")
+        self.cell(WIDTH - 32, 5, "EXTROPY ENGINE  ·  TECHNICAL SPECIFICATION v3.5", align="L")
         self.set_text_color(*RULE)
-        self.cell(0, 6, "CANONICAL", align="R", new_x="LMARGIN", new_y="NEXT")
+        self.cell(32, 5, "CANONICAL", align="R")
         self.set_draw_color(*RULE)
         self.set_line_width(0.3)
-        self.line(LEFT, 20, RIGHT, 20)
+        self.line(LEFT, HEADER_RULE_Y, RIGHT, HEADER_RULE_Y)
 
     def footer(self):
-        self.set_y(-14)
+        self.set_y(-16)
         self.set_draw_color(*RULE)
+        self.set_line_width(0.3)
         self.line(LEFT, self.get_y(), RIGHT, self.get_y())
-        self.set_y(-12)
+        self.set_y(-13)
         self.set_font("Sans", "", 8)
         self.set_text_color(*MUTED)
         self.cell(0, 6, "extropyengine.com/docs/SPEC_v3.5.md", align="L")
         self.cell(0, 6, str(self.page_no()), align="R")
+
+
+def body_font(pdf: SpecPDF, text: str, size: float = 10.5) -> None:
+    pdf.set_font("Sans" if "ℱ" in text else "Serif", "", size)
 
 
 def wrap_cell(pdf: SpecPDF, text: str, width: float) -> list[str]:
@@ -97,7 +109,6 @@ def draw_table(pdf: SpecPDF, rows: list[list[str]]) -> None:
         return
     n = max(len(r) for r in rows)
     rows = [r + [""] * (n - len(r)) for r in rows]
-    # Weight first column(s) so purpose/job text gets the rest.
     if n == 2:
         weights = [0.32, 0.68]
     elif n == 3:
@@ -107,10 +118,11 @@ def draw_table(pdf: SpecPDF, rows: list[list[str]]) -> None:
     else:
         weights = [1 / n] * n
     col_w = [WIDTH * w for w in weights]
+    floor = pdf.h - BOTTOM - 6
     for i, row in enumerate(rows):
         wrapped = [wrap_cell(pdf, c, col_w[j]) for j, c in enumerate(row)]
         h = max(len(w) for w in wrapped) * 4.1 + 2.0
-        if pdf.get_y() + h > 268:
+        if pdf.get_y() + h > floor:
             pdf.add_page()
         y0 = pdf.get_y()
         if i == 0:
@@ -139,18 +151,17 @@ def draw_table(pdf: SpecPDF, rows: list[list[str]]) -> None:
 def main() -> None:
     lines = MD.read_text(encoding="utf-8").splitlines()
     pdf = SpecPDF(format="Letter", unit="mm")
-    pdf.set_auto_page_break(auto=True, margin=20)
+    pdf.set_auto_page_break(auto=True, margin=BOTTOM)
     pdf.add_font("Sans", "", SANS)
     pdf.add_font("Sans", "B", SANS_B)
     pdf.add_font("Serif", "", SERIF)
     pdf.add_font("Serif", "B", SERIF_B)
     pdf.add_font("Mono", "", MONO)
-    pdf.set_margins(LEFT, 22, 18)
+    pdf.set_margins(LEFT, TOP, 18)
     pdf.add_page()
-    pdf.set_fill_color(*PAPER)
 
     pdf.set_fill_color(*INK)
-    pdf.rect(0, 0, 216, 82, "F")
+    pdf.rect(0, 0, pdf.w, 82, "F")
     pdf.set_xy(LEFT, 16)
     pdf.set_font("Sans", "", 9)
     pdf.set_text_color(*TEAL)
@@ -174,6 +185,7 @@ def main() -> None:
     )
     pdf.set_y(90)
     pdf.set_text_color(*INK)
+    pdf.cover = False
 
     skip_h1 = True
     in_code = False
@@ -230,13 +242,17 @@ def main() -> None:
         else:
             flush_table()
 
-        # front-matter key lines under the cover
         if not meta_done and line.startswith("**") and ":" in line:
             pdf.set_font("Sans", "", 9)
             pdf.set_text_color(*MUTED)
             pdf.multi_cell(WIDTH, 5, clean(line))
             continue
-        if not meta_done and (line.startswith("Public copies:") or line.startswith("Letter key:") or line.startswith("Defaults:") or line.startswith("Gaps:")):
+        if not meta_done and (
+            line.startswith("Public copies:")
+            or line.startswith("Letter key:")
+            or line.startswith("Defaults:")
+            or line.startswith("Gaps:")
+        ):
             pdf.set_font("Sans", "", 8)
             pdf.set_text_color(*RULE)
             pdf.multi_cell(WIDTH, 4.5, clean(line))
@@ -245,10 +261,20 @@ def main() -> None:
             meta_done = True
             pdf.ln(2)
             pdf.set_draw_color(*RULE)
-            pdf.line(LEFT, pdf.get_y(), RIGHT, pdf.get_y())
+            y = pdf.get_y()
+            if y > HEADER_RULE_Y + 4:
+                pdf.line(LEFT, y, RIGHT, y)
             pdf.ln(4)
             continue
 
+        if line.startswith("> "):
+            text = clean(line[2:])
+            body_font(pdf, text, 10.5)
+            pdf.set_text_color(*MUTED)
+            pdf.set_x(LEFT + 6)
+            pdf.multi_cell(WIDTH - 6, 5.2, text)
+            pdf.set_text_color(*INK)
+            continue
         if line.startswith("### "):
             pdf.set_font("Sans", "B", 11.5)
             pdf.set_text_color(*ACCENT)
@@ -258,7 +284,7 @@ def main() -> None:
             continue
         if line.startswith("## "):
             pdf.ln(3)
-            pdf.set_font("Serif", "B", 14)
+            pdf.set_font("Sans", "B", 14)
             pdf.set_text_color(*ACCENT)
             pdf.multi_cell(0, 8, clean(line[3:]))
             pdf.set_text_color(*INK)
@@ -266,21 +292,24 @@ def main() -> None:
             continue
 
         if re.match(r"^\d+\.\s", line):
-            pdf.set_font("Serif", "", 10.5)
+            text = clean(line)
+            body_font(pdf, text, 10.5)
             pdf.set_x(LEFT + 4)
-            pdf.multi_cell(WIDTH - 4, 5.2, clean(line))
+            pdf.multi_cell(WIDTH - 4, 5.2, text)
             continue
         if line.startswith("- "):
-            pdf.set_font("Serif", "", 10.5)
+            text = "•  " + clean(line[2:])
+            body_font(pdf, text, 10.5)
             pdf.set_x(LEFT + 4)
-            pdf.multi_cell(WIDTH - 4, 5.2, "•  " + clean(line[2:]))
+            pdf.multi_cell(WIDTH - 4, 5.2, text)
             continue
         if not line:
             pdf.ln(1.5)
             continue
-        pdf.set_font("Serif", "", 10.5)
+        text = clean(line)
+        body_font(pdf, text, 10.5)
         pdf.set_text_color(*INK)
-        pdf.multi_cell(0, 5.3, clean(line))
+        pdf.multi_cell(0, 5.3, text)
         pdf.ln(0.3)
 
     flush_table()
