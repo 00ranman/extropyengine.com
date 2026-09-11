@@ -183,13 +183,35 @@ function DropTrigger({
 function DropPanel({ item, onPick }: { item: NavItem; onPick: () => void }) {
   const kids = item.children ?? [];
   if (item.label === "Engine") {
-    const runHref = new Set(["/how-it-runs", "/start", "/mvt", "/universaltimes", "/build"]);
+    const runHref = new Set(["/how-it-runs", "/start", "/mvt", "/build", "/web3/node", "/web3/loop"]);
     const run = kids.filter((k) => runHref.has(k.href));
-    const read = kids.filter((k) => !runHref.has(k.href));
+    const more = kids.filter((k) => !runHref.has(k.href));
     return (
       <div className="mx-auto grid max-w-3xl grid-cols-2 gap-8 px-8 py-5 text-[11px] tracking-[0.14em] uppercase">
         <EngineCol heading="Run" items={run} onPick={onPick} />
-        <EngineCol heading="Read" items={read} onPick={onPick} />
+        <EngineCol heading="More" items={more} onPick={onPick} />
+      </div>
+    );
+  }
+  if (item.label === "Library") {
+    const keys = new Set(["/key", "/math", "/defaults", "/tokenomics", "/docs"]);
+    const writing = kids.filter((k) => !keys.has(k.href));
+    const tools = kids.filter((k) => keys.has(k.href));
+    return (
+      <div className="mx-auto grid max-w-3xl grid-cols-2 gap-8 px-8 py-5 text-[11px] tracking-[0.14em] uppercase">
+        <EngineCol heading="Writing" items={writing} onPick={onPick} />
+        <EngineCol heading="Keys" items={tools} onPick={onPick} />
+      </div>
+    );
+  }
+  if (item.label === "Media") {
+    const sound = new Set(["/music", "/lyrics", "/podcast", "/research-pod", "/redacted"]);
+    const left = kids.filter((k) => sound.has(k.href));
+    const right = kids.filter((k) => !sound.has(k.href));
+    return (
+      <div className="mx-auto grid max-w-3xl grid-cols-2 gap-8 px-8 py-5 text-[11px] tracking-[0.14em] uppercase">
+        <EngineCol heading="Listen" items={left} onPick={onPick} />
+        <EngineCol heading="Watch" items={right} onPick={onPick} />
       </div>
     );
   }
@@ -248,6 +270,13 @@ function NavItem({
       <Link to="/" hash={hash} className={cn(className)}>
         {children}
       </Link>
+    );
+  }
+  if (/^https?:\/\//i.test(href)) {
+    return (
+      <a href={href} target="_blank" rel="noreferrer" className={cn(className)}>
+        {children}
+      </a>
     );
   }
   return (

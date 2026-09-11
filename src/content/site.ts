@@ -13,50 +13,42 @@ export const site = {
 export type NavLink = { label: string; href: string };
 export type NavItem = NavLink & { children?: readonly NavLink[] };
 
-/** Top bar stays short. Depth lives under Engine / Music / Papers. */
+/** Top bar: poke around. Engine = run it. Library = writing. Media = sound/video. */
 export const primaryNav: readonly NavItem[] = [
   {
     label: "Engine",
     href: "/how-it-runs",
     children: [
       { label: "How it runs", href: "/how-it-runs" },
-      { label: "Call / build", href: "/build" },
       { label: "Start here", href: "/start" },
-      { label: "Web3", href: "/web3" },
+      { label: "What's needed", href: "/build" },
       { label: "Clone a node", href: "/web3/node" },
       { label: "The loop", href: "/web3/loop" },
-      { label: "Identity", href: "/web3/identity" },
-      { label: "Governance", href: "/web3/governance" },
-      { label: "Tokenomics", href: "/tokenomics" },
-      { label: "Math", href: "/math" },
-      { label: "Letter key", href: "/key" },
-      { label: "Defaults", href: "/defaults" },
-      { label: "Docs", href: "/docs" },
+      { label: "Try it", href: "/mvt" },
       { label: "Open problems", href: "/open-problems" },
       { label: "FAQ", href: "/faq" },
       { label: "Glossary", href: "/glossary" },
-      { label: "DFAO", href: "/dfao" },
-      { label: "Charter", href: "/charter" },
-      { label: "Try it", href: "/mvt" },
-      { label: "Universal Times", href: "/universaltimes" },
+      { label: "Web3", href: "/web3" },
       { label: "HOA", href: "/hoa" },
-      { label: "Sunset Oaks", href: "/hoa/sunset-oaks" },
       { label: "Connect", href: "/#follow" },
     ],
   },
   { label: "Book", href: "/book" },
   {
-    label: "Papers",
+    label: "Library",
     href: "/papers",
     children: [
-      { label: "All papers", href: "/papers" },
+      { label: "Browse writing", href: "/papers" },
+      { label: "Full index", href: "/docs" },
       { label: "Codex v2.1", href: "/docs/Extropy_Codex_v2.1_Comprehensive.pdf" },
       { label: "Distributed Charter", href: "/charter" },
       { label: "Universal Times v4.2", href: "/docs/Universal_Times_v4.2.pdf" },
       { label: "Meter Math", href: "/docs/Meter_Math.pdf" },
-      { label: "Defaults (H_cap / λ / β)", href: "/defaults" },
+      { label: "Defaults", href: "/defaults" },
       { label: "Working Formula Sheet", href: "/docs/Extropy_Engine_Formula_Sheet.pdf" },
       { label: "Meters, not bags", href: "/tokenomics" },
+      { label: "Letter key", href: "/key" },
+      { label: "Math", href: "/math" },
       { label: "When the Signal Eats the Source", href: "/docs/When_the_Signal_Eats_the_Source.pdf" },
       { label: "DAG Architecture", href: "/docs/DAG_Architecture_Breakdown.pdf" },
       { label: "Emergence-First GUT", href: "/docs/An_Emergence_First_Grand_Unified_Theory_v2_referenced.pdf" },
@@ -65,17 +57,20 @@ export const primaryNav: readonly NavItem[] = [
     ],
   },
   {
-    label: "Music",
+    label: "Media",
     href: "/music",
     children: [
-      { label: "Albums & singles", href: "/music" },
+      { label: "Music", href: "/music" },
       { label: "Lyrics", href: "/lyrics" },
+      { label: "Videos", href: "https://www.youtube.com/@Lladnaros" },
+      { label: "Music videos", href: "https://www.youtube.com/playlist?list=PLDvyw8u2wal2a-d9dfjih8ewRqg5qbbMk" },
+      { label: "Lyric videos", href: "https://www.youtube.com/playlist?list=PLDvyw8u2wal23xqocgvMXxevRFFq8S1Kw" },
+      { label: "XPlainers", href: "https://www.youtube.com/playlist?list=PLDvyw8u2wal1AnvXoTCL8StWzLdKzR8d_" },
       { label: "Podcast", href: "/podcast" },
       { label: "Research Pod", href: "/research-pod" },
       { label: "Redacted", href: "/redacted" },
     ],
   },
-  { label: "Docs", href: "/docs" },
 ] as const;
 
 
