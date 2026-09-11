@@ -567,11 +567,11 @@ export function EngineSection() {
             How do I get a DID? →
           </Link>
           <span className="text-faint"> · </span>
-          <Link to="/" hash="zkp" className="text-primary hover:underline">
+          <Link to="/how-it-runs" hash="zkp" className="text-primary hover:underline">
             Yes or no at the door →
           </Link>
           <span className="text-faint"> · </span>
-          <Link to="/" hash="wire" className="text-primary hover:underline">
+          <Link to="/how-it-runs" hash="wire" className="text-primary hover:underline">
             The pipe →
           </Link>
           <span className="text-faint"> · </span>
