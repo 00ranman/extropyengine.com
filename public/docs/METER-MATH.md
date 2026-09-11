@@ -8,7 +8,7 @@ Unsigned working spec for the **tokenomics of the meters**. Not bags. Nothing he
 
 No offset registry. No transferable tonne. No Extropy credit listed next to Verra. If a room lists a spark as a commodity, they forked.
 
-Signed Codex is still v2.1. Canonical mint in code is `packages/xp-formula`. If this page and the letter key disagree, the [letter key](/key) wins on names. This page wins on how the meters couple.
+Signed Codex is still v2.1. Canonical mint in code is `packages/xp-formula`. Engineering spec is [v3.5](/docs/SPEC_v3.5.md) (11 Sep 2026). If this page and the letter key disagree, the [letter key](/key) wins on names. This page wins on how the meters couple.
 
 Defaults and change rules, before a live till: [/docs/DEFAULTS.md](/docs/DEFAULTS.md).
 

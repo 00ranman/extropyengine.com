@@ -403,6 +403,11 @@ export const papers: Paper[] = [
     href: "/docs/Extropy_Codex_v2.1_Comprehensive.pdf",
   },
   {
+    tag: "Tech Spec · V3.5 · 11 Sep 2026",
+    title: "Extropy Engine Technical Specification v3.5",
+    href: "/docs/extropy-engine-technical-docs-v3.5.pdf",
+  },
+  {
     tag: "New · Time · V4.2",
     title: "Universal Times v4.2",
     href: "/docs/Universal_Times_v4.2.pdf",
@@ -460,7 +465,7 @@ export const earlierEditions: Paper[] = [
   },
   {
     tag: "Tech Docs · V3.1.2",
-    title: "Extropy Engine Technical Docs v3.1.2",
+    title: "Extropy Engine Technical Docs v3.1.2 (superseded)",
     href: "/docs/extropy-engine-technical-docs-v3.1.2.pdf",
   },
   {
@@ -719,7 +724,7 @@ export const engineMath = {
   formula: "XP = R × F × ΔS × (w · E) × log(1/Tₛ)",
   floor:
     "Floor: XP ≥ ΔS / cₗ². Irreducible form — a compression of the mint above, same job as E = mc² next to the full energy-momentum relation. Not the theory. Not a new physics law. Glossary has the line.",
-  source: "packages/xp-formula — canonical v3.1.2. Reputation never enters this formula. Tₛ is a slam window with a Δt cap; standing leak is 0.99ⁿ.",
+  source: "packages/xp-formula — mint stamp canonical-v3.1.2. Engineering spec v3.5. Reputation never enters this formula. Tₛ is a slam window with a Δt cap; standing leak is 0.99ⁿ every 10 idle days.",
   terms: [
     { t: "R", d: "Rarity. Scarcity / base difficulty of this action class. Property of the loop, not the person. Not reputation." },
     { t: "F", d: "Frequency of Decay. Repeating the same class pays less. 1.0 the first time. Not falsifiability (that is script-ℱ)." },
@@ -790,6 +795,11 @@ export const socials = [
 ] as const;
 
 export const docsIndex = [
+  {
+    title: "Tech Spec v3.5",
+    href: "/docs/extropy-engine-technical-docs-v3.5.pdf",
+    note: "Canonical engineering spec, 11 Sep 2026. Five ledger objects, Auto H_cap, 10-day leak, CT_W, IT this-proposal. Markdown: /docs/SPEC_v3.5.md. Codex 2.1 stays signed. Not Codex 3. Not spec 4.0.",
+  },
   {
     title: "Defaults",
     href: "/defaults",
@@ -871,7 +881,7 @@ export const earlierDocs = [
   {
     title: "Tech Spec 3.1.2",
     href: "/docs/extropy-engine-technical-docs-v3.1.2.pdf",
-    note: "Earlier engine technical specification",
+    note: "Superseded. Reliability / six-token / transfer-friction cartoon. Do not implement against it.",
   },
   {
     title: "Capture notes (not a Codex)",

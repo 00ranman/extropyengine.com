@@ -2,7 +2,7 @@
 export const symbolKey = {
   title: "Letter key",
   kicker: "Do not remap these",
-  lead: "Same Latin letter gets reused in every field. CT is the community meter. Same CT at every compatible till. The door only owns H. A wrap that breaks the rules, or another mesh, is the only way the laundromat does not read the grocery. Parallel system: cash still clears. Signed Codex v2.1. Meter coupling: /docs/METER-MATH.md.",
+  lead: "Same Latin letter gets reused in every field. CT is the community meter. Same CT at every compatible till. The door only owns H. A wrap that breaks the rules, or another mesh, is the only way the laundromat does not read the grocery. Parallel system: cash still clears. Signed Codex v2.1. Engineering spec v3.5: /docs/SPEC_v3.5.md. Meter coupling: /docs/METER-MATH.md.",
   formula: "XP = R × F × ΔS × (w · E) × log(1/Tₛ)",
   mint: [
     {
