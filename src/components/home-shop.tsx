@@ -173,9 +173,9 @@ export function ShelfStrip() {
   const featured = papers.find((p) => /codex.*2\.1/i.test(p.title)) ?? papers[0];
   const tiles = [
     { label: "Book", href: "/book", note: book.title, badge: "Free to read" },
-    { label: "Papers", href: "/papers", note: featured?.title ?? "Frameworks & field notes", badge: featured?.tag },
-    { label: "Music", href: "/music", note: "Systems theory as a show", badge: undefined },
-    { label: "Docs", href: "/docs", note: "Protocol depth", badge: undefined },
+    { label: "Library", href: "/papers", note: featured?.title ?? "Charters, codex, meters, field notes", badge: featured?.tag },
+    { label: "Media", href: "/music", note: "Music, videos, podcasts", badge: undefined },
+    { label: "Engine", href: "/how-it-runs", note: "How it runs — poke around", badge: undefined },
   ];
   return (
     <section className="border-b border-primary/12 px-[8vw] py-14 max-md:px-[6vw]">
