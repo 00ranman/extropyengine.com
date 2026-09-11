@@ -336,13 +336,13 @@ export const faqSections: FaqSection[] = [
       },
       {
         id: "thirty",
-        q: "Is the 40-day settle window a law?",
-        a: "No. 40 days is the default settle window. Per-DFAO knob. Not an axiom. Late burn has no expiry. IT is not a leak pile. XP decay is ~1% every 10 days of remaining. CT idle-leaks on the same keep.",
+        q: "Is there a settle window? A 40-day verification?",
+        a: "No. That was leftover from when settle meant final. Close mints. Leak starts. Late burn has no expiry. Looking is a vertex. A silence timer is not a looker. H_cap still reads 10 days of this till’s signed cash (two 5-day weeks of books). That is cash, not a check that the lawn got mowed. No months. No 30. No 40. Weeks are 5 days. IT is not a leak pile. XP decay is ~1% every 10 days of remaining.",
       },
       {
         id: "three-clocks",
         q: "Tₛ = 1 makes XP = 0. Is the formula broken? Are F, Tₛ, and 0.99ⁿ the same clock?",
-        a: "Not broken. Tₛ = 1 means you slammed the loop shut (Δt ≈ 0). log(1/Tₛ) = 0 is the anti-farm, on purpose. People read “decay factor = 1” as “full payout.” That is how decay usually works. This term is elapsed time of this loop, Tₛ = exp(−λ min(Δt, Δt_cap)), so log(1/Tₛ) = λ·clip(Δt). Three clocks: Tₛ this loop, F repeating the class, 0.99ⁿ standing after it settles. Do not “fix” it with log(1+1/Tₛ). That pays slam-bots. Cap Δt so stalling does not print. Rarity-splitting 400 fake classes is a DAG job, not this term.",
+        a: "Not broken. Tₛ = 1 means you slammed the loop shut (Δt ≈ 0). log(1/Tₛ) = 0 is the anti-farm, on purpose. People read “decay factor = 1” as “full payout.” That is how decay usually works. This term is elapsed time of this loop, Tₛ = exp(−λ min(Δt, Δt_cap)), so log(1/Tₛ) = λ·clip(Δt). Three clocks: Tₛ this loop, F repeating the class, 0.99ⁿ standing after close. Do not “fix” it with log(1+1/Tₛ). That pays slam-bots. Cap Δt so stalling does not print. Rarity-splitting 400 fake classes is a DAG job, not this term.",
         also: [
           { label: "Three clocks", href: "/glossary", hash: "three-clocks" },
           { label: "Tₛ", href: "/glossary", hash: "ts" },
@@ -401,7 +401,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "l-farm",
         q: "Can a shop (or a DFAO) just crank L and extract XP?",
-        a: "That’s the economic attack. L is community CT against this till’s Auto H_cap. Same CT at every compatible till. There is no slider. H_cap comes from this door’s signed cash after 40 days of training (remainder 0 until then). Both edges still accept the estimate. Cash rings the rest. A house that wants no overlay unplugs the node.",
+        a: "That’s the economic attack. L is community CT against this till’s Auto H_cap. Same CT at every compatible till. There is no slider. H_cap comes from this door’s signed cash after 10 days of training (remainder 0 until then). Both edges still accept the estimate. Cash rings the rest. A house that wants no overlay unplugs the node.",
         also: [
           { label: "Emergent Product", href: "/glossary", hash: "emergent-product" },
           { label: "Open problems", href: "/open-problems" },
@@ -451,7 +451,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "lookers",
         q: "So my neighbor says yeah and it prints? One validator?",
-        a: "No. There is no validator class and no one-stamp close. A claim mints provisional. Looking is a vertex. Different lookers can sign different parts — front strip, height, before/after, duration — three times, ten times, a year later. Weight stacks. A cartel of three houses puffing each other is a later burn, not a feature. SignalFlow proposes ΔS. You never type the number. Late lookers are the machine. One buddy on the porch is evidence, not a gavel.",
+        a: "No. There is no validator class and no one-stamp close. A claim mints at close. Looking is a vertex. Different lookers can sign different parts — front strip, height, before/after, duration — three times, ten times, a year later. Weight stacks. A cartel of three houses puffing each other is a later burn, not a feature. SignalFlow proposes ΔS. You never type the number. Late lookers are the machine. One buddy on the porch is evidence, not a gavel.",
         also: [
           { label: "Late mint / burn", href: "/faq", hash: "late-first" },
           { label: "Looking", href: "/#zkp" },

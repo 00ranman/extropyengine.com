@@ -246,9 +246,9 @@ function UniversalTimes() {
               <h2 className="font-display text-xl tracking-[0.06em]">Solar calendar</h2>
               <p className="mt-1 max-w-xl text-sm leading-relaxed text-dim">
                 This star. Weeks only. A week is 5 days (social). Week 1 through week 73 = 365
-                days. Leap year: week 74, one day. No months. No extra named chunk. Seasons are the
-                four orbit marks. The Engine leaks standing every 10 days. Auto H still reads
-                40 days of till cash.
+                days. Leap year: week 74, one day. No months. No extra named chunk. No week 75.
+                Seasons are the four orbit marks. The Engine leaks standing every 10 days. Auto H
+                reads 10 days of till cash. Same number. Different job.
               </p>
             </div>
             <div className="font-mono text-xs tracking-[0.12em] text-accent">

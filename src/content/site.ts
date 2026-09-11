@@ -679,8 +679,7 @@ export const engineStack = {
 
 export const engineLoop = [
   { code: "OPEN", note: "Task posted. Vertex on the DAG with causal parents. Evidence can hang off it." },
-  { code: "CLOSED", note: "Agreement. Provisional XP mints. Settle window default: 40 days. Per-DFAO. Not an axiom." },
-  { code: "SETTLED", note: "Moves from provisional to standing. Still burnable later. XP is not spent. Access economy. Decay is already eating it." },
+  { code: "CLOSED", note: "Agreement. XP mints. Leak starts. Burnable immediately. No settle window." },
   { code: "BURNED", note: "A later verdict on that vertex. Same machine as late mint, the other way. Ordinary remaining pile after a decade is dust. See the 0.99ⁿ note." },
 ] as const;
 

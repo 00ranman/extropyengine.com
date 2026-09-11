@@ -114,7 +114,7 @@ IT(m)   = IT_start · (0.95)^m     # idle months, order of magnitude
 
 **CT — community standing on web W.** Same number at grocery and laundromat if they still speak base CT. The door does not own this. The door owns H.
 
-**H_cap — this till this window.** Auto from signed cash. Training: remainder 0 until 40 days of signed tickets. Then clip(0.5 × cash_in / cash_out, 0, 1). No slider. No Off on the register. Unplug is Off. Auto must not require a person-level forehead.
+**H_cap — this till this window.** Auto from signed cash. Training: remainder 0 until 10 days of signed tickets. Then clip(0.5 × cash_in / cash_out, 0, 1). No slider. No Off on the register. Unplug is Off. Auto must not require a person-level forehead.
 
 **β — optional door-local band.** ZKP or mapper band. Default 1.
 
@@ -154,7 +154,7 @@ You still do not type a score.
 
 ### G3. The other edge
 
-If-then. The other party can refuse. A shop can refuse a “I was here” as a ΔS mint. A merge reviewer can refuse a fake duplicate. Silence through a settle window is a knob a DFAO votes. It is not immortality.
+If-then. The other party can refuse. A shop can refuse a “I was here” as a ΔS mint. A merge reviewer can refuse a fake duplicate. Silence is not verification. Close mints. Burn anytime.
 
 ### G4. Vertex
 

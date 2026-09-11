@@ -182,7 +182,7 @@ Cash is the early honesty check. When ρ is high the remainder is small and the 
 
 ## 5. H_cap and S
 
-H_cap ∈ [0, 1]. This till this window. Auto from this door’s signed cash. Training: remainder 0 until 40 days of signed tickets. Then clip(0.5 × cash_in / cash_out, 0, 1). No slider. No Off on the register. Unplug is Off.
+H_cap ∈ [0, 1]. This till this window. Auto from this door’s signed cash. Training: remainder 0 until 10 days of signed tickets (two 5-day weeks). Then clip(0.5 × cash_in / cash_out, 0, 1). No slider. No Off on the register. Unplug is Off.
 
 S ∈ [0, 1]. This person at this house. Auto from this door’s history. Spite and fake-proofs cut S on a short clock.
 

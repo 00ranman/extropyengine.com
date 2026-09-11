@@ -660,7 +660,7 @@ export function EngineSection() {
         <h3 className="font-display mt-2 text-xl tracking-[0.04em]">Mint, then maybe burn</h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-dim">
           Every confirm writes a vertex. Parents are causal, not a block. XP at close is
-          provisional. Settled XP decays. The long-horizon mechanism that still has weight is late
+          standing. Leak starts. Burn anytime. The long-horizon mechanism that still has weight is late
           mint — a later huge ΔS, citation-gated, minted *now* — not clawing a lawn from thirty years ago. That
           lawn is already dust on the 0.99ⁿ curve. You do not spend XP.
         </p>

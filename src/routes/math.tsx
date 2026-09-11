@@ -69,7 +69,7 @@ function MathPage() {
         EP = XP · L + λ · L
       </p>
       <ul className="list-none space-y-2 p-0">
-        <li>H_cap — this till this window. Auto from signed cash. Training remainder 0 for 40 days.</li>
+        <li>H_cap — this till this window. Auto from signed cash. Training remainder 0 for 10 days (two 5-day weeks).</li>
         <li>S — you at this house.</li>
         <li>κ — 1 on the language. 0 if they left it.</li>
         <li>β — CAT / on-duty this ticket.</li>

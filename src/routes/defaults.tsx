@@ -28,13 +28,13 @@ function DefaultsPage() {
       <h2 className="font-display pt-4 text-2xl text-fg">Planetary (fork to change)</h2>
       <p>XP mint shape. XP leak 0.99ⁿ. CT idle leak 0.99ⁿ on that web. Cash-out of standing: forbidden. Ordinary MICRO close targets 0.01–1 XP. EP this sale cannot exceed line × H_cap.</p>
       <h2 className="font-display pt-4 text-2xl text-fg">Web W</h2>
-      <p>λ = 0.15. Eight-week notice. β allow-list: CAT on-duty, asked domain band, signed if-then between two rooms. House may only narrow.</p>
+      <p>λ = 0.15. 10-day notice. β allow-list: CAT on-duty, asked domain band, signed if-then between two rooms. House may only narrow. 10-day notice.</p>
       <h2 className="font-display pt-4 text-2xl text-fg">This house</h2>
       <p>
-        H_cap is Auto from this door’s signed cash. Training: remainder 0 until 40 days of
-        signed tickets. Then clip(0.5 × cash_in / cash_out, 0, 1). No slider. No Off on the
+        H_cap is Auto from this door’s signed cash. Training: remainder 0 until 10 days of
+        signed tickets (two 5-day weeks). Then clip(0.5 × cash_in / cash_out, 0, 1). No slider. No Off on the
         register. Unplug is Off. S default 1 until this door has history. Fake-proof / spite cut S
-        for 14 days.
+        for 5 days.
       </p>
       <h2 className="font-display pt-4 text-2xl text-fg">IT is not a leak clock</h2>
       <p>

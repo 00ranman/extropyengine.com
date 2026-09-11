@@ -95,10 +95,10 @@ function DfaoDoc() {
         nest. You do not wait for a priesthood, and you do not wait until you have exactly seven.
       </p>
       <p>
-        Votes rewrite the DFAO they are cast in: settle window, decay rates, quorum. They do not
+        Votes rewrite the DFAO they are cast in: decay rates, quorum, notice. They do not
         rewrite the mesh. PLANETARY is the only room that hits everyone, and getting a vote through
-        there is supposed to be hard. Defaults (40-day settle window among them) are
-        knobs, not axioms. There may yet be a floor: some XP and some IT always burn.
+        there is supposed to be hard. There is no settle window. Close mints. Burn anytime.
+        Defaults are knobs, not axioms. There may yet be a floor: some XP and some IT always burn.
         That would be an axiom. It is not written in as one yet.
       </p>
       <p>
