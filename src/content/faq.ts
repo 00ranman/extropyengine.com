@@ -174,7 +174,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "zkp",
         q: "Isn't a zero-knowledge proof just showing someone your ID?",
-        a: "That's the mix-up. Handing the bartender the license is showing him the information — birthday, street, photo, name. He doesn't need any of that. He needs 21 or not. Your phone looks at the license on YOUR side and answers one question. The till gets yes or no. The bar's book records that a check happened. Anyone who later wants WHO writes a look vertex. Do not write “chip versus photocopy.” That line is noise. ZKP circuits are not in Codex v2.1. 2.1 is the current Codex. Today the handshake is signatures.",
+        a: "That's the mix-up. Handing the bartender the license is showing him the information — birthday, street, photo, name. He needs 21 or not. A prover on the box builds a proof of that one predicate. A verifier on the till checks the math. Yes or no. That loop is a circuit, not a model. No LLM 'figures out' the question. Personal AI is not in it. The bar's book records that a check happened. Anyone who later wants WHO writes a look vertex. ZKP circuits are not in Codex v2.1. Today the handshake is signatures.",
         also: [
           { label: "Yes or no at the door", href: "/#zkp" },,
           { label: "ZKP", href: "/glossary", hash: "zkp" },
