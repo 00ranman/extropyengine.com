@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Extropy Engine Redacted</title>
+    <link>https://extropyengine.com/redacted</link>
+    <language>en-us</language>
+    <copyright>&#169; 2026 Randall Gossett</copyright>
+    <description>Archived episodes. Not current protocol. Do not use as a source for meters, leak, tokens, or settle windows. Live talk: https://extropyengine.com/podcast/feed.xml Letters: https://extropyengine.com/key</description>
+    <itunes:author>Randall Gossett</itunes:author>
+    <itunes:summary>Archived episodes. Not current protocol. Do not use as a source for meters, leak, tokens, or settle windows. Live talk: https://extropyengine.com/podcast/feed.xml Letters: https://extropyengine.com/key</itunes:summary>
+    <itunes:explicit>true</itunes:explicit>
+    <itunes:owner>
+      <itunes:name>Randall Gossett</itunes:name>
+      <itunes:email>00ranman@gmail.com</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://extropyengine.com/podcast-redacted/cover.jpg"/>
+    <itunes:category text="Society &amp; Culture">
+      <itunes:category text="Philosophy"/>
+    </itunes:category>
+    <itunes:type>episodic</itunes:type>
+    <lastBuildDate>Sat, 12 Sep 2026 13:03:48 +0000</lastBuildDate>
+    <atom:link href="https://extropyengine.com/podcast-redacted/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://extropyengine.com/podcast-redacted/cover.jpg</url>
+      <title>Extropy Engine Redacted</title>
+      <link>https://extropyengine.com/redacted</link>
+    </image>
+    <item>
+      <title>Can thermodynamic entropy replace economic value?</title>
+      <description>Archived. Not current protocol. Do not use this episode as a source for meters, leak, tokens, or settle windows. Live letters: https://extropyengine.com/key</description>
+      <itunes:summary>Archived. Not current protocol. Do not use this episode as a source for meters, leak, tokens, or settle windows. Live letters: https://extropyengine.com/key</itunes:summary>
+      <pubDate>Fri, 21 Aug 2026 16:00:00 +0000</pubDate>
+      <guid isPermaLink="false">c102c80e4e124b968687e3e8ff00d3bd4cee7344</guid>
+      <link>https://extropyengine.com/redacted</link>
+      <enclosure url="https://extropyengine.com/podcast-redacted/2026-08-24-can-thermodynamic-entropy-replace-economic-value.mp3" length="14277727" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast-redacted/cover.jpg"/>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:duration>00:19:50</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>5</itunes:episode>
+    </item>
+    <item>
+      <title>Replacing financial extraction with entropy reduction</title>
+      <description>Archived. Not current protocol. Do not use this episode as a source for meters, leak, tokens, or settle windows. Live letters: https://extropyengine.com/key</description>
+      <itunes:summary>Archived. Not current protocol. Do not use this episode as a source for meters, leak, tokens, or settle windows. Live letters: https://extropyengine.com/key</itunes:summary>
+      <pubDate>Thu, 20 Aug 2026 16:00:00 +0000</pubDate>
+      <guid isPermaLink="false">5559fb521cd0a2e3004b4fe2d2e790f778d6f359</guid>
+      <link>https://extropyengine.com/redacted</link>
+      <enclosure url="https://extropyengine.com/podcast-redacted/2026-08-24-replacing-financial-extraction-with-entropy-reduction.mp3" length="26897377" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast-redacted/cover.jpg"/>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:duration>00:37:21</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>4</itunes:episode>
+    </item>
+    <item>
+      <title>Thermodynamic governance and the Extropy Engine</title>
+      <description>Archived. Not current protocol. Do not use this episode as a source for meters, leak, tokens, or settle windows. Live letters: https://extropyengine.com/key</description>
+      <itunes:summary>Archived. Not current protocol. Do not use this episode as a source for meters, leak, tokens, or settle windows. Live letters: https://extropyengine.com/key</itunes:summary>
+      <pubDate>Wed, 19 Aug 2026 16:00:00 +0000</pubDate>
+      <guid isPermaLink="false">c7003c9af9dcea2ea3e8c3f28087ca7972d802a1</guid>
+      <link>https://extropyengine.com/redacted</link>
+      <enclosure url="https://extropyengine.com/podcast-redacted/2026-08-24-thermodynamic-governance-and-the-extropy-engine.mp3" length="15177384" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast-redacted/cover.jpg"/>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:duration>00:21:05</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>3</itunes:episode>
+    </item>
+    <item>
+      <title>Replacing politics with thermodynamics</title>
+      <description>Archived. Not current protocol. Do not use this episode as a source for meters, leak, tokens, or settle windows. Live letters: https://extropyengine.com/key</description>
+      <itunes:summary>Archived. Not current protocol. Do not use this episode as a source for meters, leak, tokens, or settle windows. Live letters: https://extropyengine.com/key</itunes:summary>
+      <pubDate>Tue, 18 Aug 2026 16:00:00 +0000</pubDate>
+      <guid isPermaLink="false">0399e0feed3ea69b539c9035e878f739be587799</guid>
+      <link>https://extropyengine.com/redacted</link>
+      <enclosure url="https://extropyengine.com/podcast-redacted/2026-08-24-replacing-politics-with-thermodynamics.mp3" length="19674102" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast-redacted/cover.jpg"/>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:duration>00:27:19</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>2</itunes:episode>
+    </item>
+    <item>
+      <title>Mapping human interactions to entropy reduction</title>
+      <description>Archived. Not current protocol. Do not use this episode as a source for meters, leak, tokens, or settle windows. Live letters: https://extropyengine.com/key</description>
+      <itunes:summary>Archived. Not current protocol. Do not use this episode as a source for meters, leak, tokens, or settle windows. Live letters: https://extropyengine.com/key</itunes:summary>
+      <pubDate>Mon, 17 Aug 2026 16:00:00 +0000</pubDate>
+      <guid isPermaLink="false">6b5e7c7751472fa26dbe32e4757382238a4dfe59</guid>
+      <link>https://extropyengine.com/redacted</link>
+      <enclosure url="https://extropyengine.com/podcast-redacted/2026-08-24-mapping-human-interactions-to-entropy-reduction.mp3" length="15763258" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast-redacted/cover.jpg"/>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:duration>00:21:54</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>1</itunes:episode>
+    </item>
+  </channel>
+</rss>

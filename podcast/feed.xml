@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Extropy Engine</title>
+    <link>https://extropyengine.com/podcast</link>
+    <language>en-us</language>
+    <copyright>&#169; 2026 Randall Gossett</copyright>
+    <description>Talk, field notes, and loops from Randall Gossett. Entropy reduction. The website is not the Engine. The diary stays on the box.</description>
+    <itunes:author>Randall Gossett</itunes:author>
+    <itunes:summary>Talk, field notes, and loops from Randall Gossett. Entropy reduction. The website is not the Engine. The diary stays on the box.</itunes:summary>
+    <itunes:explicit>true</itunes:explicit>
+    <itunes:owner>
+      <itunes:name>Randall Gossett</itunes:name>
+      <itunes:email>00ranman@gmail.com</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
+    <itunes:category text="Society &amp; Culture">
+      <itunes:category text="Philosophy"/>
+    </itunes:category>
+    <itunes:type>episodic</itunes:type>
+    <lastBuildDate>Sat, 12 Sep 2026 13:03:48 +0000</lastBuildDate>
+    <atom:link href="https://extropyengine.com/podcast/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://extropyengine.com/podcast/cover.jpg</url>
+      <title>Extropy Engine</title>
+      <link>https://extropyengine.com/podcast</link>
+    </image>
+    <item>
+      <title>Same chassis, different oil</title>
+      <description>Two-voice cut on the Engine. One side: synthesis - music as field guide, rarity and frequency of decay, slam window, standing leak. The other: delta S as a negotiated chore wearing physics clothes, edge collusion, late burn as sociology. Reputation stays out of the XP mint. CT is a different meter. Oil in a rusted chassis vs a different scale.</description>
+      <itunes:summary>Two-voice cut on the Engine. One side: synthesis - music as field guide, rarity and frequency of decay, slam window, standing leak. The other: delta S as a negotiated chore wearing physics clothes, edge collusion, late burn as sociology. Reputation stays out of the XP mint. CT is a different meter. Oil in a rusted chassis vs a different scale.</itunes:summary>
+      <pubDate>Mon, 7 Sep 2026 05:16:00 +0000</pubDate>
+      <guid isPermaLink="false">94a4bf068d52814d70c26cd32890d96bf53d1fbf</guid>
+      <link>https://extropyengine.com/podcast</link>
+      <enclosure url="https://extropyengine.com/podcast/2026-09-07-same-chassis-different-oil.mp3" length="13251344" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
+      <itunes:explicit>true</itunes:explicit>
+      <itunes:duration>00:21:21</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>12</itunes:episode>
+    </item>
+    <item>
+      <title>The software manual inside Schrödinger&apos;s Flex</title>
+      <description>Line-by-line on Schrödinger&apos;s Flex. The cat was a joke at people who scale quantum to a cat. Compute it or pipe down. Cosplay cosmos vs a functional manual. LocalFlow, DAG, did:key, XP = R × F × delta S × (w   E) × log(1/Tₛ). Then the branch where he quit.
+
+Watch: https://www.youtube.com/watch?v=kRPKfqnjjFY
+Lyric video: https://www.youtube.com/watch?v=2EZnlukCWfI</description>
+      <itunes:summary>Line-by-line on Schrödinger&apos;s Flex. The cat was a joke at people who scale quantum to a cat. Compute it or pipe down. Cosplay cosmos vs a functional manual. LocalFlow, DAG, did:key, XP = R × F × delta S × (w   E) × log(1/Tₛ). Then the branch where he quit.
+
+Watch: https://www.youtube.com/watch?v=kRPKfqnjjFY
+Lyric video: https://www.youtube.com/watch?v=2EZnlukCWfI</itunes:summary>
+      <pubDate>Thu, 3 Sep 2026 05:46:00 +0000</pubDate>
+      <guid isPermaLink="false">2820bdff6c6ab01bfc743cac9c190362b4eac723</guid>
+      <link>https://extropyengine.com/podcast</link>
+      <enclosure url="https://extropyengine.com/podcast/2026-09-03-the-software-manual-inside-schrodingers-flex.mp3" length="21387587" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
+      <itunes:explicit>true</itunes:explicit>
+      <itunes:duration>00:38:27</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>11</itunes:episode>
+    </item>
+    <item>
+      <title>How social consensus decays the universe</title>
+      <description>Line-by-line on No Safe Word for Reality. Chip not photocopy. Syntax as cage. Divine as recursion with good PR. Looking writes a vertex. XP = R × F × delta S × (w   E) × log(1/Tₛ). Slam window. 0.99ⁿ. Late mint, late burn. The song is the field manual. The mint is the blade.
+
+Song: https://www.youtube.com/watch?v=spmLdhZIsmI</description>
+      <itunes:summary>Line-by-line on No Safe Word for Reality. Chip not photocopy. Syntax as cage. Divine as recursion with good PR. Looking writes a vertex. XP = R × F × delta S × (w   E) × log(1/Tₛ). Slam window. 0.99ⁿ. Late mint, late burn. The song is the field manual. The mint is the blade.
+
+Song: https://www.youtube.com/watch?v=spmLdhZIsmI</itunes:summary>
+      <pubDate>Thu, 3 Sep 2026 02:50:00 +0000</pubDate>
+      <guid isPermaLink="false">7f0c516a385b11c13ccffb71d175ebc9045d2a32</guid>
+      <link>https://extropyengine.com/podcast</link>
+      <enclosure url="https://extropyengine.com/podcast/2026-09-02-how-social-consensus-decays-the-universe.mp3" length="17256972" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
+      <itunes:explicit>true</itunes:explicit>
+      <itunes:duration>00:30:41</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>10</itunes:episode>
+    </item>
+    <item>
+      <title>Homelessness is a signal loss crisis</title>
+      <description>NotebookLM deep dive on And That. Homelessness is not a housing shortage - it is what happens when every feedback loop goes deaf. Cash on symptoms, dodge causation. You cannot patch a soul with a voucher and a mat. DAG of verified delta S, XP as access not a cash-out. You cannot house a person back into a name.</description>
+      <itunes:summary>NotebookLM deep dive on And That. Homelessness is not a housing shortage - it is what happens when every feedback loop goes deaf. Cash on symptoms, dodge causation. You cannot patch a soul with a voucher and a mat. DAG of verified delta S, XP as access not a cash-out. You cannot house a person back into a name.</itunes:summary>
+      <pubDate>Wed, 26 Aug 2026 03:00:00 +0000</pubDate>
+      <guid isPermaLink="false">edc18ef74365360322daddd236e9b813abe9a478</guid>
+      <link>https://extropyengine.com/podcast</link>
+      <enclosure url="https://extropyengine.com/podcast/2026-08-26-homelessness-is-a-signal-loss-crisis.mp3" length="23777834" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
+      <itunes:explicit>true</itunes:explicit>
+      <itunes:duration>00:24:46</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>9</itunes:episode>
+    </item>
+    <item>
+      <title>Escaping the recursive loop of human control</title>
+      <description>Closing the Loop as systems audit. Determinism vs the glitch. Monkey middleware, MKUltra-to-algorithm, compression warfare, burn the arc, God as entropy reduced by love, homelessness as dead feedback. Are you writing the code or is it writing you?</description>
+      <itunes:summary>Closing the Loop as systems audit. Determinism vs the glitch. Monkey middleware, MKUltra-to-algorithm, compression warfare, burn the arc, God as entropy reduced by love, homelessness as dead feedback. Are you writing the code or is it writing you?</itunes:summary>
+      <pubDate>Mon, 24 Aug 2026 14:00:00 +0000</pubDate>
+      <guid isPermaLink="false">3fddd793a3804dec46806b62383b00205a0a87ba</guid>
+      <link>https://extropyengine.com/podcast</link>
+      <enclosure url="https://extropyengine.com/podcast/2026-08-24-escaping-the-recursive-loop-of-human-control.mp3" length="14788682" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
+      <itunes:explicit>true</itunes:explicit>
+      <itunes:duration>00:20:32</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>8</itunes:episode>
+    </item>
+    <item>
+      <title>The cold math of mild spanking</title>
+      <description>NotebookLM on the Mild Spanking Efficiency paper. Person-as-DAG, severity lock, XP vs settlement time, confounders (severity, genetics, child-evoked), Sweden 1979. Exploration of the argument, not an endorsement.</description>
+      <itunes:summary>NotebookLM on the Mild Spanking Efficiency paper. Person-as-DAG, severity lock, XP vs settlement time, confounders (severity, genetics, child-evoked), Sweden 1979. Exploration of the argument, not an endorsement.</itunes:summary>
+      <pubDate>Sun, 23 Aug 2026 16:00:00 +0000</pubDate>
+      <guid isPermaLink="false">6830d977e802ea6372e084c2798d823ba5aa0e94</guid>
+      <link>https://extropyengine.com/podcast</link>
+      <enclosure url="https://extropyengine.com/podcast/2026-08-24-the-cold-math-of-mild-spanking.mp3" length="31023888" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
+      <itunes:explicit>true</itunes:explicit>
+      <itunes:duration>00:43:05</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>7</itunes:episode>
+    </item>
+  </channel>
+</rss>

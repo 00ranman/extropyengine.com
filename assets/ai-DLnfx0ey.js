@@ -1,0 +1,1 @@
+import{r as e}from"./useRouter-80ermfqe.js";import{H as t}from"./index-DFXraqOR.js";var n=e(),r=()=>(0,n.jsx)(t,{to:`/start`,hash:`ai`});export{r as component};
