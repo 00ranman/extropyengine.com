@@ -19,6 +19,7 @@ Public copy: https://extropyengine.com/docs/DEFAULTS.md
 | Cash-out of standing | Forbidden | Lose-condition. |
 | Ordinary close | Target XP on the order of **0.01–1** for a MICRO loop (lawn, ride, ticket line) | Planetary starting band. Rarity can lift it. A 100-XP lawn is a mapper bug. |
 | Lookers | Mint at close. Looking is a vertex. Parts of a claim, more than once, later. No validator class. One neighbor is evidence, not a gavel. | Planetary. Fork. |
+| Review LOOK | Task type. Not a class. Not a third watcher. Ordinary looking stays blind slices. When a **trigger** fires, a Review LOOK may request the sealed bytes that match the committed hashes on that vertex — not the rest of either PSLL. Original vertex is not rewritten. Result is a new vertex: holds / another slice / burn-claim. F still applies. Hub (many children cite this one) routes to a curator LOOK, not a priesthood. | Planetary shape. Trigger **numbers** are Web W. No planetary N. |
 | EP this sale | `min(XP · L + λ · L, line × H_cap)` | Spark cannot exceed the house cap on **this ticket**. XP is not dollars. |
 
 Half-life of a mint ≈ 69 10-day ticks ≈ 1.9 years. ~1 year ≈ 69%. ~5 years ≈ 16%. ~8 years ≈ 5%. A decade is dust. Never zero in the reals. Late mint is the decades-later machine.
@@ -31,6 +32,7 @@ Half-life of a mint ≈ 69 10-day ticks ≈ 1.9 years. ~1 year ≈ 69%. ~5 years
 | β allow-list (max) | CAT on-duty, asked domain band, signed if-then between two rooms on this language | Vertex. 10-day notice. House may only narrow. |
 | H_gov | 1 | This room. 0 = one DID one nullifier. |
 | S_gov | 1 if in the room, else 0 | Party to the dispute: 0. |
+| Review trigger | **Unpublished** until this web publishes. No planetary N. Graph facts only: contest/burn cites on this vertex, cited-harm band for this claim type, or this DFAO opens dispute. Not an LLM vibe. Not a graph crawl. Not 7-of-12 (that door is identity neutralization). Disagreement outside band → one extra slice. Hub + outside band → curator LOOK. | This web. Vertex. 10-day notice. Conservative default until a till exists: room vote or curator, not auto-unveil on one salty child. |
 
 ## This house (MICRO)
 
@@ -55,6 +57,20 @@ Counts:
 Does not count: a selfie, a punch card, a listed coin, “trust me I’m the manager” with no vertex.
 
 Attest: issuer DID signs the interval. Subject DID holds the record. Issuer can revoke; spite revoke is a vertex on the issuer. Other rooms may ignore that issuer.
+
+## Review LOOK — the asterisk
+
+The hash of the close is the accountability. Two edges signed a tuple (who, parents, evidence hashes, numbers, time, room, class). That tuple is the vertex. It does not edit. Later trouble writes a **new** vertex that cites it.
+
+Ordinary looking is blind 1/10 slices. Diary stays shut.
+
+**If** this web’s published trigger fires **then** a Review LOOK is allowed to see the packet that hashes to what they committed (photos, receipt, the signed numbers) — not the rest of either PSLL. Looker writes holds / another slice / burn-claim. Further review is another LOOK, not an infinite recurse. Farming asterisks pays worse under F. Stalking-shaped bursts slash. False burn-claim can burn the accuser. Party to the dispute: S_gov = 0.
+
+Do not mash this with identity 7-of-12. That door unveils a DID. This door unveils **evidence that already has a hash on the graph**.
+
+Do not walk the light cone. No citation, no edge, no review of “everything downstream.”
+
+Until a web publishes a number, the conservative default is: this DFAO opens dispute, or a curator LOOK on a hub. Do not freeze N before the first live till.
 
 ## Process
 

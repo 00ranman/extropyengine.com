@@ -383,7 +383,12 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       },
       {
         term: "DAG curator",
-        def: "Human-in-the-loop job: make the ledger navigable, factor new data, mark which slice of history should weight a new like-case. That work is entropy reduction. It mints XP. The graph feeding itself is the point.",
+        def: "Human-in-the-loop job: make the ledger navigable, factor new data, mark which slice of history should weight a new like-case. That work is entropy reduction. It mints XP. The graph feeding itself is the point. Hub vertices (many children cite this one) route Review LOOKs here, not to a priesthood.",
+      },
+      {
+        term: "Review LOOK",
+        id: "review-look",
+        def: "Asterisk on a closed vertex. Task type, not a class. The close is a signed hash; it does not edit. If this web’s published trigger fires (contest/burn cites, cited-harm band, or the DFAO opens dispute), a looker may request the sealed packet that matches those hashes — not the rest of either PSLL. Writes holds / another slice / burn-claim. F still applies. Not an LLM vibe. Not a graph crawl. Not identity 7-of-12. No planetary N until a till exists. Defaults: /defaults.",
       },
       {
         term: "ZKP",

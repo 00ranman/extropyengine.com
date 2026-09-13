@@ -480,6 +480,8 @@ The `epistemology-engine` reads validation out of the task graph. It does not ap
 
 **LOOK vertex (specified; not in Codex 2.1).** Reading more than the public predicate (band yes/no, “this loop closed”) requires emitting LOOK. No silent fetch. The looker can stay a nullifier until a governance threshold (same shape as identity reveal: cause shown). Curiosity is allowed. Invisible curiosity is not. Curator LOOKs can mint if the look is the work. Stalking-shaped bursts can slash. Pattern, not the verb.
 
+**Review LOOK.** Task type, not a class. Knobs live in [`docs/DEFAULTS.md`](./DEFAULTS.md). Trigger is per web, unpublished until that web publishes, no planetary N. Graph facts only. Sealed evidence that matches committed hashes may open. Original vertex is not rewritten. Identity 7-of-12 is a different door.
+
 A panopticon is one tower that can see every diary. This has neither. The PSLL is a file on your disk. The network sees a proof — yes or no — not the file. Anyone who later wants WHO writes a look vertex.
 
 ---

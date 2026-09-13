@@ -28,7 +28,21 @@ function DefaultsPage() {
       <h2 className="font-display pt-4 text-2xl text-fg">Planetary (fork to change)</h2>
       <p>XP mint shape. XP leak 0.99ⁿ. CT idle leak 0.99ⁿ on that web. Cash-out of standing: forbidden. Ordinary MICRO close targets 0.01–1 XP. EP this sale cannot exceed line × H_cap.</p>
       <h2 className="font-display pt-4 text-2xl text-fg">Web W</h2>
-      <p>λ = 0.15. 10-day notice. β allow-list: CAT on-duty, asked domain band, signed if-then between two rooms. House may only narrow. 10-day notice.</p>
+      <p>
+        λ = 0.15. 10-day notice. β allow-list: CAT on-duty, asked domain band, signed if-then
+        between two rooms. House may only narrow. 10-day notice.
+      </p>
+      <h2 className="font-display pt-4 text-2xl text-fg">Review LOOK — the asterisk</h2>
+      <p>
+        Task type, not a class, not a third watcher. The close is a signed tuple; that hash is the
+        accountability. Ordinary looking stays blind slices. Diary stays shut. If this web’s
+        published trigger fires, a Review LOOK may see the packet that hashes to what they
+        committed — not the rest of either PSLL. Result is a new vertex: holds / another slice /
+        burn-claim. Original row does not edit. F still applies. Hub vertices route to a curator
+        LOOK. Trigger is graph facts only (contest/burn cites, cited-harm band, or this DFAO opens
+        dispute). Not an LLM vibe. Not a crawl. Not the identity 7-of-12 door. No planetary N.
+        Until a web publishes a number: room vote or curator, not auto-unveil on one salty child.
+      </p>
       <h2 className="font-display pt-4 text-2xl text-fg">This house</h2>
       <p>
         H_cap is Auto from this door’s signed cash. Training: remainder 0 until 10 days of
