@@ -1,0 +1,14 @@
+<IfModule mod_headers.c>
+  <Files "feed.xml">
+    Header set Content-Type "application/rss+xml; charset=utf-8"
+  </Files>
+</IfModule>
+AddType application/rss+xml .xml
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
+</IfModule>

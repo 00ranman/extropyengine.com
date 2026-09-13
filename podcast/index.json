@@ -1,0 +1,78 @@
+{
+  "title": "Extropy Engine",
+  "feed": "/podcast/feed.xml",
+  "episodes": [
+    {
+      "src": "/podcast/2026-09-07-same-chassis-different-oil.mp3",
+      "bytes": 13251344,
+      "title": "Same chassis, different oil",
+      "summary": "Two-voice cut on the Engine. One side: synthesis — music as field guide, rarity and frequency of decay, slam window, standing leak. The other: ΔS as a negotiated chore wearing physics clothes, edge collusion, late burn as sociology. Reputation stays out of the XP mint. CT is a different meter. Oil in a rusted chassis vs a different scale.",
+      "pubDate": "Mon, 7 Sep 2026 05:16:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 12,
+      "duration": "00:21:21",
+      "mime": "audio/mpeg"
+    },
+    {
+      "src": "/podcast/2026-09-03-the-software-manual-inside-schrodingers-flex.mp3",
+      "bytes": 21387587,
+      "title": "The software manual inside Schrödinger’s Flex",
+      "summary": "Line-by-line on Schrödinger’s Flex. The cat was a joke at people who scale quantum to a cat. Compute it or pipe down. Cosplay cosmos vs a functional manual. LocalFlow, DAG, did:key, XP = R × F × ΔS × (w · E) × log(1/Tₛ). Then the branch where he quit.\n\nWatch: https://www.youtube.com/watch?v=kRPKfqnjjFY\nLyric video: https://www.youtube.com/watch?v=2EZnlukCWfI",
+      "pubDate": "Thu, 3 Sep 2026 05:46:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 11,
+      "duration": "00:38:27",
+      "mime": "audio/mpeg"
+    },
+    {
+      "src": "/podcast/2026-09-02-how-social-consensus-decays-the-universe.mp3",
+      "bytes": 17256972,
+      "title": "How social consensus decays the universe",
+      "summary": "Line-by-line on No Safe Word for Reality. Chip not photocopy. Syntax as cage. Divine as recursion with good PR. Looking writes a vertex. XP = R × F × ΔS × (w · E) × log(1/Tₛ). Slam window. 0.99ⁿ. Late mint, late burn. The song is the field manual. The mint is the blade.\n\nSong: https://www.youtube.com/watch?v=spmLdhZIsmI",
+      "pubDate": "Thu, 3 Sep 2026 02:50:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 10,
+      "duration": "00:30:41",
+      "mime": "audio/mpeg"
+    },
+    {
+      "src": "/podcast/2026-08-26-homelessness-is-a-signal-loss-crisis.mp3",
+      "bytes": 23777834,
+      "title": "Homelessness is a signal loss crisis",
+      "summary": "NotebookLM deep dive on And That. Homelessness is not a housing shortage — it is what happens when every feedback loop goes deaf. Cash on symptoms, dodge causation. You cannot patch a soul with a voucher and a mat. DAG of verified delta S, XP as access not a cash-out. You cannot house a person back into a name.",
+      "pubDate": "Wed, 26 Aug 2026 03:00:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 9,
+      "duration": "00:24:46",
+      "mime": "audio/mpeg"
+    },
+    {
+      "src": "/podcast/2026-08-24-escaping-the-recursive-loop-of-human-control.mp3",
+      "bytes": 14788682,
+      "title": "Escaping the recursive loop of human control",
+      "summary": "Closing the Loop as systems audit. Determinism vs the glitch. Monkey middleware, MKUltra-to-algorithm, compression warfare, burn the arc, God as entropy reduced by love, homelessness as dead feedback. Are you writing the code or is it writing you?",
+      "pubDate": "Mon, 24 Aug 2026 14:00:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 8,
+      "duration": "00:20:32",
+      "mime": "audio/mpeg"
+    },
+    {
+      "src": "/podcast/2026-08-24-the-cold-math-of-mild-spanking.mp3",
+      "bytes": 31023888,
+      "title": "The cold math of mild spanking",
+      "summary": "NotebookLM on the Mild Spanking Efficiency paper. Person-as-DAG, severity lock, XP vs settlement time, confounders (severity, genetics, child-evoked), Sweden 1979. Exploration of the argument, not an endorsement.",
+      "pubDate": "Sun, 23 Aug 2026 16:00:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 7,
+      "duration": "00:43:05",
+      "mime": "audio/mpeg"
+    }
+  ]
+}
