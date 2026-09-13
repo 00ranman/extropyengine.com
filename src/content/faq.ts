@@ -34,7 +34,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "who-types-the-number",
         q: "Who punches in the social number? That is just a tribe with extra syntax.",
-        a: "A person talks to the packager on their box in ordinary language. SignalFlow scours prior closes on that class and proposes ΔS. Humans do not type the mint. Both edges can refuse the proposal. Later evidence attaches a new vertex. Edge models that disagree on a hash flag a fake. Convergence is the bet, not a claim that day-one weights are physics. Local rooms can bias a mapper. That is named. Contest and late marks are how it gets expensive. If a room’s mapper is a clique, say so and fork the door. Do not pretend the eight domains arrived from heaven.",
+        a: "A person talks to the packager on their box in ordinary language. SignalFlow scours the public class strip on prior closes — class, mapper, ΔS, buckets, hashes, not the diary — and proposes ΔS. Humans do not type the mint. Both edges can refuse the proposal. Later evidence attaches a new vertex. Edge models that disagree on a hash flag a fake. Identity is a ZKP on that same vertex. Bytes and WHO take a LOOK. Convergence is the bet, not a claim that day-one weights are physics. Local rooms can bias a mapper. That is named. Contest and late marks are how it gets expensive. If a room’s mapper is a clique, say so and fork the door. Do not pretend the eight domains arrived from heaven.",
         also: [
           { label: "Engine", href: "/#engine" },
           { label: "Open problems", href: "/open-problems" },
@@ -164,7 +164,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "panopticon",
         q: "Isn't this just a panopticon? A surveillance state with extra steps?",
-        a: "No. A panopticon is one tower that can see every diary. A surveillance state is a central log you cannot opt out of. This has neither. The PSLL is a file on your disk. The network sees a proof — yes or no — not the file, not the photos. Looking writes a vertex. A silent fetch is a detectable act. did:key on first boot, no registrar. Node to node on the LAN. That is a ledger you hold, not a camera pointed at you.",
+        a: "No. A panopticon is one tower that can see every diary. A surveillance state is a central log you cannot opt out of. This has neither. The PSLL is a file on your disk. The class strip is public so a lawn textbook can exist without a name. Identity is a proof — yes or no — not the file, not the photos. Looking at WHO or bytes writes a vertex. A silent fetch is a detectable act. did:key on first boot, no registrar. Node to node on the LAN. That is a ledger you hold, not a camera pointed at you.",
         also: [
           { label: "Not a panopticon", href: "/#not-a-panopticon" },
           { label: "Yes or no at the door", href: "/#zkp" },,
@@ -451,6 +451,7 @@ export const faqSections: FaqSection[] = [
         also: [
           { label: "Late mint / burn", href: "/faq", hash: "late-first" },
           { label: "Looking", href: "/#zkp" },
+          { label: "Class strip", href: "/glossary", hash: "class-strip" },
         ],
       },
       {

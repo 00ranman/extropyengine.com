@@ -614,7 +614,7 @@ export const engineNotThat = {
   photocopy:
     "The panopticon version of the same door: you hand over the wallet. They copy the license. They file it in a city cabinet. Anyone with a badge opens the drawer. You never know who looked. That is a surveillance state. This is a yes or no at the door.",
   close:
-    "A panopticon is one tower that can see every diary. A surveillance state is a central log you cannot opt out of. This has neither. The PSLL is a file on your disk. The network sees a proof — yes or no — not the file, not the photos, not last year. Looking at a graph writes a vertex; a silent fetch is a detectable act. did:key on first boot, no registrar. Node to node on the LAN. Internet for people who aren't next door. That is not a watchtower with extra vocabulary. Treating a ledger you hold as a camera pointed at you is the category error.",
+    "A panopticon is one tower that can see every diary. A surveillance state is a central log you cannot opt out of. This has neither. The PSLL is a file on your disk. The class strip is public (class, mapper, ΔS, buckets, hashes) so like-cases can exist. Identity is a proof — yes or no — not the file, not the photos, not last year. Looking at WHO or bytes writes a vertex; a silent fetch is a detectable act. did:key on first boot, no registrar. Node to node on the LAN. Internet for people who aren't next door. That is not a watchtower with extra vocabulary. Treating a ledger you hold as a camera pointed at you is the category error.",
 } as const;
 
 const P = "https://github.com/00ranman/extropy-engine/tree/main/packages";

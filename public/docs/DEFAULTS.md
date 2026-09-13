@@ -19,6 +19,7 @@ Public copy: https://extropyengine.com/docs/DEFAULTS.md
 | Cash-out of standing | Forbidden | Lose-condition. |
 | Ordinary close | Target XP on the order of **0.01–1** for a MICRO loop (lawn, ride, ticket line) | Planetary starting band. Rarity can lift it. A 100-XP lawn is a mapper bug. |
 | Lookers | Mint at close. Looking is a vertex. Parts of a claim, more than once, later. No validator class. One neighbor is evidence, not a gavel. | Planetary. Fork. |
+| Class strip | Public envelope on every vertex. Class, `M_v`, `ΔS_claimed`, `U`, duration bucket, feature buckets, `evidence_root`, state, parent **vertex ids**. Not DID. Not GPS. Not exact clock. Not photo bytes. Scouring this by class is not a LOOK. A strip too fat to be k-anonymous in its class does not list. | Planetary. Fork. Lose-condition: identity in the strip. |
 | Review LOOK | Task type. Not a class. Not a third watcher. Ordinary looking stays blind slices. When a **trigger** fires, a Review LOOK may request the sealed bytes that match the committed hashes on that vertex — not the rest of either PSLL. Original vertex is not rewritten. Result is a new vertex: holds / another slice / burn-claim. F still applies. Hub (many children cite this one) routes to a curator LOOK, not a priesthood. | Planetary shape. Trigger **numbers** are Web W. No planetary N. |
 | EP this sale | `min(XP · L + λ · L, line × H_cap)` | Spark cannot exceed the house cap on **this ticket**. XP is not dollars. |
 
@@ -58,9 +59,21 @@ Does not count: a selfie, a punch card, a listed coin, “trust me I’m the man
 
 Attest: issuer DID signs the interval. Subject DID holds the record. Issuer can revoke; spite revoke is a vertex on the issuer. Other rooms may ignore that issuer.
 
+## Class strip vs identity
+
+A vertex is two envelopes.
+
+**A, public.** Class, mapper, ΔS, U, buckets, evidence hashes, state, parent vertex ids. SignalFlow scours A by class. No LOOK. This is how a lawn textbook exists on a decentralized ledger without a diary.
+
+**B, ZKP.** Unique in this DFAO, signer bound to this strip, confirmed this loop, band if asked, not slashed. Yes or no. DID stays off the row.
+
+**Sealed.** Bytes that hash to `evidence_root`. LOOK (or Review LOOK) to read. Silent fetch is an act.
+
+DID, GPS, exact clock, or photo bytes in A is a lose-condition for that vertex. Buckets, or it does not list.
+
 ## Review LOOK — the asterisk
 
-The hash of the close is the accountability. Two edges signed a tuple (who, parents, evidence hashes, numbers, time, room, class). That tuple is the vertex. It does not edit. Later trouble writes a **new** vertex that cites it.
+The hash of the close is the accountability. Envelope A (class strip) is public. Envelope B (identity ZKP) binds a signer to that strip without putting WHO on the row. Sealed bytes match `evidence_root`. The row does not edit. Later trouble writes a **new** vertex that cites it.
 
 Ordinary looking is blind 1/10 slices. Diary stays shut.
 

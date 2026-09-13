@@ -478,11 +478,30 @@ Most validation is blind or implicit:
 
 The `epistemology-engine` reads validation out of the task graph. It does not appoint validators. That removes the review chokepoint and ends the watcher regress.
 
-**LOOK vertex (specified; not in Codex 2.1).** Reading more than the public predicate (band yes/no, “this loop closed”) requires emitting LOOK. No silent fetch. The looker can stay a nullifier until a governance threshold (same shape as identity reveal: cause shown). Curiosity is allowed. Invisible curiosity is not. Curator LOOKs can mint if the look is the work. Stalking-shaped bursts can slash. Pattern, not the verb.
+**LOOK vertex (specified; not in Codex 2.1).** A vertex is **two envelopes**, not one blob.
+
+**Envelope A — class strip. In the clear. On the DAG.** No LOOK to read it. SignalFlow scours **this**, by class. Enough to be a textbook, coarse enough not to be a person:
+
+- action class
+- mapper `M_v`
+- `ΔS_claimed`, `U`
+- duration **bucket** (not an exact clock)
+- a few **feature buckets** (size band, not GPS, not the street)
+- `evidence_root` (Merkle of photo / receipt hashes — hashes, not bytes)
+- state: open / closed / burned
+- parent citations as **opaque vertex ids**, not DIDs
+
+Indexing class strips is not a look at WHO. A full node replicates A. That is how like-cases exist on a decentralized ledger.
+
+**Envelope B — identity. ZKP.** Till gets yes/no: unique in this DFAO, signer bound to this strip, confirmed this loop, band ≥ n if asked, not slashed. DID is not on the row. PSLL is not on the row.
+
+**Sealed payload.** Photo / narrative bytes addressed by `evidence_root`. Reading bytes or WHO past the public strip requires emitting LOOK. No silent fetch. The looker can stay a nullifier until a governance threshold (same shape as identity reveal: cause shown). Curiosity is allowed. Invisible curiosity is not. Curator LOOKs can mint if the look is the work. Stalking-shaped bursts can slash. Pattern, not the verb.
+
+Putting DID, GPS, an exact timestamp, or photo bytes in envelope A is a protocol bug. A strip that is too fat **is** an identity. Buckets, or it does not list.
 
 **Review LOOK.** Task type, not a class. Knobs live in [`docs/DEFAULTS.md`](./DEFAULTS.md). Trigger is per web, unpublished until that web publishes, no planetary N. Graph facts only. Sealed evidence that matches committed hashes may open. Original vertex is not rewritten. Identity 7-of-12 is a different door.
 
-A panopticon is one tower that can see every diary. This has neither. The PSLL is a file on your disk. The network sees a proof — yes or no — not the file. Anyone who later wants WHO writes a look vertex.
+A panopticon is one tower that can see every diary. This has neither. The PSLL is a file on your disk. The class strip is the instrument. The network's identity view is a proof — yes or no — not the file. Anyone who later wants WHO writes a look vertex.
 
 ---
 
