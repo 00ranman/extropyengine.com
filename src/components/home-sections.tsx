@@ -105,12 +105,6 @@ export function BookHero() {
           <Btn href={book.epub} primary download>
             Download EPUB
           </Btn>
-          <Btn href={book.elevenDocx} primary download>
-            ElevenReader DOCX
-          </Btn>
-          <Btn href={book.elevenTxt} primary download>
-            Audiobook TXT
-          </Btn>
           <Btn href={book.audio} primary external>
             Listen (Audiobook)
           </Btn>

@@ -83,8 +83,6 @@ export const book = {
     "A field manual for surviving a glitched culture without losing your mind, your ethics, or your sense of humor. Free to read — honor system. If it hits, tip what it’s worth to you.",
   pdf: "/docs/Unfuck_The_World_For_A_Dollar.pdf",
   epub: "/docs/Unfuck_The_World_For_A_Dollar.epub",
-  elevenDocx: "/docs/Unfuck_The_World_For_A_Dollar.elevenreader.docx",
-  elevenTxt: "/docs/Unfuck_The_World_For_A_Dollar.elevenreader.txt",
   audio:
     "https://elevenreader.io/audiobooks/unf-ck-the-world-for-a-dollar-audiobook/fst6SabYYioSI1EfquSo",
   tip: "https://cash.app/$00nerd/1",
@@ -856,16 +854,6 @@ export const docsIndex = [
     title: "Unf*ck the World for a Dollar",
     href: "/docs/Unfuck_The_World_For_A_Dollar.pdf",
     note: "The book (PDF)",
-  },
-  {
-    title: "Unf*ck the World (ElevenReader DOCX)",
-    href: "/docs/Unfuck_The_World_For_A_Dollar.elevenreader.docx",
-    note: "Heading-1 chapters. Sentence case. Upload this.",
-  },
-  {
-    title: "Unf*ck the World (audiobook TXT)",
-    href: "/docs/Unfuck_The_World_For_A_Dollar.elevenreader.txt",
-    note: "One paragraph per line. No wrap pauses.",
   },
 ] as const;
 
