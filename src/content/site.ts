@@ -51,6 +51,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "Letter key", href: "/key" },
       { label: "Math", href: "/math" },
       { label: "When the Signal Eats the Source", href: "/docs/When_the_Signal_Eats_the_Source.pdf" },
+      { label: "God as Emergent Entropy Reduction", href: "/docs/God_as_Emergent_Entropy_Reduction.pdf" },
       { label: "DAG Architecture", href: "/docs/DAG_Architecture_Breakdown.pdf" },
       { label: "Emergence-First GUT", href: "/docs/An_Emergence_First_Grand_Unified_Theory_v2_referenced.pdf" },
       { label: "Liquidity Corrupts Verification", href: "/papers/liquidity-and-decay" },
@@ -438,7 +439,7 @@ export const papers: Paper[] = [
   {
     tag: "Theology",
     title: "God as Emergent Entropy Reduction: A Falsifiable Framework",
-    href: "https://www.academia.edu/attachments/132032004/download_file?s=portfolio",
+    href: "/docs/God_as_Emergent_Entropy_Reduction.pdf",
   },
 ];
 
@@ -841,6 +842,11 @@ export const docsIndex = [
     note: "Epistemology paper",
   },
   {
+    title: "God as Emergent Entropy Reduction",
+    href: "/docs/God_as_Emergent_Entropy_Reduction.pdf",
+    note: "Falsifiable framework for divine function. Native. No sign-in.",
+  },
+  {
     title: "DAG Architecture Breakdown",
     href: "/docs/DAG_Architecture_Breakdown.pdf",
     note: "Architecture notes",
@@ -939,6 +945,7 @@ export const docsPapers = [
   { title: "Law Shaped (PDF)", href: "/docs/Law_Shaped.pdf", note: "Printable law-shaped note." },
   { title: "Working Formula Sheet", href: "/docs/Extropy_Engine_Formula_Sheet.pdf", note: "Working lock. If this fights the letter key, the key wins." },
   { title: "When the Signal Eats the Source", href: "/docs/When_the_Signal_Eats_the_Source.pdf", note: "Epistemology." },
+  { title: "God as Emergent Entropy Reduction", href: "/docs/God_as_Emergent_Entropy_Reduction.pdf", note: "Falsifiable framework for divine function. Native PDF. No Academia wall." },
   { title: "DAG Architecture Breakdown", href: "/docs/DAG_Architecture_Breakdown.pdf", note: "Graph notes." },
   { title: "Emergence-First GUT", href: "/docs/An_Emergence_First_Grand_Unified_Theory_v2_referenced.pdf", note: "GUT paper." },
   { title: "Universal Times v4.2", href: "/docs/Universal_Times_v4.2.pdf", note: "Hydrogen-anchored time." },
