@@ -366,7 +366,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "GrantFlow",
         id: "grantflow",
-        def: "Grant discovery (Grants.gov) plus AI proposer. Same loop, different input. packages/grantflow-discovery and grantflow-proposer.",
+        def: "Personal grants.gov door on the same SignalFlow loop. Not a face. Not a product. Overlay compose only. packages/grantflow-discovery and grantflow-proposer.",
       },
       {
         term: "SignalFlow",
@@ -832,7 +832,6 @@ export const proofLayers = [
       "HomeFlow — household / building DFAO (packages/homeflow)",
       "LocalFlow — errand matchmaking (packages/localflow)",
       "Quest market — 2–5 min grain (packages/quest-market)",
-      "GrantFlow — discovery + proposer",
       "LevelUp Academy — held. CAT + issuer. Not a school brand.",
       "Extropialingo — language loops",
       "SignalFlow — claim routing, not the whole Engine",

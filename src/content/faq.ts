@@ -83,7 +83,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "what",
         q: "What is the Extropy Engine?",
-        a: "An audit loop. A UI for the life you're already living. Faces: LocalFlow, HomeFlow, quests, GrantFlow, shops. SignalFlow packages the claim. The kernel mints. Cheap laptop, clone the repo, you're a node. Not a coin you buy. Not a church. Not two apps.",
+        a: "An audit loop. A UI for the life you're already living. Faces: LocalFlow, HomeFlow, quests, shops. SignalFlow packages the claim. The kernel mints. Cheap laptop, clone the repo, you're a node. Not a coin you buy. Not a church. Not two apps.",
         also: [
           { label: "Engine", href: "/#engine" },
           { label: "Watch", href: "/#film" },
@@ -353,7 +353,7 @@ export const faqSections: FaqSection[] = [
       {
         id: "flows",
         q: "So this is just LocalFlow and SignalFlow?",
-        a: "No. Those are two packages. HomeFlow is the household. Quest market is the 2–5 minute grain. GrantFlow is discovery plus proposer. Validation-neighborhoods take blind slices. Identity writes did:key. PSLL is the diary. xp-formula / xp-mint / loop-ledger / dag-substrate are the book. LocalFlow is errands. SignalFlow routes claims. Collapsing the Engine into those two is a reading error.",
+        a: "No. Those are two packages. HomeFlow is the household. Quest market is the 2–5 minute grain. The merchant till is the strip mall — EP dies in the sale. Validation-neighborhoods take blind slices. Identity writes did:key. PSLL is the diary. xp-formula / xp-mint / loop-ledger / dag-substrate are the book. LocalFlow is errands. SignalFlow routes claims. Collapsing the Engine into those two is a reading error.",
         also: [
           { label: "The git", href: "/#stack" },
           { label: "GitHub — packages", href: "https://github.com/00ranman/extropy-engine/tree/main/packages" },

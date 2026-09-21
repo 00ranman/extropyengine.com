@@ -628,11 +628,11 @@ export const engineStack = {
     {
       heading: "Faces",
       items: [
-        { name: "LocalFlow", d: "Errands. Rides, groceries, the car you don't have. Matchmaking. Silent DAG emission.", href: `${P}/localflow` },
-        { name: "HomeFlow", d: "Household / building. IoT, chores, rooms.", href: `${P}/homeflow` },
+        { name: "LocalFlow", d: "Errands. Rides, groceries, the car you don’t have. Matchmaking. Silent DAG emission.", href: `${P}/localflow` },
+        { name: "HomeFlow", d: "Household / building. IoT, chores, rooms. Neighborhood app is the MESO board.", href: `${P}/homeflow` },
         { name: "Quest market", d: "2–5 minute grain. Escalation if it sits.", href: `${P}/quest-market` },
-        { name: "GrantFlow", d: "Discovery plus proposer. Same loop, different input.", href: `${P}/grantflow-discovery` },
-        { name: "Neighborhood app", d: "MESO job board on a laptop. did:key on first boot.", href: `${P}/neighborhood-app` },
+        { name: "Merchant till", d: "Strip mall. Cash still rings. EP dies in the sale.", href: `${P}/two-till-demo` },
+        { name: "Neighborhood app", d: "MESO job board on a laptop. did:key on first boot. HomeFlow’s face, not a fifth religion.", href: `${P}/neighborhood-app` },
       ],
     },
     {
@@ -665,7 +665,6 @@ export const engineStack = {
         { name: "ethics", d: "Guardrails as middleware. Harm, autonomy, humility. Not a sermon overlay.", href: `${P}/ethics` },
         { name: "temporal / Universal Times", d: "Decay clocks, seasons, hydrogen-anchored duration. Face on this site.", href: `${P}/temporal-service` },
         { name: "api-gateway", d: "One door for the microservices on YOUR node. Not a world server.", href: `${P}/api-gateway` },
-        { name: "academia-bridge", d: "Paper upload path. Receipts into the graph, not a priest.", href: `${P}/academia-bridge` },
       ],
     },
     {
@@ -674,6 +673,8 @@ export const engineStack = {
         { name: "levelup-academy", d: "Held. Not a product. School is CAT + issuer on a lane. Overlay Chess.com / a district. Import a hash, not a two-way pipe.", href: "/docs/CAT-LANES.md" },
         { name: "extropialingo", d: "Held. Language is a lane, not an app brand.", href: `${P}/extropialingo` },
         { name: "ecosystem", d: "Held sketch. Skill DAG belongs on CAT. No EP conversion bag.", href: `${P}/ecosystem` },
+        { name: "grants.gov door", d: "Personal scrape. Same SignalFlow loop. Not a face. Overlay compose only.", href: `${P}/grantflow-discovery` },
+        { name: "academia-bridge", d: "Paper receipts into the same book. Not a face.", href: `${P}/academia-bridge` },
       ],
     },
   ],
@@ -922,6 +923,7 @@ export const docsFiles = [
   { title: "CAT-LANES.md", href: "/docs/CAT-LANES.md", note: "No academy product. Overlay an issuer. Import a hash." },
   { title: "WEB3.md", href: "/docs/WEB3.md", note: "Why the last round failed. Clone two boxes." },
   { title: "METER-MATH.md", href: "/docs/METER-MATH.md", note: "L, EP, leaks, H_cap." },
+  { title: "ARCHITECTURE.md", href: "/docs/ARCHITECTURE.md", note: "Faces, one router, one book. Grants are a door." },
   { title: "SMART-CONTRACTS.md", href: "/docs/SMART-CONTRACTS.md", note: "If-then on a vertex." },
   { title: "IF-THEN.md", href: "/docs/IF-THEN.md", note: "Same logic, file name." },
   { title: "DISTRIBUTED_CHARTER.md", href: "/docs/DISTRIBUTED_CHARTER.md", note: "Charter source." },

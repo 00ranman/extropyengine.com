@@ -76,7 +76,7 @@ People keep assigning SignalFlow’s job to LocalFlow. Stop.
 
 **HomeFlow** is the household face. Inventory, recurring chores, the toilet paper problem. Same mint grammar. Different skin.
 
-**GrantFlow / quests** are posted work with a settle knob.
+**Quests** are posted work with a settle knob.
 
 **SignalFlow** is the protocol mouth. You talk to it. It talks to the model you trust, your PSLL, prior numbers, and the network. You do not type “this is worth 12 XP.”
 
