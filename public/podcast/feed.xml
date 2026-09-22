@@ -21,13 +21,32 @@
       <itunes:category text="Philosophy"/>
     </itunes:category>
     <itunes:type>episodic</itunes:type>
-    <lastBuildDate>Wed, 9 Sep 2026 04:42:43 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 18:54:27 +0000</lastBuildDate>
     <atom:link href="https://extropyengine.com/podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://extropyengine.com/podcast/cover.jpg</url>
       <title>Extropy Engine</title>
       <link>https://extropyengine.com/podcast</link>
     </image>
+    <item>
+      <title>The welders are not extras</title>
+      <description>Episode IV is a slam-shut script. Instant moral close mints zero. The class strip is the village - DID or high command on that row is a lose-condition. Looking writes a vertex. Both facts at once or it&apos;s a toy commercial. The hallway asked the master. The master was already on the other payroll.
+
+Two-voice cut of The Cinema of Conflict. Star Wars as the default template for a war. Clerks contractors. Prequels. Shared payroll. Not a side. Not the Codex.</description>
+      <itunes:summary>Episode IV is a slam-shut script. Instant moral close mints zero. The class strip is the village - DID or high command on that row is a lose-condition. Looking writes a vertex. Both facts at once or it&apos;s a toy commercial. The hallway asked the master. The master was already on the other payroll.
+
+Two-voice cut of The Cinema of Conflict. Star Wars as the default template for a war. Clerks contractors. Prequels. Shared payroll. Not a side. Not the Codex.</itunes:summary>
+      <pubDate>Tue, 22 Sep 2026 18:52:00 +0000</pubDate>
+      <guid isPermaLink="false">aea81fb46a7dc392967c64f24d634317357c2441</guid>
+      <link>https://extropyengine.com/podcast</link>
+      <enclosure url="https://extropyengine.com/podcast/2026-09-22-the-welders-are-not-extras.mp3" length="32188008" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
+      <itunes:explicit>true</itunes:explicit>
+      <itunes:duration>00:33:32</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>13</itunes:episode>
+    </item>
     <item>
       <title>Same chassis, different oil</title>
       <description>Two-voice cut on the Engine. One side: synthesis - music as field guide, rarity and frequency of decay, slam window, standing leak. The other: delta S as a negotiated chore wearing physics clothes, edge collusion, late burn as sociology. Reputation stays out of the XP mint. CT is a different meter. Oil in a rusted chassis vs a different scale.</description>

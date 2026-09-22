@@ -3,6 +3,18 @@
   "feed": "/podcast/feed.xml",
   "episodes": [
     {
+      "src": "/podcast/2026-09-22-the-welders-are-not-extras.mp3",
+      "bytes": 32188008,
+      "title": "The welders are not extras",
+      "summary": "Episode IV is a slam-shut script. Instant moral close mints zero. The class strip is the village — DID or high command on that row is a lose-condition. Looking writes a vertex. Both facts at once or it's a toy commercial. The hallway asked the master. The master was already on the other payroll.\n\nTwo-voice cut of The Cinema of Conflict. Star Wars as the default template for a war. Clerks contractors. Prequels. Shared payroll. Not a side. Not the Codex.",
+      "pubDate": "Tue, 22 Sep 2026 18:52:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 13,
+      "duration": "00:33:32",
+      "mime": "audio/mpeg"
+    },
+    {
       "src": "/podcast/2026-09-07-same-chassis-different-oil.mp3",
       "bytes": 13251344,
       "title": "Same chassis, different oil",
