@@ -923,6 +923,7 @@ export const docsFiles = [
   { title: "WEB3.md", href: "/docs/WEB3.md", note: "Why the last round failed. Clone two boxes." },
   { title: "METER-MATH.md", href: "/docs/METER-MATH.md", note: "L, EP, leaks, H_cap." },
   { title: "ARCHITECTURE.md", href: "/docs/ARCHITECTURE.md", note: "Faces, one router, one book." },
+  { title: "engine.svg", href: "/docs/engine.svg", note: "The glance diagram. Four faces on SignalFlow." },
   { title: "SMART-CONTRACTS.md", href: "/docs/SMART-CONTRACTS.md", note: "If-then on a vertex." },
   { title: "IF-THEN.md", href: "/docs/IF-THEN.md", note: "Same logic, file name." },
   { title: "DISTRIBUTED_CHARTER.md", href: "/docs/DISTRIBUTED_CHARTER.md", note: "Charter source." },
