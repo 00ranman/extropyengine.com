@@ -709,8 +709,6 @@ Scaffolds in TypeScript, PostgreSQL, Redis, Docker Compose. The public story is 
 
 LocalFlow, HomeFlow, quest market, merchant till. Neighborhood-app is the MESO board of HomeFlow. Collapsing the Engine into LocalFlow + SignalFlow is a reading error. Those are two packages. The book is xp-formula / xp-mint / loop-ledger / dag-substrate.
 
-`grantflow-*` is a personal grants.gov door on the same loop — not a face, not in default compose. `academia-bridge` is paper receipts into the same book.
-
 `packages/levelup-academy` is held, not a school product. CAT + issuer is the overlay. See [`docs/ARCHIVED.md`](./ARCHIVED.md) and [`docs/CAT-LANES.md`](./CAT-LANES.md).
 
 ### 20.4 Epistemology engine — still a witness

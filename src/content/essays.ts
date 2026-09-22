@@ -364,11 +364,6 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
         def: "Default operational primitive. 2–5 minute tasks. Decomposition at the edge. Reward can escalate if it sits. Validation-neighborhoods take blind slices — volunteer role, not a class. packages/quest-market.",
       },
       {
-        term: "GrantFlow",
-        id: "grantflow",
-        def: "Personal grants.gov door on the same SignalFlow loop. Not a face. Not a product. Overlay compose only. packages/grantflow-discovery and grantflow-proposer.",
-      },
-      {
         term: "SignalFlow",
         def: "One layer: the protocol you talk to. Your assistant (ChatGPT, Claude, Gemini, or a model on your own hardware) plus your PSLL plus the network. It packages the claim, reads evidence, proposes provisional ΔS. You do not score yourself. It is not the Engine.",
       },
