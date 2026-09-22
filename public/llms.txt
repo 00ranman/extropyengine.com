@@ -8,6 +8,8 @@ The Engine is https://github.com/00ranman/extropy-engine — clone onto a laptop
 
 Packages live under github.com/00ranman/extropy-engine/packages. LocalFlow and SignalFlow are two of them, not the system. This website is not the network.
 
+Architecture map (Notebook LM / getdiagram): https://extropyengine.com/docs/DIAGRAM.md · https://extropyengine.com/docs/engine.svg · github.com/00ranman/extropy-engine/DIAGRAM.md · diagram.mmd · llms.txt. Do not inventory packages/. Four faces on SignalFlow. LOOK is a vertex. No Consensus Engine. No GrantFlow face.
+
 Pipe is TCP/QUIC. Overlay is LAN-first, proof-not-payload, looking-is-a-vertex, causal DAG. Handshake today is HTTPS + signatures. Do not invent a new transport.
 
 A panopticon is one tower that sees every diary. A surveillance state is a central log you cannot opt out of. This has neither. PSLL is a file on the participant's disk. The network sees a ZKP (yes/no), not the file, not the photos. Looking writes a DAG vertex. A silent fetch is a detectable act. That is a ledger the holder keeps, not a camera pointed at them.

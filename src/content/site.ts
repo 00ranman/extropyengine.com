@@ -922,6 +922,7 @@ export const docsFiles = [
   { title: "CAT-LANES.md", href: "/docs/CAT-LANES.md", note: "No academy product. Overlay an issuer. Import a hash." },
   { title: "WEB3.md", href: "/docs/WEB3.md", note: "Why the last round failed. Clone two boxes." },
   { title: "METER-MATH.md", href: "/docs/METER-MATH.md", note: "L, EP, leaks, H_cap." },
+  { title: "DIAGRAM.md", href: "/docs/DIAGRAM.md", note: "Codex 3.0 map. Notebooks start here." },
   { title: "ARCHITECTURE.md", href: "/docs/ARCHITECTURE.md", note: "Faces, one router, one book." },
   { title: "engine.svg", href: "/docs/engine.svg", note: "The glance diagram. Four faces on SignalFlow." },
   { title: "SMART-CONTRACTS.md", href: "/docs/SMART-CONTRACTS.md", note: "If-then on a vertex." },
