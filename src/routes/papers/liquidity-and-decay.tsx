@@ -40,6 +40,13 @@ function Paper() {
         </p>
 
         <div className="mt-10 space-y-5 text-[15px] leading-[1.8] text-muted">
+          <p>
+            Long form, without the letters:{" "}
+            <Link to="/papers/what-an-order-book-does" className="text-primary hover:underline">
+              What an Order Book Does to a Claim
+            </Link>
+            . This page is the sketch.
+          </p>
           <h2 className="font-display pt-2 text-2xl text-fg">Claim</h2>
           <p>
             If the output of verification can be sold, verification becomes a mint for that sale.

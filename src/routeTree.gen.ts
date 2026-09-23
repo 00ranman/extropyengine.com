@@ -44,6 +44,7 @@ import { Route as PapersIndexRouteImport } from './routes/papers/index'
 import { Route as HoaSunsetOaksRouteImport } from './routes/hoa.sunset-oaks'
 import { Route as PapersClosingTheLoopRouteImport } from './routes/papers/closing-the-loop'
 import { Route as PapersLiquidityAndDecayRouteImport } from './routes/papers/liquidity-and-decay'
+import { Route as PapersWhatAnOrderBookDoesRouteImport } from './routes/papers/what-an-order-book-does'
 import { Route as PodcastLogRouteImport } from './routes/podcast.log'
 import { Route as PrintClosingTheLoopRouteImport } from './routes/print/closing-the-loop'
 import { Route as StartIndexRouteImport } from './routes/start/index'
@@ -234,6 +235,11 @@ const PapersLiquidityAndDecayRoute = PapersLiquidityAndDecayRouteImport.update({
   path: '/papers/liquidity-and-decay',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PapersWhatAnOrderBookDoesRoute = PapersWhatAnOrderBookDoesRouteImport.update({
+  id: '/papers/what-an-order-book-does',
+  path: '/papers/what-an-order-book-does',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PodcastLogRoute = PodcastLogRouteImport.update({
   id: '/log',
   path: '/log',
@@ -339,6 +345,7 @@ export interface FileRoutesByFullPath {
   '/hoa/sunset-oaks': typeof HoaSunsetOaksRoute
   '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
   '/papers/liquidity-and-decay': typeof PapersLiquidityAndDecayRoute
+  '/papers/what-an-order-book-does': typeof PapersWhatAnOrderBookDoesRoute
   '/podcast/log': typeof PodcastLogRoute
   '/print/closing-the-loop': typeof PrintClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
@@ -390,6 +397,7 @@ export interface FileRoutesByTo {
   '/hoa/sunset-oaks': typeof HoaSunsetOaksRoute
   '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
   '/papers/liquidity-and-decay': typeof PapersLiquidityAndDecayRoute
+  '/papers/what-an-order-book-does': typeof PapersWhatAnOrderBookDoesRoute
   '/podcast/log': typeof PodcastLogRoute
   '/print/closing-the-loop': typeof PrintClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
@@ -442,6 +450,7 @@ export interface FileRoutesById {
   '/hoa/sunset-oaks': typeof HoaSunsetOaksRoute
   '/papers/closing-the-loop': typeof PapersClosingTheLoopRoute
   '/papers/liquidity-and-decay': typeof PapersLiquidityAndDecayRoute
+  '/papers/what-an-order-book-does': typeof PapersWhatAnOrderBookDoesRoute
   '/podcast/log': typeof PodcastLogRoute
   '/print/closing-the-loop': typeof PrintClosingTheLoopRoute
   '/start/ai': typeof StartAiRoute
@@ -498,6 +507,7 @@ export interface FileRouteTypes {
     | '/hoa/sunset-oaks'
     | '/papers/closing-the-loop'
     | '/papers/liquidity-and-decay'
+    | '/papers/what-an-order-book-does'
     | '/podcast/log'
     | '/print/closing-the-loop'
     | '/start/ai'
@@ -552,6 +562,7 @@ export interface FileRouteTypes {
     | '/hoa/sunset-oaks'
     | '/papers/closing-the-loop'
     | '/papers/liquidity-and-decay'
+    | '/papers/what-an-order-book-does'
     | '/podcast/log'
     | '/print/closing-the-loop'
     | '/start/ai'
@@ -606,6 +617,7 @@ export interface FileRouteTypes {
     | '/hoa/sunset-oaks'
     | '/papers/closing-the-loop'
     | '/papers/liquidity-and-decay'
+    | '/papers/what-an-order-book-does'
     | '/podcast/log'
     | '/print/closing-the-loop'
     | '/start/ai'
@@ -657,6 +669,7 @@ export interface RootRouteChildren {
   Web3Route: typeof Web3RouteWithChildren
   PapersClosingTheLoopRoute: typeof PapersClosingTheLoopRoute
   PapersLiquidityAndDecayRoute: typeof PapersLiquidityAndDecayRoute
+  PapersWhatAnOrderBookDoesRoute: typeof PapersWhatAnOrderBookDoesRoute
   PrintClosingTheLoopRoute: typeof PrintClosingTheLoopRoute
   StartAiRoute: typeof StartAiRoute
   StartGovernanceRoute: typeof StartGovernanceRoute
@@ -908,6 +921,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PapersLiquidityAndDecayRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/papers/what-an-order-book-does': {
+      id: '/papers/what-an-order-book-does'
+      path: '/papers/what-an-order-book-does'
+      fullPath: '/papers/what-an-order-book-does'
+      preLoaderRoute: typeof PapersWhatAnOrderBookDoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/podcast/log': {
       id: '/podcast/log'
       path: '/log'
@@ -1093,6 +1113,7 @@ const rootRouteChildren: RootRouteChildren = {
   Web3Route: Web3RouteWithChildren,
   PapersClosingTheLoopRoute: PapersClosingTheLoopRoute,
   PapersLiquidityAndDecayRoute: PapersLiquidityAndDecayRoute,
+  PapersWhatAnOrderBookDoesRoute: PapersWhatAnOrderBookDoesRoute,
   PrintClosingTheLoopRoute: PrintClosingTheLoopRoute,
   StartAiRoute: StartAiRoute,
   StartGovernanceRoute: StartGovernanceRoute,

@@ -494,6 +494,7 @@ export const faqSections: FaqSection[] = [
         a: "No. It can hold a public audit trail: claim, evidence, both edges, later burn if the story was theater. That is a better evidence graph than a two-week performance. It does not mint a verdict. Unanimous twelve is a captured metric — the scored thing is agreement. You can hate that model and still not put a gavel on XP. CAT stays off the mint. A diagnosis is a stamp, not a second physics.",
         also: [
           { label: "Letter key", href: "/key" },
+          { label: "Order book paper", href: "/papers/what-an-order-book-does" },
           { label: "Liquidity paper", href: "/papers/liquidity-and-decay" },
         ],
       },
