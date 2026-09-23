@@ -1,4 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
+#!/usr/bin/env python3
+"""Protocol flowchart. Not a poster. Input → engine → token, with DAG and DFAO branches."""
+from pathlib import Path
+
+OUTS = [
+    Path("/tmp/extropyengine.com/public/docs/engine.svg"),
+    Path("/tmp/extropy-engine/docs/architecture/engine.svg"),
+]
+
+SVG = r'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1780 1180" role="img" aria-labelledby="title desc">
   <title id="title">Extropy Engine protocol flow</title>
   <desc id="desc">Flowchart. Input faces into SignalFlow, into a DAG vertex, into close, into the token math. DAG structure and DFAO rooms are separate branches, not cards in the pipe.</desc>
@@ -248,3 +257,13 @@
 
   <text x="24" y="1164" fill="#64748b" font-size="11">Letters on extropyengine.com/key. If a letter fights this flow, the flow wins. GrantFlow is not on this picture.</text>
 </svg>
+'''
+
+def main() -> None:
+    for p in OUTS:
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(SVG, encoding="utf-8")
+        print("wrote", p, p.stat().st_size)
+
+if __name__ == "__main__":
+    main()
