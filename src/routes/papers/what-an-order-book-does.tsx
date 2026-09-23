@@ -27,6 +27,10 @@ function Paper() {
           <a href="/docs/What_an_Order_Book_Does_to_a_Claim.md" className="hover:text-primary">
             Markdown
           </a>
+          <span className="text-faint"> · </span>
+          <a href="/docs/What_an_Order_Book_Does_to_a_Claim.pdf" className="hover:text-primary">
+            PDF
+          </a>
         </p>
         <p className="text-[11px] tracking-[0.22em] text-primary uppercase">Working paper · 22 Sep 2026</p>
         <h1 className="font-display mt-3 text-[clamp(28px,4vw,44px)] leading-[1.15] text-fg">

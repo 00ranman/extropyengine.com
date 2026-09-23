@@ -55,6 +55,7 @@ export const primaryNav: readonly NavItem[] = [
       { label: "DAG Architecture", href: "/docs/DAG_Architecture_Breakdown.pdf" },
       { label: "Emergence-First GUT", href: "/docs/An_Emergence_First_Grand_Unified_Theory_v2_referenced.pdf" },
       { label: "What an Order Book Does to a Claim", href: "/papers/what-an-order-book-does" },
+      { label: "Order book paper (PDF)", href: "/docs/What_an_Order_Book_Does_to_a_Claim.pdf" },
       { label: "Liquidity Corrupts Verification", href: "/papers/liquidity-and-decay" },
       { label: "Closing the Loop", href: "/papers/closing-the-loop" },
     ],
@@ -384,6 +385,11 @@ export const papers: Paper[] = [
     tag: "Working paper · 22 Sep 2026",
     title: "What an Order Book Does to a Claim",
     href: "/papers/what-an-order-book-does",
+  },
+  {
+    tag: "Working paper · PDF · 22 Sep 2026",
+    title: "What an Order Book Does to a Claim (PDF)",
+    href: "/docs/What_an_Order_Book_Does_to_a_Claim.pdf",
   },
   {
     tag: "Working paper · 4 Sep 2026",
@@ -937,6 +943,7 @@ export const docsFiles = [
   { title: "DFAO_Mechanics.md", href: "/docs/DFAO_Mechanics.md", note: "How a room votes knobs." },
   { title: "DOOR-DUPLICATE-DATA.md", href: "/docs/DOOR-DUPLICATE-DATA.md", note: "First hostile door." },
   { title: "LAW-SHAPED.md", href: "/docs/LAW-SHAPED.md", note: "Aimed off a Howey bag." },
+  { title: "What_an_Order_Book_Does_to_a_Claim.pdf", href: "/docs/What_an_Order_Book_Does_to_a_Claim.pdf", note: "Printable long paper. Liquidity, demurrage, decay." },
   { title: "What_an_Order_Book_Does_to_a_Claim.md", href: "/docs/What_an_Order_Book_Does_to_a_Claim.md", note: "Liquidity, demurrage, decay. The build is last." },
   { title: "Liquidity_Corrupts_Verification.md", href: "/docs/Liquidity_Corrupts_Verification.md", note: "Why a pool kills the close." },
   { title: "WORLD_LINE.md", href: "/docs/WORLD_LINE.md", note: "Meters, routes, twenty years." },
@@ -948,6 +955,7 @@ export const docsFiles = [
 ] as const;
 
 export const docsPapers = [
+  { title: "What an Order Book Does to a Claim (PDF)", href: "/docs/What_an_Order_Book_Does_to_a_Claim.pdf", note: "Printable. Gesell, carbon, cash. Engine last." },
   { title: "What an Order Book Does to a Claim", href: "/papers/what-an-order-book-does", note: "Long form. Gesell, carbon, cash. Engine last." },
   { title: "Liquidity Corrupts Verification", href: "/papers/liquidity-and-decay", note: "Working paper." },
   { title: "Closing the Loop", href: "/papers/closing-the-loop", note: "Music as closed loops." },
