@@ -1,0 +1,104 @@
+{
+  "title": "Extropy Engine",
+  "feed": "/podcast/feed.xml",
+  "episodes": [
+    {
+      "src": "/podcast/2026-09-25-the-map-got-a-job.mp3",
+      "bytes": 46259022,
+      "title": "The Map Got a Job",
+      "summary": "Why institutions trade truth for a payroll. Once a map pays, the test becomes optional and the syllable stays mandatory. Law, science, and the news run the same plate. Goodhart's law: when the measure becomes the target, it stops measuring. The robes and the stone tablets are furniture. Scrutiny is what they drop the second the poster prints. Truth was a sentence that had not broken yet under looking that is still happening. Not a rock in the yard. Not a personal story you don't have to check.\n\nTwo-voice cut of Randall Rant, The Map Got a Job. Not the Codex. The looking is the job.\n\n#TheMapGotAJob #GoodhartsLaw #MapAndTerritory #Institutions #Incentives #ExtropyEngine",
+      "pubDate": "Fri, 25 Sep 2026 18:10:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 14,
+      "duration": "00:48:11",
+      "mime": "audio/mpeg",
+      "image": "/podcast/2026-09-25-the-map-got-a-job.jpg",
+      "keywords": "The Map Got a Job, Goodhart's law, map and territory, institutions, incentives, truth, payroll, bureaucracy, science, law, news, Korzybski, Extropy Engine"
+    },
+    {
+      "src": "/podcast/2026-09-22-the-welders-are-not-extras.mp3",
+      "bytes": 32188008,
+      "title": "The welders are not extras",
+      "summary": "Episode IV is a slam-shut script. Instant moral close mints zero. The class strip is the village — DID or high command on that row is a lose-condition. Looking writes a vertex. Both facts at once or it's a toy commercial. The hallway asked the master. The master was already on the other payroll.\n\nTwo-voice cut of The Cinema of Conflict. Star Wars as the default template for a war. Clerks contractors. Prequels. Shared payroll. Not a side. Not the Codex.\n\nhttps://www.facebook.com/share/1DzrXa3KUP/?mibextid=wwXIfr",
+      "pubDate": "Tue, 22 Sep 2026 18:52:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 13,
+      "duration": "00:33:32",
+      "mime": "audio/mpeg"
+    },
+    {
+      "src": "/podcast/2026-09-07-same-chassis-different-oil.mp3",
+      "bytes": 13251344,
+      "title": "Same chassis, different oil",
+      "summary": "Two-voice cut on the Engine. One side: synthesis — music as field guide, rarity and frequency of decay, slam window, standing leak. The other: ΔS as a negotiated chore wearing physics clothes, edge collusion, late burn as sociology. Reputation stays out of the XP mint. CT is a different meter. Oil in a rusted chassis vs a different scale.",
+      "pubDate": "Mon, 7 Sep 2026 05:16:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 12,
+      "duration": "00:21:21",
+      "mime": "audio/mpeg"
+    },
+    {
+      "src": "/podcast/2026-09-03-the-software-manual-inside-schrodingers-flex.mp3",
+      "bytes": 21387587,
+      "title": "The software manual inside Schrödinger’s Flex",
+      "summary": "Line-by-line on Schrödinger’s Flex. The cat was a joke at people who scale quantum to a cat. Compute it or pipe down. Cosplay cosmos vs a functional manual. LocalFlow, DAG, did:key, XP = R × F × ΔS × (w · E) × log(1/Tₛ). Then the branch where he quit.\n\nWatch: https://www.youtube.com/watch?v=kRPKfqnjjFY\nLyric video: https://www.youtube.com/watch?v=2EZnlukCWfI",
+      "pubDate": "Thu, 3 Sep 2026 05:46:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 11,
+      "duration": "00:38:27",
+      "mime": "audio/mpeg"
+    },
+    {
+      "src": "/podcast/2026-09-02-how-social-consensus-decays-the-universe.mp3",
+      "bytes": 17256972,
+      "title": "How social consensus decays the universe",
+      "summary": "Line-by-line on No Safe Word for Reality. Chip not photocopy. Syntax as cage. Divine as recursion with good PR. Looking writes a vertex. XP = R × F × ΔS × (w · E) × log(1/Tₛ). Slam window. 0.99ⁿ. Late mint, late burn. The song is the field manual. The mint is the blade.\n\nSong: https://www.youtube.com/watch?v=spmLdhZIsmI",
+      "pubDate": "Thu, 3 Sep 2026 02:50:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 10,
+      "duration": "00:30:41",
+      "mime": "audio/mpeg"
+    },
+    {
+      "src": "/podcast/2026-08-26-homelessness-is-a-signal-loss-crisis.mp3",
+      "bytes": 23777834,
+      "title": "Homelessness is a signal loss crisis",
+      "summary": "NotebookLM deep dive on And That. Homelessness is not a housing shortage — it is what happens when every feedback loop goes deaf. Cash on symptoms, dodge causation. You cannot patch a soul with a voucher and a mat. DAG of verified delta S, XP as access not a cash-out. You cannot house a person back into a name.",
+      "pubDate": "Wed, 26 Aug 2026 03:00:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 9,
+      "duration": "00:24:46",
+      "mime": "audio/mpeg"
+    },
+    {
+      "src": "/podcast/2026-08-24-escaping-the-recursive-loop-of-human-control.mp3",
+      "bytes": 14788682,
+      "title": "Escaping the recursive loop of human control",
+      "summary": "Closing the Loop as systems audit. Determinism vs the glitch. Monkey middleware, MKUltra-to-algorithm, compression warfare, burn the arc, God as entropy reduced by love, homelessness as dead feedback. Are you writing the code or is it writing you?",
+      "pubDate": "Mon, 24 Aug 2026 14:00:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 8,
+      "duration": "00:20:32",
+      "mime": "audio/mpeg"
+    },
+    {
+      "src": "/podcast/2026-08-24-the-cold-math-of-mild-spanking.mp3",
+      "bytes": 31023888,
+      "title": "The cold math of mild spanking",
+      "summary": "NotebookLM on the Mild Spanking Efficiency paper. Person-as-DAG, severity lock, XP vs settlement time, confounders (severity, genetics, child-evoked), Sweden 1979. Exploration of the argument, not an endorsement.",
+      "pubDate": "Sun, 23 Aug 2026 16:00:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 7,
+      "duration": "00:43:05",
+      "mime": "audio/mpeg"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+import{r as e}from"./useRouter-80ermfqe.js";import{t}from"./site-shell-CsvZ85zD.js";import{o as n}from"./home-sections-D8lbKYHG.js";var r=e();function i(){return(0,r.jsx)(t,{children:(0,r.jsx)(n,{})})}export{i as component};

@@ -1,0 +1,1 @@
+import{r as e}from"./useRouter-80ermfqe.js";import{t}from"./paper-DHPI9Ypn.js";var n=e();function r(){return(0,n.jsx)(t,{print:!0})}export{r as component};
