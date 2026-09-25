@@ -388,7 +388,7 @@ export const glossarySections: { heading: string; entries: GlossaryEntry[] }[] =
       {
         term: "ZKP",
         id: "zkp",
-        def: "Zero-knowledge proof. A circuit, not a model. Prover on the box builds a proof of one predicate (21 or not, band ≥ n, unique in this room, signer bound to this class strip). Verifier on the till checks the math. Yes or no — not the birthday, not the street, not the photo, not an LLM reading the question. Personal AI / SignalFlow may propose a claim. They do not evaluate the proof. DID is the name. ZKP is what you show. The class strip is not a ZKP. Circuits are not in Codex v2.1. Today: signatures.",
+        def: "Zero-knowledge proof. A circuit, not a model. Prover on the box builds a proof of one predicate (21 or not, band ≥ n, unique in this room, signer bound to this class strip). Verifier on the till checks the math. Yes or no — not the birthday, not the street, not the photo, not an LLM reading the question. A phone is only a screen talking to that box. It does not run the proof. Personal AI / SignalFlow may propose a claim. They do not evaluate the proof. DID is the name. ZKP is what you show. The class strip is not a ZKP. Circuits are not in Codex v2.1. Today: signatures.",
       },
       {
         term: "Class strip",

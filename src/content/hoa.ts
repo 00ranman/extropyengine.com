@@ -51,7 +51,7 @@ export const hoaLegal = {
 
 export const hoaRun = {
   title: "The app is on GitHub. Not on this server.",
-  lead: "Hostinger organizes the ΔS. The job board, the DAG, the crews — those run on your machine. Phone app is a luxury. A laptop today is the necessity.",
+  lead: "Hostinger organizes the ΔS. The job board, the DAG, the crews — those run on a box you plug in. A phone does not run this. A phone can open a page that talks to your box. It cannot be the node, and it does not get to be the node by calling a server somewhere else.",
   clone: "git clone https://github.com/00ranman/extropy-engine.git",
   light: "cd extropy-engine/packages/neighborhood-app && node server.mjs",
   lightAfter: "Open http://localhost:4016 — that's the board, on your computer. Next house on the LAN can hit your IP. The JSON file on disk is the book until the full Engine stack is up.",
@@ -70,7 +70,7 @@ Yard's not mowed? Anybody wanna mow it? You do the work, neighbors sign it close
 
 The inspector is unemployed. The gavel is an if-then: if it got done and signed, it counts. No "next quarter." Smart contract. Not a person with a stamp.
 
-The idea is here. The app is on GitHub — you clone it, you run it on a laptop in the spare room. Not on some company's server. Phone app later. Laptop now.
+The idea is here. The app is on GitHub — you clone it, you run it on a computer in the spare room. Not on a phone. Not on some company's server. A phone can connect to that computer. That is all the phone does.
 
 Keep writing the old dues check so they can't lien the house. We empty their job jar. When we're the ones keeping the place running, they're letterhead. Texas: 67% of owners can amend the declaration. Wyoming is the DAO filing if we ever need a checking account. Function now. Paper when we have the count.
 

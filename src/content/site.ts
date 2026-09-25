@@ -608,8 +608,8 @@ export const engineNotThat = {
       d: "Hold the license. Diary stays in the pocket. Birthday, street, photo, name never leave your side.",
     },
     {
-      t: "Your phone",
-      d: "Looks at the license on YOUR side. Does not upload the ID. Answers one question. 21, or not.",
+      t: "Your box",
+      d: "The computer you plugged in. It looks at the license. It does not upload the ID. It answers one question. 21, or not. A phone is a screen that talks to this box. The phone does not run the node.",
     },
     {
       t: "The till",
