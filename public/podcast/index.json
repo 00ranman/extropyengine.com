@@ -3,6 +3,20 @@
   "feed": "/podcast/feed.xml",
   "episodes": [
     {
+      "src": "/podcast/2026-09-25-the-map-got-a-job.mp3",
+      "bytes": 46259022,
+      "title": "The Map Got a Job",
+      "summary": "Why institutions trade truth for a payroll. Once a map pays, the test becomes optional and the syllable stays mandatory. Law, science, and the news run the same plate. Goodhart's law: when the measure becomes the target, it stops measuring. The robes and the stone tablets are furniture. Scrutiny is what they drop the second the poster prints. Truth was a sentence that had not broken yet under looking that is still happening. Not a rock in the yard. Not a personal story you don't have to check.\n\nTwo-voice cut of Randall Rant, The Map Got a Job. Not the Codex. The looking is the job.\n\n#TheMapGotAJob #GoodhartsLaw #MapAndTerritory #Institutions #Incentives #ExtropyEngine",
+      "pubDate": "Fri, 25 Sep 2026 18:10:00 +0000",
+      "explicit": true,
+      "season": 1,
+      "episode": 14,
+      "duration": "00:48:11",
+      "mime": "audio/mpeg",
+      "image": "/podcast/2026-09-25-the-map-got-a-job.jpg",
+      "keywords": "The Map Got a Job, Goodhart's law, map and territory, institutions, incentives, truth, payroll, bureaucracy, science, law, news, Korzybski, Extropy Engine"
+    },
+    {
       "src": "/podcast/2026-09-22-the-welders-are-not-extras.mp3",
       "bytes": 32188008,
       "title": "The welders are not extras",

@@ -2,6 +2,7 @@
 <rss version="2.0"
   xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:media="http://search.yahoo.com/mrss/"
   xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Extropy Engine</title>
@@ -21,13 +22,38 @@
       <itunes:category text="Philosophy"/>
     </itunes:category>
     <itunes:type>episodic</itunes:type>
-    <lastBuildDate>Wed, 23 Sep 2026 01:55:04 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 18:05:58 +0000</lastBuildDate>
     <atom:link href="https://extropyengine.com/podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://extropyengine.com/podcast/cover.jpg</url>
       <title>Extropy Engine</title>
       <link>https://extropyengine.com/podcast</link>
     </image>
+    <item>
+      <title>The Map Got a Job</title>
+      <description>Why institutions trade truth for a payroll. Once a map pays, the test becomes optional and the syllable stays mandatory. Law, science, and the news run the same plate. Goodhart&apos;s law: when the measure becomes the target, it stops measuring. The robes and the stone tablets are furniture. Scrutiny is what they drop the second the poster prints. Truth was a sentence that had not broken yet under looking that is still happening. Not a rock in the yard. Not a personal story you don&apos;t have to check.
+
+Two-voice cut of Randall Rant, The Map Got a Job. Not the Codex. The looking is the job.
+
+#TheMapGotAJob #GoodhartsLaw #MapAndTerritory #Institutions #Incentives #ExtropyEngine</description>
+      <itunes:summary>Why institutions trade truth for a payroll. Once a map pays, the test becomes optional and the syllable stays mandatory. Law, science, and the news run the same plate. Goodhart&apos;s law: when the measure becomes the target, it stops measuring. The robes and the stone tablets are furniture. Scrutiny is what they drop the second the poster prints. Truth was a sentence that had not broken yet under looking that is still happening. Not a rock in the yard. Not a personal story you don&apos;t have to check.
+
+Two-voice cut of Randall Rant, The Map Got a Job. Not the Codex. The looking is the job.
+
+#TheMapGotAJob #GoodhartsLaw #MapAndTerritory #Institutions #Incentives #ExtropyEngine</itunes:summary>
+      <pubDate>Fri, 25 Sep 2026 18:10:00 +0000</pubDate>
+      <guid isPermaLink="false">97f4b3acd43465c00ec70e9a319e8e554f884c83</guid>
+      <link>https://extropyengine.com/podcast</link>
+      <enclosure url="https://extropyengine.com/podcast/2026-09-25-the-map-got-a-job.mp3" length="46259022" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast/2026-09-25-the-map-got-a-job.jpg"/>
+      <media:thumbnail url="https://extropyengine.com/podcast/2026-09-25-the-map-got-a-job.jpg"/>
+      <itunes:keywords>The Map Got a Job, Goodhart&apos;s law, map and territory, institutions, incentives, truth, payroll, bureaucracy, science, law, news, Korzybski, Extropy Engine</itunes:keywords>
+      <itunes:explicit>true</itunes:explicit>
+      <itunes:duration>00:48:11</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>14</itunes:episode>
+    </item>
     <item>
       <title>The welders are not extras</title>
       <description>Episode IV is a slam-shut script. Instant moral close mints zero. The class strip is the village - DID or high command on that row is a lose-condition. Looking writes a vertex. Both facts at once or it&apos;s a toy commercial. The hallway asked the master. The master was already on the other payroll.

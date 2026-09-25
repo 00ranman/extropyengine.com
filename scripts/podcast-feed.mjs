@@ -189,6 +189,12 @@ export function scanEpisodes(show = podcastMeta) {
       duration: extra.duration || durationOf(full),
       mime,
       guid: extra.guid || createHash("sha1").update(`${show.publicPath}/${file}`).digest("hex"),
+      image: extra.image
+        ? extra.image.startsWith("http") || extra.image.startsWith("/")
+          ? extra.image
+          : `${show.publicPath}/${extra.image}`
+        : null,
+      keywords: extra.keywords || null,
     };
   });
   episodes.sort((a, b) => b.pubMs - a.pubMs);
@@ -205,6 +211,13 @@ export function renderFeed(show = podcastMeta, episodes = scanEpisodes(show)) {
         ep.episode != null ? `\n      <itunes:episode>${xml(ep.episode)}</itunes:episode>` : "";
       const body = xml(appleText(ep.summary || ep.title));
       const summary = `\n      <description>${body}</description>\n      <itunes:summary>${body}</itunes:summary>`;
+      const image = ep.image || m.image;
+      const keywords = ep.keywords
+        ? `\n      <itunes:keywords>${xml(appleText(ep.keywords))}</itunes:keywords>`
+        : "";
+      const thumb = ep.image
+        ? `\n      <media:thumbnail url="${xml(abs(ep.image))}"/>`
+        : "";
       return `    <item>
       <title>${xml(appleText(ep.title))}</title>${summary}
       <pubDate>${xml(ep.pubDate)}</pubDate>
@@ -212,7 +225,7 @@ export function renderFeed(show = podcastMeta, episodes = scanEpisodes(show)) {
       <link>${xml(abs(m.link))}</link>
       <enclosure url="${xml(ep.url)}" length="${ep.bytes}" type="${xml(ep.mime || "audio/mpeg")}"/>
       <itunes:author>${xml(m.author)}</itunes:author>
-      <itunes:image href="${xml(abs(m.image))}"/>
+      <itunes:image href="${xml(abs(image))}"/>${thumb}${keywords}
       <itunes:explicit>${ep.explicit ? "true" : "false"}</itunes:explicit>${dur}${season}${episode}
     </item>`;
     })
@@ -222,6 +235,7 @@ export function renderFeed(show = podcastMeta, episodes = scanEpisodes(show)) {
 <rss version="2.0"
   xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:media="http://search.yahoo.com/mrss/"
   xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>${xml(m.title)}</title>
@@ -271,7 +285,12 @@ export function writeShowFeed(show) {
             : show === redactedMeta
               ? REDACTED_DISCLAIMER
               : undefined,
-        episodes: episodes.map(({ file, pubMs, guid, url, ...rest }) => rest),
+        episodes: episodes.map(({ file, pubMs, guid, url, image, keywords, ...rest }) => {
+          const row = { ...rest };
+          if (image) row.image = image;
+          if (keywords) row.keywords = keywords;
+          return row;
+        }),
       },
       null,
       2,
