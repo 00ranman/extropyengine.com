@@ -61,3 +61,37 @@ export const subscribeApps = [
     href: podcast.apple,
   },
 ] as const;
+
+export const featuredSeries = {
+  name: "The Engine in Plain Words",
+  tagline: "Start here.",
+  description:
+    "Four episodes with Vic and Ron that explain the entire Extropy Engine in plain spoken language: the apps you touch, the movement that powers it, the protocol that runs it, and how it all connects. If you are new, this is the front door.",
+  cover: "/podcast/plain-words-cover-16x9.jpg",
+  episodes: [
+    {
+      part: "Part 1",
+      title: "The Apps",
+      src: "/podcast/2026-10-02-the-engine-in-plain-words-part-1-the-apps.mp3",
+      duration: "8:08",
+    },
+    {
+      part: "Part 2",
+      title: "The Movement",
+      src: "/podcast/2026-10-02-the-engine-in-plain-words-part-2-the-movement.mp3",
+      duration: "8:36",
+    },
+    {
+      part: "Part 3",
+      title: "The Protocol",
+      src: "/podcast/2026-10-02-the-engine-in-plain-words-part-3-the-protocol.mp3",
+      duration: "8:24",
+    },
+    {
+      part: "Part 4",
+      title: "How It All Connects",
+      src: "/podcast/2026-10-02-the-engine-in-plain-words-part-4-how-it-all-connects.mp3",
+      duration: "8:57",
+    },
+  ],
+} as const;
