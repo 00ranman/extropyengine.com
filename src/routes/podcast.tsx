@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { EssayLayout } from "@/components/essay-layout";
-import { podcast, subscribeApps } from "@/content/podcast";
+import { featuredSeries, podcast, subscribeApps } from "@/content/podcast";
 import { getBed, isPlayingPath, toggleSrc } from "@/lib/audio-bed";
 
 export const Route = createFileRoute("/podcast")({
@@ -147,6 +147,39 @@ function PodcastPage() {
     <EssayLayout backTo="/" backLabel="Home" kicker="RSS" title={podcast.title}>
       <p>{podcast.description}</p>
       <Subscribe />
+
+      <section
+        aria-label="Featured series"
+        className="border-2 border-amber-300/70 bg-amber-300/[0.05] px-5 py-7 shadow-[0_0_60px_rgba(251,191,36,0.12)] sm:px-8"
+      >
+        <p className="font-mono text-[10px] tracking-[0.24em] text-amber-300 uppercase">
+          Featured series · {featuredSeries.tagline}
+        </p>
+        <h2 className="font-display mt-2 text-3xl tracking-[0.03em] text-fg sm:text-4xl">
+          {featuredSeries.name}
+        </h2>
+        <p className="mt-3 max-w-prose text-[15px] leading-relaxed">{featuredSeries.description}</p>
+        <img
+          src={featuredSeries.cover}
+          alt={`${featuredSeries.name} cover art`}
+          className="mt-5 w-full border border-amber-300/40"
+          loading="lazy"
+        />
+        <ul className="mt-6 space-y-4">
+          {featuredSeries.episodes.map((ep) => (
+            <EpisodeRow
+              key={ep.src}
+              ep={{
+                src: ep.src,
+                title: `${ep.part}: ${ep.title}`,
+                summary: "",
+                pubDate: "2026-10-02T12:00:00Z",
+                duration: ep.duration,
+              }}
+            />
+          ))}
+        </ul>
+      </section>
 
       <h2 className="font-display pt-6 text-2xl tracking-[0.04em] text-fg">Library</h2>
       {episodes === null ? (
