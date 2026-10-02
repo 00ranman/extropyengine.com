@@ -1,0 +1,70 @@
+flowchart LR
+  subgraph INPUT["INPUT"]
+    DID["did:key on your node"]
+    LF["LocalFlow<br/>person · errands"]
+    HF["HomeFlow<br/>house · neighborhood"]
+    QM["Quest market<br/>2 to 5 min"]
+    TILL["Merchant till<br/>cash still rings"]
+  end
+
+  subgraph ENGINE["ENGINE — one router"]
+    SF["SignalFlow<br/>proposes ΔS<br/>PSLL on your disk<br/>you do not type the mint"]
+    VTX["write vertex<br/>state = open"]
+    EDGES{"both edges agree?"}
+    FAIL["fail closed<br/>XP = 0"]
+  end
+
+  subgraph TOKEN["TOKEN — math, not a bag"]
+    XP["XP = R × F × ΔS × w·E × log 1/Ts<br/>R class rarity, not reputation<br/>F repeats pay less<br/>ΔS proposed, not typed<br/>Ts instant close mints 0"]
+    L["L = clip H·S·κ·CT·β<br/>H this till, 10-day cash<br/>CT leaks, does not travel"]
+    EP["EP = XP·L + λ·L<br/>dies in the sale<br/>cash rings the rest"]
+    IT["IT burns in the tally<br/>not a pile · CAT feeds β only"]
+  end
+
+  subgraph DAG["DAG BRANCH — the log, not a face"]
+    P["parent vertex"] --> TH["this vertex"] --> CH["child vertex"]
+    A["A public class strip<br/>class mapper ΔS state parents<br/>DID here is a lose"]
+    B["B ZKP yes or no<br/>DID off the row"]
+    C["C sealed bytes<br/>no silent fetch"]
+    A --> B --> C
+    OPEN["open"] --> CLOSED["closed"]
+    OPEN --> FAILED["failed"]
+    LOOK["LOOK vertex later<br/>slices 3 to 10<br/>not a validator class"]
+  end
+
+  subgraph DFAO["DFAO BRANCH — rooms, not a mint"]
+    NANO["NANO<br/>you close your own"] --> MICRO["MICRO<br/>a crew"]
+    MICRO --> MESO["MESO<br/>neighborhood board"]
+    MESO --> MACRO["MACRO<br/>town or company"]
+    MACRO --> PLANET["PLANETARY<br/>only room that hits the mesh"]
+    KNOB["vote rewrites THIS room<br/>decay, quorum, notice<br/>not the XP product"]
+  end
+
+  DID --> LF & HF & QM & TILL
+  LF --> SF
+  HF --> SF
+  QM --> SF
+  TILL --> SF
+  SF --> VTX --> EDGES
+  EDGES -->|no| FAIL
+  EDGES -->|yes loop.closed| XP
+  XP --> L --> EP
+  XP -.-> IT
+  VTX -.-> TH
+  TH --> A
+  LOOK -.-> C
+  EDGES -.-> KNOB
+  PLANET -.-> KNOB
+
+  classDef input fill:#dbeafe,stroke:#2563eb,color:#0f172a
+  classDef engine fill:#fef3c7,stroke:#d97706,color:#0f172a
+  classDef token fill:#dcfce7,stroke:#16a34a,color:#0f172a
+  classDef dag fill:#ccfbf1,stroke:#0f766e,color:#0f172a
+  classDef dfao fill:#e0e7ff,stroke:#4f46e5,color:#0f172a
+  classDef fail fill:#ffe4e6,stroke:#e11d48,color:#0f172a
+  class DID,LF,HF,QM,TILL input
+  class SF,VTX,EDGES engine
+  class FAIL fail
+  class XP,L,EP,IT token
+  class P,TH,CH,A,B,C,OPEN,CLOSED,FAILED,LOOK dag
+  class NANO,MICRO,MESO,MACRO,PLANET,KNOB dfao
