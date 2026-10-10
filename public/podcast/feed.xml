@@ -22,13 +22,29 @@
       <itunes:category text="Philosophy"/>
     </itunes:category>
     <itunes:type>episodic</itunes:type>
-    <lastBuildDate>Fri, 25 Sep 2026 18:05:58 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 21:30:00 +0000</lastBuildDate>
     <atom:link href="https://extropyengine.com/podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://extropyengine.com/podcast/cover.jpg</url>
       <title>Extropy Engine</title>
       <link>https://extropyengine.com/podcast</link>
     </image>
+    <item>
+      <title>Local AI Builders: The Whole Crew</title>
+      <description>Vic and Ron walk through every build in Greg Betti&apos;s Local AI Builders group, steel-manning each member&apos;s project from LARI to HOLO-Invariant to a ten-dollar Blender plugin.</description>
+      <itunes:summary>Vic and Ron walk through every build in Greg Betti&apos;s Local AI Builders group, steel-manning each member&apos;s project from LARI to HOLO-Invariant to a ten-dollar Blender plugin.</itunes:summary>
+      <pubDate>Fri, 09 Oct 2026 21:30:00 +0000</pubDate>
+      <guid isPermaLink="false">local-ai-builders-whole-crew-2026-10-09</guid>
+      <link>https://extropyengine.com/podcast</link>
+      <enclosure url="https://extropyengine.com/podcast/2026-10-09-local-ai-builders-the-whole-crew.mp3" length="7810021" type="audio/mpeg"/>
+      <itunes:author>Randall Gossett</itunes:author>
+      <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
+      <itunes:keywords>Local AI Builders, Greg Betti, LARI, voclipo, Hermes-Agent, HOLO-Invariant, FreckleFace, Blender plugin, local AI, Vic and Ron</itunes:keywords>
+      <itunes:explicit>true</itunes:explicit>
+      <itunes:duration>00:16:16</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>15</itunes:episode>
+    </item>
     <item>
       <title>The Map Got a Job</title>
       <description>Why institutions trade truth for a payroll. Once a map pays, the test becomes optional and the syllable stays mandatory. Law, science, and the news run the same plate. Goodhart&apos;s law: when the measure becomes the target, it stops measuring. The robes and the stone tablets are furniture. Scrutiny is what they drop the second the poster prints. Truth was a sentence that had not broken yet under looking that is still happening. Not a rock in the yard. Not a personal story you don&apos;t have to check.

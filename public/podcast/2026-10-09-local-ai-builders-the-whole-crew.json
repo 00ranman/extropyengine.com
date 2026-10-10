@@ -1,0 +1,14 @@
+{
+  "src": "/podcast/2026-10-09-local-ai-builders-the-whole-crew.mp3",
+  "bytes": 7810021,
+  "title": "Local AI Builders: The Whole Crew",
+  "summary": "Vic and Ron walk through every build in Greg Betti's Local AI Builders group, steel-manning each member's project from LARI to HOLO-Invariant to a ten-dollar Blender plugin.",
+  "pubDate": "Fri, 09 Oct 2026 21:30:00 +0000",
+  "explicit": true,
+  "season": 1,
+  "episode": 15,
+  "duration": "00:16:16",
+  "mime": "audio/mpeg",
+  "image": "/podcast/cover.jpg",
+  "keywords": "Local AI Builders, Greg Betti, LARI, voclipo, Hermes-Agent, HOLO-Invariant, FreckleFace, Blender plugin, local AI, Vic and Ron"
+}
