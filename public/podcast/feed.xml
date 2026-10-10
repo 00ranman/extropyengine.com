@@ -38,7 +38,8 @@
       <link>https://extropyengine.com/podcast</link>
       <enclosure url="https://extropyengine.com/podcast/2026-10-09-local-ai-builders-the-whole-crew.mp3" length="7810021" type="audio/mpeg"/>
       <itunes:author>Randall Gossett</itunes:author>
-      <itunes:image href="https://extropyengine.com/podcast/cover.jpg"/>
+      <itunes:image href="https://extropyengine.com/podcast/2026-10-09-local-ai-builders-the-whole-crew.jpg"/>
+      <media:thumbnail url="https://extropyengine.com/podcast/2026-10-09-local-ai-builders-the-whole-crew.jpg"/>
       <itunes:keywords>Local AI Builders, Greg Betti, LARI, voclipo, Hermes-Agent, HOLO-Invariant, FreckleFace, Blender plugin, local AI, Vic and Ron</itunes:keywords>
       <itunes:explicit>true</itunes:explicit>
       <itunes:duration>00:16:16</itunes:duration>
