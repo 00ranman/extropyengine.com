@@ -10,23 +10,24 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BookRouteImport } from './routes/book'
 import { Route as BuildRouteImport } from './routes/build'
 import { Route as CharterRouteImport } from './routes/charter'
 import { Route as DefaultsRouteImport } from './routes/defaults'
 import { Route as DfaoRouteImport } from './routes/dfao'
+import { Route as DollarRouteImport } from './routes/dollar'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as GlossaryRouteImport } from './routes/glossary'
 import { Route as HoaRouteImport } from './routes/hoa'
+import { Route as HowItRunsRouteImport } from './routes/how-it-runs'
 import { Route as IfThenRouteImport } from './routes/if-then'
 import { Route as InsteadRouteImport } from './routes/instead'
 import { Route as ItRouteImport } from './routes/it'
 import { Route as KeyRouteImport } from './routes/key'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as LyricsRouteImport } from './routes/lyrics'
-import { Route as MusicRouteImport } from './routes/music'
-import { Route as BookRouteImport } from './routes/book'
-import { Route as HowItRunsRouteImport } from './routes/how-it-runs'
 import { Route as MathRouteImport } from './routes/math'
+import { Route as MusicRouteImport } from './routes/music'
 import { Route as MvtRouteImport } from './routes/mvt'
 import { Route as OpenProblemsRouteImport } from './routes/open-problems'
 import { Route as PodcastRouteImport } from './routes/podcast'
@@ -40,8 +41,8 @@ import { Route as TokenomicsRouteImport } from './routes/tokenomics'
 import { Route as UniversaltimesRouteImport } from './routes/universaltimes'
 import { Route as Web3RouteImport } from './routes/web3'
 import { Route as DocsIndexRouteImport } from './routes/docs/index'
-import { Route as PapersIndexRouteImport } from './routes/papers/index'
 import { Route as HoaSunsetOaksRouteImport } from './routes/hoa.sunset-oaks'
+import { Route as PapersIndexRouteImport } from './routes/papers/index'
 import { Route as PapersClosingTheLoopRouteImport } from './routes/papers/closing-the-loop'
 import { Route as PapersLiquidityAndDecayRouteImport } from './routes/papers/liquidity-and-decay'
 import { Route as PapersWhatAnOrderBookDoesRouteImport } from './routes/papers/what-an-order-book-does'
@@ -65,6 +66,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BookRoute = BookRouteImport.update({
+  id: '/book',
+  path: '/book',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BuildRoute = BuildRouteImport.update({
   id: '/build',
   path: '/build',
@@ -85,6 +91,11 @@ const DfaoRoute = DfaoRouteImport.update({
   path: '/dfao',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DollarRoute = DollarRouteImport.update({
+  id: '/dollar',
+  path: '/dollar',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
@@ -98,6 +109,11 @@ const GlossaryRoute = GlossaryRouteImport.update({
 const HoaRoute = HoaRouteImport.update({
   id: '/hoa',
   path: '/hoa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowItRunsRoute = HowItRunsRouteImport.update({
+  id: '/how-it-runs',
+  path: '/how-it-runs',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IfThenRoute = IfThenRouteImport.update({
@@ -130,24 +146,14 @@ const LyricsRoute = LyricsRouteImport.update({
   path: '/lyrics',
   getParentRoute: () => rootRouteImport,
 } as any)
-const MusicRoute = MusicRouteImport.update({
-  id: '/music',
-  path: '/music',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BookRoute = BookRouteImport.update({
-  id: '/book',
-  path: '/book',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HowItRunsRoute = HowItRunsRouteImport.update({
-  id: '/how-it-runs',
-  path: '/how-it-runs',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const MathRoute = MathRouteImport.update({
   id: '/math',
   path: '/math',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MusicRoute = MusicRouteImport.update({
+  id: '/music',
+  path: '/music',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MvtRoute = MvtRouteImport.update({
@@ -215,15 +221,15 @@ const DocsIndexRoute = DocsIndexRouteImport.update({
   path: '/docs/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PapersIndexRoute = PapersIndexRouteImport.update({
-  id: '/papers/',
-  path: '/papers/',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const HoaSunsetOaksRoute = HoaSunsetOaksRouteImport.update({
   id: '/sunset-oaks',
   path: '/sunset-oaks',
   getParentRoute: () => HoaRoute,
+} as any)
+const PapersIndexRoute = PapersIndexRouteImport.update({
+  id: '/papers/',
+  path: '/papers/',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const PapersClosingTheLoopRoute = PapersClosingTheLoopRouteImport.update({
   id: '/papers/closing-the-loop',
@@ -235,11 +241,12 @@ const PapersLiquidityAndDecayRoute = PapersLiquidityAndDecayRouteImport.update({
   path: '/papers/liquidity-and-decay',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PapersWhatAnOrderBookDoesRoute = PapersWhatAnOrderBookDoesRouteImport.update({
-  id: '/papers/what-an-order-book-does',
-  path: '/papers/what-an-order-book-does',
-  getParentRoute: () => rootRouteImport,
-} as any)
+const PapersWhatAnOrderBookDoesRoute =
+  PapersWhatAnOrderBookDoesRouteImport.update({
+    id: '/papers/what-an-order-book-does',
+    path: '/papers/what-an-order-book-does',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PodcastLogRoute = PodcastLogRouteImport.update({
   id: '/log',
   path: '/log',
@@ -313,23 +320,24 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/book': typeof BookRoute
   '/build': typeof BuildRoute
   '/charter': typeof CharterRoute
   '/defaults': typeof DefaultsRoute
   '/dfao': typeof DfaoRoute
+  '/dollar': typeof DollarRoute
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
   '/hoa': typeof HoaRouteWithChildren
+  '/how-it-runs': typeof HowItRunsRoute
   '/if-then': typeof IfThenRoute
   '/instead': typeof InsteadRoute
   '/it': typeof ItRoute
   '/key': typeof KeyRoute
   '/login': typeof LoginRoute
   '/lyrics': typeof LyricsRoute
-  '/music': typeof MusicRoute
-  '/book': typeof BookRoute
-  '/how-it-runs': typeof HowItRunsRoute
   '/math': typeof MathRoute
+  '/music': typeof MusicRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
   '/podcast': typeof PodcastRouteWithChildren
@@ -365,23 +373,24 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/book': typeof BookRoute
   '/build': typeof BuildRoute
   '/charter': typeof CharterRoute
   '/defaults': typeof DefaultsRoute
   '/dfao': typeof DfaoRoute
+  '/dollar': typeof DollarRoute
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
   '/hoa': typeof HoaRouteWithChildren
+  '/how-it-runs': typeof HowItRunsRoute
   '/if-then': typeof IfThenRoute
   '/instead': typeof InsteadRoute
   '/it': typeof ItRoute
   '/key': typeof KeyRoute
   '/login': typeof LoginRoute
   '/lyrics': typeof LyricsRoute
-  '/music': typeof MusicRoute
-  '/book': typeof BookRoute
-  '/how-it-runs': typeof HowItRunsRoute
   '/math': typeof MathRoute
+  '/music': typeof MusicRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
   '/podcast': typeof PodcastRouteWithChildren
@@ -418,23 +427,24 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/book': typeof BookRoute
   '/build': typeof BuildRoute
   '/charter': typeof CharterRoute
   '/defaults': typeof DefaultsRoute
   '/dfao': typeof DfaoRoute
+  '/dollar': typeof DollarRoute
   '/faq': typeof FaqRoute
   '/glossary': typeof GlossaryRoute
   '/hoa': typeof HoaRouteWithChildren
+  '/how-it-runs': typeof HowItRunsRoute
   '/if-then': typeof IfThenRoute
   '/instead': typeof InsteadRoute
   '/it': typeof ItRoute
   '/key': typeof KeyRoute
   '/login': typeof LoginRoute
   '/lyrics': typeof LyricsRoute
-  '/music': typeof MusicRoute
-  '/book': typeof BookRoute
-  '/how-it-runs': typeof HowItRunsRoute
   '/math': typeof MathRoute
+  '/music': typeof MusicRoute
   '/mvt': typeof MvtRoute
   '/open-problems': typeof OpenProblemsRoute
   '/podcast': typeof PodcastRouteWithChildren
@@ -472,26 +482,24 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/book'
     | '/build'
     | '/charter'
     | '/defaults'
     | '/dfao'
+    | '/dollar'
     | '/faq'
     | '/glossary'
     | '/hoa'
+    | '/how-it-runs'
     | '/if-then'
     | '/instead'
     | '/it'
     | '/key'
     | '/login'
     | '/lyrics'
-    | '/music'
-    | '/book'
-    | '/how-it-runs'
-    | '/music'
-    | '/book'
-    | '/how-it-runs'
     | '/math'
+    | '/music'
     | '/mvt'
     | '/open-problems'
     | '/podcast'
@@ -527,26 +535,24 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/book'
     | '/build'
     | '/charter'
     | '/defaults'
     | '/dfao'
+    | '/dollar'
     | '/faq'
     | '/glossary'
     | '/hoa'
+    | '/how-it-runs'
     | '/if-then'
     | '/instead'
     | '/it'
     | '/key'
     | '/login'
     | '/lyrics'
-    | '/music'
-    | '/book'
-    | '/how-it-runs'
-    | '/music'
-    | '/book'
-    | '/how-it-runs'
     | '/math'
+    | '/music'
     | '/mvt'
     | '/open-problems'
     | '/podcast'
@@ -582,26 +588,24 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/book'
     | '/build'
     | '/charter'
     | '/defaults'
     | '/dfao'
+    | '/dollar'
     | '/faq'
     | '/glossary'
     | '/hoa'
+    | '/how-it-runs'
     | '/if-then'
     | '/instead'
     | '/it'
     | '/key'
     | '/login'
     | '/lyrics'
-    | '/music'
-    | '/book'
-    | '/how-it-runs'
-    | '/music'
-    | '/book'
-    | '/how-it-runs'
     | '/math'
+    | '/music'
     | '/mvt'
     | '/open-problems'
     | '/podcast'
@@ -638,23 +642,24 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BookRoute: typeof BookRoute
   BuildRoute: typeof BuildRoute
   CharterRoute: typeof CharterRoute
   DefaultsRoute: typeof DefaultsRoute
   DfaoRoute: typeof DfaoRoute
+  DollarRoute: typeof DollarRoute
   FaqRoute: typeof FaqRoute
   GlossaryRoute: typeof GlossaryRoute
   HoaRoute: typeof HoaRouteWithChildren
+  HowItRunsRoute: typeof HowItRunsRoute
   IfThenRoute: typeof IfThenRoute
   InsteadRoute: typeof InsteadRoute
   ItRoute: typeof ItRoute
   KeyRoute: typeof KeyRoute
   LoginRoute: typeof LoginRoute
   LyricsRoute: typeof LyricsRoute
-  MusicRoute: typeof MusicRoute
-  BookRoute: typeof BookRoute
-  HowItRunsRoute: typeof HowItRunsRoute
   MathRoute: typeof MathRoute
+  MusicRoute: typeof MusicRoute
   MvtRoute: typeof MvtRoute
   OpenProblemsRoute: typeof OpenProblemsRoute
   PodcastRoute: typeof PodcastRouteWithChildren
@@ -690,6 +695,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/book': {
+      id: '/book'
+      path: '/book'
+      fullPath: '/book'
+      preLoaderRoute: typeof BookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/build': {
       id: '/build'
       path: '/build'
@@ -718,6 +730,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DfaoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dollar': {
+      id: '/dollar'
+      path: '/dollar'
+      fullPath: '/dollar'
+      preLoaderRoute: typeof DollarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/faq': {
       id: '/faq'
       path: '/faq'
@@ -737,6 +756,13 @@ declare module '@tanstack/react-router' {
       path: '/hoa'
       fullPath: '/hoa'
       preLoaderRoute: typeof HoaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-it-runs': {
+      id: '/how-it-runs'
+      path: '/how-it-runs'
+      fullPath: '/how-it-runs'
+      preLoaderRoute: typeof HowItRunsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/if-then': {
@@ -781,32 +807,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LyricsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/music': {
-      id: '/music'
-      path: '/music'
-      fullPath: '/music'
-      preLoaderRoute: typeof MusicRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/book': {
-      id: '/book'
-      path: '/book'
-      fullPath: '/book'
-      preLoaderRoute: typeof BookRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/how-it-runs': {
-      id: '/how-it-runs'
-      path: '/how-it-runs'
-      fullPath: '/how-it-runs'
-      preLoaderRoute: typeof HowItRunsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/math': {
       id: '/math'
       path: '/math'
       fullPath: '/math'
       preLoaderRoute: typeof MathRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/music': {
+      id: '/music'
+      path: '/music'
+      fullPath: '/music'
+      preLoaderRoute: typeof MusicRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mvt': {
@@ -906,6 +918,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/hoa/sunset-oaks'
       preLoaderRoute: typeof HoaSunsetOaksRouteImport
       parentRoute: typeof HoaRoute
+    }
+    '/papers/': {
+      id: '/papers/'
+      path: '/papers'
+      fullPath: '/papers/'
+      preLoaderRoute: typeof PapersIndexRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/papers/closing-the-loop': {
       id: '/papers/closing-the-loop'
@@ -1082,23 +1101,24 @@ const Web3RouteWithChildren = Web3Route._addFileChildren(Web3RouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BookRoute: BookRoute,
   BuildRoute: BuildRoute,
   CharterRoute: CharterRoute,
   DefaultsRoute: DefaultsRoute,
   DfaoRoute: DfaoRoute,
+  DollarRoute: DollarRoute,
   FaqRoute: FaqRoute,
   GlossaryRoute: GlossaryRoute,
   HoaRoute: HoaRouteWithChildren,
+  HowItRunsRoute: HowItRunsRoute,
   IfThenRoute: IfThenRoute,
   InsteadRoute: InsteadRoute,
   ItRoute: ItRoute,
   KeyRoute: KeyRoute,
   LoginRoute: LoginRoute,
   LyricsRoute: LyricsRoute,
-  MusicRoute: MusicRoute,
-  BookRoute: BookRoute,
-  HowItRunsRoute: HowItRunsRoute,
   MathRoute: MathRoute,
+  MusicRoute: MusicRoute,
   MvtRoute: MvtRoute,
   OpenProblemsRoute: OpenProblemsRoute,
   PodcastRoute: PodcastRouteWithChildren,
@@ -1127,3 +1147,12 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}
