@@ -1,10 +1,10 @@
 /**
  * The Dollar: the $1/month supporter page at /dollar.
  *
- * STRIPE SWAP POINT: when the Stripe account is connected, paste the two
- * Payment Link URLs into the constants below. Nothing else changes: the
- * checkout buttons on /dollar go live automatically when a URL is present
- * and render in a disabled "checkout opens soon" state while it is empty.
+ * Live Stripe Payment Links are in the constants below (swapped in
+ * Nov 18, 2026). The checkout buttons on /dollar go live automatically
+ * when a URL is present and render in a disabled "checkout opens soon"
+ * state while it is empty.
  */
 export const dollarCheckout = {
   /** $1/month plan, paid by bank account (ACH). Main door. */
@@ -16,7 +16,7 @@ export const dollarCheckout = {
 export const dollarPage = {
   kicker: "The ask",
   title: "Unfuck the World for a Dollar",
-  lead: "One dollar a month, from ten thousand people, and I quit the day job and build the Extropy Engine full time. That is the whole funding model. No investors. I do not want investors.",
+  lead: "The whole pitch is one thought: fuck it, it's only a dollar. It buys you nothing, because everything I make is already free whether you pay or not, and it is not a donation and it is not an investment. It is the smallest unit of serious there is. Ten thousand people aim that same dollar at the same place and it stops being nothing. No investors. I do not want investors. Just the dollar, times ten thousand, and one question riding under the whole thing. But what if I'm right.",
   spotifyArtist: "https://open.spotify.com/artist/0A1tRZXeo8dFeEWFycvjUV",
 } as const;
 
@@ -36,16 +36,15 @@ export const dollarWho: DollarSection = {
 export const dollarMoney: DollarSection = {
   heading: "Where the dollar goes",
   paragraphs: [
-    "The first few thousand subscribers cover my bills. That is the unglamorous part and it is the whole unlock, because right now the project gets whatever is left of me after a twelve hour day. Ten thousand people is the job quit and this built every day instead of in the cracks.",
-    "Everything past that funds research and development. Nodes, standing in the places the current system writes off, set up for the people living there to run themselves. Start with homeless communities: they get the node, they run LocalFlow on it, and the work they already do for each other starts counting for something. Their labor stops evaporating first, because theirs evaporates hardest.",
-    "The nonprofits that already exist and are already doing the work get access donated. The ones who adopt it set up as their own operations, part of the mesh. Not underneath me. Nobody is underneath anybody in a mesh. That is the whole point of building it this way.",
+    "First it buys time, because right now the Engine gets whatever is left of me after the twelve hour day, and leftovers are a slow way to build anything. A few thousand dollars a month replaces the paycheck, and yes, a paycheck is bills, rent and lights and the unglamorous machinery that keeps a person fed and working. I am saying it out loud because hiding it would be the scam. But what you are buying is not my rent, it is my hours, every one of them pointed at this instead of at a fence line.",
+    "Everything past the paycheck is research and nodes. Standing set up in the places the current system writes off, run by the people who live there, starting with homeless communities, because their work evaporates hardest. The nonprofits already doing the work get access donated and set up as their own operations in the mesh. Not underneath me. Nobody is underneath anybody in a mesh, that is the whole point of building it this way.",
   ],
 };
 
 export const dollarMath: DollarSection = {
   heading: "The math is stupid small",
   paragraphs: [
-    "Ten thousand people sounds like a crowd until you put it against the country. It is three thousandths of one percent of America. One person in every thirty-four thousand. I do not need one percent of anybody. I need one person in every thirty-four thousand to shrug and say, fuck it, why not.",
+    "Ten thousand people sounds like a crowd until you put it against the country. It is three thousandths of one percent of America. One person in every thirty-four thousand. I do not need a movement, I need one person in every thirty-four thousand to decide a dollar is a fair price for finding out.",
     "You spend more than a dollar on a gas station drink you forget in the truck. This dollar has an address.",
   ],
 };
@@ -53,9 +52,8 @@ export const dollarMath: DollarSection = {
 export const dollarFinePrint: DollarSection = {
   heading: "The fine print, said out loud",
   paragraphs: [
-    "This is a for-profit operation, not a charity, and I am not starting a nonprofit. Deliberately. I am not spending my life jumping through compliance hoops to prove I am allowed to help people. This stays for profit, I run it how I see fit, and then I do the decent thing with it.",
-    "A subscription here is not a tax-deductible donation. Nobody should sign up expecting a deduction. It is a dollar a month pointed at a project, with receipts.",
-    "If the mesh works, the money past my bills becomes seed capital for nodes. And if I am wrong, if the Engine never works and it is all a dead end, you lost a dollar a month finding out. One dollar. You have lost more than that in your couch.",
+    "This is a for-profit operation, not a charity, and I am not starting a nonprofit. Deliberately. I am not spending my life jumping through compliance hoops to prove I am allowed to help people. A subscription here is not a tax-deductible donation and it is not an investment, nobody is promised a return on a dollar, that is not what this is. It is a dollar a month pointed at a project, with receipts, in public.",
+    "And here is the whole bet, priced honest. If I am wrong, if the Engine never works and it is all a dead end, you lost a dollar a month finding out. You have lost more than that in your couch. But what if I'm right. Then your dollar was in from the beginning, back when it was a guy, a laptop, and twelve hour days, and you were one of the ten thousand who kept it alive long enough to find out.",
   ],
 };
 
