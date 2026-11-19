@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site-shell";
 import {
@@ -92,6 +93,31 @@ function CheckoutCard({
   );
 }
 
+function SupporterCounter() {
+  const [count, setCount] = useState<number | null>(null);
+  useEffect(() => {
+    let live = true;
+    fetch("/supporter-count.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        if (live && d && typeof d.count === "number") setCount(d.count);
+      })
+      .catch(() => {});
+    return () => {
+      live = false;
+    };
+  }, []);
+  if (count === null) return null;
+  return (
+    <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border border-primary/18 px-5 py-4">
+      <span className="font-display text-3xl tracking-[0.03em] text-fg">{count}</span>
+      <span>
+        {count === 1 ? "supporter is in." : "supporters are in."} The goal is ten thousand.
+      </span>
+    </div>
+  );
+}
+
 function DollarPage() {
   const checkoutLive = Boolean(dollarCheckout.monthlyAchUrl || dollarCheckout.yearlyCardUrl);
   return (
@@ -109,6 +135,7 @@ function DollarPage() {
           <section className="space-y-4 pt-4">
             <h2 className="font-display text-2xl tracking-[0.04em] text-fg">{dollarCheckoutCopy.heading}</h2>
             <p>{dollarCheckoutCopy.lead}</p>
+            <SupporterCounter />
             <div className="space-y-4">
               <CheckoutCard
                 name={dollarCheckoutCopy.monthly.name}
