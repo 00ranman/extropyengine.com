@@ -8,9 +8,9 @@
  */
 export const dollarCheckout = {
   /** $1/month plan, paid by bank account (ACH). Main door. */
-  monthlyAchUrl: "https://buy.stripe.com/test_8x24gzeuA8qvdsh4nl1B601",
+  monthlyAchUrl: "https://buy.stripe.com/00w6oHbgGgBN7PE4Xb5J600",
   /** $12/year plan, paid by card. */
-  yearlyCardUrl: "https://buy.stripe.com/test_5kQ9AT5Y49uzfAp6vt1B600",
+  yearlyCardUrl: "https://buy.stripe.com/00w7sLckKfxJfi6dtH5J601",
 } as const;
 
 export const dollarPage = {
