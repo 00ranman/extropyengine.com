@@ -113,7 +113,7 @@ export function BookHero() {
           <a href={book.tip} target="_blank" rel="noreferrer" className="text-primary hover:underline">
             Tap here to send $1
           </a>{" "}
-          — donate a dollar to the author. Entirely optional. The book is free.
+          — support the author with a dollar. Entirely optional. The book is free.
         </p>
       </div>
       <div className="order-1 flex justify-center md:order-2">

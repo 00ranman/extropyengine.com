@@ -89,7 +89,7 @@ export const book = {
   epub: "/docs/Unfuck_The_World_For_A_Dollar.epub",
   audio:
     "https://elevenreader.io/audiobooks/unf-ck-the-world-for-a-dollar-audiobook/fst6SabYYioSI1EfquSo",
-  tip: "https://cash.app/$00nerd/1",
+  tip: "/dollar",
   cover: "/cover.jpg",
 } as const;
 
