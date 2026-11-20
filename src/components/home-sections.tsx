@@ -144,8 +144,7 @@ export function MusicSection() {
         <Link to="/lyrics" className="text-primary hover:underline">
           Master list
         </Link>
-        . If a track still says not transcribed, do not invent it from the title. Irrelevance (Is
-        the Killshot) is track 9 on Unf*ck the World for a Dollar — not the book.
+        .
       </p>
       <div className="mb-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
         {albumCards.map((album) => (
