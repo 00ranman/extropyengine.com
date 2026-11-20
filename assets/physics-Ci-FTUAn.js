@@ -1,0 +1,1 @@
+import{r as e}from"./useRouter-80ermfqe.js";import{U as t}from"./index-APM9Bq8G.js";var n=e(),r=()=>(0,n.jsx)(t,{to:`/start`,hash:`physics`});export{r as component};
