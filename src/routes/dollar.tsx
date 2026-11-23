@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site-shell";
 import {
   dollarCheckout,
@@ -109,12 +109,20 @@ function SupporterCounter() {
   }, []);
   if (count === null) return null;
   return (
-    <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border border-primary/18 px-5 py-4">
-      <span className="font-display text-3xl tracking-[0.03em] text-fg">{count}</span>
-      <span>
-        {count === 1 ? "supporter is in." : "supporters are in."} The goal is ten thousand.
-      </span>
-    </div>
+    <>
+      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border border-primary/18 px-5 py-4">
+        <span className="font-display text-3xl tracking-[0.03em] text-fg">{count}</span>
+        <span>
+          {count === 1 ? "supporter is in." : "supporters are in."} The goal is ten thousand.
+        </span>
+      </div>
+      <p className="text-[13px] text-dim">
+        Early supporters keep their number. The first 100 are Founding Supporters.{" "}
+        <Link to="/supporters" className="text-primary hover:underline">
+          See the wall →
+        </Link>
+      </p>
+    </>
   );
 }
 

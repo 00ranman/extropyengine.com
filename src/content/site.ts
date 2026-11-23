@@ -35,6 +35,7 @@ export const primaryNav: readonly NavItem[] = [
   },
   { label: "Book", href: "/book" },
   { label: "The Dollar", href: "/dollar" },
+  { label: "Supporters", href: "/supporters" },
   {
     label: "Library",
     href: "/papers",
