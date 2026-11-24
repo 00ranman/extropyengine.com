@@ -1,8 +1,7 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
-import { QuietPlayer } from "@/components/quiet-player";
-import { NowPlayingTicker } from "@/components/now-playing-ticker";
+import { SiteAudio } from "@/components/music-offer";
 import { JsonLd } from "@/components/json-ld";
 import appCss from "../styles.css?url";
 
@@ -22,7 +21,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Extropy Engine — protocol, papers, and systems work by Randall Gossett. A free book, three studio albums, and research on entropy reduction and emergence-first governance.",
+          "The Extropy Engine is a public record where finished work gets counted, in the open, where anyone can check it. Everything is free. Supporters fund the test for a dollar a month.",
       },
       { name: "author", content: "Randall Gossett" },
       { name: "apple-mobile-web-app-title", content: "Extropy Engine" },
@@ -36,7 +35,7 @@ export const Route = createRootRoute({
       {
         property: "og:description",
         content:
-          "Protocol, papers, and systems work by Randall Gossett. Entropy reduction. Emergence-first governance.",
+          "A public record where finished work gets counted. Everything is free. The dollar funds the test.",
       },
       ...(ogImage
         ? [
@@ -73,8 +72,7 @@ export const Route = createRootRoute({
         <AuthProvider>
           <Outlet />
         </AuthProvider>
-        <QuietPlayer />
-        <NowPlayingTicker />
+        <SiteAudio />
         <Scripts />
       </body>
     </html>

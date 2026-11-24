@@ -46,7 +46,7 @@ export function LoopStrip() {
           ))}
         </div>
         <p className="mt-6 text-center font-mono text-[11px] tracking-[0.08em] text-dim">
-          Uber, Lyft, DoorDash — one pile. Not the protocol.
+          Uber, Lyft, DoorDash. One pile. Not the protocol.
         </p>
       </div>
     </section>

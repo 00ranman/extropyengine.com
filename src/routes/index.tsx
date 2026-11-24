@@ -1,19 +1,34 @@
 import { createFileRoute, useRouterState } from "@tanstack/react-router";
 import { useEffect } from "react";
+import { LoopStrip } from "@/components/home-shop";
 import {
-  ClosingBeat,
-  FourFaces,
-  LoopStrip,
-  MathTeaser,
-  ProofClone,
-  ShelfStrip,
-  ShopHero,
-  WhyDoors,
-} from "@/components/home-shop";
-import { FollowSection } from "@/components/home-sections";
+  DeepDoors,
+  DollarBeat,
+  LandingHero,
+  ReceiptBeat,
+  WallBeat,
+} from "@/components/home-landing";
 import { SiteShell } from "@/components/site-shell";
 
-export const Route = createFileRoute("/")({ component: Home });
+export const Route = createFileRoute("/")({
+  component: Home,
+  head: () => ({
+    meta: [
+      { title: "Extropy Engine: Work, Written Down in Public" },
+      {
+        name: "description",
+        content:
+          "Somebody did the work and nobody wrote it down. The Extropy Engine is a public record where finished work gets counted, in the open, where anyone can check it. Everything is free. A dollar a month funds the test.",
+      },
+      { property: "og:title", content: "Extropy Engine: Work, Written Down in Public" },
+      {
+        property: "og:description",
+        content:
+          "A public record where finished work gets counted, in the open, where anyone can check it. Everything is free. The dollar funds the test.",
+      },
+    ],
+  }),
+});
 
 function Home() {
   const hash = useRouterState({ select: (s) => s.location.hash });
@@ -30,15 +45,14 @@ function Home() {
 
   return (
     <SiteShell>
-      <ShopHero />
-      <LoopStrip />
-      <FourFaces />
-      <WhyDoors />
-      <ProofClone />
-      <MathTeaser />
-      <ShelfStrip />
-      <ClosingBeat />
-      <FollowSection />
+      <LandingHero />
+      <div id="loop" className="scroll-mt-24">
+        <LoopStrip />
+      </div>
+      <ReceiptBeat />
+      <WallBeat />
+      <DollarBeat />
+      <DeepDoors />
     </SiteShell>
   );
 }
