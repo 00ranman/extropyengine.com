@@ -31,18 +31,41 @@ export function SiteAudio() {
   const prevPath = useRef<string | null>(null);
   const [offerOpen, setOfferOpen] = useState(false);
 
+  const offerAllowed = () => {
+    if (getMusicConsent() !== "unknown") return false;
+    try {
+      if (window.sessionStorage.getItem(DISMISS_KEY) === "1") return false;
+    } catch {
+      /* ignore */
+    }
+    return true;
+  };
+
+  // In-site navigation away from the landing page (router links).
   useEffect(() => {
     const was = prevPath.current;
     prevPath.current = pathname;
     if (was !== "/" || pathname === "/") return;
-    if (getMusicConsent() !== "unknown") return;
+    if (offerAllowed()) setOfferOpen(true);
+  }, [pathname]);
+
+  // Full page load onto another page, arrived from the landing page
+  // (plain anchor links, like the homepage buttons, reload the page,
+  // so the navigation watcher above never sees that exit).
+  useEffect(() => {
+    if (pathname === "/") return;
+    if (!offerAllowed()) return;
     try {
-      if (window.sessionStorage.getItem(DISMISS_KEY) === "1") return;
+      const ref = document.referrer ? new URL(document.referrer) : null;
+      if (ref && ref.origin === window.location.origin && ref.pathname === "/") {
+        setOfferOpen(true);
+      }
     } catch {
       /* ignore */
     }
-    setOfferOpen(true);
-  }, [pathname]);
+    // Mount only: the referrer describes how this load was arrived at.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const dismiss = () => {
     try {
