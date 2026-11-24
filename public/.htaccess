@@ -2,6 +2,11 @@
   <Files "feed.xml">
     Header set Content-Type "application/rss+xml; charset=utf-8"
   </Files>
+  # Pages revalidate on every load, so a new deploy shows up right away
+  # instead of a browser serving a cached page from the last deploy.
+  <FilesMatch "\.html?$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
 </IfModule>
 AddType application/rss+xml .xml
 
