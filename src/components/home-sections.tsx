@@ -5,6 +5,7 @@ import {
   artistLinks,
   book,
   earlierEditions,
+  zenodoArchive,
   engineDag,
   engineDecay,
   engineFilm,
@@ -415,6 +416,38 @@ export function PapersSection() {
         <div className="grid gap-[18px] md:grid-cols-2 lg:grid-cols-3">
           {earlierEditions.map((paper) => (
             <PaperCard key={paper.title} paper={paper} />
+          ))}
+        </div>
+      </div>
+
+      <div id="zenodo-archive" className="mx-auto mt-16 max-w-[1100px] border-t border-primary/10 pt-12">
+        <h3 className="font-display mb-2 text-center text-[clamp(20px,2.6vw,28px)] tracking-[0.08em]">
+          Filed on Zenodo
+        </h3>
+        <p className="mx-auto mb-8 max-w-lg text-center text-sm text-dim">
+          Every work below is deposited on Zenodo, the open repository run by CERN, with a DOI that
+          resolves permanently and view and download counts on the public record. Cite the DOI, not
+          a platform link.
+        </p>
+        <div className="grid gap-[18px] md:grid-cols-2">
+          {zenodoArchive.map((work) => (
+            <a
+              key={work.doi}
+              href={`https://doi.org/${work.doi}`}
+              target="_blank"
+              rel="noreferrer"
+              className="block border border-primary/18 bg-[rgb(20_12_8_/_0.45)] px-[22px] py-6 transition-all hover:-translate-y-0.5 hover:border-primary hover:bg-[rgb(40_18_10_/_0.6)] hover:shadow-[0_12px_28px_rgb(255_90_31_/_0.12)]"
+            >
+              <div className="mb-2.5 font-mono text-[10px] tracking-[0.25em] text-primary uppercase">
+                {work.kind}
+              </div>
+              <h4 className="font-display text-base leading-snug font-normal tracking-[0.02em]">
+                {work.title}
+              </h4>
+              <div className="mt-3 font-mono text-[11px] tracking-[0.14em] text-dim">
+                DOI {work.doi}
+              </div>
+            </a>
           ))}
         </div>
       </div>

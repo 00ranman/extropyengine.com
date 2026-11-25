@@ -489,6 +489,28 @@ export const earlierEditions: Paper[] = [
   },
 ];
 
+export const zenodoArchive: { kind: string; title: string; doi: string }[] = [
+  { kind: "Framework note", title: "God as Emergent Entropy Reduction: A Falsifiable Framework", doi: "10.5281/zenodo.24520249" },
+  { kind: "Codex", title: "Extropy Codex, Version 2.1 Comprehensive Edition: A Non-Extractive Contribution Ledger for Verified Entropy Reduction — Full Technical Reference", doi: "10.5281/zenodo.24520302" },
+  { kind: "Specification", title: "Universal Times: Dual-System Temporal Infrastructure, Entropy Economics, and the Post-Calendar Coordination Problem", doi: "10.5281/zenodo.24520328" },
+  { kind: "Specification", title: "Universal Times v4.2", doi: "10.5281/zenodo.24520353" },
+  { kind: "Specification", title: "Extropy Engine v3.1 Technical Specification for Digital Autarky and Measurable Entropy Reduction", doi: "10.5281/zenodo.24520387" },
+  { kind: "Specification", title: "Extropy Engine Technical Specification v3.5: A Contribution Ledger for Verified Entropy Reduction", doi: "10.5281/zenodo.24520409" },
+  { kind: "Paper", title: "When the Signal Eats the Source", doi: "10.5281/zenodo.24520435" },
+  { kind: "Book", title: "Unf*ck the World for a Dollar", doi: "10.5281/zenodo.24520446" },
+  { kind: "Working paper", title: "What an Order Book Does to a Claim", doi: "10.5281/zenodo.24520466" },
+  { kind: "Paper", title: "Signal, Loop, and Story: A Practice-Based Lyric Analysis and Audit Invitation", doi: "10.5281/zenodo.24520482" },
+  { kind: "Paper", title: "Extropy Engine DAG Architecture: Person-as-DAG, Convergence-Based Minting, and Retroactive Updateability via an IOTA Tangle-Inspired Ledger Substrate", doi: "10.5281/zenodo.24520506" },
+  { kind: "Paper", title: "Formal Foundations for Emergence-First Governance with Adaptive Goal Evolution and Convergent Validation in Decentralized Systems, Version 4.0", doi: "10.5281/zenodo.24520518" },
+  { kind: "Paper", title: "The Framework: An Emergence-First Theory of Adaptation, Governance, and Everything in Between (V4)", doi: "10.5281/zenodo.24520535" },
+  { kind: "Paper", title: "Closing the Loop: A Systems Audit of Signal, Story, and Recursion in the Lladnaros Catalog", doi: "10.5281/zenodo.24520553" },
+  { kind: "Specification", title: "The XP Timekeeping System: Temporal DAG Infrastructure, Entropy Economics, and the Post-Calendar Coordination Problem", doi: "10.5281/zenodo.24520574" },
+  { kind: "Paper", title: "Emergent Sovereignty Framework: Real Magic", doi: "10.5281/zenodo.24520582" },
+  { kind: "Paper", title: "AcademicXP: A Peer Review Platform with Physics-Based Evaluation Metrics", doi: "10.5281/zenodo.24520593" },
+  { kind: "Book draft", title: "Reality Forks: A Recursive Guide to Rethinking Everything (Complete Draft)", doi: "10.5281/zenodo.24520615" },
+  { kind: "Paper", title: "Doctrine of Z: The Blueprint for Emergent Coherence", doi: "10.5281/zenodo.24520639" },
+];
+
 export type AppStatus = "live" | "dev" | "concept";
 
 export const engineViews = {
