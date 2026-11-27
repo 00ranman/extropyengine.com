@@ -359,6 +359,13 @@ export type Paper = {
 
 export const papers: Paper[] = [
   {
+    tag: "New · Working paper · 26 Nov 2026",
+    title: "The Dollar Is the Test: A Funding Instrument, a Public Wager, and an Advertisement That Discloses Itself",
+    href: "https://doi.org/10.5281/zenodo.24574957",
+    academia:
+      "https://www.academia.edu/182072914/The_Dollar_Is_the_Test_A_Funding_Instrument_a_Public_Wager_and_an_Advertisement_That_Discloses_Itself",
+  },
+  {
     tag: "Charter · 6 Sep 2026",
     title: "Distributed Charter",
     href: "/charter",
@@ -509,6 +516,7 @@ export const zenodoArchive: { kind: string; title: string; doi: string }[] = [
   { kind: "Paper", title: "AcademicXP: A Peer Review Platform with Physics-Based Evaluation Metrics", doi: "10.5281/zenodo.24520593" },
   { kind: "Book draft", title: "Reality Forks: A Recursive Guide to Rethinking Everything (Complete Draft)", doi: "10.5281/zenodo.24520615" },
   { kind: "Paper", title: "Doctrine of Z: The Blueprint for Emergent Coherence", doi: "10.5281/zenodo.24520639" },
+  { kind: "Working paper", title: "The Dollar Is the Test: A Funding Instrument, a Public Wager, and an Advertisement That Discloses Itself", doi: "10.5281/zenodo.24574957" },
 ];
 
 export type AppStatus = "live" | "dev" | "concept";
