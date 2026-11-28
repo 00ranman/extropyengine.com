@@ -1,0 +1,1 @@
+import{r as e}from"./useRouter-80ermfqe.js";import{W as t}from"./index-BfhaQB5-.js";var n=e(),r=()=>(0,n.jsx)(t,{to:`/start`,hash:`money`});export{r as component};
