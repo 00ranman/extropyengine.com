@@ -359,6 +359,13 @@ export type Paper = {
 
 export const papers: Paper[] = [
   {
+    tag: "New · Journal article · 27 Nov 2026",
+    title: "Loop Theory: A Notation for Whether the Loop Came Back",
+    href: "https://doi.org/10.5281/zenodo.24616222",
+    academia:
+      "https://www.academia.edu/182148854/Loop_Theory_A_Notation_for_Whether_the_Loop_Came_Back",
+  },
+  {
     tag: "New · Working paper · 26 Nov 2026",
     title: "The Dollar Is the Test: A Funding Instrument, a Public Wager, and an Advertisement That Discloses Itself",
     href: "https://doi.org/10.5281/zenodo.24574957",
@@ -517,6 +524,7 @@ export const zenodoArchive: { kind: string; title: string; doi: string }[] = [
   { kind: "Book draft", title: "Reality Forks: A Recursive Guide to Rethinking Everything (Complete Draft)", doi: "10.5281/zenodo.24520615" },
   { kind: "Paper", title: "Doctrine of Z: The Blueprint for Emergent Coherence", doi: "10.5281/zenodo.24520639" },
   { kind: "Working paper", title: "The Dollar Is the Test: A Funding Instrument, a Public Wager, and an Advertisement That Discloses Itself", doi: "10.5281/zenodo.24574957" },
+  { kind: "Paper", title: "Loop Theory: A Notation for Whether the Loop Came Back", doi: "10.5281/zenodo.24616222" },
 ];
 
 export type AppStatus = "live" | "dev" | "concept";
